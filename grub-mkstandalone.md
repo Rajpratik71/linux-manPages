@@ -1,4 +1,4 @@
-GRUB-MKSTANDALONE(1)            User Commands            GRUB-MKSTANDALONE(1)
+GRUB-MKSTANDALONE(1)                                                                         User Commands                                                                        GRUB-MKSTANDALONE(1)
 
 NAME
        grub-mkstandalone - make a memdisk-based GRUB image
@@ -7,15 +7,13 @@ SYNOPSIS
        grub-mkstandalone [OPTION...] [OPTION] SOURCE...
 
 DESCRIPTION
-       Generate  a  standalone image (containing all modules) in the selected
-       format
+       Generate a standalone image (containing all modules) in the selected format
 
        --compress=no|xz|gz|lzo
               compress GRUB files [optional]
 
        -d, --directory=DIR
-              use images and modules under DIR  [default=/usr/lib/grub/<plat‐
-              form>]
+              use images and modules under DIR [default=/usr/lib/grub/<platform>]
 
        --fonts=FONTS
               install FONTS [default=unicode]
@@ -48,15 +46,9 @@ DESCRIPTION
               save output in FILE [required]
 
        -O, --format=FILE
-              generate  an  image in FORMAT available formats: i386-coreboot,
-              i386-multiboot,   i386-pc,    i386-pc-pxe,    i386-pc-eltorito,
-              i386-efi,   i386-ieee1275,   i386-qemu,  x86_64-efi,  i386-xen,
-              x86_64-xen,   mipsel-yeeloong-flash,    mipsel-fuloong2f-flash,
-              mipsel-loongson-elf,   powerpc-ieee1275,  sparc64-ieee1275-raw,
-              sparc64-ieee1275-cdcore,    sparc64-ieee1275-aout,    ia64-efi,
-              mips-arc,           mipsel-arc,           mipsel-qemu_mips-elf,
-              mips-qemu_mips-flash,                   mipsel-qemu_mips-flash,
-              mips-qemu_mips-elf, arm-uboot, arm-efi, arm64-efi
+              generate  an  image  in  FORMAT  available  formats:  i386-coreboot,  i386-multiboot,  i386-pc, i386-pc-pxe, i386-pc-eltorito, i386-efi, i386-ieee1275, i386-qemu, x86_64-efi, i386-xen,
+              x86_64-xen, mipsel-yeeloong-flash,  mipsel-fuloong2f-flash,  mipsel-loongson-elf,  powerpc-ieee1275,  sparc64-ieee1275-raw,  sparc64-ieee1275-cdcore,  sparc64-ieee1275-aout,  ia64-efi,
+              mips-arc, mipsel-arc, mipsel-qemu_mips-elf, mips-qemu_mips-flash, mipsel-qemu_mips-flash, mips-qemu_mips-elf, arm-uboot, arm-efi, arm64-efi
 
        -?, --help
               give this help list
@@ -67,8 +59,7 @@ DESCRIPTION
        -V, --version
               print program version
 
-       Mandatory  or optional arguments to long options are also mandatory or
-       optional for any corresponding short options.
+       Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
 
        Graft point syntax (E.g. /boot/grub/grub.cfg=./grub.cfg) is accepted
 
@@ -78,12 +69,10 @@ REPORTING BUGS
 SEE ALSO
        grub-mkimage(1)
 
-       The full documentation for grub-mkstandalone is maintained as  a  Tex‐
-       info  manual.  If the info and grub-mkstandalone programs are properly
-       installed at your site, the command
+       The full documentation for grub-mkstandalone is maintained as a Texinfo manual.  If the info and grub-mkstandalone programs are properly installed at your site, the command
 
               info grub-mkstandalone
 
        should give you access to the complete manual.
 
-grub-mkstandalone (GRUB) 2.02-2uFebruary22019            GRUB-MKSTANDALONE(1)
+grub-mkstandalone (GRUB) 2.02-2ubuntu8.12                                                    February 2019                                                                        GRUB-MKSTANDALONE(1)

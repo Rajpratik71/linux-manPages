@@ -1,4 +1,4 @@
-pbmtogem(1)                General Commands Manual                pbmtogem(1)
+pbmtogem(1)                                                                             General Commands Manual                                                                            pbmtogem(1)
 
 NAME
        pbmtogem - convert a portable bitmap into a GEM .img file
@@ -7,8 +7,7 @@ SYNOPSIS
        pbmtogem [pbmfile]
 
 DESCRIPTION
-       Reads a portable bitmap as input.  Produces a compressed GEM .img file
-       as output.
+       Reads a portable bitmap as input.  Produces a compressed GEM .img file as output.
 
 BUGS
        pbmtogem does not support compression of repeated lines
@@ -19,4 +18,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988 by David Beckemeyer (bdt!david) and Jef Poskanzer.
 
-                                 11 July 1992                     pbmtogem(1)
+                                                                                             11 July 1992                                                                                  pbmtogem(1)

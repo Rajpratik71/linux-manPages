@@ -1,4 +1,4 @@
-ppmspread(1)               General Commands Manual               ppmspread(1)
+ppmspread(1)                                                                            General Commands Manual                                                                           ppmspread(1)
 
 NAME
        ppmspread - displace a portable pixmap's pixels by a random amount
@@ -7,13 +7,9 @@ SYNOPSIS
        ppmspread amount [ppmfile]
 
 DESCRIPTION
-       Reads a portable pixmap as input. Moves every pixel around a bit rela‐
-       tive to its original position. amount determines by how many pixels  a
-       pixel is to be moved around at most.
+       Reads a portable pixmap as input. Moves every pixel around a bit relative to its original position. amount determines by how many pixels a pixel is to be moved around at most.
 
-       Pictures processed with this filter will seem to be somewhat dissolved
-       or unfocussed (although they appear more coarse than images  processed
-       by something like pnmconvol ).
+       Pictures processed with this filter will seem to be somewhat dissolved or unfocussed (although they appear more coarse than images processed by something like pnmconvol ).
 
 SEE ALSO
        ppm(5), pnmconvol(1)
@@ -21,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1993 by Frank Neumann
 
-                               16 November 1993                  ppmspread(1)
+                                                                                           16 November 1993                                                                               ppmspread(1)

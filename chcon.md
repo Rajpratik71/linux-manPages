@@ -1,4 +1,4 @@
-CHCON(1)                        User Commands                        CHCON(1)
+CHCON(1)                                                                                     User Commands                                                                                    CHCON(1)
 
 NAME
        chcon - change file security context
@@ -9,16 +9,12 @@ SYNOPSIS
        chcon [OPTION]... --reference=RFILE FILE...
 
 DESCRIPTION
-       Change  the  SELinux  security  context of each FILE to CONTEXT.  With
-       --reference, change the security context  of  each  FILE  to  that  of
-       RFILE.
+       Change the SELinux security context of each FILE to CONTEXT.  With --reference, change the security context of each FILE to that of RFILE.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        --dereference
-              affect  the  referent  of  each  symbolic  link  (this  is  the
-              default), rather than the symbolic link itself
+              affect the referent of each symbolic link (this is the default), rather than the symbolic link itself
 
        -h, --no-dereference
               affect symbolic links instead of any referenced file
@@ -42,8 +38,7 @@ DESCRIPTION
               fail to operate recursively on '/'
 
        --reference=RFILE
-              use  RFILE's  security context rather than specifying a CONTEXT
-              value
+              use RFILE's security context rather than specifying a CONTEXT value
 
        -R, --recursive
               operate on files and directories recursively
@@ -51,12 +46,9 @@ DESCRIPTION
        -v, --verbose
               output a diagnostic for every file processed
 
-       The following options modify how a hierarchy is traversed when the  -R
-       option  is  also  specified.   If more than one is specified, only the
-       final one takes effect.
+       The following options modify how a hierarchy is traversed when the -R option is also specified.  If more than one is specified, only the final one takes effect.
 
-       -H     if a command line argument is a symbolic link to  a  directory,
-              traverse it
+       -H     if a command line argument is a symbolic link to a directory, traverse it
 
        -L     traverse every symbolic link to a directory encountered
 
@@ -75,13 +67,11 @@ REPORTING BUGS
        Report chcon translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/chcon>
        or available locally via: info '(coreutils) chcon invocation'
 
-GNU coreutils 8.28               January 2018                        CHCON(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                     CHCON(1)

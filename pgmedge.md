@@ -1,4 +1,4 @@
-pgmedge(1)                 General Commands Manual                 pgmedge(1)
+pgmedge(1)                                                                              General Commands Manual                                                                             pgmedge(1)
 
 NAME
        pgmedge - edge-detect a portable graymap
@@ -7,19 +7,14 @@ SYNOPSIS
        pgmedge [pgmfile]
 
 DESCRIPTION
-       Reads  a  portable graymap as input.  Outlines the edges, and writes a
-       portable graymap  as  output.   Piping  the  result  through  pgmtopbm
-       -threshold  and playing with the threshold value will give a bitmap of
-       the edges.
+       Reads  a portable graymap as input.  Outlines the edges, and writes a portable graymap as output.  Piping the result through pgmtopbm -threshold and playing with the threshold value will give
+       a bitmap of the edges.
 
-       The edge detection technique used is to take the  Pythagorean  sum  of
-       two  Sobel  gradient  operators at 90 degrees to each other.  For more
-       details see "Digital Image Processing" by Gonzalez and Wintz,  chapter
-       7.
+       The edge detection technique used is to take the Pythagorean sum of two Sobel gradient operators at 90 degrees to each other.  For more details see "Digital Image Processing" by Gonzalez  and
+       Wintz, chapter 7.
 
-       The  maxval  of  the output is the same as the maxval of the input The
-       effect is better with larger maxvals, so you may want to increase  the
-       maxval of the input by running it through pnmdepth first.
+       The  maxval  of  the output is the same as the maxval of the input The effect is better with larger maxvals, so you may want to increase the maxval of the input by running it through pnmdepth
+       first.
 
 SEE ALSO
        pgmenhance(1), pgmtopbm(1), pnmdepth(1), pgm(5), pbm(5)
@@ -27,4 +22,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Jef Poskanzer.
 
-                               04 February 1990                    pgmedge(1)
+                                                                                           04 February 1990                                                                                 pgmedge(1)

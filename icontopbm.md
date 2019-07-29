@@ -1,4 +1,4 @@
-icontopbm(1)               General Commands Manual               icontopbm(1)
+icontopbm(1)                                                                            General Commands Manual                                                                           icontopbm(1)
 
 NAME
        icontopbm - convert a Sun icon into a portable bitmap
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        Reads a Sun icon as input.  Produces a portable bitmap as output.
 
-       For windows icons (this format is used for "favicon.ico" on web pages)
-       please see winicontoppm.
+       For windows icons (this format is used for "favicon.ico" on web pages) please see winicontoppm.
 
 SEE ALSO
        pbmtoicon(1), pbm(5), winicontoppm(1).
@@ -18,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988 by Jef Poskanzer.
 
-                                31 August 1988                   icontopbm(1)
+                                                                                            31 August 1988                                                                                icontopbm(1)

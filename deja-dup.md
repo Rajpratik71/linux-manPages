@@ -1,4 +1,4 @@
-DEJA-DUP(1)                     User Commands                     DEJA-DUP(1)
+DEJA-DUP(1)                                                                                  User Commands                                                                                 DEJA-DUP(1)
 
 NAME
        deja-dup - a desktop backup tool
@@ -10,9 +10,7 @@ SYNOPSIS
        deja-dup --restore-missing DIRECTORY
 
 DESCRIPTION
-       Déjà  Dup is a simple backup tool.  It hides the complexity of backing
-       up the Right Way (encrypted, off-site, and regular) and uses duplicity
-       as the backend.
+       Déjà Dup is a simple backup tool.  It hides the complexity of backing up the Right Way (encrypted, off-site, and regular) and uses duplicity as the backend.
 
 OPTIONS
        -h, --help
@@ -42,4 +40,4 @@ OPTIONS
 SEE ALSO
        duplicity(1)
 
-deja-dup                                                          DEJA-DUP(1)
+deja-dup                                                                                                                                                                                   DEJA-DUP(1)

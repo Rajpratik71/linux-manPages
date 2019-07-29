@@ -1,4 +1,4 @@
-pnmpad(1)                  General Commands Manual                  pnmpad(1)
+pnmpad(1)                                                                               General Commands Manual                                                                              pnmpad(1)
 
 NAME
        pnmpad - add borders to portable anymap
@@ -11,18 +11,13 @@ SYNOPSIS
           [-top=toppad] [-bottom=botpad]]]
        [pnmfile]
 
-       All  options  can be abbreviated to their shortest unique prefix.  You
-       may use two hyphens instead of one to designate an  option.   You  may
-       use  either  white  space or an equals sign between an option name and
-       its value.
+       All  options  can  be abbreviated to their shortest unique prefix.  You may use two hyphens instead of one to designate an option.  You may use either white space or an equals sign between an
+       option name and its value.
 
 DESCRIPTION
-       Reads a PNM image as input. Outputs a PNM  image  that  is  the  input
-       image plus black or white borders of the sizes specified.
+       Reads a PNM image as input. Outputs a PNM image that is the input image plus black or white borders of the sizes specified.
 
-       If  you  just need to convert an image to a certain size regardless of
-       the original dimensions, pnmcut with the -pad option may be  a  better
-       choice.
+       If you just need to convert an image to a certain size regardless of the original dimensions, pnmcut with the -pad option may be a better choice.
 
 OPTIONS
        -verbose
@@ -39,19 +34,13 @@ OPTIONS
               Specify amount of padding in pixels.
 
        -width width
-              Set desired width of image. Overrides -left and -right if spec‐
-              ified. If width is less than the  actual  image  width,  it  is
-              ignored. Use pnmcut(1) to cut off parts of images.
+              Set desired width of image. Overrides -left and -right if specified. If width is less than the actual image width, it is ignored. Use pnmcut(1) to cut off parts of images.
 
        -height height
-              Set  desired  height  of  image.  Overrides -top and -bottom if
-              specified. If height is less than the actual image  height,  it
-              is ignored. Use pnmcut(1) to cut off parts of images.
+              Set desired height of image. Overrides -top and -bottom if specified. If height is less than the actual image height, it is ignored. Use pnmcut(1) to cut off parts of images.
 
        -halign ratio
-              A real number between 0 and 1. Used in conjunction with -width,
-              sets the alignment ratio between left padding  and  right  pad‐
-              ding.
+              A real number between 0 and 1. Used in conjunction with -width, sets the alignment ratio between left padding and right padding.
 
               Useful values:
 
@@ -62,9 +51,7 @@ OPTIONS
               1.0    - right aligned.
 
        -valign ratio
-              A  real  number  between  0  and  1.  Used  in conjunction with
-              -height, sets the alignment ratio between  bottom  padding  and
-              top padding.
+              A real number between 0 and 1. Used in conjunction with -height, sets the alignment ratio between bottom padding and top padding.
 
               Useful values:
 
@@ -76,9 +63,7 @@ OPTIONS
 
 HISTORY
        Before February 2002,
-              pnmpad  had a different option syntax which was less expressive
-              and not like conventional  Netpbm  programs.   That  syntax  is
-              still  understood by pnmpad for backward compatibility, but not
+              pnmpad had a different option syntax which was less expressive and not like conventional Netpbm programs.  That syntax is still understood by pnmpad for backward compatibility, but not
               documented or supported for future use.
 
 SEE ALSO
@@ -89,11 +74,7 @@ AUTHOR
        Copyright (C) 1990 by Angus Duggan
        Copyright (C) 1989 by Jef Poskanzer.
 
-       Permission to use, copy, modify, and distribute this software and  its
-       documentation  for any purpose and without fee is hereby granted, pro‐
-       vided that the above copyright notice appear in all  copies  and  that
-       both  that  copyright notice and this permission notice appear in sup‐
-       porting documentation.  This software  is  provided  "as  is"  without
-       express or implied warranty.
+       Permission  to  use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all
+       copies and that both that copyright notice and this permission notice appear in supporting documentation.  This software is provided "as is" without express or implied warranty.
 
-                               26 January 2002                      pnmpad(1)
+                                                                                            26 January 2002                                                                                  pnmpad(1)

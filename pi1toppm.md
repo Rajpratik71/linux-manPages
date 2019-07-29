@@ -1,4 +1,4 @@
-pi1toppm(1)                General Commands Manual                pi1toppm(1)
+pi1toppm(1)                                                                             General Commands Manual                                                                            pi1toppm(1)
 
 NAME
        pi1toppm - convert an Atari Degas .pi1 into a portable pixmap
@@ -7,8 +7,7 @@ SYNOPSIS
        pi1toppm [pi1file]
 
 DESCRIPTION
-       Reads  an  Atari Degas .pi1 file as input.  Produces a portable pixmap
-       as output.
+       Reads an Atari Degas .pi1 file as input.  Produces a portable pixmap as output.
 
 SEE ALSO
        ppmtopi1(1), ppm(5), pi3topbm(1), pbmtopi3(1)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Steve Belczyk (seb3@gte.com) and Jef Poskanzer.
 
-                                 19 July 1990                     pi1toppm(1)
+                                                                                             19 July 1990                                                                                  pi1toppm(1)

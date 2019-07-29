@@ -1,4 +1,4 @@
-FREE(1)                         User Commands                         FREE(1)
+FREE(1)                                                                                      User Commands                                                                                     FREE(1)
 
 NAME
        free - Display amount of free and used memory in the system
@@ -7,13 +7,10 @@ SYNOPSIS
        free [options]
 
 DESCRIPTION
-       free displays the total amount of free and used physical and swap mem‐
-       ory in the system, as well as the buffers and caches used by the  ker‐
-       nel.  The  information  is gathered by parsing /proc/meminfo. The dis‐
-       played columns are:
+       free displays the total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel. The information is gathered by parsing /proc/mem‐
+       info. The displayed columns are:
 
-       total  Total installed memory (MemTotal and  SwapTotal  in  /proc/mem‐
-              info)
+       total  Total installed memory (MemTotal and SwapTotal in /proc/meminfo)
 
        used   Used memory (calculated as total - free - buffers - cache)
 
@@ -24,19 +21,14 @@ DESCRIPTION
        buffers
               Memory used by kernel buffers (Buffers in /proc/meminfo)
 
-       cache  Memory  used  by  the  page  cache  and  slabs (Cached and SRe‐
-              claimable in /proc/meminfo)
+       cache  Memory used by the page cache and slabs (Cached and SReclaimable in /proc/meminfo)
 
        buff/cache
               Sum of buffers and cache
 
        available
-              Estimation of how much memory is  available  for  starting  new
-              applications, without swapping. Unlike the data provided by the
-              cache or free fields, this field takes into account page  cache
-              and  also  that  not  all  reclaimable  memory  slabs  will  be
-              reclaimed due to items being in use (MemAvailable in /proc/mem‐
-              info,  available  on kernels 3.14, emulated on kernels 2.6.27+,
+              Estimation of how much memory is available for starting new applications, without swapping. Unlike the data provided by the cache or free fields, this field  takes  into  account  page
+              cache and also that not all reclaimable memory slabs will be reclaimed due to items being in use (MemAvailable in /proc/meminfo, available on kernels 3.14, emulated on kernels 2.6.27+,
               otherwise the same as free)
 
 OPTIONS
@@ -44,8 +36,7 @@ OPTIONS
               Display the amount of memory in bytes.
 
        -k, --kibi
-              Display the  amount  of  memory  in  kibibytes.   This  is  the
-              default.
+              Display the amount of memory in kibibytes.  This is the default.
 
        -m, --mebi
               Display the amount of memory in mebibytes.
@@ -68,9 +59,7 @@ OPTIONS
        --peta Display the amount of memory in petabytes. Implies --si.
 
        -h, --human
-              Show  all  output fields automatically scaled to shortest three
-              digit unit and display the units of print out.  Following units
-              are used.
+              Show all output fields automatically scaled to shortest three digit unit and display the units of print out.  Following units are used.
 
                 B = bytes
                 K = kibibyte
@@ -79,14 +68,10 @@ OPTIONS
                 T = tebibyte
                 P = pebibyte
 
-              If  unit  is missing, and you have exbibyte of RAM or swap, the
-              number is in tebibytes and columns might not  be  aligned  with
-              header.
+              If unit is missing, and you have exbibyte of RAM or swap, the number is in tebibytes and columns might not be aligned with header.
 
        -w, --wide
-              Switch  to  the  wide mode. The wide mode produces lines longer
-              than 80 characters. In this mode buffers and cache are reported
-              in two separate columns.
+              Switch to the wide mode. The wide mode produces lines longer than 80 characters. In this mode buffers and cache are reported in two separate columns.
 
        -c, --count count
               Display the result count times.  Requires the -s option.
@@ -95,13 +80,10 @@ OPTIONS
               Show detailed low and high memory statistics.
 
        -s, --seconds delay
-              Continuously  display the result delay  seconds apart.  You may
-              actually specify any floating  point  number  for  delay  using
-              either  .  or  ,  for  decimal  point.   usleep(3)  is used for
+              Continuously display the result delay  seconds apart.  You may actually specify any floating point number for delay using either . or ,  for  decimal  point.   usleep(3)  is  used  for
               microsecond resolution delay times.
 
-       --si   Use kilo, mega, giga etc (power of 1000) instead of kibi, mebi,
-              gibi (power of 1024).
+       --si   Use kilo, mega, giga etc (power of 1000) instead of kibi, mebi, gibi (power of 1024).
 
        -t, --total
               Display a line showing the column totals.
@@ -116,8 +98,7 @@ FILES
               memory information
 
 BUGS
-       The  value  for the shared column is not available from kernels before
-       2.6.32 and is displayed as zero.
+       The value for the shared column is not available from kernels before 2.6.32 and is displayed as zero.
 
        Please send bug reports to
               ⟨procps@freelists.org⟩
@@ -125,4 +106,4 @@ BUGS
 SEE ALSO
        ps(1), slabtop(1), top(1), vmstat(8).
 
-procps-ng                         2016-06-03                          FREE(1)
+procps-ng                                                                                     2016-06-03                                                                                       FREE(1)

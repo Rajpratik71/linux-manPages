@@ -1,4 +1,4 @@
-pbmtomgr(1)                General Commands Manual                pbmtomgr(1)
+pbmtomgr(1)                                                                             General Commands Manual                                                                            pbmtomgr(1)
 
 NAME
        pbmtomgr - convert a portable bitmap into a MGR bitmap
@@ -15,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                               24 January 1989                    pbmtomgr(1)
+                                                                                            24 January 1989                                                                                pbmtomgr(1)

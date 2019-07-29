@@ -1,4 +1,4 @@
-pbmtox10bm(1)              General Commands Manual              pbmtox10bm(1)
+pbmtox10bm(1)                                                                           General Commands Manual                                                                          pbmtox10bm(1)
 
 NAME
        pbmtox10bm - convert a portable bitmap into an X10 bitmap
@@ -7,11 +7,9 @@ SYNOPSIS
        pbmtox10bm [pbmfile]
 
 DESCRIPTION
-       Reads  a  portable bitmap as input.  Produces an X10 bitmap as output.
-       This older format is maintained for compatibility.
+       Reads a portable bitmap as input.  Produces an X10 bitmap as output.  This older format is maintained for compatibility.
 
-       Note that there is no x10bmtopbm tool, because xbmtopbm can read  both
-       X11 and X10 bitmaps.
+       Note that there is no x10bmtopbm tool, because xbmtopbm can read both X11 and X10 bitmaps.
 
 SEE ALSO
        pbmtoxbm(1), xbmtopbm(1), pbm(5)
@@ -19,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988 by Jef Poskanzer.
 
-                                31 August 1988                  pbmtox10bm(1)
+                                                                                            31 August 1988                                                                               pbmtox10bm(1)

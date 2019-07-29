@@ -1,4 +1,4 @@
-NTFSCAT(8)                 System Manager's Manual                 NTFSCAT(8)
+NTFSCAT(8)                                                                              System Manager's Manual                                                                             NTFSCAT(8)
 
 NAME
        ntfscat - print NTFS files and streams on the standard output
@@ -7,24 +7,18 @@ SYNOPSIS
        [options] device [file]
 
 DESCRIPTION
-       ntfscat will read a file or stream from an NTFS volume and display the
-       contents on the standard output.
+       ntfscat will read a file or stream from an NTFS volume and display the contents on the standard output.
 
        The case of the filename passed to ntfscat is ignored.
 
 OPTIONS
-       Below is a summary of all the options that  ntfscat  accepts.   Nearly
-       all  options have two equivalent names.  The short name is preceded by
-       - and the long name is preceded by --.   Any  single  letter  options,
-       that  don't  take  an argument, can be combined into a single command,
-       e.g.  -fv is equivalent to -f -v.  Long named options can be  abbrevi‐
-       ated to any unique prefix of their name.
+       Below  is  a  summary of all the options that ntfscat accepts.  Nearly all options have two equivalent names.  The short name is preceded by - and the long name is preceded by --.  Any single
+       letter options, that don't take an argument, can be combined into a single command, e.g.  -fv is equivalent to -f -v.  Long named options can be abbreviated to  any  unique  prefix  of  their
+       name.
 
        -a, --attribute TYPE
-              Display  the  contents  of  a  particular  attribute  type.  By
-              default, the  unnamed  $DATA  attribute  will  be  shown.   The
-              attribute  can be specified by a number in decimal or hexadeci‐
-              mal, or by name.
+              Display  the  contents of a particular attribute type.  By default, the unnamed $DATA attribute will be shown.  The attribute can be specified by a number in decimal or hexadecimal, or
+              by name.
 
               ┌───────────────────────────────────────────┐
               │Hex     Decimal   Name                     │
@@ -46,10 +40,8 @@ OPTIONS
               │0x100   256       "$LOGGED_UTILITY_STREAM" │
               └───────────────────────────────────────────┘
 
-              Notes The attribute names may be given without  the  leading  $
-              symbol.
-              If you use the $ symbol, you must quote the name to prevent the
-              shell interpreting the name.
+              Notes The attribute names may be given without the leading $ symbol.
+              If you use the $ symbol, you must quote the name to prevent the shell interpreting the name.
 
        -n, --attribute-name NAME
               Display this named attribute, stream.
@@ -58,8 +50,7 @@ OPTIONS
               Specify a file by its inode number instead of its name.
 
        -f, --force
-              This will override some sensible defaults, such as not using  a
-              mounted volume.  Use this option with caution.
+              This will override some sensible defaults, such as not using a mounted volume.  Use this option with caution.
 
        -h, --help
               Show a list of options with a brief description of each one.
@@ -82,19 +73,16 @@ EXAMPLES
 
               ntfscat /dev/hda1 /winnt/system32/drivers/etc/hosts
 
-       Display  the  contents of the $INDEX_ROOT attribute of the root direc‐
-       tory (inode 5).
+       Display the contents of the $INDEX_ROOT attribute of the root directory (inode 5).
 
               ntfscat /dev/hda1 -a INDEX_ROOT -i 5 | hexdump -C
 
 BUGS
-       There are no known problems with ntfscat.  If you find  a  bug  please
-       send an email describing the problem to the development team:
+       There are no known problems with ntfscat.  If you find a bug please send an email describing the problem to the development team:
        ntfs-3g-devel@lists.sf.net
 
 AUTHORS
-       ntfscat was written by Richard Russon, Anton Altaparmakov and Szabolcs
-       Szakacsits.  It was ported to ntfs-3g by Erik Larsson.
+       ntfscat was written by Richard Russon, Anton Altaparmakov and Szabolcs Szakacsits.  It was ported to ntfs-3g by Erik Larsson.
 
 AVAILABILITY
        ntfscat is part of the ntfs-3g package and is available from:
@@ -105,4 +93,4 @@ SEE ALSO
 
        libntfs(8), ntfsls(8), ntfsprogs(8)
 
-ntfs-3g 2017.3.23               September 2007                     NTFSCAT(8)
+ntfs-3g 2017.3.23                                                                           September 2007                                                                                  NTFSCAT(8)

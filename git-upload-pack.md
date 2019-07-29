@@ -1,4 +1,4 @@
-GIT-UPLOAD-PACK(1)                Git Manual               GIT-UPLOAD-PACK(1)
+GIT-UPLOAD-PACK(1)                                                                            Git Manual                                                                            GIT-UPLOAD-PACK(1)
 
 NAME
        git-upload-pack - Send objects packed back to git-fetch-pack
@@ -25,14 +25,10 @@ SYNOPSIS
            Interrupt transfer after <n> seconds of inactivity.
 
        --stateless-rpc
-           Perform only a single read-write cycle with stdin and stdout. This
-           fits with the HTTP POST request processing model where a program
-           may read the request, write a response, and must exit.
+           Perform only a single read-write cycle with stdin and stdout. This fits with the HTTP POST request processing model where a program may read the request, write a response, and must exit.
 
        --advertise-refs
-           Only the initial ref advertisement is output, and the program
-           exits immediately. This fits with the HTTP GET request model,
-           where no request content is received but a response must be
+           Only the initial ref advertisement is output, and the program exits immediately. This fits with the HTTP GET request model, where no request content is received but a response must be
            produced.
 
        <directory>
@@ -44,4 +40,4 @@ SEE ALSO
 GIT
        Part of the git(1) suite
 
-Git 2.17.1                        11/26/2018               GIT-UPLOAD-PACK(1)
+Git 2.17.1                                                                                    11/26/2018                                                                            GIT-UPLOAD-PACK(1)

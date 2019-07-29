@@ -1,4 +1,4 @@
-GRUB-FILE(1)                    User Commands                    GRUB-FILE(1)
+GRUB-FILE(1)                                                                                 User Commands                                                                                GRUB-FILE(1)
 
 NAME
        grub-file - check file type
@@ -10,12 +10,10 @@ DESCRIPTION
        Check if FILE is of specified type.
 
        --is-i386-xen-pae-domu
-              Check  if FILE can be booted as i386 PAE Xen unprivileged guest
-              kernel
+              Check if FILE can be booted as i386 PAE Xen unprivileged guest kernel
 
        --is-x86_64-xen-domu
-              Check if FILE can be booted as x86_64  Xen  unprivileged  guest
-              kernel
+              Check if FILE can be booted as x86_64 Xen unprivileged guest kernel
 
        --is-x86-xen-dom0
               Check if FILE can be used as Xen x86 privileged guest kernel
@@ -99,16 +97,13 @@ DESCRIPTION
        --is-x86-bios-bootsector
               Check if FILE is BIOS bootsector
 
-       -h,  --help               Display  this  help  and  exit.  -u, --usage
-       Display the usage of this command and exit.
+       -h, --help              Display this help and exit.  -u, --usage             Display the usage of this command and exit.
 
 SEE ALSO
-       The full documentation for grub-file is maintained as a  Texinfo  man‐
-       ual.   If  the  info  and grub-file programs are properly installed at
-       your site, the command
+       The full documentation for grub-file is maintained as a Texinfo manual.  If the info and grub-file programs are properly installed at your site, the command
 
               info grub-file
 
        should give you access to the complete manual.
 
-grub-file (GRUB) 2.02-2ubuntu8.1February 2019                    GRUB-FILE(1)
+grub-file (GRUB) 2.02-2ubuntu8.12                                                            February 2019                                                                                GRUB-FILE(1)

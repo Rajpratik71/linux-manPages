@@ -1,4 +1,4 @@
-ASPELL(1)              Aspell Abbreviated User's Manual             ASPELL(1)
+ASPELL(1)                                                                          Aspell Abbreviated User's Manual                                                                          ASPELL(1)
 
 NAME
        aspell - interactive spell checker
@@ -7,41 +7,28 @@ SYNOPSIS
        aspell [options] <command>
 
 DESCRIPTION
-       aspell  is  a  utility  program that connects to the Aspell library so
-       that it can function as an ispell -a replacement,  as  an  independent
-       spell  checker, as a test utility to test out Aspell library features,
-       and as a utility for managing dictionaries used by the library.
+       aspell  is  a  utility  program  that connects to the Aspell library so that it can function as an ispell -a replacement, as an independent spell checker, as a test utility to test out Aspell
+       library features, and as a utility for managing dictionaries used by the library.
 
-       The Aspell library  contains  an  interface  allowing  other  programs
-       direct access to its functions and therefore reducing the complex task
-       of spell checking to simple library calls.  The default  library  does
-       not  contain  dictionary  word  lists.   To add language dictionaries,
-       please check your distro first for  modified  dictionaries,  otherwise
-       look here for base language dictionaries <http://aspell.net>.
+       The Aspell library contains an interface allowing other programs direct access to its functions and therefore reducing the complex task of spell checking to simple library calls.  The default
+       library  does  not  contain  dictionary word lists.  To add language dictionaries, please check your distro first for modified dictionaries, otherwise look here for base language dictionaries
+       <http://aspell.net>.
 
-       The  following  information describes the commands and options used by
-       the Aspell Utility.
+       The following information describes the commands and options used by the Aspell Utility.
 
-       This manual page is maintained separately from the official documenta‐
-       tion  so it may be out of date or incomplete.  The official documenta‐
-       tion is maintained as a Texinfo manual.  See  the  `aspell'  entry  in
-       info for more complete documentation.
+       This manual page is maintained separately from the official documentation so it may be out of date or incomplete.  The official documentation is maintained  as  a  Texinfo  manual.   See  the
+       `aspell' entry in info for more complete documentation.
 
 COMMANDS
        <command> is one of:
 
        usage, -?
-              Send  a  brief Aspell Utility usage message to standard output.
-              This is a short summary listing more  common  spell-check  com‐
-              mands and options.
+              Send a brief Aspell Utility usage message to standard output.  This is a short summary listing more common spell-check commands and options.
 
-       help   Send a detailed Aspell Utility help message to standard output.
-              This is a complete list showing all commands, options,  filters
-              and dictionaries.
+       help   Send a detailed Aspell Utility help message to standard output.  This is a complete list showing all commands, options, filters and dictionaries.
 
        version, -v
-              Print  version number of Aspell Library and Utility to standard
-              output.
+              Print version number of Aspell Library and Utility to standard output.
 
        check <file>, -c <file>
               Spell-check a single file.
@@ -60,8 +47,7 @@ COMMANDS
        soundslike
               Output the soundslike equivalent of each word entered.
 
-       munch  Generate possible root words and affixes from an input list  of
-              words.
+       munch  Generate possible root words and affixes from an input list of words.
 
        expand [1-4]
               Expands the affix flags of each affix compressed word entered.
@@ -82,40 +68,30 @@ COMMANDS
               Lists available dictionaries, filters, or modes.
 
        dump|create|merge master|personal|repl <wordlist>
-              dump,  create, or merge a master, personal, or replacement word
-              list.
+              dump, create, or merge a master, personal, or replacement word list.
 
 DICTIONARY OPTIONS
-       The following options may be used to control which dictionaries to use
-       and how they behave.
+       The following options may be used to control which dictionaries to use and how they behave.
 
        --master=<name>, -d <name>
-              Base  name  of the dictionary to use.  If this option is speci‐
-              fied then Aspell will either use this dictionary or die.
+              Base name of the dictionary to use.  If this option is specified then Aspell will either use this dictionary or die.
 
        --dict-dir=<directory>
               Location of the main dictionary word list.
 
        --lang=<string>, -l <string>
-              Language to use.  It follows the same format of the LANG  envi‐
-              ronmental  variable  on  most  systems.  It consists of the two
-              letter ISO 639 language code and an  optional  two  letter  ISO
-              3166  country  code  after  a  dash or underscore.  The default
-              value is based on the value of the LC_MESSAGES locale.
+              Language  to  use.   It  follows the same format of the LANG environmental variable on most systems.  It consists of the two letter ISO 639 language code and an optional two letter ISO
+              3166 country code after a dash or underscore.  The default value is based on the value of the LC_MESSAGES locale.
 
        --size=<string>
-              The preferred size of the dictionary word list.  This  consists
-              of  a two char digit code describing the size of the list, with
-              typical values of: 10=tiny, 20=really small, 30=small,  40=med-
-              small, 50=med, 60=med-large, 70=large, 80=huge, 90=insane.
+              The preferred size of the dictionary word list.  This consists of a two char digit code describing the size of the list, with typical values of:  10=tiny,  20=really  small,  30=small,
+              40=med-small, 50=med, 60=med-large, 70=large, 80=huge, 90=insane.
 
        --variety=<string>
-              Any extra information to distinguish this variety of dictionary
-              from other dictionaries which may have the same lang and size.
+              Any extra information to distinguish this variety of dictionary from other dictionaries which may have the same lang and size.
 
        --jargon=<string>
-              Please use the variety option since it  replaces  jargon  as  a
-              better choice.  jargon will be removed in the future.
+              Please use the variety option since it replaces jargon as a better choice.  jargon will be removed in the future.
 
        --word-list-path=<list of directories>
               Search path for word list information files.
@@ -160,13 +136,10 @@ FILTER OPTIONS
               Add or remove paths searched for filters.
 
        --mode=<string>, -e, -H, -t, -n
-              Sets  the  filter mode.  Mode is one of none, url, email, html,
-              tex or nroff.  The alternative shortcut options  are  '-e'  for
-              email, '-H' for Html/Sgml, '-t' for Tex or '-n' for Nroff.
+              Sets the filter mode.  Mode is one of none, url, email, html, tex or nroff.  The alternative shortcut options are '-e' for email, '-H' for Html/Sgml, '-t' for Tex or '-n' for Nroff.
 
        --encoding=<string>
-              encoding  the  document  is  expected  to  be  in.  The default
-              depends on the current locale.
+              encoding the document is expected to be in.  The default depends on the current locale.
 
        --add-email-quote=<list>, --rem-email-quote=<list>
               Add or Remove a list of email quote characters.
@@ -175,20 +148,16 @@ FILTER OPTIONS
               Number of chars that can appear before the quote char.
 
        --add-html-check=<list>, --rem-html-check=<list>
-              Add or remove a list of HTML attributes to always  check.   For
-              example, look inside alt= tags.
+              Add or remove a list of HTML attributes to always check.  For example, look inside alt= tags.
 
        --add-html-skip=<list>, --rem-html-skip=<list>
-              Add  or  remove  a list of HTML attributes to always skip while
-              spell checking.
+              Add or remove a list of HTML attributes to always skip while spell checking.
 
        --add-sgml-check=<list>, --rem-sgml-check=<list>
-              Add or remove a list of SGML attributes  to  always  check  for
-              spelling.
+              Add or remove a list of SGML attributes to always check for spelling.
 
        --add-sgml-skip=<list>, --rem-sgml-skip=<list>
-              Add  or  remove  a list of SGML attributes to always skip while
-              spell checking.
+              Add or remove a list of SGML attributes to always skip while spell checking.
 
        --sgml-extension=<list>
               SGML file extensions.
@@ -215,8 +184,7 @@ MISC OPTIONS
        Miscellaneous options that don't fall under any other category.
 
        --conf=<file name>
-              Main configuration file.  This file overrides  Aspell's  global
-              defaults.
+              Main configuration file.  This file overrides Aspell's global defaults.
 
        --conf-dir=<directory>
               Location of main configuration file.
@@ -225,105 +193,74 @@ MISC OPTIONS
               Location of language data files.
 
        --keyboard=<keyboard>
-              Use  this keyboard layout for suggesting possible words.  These
-              spelling errors happen if a user accidently presses a key  next
-              to the intended correct key.
+              Use this keyboard layout for suggesting possible words.  These spelling errors happen if a user accidently presses a key next to the intended correct key.
 
        --local-data-dir=<directory>
-              Alternative location of language data files.  This directory is
-              searched before data-dir.
+              Alternative location of language data files.  This directory is searched before data-dir.
 
        --home-dir=<directory>
               Directory Location for personal wordlist files.
 
        --per-conf=<file name>
-              Personal configuration file.  This file overrides options found
-              in the global config file.
+              Personal configuration file.  This file overrides options found in the global config file.
 
 ASPELL UTILITY OPTIONS
-       These options are part of the aspell Utility and work independently of
-       the library.
+       These options are part of the aspell Utility and work independently of the library.
 
        --backup, --dont-backup, -b, -x
-              The aspell utility creates a backup file by making a  copy  and
-              appending  .bak  to file name.  This only applies when the com‐
-              mand is check <file> and the backup file is only created if any
-              spelling modifications take place.
+              The  aspell  utility  creates a backup file by making a copy and appending .bak to file name.  This only applies when the command is check <file> and the backup file is only created if
+              any spelling modifications take place.
 
        --byte-offsets, --dont-byte-offsets
               Use byte offsets instead of character offsets.
 
        --guess, --dont-guess, -m, -P
-              Create missing root/affix combinations not in the dictionary in
-              pipe mode.
+              Create missing root/affix combinations not in the dictionary in pipe mode.
 
        --keymapping=aspell, --keymapping=ispell
-              The keymapping to use, either aspell for the default mapping or
-              ispell to use the same mapping that the Ispell utility uses.
+              The keymapping to use, either aspell for the default mapping or ispell to use the same mapping that the Ispell utility uses.
 
        --reverse, --dont-reverse
               Reverse the order of the suggestions list in pipe mode.
 
        --suggest, --dont-suggest
-              Suggest  possible  replacements in pipe mode.  If false, Aspell
-              will simply report the misspelling and make no attempt at  sug‐
-              gestions or possible corrections.
+              Suggest possible replacements in pipe mode.  If false, Aspell will simply report the misspelling and make no attempt at suggestions or possible corrections.
 
        --time, --dont-time
               Time the load time and suggest a time in pipe mode.
 
-       In addition Aspell will try to make sense out of Ispell's command line
-       options so that it can function as a drop in replacement  for  Ispell.
-       If  Aspell  is  run without any command line options it will display a
-       brief help screen and quit.
+       In addition Aspell will try to make sense out of Ispell's command line options so that it can function as a drop in replacement for Ispell.  If Aspell is run without any command line  options
+       it will display a brief help screen and quit.
 
 CONFIGURATION
-       Aspell can accept options via global or personal  configuration  files
-       so that you do not need to specify them each time at the command line.
-       The default global configuration file is /etc/aspell.conf  or  another
-       file specified by option --conf and is checked first.  The default per
-       user configuration file ~/.aspell.conf located in the $HOME  directory
-       (or  another  file specified by option --per-conf) is checked next and
-       overrides options set in the global config file.  Options specified at
-       either  the  command  line  or  via an environmental variable override
-       those specified by either configuration file.
+       Aspell  can  accept  options  via  global  or  personal  configuration  files  so that you do not need to specify them each time at the command line.  The default global configuration file is
+       /etc/aspell.conf or another file specified by option --conf and is checked first.  The default per user configuration file ~/.aspell.conf located in the $HOME directory (or another file spec‐
+       ified  by option --per-conf) is checked next and overrides options set in the global config file.  Options specified at either the command line or via an environmental variable override those
+       specified by either configuration file.
 
        Each line of the configuration file has the format:
 
               option [value]
 
-       where option is any one of the standard library options above  without
-       the  leading  dashes.   For  example  the  following line will set the
-       default language to Swiss German:
+       where option is any one of the standard library options above without the leading dashes.  For example the following line will set the default language to Swiss German:
 
               lang de_CH
 
-       There may be any number of spaces between the option  and  the  value,
-       however it can only be spaces, i.e. there is no '=' between the option
-       name and the value.  Comments may also be included by  preceding  them
-       with  a  '#'  as  anything  from a '#' to a newline is ignored.  Blank
-       lines are also allowed.  The /etc/aspell.conf file is a  good  example
-       of  how  to  set these options and the Aspell Manual has more detailed
-       info.
+       There may be any number of spaces between the option and the value, however it can only be spaces, i.e. there is no '=' between the option name and the value.  Comments may also  be  included
+       by  preceding  them  with a '#' as anything from a '#' to a newline is ignored.  Blank lines are also allowed.  The /etc/aspell.conf file is a good example of how to set these options and the
+       Aspell Manual has more detailed info.
 
 SEE ALSO
-       aspell-import(1),  prezip-bin(1),  run-with-aspell(1),  word-list-com‐
-       press(1)
+       aspell-import(1), prezip-bin(1), run-with-aspell(1), word-list-compress(1)
 
-       Aspell  is  fully  documented in its Texinfo manual.  See the `aspell'
-       entry in info for more complete documentation.
+       Aspell is fully documented in its Texinfo manual.  See the `aspell' entry in info for more complete documentation.
 
 SUPPORT
-       Support for Aspell can be found on the Aspell mailing lists.  Instruc‐
-       tions  for  joining the various mailing lists (and an archive of them)
-       can be found off the Aspell home  page  at  <http://aspell.net>.   Bug
-       reports  should  be  submitted via the Sourceforge Tracker rather than
-       being posted to the mailing lists.
+       Support for Aspell can be found on the Aspell mailing lists.  Instructions for joining the various mailing lists (and  an  archive  of  them)  can  be  found  off  the  Aspell  home  page  at
+       <http://aspell.net>.  Bug reports should be submitted via the Sourceforge Tracker rather than being posted to the mailing lists.
 
 AUTHOR
-       This manual page was written by Brian Nelson  <pyro@debian.org>  based
-       on the Aspell User's Manual, Copyright © 2002 Kevin Atkinson.  Updated
-       Nov 2006 by Jose Da Silva <digital@joescat.com>, and Dec 2006 by Kevin
-       Atkinson <kevina@gnu.org>.
+       This  manual  page  was written by Brian Nelson <pyro@debian.org> based on the Aspell User's Manual, Copyright © 2002 Kevin Atkinson.  Updated Nov 2006 by Jose Da Silva <digital@joescat.com>,
+       and Dec 2006 by Kevin Atkinson <kevina@gnu.org>.
 
-GNU                               2006-12-10                        ASPELL(1)
+GNU                                                                                           2006-12-10                                                                                     ASPELL(1)

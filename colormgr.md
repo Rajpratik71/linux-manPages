@@ -1,4 +1,4 @@
-COLORMGR(1)                                                       COLORMGR(1)
+COLORMGR(1)                                                                                                                                                                                COLORMGR(1)
 
 NAME
        colormgr - Color Manager Testing Tool
@@ -9,13 +9,10 @@ SYNOPSIS
 DESCRIPTION
        This manual page documents briefly the colormgr command.
 
-       colormgr  allows  an administrator to view and change color profile to
-       device mappings.
+       colormgr allows an administrator to view and change color profile to device mappings.
 
 OPTIONS
-       This program follows the usual GNU  command  line  syntax,  with  long
-       options  starting  with  two  dashes  (`-').  A  summary of options is
-       included below.
+       This program follows the usual GNU command line syntax, with long options starting with two dashes (`-'). A summary of options is included below.
 
        --help Show summary of options.
 
@@ -95,8 +92,7 @@ COMMANDS
               Get a standard colourspace
 
        import-profile
-              Copies an .icc file into the  correct  per-user  directory  and
-              shows information about the imported profile.
+              Copies an .icc file into the correct per-user directory and shows information about the imported profile.
 
        profile-set-property
               Sets extra properties on the profile
@@ -110,4 +106,4 @@ COMMANDS
 AUTHOR
        This manual page was written by Richard Hughes <richard@hughsie.com>.
 
-                                 18 June,2013                     COLORMGR(1)
+                                                                                             18 June,2013                                                                                  COLORMGR(1)

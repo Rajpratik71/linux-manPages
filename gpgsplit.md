@@ -1,4 +1,4 @@
-gpgsplit(1)                General Commands Manual                gpgsplit(1)
+gpgsplit(1)                                                                             General Commands Manual                                                                            gpgsplit(1)
 
 NAME
        gpgsplit - Split an OpenPGP message into packets
@@ -28,9 +28,8 @@ OPTIONS
               Write to stdout and don't actually split.
 
 AUTHOR
-       Copyright  (C)  2002 Free Software Foundation, Inc. Please report bugs
-       to <bug-gnupg@gnu.org>.
+       Copyright (C) 2002 Free Software Foundation, Inc. Please report bugs to <bug-gnupg@gnu.org>.
 
        This manpage was written by Francois Wendling <frwendling@free.fr>.
 
-                                December 2005                     gpgsplit(1)
+                                                                                             December 2005                                                                                 gpgsplit(1)

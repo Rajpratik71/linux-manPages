@@ -1,4 +1,4 @@
-GRUB-GLUE-EFI(1)                User Commands                GRUB-GLUE-EFI(1)
+GRUB-GLUE-EFI(1)                                                                             User Commands                                                                            GRUB-GLUE-EFI(1)
 
 NAME
        grub-glue-efi - generate a fat binary for EFI
@@ -7,8 +7,7 @@ SYNOPSIS
        grub-glue-efi [OPTION...] [OPTIONS]
 
 DESCRIPTION
-       grub-glue-efi  processes  ia32  and  amd64  EFI  images and glues them
-       according to Apple format.
+       grub-glue-efi processes ia32 and amd64 EFI images and glues them according to Apple format.
 
        Glue 32-bit and 64-bit binary into Apple universal one.
 
@@ -33,19 +32,16 @@ DESCRIPTION
        -V, --version
               print program version
 
-       Mandatory or optional arguments to long options are also mandatory  or
-       optional for any corresponding short options.
+       Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
 
 REPORTING BUGS
        Report bugs to <bug-grub@gnu.org>.
 
 SEE ALSO
-       The  full  documentation  for grub-glue-efi is maintained as a Texinfo
-       manual.  If the info and grub-glue-efi programs are properly installed
-       at your site, the command
+       The full documentation for grub-glue-efi is maintained as a Texinfo manual.  If the info and grub-glue-efi programs are properly installed at your site, the command
 
               info grub-glue-efi
 
        should give you access to the complete manual.
 
-grub-glue-efi (GRUB) 2.02-2ubuntFebruary 2019                GRUB-GLUE-EFI(1)
+grub-glue-efi (GRUB) 2.02-2ubuntu8.12                                                        February 2019                                                                            GRUB-GLUE-EFI(1)

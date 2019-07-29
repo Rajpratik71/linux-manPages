@@ -1,4 +1,4 @@
-pamoil(1)                  General Commands Manual                  pamoil(1)
+pamoil(1)                                                                               General Commands Manual                                                                              pamoil(1)
 
 NAME
        pamoil - turn a PAM image into an oil painting
@@ -7,29 +7,20 @@ SYNOPSIS
        pamoil [-n N] [pamfile]
 
 DESCRIPTION
-       Reads a Netpbm image as input.  Does an "oil transfer", and writes the
-       same type of Netpbm image as output.
+       Reads a Netpbm image as input.  Does an "oil transfer", and writes the same type of Netpbm image as output.
 
-       The oil transfer is described in  "Beyond  Photography"  by  Holzmann,
-       chapter 4, photo 7.  It's a sort of localized smearing.
+       The oil transfer is described in "Beyond Photography" by Holzmann, chapter 4, photo 7.  It's a sort of localized smearing.
 
-       The  smearing  works  like this: First, assume a grayscale image.  For
-       each pixel in the image, pamoil looks at a square neighborhood  around
-       it.   pamoil determines what is the most common pixel intensity in the
-       neighborhood, and puts a pixel of that intensity into  the  output  in
-       the same position as the input pixel.
+       The  smearing works like this: First, assume a grayscale image.  For each pixel in the image, pamoil looks at a square neighborhood around it.  pamoil determines what is the most common pixel
+       intensity in the neighborhood, and puts a pixel of that intensity into the output in the same position as the input pixel.
 
-       For  color  images,  or any arbitrary multi-channel image, pamoil com‐
-       putes each channel (e.g. red, green, and blue) separately the same way
-       as the grayscale case above.
+       For color images, or any arbitrary multi-channel image, pamoil computes each channel (e.g. red, green, and blue) separately the same way as the grayscale case above.
 
-       At  the  edges  of the image, where the regular neighborhood would run
-       off the edge of the image, pamoil uses a clipped neighborhood.
+       At the edges of the image, where the regular neighborhood would run off the edge of the image, pamoil uses a clipped neighborhood.
 
 OPTIONS
        -n size
-              This is the size of the neighborhood used in the smearing.  The
-              neighborhood is this many pixels in all four directions.
+              This is the size of the neighborhood used in the smearing.  The neighborhood is this many pixels in all four directions.
 
               The default is 3.
 
@@ -41,7 +32,6 @@ AUTHOR
 
        Modified to ppm by Chris Sheppard, June 25, 2001
 
-       Modified  to  pnm,  using  pam  functions, by Bryan Henderson June 28,
-       2001.
+       Modified to pnm, using pam functions, by Bryan Henderson June 28, 2001.
 
-                                 25 June 2001                       pamoil(1)
+                                                                                             25 June 2001                                                                                    pamoil(1)

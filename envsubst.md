@@ -1,4 +1,4 @@
-ENVSUBST(1)                          GNU                          ENVSUBST(1)
+ENVSUBST(1)                                                                                       GNU                                                                                      ENVSUBST(1)
 
 NAME
        envsubst - substitutes environment variables in shell format strings
@@ -20,16 +20,11 @@ DESCRIPTION
        -V, --version
               output version information and exit
 
-       In normal operation mode, standard input is copied to standard output,
-       with references to environment variables  of  the  form  $VARIABLE  or
-       ${VARIABLE} being replaced with the corresponding values.  If a SHELL-
-       FORMAT is given, only those environment variables that are  referenced
-       in  SHELL-FORMAT  are substituted; otherwise all environment variables
-       references occurring in standard input are substituted.
+       In normal operation mode, standard input is copied to standard output, with references to environment variables of the form $VARIABLE or ${VARIABLE} being replaced with the corresponding val‐
+       ues.  If a SHELL-FORMAT is given, only those environment variables that are referenced in SHELL-FORMAT are substituted; otherwise all environment variables references  occurring  in  standard
+       input are substituted.
 
-       When --variables is used, standard input is ignored,  and  the  output
-       consists  of  the  environment variables that are referenced in SHELL-
-       FORMAT, one per line.
+       When --variables is used, standard input is ignored, and the output consists of the environment variables that are referenced in SHELL-FORMAT, one per line.
 
 AUTHOR
        Written by Bruno Haible.
@@ -38,18 +33,14 @@ REPORTING BUGS
        Report bugs to <bug-gnu-gettext@gnu.org>.
 
 COPYRIGHT
-       Copyright © 2003-2007 Free Software Foundation, Inc.  License  GPLv3+:
-       GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2003-2007 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
-       The full documentation for envsubst is maintained as a Texinfo manual.
-       If the info and envsubst programs are properly installed at your site,
-       the command
+       The full documentation for envsubst is maintained as a Texinfo manual.  If the info and envsubst programs are properly installed at your site, the command
 
               info envsubst
 
        should give you access to the complete manual.
 
-GNU gettext-runtime 0.19.8.1      June 2016                       ENVSUBST(1)
+GNU gettext-runtime 0.19.8.1                                                                   June 2016                                                                                   ENVSUBST(1)

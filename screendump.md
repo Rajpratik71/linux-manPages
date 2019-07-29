@@ -1,4 +1,4 @@
-SCREENDUMP(1)                   Linux Console                   SCREENDUMP(1)
+SCREENDUMP(1)                                                                                Linux Console                                                                               SCREENDUMP(1)
 
 NAME
        screendump - dump the contents of a virtual console to stdout
@@ -7,17 +7,14 @@ SYNOPSIS
        screendump [ N ]
 
 DESCRIPTION
-       The  screendump  command dumps the contents of virtual console N , (or
-       the current console if N is omitted) to standard out.
+       The screendump command dumps the contents of virtual console N , (or the current console if N is omitted) to standard out.
 
        Just saying
               cat /dev/vcsN
        has a similar effect.
 
 NOTES
-       For security reasons, screendump uses linux devices  "virtual  console
-       screen"  and  "virtual  console screen with attributes" to give access
-       for screendump.
+       For security reasons, screendump uses linux devices "virtual console screen" and "virtual console screen with attributes" to give access for screendump.
 
        Ensure these files exist, using
 
@@ -26,10 +23,9 @@ NOTES
                    mknod vcsa$i c 7 `expr 128 + $i`
               done
 
-       (filling in the ellipses) and give the device files  appropriate  per‐
-       missions, or run screendump as root.
+       (filling in the ellipses) and give the device files appropriate permissions, or run screendump as root.
 
 SEE ALSO
        setterm(1)
 
-                                  2002-02-24                    SCREENDUMP(1)
+                                                                                              2002-02-24                                                                                 SCREENDUMP(1)

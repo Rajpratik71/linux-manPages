@@ -1,4 +1,4 @@
-FSCK.CRAMFS(8)              System Administration              FSCK.CRAMFS(8)
+FSCK.CRAMFS(8)                                                                           System Administration                                                                          FSCK.CRAMFS(8)
 
 NAME
        fsck.cramfs - fsck compressed ROM file system
@@ -14,12 +14,10 @@ OPTIONS
               Enable verbose messaging.
 
        -b, --blocksize blocksize
-              Use  this  blocksize,  defaults  to page size. Must be equal to
-              what was set at creation time. Only used for --extract.
+              Use this blocksize, defaults to page size. Must be equal to what was set at creation time. Only used for --extract.
 
        --extract[=directory]
-              Test to uncompress the whole file  system.  Optionally  extract
-              contents of the file to directory.
+              Test to uncompress the whole file system. Optionally extract contents of the file to directory.
 
        -a     This option is silently ignored.
 
@@ -41,8 +39,6 @@ SEE ALSO
        mount(8), mkfs.cramfs(8)
 
 AVAILABILITY
-       The example command is part of the util-linux package and is available
-       from  Linux  Kernel  Archive   ⟨https://www.kernel.org/pub/linux/utils
-       /util-linux/⟩.
+       The example command is part of the util-linux package and is available from Linux Kernel Archive ⟨https://www.kernel.org/pub/linux/utils/util-linux/⟩.
 
-util-linux                        April 2013                   FSCK.CRAMFS(8)
+util-linux                                                                                    April 2013                                                                                FSCK.CRAMFS(8)

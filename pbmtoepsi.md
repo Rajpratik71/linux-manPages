@@ -1,21 +1,16 @@
-pbmtoepsi(1)               General Commands Manual               pbmtoepsi(1)
+pbmtoepsi(1)                                                                            General Commands Manual                                                                           pbmtoepsi(1)
 
 NAME
-       pbmtoepsi  - convert a portable bitmap into an encapsulated PostScript
-       style preview bitmap
+       pbmtoepsi - convert a portable bitmap into an encapsulated PostScript style preview bitmap
 
 SYNOPSIS
        pbmtoepsi [-bbonly] [pbmfile]
 
 DESCRIPTION
-       Reads a portable bitmap as input.  Produce an encapsulated  Postscript
-       style  bitmap  as  output.  The output is not a stand alone postscript
-       file, it is only a preview bitmap, which can be included in an  encap‐
-       sulated  PostScript file.  Note that there is no epsitopbm tool - this
-       transformation is one way.
+       Reads  a  portable  bitmap  as  input.   Produce  an encapsulated Postscript style bitmap as output. The output is not a stand alone postscript file, it is only a preview bitmap, which can be
+       included in an encapsulated PostScript file.  Note that there is no epsitopbm tool - this transformation is one way.
 
-       This  utility  is  a  part  of  the  pstoepsi  tool  by  Doug  Crabill
-       (dgc@cs.purdue.edu).
+       This utility is a part of the pstoepsi tool by Doug Crabill (dgc@cs.purdue.edu).
 
 OPTIONS
        -bbonly
@@ -27,4 +22,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988 Jef Poskanzer, modified by Doug Crabill 1992
 
-                                     1992                        pbmtoepsi(1)
+                                                                                                 1992                                                                                     pbmtoepsi(1)

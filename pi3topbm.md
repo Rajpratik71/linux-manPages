@@ -1,4 +1,4 @@
-pi3topbm(1)                General Commands Manual                pi3topbm(1)
+pi3topbm(1)                                                                             General Commands Manual                                                                            pi3topbm(1)
 
 NAME
        pi3topbm - convert an Atari Degas .pi3 file into a portable bitmap
@@ -7,14 +7,12 @@ SYNOPSIS
        pi3topbm [pi3file]
 
 DESCRIPTION
-       Reads  an  Atari Degas .pi3 file as input.  Produces a portable bitmap
-       as output.
+       Reads an Atari Degas .pi3 file as input.  Produces a portable bitmap as output.
 
 SEE ALSO
        pbmtopi3(1), pbm(5), pi1toppm(1), ppmtopi1(1)
 
 AUTHOR
-       Copyright (C) 1988 by David Beckemeyer  (bdt!david)  and  Diomidis  D.
-       Spinellis.
+       Copyright (C) 1988 by David Beckemeyer (bdt!david) and Diomidis D. Spinellis.
 
-                                11 March 1990                     pi3topbm(1)
+                                                                                             11 March 1990                                                                                 pi3topbm(1)

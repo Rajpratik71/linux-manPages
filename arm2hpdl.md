@@ -1,4 +1,4 @@
-arm2hpdl(1)                General Commands Manual                arm2hpdl(1)
+arm2hpdl(1)                                                                             General Commands Manual                                                                            arm2hpdl(1)
 
 NAME
        arm2hpdl - Add HP download header/trailer to an ARM ELF binary.
@@ -7,8 +7,7 @@ SYNOPSIS
        arm2hpdl [options] arm-binary.img > hpdl.dl
 
 DESCRIPTION
-       arm2hpdl  adds an HP download header/trailer to an ARM ELF binary.  If
-       the file already has an HP header, just copy it to stdout.
+       arm2hpdl adds an HP download header/trailer to an ARM ELF binary.  If the file already has an HP header, just copy it to stdout.
 
 COMMAND LINE OPTIONS
        These are the options that can appear on the command line.

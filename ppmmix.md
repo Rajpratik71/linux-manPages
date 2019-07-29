@@ -1,4 +1,4 @@
-ppmmix(1)                  General Commands Manual                  ppmmix(1)
+ppmmix(1)                                                                               General Commands Manual                                                                              ppmmix(1)
 
 NAME
        ppmmix - blend together two portable pixmaps
@@ -7,16 +7,12 @@ SYNOPSIS
        ppmmix fadefactor ppmfile1 ppmfile2
 
 DESCRIPTION
-       Reads  two  portable  pixmaps  as input. Mixes them together using the
-       specified fade factor. The fade factor may be in the  range  from  0.0
-       (only  ppmfile1's  image  data)  to  1.0 (only ppmfile2's image data).
-       Anything in between gains a smooth blend between the two images.
+       Reads  two  portable  pixmaps  as input. Mixes them together using the specified fade factor. The fade factor may be in the range from 0.0 (only ppmfile1's image data) to 1.0 (only ppmfile2's
+       image data).  Anything in between gains a smooth blend between the two images.
 
        The two pixmaps must have the same size.
 
-       pnmcomp is a more general alternative.  It allows you to mix images of
-       different  size  and to have the fade factor vary throughout the image
-       (through the use of an alpha mask).
+       pnmcomp is a more general alternative.  It allows you to mix images of different size and to have the fade factor vary throughout the image (through the use of an alpha mask).
 
 SEE ALSO
        pnmcomp(5), ppm(5)
@@ -24,4 +20,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1993 by Frank Neumann
 
-                               16 November 1993                     ppmmix(1)
+                                                                                           16 November 1993                                                                                  ppmmix(1)

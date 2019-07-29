@@ -1,4 +1,4 @@
-hbpldecode(1)              General Commands Manual              hbpldecode(1)
+hbpldecode(1)                                                                           General Commands Manual                                                                          hbpldecode(1)
 
 NAME
        hbpldecode - Decode a HBPL stream into human readable form.
@@ -7,19 +7,15 @@ SYNOPSIS
        hbpldecode [options] <hbpl-file
 
 DESCRIPTION
-       hbpldecode  decodes  a  HBPL stream into human readable form.  HBPL is
-       Host Based Printer Language.
+       hbpldecode decodes a HBPL stream into human readable form.  HBPL is Host Based Printer Language.
 
        There are two versions of HBPL in existence.
 
-       Version one is an HBPL stream with JBIG2 (?) data.  This data is  used
-       by  the  Dell  1250c,  Dell  C1660w,  Epson AcuLaser C1700, Fuji-Xerox
-       cp105b, and similar printers.  These printers are unsupported.
+       Version one is an HBPL stream with JBIG2 (?) data.  This data is used by the Dell 1250c, Dell C1660w, Epson AcuLaser C1700, Fuji-Xerox cp105b, and similar printers.  These printers are unsup‐
+       ported.
 
-       Version two is an HBPL stream with JBIG encoded  data.  This  data  is
-       used  by  the  Xerox WorkCentre 6015, Fuji Xerox DocuPrint CM205, Dell
-       1355c,  and  similar  printers.   These  printers  are  supported   by
-       foo2hbpl2-wrapper et al.
+       Version two is an HBPL stream with JBIG encoded data. This data is used by the Xerox WorkCentre 6015, Fuji Xerox DocuPrint CM205, Dell 1355c, and similar printers.  These  printers  are  sup‐
+       ported by foo2hbpl2-wrapper et al.
 
        Both versions can be decoded by hbpldecode.
 

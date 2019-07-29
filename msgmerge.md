@@ -1,4 +1,4 @@
-MSGMERGE(1)                          GNU                          MSGMERGE(1)
+MSGMERGE(1)                                                                                       GNU                                                                                      MSGMERGE(1)
 
 NAME
        msgmerge - merge message catalog and template
@@ -7,19 +7,12 @@ SYNOPSIS
        msgmerge [OPTION] def.po ref.pot
 
 DESCRIPTION
-       Merges  two  Uniforum style .po files together.  The def.po file is an
-       existing PO file with translations which will be  taken  over  to  the
-       newly  created file as long as they still match; comments will be pre‐
-       served, but extracted comments and file positions will  be  discarded.
-       The  ref.pot  file  is the last created PO file with up-to-date source
-       references but old translations, or a PO Template file (generally cre‐
-       ated  by  xgettext);  any translations or comments in the file will be
-       discarded, however dot comments and file positions will be  preserved.
-       Where  an  exact match cannot be found, fuzzy matching is used to pro‐
-       duce better results.
+       Merges  two  Uniforum  style .po files together.  The def.po file is an existing PO file with translations which will be taken over to the newly created file as long as they still match; com‐
+       ments will be preserved, but extracted comments and file positions will be discarded.  The ref.pot file is the last created PO file with up-to-date source references but old translations,  or
+       a  PO  Template  file  (generally  created by xgettext); any translations or comments in the file will be discarded, however dot comments and file positions will be preserved.  Where an exact
+       match cannot be found, fuzzy matching is used to produce better results.
 
-       Mandatory arguments to long options are mandatory  for  short  options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
    Input file location:
        def.po translations referring to old sources
@@ -31,8 +24,7 @@ DESCRIPTION
               add DIRECTORY to list for input files search
 
        -C, --compendium=FILE
-              additional  library  of  message translations, may be specified
-              more than once
+              additional library of message translations, may be specified more than once
 
    Operation mode:
        -U, --update
@@ -42,11 +34,9 @@ DESCRIPTION
        -o, --output-file=FILE
               write output to specified file
 
-       The results are written to standard output if no output file is speci‐
-       fied or if it is -.
+       The results are written to standard output if no output file is specified or if it is -.
 
-       Output  file  location  in  update mode: The result is written back to
-       def.po.
+       Output file location in update mode: The result is written back to def.po.
 
        --backup=CONTROL
               make a backup of def.po
@@ -54,9 +44,7 @@ DESCRIPTION
        --suffix=SUFFIX
               override the usual backup suffix
 
-       The version control method may be selected via the --backup option  or
-       through  the  VERSION_CONTROL environment variable.  Here are the val‐
-       ues:
+       The version control method may be selected via the --backup option or through the VERSION_CONTROL environment variable.  Here are the values:
 
        none, off
               never make backups (even if --backup is given)
@@ -70,8 +58,7 @@ DESCRIPTION
        simple, never
               always make simple backups
 
-       The backup suffix is  '~',  unless  set  with  --suffix  or  the  SIM‐
-       PLE_BACKUP_SUFFIX environment variable.
+       The backup suffix is '~', unless set with --suffix or the SIMPLE_BACKUP_SUFFIX environment variable.
 
    Operation modifiers:
        -m, --multi-domain
@@ -98,8 +85,7 @@ DESCRIPTION
               use colors and other text attributes always
 
        --color=WHEN
-              use  colors  and  other  text  attributes if WHEN.  WHEN may be
-              'always', 'never', 'auto', or 'html'.
+              use colors and other text attributes if WHEN.  WHEN may be 'always', 'never', 'auto', or 'html'.
 
        --style=STYLEFILE
               specify CSS style rule file for --color
@@ -135,8 +121,7 @@ DESCRIPTION
               set output page width
 
        --no-wrap
-              do not break long message lines, longer than  the  output  page
-              width, into several lines
+              do not break long message lines, longer than the output page width, into several lines
 
        -s, --sort-output
               generate sorted output
@@ -164,19 +149,14 @@ REPORTING BUGS
        Report bugs to <bug-gnu-gettext@gnu.org>.
 
 COPYRIGHT
-       Copyright  ©  1995-1998,  2000-2016  Free  Software  Foundation,  Inc.
-       License     GPLv3+:     GNU     GPL     version     3     or     later
-       <http://gnu.org/licenses/gpl.html>
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 1995-1998, 2000-2016 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
-       The full documentation for msgmerge is maintained as a Texinfo manual.
-       If the info and msgmerge programs are properly installed at your site,
-       the command
+       The full documentation for msgmerge is maintained as a Texinfo manual.  If the info and msgmerge programs are properly installed at your site, the command
 
               info msgmerge
 
        should give you access to the complete manual.
 
-GNU gettext-tools 0.19.8.1        June 2016                       MSGMERGE(1)
+GNU gettext-tools 0.19.8.1                                                                     June 2016                                                                                   MSGMERGE(1)

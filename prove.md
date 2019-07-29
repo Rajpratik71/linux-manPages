@@ -1,4 +1,4 @@
-PROVE(1)               Perl Programmers Reference Guide              PROVE(1)
+PROVE(1)                                                                           Perl Programmers Reference Guide                                                                           PROVE(1)
 
 NAME
        prove - Run tests through a TAP harness.
@@ -63,92 +63,68 @@ OPTIONS
 
 NOTES
    .proverc
-       If ~/.proverc or ./.proverc exist they will be read and any options
-       they contain processed before the command line options. Options in
-       .proverc are specified in the same way as command line options:
+       If ~/.proverc or ./.proverc exist they will be read and any options they contain processed before the command line options. Options in .proverc are specified in the same way as command line
+       options:
 
            # .proverc
            --state=hot,fast,save
            -j9
 
-       Additional option files may be specified with the "--rc" option.
-       Default option file processing is disabled by the "--norc" option.
+       Additional option files may be specified with the "--rc" option.  Default option file processing is disabled by the "--norc" option.
 
-       Under Windows and VMS the option file is named _proverc rather than
-       .proverc and is sought only in the current directory.
+       Under Windows and VMS the option file is named _proverc rather than .proverc and is sought only in the current directory.
 
    Reading from "STDIN"
-       If you have a list of tests (or URLs, or anything else you want to
-       test) in a file, you can add them to your tests by using a '-':
+       If you have a list of tests (or URLs, or anything else you want to test) in a file, you can add them to your tests by using a '-':
 
         prove - < my_list_of_things_to_test.txt
 
        See the "README" in the "examples" directory of this distribution.
 
    Default Test Directory
-       If no files or directories are supplied, "prove" looks for all files
-       matching the pattern "t/*.t".
+       If no files or directories are supplied, "prove" looks for all files matching the pattern "t/*.t".
 
    Colored Test Output
-       Colored test output using TAP::Formatter::Color is the default, but if
-       output is not to a terminal, color is disabled. You can override this
-       by adding the "--color" switch.
+       Colored test output using TAP::Formatter::Color is the default, but if output is not to a terminal, color is disabled. You can override this by adding the "--color" switch.
 
-       Color support requires Term::ANSIColor on Unix-like platforms and
-       Win32::Console on windows. If the necessary module is not installed
-       colored output will not be available.
+       Color support requires Term::ANSIColor on Unix-like platforms and Win32::Console on windows. If the necessary module is not installed colored output will not be available.
 
    Exit Code
        If the tests fail "prove" will exit with non-zero status.
 
    Arguments to Tests
-       It is possible to supply arguments to tests. To do so separate them
-       from prove's own arguments with the arisdottle, '::'. For example
+       It is possible to supply arguments to tests. To do so separate them from prove's own arguments with the arisdottle, '::'. For example
 
         prove -v t/mytest.t :: --url http://example.com
 
-       would run t/mytest.t with the options '--url http://example.com'.
-       When running multiple tests they will each receive the same arguments.
+       would run t/mytest.t with the options '--url http://example.com'.  When running multiple tests they will each receive the same arguments.
 
    "--exec"
-       Normally you can just pass a list of Perl tests and the harness will
-       know how to execute them.  However, if your tests are not written in
-       Perl or if you want all tests invoked exactly the same way, use the
-       "-e", or "--exec" switch:
+       Normally you can just pass a list of Perl tests and the harness will know how to execute them.  However, if your tests are not written in Perl or if you want all tests invoked exactly the
+       same way, use the "-e", or "--exec" switch:
 
         prove --exec '/usr/bin/ruby -w' t/
         prove --exec '/usr/bin/perl -Tw -mstrict -Ilib' t/
         prove --exec '/path/to/my/customer/exec'
 
    "--merge"
-       If you need to make sure your diagnostics are displayed in the correct
-       order relative to test results you can use the "--merge" option to
-       merge the test scripts' STDERR into their STDOUT.
+       If you need to make sure your diagnostics are displayed in the correct order relative to test results you can use the "--merge" option to merge the test scripts' STDERR into their STDOUT.
 
-       This guarantees that STDOUT (where the test results appear) and STDERR
-       (where the diagnostics appear) will stay in sync. The harness will
-       display any diagnostics your tests emit on STDERR.
+       This guarantees that STDOUT (where the test results appear) and STDERR (where the diagnostics appear) will stay in sync. The harness will display any diagnostics your tests emit on STDERR.
 
-       Caveat: this is a bit of a kludge. In particular note that if anything
-       that appears on STDERR looks like a test result the test harness will
-       get confused. Use this option only if you understand the consequences
-       and can live with the risk.
+       Caveat: this is a bit of a kludge. In particular note that if anything that appears on STDERR looks like a test result the test harness will get confused. Use this option only if you
+       understand the consequences and can live with the risk.
 
    "--trap"
-       The "--trap" option will attempt to trap SIGINT (Ctrl-C) during a test
-       run and display the test summary even if the run is interrupted
+       The "--trap" option will attempt to trap SIGINT (Ctrl-C) during a test run and display the test summary even if the run is interrupted
 
    "--state"
-       You can ask "prove" to remember the state of previous test runs and
-       select and/or order the tests to be run based on that saved state.
+       You can ask "prove" to remember the state of previous test runs and select and/or order the tests to be run based on that saved state.
 
-       The "--state" switch requires an argument which must be a comma
-       separated list of one or more of the following options.
+       The "--state" switch requires an argument which must be a comma separated list of one or more of the following options.
 
        "last"
-           Run the same tests as the last time the state was saved. This
-           makes it possible, for example, to recreate the ordering of a
-           shuffled test.
+           Run the same tests as the last time the state was saved. This makes it possible, for example, to recreate the ordering of a shuffled test.
 
                # Run all tests in random order
                $ prove -b --state=save --shuffle
@@ -165,31 +141,25 @@ NOTES
                # Run failures
                $ prove -b --state=failed
 
-           If you also specify the "save" option newly passing tests will be
-           excluded from subsequent runs.
+           If you also specify the "save" option newly passing tests will be excluded from subsequent runs.
 
                # Repeat until no more failures
                $ prove -b --state=failed,save
 
        "passed"
-           Run only the passed tests from last time. Useful to make sure that
-           no new problems have been introduced.
+           Run only the passed tests from last time. Useful to make sure that no new problems have been introduced.
 
        "all"
-           Run all tests in normal order. Multple options may be specified,
-           so to run all tests with the failures from last time first:
+           Run all tests in normal order. Multple options may be specified, so to run all tests with the failures from last time first:
 
                $ prove -b --state=failed,all,save
 
        "hot"
-           Run the tests that most recently failed first. The last failure
-           time of each test is stored. The "hot" option causes tests to be
-           run in most-recent- failure order.
+           Run the tests that most recently failed first. The last failure time of each test is stored. The "hot" option causes tests to be run in most-recent- failure order.
 
                $ prove -b --state=hot,save
 
-           Tests that have never failed will not be selected. To run all
-           tests with the most recently failed first use
+           Tests that have never failed will not be selected. To run all tests with the most recently failed first use
 
                $ prove -b --state=hot,all,save
 
@@ -201,9 +171,7 @@ NOTES
            Run any tests with todos.
 
        "slow"
-           Run the tests in slowest to fastest order. This is useful in
-           conjunction with the "-j" parallel testing switch to ensure that
-           your slowest tests start running first.
+           Run the tests in slowest to fastest order. This is useful in conjunction with the "-j" parallel testing switch to ensure that your slowest tests start running first.
 
                $ prove -b --state=slow -j9
 
@@ -211,36 +179,28 @@ NOTES
            Run test tests in fastest to slowest order.
 
        "new"
-           Run the tests in newest to oldest order based on the modification
-           times of the test scripts.
+           Run the tests in newest to oldest order based on the modification times of the test scripts.
 
        "old"
            Run the tests in oldest to newest order.
 
        "fresh"
-           Run those test scripts that have been modified since the last test
-           run.
+           Run those test scripts that have been modified since the last test run.
 
        "save"
-           Save the state on exit. The state is stored in a file called
-           .prove (_prove on Windows and VMS) in the current directory.
+           Save the state on exit. The state is stored in a file called .prove (_prove on Windows and VMS) in the current directory.
 
        The "--state" switch may be used more than once.
 
            $ prove -b --state=hot --state=all,save
 
    --rules
-       The "--rules" option is used to control which tests are run
-       sequentially and which are run in parallel, if the "--jobs" option is
-       specified. The option may be specified multiple times, and the order
-       matters.
+       The "--rules" option is used to control which tests are run sequentially and which are run in parallel, if the "--jobs" option is specified. The option may be specified multiple times, and
+       the order matters.
 
-       The most practical use is likely to specify that some tests are not
-       "parallel-ready".  Since mentioning a file with --rules doesn't cause
-       it to be selected to run as a test, you can "set and forget" some
-       rules preferences in your .proverc file. Then you'll be able to take
-       maximum advantage of the performance benefits of parallel testing,
-       while some exceptions are still run in parallel.
+       The most practical use is likely to specify that some tests are not "parallel-ready".  Since mentioning a file with --rules doesn't cause it to be selected to run as a test, you can "set and
+       forget" some rules preferences in your .proverc file. Then you'll be able to take maximum advantage of the performance benefits of parallel testing, while some exceptions are still run in
+       parallel.
 
        --rules examples
 
@@ -252,26 +212,19 @@ NOTES
 
        --rules resolution
 
-       ·   By default, all tests are eligible to be run in parallel.
-           Specifying any of your own rules removes this one.
+       ·   By default, all tests are eligible to be run in parallel. Specifying any of your own rules removes this one.
 
-       ·   "First match wins". The first rule that matches a test will be the
-           one that applies.
+       ·   "First match wins". The first rule that matches a test will be the one that applies.
 
-       ·   Any test which does not match a rule will be run in sequence at
-           the end of the run.
+       ·   Any test which does not match a rule will be run in sequence at the end of the run.
 
-       ·   The existence of a rule does not imply selecting a test. You must
-           still specify the tests to run.
+       ·   The existence of a rule does not imply selecting a test. You must still specify the tests to run.
 
-       ·   Specifying a rule to allow tests to run in parallel does not make
-           them run in parallel. You still need specify the number of
-           parallel "jobs" in your Harness object.
+       ·   Specifying a rule to allow tests to run in parallel does not make them run in parallel. You still need specify the number of parallel "jobs" in your Harness object.
 
        --rules Glob-style pattern matching
 
-       We implement our own glob-style pattern matching for --rules. Here are
-       the supported patterns:
+       We implement our own glob-style pattern matching for --rules. Here are the supported patterns:
 
            ** is any number of characters, including /, within a pathname
            * is zero or more characters within a filename/directory name
@@ -281,28 +234,18 @@ NOTES
 
        More advanced specifications for parallel vs sequence run rules
 
-       If you need more advanced management of what runs in parallel vs in
-       sequence, see the associated 'rules' documentation in TAP::Harness and
-       TAP::Parser::Scheduler.  If what's possible directly through "prove"
-       is not sufficient, you can write your own harness to access these
-       features directly.
+       If you need more advanced management of what runs in parallel vs in sequence, see the associated 'rules' documentation in TAP::Harness and TAP::Parser::Scheduler.  If what's possible directly
+       through "prove" is not sufficient, you can write your own harness to access these features directly.
 
    @INC
-       prove introduces a separation between "options passed to the perl
-       which runs prove" and "options passed to the perl which runs tests";
-       this distinction is by design. Thus the perl which is running a test
-       starts with the default @INC. Additional library directories can be
-       added via the "PERL5LIB" environment variable, via -Ifoo in "PERL5OPT"
-       or via the "-Ilib" option to prove.
+       prove introduces a separation between "options passed to the perl which runs prove" and "options passed to the perl which runs tests"; this distinction is by design. Thus the perl which is
+       running a test starts with the default @INC. Additional library directories can be added via the "PERL5LIB" environment variable, via -Ifoo in "PERL5OPT" or via the "-Ilib" option to prove.
 
    Taint Mode
-       Normally when a Perl program is run in taint mode the contents of the
-       "PERL5LIB" environment variable do not appear in @INC.
+       Normally when a Perl program is run in taint mode the contents of the "PERL5LIB" environment variable do not appear in @INC.
 
-       Because "PERL5LIB" is often used during testing to add build
-       directories to @INC prove passes the names of any directories found in
-       "PERL5LIB" as -I switches. The net effect of this is that "PERL5LIB"
-       is honoured even when prove is run in taint mode.
+       Because "PERL5LIB" is often used during testing to add build directories to @INC prove passes the names of any directories found in "PERL5LIB" as -I switches. The net effect of this is that
+       "PERL5LIB" is honoured even when prove is run in taint mode.
 
 FORMATTERS
        You can load a custom TAP::Parser::Formatter:
@@ -310,8 +253,7 @@ FORMATTERS
          prove --formatter MyFormatter
 
 SOURCE HANDLERS
-       You can load custom TAP::Parser::SourceHandlers, to change the way the
-       parser interprets particular sources of TAP.
+       You can load custom TAP::Parser::SourceHandlers, to change the way the parser interprets particular sources of TAP.
 
          prove --source MyHandler --source YetAnother t
 
@@ -322,30 +264,21 @@ SOURCE HANDLERS
                --source File --file-option extensions=.txt --file-option extensions=.tmp t
                --source pgTAP --pgtap-option pset=format=html --pgtap-option pset=border=2
 
-       Each "--$source-option" option must specify a key/value pair separated
-       by an "=". If an option can take multiple values, just specify it
-       multiple times, as with the "extensions=" examples above. If the
-       option should be a hash reference, specify the value as a second pair
-       separated by a "=", as in the "pset=" examples above (escape "=" with
-       a backslash).
+       Each "--$source-option" option must specify a key/value pair separated by an "=". If an option can take multiple values, just specify it multiple times, as with the "extensions=" examples
+       above. If the option should be a hash reference, specify the value as a second pair separated by a "=", as in the "pset=" examples above (escape "=" with a backslash).
 
-       All "--sources" are combined into a hash, and passed to "new" in
-       TAP::Harness's "sources" parameter.
+       All "--sources" are combined into a hash, and passed to "new" in TAP::Harness's "sources" parameter.
 
-       See TAP::Parser::IteratorFactory for more details on how configuration
-       is passed to SourceHandlers.
+       See TAP::Parser::IteratorFactory for more details on how configuration is passed to SourceHandlers.
 
 PLUGINS
        Plugins can be loaded using the "-Pplugin" syntax, eg:
 
          prove -PMyPlugin
 
-       This will search for a module named "App::Prove::Plugin::MyPlugin", or
-       failing that, "MyPlugin".  If the plugin can't be found, "prove" will
-       complain & exit.
+       This will search for a module named "App::Prove::Plugin::MyPlugin", or failing that, "MyPlugin".  If the plugin can't be found, "prove" will complain & exit.
 
-       You can pass arguments to your plugin by appending "=arg1,arg2,etc" to
-       the plugin name:
+       You can pass arguments to your plugin by appending "=arg1,arg2,etc" to the plugin name:
 
          prove -PMyPlugin=fou,du,fafa
 
@@ -359,4 +292,4 @@ PLUGINS
    Writing Plugins
        Please see "PLUGINS" in App::Prove.
 
-perl v5.26.1                      2018-11-19                         PROVE(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                      PROVE(1)

@@ -1,4 +1,4 @@
-foo2zjs-wrapper(1)         General Commands Manual         foo2zjs-wrapper(1)
+foo2zjs-wrapper(1)                                                                      General Commands Manual                                                                     foo2zjs-wrapper(1)
 
 NAME
        foo2zjs-wrapper - Convert Postscript into a ZJS printer stream
@@ -7,20 +7,14 @@ SYNOPSIS
        foo2zjs-wrapper [options] [ps-file]
 
 DESCRIPTION
-       foo2zjs-wrapper  is  a  Foomatic  compatible  printer  wrapper for the
-       foo2zjs printer driver.  This script reads  a  Postscript  ps-file  or
-       standard input and converts it to Zenographics ZjStream printer format
-       for driving the Minolta/QMS 2300 DL network color  laser  printer  and
-       other Zenographics-based printers.
+       foo2zjs-wrapper  is  a  Foomatic  compatible printer wrapper for the foo2zjs printer driver.  This script reads a Postscript ps-file or standard input and converts it to Zenographics ZjStream
+       printer format for driving the Minolta/QMS 2300 DL network color laser printer and other Zenographics-based printers.
 
-       This script can be used in a standalone fashion, but is intended to be
-       called from a printer spooler system which uses the  Foomatic  printer
-       database.
+       This script can be used in a standalone fashion, but is intended to be called from a printer spooler system which uses the Foomatic printer database.
 
 COMMAND LINE OPTIONS
    Normal Options
-       These  are  the  options  used to select the parameters of a print job
-       that are usually controlled on a per job basis.
+       These are the options used to select the parameters of a print job that are usually controlled on a per job basis.
 
        -c     Print in color (else monochrome).
 
@@ -58,7 +52,6 @@ COMMAND LINE OPTIONS
               vellum              na       na       273        273      273
               medium              na       na        na        282      282
               extraheavy          na       na        na        283      283
-
               color               na       na       512        512      512
               light               na       na       258        258      258
               preprinted          na       na       514        514      514
@@ -126,46 +119,31 @@ COMMAND LINE OPTIONS
               Seascape    -os   (rotated 90 degrees clockwise)
 
    Printer Tweaking Options
-       These are the options used to customize the operation of foo2zjs for a
-       particular printer.
+       These are the options used to customize the operation of foo2zjs for a particular printer.
 
        -u xoffxyoff
-              Set  the  offset  of the start of the printable region from the
-              upper left corner, in pixels [varies  with  paper  size].   The
-              defaults  should  work  on  the 2200DL and 2300DL, and have not
+              Set the offset of the start of the printable region from the upper left corner, in pixels [varies with paper size].  The defaults should work on the 2200DL and  2300DL,  and  have  not
               been tested on any other printers.
 
        -l xoffxyoff
-              Set the offset of the end of  the  printable  region  from  the
-              lower  right  corner,  in pixels [varies with paper size].  The
-              defaults should work on the 2200DL and  2300DL,  and  have  not
-              been tested on any other printers.
+              Set the offset of the end of the printable region from the lower right corner, in pixels [varies with paper size].  The defaults should work on the 2200DL and 2300DL, and have not been
+              tested on any other printers.
 
        -L mask
-              Send  the  logical  clipping values from -u/-l in the ZjStream.
-              foo2zjs-wrapper always runs Ghostscript  with  the  ideal  page
-              dimensions,  so that the scale of the image is correct, regard‐
-              less whether or not the printer has unprintable regions.   This
-              option  is  used to move the position of the clipped image back
-              to where it belongs on the page.  The default is  to  send  the
-              amount  which  was  clipped by -u and -l, and should be good in
-              most cases.
+              Send the logical clipping values from -u/-l in the ZjStream.  foo2zjs-wrapper always runs Ghostscript with the ideal page dimensions, so that the scale of the image is correct, regard‐
+              less  whether  or  not the printer has unprintable regions.  This option is used to move the position of the clipped image back to where it belongs on the page.  The default is to send
+              the amount which was clipped by -u and -l, and should be good in most cases.
 
               0   don't send any logical clipping amounts
               1   only send Y clipping amount
               2   only send X clipping amount
               3   send both X and Y clipping amounts
 
-       -P     Do not send START_PLANE codes on  monochrome  output.   May  be
-              needed  by some monochrome-only printers, such as the HP Laser‐
-              Jet 1000.
+       -P     Do not send START_PLANE codes on monochrome output.  May be needed by some monochrome-only printers, such as the HP LaserJet 1000.
 
        -X padlen
-              Add extra zero padding to the end of BID segments.  The default
-              is  16  bytes.   Padding 16 bytes of zeroes is needed for older
-              ZjStream printers, such as the Minolta 2200DL and  HP  LaserJet
-              1000,  and  seems  harmless  to newer ones, such as the Minolta
-              2300DL.  So the default should be good for all cases.
+              Add extra zero padding to the end of BID segments.  The default is 16 bytes.  Padding 16 bytes of zeroes is needed for older ZjStream printers, such as the Minolta 2200DL and HP Laser‐
+              Jet 1000, and seems harmless to newer ones, such as the Minolta 2300DL.  So the default should be good for all cases.
 
        -z model
               Model. Default is 0.
@@ -176,39 +154,27 @@ COMMAND LINE OPTIONS
               3   HP Pro CP1025
 
    Color Tweaking Options
-       These are the options used to control the  quality  of  color  output.
-       Color correction is currently a WORK IN PROGRESS.
+       These are the options used to control the quality of color output.  Color correction is currently a WORK IN PROGRESS.
 
        -g gsopts
-              Additional   options   to   pass   to   Ghostscript,   such  as
-              -g“-dDITHERPPI=nnn”, etc.  This option  may  appear  more  than
-              once.
+              Additional options to pass to Ghostscript, such as -g“-dDITHERPPI=nnn”, etc.  This option may appear more than once.
 
        -G profile.icm
-              Convert  profile.icm to a Postscript color rendering dictionary
-              (CRD) using foo2zjs-icc2ps and adjust  the  printer  colors  by
-              using  the  Postscript  setcolorrendering  operator.   (WORK IN
+              Convert  profile.icm  to  a Postscript color rendering dictionary (CRD) using foo2zjs-icc2ps and adjust the printer colors by using the Postscript setcolorrendering operator.  (WORK IN
               PROGRESS).
 
        -G gamma-file.ps
-              Prepend gamma-file.ps to the Postscript input to perform  color
-              correction using the setcolortransfer Postscript operator.  For
-              example, the file might contain:
-              {0.333 exp} {0.333 exp} {0.333 exp} {0.333 exp}  setcolortrans‐
-              fer
+              Prepend gamma-file.ps to the Postscript input to perform color correction using the setcolortransfer Postscript operator.  For example, the file might contain:
+              {0.333 exp} {0.333 exp} {0.333 exp} {0.333 exp} setcolortransfer
 
        -I intent
-              Select  profile intent from the ICM file.  0=Perceptual, 1=Col‐
-              orimetric, 2=Saturation, 3=Absolute.   Default  is  0  (percep‐
-              tual).
+              Select profile intent from the ICM file.  0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute.  Default is 0 (perceptual).
 
    Debugging Options
        These options are used for debugging foo2zjs and its wrapper.
 
        -S plane
-              Output  just  a single color plane from a color print and print
-              it on the black plane.  The default  is  to  output  all  color
-              planes.
+              Output just a single color plane from a color print and print it on the black plane.  The default is to output all color planes.
 
               1   Cyan
               2   Magenta
@@ -219,8 +185,7 @@ COMMAND LINE OPTIONS
               Set Debug level [0].
 
 EXAMPLES
-       Create  a  monochrome ZjStream from a Postscript document, examine it,
-       and then print it using a RAW print queue:
+       Create a monochrome ZjStream from a Postscript document, examine it, and then print it using a RAW print queue:
 
               foo2zjs-wrapper testpage.ps > testpage.zm
               zjsdecode < testpage.zm

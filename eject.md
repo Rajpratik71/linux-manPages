@@ -1,4 +1,4 @@
-EJECT(1)                        User Commands                        EJECT(1)
+EJECT(1)                                                                                     User Commands                                                                                    EJECT(1)
 
 NAME
        eject - eject removable media
@@ -17,105 +17,68 @@ SYNOPSIS
        eject -V
 
 DESCRIPTION
-       Eject  allows  removable media (typically a CD-ROM, floppy disk, tape,
-       or JAZ or ZIP disk) to be ejected under software control. The  command
-       can  also control some multi-disc CD-ROM changers, the auto-eject fea‐
-       ture supported by some devices, and close the disc tray of some CD-ROM
-       drives.
+       Eject  allows  removable  media (typically a CD-ROM, floppy disk, tape, or JAZ or ZIP disk) to be ejected under software control. The command can also control some multi-disc CD-ROM changers,
+       the auto-eject feature supported by some devices, and close the disc tray of some CD-ROM drives.
 
-       The  device  corresponding  to  <name>  is  ejected. The name can be a
-       device file or mount point, either a full path  or  with  the  leading
-       "/dev",  "/media"  or  "/mnt"  omitted.  If  no name is specified, the
-       default name "cdrom" is used.
+       The device corresponding to <name> is ejected. The name can be a device file or mount point, either a full path or with the leading "/dev", "/media" or "/mnt" omitted. If no  name  is  speci‐
+       fied, the default name "cdrom" is used.
 
-       There are four different methods of ejecting, depending on whether the
-       device is a CD-ROM, SCSI device, removable floppy, or tape. By default
-       eject tries all four methods in order until it succeeds.
+       There  are  four  different methods of ejecting, depending on whether the device is a CD-ROM, SCSI device, removable floppy, or tape. By default eject tries all four methods in order until it
+       succeeds.
 
        If the device is currently mounted, it is unmounted before ejecting.
 
 COMMAND-LINE OPTIONS
-       -h   This option causes eject to display a brief  description  of  the
-            command options.
+       -h   This option causes eject to display a brief description of the command options.
 
-       -v   This  makes  eject  run in verbose mode; more information is dis‐
-            played about what the command is doing.
+       -v   This makes eject run in verbose mode; more information is displayed about what the command is doing.
 
        -d   If invoked with this option, eject lists the default device name.
 
        -a on|1|off|0
-            This option controls  the  auto-eject  mode,  supported  by  some
-            devices.   When  enabled, the drive automatically ejects when the
-            device is closed.
+            This option controls the auto-eject mode, supported by some devices.  When enabled, the drive automatically ejects when the device is closed.
 
        -c <slot>
-            With this option a CD slot can be selected from an ATAPI/IDE  CD-
-            ROM changer. Linux 2.0 or higher is required to use this feature.
-            The CD-ROM drive can not be in use (mounted data CD or playing  a
-            music CD) for a change request to work. Please also note that the
-            first slot of the changer is referred to as 0, not 1.
+            With this option a CD slot can be selected from an ATAPI/IDE CD-ROM changer. Linux 2.0 or higher is required to use this feature. The CD-ROM drive can not be in use (mounted data  CD  or
+            playing a music CD) for a change request to work. Please also note that the first slot of the changer is referred to as 0, not 1.
 
        -i on|1|off|0
-            This option controls locking of the hardware eject  button.  When
-            enabled,  the  drive  will  not  be  ejected  when  the button is
-            pressed.  This is useful when you are carrying a laptop in a  bag
-            or case and don't want it to eject if the button is inadvertently
-            pressed.
+            This option controls locking of the hardware eject button. When enabled, the drive will not be ejected when the button is pressed.  This is useful when you are carrying a laptop in a bag
+            or case and don't want it to eject if the button is inadvertently pressed.
 
-       -t   With this option the drive is given a CD-ROM tray close  command.
-            Not all devices support this command.
+       -t   With this option the drive is given a CD-ROM tray close command. Not all devices support this command.
 
-       -T   With  this  option the drive is given a CD-ROM tray close command
-            if it's opened, and a CD-ROM tray eject command if  it's  closed.
-            Not  all  devices support this command, because it uses the above
-            CD-ROM tray close command.
+       -T   With this option the drive is given a CD-ROM tray close command if it's opened, and a CD-ROM tray eject command if it's closed. Not all devices support this command, because it uses  the
+            above CD-ROM tray close command.
 
        -x <speed>
-            With this option the drive is given a CD-ROM  select  speed  com‐
-            mand.   The  speed  argument  is  a number indicating the desired
-            speed (e.g. 8 for 8X speed), or 0 for maximum data rate. Not  all
-            devices support this command and you can only specify speeds that
-            the drive is capable of. Every time the  media  is  changed  this
-            option  is cleared. This option can be used alone, or with the -t
-            and -c options.
+            With this option the drive is given a CD-ROM select speed command.  The speed argument is a number indicating the desired speed (e.g. 8 for 8X speed), or 0 for maximum data rate. Not all
+            devices support this command and you can only specify speeds that the drive is capable of. Every time the media is changed this option is cleared. This option can be used alone, or  with
+            the -t and -c options.
 
-       -X   With this option the CD-ROM drive will be probed  to  detect  the
-            available  speeds.  The  output  is a list of speeds which can be
-            used as an argument of the -x option. This only works with  Linux
-            2.6.13  or  higher, on previous versions solely the maximum speed
-            will be reported. Also note that some  drive  may  not  correctly
-            report  the  speed  and  therefore this option does not work with
-            them.
+       -X   With  this  option  the CD-ROM drive will be probed to detect the available speeds. The output is a list of speeds which can be used as an argument of the -x option. This only works with
+            Linux 2.6.13 or higher, on previous versions solely the maximum speed will be reported. Also note that some drive may not correctly report the speed and therefore this  option  does  not
+            work with them.
 
-       -n   With this option the selected device is displayed but  no  action
-            is performed.
+       -n   With this option the selected device is displayed but no action is performed.
 
-       -r   This  option  specifies  that the drive should be ejected using a
-            CDROM eject command.
+       -r   This option specifies that the drive should be ejected using a CDROM eject command.
 
-       -s   This option specifies that the drive should be ejected using SCSI
-            commands.
+       -s   This option specifies that the drive should be ejected using SCSI commands.
 
-       -f   This  option  specifies  that the drive should be ejected using a
-            removable floppy disk eject command.
+       -f   This option specifies that the drive should be ejected using a removable floppy disk eject command.
 
-       -q   This option specifies that the drive should be  ejected  using  a
-            tape drive offline command.
+       -q   This option specifies that the drive should be ejected using a tape drive offline command.
 
-       -p   This  option  allow you to use /proc/mounts instead /etc/mtab. It
-            also passes the -n option to umount(1).
+       -p   This option allow you to use /proc/mounts instead /etc/mtab. It also passes the -n option to umount(1).
 
-       -m   This option allows eject to work with device drivers which  auto‐
-            matically  mount  removable  media  and  therefore must be always
-            mount(1)ed.  The option tells eject to not  try  to  unmount  the
-            given  device,  even  if  it is mounted according to /etc/mtab or
-            /proc/mounts.
+       -m   This  option allows eject to work with device drivers which automatically mount removable media and therefore must be always mount(1)ed.  The option tells eject to not try to unmount the
+            given device, even if it is mounted according to /etc/mtab or /proc/mounts.
 
        -V   This option causes eject to display the program version and exit.
 
 LONG OPTIONS
-       All options have corresponding long names, as listed below.  The  long
-       names can be abbreviated as long as they are unique.
+       All options have corresponding long names, as listed below. The long names can be abbreviated as long as they are unique.
 
        -h --help
        -v --verbose
@@ -173,75 +136,44 @@ EXAMPLES
               eject -a on /dev/sbpcd
 
 EXIT STATUS
-       Returns  0  if operation was successful, 1 if operation failed or com‐
-       mand syntax was not valid.
+       Returns 0 if operation was successful, 1 if operation failed or command syntax was not valid.
 
 NOTES
-       Eject only works with devices that support one or  more  of  the  four
-       methods  of ejecting. This includes most CD-ROM drives (IDE, SCSI, and
-       proprietary), some SCSI tape drives, JAZ drives, ZIP drives  (parallel
-       port,  SCSI,  and  IDE  versions), and LS120 removable floppies. Users
-       have also reported success with floppy drives on Sun SPARC  and  Apple
-       Macintosh systems. If eject does not work, it is most likely a limita‐
-       tion of the kernel driver for the device and  not  the  eject  program
-       itself.
+       Eject only works with devices that support one or more of the four methods of ejecting. This includes most CD-ROM drives (IDE, SCSI, and proprietary), some SCSI tape drives, JAZ  drives,  ZIP
+       drives  (parallel  port, SCSI, and IDE versions), and LS120 removable floppies. Users have also reported success with floppy drives on Sun SPARC and Apple Macintosh systems. If eject does not
+       work, it is most likely a limitation of the kernel driver for the device and not the eject program itself.
 
-       The  -r,  -s,  -f,  and -q options allow controlling which methods are
-       used to eject. More than one method can be specified. If none of these
-       options  are  specified,  it  tries  all four (this works fine in most
-       cases).
+       The -r, -s, -f, and -q options allow controlling which methods are used to eject. More than one method can be specified. If none of these options are specified, it tries all four (this  works
+       fine in most cases).
 
-       Eject may not always be able to determine if  the  device  is  mounted
-       (e.g. if it has several names). If the device name is a symbolic link,
-       eject will follow the link and use the device that it points to.
+       Eject may not always be able to determine if the device is mounted (e.g. if it has several names). If the device name is a symbolic link, eject will follow the link and use the device that it
+       points to.
 
-       If eject determines that the device can have multiple  partitions,  it
-       will  attempt  to  unmount all mounted partitions of the device before
-       ejecting. If an unmount fails, the program will not attempt  to  eject
-       the media.
+       If eject determines that the device can have multiple partitions, it will attempt to unmount all mounted partitions of the device before ejecting. If an unmount fails, the  program  will  not
+       attempt to eject the media.
 
-       You  can eject an audio CD. Some CD-ROM drives will refuse to open the
-       tray if the drive is empty. Some devices do not support the tray close
-       command.
+       You can eject an audio CD. Some CD-ROM drives will refuse to open the tray if the drive is empty. Some devices do not support the tray close command.
 
-       If  the  auto-eject  feature is enabled, then the drive will always be
-       ejected after running this command. Not all Linux kernel CD-ROM  driv‐
-       ers support the auto-eject mode. There is no way to find out the state
-       of the auto-eject mode.
+       If  the  auto-eject  feature  is enabled, then the drive will always be ejected after running this command. Not all Linux kernel CD-ROM drivers support the auto-eject mode. There is no way to
+       find out the state of the auto-eject mode.
 
-       You need appropriate privileges to access the device files. Running as
-       root  or  setuid  root  is  required  to eject some devices (e.g. SCSI
-       devices).
+       You need appropriate privileges to access the device files. Running as root or setuid root is required to eject some devices (e.g. SCSI devices).
 
-       The heuristic used to find a device, given a name, is as  follows.  If
-       the  name  ends in a trailing slash, it is removed (this is to support
-       filenames generated using shell file name  completion).  If  the  name
-       starts  with '.' or '/', it tries to open it as a device file or mount
-       point. If that fails, it tries prepending '/dev/', '/media/' ,'/mnt/',
-       '/dev/cdroms',  '/dev/rdsk/',  '/dev/dsk/',  and  finally  './' to the
-       name, until a device file or mount point is found that can be  opened.
-       The  program  checks  /etc/mtab for mounted devices. If that fails, it
-       also  checks  /etc/fstab  for  mount  points  of  currently  unmounted
-       devices.
+       The heuristic used to find a device, given a name, is as follows. If the name ends in a trailing slash, it is removed (this is to support filenames generated using  shell  file  name  comple‐
+       tion).  If  the  name starts with '.' or '/', it tries to open it as a device file or mount point. If that fails, it tries prepending '/dev/', '/media/' ,'/mnt/', '/dev/cdroms', '/dev/rdsk/',
+       '/dev/dsk/', and finally './' to the name, until a device file or mount point is found that can be opened. The program checks /etc/mtab for mounted devices. If  that  fails,  it  also  checks
+       /etc/fstab for mount points of currently unmounted devices.
 
-       Creating  symbolic links such as /dev/cdrom or /dev/zip is recommended
-       so that eject can  determine  the  appropriate  devices  using  easily
-       remembered names.
+       Creating symbolic links such as /dev/cdrom or /dev/zip is recommended so that eject can determine the appropriate devices using easily remembered names.
 
-       To save typing you can create a shell alias for the eject options that
-       work for your particular setup.
+       To save typing you can create a shell alias for the eject options that work for your particular setup.
 
 AUTHOR
-       Eject was written by Jeff Tranter (tranter@pobox.com) and is  released
-       under  the  conditions of the GNU General Public License. See the file
-       COPYING and notes in the source code for details.
+       Eject was written by Jeff Tranter (tranter@pobox.com) and is released under the conditions of the GNU General Public License. See the file COPYING and notes in the source code for details.
 
-       The    -x    option    was    added     by     Nobuyuki     Tsuchimura
-       (tutimura@nn.iij4u.or.jp),   with  thanks  to  Roland  Krivanek  (kri‐
-       vanek@fmph.uniba.sk) and his cdrom_speed command.
+       The -x option was added by Nobuyuki Tsuchimura (tutimura@nn.iij4u.or.jp), with thanks to Roland Krivanek (krivanek@fmph.uniba.sk) and his cdrom_speed command.
 
-       The -T option was added by Sybren Stuvel (sybren@thirdtower.com), with
-       big thanks to Benjamin Schwenk (benjaminschwenk@yahoo.de).
+       The -T option was added by Sybren Stuvel (sybren@thirdtower.com), with big thanks to Benjamin Schwenk (benjaminschwenk@yahoo.de).
 
        The -X option was added by Eric Piel (Eric.Piel@tremplin-utc.net).
 
@@ -249,4 +181,4 @@ SEE ALSO
        mount(2), umount(2), mount(8), umount(8)
        /usr/src/linux/Documentation/cdrom/
 
-Linux                            12 May 2005                         EJECT(1)
+Linux                                                                                         12 May 2005                                                                                     EJECT(1)

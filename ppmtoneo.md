@@ -1,4 +1,4 @@
-ppmtoneo(1)                General Commands Manual                ppmtoneo(1)
+ppmtoneo(1)                                                                             General Commands Manual                                                                            ppmtoneo(1)
 
 NAME
        ppmtoneo - convert a portable pixmap into an Atari Neochrome .neo file
@@ -7,14 +7,12 @@ SYNOPSIS
        ppmtoneo [ppmfile]
 
 DESCRIPTION
-       Reads  a  portable  pixmap as input.  Produces an Atari Neochrome .neo
-       file as output.
+       Reads a portable pixmap as input.  Produces an Atari Neochrome .neo file as output.
 
 SEE ALSO
        neotoppm(1), ppm(5)
 
 AUTHOR
-       Copyright (C) 2001 by Teemu Hukkanen <tjhukkan@iki.fi>, based on  ppm‐
-       topi1 by Steve Belczyk (seb3@gte.com) and Jef Poskanzer.
+       Copyright (C) 2001 by Teemu Hukkanen <tjhukkan@iki.fi>, based on ppmtopi1 by Steve Belczyk (seb3@gte.com) and Jef Poskanzer.
 
-                                24 April 2001                     ppmtoneo(1)
+                                                                                             24 April 2001                                                                                 ppmtoneo(1)

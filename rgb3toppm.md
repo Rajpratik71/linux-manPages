@@ -1,4 +1,4 @@
-rgb3toppm(1)               General Commands Manual               rgb3toppm(1)
+rgb3toppm(1)                                                                            General Commands Manual                                                                           rgb3toppm(1)
 
 NAME
        rgb3toppm - combine three portable graymaps into one portable pixmap
@@ -7,8 +7,7 @@ SYNOPSIS
        rgb3toppm redpgmfile greenpgmfile bluepgmfile
 
 DESCRIPTION
-       Reads  three  portable  graymaps as input.  Combines them and produces
-       one portable pixmap as output.
+       Reads three portable graymaps as input.  Combines them and produces one portable pixmap as output.
 
 SEE ALSO
        ppmtorgb3(1), pgmtoppm(1), ppmtopgm(1), ppm(5), pgm(5)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Jef Poskanzer.
 
-                               15 February 1990                  rgb3toppm(1)
+                                                                                           15 February 1990                                                                               rgb3toppm(1)

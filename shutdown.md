@@ -1,4 +1,4 @@
-SHUTDOWN(8)                        shutdown                       SHUTDOWN(8)
+SHUTDOWN(8)                                                                                    shutdown                                                                                    SHUTDOWN(8)
 
 NAME
        shutdown - Halt, power-off or reboot the machine
@@ -9,23 +9,14 @@ SYNOPSIS
 DESCRIPTION
        shutdown may be used to halt, power-off or reboot the machine.
 
-       The first argument may be a time string (which is usually "now").
-       Optionally, this may be followed by a wall message to be sent to all
-       logged-in users before going down.
+       The first argument may be a time string (which is usually "now"). Optionally, this may be followed by a wall message to be sent to all logged-in users before going down.
 
-       The time string may either be in the format "hh:mm" for hour/minutes
-       specifying the time to execute the shutdown at, specified in 24h clock
-       format. Alternatively it may be in the syntax "+m" referring to the
-       specified number of minutes m from now.  "now" is an alias for "+0",
-       i.e. for triggering an immediate shutdown. If no time argument is
-       specified, "+1" is implied.
+       The time string may either be in the format "hh:mm" for hour/minutes specifying the time to execute the shutdown at, specified in 24h clock format. Alternatively it may be in the syntax "+m"
+       referring to the specified number of minutes m from now.  "now" is an alias for "+0", i.e. for triggering an immediate shutdown. If no time argument is specified, "+1" is implied.
 
-       Note that to specify a wall message you must specify a time argument,
-       too.
+       Note that to specify a wall message you must specify a time argument, too.
 
-       If the time argument is used, 5 minutes before the system goes down
-       the /run/nologin file is created to ensure that further logins shall
-       not be allowed.
+       If the time argument is used, 5 minutes before the system goes down the /run/nologin file is created to ensure that further logins shall not be allowed.
 
 OPTIONS
        The following options are understood:
@@ -52,9 +43,7 @@ OPTIONS
            Do not send wall message before halt, power-off, reboot.
 
        -c
-           Cancel a pending shutdown. This may be used cancel the effect of
-           an invocation of shutdown with a time argument that is not "+0" or
-           "now".
+           Cancel a pending shutdown. This may be used cancel the effect of an invocation of shutdown with a time argument that is not "+0" or "now".
 
 EXIT STATUS
        On success, 0 is returned, a non-zero failure code otherwise.
@@ -62,4 +51,4 @@ EXIT STATUS
 SEE ALSO
        systemd(1), systemctl(1), halt(8), wall(1)
 
-systemd 237                                                       SHUTDOWN(8)
+systemd 237                                                                                                                                                                                SHUTDOWN(8)

@@ -1,4 +1,4 @@
-ID(1)                           User Commands                           ID(1)
+ID(1)                                                                                        User Commands                                                                                       ID(1)
 
 NAME
        id - print real and effective user and group IDs
@@ -7,8 +7,7 @@ SYNOPSIS
        id [OPTION]... [USER]
 
 DESCRIPTION
-       Print user and group information for the specified USER, or (when USER
-       omitted) for the current user.
+       Print user and group information for the specified USER, or (when USER omitted) for the current user.
 
        -a     ignore, for compatibility with other versions
 
@@ -50,13 +49,11 @@ REPORTING BUGS
        Report id translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/id>
        or available locally via: info '(coreutils) id invocation'
 
-GNU coreutils 8.28               January 2018                           ID(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                        ID(1)

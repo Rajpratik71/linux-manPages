@@ -1,4 +1,4 @@
-LSINITRAMFS(8)                lsinitramfs manual               LSINITRAMFS(8)
+LSINITRAMFS(8)                                                                            lsinitramfs manual                                                                            LSINITRAMFS(8)
 
 NAME
        lsinitramfs - list content of an initramfs image
@@ -7,9 +7,7 @@ SYNOPSIS
        lsinitramfs [options] <initramfsfile> [<initramfsfile>]
 
 DESCRIPTION
-       The  lsinitramfs  command lists the content of given initramfs images.
-       It allows one to quickly check the content of one (or multiple) speci‐
-       fied initramfs files.
+       The lsinitramfs command lists the content of given initramfs images. It allows one to quickly check the content of one (or multiple) specified initramfs files.
 
 OPTIONS
        -h     Display usage information and exit.
@@ -26,16 +24,12 @@ USAGE EXAMPLES
        lsinitramfs -l /boot/vmlinuz-2.6.31-grml64 /boot/vmlinuz-2.6.33-grml64
 
 BUGS
-       lsinitramfs  cannot  deal  with  multiple-segmented  initramfs images,
-       except where an early (uncompressed) initramfs with system firmware is
-       prepended to the regular compressed initramfs.
+       lsinitramfs cannot deal with multiple-segmented initramfs images, except where an early (uncompressed) initramfs with system firmware is prepended to the regular compressed initramfs.
 
 AUTHOR
-       The initramfs-tools are written by Maximilian Attems <maks@debian.org>
-       and numerous others.
+       The initramfs-tools are written by Maximilian Attems <maks@debian.org> and numerous others.
 
 SEE ALSO
-          initramfs-tools(8),   mkinitramfs(8),   unmkinitramfs(8),   update-
-       initramfs(8).
+        initramfs-tools(8), mkinitramfs(8), unmkinitramfs(8), update-initramfs(8).
 
-Linux                             2010/06/16                   LSINITRAMFS(8)
+Linux                                                                                         2010/06/16                                                                                LSINITRAMFS(8)

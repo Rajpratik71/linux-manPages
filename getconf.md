@@ -1,4 +1,4 @@
-GETCONF(1)                     Debian GNU/Linux                    GETCONF(1)
+GETCONF(1)                                                                                 Debian GNU/Linux                                                                                 GETCONF(1)
 
 NAME
        getconf - Query system configuration variables
@@ -34,10 +34,9 @@ DESCRIPTION
 AUTHOR
        getconf was written by Roland McGrath for the GNU C Library
 
-       This man page was written by Ben Collins <bcollins@debian.org> for the
-       Debian GNU/Linux system.
+       This man page was written by Ben Collins <bcollins@debian.org> for the Debian GNU/Linux system.
 
 SEE ALSO
        sysconf(3), pathconf(3), confstr(3)
 
-3rd Berkeley Distribution          squeeze                         GETCONF(1)
+3rd Berkeley Distribution                                                                       squeeze                                                                                     GETCONF(1)

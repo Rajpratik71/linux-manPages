@@ -1,4 +1,4 @@
-pbmto10x(1)                General Commands Manual                pbmto10x(1)
+pbmto10x(1)                                                                             General Commands Manual                                                                            pbmto10x(1)
 
 NAME
        pbmto10x - convert a portable bitmap into Gemini 10X printer graphics
@@ -7,16 +7,12 @@ SYNOPSIS
        pbmto10x [-h] [pbmfile]
 
 DESCRIPTION
-       Reads  a  portable  bitmap  as  input.   Produces a file of Gemini 10X
-       printer graphics as output.  The 10x's printer codes are alleged to be
-       similar to the Epson codes.
+       Reads a portable bitmap as input.  Produces a file of Gemini 10X printer graphics as output.  The 10x's printer codes are alleged to be similar to the Epson codes.
 
        Note that there is no 10xtopbm tool - this transformation is one way.
 
 OPTIONS
-       The  resolution  is normally 60H by 72V.  If the -h flag is specified,
-       resolution is 120H by 144V.  You may find it useful  to  rotate  land‐
-       scape images before printing.
+       The resolution is normally 60H by 72V.  If the -h flag is specified, resolution is 120H by 144V.  You may find it useful to rotate landscape images before printing.
 
 SEE ALSO
        pbm(5)
@@ -24,4 +20,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1990 by Ken Yap
 
-                                1 January 1990                    pbmto10x(1)
+                                                                                            1 January 1990                                                                                 pbmto10x(1)

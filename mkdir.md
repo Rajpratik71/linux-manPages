@@ -1,4 +1,4 @@
-MKDIR(1)                        User Commands                        MKDIR(1)
+MKDIR(1)                                                                                     User Commands                                                                                    MKDIR(1)
 
 NAME
        mkdir - make directories
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        Create the DIRECTORY(ies), if they do not already exist.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -m, --mode=MODE
               set file mode (as in chmod), not a=rwx - umask
@@ -21,12 +20,10 @@ DESCRIPTION
        -v, --verbose
               print a message for each created directory
 
-       -Z     set SELinux security context of each created directory  to  the
-              default type
+       -Z     set SELinux security context of each created directory to the default type
 
        --context[=CTX]
-              like  -Z,  or if CTX is specified then set the SELinux or SMACK
-              security context to CTX
+              like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX
 
        --help display this help and exit
 
@@ -41,10 +38,8 @@ REPORTING BUGS
        Report mkdir translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        mkdir(2)
@@ -52,4 +47,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/mkdir>
        or available locally via: info '(coreutils) mkdir invocation'
 
-GNU coreutils 8.28               January 2018                        MKDIR(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                     MKDIR(1)

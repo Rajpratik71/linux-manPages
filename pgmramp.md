@@ -1,4 +1,4 @@
-pgmramp(1)                 General Commands Manual                 pgmramp(1)
+pgmramp(1)                                                                              General Commands Manual                                                                             pgmramp(1)
 
 NAME
        pgmramp - generate a grayscale ramp
@@ -7,9 +7,7 @@ SYNOPSIS
        pgmramp -lr|-tb | -rectangle|-ellipse width height
 
 DESCRIPTION
-       Generates  a graymap of the specified size containing a black-to-white
-       ramp.  These ramps are useful for multiplying with other images, using
-       the pnmarith tool.
+       Generates a graymap of the specified size containing a black-to-white ramp.  These ramps are useful for multiplying with other images, using the pnmarith tool.
 
 OPTIONS
        -lr    A left to right ramp.
@@ -30,4 +28,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                               24 November 1989                    pgmramp(1)
+                                                                                           24 November 1989                                                                                 pgmramp(1)

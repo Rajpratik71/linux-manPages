@@ -1,30 +1,25 @@
-GPG-ZIP(1)                 General Commands Manual                 GPG-ZIP(1)
+GPG-ZIP(1)                                                                              General Commands Manual                                                                             GPG-ZIP(1)
 
 NAME
        gpg-zip - encrypt or sign files into an archive
 
 SYNOPSIS
-       gpg-zip  [OPTIONS] filename1 [filename2, ...]  directory1 [directory2,
-       ...]
+       gpg-zip [OPTIONS] filename1 [filename2, ...]  directory1 [directory2, ...]
 
 DESCRIPTION
        This manual page documents briefly the gpg-zip command.
 
-       gpg-zip encrypts or signs files into an archive. It is an gpg-ized tar
-       using the same format as PGP's PGP Zip.
+       gpg-zip encrypts or signs files into an archive. It is an gpg-ized tar using the same format as PGP's PGP Zip.
 
 OPTIONS
        -e, --encrypt
-              Encrypt data. This option may be combined with --symmetric (for
-              output that may be decrypted via a secret key or a passphrase).
+              Encrypt data. This option may be combined with --symmetric (for output that may be decrypted via a secret key or a passphrase).
 
        -d, --decrypt
               Decrypt data.
 
        -c, --symmetric
-              Encrypt with  a  symmetric  cipher  using  a  passphrase.   The
-              default  symmetric cipher used is CAST5, but may be chosen with
-              the --cipher-algo option to gpg(1).
+              Encrypt with a symmetric cipher using a passphrase.  The default symmetric cipher used is CAST5, but may be chosen with the --cipher-algo option to gpg(1).
 
        -s, --sign
               Make a signature. See gpg(1).
@@ -75,11 +70,8 @@ SEE ALSO
        gpg(1), tar(1)
 
 AUTHOR
-       Copyright (C) 2005 Free Software Foundation, Inc. Please  report  bugs
-       to <bug-gnupg@gnu.org>.
+       Copyright (C) 2005 Free Software Foundation, Inc. Please report bugs to <bug-gnupg@gnu.org>.
 
-       This  manpage  was  written  by  Colin Tuckley <colin@tuckley.org> and
-       Daniel Leidert <daniel.leidert@wgdd.de> for  the  Debian  distribution
-       (but may be used by others).
+       This manpage was written by Colin Tuckley <colin@tuckley.org> and Daniel Leidert <daniel.leidert@wgdd.de> for the Debian distribution (but may be used by others).
 
-                                November 2006                      GPG-ZIP(1)
+                                                                                             November 2006                                                                                  GPG-ZIP(1)

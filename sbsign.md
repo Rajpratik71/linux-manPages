@@ -1,4 +1,4 @@
-SBSIGN(1)                       User Commands                       SBSIGN(1)
+SBSIGN(1)                                                                                    User Commands                                                                                   SBSIGN(1)
 
 NAME
        sbsign - UEFI secure boot signing tool
@@ -20,7 +20,6 @@ OPTIONS
               write a detached signature, instead of a signed binary
 
        --output <file>
-              write  signed  data to <file> (default <efi-boot-image>.signed,
-              or <efi-boot-image>.pk7 for detached signatures)
+              write signed data to <file> (default <efi-boot-image>.signed, or <efi-boot-image>.pk7 for detached signatures)
 
-sbsign 0.6                      February 2018                       SBSIGN(1)
+sbsign 0.6                                                                                   February 2018                                                                                   SBSIGN(1)

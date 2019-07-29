@@ -1,4 +1,4 @@
-ppmmake(1)                 General Commands Manual                 ppmmake(1)
+ppmmake(1)                                                                              General Commands Manual                                                                             ppmmake(1)
 
 NAME
        ppmmake - create a pixmap of a specified size and color
@@ -11,21 +11,15 @@ DESCRIPTION
 
        The color can be specified in five ways:
 
-       o      A  name,  assuming  that  a pointer to an X11-style color names
-              file was compiled in.
+       o      A name, assuming that a pointer to an X11-style color names file was compiled in.
 
-       o      An X11-style hexadecimal specifier: rgb:r/g/b, where r g and  b
-              are each 1- to 4-digit hexadecimal numbers.
+       o      An X11-style hexadecimal specifier: rgb:r/g/b, where r g and b are each 1- to 4-digit hexadecimal numbers.
 
-       o      An X11-style decimal specifier: rgbi:r/g/b, where r g and b are
-              floating point numbers between 0 and 1.
+       o      An X11-style decimal specifier: rgbi:r/g/b, where r g and b are floating point numbers between 0 and 1.
 
-       o      For backwards compatibility, an old-X11-style hexadecimal  num‐
-              ber: #rgb, #rrggbb, #rrrgggbbb, or #rrrrggggbbbb.
+       o      For backwards compatibility, an old-X11-style hexadecimal number: #rgb, #rrggbb, #rrrgggbbb, or #rrrrggggbbbb.
 
-       o      For  backwards compatibility, a triplet of numbers separated by
-              commas: r,g,b, where r g  and  b  are  floating  point  numbers
-              between 0 and 1.  (This style was added before MIT came up with
+       o      For backwards compatibility, a triplet of numbers separated by commas: r,g,b, where r g and b are floating point numbers between 0 and 1.  (This style was added before MIT came up with
               the similar rgbi style.)
 
 SEE ALSO
@@ -34,4 +28,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Jef Poskanzer.
 
-                              24 September 1991                    ppmmake(1)
+                                                                                           24 September 1991                                                                                ppmmake(1)

@@ -1,4 +1,4 @@
-DMESG(1)                        User Commands                        DMESG(1)
+DMESG(1)                                                                                     User Commands                                                                                    DMESG(1)
 
 NAME
        dmesg - print or control the kernel ring buffer
@@ -15,12 +15,10 @@ SYNOPSIS
 DESCRIPTION
        dmesg is used to examine or control the kernel ring buffer.
 
-       The  default  action  is  to display all messages from the kernel ring
-       buffer.
+       The default action is to display all messages from the kernel ring buffer.
 
 OPTIONS
-       The --clear, --read-clear,  --console-on,  --console-off,  and  --con‐
-       sole-level options are mutually exclusive.
+       The --clear, --read-clear, --console-on, --console-off, and --console-level options are mutually exclusive.
 
        -C, --clear
               Clear the ring buffer.
@@ -32,127 +30,86 @@ OPTIONS
               Disable the printing of messages to the console.
 
        -d, --show-delta
-              Display  the  timestamp  and  the time delta spent between mes‐
-              sages.  If used together with --notime then only the time delta
-              without the timestamp is printed.
+              Display the timestamp and the time delta spent between messages.  If used together with --notime then only the time delta without the timestamp is printed.
 
        -E, --console-on
               Enable printing messages to the console.
 
        -e, --reltime
-              Display  the local time and the delta in human-readable format.
-              Be aware that conversion to the local time could be  inaccurate
-              (see -T for more details).
+              Display the local time and the delta in human-readable format.  Be aware that conversion to the local time could be inaccurate (see -T for more details).
 
        -F, --file file
-              Read  the  syslog  messages  from the given file.  Note that -F
-              does not support messages in kmsg format. The old syslog format
-              is supported only.
+              Read the syslog messages from the given file.  Note that -F does not support messages in kmsg format. The old syslog format is supported only.
 
        -f, --facility list
-              Restrict  output to the given (comma-separated) list of facili‐
-              ties.  For example:
+              Restrict output to the given (comma-separated) list of facilities.  For example:
 
                      dmesg --facility=daemon
 
-              will print messages from system daemons  only.   For  all  sup‐
-              ported facilities see the --help output.
+              will print messages from system daemons only.  For all supported facilities see the --help output.
 
        -H, --human
-              Enable  human-readable output.  See also --color, --reltime and
-              --nopager.
+              Enable human-readable output.  See also --color, --reltime and --nopager.
 
        -k, --kernel
               Print kernel messages.
 
        -L, --color[=when]
-              Colorize the output.  The optional argument when can  be  auto,
-              never  or always.  If the when argument is omitted, it defaults
-              to auto.  The colors can be disabled; for the current  built-in
-              default  see  the  --help  output.  See also the COLORS section
-              below.
+              Colorize  the  output.   The  optional  argument  when can be auto, never or always.  If the when argument is omitted, it defaults to auto.  The colors can be disabled; for the current
+              built-in default see the --help output.  See also the COLORS section below.
 
        -l, --level list
-              Restrict output to the given (comma-separated) list of  levels.
-              For example:
+              Restrict output to the given (comma-separated) list of levels.  For example:
 
                      dmesg --level=err,warn
 
-              will  print error and warning messages only.  For all supported
-              levels see the --help output.
+              will print error and warning messages only.  For all supported levels see the --help output.
 
        -n, --console-level level
-              Set the level at which printing of messages is done to the con‐
-              sole.  The level is a level number or abbreviation of the level
-              name.  For all supported levels see the --help output.
+              Set the level at which printing of messages is done to the console.  The level is a level number or abbreviation of the level name.  For all supported levels see the --help output.
 
-              For example, -n 1 or -n alert  prevents  all  messages,  except
-              emergency (panic) messages, from appearing on the console.  All
-              levels of messages are still written  to  /proc/kmsg,  so  sys‐
-              logd(8)  can still be used to control exactly where kernel mes‐
-              sages appear.  When the -n option is used, dmesg will not print
-              or clear the kernel ring buffer.
+              For example, -n 1 or -n alert prevents all messages, except emergency (panic) messages, from appearing on the console.  All levels of messages are still written to /proc/kmsg, so  sys‐
+              logd(8) can still be used to control exactly where kernel messages appear.  When the -n option is used, dmesg will not print or clear the kernel ring buffer.
 
        -P, --nopager
-              Do not pipe output into a pager.  A pager is enabled by default
-              for --human output.
+              Do not pipe output into a pager.  A pager is enabled by default for --human output.
 
        -r, --raw
-              Print the raw message buffer, i.e. do not strip  the  log-level
-              prefixes.
+              Print the raw message buffer, i.e. do not strip the log-level prefixes.
 
-              Note  that  the  real  raw  format  depends  on  the method how
-              dmesg(1) reads kernel messages.  The /dev/kmsg  device  uses  a
-              different  format  than syslog(2).  For backward compatibility,
-              dmesg(1) returns data always in the syslog(2)  format.   It  is
-              possible to read the real raw data from /dev/kmsg by, for exam‐
-              ple, the command 'dd if=/dev/kmsg iflag=nonblock'.
+              Note  that  the  real  raw  format  depends on the method how dmesg(1) reads kernel messages.  The /dev/kmsg device uses a different format than syslog(2).  For backward compatibility,
+              dmesg(1) returns data always in the syslog(2) format.  It is possible to read the real raw data from /dev/kmsg by, for example, the command 'dd if=/dev/kmsg iflag=nonblock'.
 
        -S, --syslog
-              Force dmesg to use the syslog(2) kernel interface to read  ker‐
-              nel messages.  The default is to use /dev/kmsg rather than sys‐
-              log(2) since kernel 3.5.0.
+              Force dmesg to use the syslog(2) kernel interface to read kernel messages.  The default is to use /dev/kmsg rather than syslog(2) since kernel 3.5.0.
 
        -s, --buffer-size size
-              Use a buffer of size to query the kernel ring buffer.  This  is
-              16392  by  default.  (The default kernel syslog buffer size was
-              4096 at first, 8192 since 1.3.54, 16384 since 2.1.113.)  If you
-              have  set the kernel buffer to be larger than the default, then
-              this option can be used to view the entire buffer.
+              Use a buffer of size to query the kernel ring buffer.  This is 16392 by default.  (The default kernel syslog buffer size was 4096 at first, 8192 since 1.3.54, 16384 since 2.1.113.)  If
+              you have set the kernel buffer to be larger than the default, then this option can be used to view the entire buffer.
 
        -T, --ctime
               Print human-readable timestamps.
 
-              Be aware that the timestamp  could  be  inaccurate!   The  time
-              source  used  for  the  logs  is  not updated after system SUS‐
-              PEND/RESUME.
+              Be aware that the timestamp could be inaccurate!  The time source used for the logs is not updated after system SUSPEND/RESUME.
 
        -t, --notime
               Do not print kernel's timestamps.
 
        --time-format format
-              Print timestamps using the given format, which  can  be  ctime,
-              reltime,  delta or iso.  The first three formats are aliases of
-              the time-format-specific options.  The iso format  is  a  dmesg
-              implementation  of  the ISO-8601 timestamp format.  The purpose
-              of this format is to make the comparing of  timestamps  between
-              two  systems,  and  any other parsing, easy.  The definition of
-              the   iso   timestamp   is:    YYYY-MM-DD<T>HH:MM:SS,<microsec‐
-              onds><-+><timezone offset from UTC>.
+              Print timestamps using the given format, which can be ctime, reltime, delta or iso.  The first three formats are aliases of the time-format-specific options.  The iso format is a dmesg
+              implementation of the ISO-8601 timestamp format.  The purpose of this format is to make the comparing of timestamps between two systems, and any other parsing, easy.  The definition of
+              the iso timestamp is: YYYY-MM-DD<T>HH:MM:SS,<microseconds><-+><timezone offset from UTC>.
 
-              The  iso  format  has  the same issue as ctime: the time may be
-              inaccurate when a system is suspended and resumed.
+              The iso format has the same issue as ctime: the time may be inaccurate when a system is suspended and resumed.
 
        -u, --userspace
               Print userspace messages.
 
        -w, --follow
-              Wait for new messages.  This feature is supported only on  sys‐
-              tems with a readable /dev/kmsg (since kernel 3.5.0).
+              Wait for new messages.  This feature is supported only on systems with a readable /dev/kmsg (since kernel 3.5.0).
 
        -x, --decode
-              Decode  facility and level (priority) numbers to human-readable
-              prefixes.
+              Decode facility and level (priority) numbers to human-readable prefixes.
 
        -V, --version
               Display version information and exit.
@@ -161,9 +118,7 @@ OPTIONS
               Display help text and exit.
 
 COLORS
-       Implicit coloring can be disabled by an empty file  /etc/terminal-col‐
-       ors.d/dmesg.disable.   See terminal-colors.d(5) for more details about
-       colorization configuration.
+       Implicit coloring can be disabled by an empty file /etc/terminal-colors.d/dmesg.disable.  See terminal-colors.d(5) for more details about colorization configuration.
 
        The logical color names supported by dmesg are:
 
@@ -172,8 +127,7 @@ COLORS
        time   The message timestamp.
 
        timebreak
-              The message timestamp in short ctime  format  in  --reltime  or
-              --human output.
+              The message timestamp in short ctime format in --reltime or --human output.
 
        alert  The text of the message with the alert log priority.
 
@@ -195,8 +149,6 @@ AUTHORS
        dmesg was originally written by Theodore Ts'o ⟨tytso@athena.mit.edu⟩
 
 AVAILABILITY
-       The  dmesg  command is part of the util-linux package and is available
-       from  Linux  Kernel  Archive   ⟨https://www.kernel.org/pub/linux/utils
-       /util-linux/⟩.
+       The dmesg command is part of the util-linux package and is available from Linux Kernel Archive ⟨https://www.kernel.org/pub/linux/utils/util-linux/⟩.
 
-util-linux                        July 2012                          DMESG(1)
+util-linux                                                                                     July 2012                                                                                      DMESG(1)

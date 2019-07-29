@@ -1,4 +1,4 @@
-MV(1)                           User Commands                           MV(1)
+MV(1)                                                                                        User Commands                                                                                       MV(1)
 
 NAME
        mv - move (rename) files
@@ -11,8 +11,7 @@ SYNOPSIS
 DESCRIPTION
        Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        --backup[=CONTROL]
               make a backup of each existing destination file
@@ -28,8 +27,7 @@ DESCRIPTION
        -n, --no-clobber
               do not overwrite an existing file
 
-       If you specify more than one of -i, -f, -n, only the final  one  takes
-       effect.
+       If you specify more than one of -i, -f, -n, only the final one takes effect.
 
        --strip-trailing-slashes
               remove any trailing slashes from each SOURCE argument
@@ -44,25 +42,21 @@ DESCRIPTION
               treat DEST as a normal file
 
        -u, --update
-              move  only  when  the SOURCE file is newer than the destination
-              file or when the destination file is missing
+              move only when the SOURCE file is newer than the destination file or when the destination file is missing
 
        -v, --verbose
               explain what is being done
 
        -Z, --context
-              set SELinux security context of  destination  file  to  default
-              type
+              set SELinux security context of destination file to default type
 
        --help display this help and exit
 
        --version
               output version information and exit
 
-       The   backup   suffix  is  '~',  unless  set  with  --suffix  or  SIM‐
-       PLE_BACKUP_SUFFIX.  The version control method may be selected via the
-       --backup  option  or through the VERSION_CONTROL environment variable.
-       Here are the values:
+       The  backup  suffix  is  '~',  unless set with --suffix or SIMPLE_BACKUP_SUFFIX.  The version control method may be selected via the --backup option or through the VERSION_CONTROL environment
+       variable.  Here are the values:
 
        none, off
               never make backups (even if --backup is given)
@@ -84,10 +78,8 @@ REPORTING BUGS
        Report mv translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        rename(2)
@@ -95,4 +87,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/mv>
        or available locally via: info '(coreutils) mv invocation'
 
-GNU coreutils 8.28               January 2018                           MV(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                        MV(1)

@@ -1,4 +1,4 @@
-brushtopbm(1)              General Commands Manual              brushtopbm(1)
+brushtopbm(1)                                                                           General Commands Manual                                                                          brushtopbm(1)
 
 NAME
        brushtopbm - convert a doodle brush file into a portable bitmap
@@ -7,8 +7,7 @@ SYNOPSIS
        brushtopbm [brushfile]
 
 DESCRIPTION
-       Reads  a Xerox doodle brush file as input.  Produces a portable bitmap
-       as output.
+       Reads a Xerox doodle brush file as input.  Produces a portable bitmap as output.
 
        Note that there is currently no pbmtobrush tool.
 
@@ -18,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988 by Jef Poskanzer.
 
-                                28 August 1988                  brushtopbm(1)
+                                                                                            28 August 1988                                                                               brushtopbm(1)

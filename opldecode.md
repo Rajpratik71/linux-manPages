@@ -1,18 +1,15 @@
-opldecode(1)               General Commands Manual               opldecode(1)
+opldecode(1)                                                                            General Commands Manual                                                                           opldecode(1)
 
 NAME
-       opldecode  -  Decode  a Raster Object (opl) stream into human readable
-       form.
+       opldecode - Decode a Raster Object (opl) stream into human readable form.
 
 SYNOPSIS
        opldecode [options] <zjs-file
 
 DESCRIPTION
-       opldecode decodes a Raster Object (opl)  stream  into  human  readable
-       form.
+       opldecode decodes a Raster Object (opl) stream into human readable form.
 
-       A  Raster  Object  stream  is the printer language used by some Konica
-       Minolta printers, such as the KM magicolor 2480 MF.
+       A Raster Object stream is the printer language used by some Konica Minolta printers, such as the KM magicolor 2480 MF.
 
 COMMAND LINE OPTIONS
        These are the options that can appear on the command line.

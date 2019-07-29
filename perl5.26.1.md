@@ -1,32 +1,22 @@
-PERL(1)                Perl Programmers Reference Guide               PERL(1)
+PERL(1)                                                                            Perl Programmers Reference Guide                                                                            PERL(1)
 
 NAME
        perl - The Perl 5 language interpreter
 
 SYNOPSIS
-       perl [ -sTtuUWX ]      [ -hv ] [ -V[:configvar] ]
-            [ -cw ] [ -d[t][:debugger] ] [ -D[number/list] ]
-            [ -pna ] [ -Fpattern ] [ -l[octal] ] [ -0[octal/hexadecimal] ]
-            [ -Idir ] [ -m[-]module ] [ -M[-]'module...' ] [ -f ]
-            [ -C [number/list] ]      [ -S ]      [ -x[dir] ]
-            [ -i[extension] ]
+       perl [ -sTtuUWX ]      [ -hv ] [ -V[:configvar] ]      [ -cw ] [ -d[t][:debugger] ] [ -D[number/list] ]      [ -pna ] [ -Fpattern ] [ -l[octal] ] [ -0[octal/hexadecimal] ]
+            [ -Idir ] [ -m[-]module ] [ -M[-]'module...' ] [ -f ]      [ -C [number/list] ]      [ -S ]      [ -x[dir] ]      [ -i[extension] ]
             [ [-e|-E] 'command' ] [ -- ] [ programfile ] [ argument ]...
 
        For more information on these options, you can run "perldoc perlrun".
 
 GETTING HELP
-       The perldoc program gives you access to all the documentation that
-       comes with Perl.  You can get more documentation, tutorials and
-       community support online at <http://www.perl.org/>.
+       The perldoc program gives you access to all the documentation that comes with Perl.  You can get more documentation, tutorials and community support online at <http://www.perl.org/>.
 
-       If you're new to Perl, you should start by running "perldoc
-       perlintro", which is a general intro for beginners and provides some
-       background to help you navigate the rest of Perl's extensive
-       documentation.  Run "perldoc perldoc" to learn more things you can do
-       with perldoc.
+       If you're new to Perl, you should start by running "perldoc perlintro", which is a general intro for beginners and provides some background to help you navigate the rest of Perl's extensive
+       documentation.  Run "perldoc perldoc" to learn more things you can do with perldoc.
 
-       For ease of access, the Perl manual has been split up into several
-       sections.
+       For ease of access, the Perl manual has been split up into several sections.
 
    Overview
            perl                Perl overview (this section)
@@ -256,62 +246,35 @@ GETTING HELP
            perltooc
            perltoot
 
-       On Debian systems, you need to install the perl-doc package which
-       contains the majority of the standard Perl documentation and the
-       perldoc program.
+       On Debian systems, you need to install the perl-doc package which contains the majority of the standard Perl documentation and the perldoc program.
 
-       Extensive additional documentation for Perl modules is available, both
-       those distributed with Perl and third-party modules which are packaged
-       or locally installed.
+       Extensive additional documentation for Perl modules is available, both those distributed with Perl and third-party modules which are packaged or locally installed.
 
-       You should be able to view Perl's documentation with your man(1)
-       program or perldoc(1).
+       You should be able to view Perl's documentation with your man(1) program or perldoc(1).
 
-       Some documentation is not available as man pages, so if a cross-
-       reference is not found by man, try it with perldoc.  Perldoc can also
-       take you directly to documentation for functions (with the -f switch).
-       See "perldoc --help" (or "perldoc perldoc" or "man perldoc") for other
-       helpful options perldoc has to offer.
+       Some documentation is not available as man pages, so if a cross-reference is not found by man, try it with perldoc.  Perldoc can also take you directly to documentation for functions (with
+       the -f switch). See "perldoc --help" (or "perldoc perldoc" or "man perldoc") for other helpful options perldoc has to offer.
 
-       In general, if something strange has gone wrong with your program and
-       you're not sure where you should look for help, try making your code
-       comply with use strict and use warnings.  These will often point out
-       exactly where the trouble is.
+       In general, if something strange has gone wrong with your program and you're not sure where you should look for help, try making your code comply with use strict and use warnings.  These will
+       often point out exactly where the trouble is.
 
 DESCRIPTION
-       Perl officially stands for Practical Extraction and Report Language,
-       except when it doesn't.
+       Perl officially stands for Practical Extraction and Report Language, except when it doesn't.
 
-       Perl was originally a language optimized for scanning arbitrary text
-       files, extracting information from those text files, and printing
-       reports based on that information.  It quickly became a good language
-       for many system management tasks. Over the years, Perl has grown into
-       a general-purpose programming language. It's widely used for
-       everything from quick "one-liners" to full-scale application
-       development.
+       Perl was originally a language optimized for scanning arbitrary text files, extracting information from those text files, and printing reports based on that information.  It quickly became a
+       good language for many system management tasks. Over the years, Perl has grown into a general-purpose programming language. It's widely used for everything from quick "one-liners" to full-
+       scale application development.
 
-       The language is intended to be practical (easy to use, efficient,
-       complete) rather than beautiful (tiny, elegant, minimal).  It combines
-       (in the author's opinion, anyway) some of the best features of sed,
-       awk, and sh, making it familiar and easy to use for Unix users to whip
-       up quick solutions to annoying problems.  Its general-purpose
-       programming facilities support procedural, functional, and object-
-       oriented programming paradigms, making Perl a comfortable language for
-       the long haul on major projects, whatever your bent.
+       The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal).  It combines (in the author's opinion, anyway) some of the best
+       features of sed, awk, and sh, making it familiar and easy to use for Unix users to whip up quick solutions to annoying problems.  Its general-purpose programming facilities support
+       procedural, functional, and object-oriented programming paradigms, making Perl a comfortable language for the long haul on major projects, whatever your bent.
 
-       Perl's roots in text processing haven't been forgotten over the years.
-       It still boasts some of the most powerful regular expressions to be
-       found anywhere, and its support for Unicode text is world-class.  It
-       handles all kinds of structured text, too, through an extensive
-       collection of extensions.  Those libraries, collected in the CPAN,
-       provide ready-made solutions to an astounding array of problems.  When
-       they haven't set the standard themselves, they steal from the best --
-       just like Perl itself.
+       Perl's roots in text processing haven't been forgotten over the years.  It still boasts some of the most powerful regular expressions to be found anywhere, and its support for Unicode text is
+       world-class.  It handles all kinds of structured text, too, through an extensive collection of extensions.  Those libraries, collected in the CPAN, provide ready-made solutions to an
+       astounding array of problems.  When they haven't set the standard themselves, they steal from the best -- just like Perl itself.
 
 AVAILABILITY
-       Perl is available for most operating systems, including virtually all
-       Unix-like platforms.  See "Supported Platforms" in perlport for a
-       listing.
+       Perl is available for most operating systems, including virtually all Unix-like platforms.  See "Supported Platforms" in perlport for a listing.
 
 ENVIRONMENT
        See perlrun.
@@ -319,16 +282,13 @@ ENVIRONMENT
 AUTHOR
        Larry Wall <larry@wall.org>, with the help of oodles of other folks.
 
-       If your Perl success stories and testimonials may be of help to others
-       who wish to advocate the use of Perl in their applications, or if you
-       wish to simply express your gratitude to Larry and the Perl
-       developers, please write to perl-thanks@perl.org .
+       If your Perl success stories and testimonials may be of help to others who wish to advocate the use of Perl in their applications, or if you wish to simply express your gratitude to Larry and
+       the Perl developers, please write to perl-thanks@perl.org .
 
 FILES
         "@INC"                 locations of perl libraries
 
-       "@INC" above is a reference to the built-in variable of the same name;
-       see perlvar for more information.
+       "@INC" above is a reference to the built-in variable of the same name; see perlvar for more information.
 
 SEE ALSO
         http://www.perl.org/       the Perl homepage
@@ -337,61 +297,38 @@ SEE ALSO
         http://www.pm.org/         the Perl Mongers
 
 DIAGNOSTICS
-       Using the "use strict" pragma ensures that all variables are properly
-       declared and prevents other misuses of legacy Perl features.
+       Using the "use strict" pragma ensures that all variables are properly declared and prevents other misuses of legacy Perl features.
 
-       The "use warnings" pragma produces some lovely diagnostics. One can
-       also use the -w flag, but its use is normally discouraged, because it
-       gets applied to all executed Perl code, including that not under your
-       control.
+       The "use warnings" pragma produces some lovely diagnostics. One can also use the -w flag, but its use is normally discouraged, because it gets applied to all executed Perl code, including
+       that not under your control.
 
-       See perldiag for explanations of all Perl's diagnostics.  The "use
-       diagnostics" pragma automatically turns Perl's normally terse warnings
-       and errors into these longer forms.
+       See perldiag for explanations of all Perl's diagnostics.  The "use diagnostics" pragma automatically turns Perl's normally terse warnings and errors into these longer forms.
 
-       Compilation errors will tell you the line number of the error, with an
-       indication of the next token or token type that was to be examined.
-       (In a script passed to Perl via -e switches, each -e is counted as one
-       line.)
+       Compilation errors will tell you the line number of the error, with an indication of the next token or token type that was to be examined.  (In a script passed to Perl via -e switches, each
+       -e is counted as one line.)
 
-       Setuid scripts have additional constraints that can produce error
-       messages such as "Insecure dependency".  See perlsec.
+       Setuid scripts have additional constraints that can produce error messages such as "Insecure dependency".  See perlsec.
 
-       Did we mention that you should definitely consider using the use
-       warnings pragma?
+       Did we mention that you should definitely consider using the use warnings pragma?
 
 BUGS
        The behavior implied by the use warnings pragma is not mandatory.
 
-       Perl is at the mercy of your machine's definitions of various
-       operations such as type casting, atof(), and floating-point output
-       with sprintf().
+       Perl is at the mercy of your machine's definitions of various operations such as type casting, atof(), and floating-point output with sprintf().
 
-       If your stdio requires a seek or eof between reads and writes on a
-       particular stream, so does Perl.  (This doesn't apply to sysread() and
-       syswrite().)
+       If your stdio requires a seek or eof between reads and writes on a particular stream, so does Perl.  (This doesn't apply to sysread() and syswrite().)
 
-       While none of the built-in data types have any arbitrary size limits
-       (apart from memory size), there are still a few arbitrary limits:  a
-       given variable name may not be longer than 251 characters.  Line
-       numbers displayed by diagnostics are internally stored as short
-       integers, so they are limited to a maximum of 65535 (higher numbers
-       usually being affected by wraparound).
+       While none of the built-in data types have any arbitrary size limits (apart from memory size), there are still a few arbitrary limits:  a given variable name may not be longer than 251
+       characters.  Line numbers displayed by diagnostics are internally stored as short integers, so they are limited to a maximum of 65535 (higher numbers usually being affected by wraparound).
 
-       You may mail your bug reports (be sure to include full configuration
-       information as output by the myconfig program in the perl source tree,
-       or by "perl -V") to perlbug@perl.org .  If you've succeeded in
-       compiling perl, the perlbug script in the utils/ subdirectory can be
-       used to help mail in a bug report.
+       You may mail your bug reports (be sure to include full configuration information as output by the myconfig program in the perl source tree, or by "perl -V") to perlbug@perl.org .  If you've
+       succeeded in compiling perl, the perlbug script in the utils/ subdirectory can be used to help mail in a bug report.
 
-       Perl actually stands for Pathologically Eclectic Rubbish Lister, but
-       don't tell anyone I said that.
+       Perl actually stands for Pathologically Eclectic Rubbish Lister, but don't tell anyone I said that.
 
 NOTES
-       The Perl motto is "There's more than one way to do it."  Divining how
-       many more is left as an exercise to the reader.
+       The Perl motto is "There's more than one way to do it."  Divining how many more is left as an exercise to the reader.
 
-       The three principal virtues of a programmer are Laziness, Impatience,
-       and Hubris.  See the Camel Book for why.
+       The three principal virtues of a programmer are Laziness, Impatience, and Hubris.  See the Camel Book for why.
 
-perl v5.26.1                      2018-11-19                          PERL(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                       PERL(1)

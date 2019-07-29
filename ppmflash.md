@@ -1,4 +1,4 @@
-ppmflash(1)                General Commands Manual                ppmflash(1)
+ppmflash(1)                                                                             General Commands Manual                                                                            ppmflash(1)
 
 NAME
        ppmflash - brighten a picture up to complete white-out
@@ -7,13 +7,10 @@ SYNOPSIS
        ppmflash flashfactor [ppmfile]
 
 DESCRIPTION
-       Reads  a  portable  pixmap  as  input. Increases its brightness by the
-       specified flashfactor up to a total white-out image.  The  flashfactor
-       may  be  in  the range from 0.0 (original picture's brightness) to 1.0
-       (full white-out, The Second After).
+       Reads  a  portable  pixmap  as  input.  Increases  its brightness by the specified flashfactor up to a total white-out image.  The flashfactor may be in the range from 0.0 (original picture's
+       brightness) to 1.0 (full white-out, The Second After).
 
-       As pnmgamma does not do the brightness correction in the way I  wanted
-       it, this small program was written.
+       As pnmgamma does not do the brightness correction in the way I wanted it, this small program was written.
 
        This program is similar to ppmbrighten , but not exactly the same.
 
@@ -23,4 +20,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1993 by Frank Neumann
 
-                               16 November 1993                   ppmflash(1)
+                                                                                           16 November 1993                                                                                ppmflash(1)

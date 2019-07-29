@@ -1,4 +1,4 @@
-pnmshear(1)                General Commands Manual                pnmshear(1)
+pnmshear(1)                                                                             General Commands Manual                                                                            pnmshear(1)
 
 NAME
        pnmshear - shear a portable anymap by some angle
@@ -7,10 +7,8 @@ SYNOPSIS
        pnmshear [-noantialias] angle [pnmfile]
 
 DESCRIPTION
-       Reads  a  portable  anymap as input.  Shears it by the specified angle
-       and produces a portable anymap as output.  If the  input  file  is  in
-       color,  the  output  will be too, otherwise it will be grayscale.  The
-       angle is in degrees (floating point), and measures this:
+       Reads  a  portable  anymap  as  input.  Shears it by the specified angle and produces a portable anymap as output.  If the input file is in color, the output will be too, otherwise it will be
+       grayscale.  The angle is in degrees (floating point), and measures this:
            +-------+  +-------+
            |       |  |\       \
            |  OLD  |  | \  NEW  \
@@ -22,18 +20,12 @@ DESCRIPTION
            |  OLD  |  |e/  NEW  /
            |       |  |/       /
            +-------+  +-------+
-       The angle should not get too close to 90  or  -90,  or  the  resulting
-       anymap will be unreasonably wide.
+       The angle should not get too close to 90 or -90, or the resulting anymap will be unreasonably wide.
 
-       The shearing is implemented by looping over the source pixels and dis‐
-       tributing fractions to each of the destination pixels.   This  has  an
-       "anti-aliasing" effect - it avoids jagged edges and similar artifacts.
-       However, it also means that the original colors or gray levels in  the
-       image  are  modified.   If  you need to keep precisely the same set of
-       colors, you can use the -noantialias flag.  This does the shearing  by
-       moving  pixels without changing their values.  If you want anti-alias‐
-       ing and don't care about the precise colors, but still need a  limited
-       *number* of colors, you can run the result through ppmquant.
+       The shearing is implemented by looping over the source pixels and distributing fractions to each of the destination pixels.  This has an "anti-aliasing" effect - it avoids  jagged  edges  and
+       similar  artifacts.   However,  it  also means that the original colors or gray levels in the image are modified.  If you need to keep precisely the same set of colors, you can use the -noan‐
+       tialias flag.  This does the shearing by moving pixels without changing their values.  If you want anti-aliasing and don't care about the precise colors, but still need a limited *number*  of
+       colors, you can run the result through ppmquant.
 
        All flags can be abbreviated to their shortest unique prefix.
 
@@ -43,4 +35,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989, 1991 by Jef Poskanzer.
 
-                               12 January 1991                    pnmshear(1)
+                                                                                            12 January 1991                                                                                pnmshear(1)

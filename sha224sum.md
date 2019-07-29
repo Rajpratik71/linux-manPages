@@ -1,4 +1,4 @@
-SHA224SUM(1)                    User Commands                    SHA224SUM(1)
+SHA224SUM(1)                                                                                 User Commands                                                                                SHA224SUM(1)
 
 NAME
        sha224sum - compute and check SHA224 message digest
@@ -43,29 +43,22 @@ DESCRIPTION
        --version
               output version information and exit
 
-       The  sums  are  computed as described in RFC 3874.  When checking, the
-       input should be a former output of this program.  The default mode  is
-       to  print  a line with checksum, a space, a character indicating input
-       mode ('*' for binary, ' ' for text or where binary is  insignificant),
-       and name for each FILE.
+       The  sums  are computed as described in RFC 3874.  When checking, the input should be a former output of this program.  The default mode is to print a line with checksum, a space, a character
+       indicating input mode ('*' for binary, ' ' for text or where binary is insignificant), and name for each FILE.
 
 AUTHOR
        Written by Ulrich Drepper, Scott Miller, and David Madore.
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-       Report   sha224sum   translation   bugs   to   <http://translationpro‐
-       ject.org/team/>
+       Report sha224sum translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
-       Full     documentation     at:      <http://www.gnu.org/software/core‐
-       utils/sha224sum>
+       Full documentation at: <http://www.gnu.org/software/coreutils/sha224sum>
        or available locally via: info '(coreutils) sha2 utilities'
 
-GNU coreutils 8.28               January 2018                    SHA224SUM(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                 SHA224SUM(1)

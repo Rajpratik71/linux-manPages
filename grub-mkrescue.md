@@ -1,4 +1,4 @@
-GRUB-MKRESCUE(1)                User Commands                GRUB-MKRESCUE(1)
+GRUB-MKRESCUE(1)                                                                             User Commands                                                                            GRUB-MKRESCUE(1)
 
 NAME
        grub-mkrescue - make a GRUB rescue image
@@ -13,8 +13,7 @@ DESCRIPTION
               compress GRUB files [optional]
 
        -d, --directory=DIR
-              use  images and modules under DIR [default=/usr/lib/grub/<plat‐
-              form>]
+              use images and modules under DIR [default=/usr/lib/grub/<platform>]
 
        --fonts=FONTS
               install FONTS [default=unicode]
@@ -41,8 +40,7 @@ DESCRIPTION
               print verbose messages.
 
        --arcs-boot
-              enable ARCS (big-endian mips machines, mostly SGI)  boot.  Dis‐
-              ables HFS+, APM, sparc64 and boot as disk image for i386-pc
+              enable ARCS (big-endian mips machines, mostly SGI) boot. Disables HFS+, APM, sparc64 and boot as disk image for i386-pc
 
        --core-compress=xz|none|auto
               choose the compression to use for core image
@@ -69,8 +67,7 @@ DESCRIPTION
               save ROM images in DIR [optional]
 
        --sparc-boot
-              enable  sparc  boot.  Disables HFS+, APM, ARCS and boot as disk
-              image for i386-pc
+              enable sparc boot. Disables HFS+, APM, ARCS and boot as disk image for i386-pc
 
        --xorriso=FILE
               use FILE as xorriso [optional]
@@ -84,13 +81,10 @@ DESCRIPTION
        -V, --version
               print program version
 
-       Mandatory or optional arguments to long options are also mandatory  or
-       optional for any corresponding short options.
+       Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
 
-       Generates  a  bootable  CD/USB/floppy  image.   Arguments  other  than
-       options to this program are passed to  xorriso,  and  indicate  source
-       files, source directories, or any of the mkisofs options listed by the
-       output of `xorriso -as mkisofs -help'.
+       Generates  a  bootable  CD/USB/floppy  image.  Arguments other than options to this program are passed to xorriso, and indicate source files, source directories, or any of the mkisofs options
+       listed by the output of `xorriso -as mkisofs -help'.
 
        Option -- switches to native xorriso command mode.
 
@@ -102,12 +96,10 @@ REPORTING BUGS
 SEE ALSO
        grub-mkimage(1)
 
-       The full documentation for grub-mkrescue is maintained  as  a  Texinfo
-       manual.  If the info and grub-mkrescue programs are properly installed
-       at your site, the command
+       The full documentation for grub-mkrescue is maintained as a Texinfo manual.  If the info and grub-mkrescue programs are properly installed at your site, the command
 
               info grub-mkrescue
 
        should give you access to the complete manual.
 
-grub-mkrescue (GRUB) 2.02-2ubuntFebruary 2019                GRUB-MKRESCUE(1)
+grub-mkrescue (GRUB) 2.02-2ubuntu8.12                                                        February 2019                                                                            GRUB-MKRESCUE(1)

@@ -1,4 +1,4 @@
-LESSKEY(1)                 General Commands Manual                 LESSKEY(1)
+LESSKEY(1)                                                                              General Commands Manual                                                                             LESSKEY(1)
 
 NAME
        lesskey - specify key bindings for less
@@ -10,30 +10,16 @@ SYNOPSIS
        lesskey --version
 
 DESCRIPTION
-       Lesskey  is  used to specify a set of key bindings to be used by less.
-       The input file is a text file which describes the  key  bindings.   If
-       the  input  file  is "-", standard input is read.  If no input file is
-       specified, a standard filename is used as the name of the input  file,
-       which   depends   on   the   system   being  used:  On  Unix  systems,
-       $HOME/.lesskey is used; on MS-DOS systems, $HOME/_lesskey is used; and
-       on  OS/2  systems  $HOME/lesskey.ini  is used, or $INIT/lesskey.ini if
-       $HOME is undefined.  The output file is a binary file which is used by
-       less.   If  no  output file is specified, and the environment variable
-       LESSKEY is set, the value of LESSKEY is used as the name of the output
-       file.   Otherwise, a standard filename is used as the name of the out‐
-       put file, which depends on the system being used:  On  Unix  and  OS-9
-       systems,  $HOME/.less is used; on MS-DOS systems, $HOME/_less is used;
-       and on OS/2 systems, $HOME/less.ini  is  used,  or  $INIT/less.ini  if
-       $HOME  is  undefined.  If the output file already exists, lesskey will
-       overwrite it.
+       Lesskey is used to specify a set of key bindings to be used by less.  The input file is a text file which describes the key bindings.  If the input file is "-", standard input is read.  If no
+       input file is specified, a standard filename is used as the name of the input file, which depends on the system being used: On  Unix  systems,  $HOME/.lesskey  is  used;  on  MS-DOS  systems,
+       $HOME/_lesskey  is used; and on OS/2 systems $HOME/lesskey.ini is used, or $INIT/lesskey.ini if $HOME is undefined.  The output file is a binary file which is used by less.  If no output file
+       is specified, and the environment variable LESSKEY is set, the value of LESSKEY is used as the name of the output file.  Otherwise, a standard filename is used as the name of the output file,
+       which  depends  on the system being used: On Unix and OS-9 systems, $HOME/.less is used; on MS-DOS systems, $HOME/_less is used; and on OS/2 systems, $HOME/less.ini is used, or $INIT/less.ini
+       if $HOME is undefined.  If the output file already exists, lesskey will overwrite it.
 
-       The -V or --version option causes lesskey to print its version  number
-       and  immediately  exit.   If -V or --version is present, other options
-       and arguments are ignored.
+       The -V or --version option causes lesskey to print its version number and immediately exit.  If -V or --version is present, other options and arguments are ignored.
 
-       The input file consists of one or more sections.  Each section  starts
-       with  a  line  that identifies the type of section.  Possible sections
-       are:
+       The input file consists of one or more sections.  Each section starts with a line that identifies the type of section.  Possible sections are:
 
        #command
               Defines new command keys.
@@ -43,27 +29,20 @@ DESCRIPTION
 
        #env   Defines environment variables.
 
-       Blank lines and lines which start with a pound sign (#)  are  ignored,
-       except for the special section header lines.
+       Blank lines and lines which start with a pound sign (#) are ignored, except for the special section header lines.
 
 COMMAND SECTION
        The command section begins with the line
 
        #command
 
-       If the command section is the first section in the file, this line may
-       be omitted.  The command section consists of lines of the form:
+       If the command section is the first section in the file, this line may be omitted.  The command section consists of lines of the form:
 
             string <whitespace> action [extra-string] <newline>
 
-       Whitespace is any sequence of one or more  spaces  and/or  tabs.   The
-       string  is the command key(s) which invoke the action.  The string may
-       be a single command key, or a sequence of up to 15 keys.   The  action
-       is  the  name of the less action, from the list below.  The characters
-       in the string may appear literally, or be prefixed by a caret to indi‐
-       cate a control key.  A backslash followed by one to three octal digits
-       may be used to specify a character by its octal  value.   A  backslash
-       followed by certain characters specifies input characters as follows:
+       Whitespace is any sequence of one or more spaces and/or tabs.  The string is the command key(s) which invoke the action.  The string may be a single command key, or a sequence  of  up  to  15
+       keys.   The  action  is the name of the less action, from the list below.  The characters in the string may appear literally, or be prefixed by a caret to indicate a control key.  A backslash
+       followed by one to three octal digits may be used to specify a character by its octal value.  A backslash followed by certain characters specifies input characters as follows:
 
        \b     BACKSPACE
 
@@ -93,22 +72,15 @@ COMMAND SECTION
 
        \kx    DELETE
 
-       A  backslash  followed by any other character indicates that character
-       is to be taken literally.  Characters which must be preceded by  back‐
-       slash include caret, space, tab and the backslash itself.
+       A backslash followed by any other character indicates that character is to be taken literally.  Characters which must be preceded by backslash include caret,  space,  tab  and  the  backslash
+       itself.
 
-       An  action  may be followed by an "extra" string.  When such a command
-       is entered while running less, the action is performed, and  then  the
-       extra  string  is  parsed,  just as if it were typed in to less.  This
-       feature can be used in certain cases to extend the functionality of  a
-       command.   For  example,  see the "{" and ":t" commands in the example
-       below.  The extra string has a special meaning for the "quit"  action:
-       when  less  quits,  first character of the extra string is used as its
-       exit status.
+       An  action  may be followed by an "extra" string.  When such a command is entered while running less, the action is performed, and then the extra string is parsed, just as if it were typed in
+       to less.  This feature can be used in certain cases to extend the functionality of a command.  For example, see the "{" and ":t" commands in the example below.  The extra string has a special
+       meaning for the "quit" action: when less quits, first character of the extra string is used as its exit status.
 
 EXAMPLE
-       The following input file describes the set  of  default  command  keys
-       used by less:
+       The following input file describes the set of default command keys used by less:
 
             #command
             \r        forw-line
@@ -228,38 +200,27 @@ EXAMPLE
             ZZ        quit
 
 PRECEDENCE
-       Commands  specified  by  lesskey take precedence over the default com‐
-       mands.  A default command key may be disabled by including it  in  the
-       input  file  with  the  action "invalid".  Alternatively, a key may be
-       defined to do nothing by using the action "noaction".   "noaction"  is
-       similar  to  "invalid",  but  less  will  give  an  error  beep for an
-       "invalid" command, but not for a "noaction" command.  In addition, ALL
-       default  commands  may  be disabled by adding this control line to the
-       input file:
+       Commands  specified by lesskey take precedence over the default commands.  A default command key may be disabled by including it in the input file with the action "invalid".  Alternatively, a
+       key may be defined to do nothing by using the action "noaction".  "noaction" is similar to "invalid", but less will give an error beep for an "invalid" command, but not for a "noaction"  com‐
+       mand.  In addition, ALL default commands may be disabled by adding this control line to the input file:
 
        #stop
 
-       This will cause all default commands to be ignored.   The  #stop  line
-       should be the last line in that section of the file.
+       This will cause all default commands to be ignored.  The #stop line should be the last line in that section of the file.
 
-       Be  aware that #stop can be dangerous.  Since all default commands are
-       disabled, you must provide sufficient commands before the  #stop  line
-       to  enable  all  necessary actions.  For example, failure to provide a
-       "quit" command can lead to frustration.
+       Be aware that #stop can be dangerous.  Since all default commands are disabled, you must provide sufficient commands before the #stop line to enable all necessary actions.  For example, fail‐
+       ure to provide a "quit" command can lead to frustration.
 
 LINE EDITING SECTION
        The line-editing section begins with the line:
 
        #line-edit
 
-       This section specifies new key bindings for the line editing commands,
-       in  a manner similar to the way key bindings for ordinary commands are
-       specified in the #command section.  The line-editing section  consists
-       of a list of keys and actions, one per line as in the example below.
+       This section specifies new key bindings for the line editing commands, in a manner similar to the way key bindings for ordinary commands are specified in the #command section.  The line-edit‐
+       ing section consists of a list of keys and actions, one per line as in the example below.
 
 EXAMPLE
-       The  following  input  file  describes the set of default line-editing
-       keys used by less:
+       The following input file describes the set of default line-editing keys used by less:
 
             #line-edit
             \t        forw-complete
@@ -296,20 +257,13 @@ LESS ENVIRONMENT VARIABLES
 
        #env
 
-       Following this line is a list  of  environment  variable  assignments.
-       Each line consists of an environment variable name, an equals sign (=)
-       and the value to be assigned to the environment variable.  White space
-       before  and  after  the equals sign is ignored.  Variables assigned in
-       this way are visible only to less.  If a variable is specified in  the
-       system  environment  and  also  in  a  lesskey  file, the value in the
-       lesskey file takes precedence.  Although the lesskey file can be  used
-       to  override  variables  set  in  the environment, the main purpose of
-       assigning variables in the lesskey file is simply  to  have  all  less
-       configuration information stored in one file.
+       Following  this  line  is  a  list of environment variable assignments.  Each line consists of an environment variable name, an equals sign (=) and the value to be assigned to the environment
+       variable.  White space before and after the equals sign is ignored.  Variables assigned in this way are visible only to less.  If a variable is specified in the system environment and also in
+       a lesskey file, the value in the lesskey file takes precedence.  Although the lesskey file can be used to override variables set in the environment, the main purpose of assigning variables in
+       the lesskey file is simply to have all less configuration information stored in one file.
 
 EXAMPLE
-       The  following input file sets the -i option whenever less is run, and
-       specifies the character set to be "latin1":
+       The following input file sets the -i option whenever less is run, and specifies the character set to be "latin1":
 
             #env
             LESS = -i
@@ -319,30 +273,21 @@ SEE ALSO
        less(1)
 
 WARNINGS
-       On MS-DOS and OS/2 systems, certain keys send a sequence of characters
-       which  start  with  a NUL character (0).  This NUL character should be
-       represented as \340 in a lesskey file.
+       On MS-DOS and OS/2 systems, certain keys send a sequence of characters which start with a NUL character (0).  This NUL character should be represented as \340 in a lesskey file.
 
 COPYRIGHT
        Copyright (C) 1984-2016  Mark Nudelman
 
-       less is part of the GNU project and is free software.  You can  redis‐
-       tribute it and/or modify it under the terms of either (1) the GNU Gen‐
-       eral Public License as published by the Free Software  Foundation;  or
-       (2)  the  Less  License.  See the file README in the less distribution
-       for more details regarding redistribution.  You should have received a
-       copy of the GNU General Public License along with the source for less;
-       see the file COPYING.  If not, write to the Free Software  Foundation,
-       59  Temple  Place, Suite 330, Boston, MA  02111-1307, USA.  You should
-       also have received a copy of the Less License; see the file LICENSE.
+       less is part of the GNU project and is free software.  You can redistribute it and/or modify it under the terms of either (1) the GNU General Public License as published by the Free  Software
+       Foundation;  or  (2)  the  Less  License.   See  the file README in the less distribution for more details regarding redistribution.  You should have received a copy of the GNU General Public
+       License along with the source for less; see the file COPYING.  If not, write to the Free Software Foundation, 59 Temple Place, Suite 330, Boston, MA  02111-1307, USA.  You  should  also  have
+       received a copy of the Less License; see the file LICENSE.
 
-       less is distributed in the hope that it will be  useful,  but  WITHOUT
-       ANY  WARRANTY; without even the implied warranty of MERCHANTABILITY or
-       FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public  License
-       for more details.
+       less  is  distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Gen‐
+       eral Public License for more details.
 
 AUTHOR
        Mark Nudelman
        Send bug reports or comments to <bug-less@gnu.org>.
 
-                           Version 487: 25 Oct 2016                LESSKEY(1)
+                                                                                       Version 487: 25 Oct 2016                                                                             LESSKEY(1)

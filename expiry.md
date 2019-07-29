@@ -1,4 +1,4 @@
-EXPIRY(1)                       User Commands                       EXPIRY(1)
+EXPIRY(1)                                                                                    User Commands                                                                                   EXPIRY(1)
 
 NAME
        expiry - check and enforce password expiration policy
@@ -7,9 +7,7 @@ SYNOPSIS
        expiry option
 
 DESCRIPTION
-       The expiry command checks (-c) the current password expiration and
-       forces (-f) changes when required. It is callable as a normal user
-       command.
+       The expiry command checks (-c) the current password expiration and forces (-f) changes when required. It is callable as a normal user command.
 
 OPTIONS
        The options which apply to the expiry command are:
@@ -18,8 +16,7 @@ OPTIONS
            Check the password expiration of the current user.
 
        -f, --force
-           Force a password change if the current user has an expired
-           password.
+           Force a password change if the current user has an expired password.
 
        -h, --help
            Display help message and exit.
@@ -34,4 +31,4 @@ FILES
 SEE ALSO
        passwd(5), shadow(5).
 
-shadow-utils 4.5                  01/25/2018                        EXPIRY(1)
+shadow-utils 4.5                                                                              01/25/2018                                                                                     EXPIRY(1)

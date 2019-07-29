@@ -1,4 +1,4 @@
-canberra-gtk-play(1)       General Commands Manual       canberra-gtk-play(1)
+canberra-gtk-play(1)                                                                    General Commands Manual                                                                   canberra-gtk-play(1)
 
 NAME
        canberra-gtk-play - play a sound event
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        This manual page documents briefly the canberra-gtk-play command.
 
-       canberra-gtk-play  plays  sound  events  that are specified by the XDG
-       Sound Theme and Name Specification.
+       canberra-gtk-play plays sound events that are specified by the XDG Sound Theme and Name Specification.
 
 OPTIONS
    Application Options
@@ -27,9 +26,7 @@ OPTIONS
               Event sound description
 
        -c, --cache-control={ permanent|volatile|never }
-              Specify how canberra-gtk-play manages its cache. permanent will
-              cause  the  sample  to  be  cached  permanently, volatile to be
-              cached until the cache needs to be freed.
+              Specify how canberra-gtk-play manages its cache. permanent will cause the sample to be cached permanently, volatile to be cached until the cache needs to be freed.
 
        -l, --loop=INTEGER
               Loop how many times (default: 1)
@@ -74,7 +71,6 @@ OPTIONS
 AUTHORS
        canberra-gtk-play is Copyright 2008 Lennart Poettering.
 
-       This manual page was written by Francois Wendling <frwendling@free.fr>
-       for the Debian GNU/Linux system (but may be used by others).
+       This manual page was written by Francois Wendling <frwendling@free.fr> for the Debian GNU/Linux system (but may be used by others).
 
-                                  2010-08-01             canberra-gtk-play(1)
+                                                                                              2010-08-01                                                                          canberra-gtk-play(1)

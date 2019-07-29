@@ -1,4 +1,4 @@
-pgmnoise(1)                General Commands Manual                pgmnoise(1)
+pgmnoise(1)                                                                             General Commands Manual                                                                            pgmnoise(1)
 
 NAME
        pgmnoise - create a graymap made up of white noise
@@ -7,9 +7,8 @@ SYNOPSIS
        pgmnoise width height
 
 DESCRIPTION
-       Creates  a portable graymap that is made up of random pixels with gray
-       values in the range of 0 to PGM_MAXMAXVAL (depends on the compilation,
-       either 255 or 65535). The graymap has a size of width * height pixels.
+       Creates  a  portable  graymap that is made up of random pixels with gray values in the range of 0 to PGM_MAXMAXVAL (depends on the compilation, either 255 or 65535). The graymap has a size of
+       width * height pixels.
 
 SEE ALSO
        pgm(5)
@@ -17,4 +16,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1993 by Frank Neumann
 
-                               16 November 1993                   pgmnoise(1)
+                                                                                           16 November 1993                                                                                pgmnoise(1)

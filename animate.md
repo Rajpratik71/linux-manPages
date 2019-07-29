@@ -1,4 +1,4 @@
-animate(1)                 General Commands Manual                 animate(1)
+animate(1)                                                                              General Commands Manual                                                                             animate(1)
 
 NAME
        animate - animates an image or image sequence on any X server.
@@ -7,18 +7,14 @@ SYNOPSIS
        animate [options] input-file
 
 OVERVIEW
-       The  animate program is a member of the ImageMagick(1) suite of tools.
-       Use it to animate an image or image sequence on any X server.
+       The animate program is a member of the ImageMagick(1) suite of tools.  Use it to animate an image or image sequence on any X server.
 
-       For more information about the animate command, point your browser  to
-       file:///usr/share/doc/imagemagick-6-common/html/www/animate.html   (on
-       debian system  you  may  install  the  imagemagick-6-doc  package)  or
-       http://www.imagemagick.org/script/animate.php.
+       For  more information about the animate command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/animate.html (on debian system you may install the imagemagick-6-doc
+       package) or http://www.imagemagick.org/script/animate.php.
 
 DESCRIPTION
        Image Settings:
-         -alpha  option         on,  activate,  off, deactivate, set, opaque,
-       copy
+         -alpha option        on, activate, off, deactivate, set, opaque, copy
                                transparent, extract, background, or shape
          -authenticate value  decrypt image with this password
          -backdrop            display image centered on a backdrop
@@ -39,8 +35,7 @@ DESCRIPTION
          -gamma value         level of gamma correction
          -geometry geometry   preferred size and location of the Image window
          -gravity type        horizontal and vertical backdrop placement
-         -identify            identify the format and characteristics of  the
-       image
+         -identify            identify the format and characteristics of the image
          -immutable           displayed image cannot be modified
          -interlace type      type of image interlacing scheme
          -interpolate method  pixel color interpolation method
@@ -55,8 +50,7 @@ DESCRIPTION
          -quiet               suppress all warning messages
          -regard-warnings     pay attention to warning messages
          -remote command      execute a command in an remote display process
-         -respect-parentheses  settings  remain  in  effect until parenthesis
-       boundary
+         -respect-parentheses settings remain in effect until parenthesis boundary
          -sampling-factor geometry
                               horizontal and vertical sampling factor
          -scenes range        image scene range
@@ -75,8 +69,7 @@ DESCRIPTION
 
        Image Operators:
          -colors value        preferred number of colors in the image
-         -crop geometry       preferred size  and  location  of  the  cropped
-       image
+         -crop geometry       preferred size and location of the cropped image
          -extract geometry    extract area from image
          -monochrome          transform image to black and white
          -repage geometry     size and location of an image canvas (operator)
@@ -98,16 +91,11 @@ DESCRIPTION
          -list type           print a list of supported option arguments
          -version             print version information
 
-       In  addition  to  those listed above, you can specify these standard X
-       resources as command line options:  -background,  -bordercolor,  -bor‐
-       derwidth,  -font,  -foreground, -iconGeometry, -iconic, -name, -matte‐
-       color, -shared-memory, or -title.
+       In addition to those listed above, you can specify these standard X resources as command line options:  -background, -bordercolor, -borderwidth, -font,  -foreground,  -iconGeometry,  -iconic,
+       -name, -mattecolor, -shared-memory, or -title.
 
-       By default, the image format of `file' is determined by its magic num‐
-       ber.   To specify a particular image format, precede the filename with
-       an image format name and a colon (i.e. ps:image) or specify the  image
-       type  as  the  filename suffix (i.e. image.ps).  Specify 'file' as '-'
-       for standard input or output.
+       By  default, the image format of `file' is determined by its magic number.  To specify a particular image format, precede the filename with an image format name and a colon (i.e. ps:image) or
+       specify the image type as the filename suffix (i.e. image.ps).  Specify 'file' as '-' for standard input or output.
 
        Buttons:
          1    press to map or unmap the Command widget
@@ -116,10 +104,7 @@ SEE ALSO
        ImageMagick(1)
 
 COPYRIGHT
-       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional  copyrights
-       and      licenses      apply      to      this      software,      see
-       file:///usr/share/doc/imagemagick-6-common/html/www/license.html   (on
-       debian  system  you  may  install  the  imagemagick-6-doc  package) or
-       http://www.imagemagick.org/script/license.php
+       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional copyrights and licenses apply to this software, see file:///usr/share/doc/imagemagick-6-common/html/www/license.html (on debian sys‐
+       tem you may install the imagemagick-6-doc package) or http://www.imagemagick.org/script/license.php
 
-ImageMagick               Date: 2009/01/10 01:00:00                animate(1)
+ImageMagick                                                                            Date: 2009/01/10 01:00:00                                                                            animate(1)

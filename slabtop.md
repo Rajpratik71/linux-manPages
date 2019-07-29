@@ -1,4 +1,4 @@
-SLABTOP(1)                      User Commands                      SLABTOP(1)
+SLABTOP(1)                                                                                   User Commands                                                                                  SLABTOP(1)
 
 NAME
        slabtop - display kernel slab cache information in real time
@@ -7,20 +7,14 @@ SYNOPSIS
        slabtop [options]
 
 DESCRIPTION
-       slabtop  displays detailed kernel slab cache information in real time.
-       It displays a listing of the top caches sorted by one  of  the  listed
-       sort  criteria.  It also displays a statistics header filled with slab
-       layer information.
+       slabtop displays detailed kernel slab cache information in real time.  It displays a listing of the top caches sorted by one of the listed sort criteria.  It also displays a statistics header
+       filled with slab layer information.
 
 OPTIONS
-       Normal invocation of slabtop does not require any options.  The behav‐
-       ior,  however, can be fine-tuned by specifying one or more of the fol‐
-       lowing flags:
+       Normal invocation of slabtop does not require any options.  The behavior, however, can be fine-tuned by specifying one or more of the following flags:
 
        -d, --delay=N
-              Refresh the display every n in seconds.   By  default,  slabtop
-              refreshes  the  display  every three seconds.  To exit the pro‐
-              gram, hit q.
+              Refresh the display every n in seconds.  By default, slabtop refreshes the display every three seconds.  To exit the program, hit q.
 
        -s, --sort=S
               Sort by S, where S is one of the sort criteria.
@@ -35,13 +29,10 @@ OPTIONS
               Display usage information and exit.
 
 SORT CRITERIA
-       The following are valid sort criteria used to sort the individual slab
-       caches  and  thereby  determine what are the "top" slab caches to dis‐
-       play.  The default sort criteria is to sort by the number  of  objects
-       ("o").
+       The following are valid sort criteria used to sort the individual slab caches and thereby determine what are the "top" slab caches to display.  The default sort criteria is  to  sort  by  the
+       number of objects ("o").
 
-       The  sort  criteria  can  also  be changed while slabtop is running by
-       pressing the associated character.
+       The sort criteria can also be changed while slabtop is running by pressing the associated character.
 
        character   description                header
        a           number of active objects   ACTIVE
@@ -56,12 +47,9 @@ SORT CRITERIA
        u           cache utilization          USE
 
 COMMANDS
-       slabtop accepts keyboard commands from the user during use.  The  fol‐
-       lowing  are  supported.   In  the  case  of  letters,  both  cases are
-       accepted.
+       slabtop accepts keyboard commands from the user during use.  The following are supported.  In the case of letters, both cases are accepted.
 
-       Each of the valid sort characters are also  accepted,  to  change  the
-       sort routine. See the section SORT CRITERIA.
+       Each of the valid sort characters are also accepted, to change the sort routine. See the section SORT CRITERIA.
 
        <SPACEBAR>
               Refresh the screen.
@@ -76,14 +64,10 @@ SEE ALSO
        free(1), ps(1), top(1), vmstat(8)
 
 NOTES
-       Currently,  slabtop  requires  a  2.4 or later kernel (specifically, a
-       version 1.1 or later /proc/slabinfo).  Kernel 2.2 should be  supported
-       in the future.
+       Currently, slabtop requires a 2.4 or later kernel (specifically, a version 1.1 or later /proc/slabinfo).  Kernel 2.2 should be supported in the future.
 
-       The  slabtop  statistic header is tracking how many bytes of slabs are
-       being used and is not a measure of physical memory.  The 'Slab'  field
-       in  the  /proc/meminfo  file  is  tracking information about used slab
-       physical memory.
+       The  slabtop  statistic  header is tracking how many bytes of slabs are being used and is not a measure of physical memory.  The 'Slab' field in the /proc/meminfo file is tracking information
+       about used slab physical memory.
 
 AUTHORS
        Written by Chris Rivera and Robert Love.
@@ -93,4 +77,4 @@ AUTHORS
 REPORTING BUGS
        Please send bug reports to ⟨procps@freelists.org⟩
 
-procps-ng                         June 2011                        SLABTOP(1)
+procps-ng                                                                                      June 2011                                                                                    SLABTOP(1)

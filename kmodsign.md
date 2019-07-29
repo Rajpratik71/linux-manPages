@@ -1,4 +1,4 @@
-KMODSIGN(1)                     User Commands                     KMODSIGN(1)
+KMODSIGN(1)                                                                                  User Commands                                                                                 KMODSIGN(1)
 
 NAME
        kmodsign - Kernel module signing tool
@@ -14,9 +14,8 @@ OPTIONS
 
        -d     produce a detached signature file (.p7s) only
 
-       -D     produce  a full detached signature block (may be cat'd onto the
-              end of a module)
+       -D     produce a full detached signature block (may be cat'd onto the end of a module)
 
        -k     switch to using keyid for identification
 
-kmodsign 4.4                    February 2018                     KMODSIGN(1)
+kmodsign 4.4                                                                                 February 2018                                                                                 KMODSIGN(1)

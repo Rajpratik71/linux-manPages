@@ -1,15 +1,13 @@
-ilbmtoppm(1)               General Commands Manual               ilbmtoppm(1)
+ilbmtoppm(1)                                                                            General Commands Manual                                                                           ilbmtoppm(1)
 
 NAME
        ilbmtoppm - convert an ILBM file into a portable pixmap
 
 SYNOPSIS
-       ilbmtoppm  [-verbose]  [-ignore<chunkID>] [-isham|-isehb] [-adjustcol‐
-       ors] [ILBMfile]
+       ilbmtoppm [-verbose] [-ignore<chunkID>] [-isham|-isehb] [-adjustcolors] [ILBMfile]
 
 DESCRIPTION
-       Reads an IFF ILBM file as input.  Produces a portable pixmap  as  out‐
-       put.  Supported ILBM types are:
+       Reads an IFF ILBM file as input.  Produces a portable pixmap as output.  Supported ILBM types are:
 
        Normal ILBMs with 1-16 planes.
 
@@ -27,8 +25,7 @@ DESCRIPTION
               1-16 planes for each color component.
 
        Chunks used:
-              BMHD,  CMAP, CAMG (only HAM & EHB flags used), PCHG, BODY unof‐
-              ficial DCOL chunk to identify direct color ILBM
+              BMHD, CMAP, CAMG (only HAM & EHB flags used), PCHG, BODY unofficial DCOL chunk to identify direct color ILBM
 
        Chunks ignored:
               GRAB, DEST, SPRT, CRNG, CCRT, CLUT, DPPV, DRNG, EPSF
@@ -43,22 +40,16 @@ OPTIONS
               Give some information about the ILBM file.
 
        -ignore <chunkID>
-              Skip a chunk.  <chunkID> is the 4-letter IFF  chunk  identifier
-              of the chunk to be skipped.
+              Skip a chunk.  <chunkID> is the 4-letter IFF chunk identifier of the chunk to be skipped.
 
        -isham | -isehb
-              Treat  the input file as a HAM or Extra_Halfbrite picture, even
-              if these flags or not set in the CAMG chunk (or if there is  no
-              CAMG chunk).
+              Treat the input file as a HAM or Extra_Halfbrite picture, even if these flags or not set in the CAMG chunk (or if there is no CAMG chunk).
 
        -adjustcolors
-              If  all  colors in the CMAP have a value of less then 16, ilbm‐
-              toppm assumes a 4-bit colormap and gives a warning.  With  this
-              option the colormap is scaled to 8 bits.
+              If all colors in the CMAP have a value of less then 16, ilbmtoppm assumes a 4-bit colormap and gives a warning.  With this option the colormap is scaled to 8 bits.
 
 BUGS
-       The multipalette PCHG BigLineChanges and Huffman decompression code is
-       untested.
+       The multipalette PCHG BigLineChanges and Huffman decompression code is untested.
 
 REFERENCES
        Amiga ROM Kernel Reference Manual - Devices (3rd Ed.)
@@ -69,7 +60,6 @@ SEE ALSO
 
 AUTHORS
        Copyright (C) 1989 by Jef Poskanzer.
-       Modified October 1993 by Ingo Wilken  (Ingo.Wilken@informatik.uni-old‐
-       enburg.de)
+       Modified October 1993 by Ingo Wilken (Ingo.Wilken@informatik.uni-oldenburg.de)
 
-                               04 October 1993                   ilbmtoppm(1)
+                                                                                            04 October 1993                                                                               ilbmtoppm(1)

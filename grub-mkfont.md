@@ -1,4 +1,4 @@
-GRUB-MKFONT(1)                  User Commands                  GRUB-MKFONT(1)
+GRUB-MKFONT(1)                                                                               User Commands                                                                              GRUB-MKFONT(1)
 
 NAME
        grub-mkfont - make GRUB font files
@@ -54,8 +54,7 @@ DESCRIPTION
        -V, --version
               print program version
 
-       Mandatory  or optional arguments to long options are also mandatory or
-       optional for any corresponding short options.
+       Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
 
 REPORTING BUGS
        Report bugs to <bug-grub@gnu.org>.
@@ -63,12 +62,10 @@ REPORTING BUGS
 SEE ALSO
        grub-mkconfig(8)
 
-       The full documentation for grub-mkfont is maintained as a Texinfo man‐
-       ual.   If  the info and grub-mkfont programs are properly installed at
-       your site, the command
+       The full documentation for grub-mkfont is maintained as a Texinfo manual.  If the info and grub-mkfont programs are properly installed at your site, the command
 
               info grub-mkfont
 
        should give you access to the complete manual.
 
-grub-mkfont (GRUB) 2.02-2ubuntu8February 2019                  GRUB-MKFONT(1)
+grub-mkfont (GRUB) 2.02-2ubuntu8.12                                                          February 2019                                                                              GRUB-MKFONT(1)

@@ -1,4 +1,4 @@
-PODCHECKER(1)          Perl Programmers Reference Guide         PODCHECKER(1)
+PODCHECKER(1)                                                                      Perl Programmers Reference Guide                                                                      PODCHECKER(1)
 
 NAME
        podchecker - check the syntax of POD format documentation files
@@ -12,38 +12,28 @@ OPTIONS AND ARGUMENTS
        -man    Print the manual page and exit.
 
        -warnings -nowarnings
-               Turn on/off printing of warnings. Repeating -warnings
-               increases the warning level, i.e. more warnings are printed.
-               Currently increasing to level two causes flagging of unescaped
-               "<,>" characters.
+               Turn on/off printing of warnings. Repeating -warnings increases the warning level, i.e. more warnings are printed. Currently increasing to level two causes flagging of unescaped "<,>"
+               characters.
 
-       file    The pathname of a POD file to syntax-check (defaults to
-               standard input).
+       file    The pathname of a POD file to syntax-check (defaults to standard input).
 
 DESCRIPTION
-       podchecker will read the given input files looking for POD syntax
-       errors in the POD documentation and will print any errors it find to
-       STDERR. At the end, it will print a status message indicating the
-       number of errors found.
+       podchecker will read the given input files looking for POD syntax errors in the POD documentation and will print any errors it find to STDERR. At the end, it will print a status message
+       indicating the number of errors found.
 
        Directories are ignored, an appropriate warning message is printed.
 
-       podchecker invokes the podchecker() function exported by Pod::Checker
-       Please see "podchecker()" in Pod::Checker for more details.
+       podchecker invokes the podchecker() function exported by Pod::Checker Please see "podchecker()" in Pod::Checker for more details.
 
 RETURN VALUE
-       podchecker returns a 0 (zero) exit status if all specified POD files
-       are ok.
+       podchecker returns a 0 (zero) exit status if all specified POD files are ok.
 
 ERRORS
-       podchecker returns the exit status 1 if at least one of the given POD
-       files has syntax errors.
+       podchecker returns the exit status 1 if at least one of the given POD files has syntax errors.
 
-       The status 2 indicates that at least one of the specified files does
-       not contain any POD commands.
+       The status 2 indicates that at least one of the specified files does not contain any POD commands.
 
-       Status 1 overrides status 2. If you want unambiguous results, call
-       podchecker with one single argument only.
+       Status 1 overrides status 2. If you want unambiguous results, call podchecker with one single argument only.
 
 SEE ALSO
        Pod::Simple and Pod::Checker
@@ -53,7 +43,6 @@ AUTHORS
 
        Brad Appleton <bradapp@enteract.com>, Marek Rouchal <marekr@cpan.org>
 
-       Based on code for Pod::Text::pod2text(1) written by Tom Christiansen
-       <tchrist@mox.perl.com>
+       Based on code for Pod::Text::pod2text(1) written by Tom Christiansen <tchrist@mox.perl.com>
 
-perl v5.26.1                      2018-11-19                    PODCHECKER(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                 PODCHECKER(1)

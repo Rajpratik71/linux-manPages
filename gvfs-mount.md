@@ -1,4 +1,4 @@
-GVFS-MOUNT(1)                   User Commands                   GVFS-MOUNT(1)
+GVFS-MOUNT(1)                                                                                User Commands                                                                               GVFS-MOUNT(1)
 
 NAME
        gvfs-mount
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                            GVFS-MOUNT(1)
+gvfs                                                                                                                                                                                     GVFS-MOUNT(1)

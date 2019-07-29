@@ -1,4 +1,4 @@
-PKMON(1)                       [FIXME: manual]                       PKMON(1)
+PKMON(1)                                                                                    [FIXME: manual]                                                                                   PKMON(1)
 
 NAME
        pkmon - PackageKit console client
@@ -33,4 +33,4 @@ AUTHOR
 COPYRIGHT
        Copyright © 2007 Richard Hughes
 
-[FIXME: source]                 29 March,2006                        PKMON(1)
+[FIXME: source]                                                                              29 March,2006                                                                                    PKMON(1)

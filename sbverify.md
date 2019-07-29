@@ -1,4 +1,4 @@
-SBVERIFY(1)                     User Commands                     SBVERIFY(1)
+SBVERIFY(1)                                                                                  User Commands                                                                                 SBVERIFY(1)
 
 NAME
        sbverify - UEFI secure boot verification tool
@@ -17,7 +17,6 @@ OPTIONS
               don't perform certificate verification
 
        --detached <file>
-              read  signature from <file>, instead of looking for an embedded
-              signature
+              read signature from <file>, instead of looking for an embedded signature
 
-sbverify 0.6                    February 2018                     SBVERIFY(1)
+sbverify 0.6                                                                                 February 2018                                                                                 SBVERIFY(1)

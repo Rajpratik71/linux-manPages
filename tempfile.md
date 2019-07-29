@@ -1,30 +1,22 @@
-TEMPFILE(1)                General Commands Manual                TEMPFILE(1)
+TEMPFILE(1)                                                                             General Commands Manual                                                                            TEMPFILE(1)
 
 NAME
        tempfile - create a temporary file in a safe manner
 
 SYNOPSIS
-       tempfile  [-d  DIR]  [-p  STRING]  [-s  STRING]  [-m  MODE]  [-n FILE]
-       [--directory=DIR]  [--prefix=STRING]  [--suffix=STRING]  [--mode=MODE]
-       [--name=FILE] [--help] [--version]
+       tempfile [-d DIR] [-p STRING] [-s STRING] [-m MODE] [-n FILE] [--directory=DIR] [--prefix=STRING] [--suffix=STRING] [--mode=MODE] [--name=FILE] [--help] [--version]
 
 DESCRIPTION
-       tempfile  creates  a  temporary  file in a safe manner.  It uses temp‐
-       nam(3) to choose the name and opens it with O_RDWR | O_CREAT | O_EXCL.
-       The  filename  is  printed  on standard output. See tempnam(3) for the
-       actual steps involved in directory selection.
+       tempfile  creates a temporary file in a safe manner.  It uses tempnam(3) to choose the name and opens it with O_RDWR | O_CREAT | O_EXCL.  The filename is printed on standard output. See temp‐
+       nam(3) for the actual steps involved in directory selection.
 
-       The directory in which to create the file might  be  searched  for  in
-       this order (but refer to tempnam(3) for authoritative answers):
+       The directory in which to create the file might be searched for in this order (but refer to tempnam(3) for authoritative answers):
 
-       a) In  case  the  environment  variable TMPDIR exists and contains the
-          name of an appropriate directory, that is used.
+       a) In case the environment variable TMPDIR exists and contains the name of an appropriate directory, that is used.
 
-       b) Otherwise, if the --directory argument is specified  and  appropri‐
-          ate, it is used.
+       b) Otherwise, if the --directory argument is specified and appropriate, it is used.
 
-       c) Otherwise,  P_tmpdir  (as defined in <stdio.h>) is used when appro‐
-          priate.
+       c) Otherwise, P_tmpdir (as defined in <stdio.h>) is used when appropriate.
 
        d) Finally an implementation-defined directory (/tmp) may be used.
 
@@ -36,8 +28,7 @@ OPTIONS
               Open the file with MODE instead of 0600.
 
        -n, --name FILE
-              Use FILE for the name instead of tempnam(3).  The  options  -d,
-              -p, and -s are ignored if this option is given.
+              Use FILE for the name instead of tempnam(3).  The options -d, -p, and -s are ignored if this option is given.
 
        -p, --prefix STRING
               Use up to five letters of STRING to generate the name.
@@ -48,17 +39,13 @@ OPTIONS
        --help Print a usage message on standard output and exit successfully.
 
        --version
-              Print  version information on standard output and exit success‐
-              fully.
+              Print version information on standard output and exit successfully.
 
 RETURN VALUES
-       An exit status of 0 means the temporary file was created successfully.
-       Any other exit status indicates an error.
+       An exit status of 0 means the temporary file was created successfully.  Any other exit status indicates an error.
 
 BUGS
-       Exclusive creation is not guaranteed when creating files on NFS parti‐
-       tions.  tempfile cannot make temporary directories.  tempfile is  dep‐
-       recated; you should use mktemp(1) instead.
+       Exclusive creation is not guaranteed when creating files on NFS partitions.  tempfile cannot make temporary directories.  tempfile is deprecated; you should use mktemp(1) instead.
 
 EXAMPLE
               #!/bin/sh
@@ -73,4 +60,4 @@ EXAMPLE
 SEE ALSO
        tempnam(3), mktemp(1)
 
-Debian                           27 Jun 2012                      TEMPFILE(1)
+Debian                                                                                        27 Jun 2012                                                                                  TEMPFILE(1)

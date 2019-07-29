@@ -1,4 +1,4 @@
-sbigtopgm(1)               General Commands Manual               sbigtopgm(1)
+sbigtopgm(1)                                                                            General Commands Manual                                                                           sbigtopgm(1)
 
 NAME
        sbigtopgm - convert an SBIG CCDOPS file into a portable graymap
@@ -7,17 +7,14 @@ SYNOPSIS
        sbigtopgm [sbigfile]
 
 DESCRIPTION
-       Reads  an an image file in the native format used by the Santa Barbara
-       Instrument Group (SBIG) astronomical CCD cameras, and produces a  por‐
-       table  graymap  as output.  Additional information on SBIG cameras and
-       documentation of the file format is available at the Web site:
-                                http://www.sbig.com/
+       Reads  an  an image file in the native format used by the Santa Barbara Instrument Group (SBIG) astronomical CCD cameras, and produces a portable graymap as output.  Additional information on
+       SBIG cameras and documentation of the file format is available at the Web site:
+                                                                                            http://www.sbig.com/
 
 SEE ALSO
        pgm(5)
 
 AUTHOR
-       John Walker (http://www.fourmilab.ch/), January 1998.  This program is
-       in the public domain.
+       John Walker (http://www.fourmilab.ch/), January 1998.  This program is in the public domain.
 
-                                23 January 98                    sbigtopgm(1)
+                                                                                             23 January 98                                                                                sbigtopgm(1)

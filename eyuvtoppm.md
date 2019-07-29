@@ -1,4 +1,4 @@
-eyuvtoppm(1)               General Commands Manual               eyuvtoppm(1)
+eyuvtoppm(1)                                                                            General Commands Manual                                                                           eyuvtoppm(1)
 
 NAME
        eyuvtoppm - convert a Berkeley YUV file to a portable pixmap file
@@ -7,14 +7,11 @@ SYNOPSIS
        eyuvtoppm [--width width] [--height height] [eyuvfile]
 
 DESCRIPTION
-       Reads  a  Berkeley  Encoder  YUV  (not the same as Abekas YUV) file as
-       input and produces a portable pixmap (ppm) file on the  Standard  Out‐
-       put.
+       Reads a Berkeley Encoder YUV (not the same as Abekas YUV) file as input and produces a portable pixmap (ppm) file on the Standard Output.
 
-       With no filename argument takes input from Standard Input.  Otherwise,
-       eyuvfile is the file specification of the input file.
+       With no filename argument takes input from Standard Input.  Otherwise, eyuvfile is the file specification of the input file.
 
 SEE ALSO
        ppmtoeyuv(1), yuvtoppm(1), ppm(5)
 
-                                April 22, 2001                   eyuvtoppm(1)
+                                                                                            April 22, 2001                                                                                eyuvtoppm(1)

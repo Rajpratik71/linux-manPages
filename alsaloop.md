@@ -1,4 +1,4 @@
-ALSALOOP(1)                General Commands Manual                ALSALOOP(1)
+ALSALOOP(1)                                                                             General Commands Manual                                                                            ALSALOOP(1)
 
 NAME
        alsaloop - command-line PCM loopback
@@ -7,13 +7,10 @@ SYNOPSIS
        alsaloop [-option] [cmd]
 
 DESCRIPTION
-       alsaloop allows create a PCM loopback between a PCM capture device and
-       a PCM playback device.
+       alsaloop allows create a PCM loopback between a PCM capture device and a PCM playback device.
 
-       alsaloop supports multiple soundcards, adaptive clock synchronization,
-       adaptive rate resampling using the samplerate library (if available in
-       the system). Also, mixer controls can be redirected from one  card  to
-       another (for example Master and PCM).
+       alsaloop  supports  multiple  soundcards, adaptive clock synchronization, adaptive rate resampling using the samplerate library (if available in the system). Also, mixer controls can be redi‐
+       rected from one card to another (for example Master and PCM).
 
 OPTIONS
        -h | --help
@@ -22,9 +19,7 @@ OPTIONS
 
        -g <file> | --config=<file>
 
-              Use  given  configuration file. The syntax of this file is sim‐
-              ple: one line contains the command line options  for  one  job.
-              The '#' means comment and rest of line is ignored. Example:
+              Use given configuration file. The syntax of this file is simple: one line contains the command line options for one job. The '#' means comment and rest of line is ignored. Example:
 
                 # First line - comment, second line - first job
                 -C hw:1,0 -P hw:0,0 -t 50000 -T 1
@@ -61,8 +56,7 @@ OPTIONS
 
        -f <format> | --format=<format>
 
-              Format  specification  (usually  S16_LE S32_LE). Use -h to list
-              all formats.  Default format is S16_LE.
+              Format specification (usually S16_LE S32_LE). Use -h to list all formats.  Default format is S16_LE.
 
        -c <channels> | --channels=<channels>
 
@@ -115,21 +109,18 @@ OPTIONS
                 3 or playshift  - use driver for the playback device
                                   (if supported) to compensate
                                   the rate shift
-                4 or samplerate - use samplerate library to  do  rate  resam‐
-              pling
+                4 or samplerate - use samplerate library to do rate resampling
                 5 or auto       - automatically selects the best method
                                   in this order: captshift, playshift,
                                   samplerate, simple
 
        -T <num> | --thread=<num>
 
-              Thread  number (-1 means create a unique thread). All jobs with
-              same thread numbers are run within one thread.
+              Thread number (-1 means create a unique thread). All jobs with same thread numbers are run within one thread.
 
        -m <mixid> | --mixer=<midid>
 
-              Redirect mixer control from the playback card  to  the  capture
-              card. Format of mixid is SRCID(PLAYBACK)[@DSTID(PLAYBACK)]:
+              Redirect mixer control from the playback card to the capture card. Format of mixid is SRCID(PLAYBACK)[@DSTID(PLAYBACK)]:
 
                 "name='Master Playback Switch'@name='Another Switch'"
                 "name='PCM Playback Volume'"
@@ -145,19 +136,15 @@ OPTIONS
 
        -O <ossmixid> | --ossmixer=<midid>
 
-              Redirect mixer control from the OSS Mixer emulation layer (cap‐
-              ture card) to the ALSA layer (capture card). Format of ossmixid
-              is ALSAID[,INDEX]@OSSID:
+              Redirect mixer control from the OSS Mixer emulation layer (capture card) to the ALSA layer (capture card). Format of ossmixid is ALSAID[,INDEX]@OSSID:
 
                 "Master@VOLUME"
                 "PCM,1@ALTPCM"
 
               Known OSS attributes:
 
-                VOLUME,  BASS,  TREBLE,  SYNTH,  PCM, SPEAKER, LINE, MIC, CD,
-              IMIX, ALTPCM,
-                RECLEV, IGAIN, OGAIN, LINE1, LINE2,  LINE3,  DIGITAL1,  DIGI‐
-              TAL2, DIGITAL3,
+                VOLUME, BASS, TREBLE, SYNTH, PCM, SPEAKER, LINE, MIC, CD, IMIX, ALTPCM,
+                RECLEV, IGAIN, OGAIN, LINE1, LINE2, LINE3, DIGITAL1, DIGITAL2, DIGITAL3,
                 PHONEIN, PHONEOUT, VIDEO, RADIO, MONITOR
 
        -v | --verbose
@@ -179,7 +166,6 @@ BUGS
        None known.
 
 AUTHOR
-       alsaloop  is by Jaroslav Kysela <perex@perex.cz>.  This document is by
-       Jaroslav Kysela <perex@perex.cz>.
+       alsaloop is by Jaroslav Kysela <perex@perex.cz>.  This document is by Jaroslav Kysela <perex@perex.cz>.
 
-                                  5 Aug 2010                      ALSALOOP(1)
+                                                                                              5 Aug 2010                                                                                   ALSALOOP(1)

@@ -1,4 +1,4 @@
-PINKY(1)                        User Commands                        PINKY(1)
+PINKY(1)                                                                                     User Commands                                                                                    PINKY(1)
 
 NAME
        pinky - lightweight finger
@@ -23,16 +23,14 @@ DESCRIPTION
 
        -i     omit the user's full name and remote host in short format
 
-       -q     omit  the  user's full name, remote host and idle time in short
-              format
+       -q     omit the user's full name, remote host and idle time in short format
 
        --help display this help and exit
 
        --version
               output version information and exit
 
-       A lightweight 'finger' program;  print  user  information.   The  utmp
-       file will be /var/run/utmp.
+       A lightweight 'finger' program;  print user information.  The utmp file will be /var/run/utmp.
 
 AUTHOR
        Written by Joseph Arceneaux, David MacKenzie, and Kaveh Ghazi.
@@ -42,13 +40,11 @@ REPORTING BUGS
        Report pinky translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/pinky>
        or available locally via: info '(coreutils) pinky invocation'
 
-GNU coreutils 8.28               January 2018                        PINKY(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                     PINKY(1)

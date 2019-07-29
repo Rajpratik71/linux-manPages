@@ -1,4 +1,4 @@
-POD2HTML(1)            Perl Programmers Reference Guide           POD2HTML(1)
+POD2HTML(1)                                                                        Perl Programmers Reference Guide                                                                        POD2HTML(1)
 
 NAME
        pod2html - convert .pod files to .html files
@@ -27,37 +27,29 @@ ARGUMENTS
        htmldir
              --htmldir=name
 
-           Sets the directory to which all cross references in the resulting
-           HTML file will be relative. Not passing this causes all links to
-           be absolute since this is the value that tells Pod::Html the root
-           of the documentation tree.
+           Sets the directory to which all cross references in the resulting HTML file will be relative. Not passing this causes all links to be absolute since this is the value that tells Pod::Html
+           the root of the documentation tree.
 
-           Do not use this and --htmlroot in the same call to pod2html; they
-           are mutually exclusive.
+           Do not use this and --htmlroot in the same call to pod2html; they are mutually exclusive.
 
        htmlroot
              --htmlroot=URL
 
-           Sets the base URL for the HTML files.  When cross-references are
-           made, the HTML root is prepended to the URL.
+           Sets the base URL for the HTML files.  When cross-references are made, the HTML root is prepended to the URL.
 
-           Do not use this if relative links are desired: use --htmldir
-           instead.
+           Do not use this if relative links are desired: use --htmldir instead.
 
-           Do not pass both this and --htmldir to pod2html; they are mutually
-           exclusive.
+           Do not pass both this and --htmldir to pod2html; they are mutually exclusive.
 
        infile
              --infile=name
 
-           Specify the pod file to convert.  Input is taken from STDIN if no
-           infile is specified.
+           Specify the pod file to convert.  Input is taken from STDIN if no infile is specified.
 
        outfile
              --outfile=name
 
-           Specify the HTML file to create.  Output goes to STDOUT if no
-           outfile is specified.
+           Specify the HTML file to create.  Output goes to STDOUT if no outfile is specified.
 
        podroot
              --podroot=name
@@ -67,14 +59,12 @@ ARGUMENTS
        podpath
              --podpath=name:...:name
 
-           Specify which subdirectories of the podroot contain pod files
-           whose HTML converted forms can be linked-to in cross-references.
+           Specify which subdirectories of the podroot contain pod files whose HTML converted forms can be linked-to in cross-references.
 
        cachedir
              --cachedir=name
 
-           Specify which directory is used for storing cache. Default
-           directory is the current working directory.
+           Specify which directory is used for storing cache. Default directory is the current working directory.
 
        flush
              --flush
@@ -84,38 +74,32 @@ ARGUMENTS
        backlink
              --backlink
 
-           Turn =head1 directives into links pointing to the top of the HTML
-           file.
+           Turn =head1 directives into links pointing to the top of the HTML file.
 
        nobacklink
              --nobacklink
 
-           Do not turn =head1 directives into links pointing to the top of
-           the HTML file (default behaviour).
+           Do not turn =head1 directives into links pointing to the top of the HTML file (default behaviour).
 
        header
              --header
 
-           Create header and footer blocks containing the text of the "NAME"
-           section.
+           Create header and footer blocks containing the text of the "NAME" section.
 
        noheader
              --noheader
 
-           Do not create header and footer blocks containing the text of the
-           "NAME" section (default behaviour).
+           Do not create header and footer blocks containing the text of the "NAME" section (default behaviour).
 
        poderrors
              --poderrors
 
-           Include a "POD ERRORS" section in the outfile if there were any
-           POD errors in the infile (default behaviour).
+           Include a "POD ERRORS" section in the outfile if there were any POD errors in the infile (default behaviour).
 
        nopoderrors
              --nopoderrors
 
-           Do not include a "POD ERRORS" section in the outfile if there were
-           any POD errors in the infile.
+           Do not include a "POD ERRORS" section in the outfile if there were any POD errors in the infile.
 
        index
              --index
@@ -130,8 +114,7 @@ ARGUMENTS
        recurse
              --recurse
 
-           Recurse into subdirectories specified in podpath (default
-           behaviour).
+           Recurse into subdirectories specified in podpath (default behaviour).
 
        norecurse
              --norecurse
@@ -141,8 +124,7 @@ ARGUMENTS
        css
              --css=URL
 
-           Specify the URL of cascading style sheet to link from resulting
-           HTML file.  Default is none style sheet.
+           Specify the URL of cascading style sheet to link from resulting HTML file.  Default is none style sheet.
 
        title
              --title=title
@@ -157,8 +139,7 @@ ARGUMENTS
        noquiet
              --noquiet
 
-           Display mostly harmless warning messages (default behaviour). But
-           this is not the same as "verbose" mode.
+           Display mostly harmless warning messages (default behaviour). But this is not the same as "verbose" mode.
 
        verbose
              --verbose
@@ -182,4 +163,4 @@ SEE ALSO
 COPYRIGHT
        This program is distributed under the Artistic License.
 
-perl v5.26.1                      2018-11-19                      POD2HTML(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                   POD2HTML(1)

@@ -1,8 +1,7 @@
-foo2hiperc(1)              General Commands Manual              foo2hiperc(1)
+foo2hiperc(1)                                                                           General Commands Manual                                                                          foo2hiperc(1)
 
 NAME
-       foo2hiperc  -  Convert  Ghostscript  pbmraw  or  bitcmyk format into a
-       HIPERC printer stream
+       foo2hiperc - Convert Ghostscript pbmraw or bitcmyk format into a HIPERC printer stream
 
 SYNOPSIS
        foo2hiperc [options] <pbmraw-file >hiperc-file
@@ -12,15 +11,12 @@ SYNOPSIS
        foo2hiperc [options] <pksmraw-file >hiperc-file
 
 DESCRIPTION
-       foo2hiperc converts Ghostscript pbmraw,  bitcmyk,  or  pksmraw  output
-       formats  to  monochrome  or  color HIPERC streams, for driving the Oki
-       C310dn, C3100, C3200, C3300n, C3400n, C5100n, C5500n, C5600n, and  the
-       C5800n HIPERC printers.
+       foo2hiperc  converts  Ghostscript  pbmraw,  bitcmyk, or pksmraw output formats to monochrome or color HIPERC streams, for driving the Oki C310dn, C3100, C3200, C3300n, C3400n, C5100n, C5500n,
+       C5600n, and the C5800n HIPERC printers.
 
 COMMAND LINE OPTIONS
    Normal Options
-       These  are  the  options  used to select the parameters of a print job
-       that are usually controlled on a per job basis.
+       These are the options used to select the parameters of a print job that are usually controlled on a per job basis.
 
        -c     Force color mode if autodetect doesn't work.
 
@@ -63,7 +59,7 @@ COMMAND LINE OPTIONS
 
        -s source
               Source (InputSlot) code to send to printer [0].
-              │                │
+
               │0   auto select │
               │1   tray1       │ 2   tray2
               │3   multi       │ 4   manual
@@ -77,31 +73,25 @@ COMMAND LINE OPTIONS
               Username string to send to printer.
 
    Printer Tweaking Options
-       These are the options used to customize the  operation  of  foo2hiperc
-       for a particular printer.
+       These are the options used to customize the operation of foo2hiperc for a particular printer.
 
        -u xoffxyoff
-              Set  the  offset  of the start of the printable region from the
-              upper left corner, in pixels [0x0].
+              Set the offset of the start of the printable region from the upper left corner, in pixels [0x0].
 
        -l xoffxyoff
-              Set the offset of the end of  the  printable  region  from  the
-              lower right corner, in pixels [0x0].
+              Set the offset of the end of the printable region from the lower right corner, in pixels [0x0].
 
        -L mask
-              Send  logical  clipping  amounts implied by -u/-l in the HIPERC
-              stream [3].
+              Send logical clipping amounts implied by -u/-l in the HIPERC stream [3].
 
               0   don't send any logical clipping amounts
               1   only send Y clipping amount
               2   only send X clipping amount
               3   send both X and Y clipping amounts
 
-       -A     AllIsBlack:  convert  C=1,M=1,Y=1  to  just  K=1.   Works  with
-              bitcmyk input only.
+       -A     AllIsBlack: convert C=1,M=1,Y=1 to just K=1.  Works with bitcmyk input only.
 
-       -B     BlackClears:  K=1  forces C,M,Y to 0.  Works with bitcmyk input
-              only.
+       -B     BlackClears: K=1 forces C,M,Y to 0.  Works with bitcmyk input only.
 
        -Z compressed
               Use uncompressed (0) or compressed (1) JBIG data.
@@ -110,9 +100,7 @@ COMMAND LINE OPTIONS
        These options are used for debugging foo2hiperc.
 
        -S plane
-              Output just a single color plane from a color print  and  print
-              it  on  the  black  plane.   The default is to output all color
-              planes.
+              Output just a single color plane from a color print and print it on the black plane.  The default is to output all color planes.
 
               1   Cyan
               2   Magenta

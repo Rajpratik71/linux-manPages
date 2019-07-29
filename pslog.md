@@ -1,4 +1,4 @@
-PSLOG(1)                     Linux User's Manual                     PSLOG(1)
+PSLOG(1)                                                                                  Linux User's Manual                                                                                 PSLOG(1)
 
 NAME
        pslog- report current logs path of a process
@@ -20,7 +20,6 @@ STANDARDS
        No standards apply.
 
 AUTHOR
-       Vito  Mule’  <mulevito@gmail.com> wrote pslog in 2015. Please send bug
-       reports to  <mulevito@gmail.com>.
+       Vito Mule’ <mulevito@gmail.com> wrote pslog in 2015. Please send bug reports to  <mulevito@gmail.com>.
 
-Linux"                       September 12, 2015”                     PSLOG(1)
+Linux"                                                                                   September 12, 2015”                                                                                  PSLOG(1)

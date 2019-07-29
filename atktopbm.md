@@ -1,4 +1,4 @@
-atktopbm(1)                General Commands Manual                atktopbm(1)
+atktopbm(1)                                                                             General Commands Manual                                                                            atktopbm(1)
 
 NAME
        atktopbm - convert Andrew Toolkit raster object to portable bitmap
@@ -7,8 +7,7 @@ SYNOPSIS
        atktopbm [atkfile]
 
 DESCRIPTION
-       Reads  an  Andrew Toolkit raster object as input.  Produces a portable
-       bitmap as output.
+       Reads an Andrew Toolkit raster object as input.  Produces a portable bitmap as output.
 
 SEE ALSO
        pbmtoatk(1), pbm(5)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Bill Janssen.
 
-                              26 September 1991                   atktopbm(1)
+                                                                                           26 September 1991                                                                               atktopbm(1)

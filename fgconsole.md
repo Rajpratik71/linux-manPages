@@ -1,4 +1,4 @@
-FGCONSOLE(1)                 Linux User's Manual                 FGCONSOLE(1)
+FGCONSOLE(1)                                                                              Linux User's Manual                                                                             FGCONSOLE(1)
 
 NAME
        fgconsole - print the number of the active VT.
@@ -7,8 +7,7 @@ SYNOPSIS
        fgconsole [ -h --help | -V --version | -n --next-available ]
 
 DESCRIPTION
-       If the active Virtual Terminal is /dev/ttyN, then prints N on standard
-       output.
+       If the active Virtual Terminal is /dev/ttyN, then prints N on standard output.
 
        If the console is a serial console, then "serial" is printed instead.
 
@@ -19,15 +18,12 @@ DESCRIPTION
               Prints version number and exits.
 
        --next-available
-              Will show the next unallocated  virtual  terminal.  Normally  6
-              virtual terminals are allocated, with number 7 used for X; this
-              will return "8" in this case.
+              Will show the next unallocated virtual terminal. Normally 6 virtual terminals are allocated, with number 7 used for X; this will return "8" in this case.
 
 NOTES
-       Under devfs, the consoles are in /dev/vc/N.  devfsd may maintain  sym‐
-       links for compatibility.
+       Under devfs, the consoles are in /dev/vc/N.  devfsd may maintain symlinks for compatibility.
 
 SEE ALSO
        chvt(1).
 
-                               14 Feburary 2002                  FGCONSOLE(1)
+                                                                                           14 Feburary 2002                                                                               FGCONSOLE(1)

@@ -1,22 +1,16 @@
-import(1)                  General Commands Manual                  import(1)
+import(1)                                                                               General Commands Manual                                                                              import(1)
 
 NAME
-       import  - saves any visible window on an X server and outputs it as an
-       image file. You can capture a single window, the entire screen, or any
-       rectangular portion of the screen.
+       import - saves any visible window on an X server and outputs it as an image file. You can capture a single window, the entire screen, or any rectangular portion of the screen.
 
 SYNOPSIS
        import [options] output-file
 
 OVERVIEW
-       The  import  program is a member of the ImageMagick(1) suite of tools.
-       Use it to capture some or all of an X server screen and save the image
-       to a file.
+       The import program is a member of the ImageMagick(1) suite of tools.  Use it to capture some or all of an X server screen and save the image to a file.
 
-       For  more  information about the import command, point your browser to
-       file:///usr/share/doc/imagemagick-6-common/html/www/import.html    (on
-       debian  system  you  may  install  the  imagemagick-6-doc  package) or
-       http://www.imagemagick.org/script/import.php.
+       For  more  information  about the import command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/import.html (on debian system you may install the imagemagick-6-doc
+       package) or http://www.imagemagick.org/script/import.php.
 
 DESCRIPTION
        Image Settings:
@@ -25,8 +19,7 @@ DESCRIPTION
          -channel type        apply option to select image channels
          -colorspace type     alternate image colorspace
          -comment string      annotate image with comment
-         -compress type       type of  pixel  compression  when  writing  the
-       image
+         -compress type       type of pixel compression when writing the image
          -define format:option
                               define one or more image format options
          -density geometry    horizontal and vertical density of the image
@@ -43,8 +36,7 @@ DESCRIPTION
          -format "string"     output formatted image characteristics
          -frame               include window manager frame
          -gravity direction   which direction to gravitate towards
-         -identify             identify the format and characteristics of the
-       image
+         -identify            identify the format and characteristics of the image
          -interlace type      None, Line, Plane, or Partition
          -interpolate method  pixel color interpolation method
          -label string        assign a label to an image
@@ -56,8 +48,7 @@ DESCRIPTION
          -quality value       JPEG/MIFF/PNG compression level
          -quiet               suppress all warning messages
          -regard-warnings     pay attention to warning messages
-         -respect-parentheses settings remain  in  effect  until  parenthesis
-       boundary
+         -respect-parentheses settings remain in effect until parenthesis boundary
          -sampling-factor geometry
                               horizontal and vertical sampling factor
          -scene value         image scene number
@@ -81,8 +72,7 @@ DESCRIPTION
          -annotate geometry text
                               annotate the image with text
          -colors value        preferred number of colors in the image
-         -crop  geometry        preferred  size  and  location of the cropped
-       image
+         -crop geometry       preferred size and location of the cropped image
          -geometry geometry   preferred size or location of the image
          -help                print program options
          -monochrome          transform image to black and white
@@ -104,20 +94,14 @@ DESCRIPTION
          -list type           print a list of supported option arguments
          -version             print version information
 
-       By default, 'file' is written in  the  Postscript  image  format.   To
-       specify  a particular image format, precede the filename with an image
-       format name and a colon (i.e. ps:image) or specify the image  type  as
-       the  filename suffix (i.e. image.ps).  Specify 'file' as '-' for stan‐
-       dard input or output.
+       By default, 'file' is written in the Postscript image format.  To specify a particular image format, precede the filename with an image format name and a colon (i.e. ps:image) or specify  the
+       image type as the filename suffix (i.e. image.ps).  Specify 'file' as '-' for standard input or output.
 
 SEE ALSO
        ImageMagick(1)
 
 COPYRIGHT
-       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional  copyrights
-       and      licenses      apply      to      this      software,      see
-       file:///usr/share/doc/imagemagick-6-common/html/www/license.html   (on
-       debian  system  you  may  install  the  imagemagick-6-doc  package) or
-       http://www.imagemagick.org/script/license.php
+       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional copyrights and licenses apply to this software, see file:///usr/share/doc/imagemagick-6-common/html/www/license.html (on debian sys‐
+       tem you may install the imagemagick-6-doc package) or http://www.imagemagick.org/script/license.php
 
-ImageMagick               Date: 2009/01/10 01:00:00                 import(1)
+ImageMagick                                                                            Date: 2009/01/10 01:00:00                                                                             import(1)

@@ -1,4 +1,4 @@
-GVFS-SAVE(1)                    User Commands                    GVFS-SAVE(1)
+GVFS-SAVE(1)                                                                                 User Commands                                                                                GVFS-SAVE(1)
 
 NAME
        gvfs-save
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                             GVFS-SAVE(1)
+gvfs                                                                                                                                                                                      GVFS-SAVE(1)

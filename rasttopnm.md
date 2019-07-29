@@ -1,4 +1,4 @@
-rasttopnm(1)               General Commands Manual               rasttopnm(1)
+rasttopnm(1)                                                                            General Commands Manual                                                                           rasttopnm(1)
 
 NAME
        rasttopnm - convert a Sun rasterfile into a portable anymap
@@ -7,11 +7,8 @@ SYNOPSIS
        rasttopnm [rastfile]
 
 DESCRIPTION
-       Reads  a  Sun rasterfile as input.  Produces a portable anymap as out‐
-       put.  The type of the output file depends on the input file - if  it's
-       black  &  white,  a  pbm file is written, else if it's grayscale a pgm
-       file, else a ppm file.  The program tells you which type it  is  writ‐
-       ing.
+       Reads  a  Sun  rasterfile  as input.  Produces a portable anymap as output.  The type of the output file depends on the input file - if it's black & white, a pbm file is written, else if it's
+       grayscale a pgm file, else a ppm file.  The program tells you which type it is writing.
 
 SEE ALSO
        pnmtorast(1), pnm(5)
@@ -19,4 +16,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989, 1991 by Jef Poskanzer.
 
-                               13 January 1991                   rasttopnm(1)
+                                                                                            13 January 1991                                                                               rasttopnm(1)

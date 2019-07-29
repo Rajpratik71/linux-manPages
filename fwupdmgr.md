@@ -1,4 +1,4 @@
-FWUPDMGR(1)                     User Commands                     FWUPDMGR(1)
+FWUPDMGR(1)                                                                                  User Commands                                                                                 FWUPDMGR(1)
 
 NAME
        fwupdmgr - fwupd
@@ -124,8 +124,6 @@ DESCRIPTION
        --show-all-devices
               Show devices that are not updatable
 
-       This  tool allows an administrator to query and control the fwupd dae‐
-       mon, allowing them to perform actions such as installing or  downgrad‐
-       ing firmware.
+       This tool allows an administrator to query and control the fwupd daemon, allowing them to perform actions such as installing or downgrading firmware.
 
-fwupdmgr 1.0.9                   October 2018                     FWUPDMGR(1)
+fwupdmgr 1.0.9                                                                               October 2018                                                                                  FWUPDMGR(1)

@@ -1,4 +1,4 @@
-GVFS-TREE(1)                    User Commands                    GVFS-TREE(1)
+GVFS-TREE(1)                                                                                 User Commands                                                                                GVFS-TREE(1)
 
 NAME
        gvfs-tree
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                             GVFS-TREE(1)
+gvfs                                                                                                                                                                                      GVFS-TREE(1)

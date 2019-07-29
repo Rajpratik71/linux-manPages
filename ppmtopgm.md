@@ -1,4 +1,4 @@
-ppmtopgm(1)                General Commands Manual                ppmtopgm(1)
+ppmtopgm(1)                                                                             General Commands Manual                                                                            ppmtopgm(1)
 
 NAME
        ppmtopgm - convert a portable pixmap into a portable graymap
@@ -7,18 +7,12 @@ SYNOPSIS
        ppmtopgm [ppmfile]
 
 DESCRIPTION
-       Reads a portable pixmap as input.  Produces a portable graymap as out‐
-       put.  The output is a "black and  white"  rendering  of  the  original
-       image,  as  in a black and white photograph.  The quantization formula
-       used is .299 r + .587 g + .114 b.
+       Reads  a portable pixmap as input.  Produces a portable graymap as output.  The output is a "black and white" rendering of the original image, as in a black and white photograph.  The quanti‐
+       zation formula used is .299 r + .587 g + .114 b.
 
-       Note that although there is a pgmtoppm program, it  is  not  necessary
-       for  simple  conversions from pgm to ppm , because any ppm program can
-       read pgm (and pbm ) files automatically.  pgmtoppm is for colorizing a
-       pgm file.  Also, see ppmtorgb3 for a different way of converting color
-       to gray.  And ppmdist generates a grayscale image from a color  image,
-       but  in a way that makes it easy to differentiate the original colors,
-       not necessarily a way that looks like a black and white photograph.
+       Note that although there is a pgmtoppm program, it is not necessary for simple conversions from pgm to ppm , because any ppm program can read pgm (and pbm ) files automatically.  pgmtoppm  is
+       for  colorizing  a pgm file.  Also, see ppmtorgb3 for a different way of converting color to gray.  And ppmdist generates a grayscale image from a color image, but in a way that makes it easy
+       to differentiate the original colors, not necessarily a way that looks like a black and white photograph.
 
 QUOTE
        Cold-hearted orb that rules the night
@@ -33,4 +27,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                                10 April 2000                     ppmtopgm(1)
+                                                                                             10 April 2000                                                                                 ppmtopgm(1)

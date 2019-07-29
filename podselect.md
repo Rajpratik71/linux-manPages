@@ -1,8 +1,7 @@
-PODSELECT(1)           Perl Programmers Reference Guide          PODSELECT(1)
+PODSELECT(1)                                                                       Perl Programmers Reference Guide                                                                       PODSELECT(1)
 
 NAME
-       podselect - print selected sections of pod documentation on standard
-       output
+       podselect - print selected sections of pod documentation on standard output
 
 SYNOPSIS
        podselect [-help] [-man] [-section section-spec] [file ...]
@@ -13,22 +12,16 @@ OPTIONS AND ARGUMENTS
        -man    Print the manual page and exit.
 
        -section section-spec
-               Specify a section to include in the output.  See "SECTION
-               SPECIFICATIONS" in Pod::Parser for the format to use for
-               section-spec.  This option may be given multiple times on the
+               Specify a section to include in the output.  See "SECTION SPECIFICATIONS" in Pod::Parser for the format to use for section-spec.  This option may be given multiple times on the
                command line.
 
-       file    The pathname of a file from which to select sections of pod
-               documentation (defaults to standard input).
+       file    The pathname of a file from which to select sections of pod documentation (defaults to standard input).
 
 DESCRIPTION
-       podselect will read the given input files looking for pod
-       documentation and will print out (in raw pod format) all sections that
-       match one ore more of the given section specifications. If no section
-       specifications are given than all pod sections encountered are output.
+       podselect will read the given input files looking for pod documentation and will print out (in raw pod format) all sections that match one ore more of the given section specifications. If no
+       section specifications are given than all pod sections encountered are output.
 
-       podselect invokes the podselect() function exported by Pod::Select
-       Please see "podselect()" in Pod::Select for more details.
+       podselect invokes the podselect() function exported by Pod::Select Please see "podselect()" in Pod::Select for more details.
 
 SEE ALSO
        Pod::Parser and Pod::Select
@@ -38,7 +31,6 @@ AUTHOR
 
        Brad Appleton <bradapp@enteract.com>
 
-       Based on code for Pod::Text::pod2text(1) written by Tom Christiansen
-       <tchrist@mox.perl.com>
+       Based on code for Pod::Text::pod2text(1) written by Tom Christiansen <tchrist@mox.perl.com>
 
-perl v5.26.1                      2018-11-19                     PODSELECT(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                  PODSELECT(1)

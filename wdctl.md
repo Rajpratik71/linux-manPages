@@ -1,4 +1,4 @@
-WDCTL(8)                    System Administration                    WDCTL(8)
+WDCTL(8)                                                                                 System Administration                                                                                WDCTL(8)
 
 NAME
        wdctl - show hardware watchdog status
@@ -7,12 +7,9 @@ SYNOPSIS
        wdctl [options] [device...]
 
 DESCRIPTION
-       Show  hardware  watchdog status.  The default device is /dev/watchdog.
-       If more than one device is specified then the output is  separated  by
-       one blank line.
+       Show hardware watchdog status.  The default device is /dev/watchdog.  If more than one device is specified then the output is separated by one blank line.
 
-       Note  that  the number of supported watchdog features is hardware spe‐
-       cific.
+       Note that the number of supported watchdog features is hardware specific.
 
 OPTIONS
        -f, --flags list
@@ -28,13 +25,10 @@ OPTIONS
               Do not print a header line for flags table.
 
        -o, --output list
-              Define the output columns to use in table  of  watchdog  flags.
-              If  no  output  arrangement is specified, then a default set is
-              used.  Use --help to get list of all supported columns.
+              Define the output columns to use in table of watchdog flags.  If no output arrangement is specified, then a default set is used.  Use --help to get list of all supported columns.
 
        -O, --oneline
-              Print all wanted information on one line in key="value"  output
-              format.
+              Print all wanted information on one line in key="value" output format.
 
        -r, --raw
               Use the raw output format.
@@ -59,8 +53,6 @@ AUTHORS
        Lennart Poettering ⟨lennart@poettering.net⟩
 
 AVAILABILITY
-       The  wdctl  command is part of the util-linux package and is available
-       from  Linux  Kernel  Archive   ⟨https://www.kernel.org/pub/linux/utils
-       /util-linux/⟩.
+       The wdctl command is part of the util-linux package and is available from Linux Kernel Archive ⟨https://www.kernel.org/pub/linux/utils/util-linux/⟩.
 
-util-linux                        July 2014                          WDCTL(8)
+util-linux                                                                                     July 2014                                                                                      WDCTL(8)

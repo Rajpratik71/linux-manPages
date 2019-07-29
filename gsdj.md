@@ -1,31 +1,23 @@
-GSLP(1)                          Ghostscript                          GSLP(1)
+GSLP(1)                                                                                       Ghostscript                                                                                      GSLP(1)
 
 NAME
        gslp - Format and print text using ghostscript
        gsbj - Format and print text for BubbleJet printer using ghostscript
        gsdj - Format and print text for DeskJet printer using ghostscript
-       gsdj500 - Format and print text for DeskJet 500 BubbleJet using ghost‐
-       script
+       gsdj500 - Format and print text for DeskJet 500 BubbleJet using ghostscript
        gslj - Format and print text for LaserJet printer using ghostscript
 
 SYNOPSIS
-       gslp -12BclqRr -b<header> -f<font> -F<hfont> -L<lines> -p<outfile>
-       -T<n> --add-to-space <units> --add-to-width <units> --columns <n>
-       --detect --first-page <n> --kern <file.afm> --last-page <n> --(head‐
-       ing|footing)-(left|center|right) <string> --margin-(top|bot‐
-       tom|left|right) <inches> --no-eject-(file|formfeed) --spacing <n>
-       [gs options] [files]
+       gslp -12BclqRr -b<header> -f<font> -F<hfont> -L<lines> -p<outfile> -T<n> --add-to-space <units> --add-to-width <units> --columns <n> --detect --first-page <n> --kern <file.afm>
+       --last-page <n> --(heading|footing)-(left|center|right) <string> --margin-(top|bottom|left|right) <inches> --no-eject-(file|formfeed) --spacing <n> [gs options] [files]
        gsbj [options] [files]
        gsdj [options] [files]
        gsdj500 [options] [files]
        gslj [options] [files]
 
 DESCRIPTION
-       This  utility  provides  functionality approximately equivalent to the
-       Unix enscript(1) program.  It prints plain text files using  a  single
-       font.   It  currently  handles tabs and formfeeds, but not backspaces.
-       It will line-wrap when using fixed-pitch fonts.  It will also do kern‐
-       ing and width adjustment.
+       This utility provides functionality approximately equivalent to the Unix enscript(1) program.  It prints plain text files using a single font.  It currently handles tabs  and  formfeeds,  but
+       not backspaces.  It will line-wrap when using fixed-pitch fonts.  It will also do kerning and width adjustment.
 
        The default device (-sDEVICE=) and resolution (-r) are as follows:
              gslp      epson      180
@@ -48,12 +40,10 @@ OPTIONS
        Switches added:
 
               --add-to-space <units>
-                     add the given number of 1/72" units to the width of each
-                     space (may be negative)
+                     add the given number of 1/72" units to the width of each space (may be negative)
 
               --add-to-width <units>
-                     add the given number of 1/72" units to the width of each
-                     character (may be negative)
+                     add the given number of 1/72" units to the width of each character (may be negative)
 
               --columns <n>
                      print in <n> columns
@@ -81,8 +71,7 @@ OPTIONS
 
               --spacing <n>
                      use double (n=2), triple (n=3), etc. spacing
-       Also,  the string %# in a heading or footing is replaced with the page
-       #.
+       Also, the string %# in a heading or footing is replaced with the page #.
 
 SEE ALSO
        gs(1)
@@ -91,7 +80,6 @@ VERSION
        This document was last revised for Ghostscript version 9.26.
 
 AUTHOR
-       Artifex Software, Inc. are the  primary  maintainers  of  Ghostscript.
-       This manpage by George Ferguson.
+       Artifex Software, Inc. are the primary maintainers of Ghostscript.  This manpage by George Ferguson.
 
-9.26                           20 November 2018                       GSLP(1)
+9.26                                                                                       20 November 2018                                                                                    GSLP(1)

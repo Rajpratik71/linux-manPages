@@ -1,4 +1,4 @@
-AMIXER(1)                  General Commands Manual                  AMIXER(1)
+AMIXER(1)                                                                               General Commands Manual                                                                              AMIXER(1)
 
 NAME
        amixer - command-line mixer for ALSA soundcard driver
@@ -7,12 +7,9 @@ SYNOPSIS
        amixer [-option] [cmd]
 
 DESCRIPTION
-       amixer allows command-line control of the mixer for the ALSA soundcard
-       driver.  amixer supports multiple soundcards.
+       amixer allows command-line control of the mixer for the ALSA soundcard driver.  amixer supports multiple soundcards.
 
-       amixer with no arguments will display the current mixer  settings  for
-       the  default soundcard and device. This is a good way to see a list of
-       the simple mixer controls you can use.
+       amixer with no arguments will display the current mixer settings for the default soundcard and device. This is a good way to see a list of the simple mixer controls you can use.
 
 COMMANDS
        help   Shows syntax.
@@ -23,35 +20,24 @@ COMMANDS
               Shows a complete list of simple mixer controls.
 
        scontents
-              Shows a complete list of simple mixer controls with their  con‐
-              tents.
+              Shows a complete list of simple mixer controls with their contents.
 
        set or sset <SCONTROL> <PARAMETER> ...
-              Sets  the  simple  mixer control contents. The parameter can be
-              the volume either as a percentage from 0% to 100% with  %  suf‐
-              fix, a dB gain with dB suffix (like -12.5dB), or an exact hard‐
-              ware value.  The dB gain can be used only for  the  mixer  ele‐
-              ments  with available dB information.  When plus(+) or minus(-)
-              letter is appended after volume value,  the  volume  is  incre‐
+              Sets the simple mixer control contents. The parameter can be the volume either as a percentage from 0% to 100% with % suffix, a dB gain with dB suffix (like -12.5dB), or an exact hard‐
+              ware value.  The dB gain can be used only for the mixer elements with available dB information.  When plus(+) or minus(-) letter is appended after volume value, the  volume  is  incre‐
               mented or decremented from the current value, respectively.
 
-              The  parameters  cap,  nocap,  mute, unmute, toggle are used to
-              change capture (recording) and muting for the group specified.
+              The parameters cap, nocap, mute, unmute, toggle are used to change capture (recording) and muting for the group specified.
 
-              The optional modifiers can be put as extra parameters to  spec‐
-              ify  the  stream direction or channels to apply.  The modifiers
-              playback and capture specify  the  stream,  and  the  modifiers
-              front,  rear, center, woofer are used to specify channels to be
-              changed.
+              The  optional  modifiers  can be put as extra parameters to specify the stream direction or channels to apply.  The modifiers playback and capture specify the stream, and the modifiers
+              front, rear, center, woofer are used to specify channels to be changed.
 
-              A simple mixer control must be specified. Only one  device  can
-              be controlled at a time.
+              A simple mixer control must be specified. Only one device can be controlled at a time.
 
        get or sget <SCONTROL>
               Shows the simple mixer control contents.
 
-              A  simple  mixer control must be specified. Only one device can
-              be controlled at a time.
+              A simple mixer control must be specified. Only one device can be controlled at a time.
 
        controls
               Shows a complete list of card controls.
@@ -60,64 +46,46 @@ COMMANDS
               Shows a complete list of card controls with their contents.
 
        cset <CONTROL> <PARAMETER> ...
-              Sets the card control contents. The identifier has these compo‐
-              nents:  iface,  name, index, device, subdevice, numid. The next
-              argument specifies the value of control.
+              Sets the card control contents. The identifier has these components: iface, name, index, device, subdevice, numid. The next argument specifies the value of control.
 
        cget <CONTROL>
-              Shows the card control contents. The identifier has same syntax
-              as for the cset command.
+              Shows the card control contents. The identifier has same syntax as for the cset command.
 
 OPTIONS
        -c card
 
-              Select the card number to control. The device name created from
-              this parameter has syntax 'hw:N' where N is specified card num‐
-              ber.
+              Select the card number to control. The device name created from this parameter has syntax 'hw:N' where N is specified card number.
 
        -D device
 
-              Select  the device name to control. The default control name is
-              'default'.
+              Select the device name to control. The default control name is 'default'.
 
        -s | --stdin
 
-              Read from stdin and execute the command on  each  line  sequen‐
-              tially.  When this option is given, the command in command-line
-              arguments is ignored.
+              Read from stdin and execute the command on each line sequentially.  When this option is given, the command in command-line arguments is ignored.
 
-              Only sset and cset are accepted.  Other commands  are  ignored.
-              The commands to unmatched ids are ignored without errors too.
+              Only sset and cset are accepted.  Other commands are ignored.  The commands to unmatched ids are ignored without errors too.
 
        -h     Help: show syntax.
 
        -q     Quiet mode. Do not show results of changes.
 
-       -R     Use the raw value for evaluating the percentage representation.
-              This is the default mode.
+       -R     Use the raw value for evaluating the percentage representation.  This is the default mode.
 
-       -M     Use the mapped volume for evaluating the percentage representa‐
-              tion like alsamixer, to be more natural for human ear.
+       -M     Use the mapped volume for evaluating the percentage representation like alsamixer, to be more natural for human ear.
 
 EXAMPLES
        amixer -c 1 sset Line,0 80%,40% unmute cap
-              will  set  the second soundcard's left line input volume to 80%
-              and right line input to 40%, unmute it,  and  select  it  as  a
-              source for capture (recording).
+              will set the second soundcard's left line input volume to 80% and right line input to 40%, unmute it, and select it as a source for capture (recording).
 
        amixer -c 1 -- sset Master playback -20dB
-              will set the master volume of the second card to -20dB.  If the
-              master has multiple channels, all channels are set to the  same
-              value.
+              will set the master volume of the second card to -20dB.  If the master has multiple channels, all channels are set to the same value.
 
        amixer -c 1 set PCM 2dB+
-              will increase the PCM volume of the second card with 2dB.  When
-              both playback and capture volumes exist,  this  is  applied  to
-              both volumes.
+              will increase the PCM volume of the second card with 2dB.  When both playback and capture volumes exist, this is applied to both volumes.
 
        amixer -c 2 cset iface=MIXER,name='Line Playback Volume",index=1 40%
-              will  set  the third soundcard's second line playback volume(s)
-              to 40%
+              will set the third soundcard's second line playback volume(s) to 40%
 
        amixer -c 2 cset numid=34 40%
               will set the 34th soundcard element to 40%
@@ -129,8 +97,6 @@ BUGS
        None known.
 
 AUTHOR
-       amixer is by Jaroslav Kysela <perex@perex.cz>.  This  document  is  by
-       Paul     Winkler     <zarmzarm@erols.com>    and    Jaroslav    Kysela
-       <perex@perex.cz>.
+       amixer is by Jaroslav Kysela <perex@perex.cz>.  This document is by Paul Winkler <zarmzarm@erols.com> and Jaroslav Kysela <perex@perex.cz>.
 
-                                 11 Aug 2000                        AMIXER(1)
+                                                                                              11 Aug 2000                                                                                    AMIXER(1)

@@ -1,4 +1,4 @@
-CODEPAGE(1)                      Debian Linux                     CODEPAGE(1)
+CODEPAGE(1)                                                                                  Debian Linux                                                                                  CODEPAGE(1)
 
 NAME
        codepage - extract a codepage from an MSDOS codepage file
@@ -21,9 +21,8 @@ OPTIONS
        nnn    (3 digits): extract codepage nnn from the file.
 
 EXAMPLE
-       To  create  a file 850.cp, with codepage 850 from a file ega.cpi, exe‐
-       cute:
+       To create a file 850.cp, with codepage 850 from a file ega.cpi, execute:
 
                    codepage ega.cpi 850
 
-Console Tools                     2002-02-19                      CODEPAGE(1)
+Console Tools                                                                                 2002-02-19                                                                                   CODEPAGE(1)

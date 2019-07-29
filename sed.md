@@ -1,4 +1,4 @@
-SED(1)                          User Commands                          SED(1)
+SED(1)                                                                                       User Commands                                                                                      SED(1)
 
 NAME
        sed - stream editor for filtering and transforming text
@@ -7,13 +7,9 @@ SYNOPSIS
        sed [OPTION]... {script-only-if-no-other-script} [input-file]...
 
 DESCRIPTION
-       Sed is a stream editor.  A stream editor is used to perform basic text
-       transformations on an input stream (a file or input from a  pipeline).
-       While  in  some ways similar to an editor which permits scripted edits
-       (such as ed), sed works by making only one pass over the input(s), and
-       is  consequently  more  efficient.   But it is sed's ability to filter
-       text in a pipeline which  particularly  distinguishes  it  from  other
-       types of editors.
+       Sed  is  a  stream  editor.  A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).  While in some ways similar to an editor which
+       permits scripted edits (such as ed), sed works by making only one pass over the input(s), and is consequently more efficient.  But it is sed's ability to filter text in a pipeline which  par‐
+       ticularly distinguishes it from other types of editors.
 
        -n, --quiet, --silent
 
@@ -45,13 +41,11 @@ DESCRIPTION
 
        -E, -r, --regexp-extended
 
-              use extended regular expressions in the script (for portability
-              use POSIX -E).
+              use extended regular expressions in the script (for portability use POSIX -E).
 
        -s, --separate
 
-              consider files as separate rather than as a single,  continuous
-              long stream.
+              consider files as separate rather than as a single, continuous long stream.
 
        --sandbox
 
@@ -59,8 +53,7 @@ DESCRIPTION
 
        -u, --unbuffered
 
-              load minimal amounts of data from the input files and flush the
-              output buffers more often
+              load minimal amounts of data from the input files and flush the output buffers more often
 
        -z, --null-data
 
@@ -72,27 +65,21 @@ DESCRIPTION
        --version
               output version information and exit
 
-       If no -e, --expression, -f, or --file option is given, then the  first
-       non-option  argument  is  taken  as  the sed script to interpret.  All
-       remaining arguments are names of input files; if no  input  files  are
-       specified, then the standard input is read.
+       If  no  -e,  --expression,  -f, or --file option is given, then the first non-option argument is taken as the sed script to interpret.  All remaining arguments are names of input files; if no
+       input files are specified, then the standard input is read.
 
-       GNU  sed  home page: <http://www.gnu.org/software/sed/>.  General help
-       using GNU software: <http://www.gnu.org/gethelp/>.  E-mail bug reports
-       to: <bug-sed@gnu.org>.
+       GNU sed home page: <http://www.gnu.org/software/sed/>.  General help using GNU software: <http://www.gnu.org/gethelp/>.  E-mail bug reports to: <bug-sed@gnu.org>.
 
 COMMAND SYNOPSIS
-       This  is  just a brief synopsis of sed commands to serve as a reminder
-       to those who already know sed; other documentation (such as  the  tex‐
-       info document) must be consulted for fuller descriptions.
+       This is just a brief synopsis of sed commands to serve as a reminder to those who already know sed; other documentation (such as the texinfo document) must be consulted  for  fuller  descrip‐
+       tions.
 
    Zero-address ``commands''
        : label
               Label for b and t commands.
 
        #comment
-              The  comment extends until the next newline (or the end of a -e
-              script fragment).
+              The comment extends until the next newline (or the end of a -e script fragment).
 
        }      The closing bracket of a { } block.
 
@@ -101,30 +88,24 @@ COMMAND SYNOPSIS
 
        a \
 
-       text   Append text, which has each  embedded  newline  preceded  by  a
-              backslash.
+       text   Append text, which has each embedded newline preceded by a backslash.
 
        i \
 
-       text   Insert  text,  which  has  each  embedded newline preceded by a
-              backslash.
+       text   Insert text, which has each embedded newline preceded by a backslash.
 
        q [exit-code]
-              Immediately quit the sed script  without  processing  any  more
-              input,  except  that  if auto-print is not disabled the current
-              pattern space will be printed.  The exit code argument is a GNU
+              Immediately quit the sed script without processing any more input, except that if auto-print is not disabled the current pattern space will be printed.  The exit code argument is a GNU
               extension.
 
        Q [exit-code]
-              Immediately  quit  the  sed  script without processing any more
-              input.  This is a GNU extension.
+              Immediately quit the sed script without processing any more input.  This is a GNU extension.
 
        r filename
               Append text read from filename.
 
        R filename
-              Append a line read from filename.  Each invocation of the  com‐
-              mand reads a line from the file.  This is a GNU extension.
+              Append a line read from filename.  Each invocation of the command reads a line from the file.  This is a GNU extension.
 
    Commands which accept address ranges
        {      Begin a block of commands (end with a }).
@@ -134,16 +115,12 @@ COMMAND SYNOPSIS
 
        c \
 
-       text   Replace  the  selected lines with text, which has each embedded
-              newline preceded by a backslash.
+       text   Replace the selected lines with text, which has each embedded newline preceded by a backslash.
 
        d      Delete pattern space.  Start next cycle.
 
-       D      If pattern space contains no newline, start a normal new  cycle
-              as  if the d command was issued.  Otherwise, delete text in the
-              pattern space up to the first newline, and restart  cycle  with
-              the  resultant  pattern  space,  without  reading a new line of
-              input.
+       D      If pattern space contains no newline, start a normal new cycle as if the d command was issued.  Otherwise, delete text in the pattern space up to the first newline, and  restart  cycle
+              with the resultant pattern space, without reading a new line of input.
 
        h H    Copy/append pattern space to hold space.
 
@@ -152,78 +129,51 @@ COMMAND SYNOPSIS
        l      List out the current line in a ``visually unambiguous'' form.
 
        l width
-              List out the current line in a ``visually  unambiguous''  form,
-              breaking it at width characters.  This is a GNU extension.
+              List out the current line in a ``visually unambiguous'' form, breaking it at width characters.  This is a GNU extension.
 
        n N    Read/append the next line of input into the pattern space.
 
        p      Print the current pattern space.
 
-       P      Print  up  to the first embedded newline of the current pattern
-              space.
+       P      Print up to the first embedded newline of the current pattern space.
 
        s/regexp/replacement/
-              Attempt to match regexp against the pattern space.  If success‐
-              ful,  replace  that  portion  matched  with  replacement.   The
-              replacement may contain the special character  &  to  refer  to
-              that  portion  of the pattern space which matched, and the spe‐
-              cial escapes \1 through \9 to refer to the corresponding match‐
-              ing sub-expressions in the regexp.
+              Attempt  to match regexp against the pattern space.  If successful, replace that portion matched with replacement.  The replacement may contain the special character & to refer to that
+              portion of the pattern space which matched, and the special escapes \1 through \9 to refer to the corresponding matching sub-expressions in the regexp.
 
        t label
-              If  a  s///  has  done a successful substitution since the last
-              input line was read and since the last t  or  T  command,  then
-              branch to label; if label is omitted, branch to end of script.
+              If a s/// has done a successful substitution since the last input line was read and since the last t or T command, then branch to label; if label is omitted, branch to end of script.
 
        T label
-              If  no  s///  has done a successful substitution since the last
-              input line was read and since the last t  or  T  command,  then
-              branch  to label; if label is omitted, branch to end of script.
+              If no s/// has done a successful substitution since the last input line was read and since the last t or T command, then branch to label; if label is omitted, branch to end of  script.
               This is a GNU extension.
 
        w filename
               Write the current pattern space to filename.
 
        W filename
-              Write the first line of the current pattern space to  filename.
-              This is a GNU extension.
+              Write the first line of the current pattern space to filename.  This is a GNU extension.
 
        x      Exchange the contents of the hold and pattern spaces.
 
        y/source/dest/
-              Transliterate  the characters in the pattern space which appear
-              in source to the corresponding character in dest.
+              Transliterate the characters in the pattern space which appear in source to the corresponding character in dest.
 
 Addresses
-       Sed commands can be given with no addresses, in which case the command
-       will  be executed for all input lines; with one address, in which case
-       the command will only be executed for input  lines  which  match  that
-       address; or with two addresses, in which case the command will be exe‐
-       cuted for all input lines which match the  inclusive  range  of  lines
-       starting  from the first address and continuing to the second address.
-       Three things to note about address ranges: the syntax  is  addr1,addr2
-       (i.e.,  the  addresses are separated by a comma); the line which addr1
-       matched will always be accepted, even  if  addr2  selects  an  earlier
-       line; and if addr2 is a regexp, it will not be tested against the line
-       that addr1 matched.
+       Sed  commands can be given with no addresses, in which case the command will be executed for all input lines; with one address, in which case the command will only be executed for input lines
+       which match that address; or with two addresses, in which case the command will be executed for all input lines which match the inclusive range of lines starting from the  first  address  and
+       continuing  to  the  second  address.   Three  things to note about address ranges: the syntax is addr1,addr2 (i.e., the addresses are separated by a comma); the line which addr1 matched will
+       always be accepted, even if addr2 selects an earlier line; and if addr2 is a regexp, it will not be tested against the line that addr1 matched.
 
-       After the address (or address-range), and before the command, a !  may
-       be  inserted,  which specifies that the command shall only be executed
-       if the address (or address-range) does not match.
+       After the address (or address-range), and before the command, a !  may be inserted, which specifies that the command shall only be executed if the address (or address-range) does not match.
 
        The following address types are supported:
 
-       number Match only the specified line number (which increments  cumula‐
-              tively  across  files, unless the -s option is specified on the
-              command line).
+       number Match only the specified line number (which increments cumulatively across files, unless the -s option is specified on the command line).
 
        first~step
-              Match every step'th line starting with line first.   For  exam‐
-              ple,  ``sed  -n 1~2p'' will print all the odd-numbered lines in
-              the input stream, and the address 2~5 will  match  every  fifth
-              line,  starting  with  the  second.  first can be zero; in this
-              case, sed operates as if it were equal to step.   (This  is  an
-              extension.)
+              Match every step'th line starting with line first.  For example, ``sed -n 1~2p'' will print all the odd-numbered lines in the input stream, and the address 2~5 will match  every  fifth
+              line, starting with the second.  first can be zero; in this case, sed operates as if it were equal to step.  (This is an extension.)
 
        $      Match the last line.
 
@@ -231,62 +181,42 @@ Addresses
               Match lines matching the regular expression regexp.
 
        \cregexpc
-              Match  lines matching the regular expression regexp.  The c may
-              be any character.
+              Match lines matching the regular expression regexp.  The c may be any character.
 
        GNU sed also supports some special 2-address forms:
 
        0,addr2
-              Start out in "matched first  address"  state,  until  addr2  is
-              found.   This  is  similar  to  1,addr2,  except  that if addr2
-              matches the very first line of input the 0,addr2 form  will  be
-              at the end of its range, whereas the 1,addr2 form will still be
-              at the beginning of its range.  This works only when addr2 is a
-              regular expression.
+              Start out in "matched first address" state, until addr2 is found.  This is similar to 1,addr2, except that if addr2 matches the very first line of input the 0,addr2 form will be at the
+              end of its range, whereas the 1,addr2 form will still be at the beginning of its range.  This works only when addr2 is a regular expression.
 
        addr1,+N
               Will match addr1 and the N lines following addr1.
 
        addr1,~N
-              Will  match  addr1 and the lines following addr1 until the next
-              line whose input line number is a multiple of N.
+              Will match addr1 and the lines following addr1 until the next line whose input line number is a multiple of N.
 
 REGULAR EXPRESSIONS
-       POSIX.2 BREs should be supported, but they aren't  completely  because
-       of  performance  problems.   The  \n  sequence in a regular expression
-       matches the newline character, and similarly for  \a,  \t,  and  other
-       sequences.   The  -E option switches to using extended regular expres‐
-       sions instead; the -E option has been supported for years by GNU  sed,
-       and is now included in POSIX.
+       POSIX.2 BREs should be supported, but they aren't completely because of performance problems.  The \n sequence in a regular expression matches the newline character, and similarly for \a, \t,
+       and other sequences.  The -E option switches to using extended regular expressions instead; the -E option has been supported for years by GNU sed, and is now included in POSIX.
 
 BUGS
-       E-mail  bug reports to bug-sed@gnu.org.  Also, please include the out‐
-       put of ``sed --version'' in the body of your report if at  all  possi‐
-       ble.
+       E-mail bug reports to bug-sed@gnu.org.  Also, please include the output of ``sed --version'' in the body of your report if at all possible.
 
 AUTHOR
-       Written  by  Jay  Fenlason,  Tom Lord, Ken Pizzini, and Paolo Bonzini.
-       GNU sed home page: <http://www.gnu.org/software/sed/>.   General  help
-       using GNU software: <http://www.gnu.org/gethelp/>.  E-mail bug reports
-       to: <bug-sed@gnu.org>.
+       Written by Jay Fenlason, Tom Lord, Ken Pizzini, and Paolo Bonzini.  GNU sed home page: <http://www.gnu.org/software/sed/>.  General help using GNU software: <http://www.gnu.org/gethelp/>.  E-
+       mail bug reports to: <bug-sed@gnu.org>.
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
-       awk(1), ed(1), grep(1), tr(1), perlre(1),  sed.info,  any  of  various
-       books on sed, the sed FAQ (http://sed.sf.net/grabbag/tutorials/sed‐
-       faq.txt), http://sed.sf.net/grabbag/.
+       awk(1), ed(1), grep(1), tr(1), perlre(1), sed.info, any of various books on sed, the sed FAQ (http://sed.sf.net/grabbag/tutorials/sedfaq.txt), http://sed.sf.net/grabbag/.
 
-       The full documentation for sed is maintained as a Texinfo manual.  If
-       the info and sed programs are properly installed at your site, the
-       command
+       The full documentation for sed is maintained as a Texinfo manual.  If the info and sed programs are properly installed at your site, the command
 
               info sed
 
        should give you access to the complete manual.
 
-sed 4.4                         February 2017                          SED(1)
+sed 4.4                                                                                      February 2017                                                                                      SED(1)

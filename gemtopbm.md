@@ -1,4 +1,4 @@
-gemtopnm(1)                General Commands Manual                gemtopnm(1)
+gemtopnm(1)                                                                             General Commands Manual                                                                            gemtopnm(1)
 
 NAME
        gemtopnm - convert a GEM .img file into a portable anymap
@@ -7,10 +7,8 @@ SYNOPSIS
        gemtopnm [-d] [gemfile]
 
 DESCRIPTION
-       Reads  a  GEM  .img  file,  either the one plane (black/white) or four
-       plane (16 color) varieety, as input.  Reads from stdin if  input  file
-       is  omitted.   Produces  a  PBM  or  PPM  file as output, depending on
-       whether the input is one or four plane.
+       Reads  a  GEM  .img  file,  either  the one plane (black/white) or four plane (16 color) varieety, as input.  Reads from stdin if input file is omitted.  Produces a PBM or PPM file as output,
+       depending on whether the input is one or four plane.
 
 OPTIONS
        -d     Produce output describing the contents of the .img file.
@@ -21,4 +19,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988 Diomidis D. Spinellis (dds@cc.ic.ac.uk).
 
-                                30 April 2000                     gemtopnm(1)
+                                                                                             30 April 2000                                                                                 gemtopnm(1)

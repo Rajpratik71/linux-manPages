@@ -1,4 +1,4 @@
-ippfind(1)                        Apple Inc.                       ippfind(1)
+ippfind(1)                                                                                    Apple Inc.                                                                                    ippfind(1)
 
 NAME
        ippfind - find internet printing protocol printers
@@ -12,9 +12,8 @@ SYNOPSIS
        ippfind --version
 
 DESCRIPTION
-       ippfind  finds  services  registered  with  a  DNS server or available
-       through local devices.  Its primary purpose is to  find  IPP  printers
-       and show their URIs, show their current status, or run commands.
+       ippfind  finds  services  registered  with a DNS server or available through local devices.  Its primary purpose is to find IPP printers and show their URIs, show their current status, or run
+       commands.
 
    REGISTRATION TYPES
        ippfind supports the following registration types:
@@ -35,12 +34,8 @@ DESCRIPTION
             Line Printer Daemon (LPD, RFC 1179)
 
    EXPRESSIONS
-       ippfind  supports expressions much like the find(1) utility.  However,
-       unlike find(1), ippfind uses  POSIX  regular  expressions  instead  of
-       shell  filename  matching patterns.  If --exec, -l, --ls, -p, --print,
-       --print-name, -q, --quiet, -s, or -x is not  specified,  ippfind  adds
-       --print  to print the service URI of anything it finds.  The following
-       expressions are supported:
+       ippfind supports expressions much like the find(1) utility.  However, unlike find(1), ippfind uses POSIX regular expressions instead of shell filename matching patterns.  If --exec, -l, --ls,
+       -p, --print, --print-name, -q, --quiet, -s, or -x is not specified, ippfind adds --print to print the service URI of anything it finds.  The following expressions are supported:
 
        -d regex
 
@@ -57,9 +52,7 @@ DESCRIPTION
 
        -l
 
-       --ls Lists  attributes  returned  by  Get-Printer-Attributes  for  IPP
-            printers  and  traditional  find "-ls" output for HTTP URLs.  The
-            result is true if the URI is accessible, false otherwise.
+       --ls Lists attributes returned by Get-Printer-Attributes for IPP printers and traditional find "-ls" output for HTTP URLs.  The result is true if the URI is accessible, false otherwise.
 
        --local
             True if the service is local to this computer.
@@ -67,12 +60,10 @@ DESCRIPTION
        -n regex
 
        --name regex
-            True if the service  instance  name  matches  the  given  regular
-            expression.
+            True if the service instance name matches the given regular expression.
 
        --path regex
-            True  if  the URI resource path matches the given regular expres‐
-            sion.
+            True if the URI resource path matches the given regular expression.
 
        -P number[-number]
 
@@ -82,8 +73,7 @@ DESCRIPTION
        -p
 
        --print
-            Prints the URI if the result of  previous  expressions  is  true.
-            The result is always true.
+            Prints the URI if the result of previous expressions is true.  The result is always true.
 
        -q
 
@@ -98,8 +88,7 @@ DESCRIPTION
        -s
 
        --print-name
-            Prints  the  service  instance  name  if  the  result of previous
-            expressions is true.  The result is always true.
+            Prints the service instance name if the result of previous expressions is true.  The result is always true.
 
        --true
             Always true.
@@ -110,8 +99,7 @@ DESCRIPTION
             True if the TXT record contains the named key.
 
        --txt-key regex
-            True if the TXT record contains the named  key  and  matches  the
-            given regular expression.
+            True if the TXT record contains the named key and matches the given regular expression.
 
        -u regex
 
@@ -121,9 +109,7 @@ DESCRIPTION
        -x utility [ argument ... ] ;
 
        --exec utility [ argument ... ] ;
-            Executes  the  specified  program  if the current result is true.
-            "{foo}" arguments are replaced with the corresponding value - see
-            SUBSTITUTIONS below.
+            Executes the specified program if the current result is true.  "{foo}" arguments are replaced with the corresponding value - see SUBSTITUTIONS below.
 
        Expressions may also contain modifiers:
 
@@ -150,8 +136,7 @@ DESCRIPTION
             Domain name, e.g., "example.com.", "local.", etc.
 
        {service_hostname}
-            Fully-qualified   domain   name,   e.g.,  "printer.example.com.",
-            "printer.local.", etc.
+            Fully-qualified domain name, e.g., "printer.example.com.", "printer.local.", etc.
 
        {service_name}
             Service instance name, e.g., "My Fine Printer".
@@ -163,14 +148,12 @@ DESCRIPTION
             DNS-SD registration type, e.g., "_ipp._tcp", "_http._tcp", etc.
 
        {service_scheme}
-            URI scheme for DNS-SD registration  type,  e.g.,  "ipp",  "http",
-            etc.
+            URI scheme for DNS-SD registration type, e.g., "ipp", "http", etc.
 
        {}
 
        {service_uri}
-            URI    for   service,   e.g.,   "ipp://printer.local./ipp/print",
-            "http://printer.local./", etc.
+            URI for service, e.g., "ipp://printer.local./ipp/print", "http://printer.local./", etc.
 
        {txt_key}
             Value of TXT record key (lowercase).
@@ -189,30 +172,23 @@ OPTIONS
        -6   Use IPv6 when listing.
 
        -T seconds
-            Specify find timeout in seconds.  If 1 or less, ippfind stops  as
-            soon  as  it thinks it has found everything.  The default timeout
-            is 1 second.
+            Specify find timeout in seconds.  If 1 or less, ippfind stops as soon as it thinks it has found everything.  The default timeout is 1 second.
 
        -V version
-            Specifies the IPP version when  listing.   Supported  values  are
-            "1.1", "2.0", "2.1", and "2.2".
+            Specifies the IPP version when listing.  Supported values are "1.1", "2.0", "2.1", and "2.2".
 
 EXIT STATUS
-       ippfind returns 0 if the result for all processed expressions is true,
-       1 if the result of any processed expression is false, 2 if browsing or
-       any  query  or  resolution failed, 3 if an undefined option or invalid
-       expression was specified, and 4 if it ran out of memory.
+       ippfind returns 0 if the result for all processed expressions is true, 1 if the result of any processed expression is false, 2 if browsing or any query or resolution failed, 3 if an undefined
+       option or invalid expression was specified, and 4 if it ran out of memory.
 
 ENVIRONMENT
-       When executing a program, ippfind sets the following environment vari‐
-       ables for the matching service registration:
+       When executing a program, ippfind sets the following environment variables for the matching service registration:
 
        IPPFIND_SERVICE_DOMAIN
             Domain name, e.g., "example.com.", "local.", etc.
 
        IPPFIND_SERVICE_HOSTNAME
-            Fully-qualified   domain   name,   e.g.,  "printer.example.com.",
-            "printer.local.", etc.
+            Fully-qualified domain name, e.g., "printer.example.com.", "printer.local.", etc.
 
        IPPFIND_SERVICE_NAME
             Service instance name, e.g., "My Fine Printer".
@@ -224,24 +200,20 @@ ENVIRONMENT
             DNS-SD registration type, e.g., "_ipp._tcp", "_http._tcp", etc.
 
        IPPFIND_SERVICE_SCHEME
-            URI scheme for DNS-SD registration  type,  e.g.,  "ipp",  "http",
-            etc.
+            URI scheme for DNS-SD registration type, e.g., "ipp", "http", etc.
 
        IPPFIND_SERVICE_URI
-            URI    for   service,   e.g.,   "ipp://printer.local./ipp/print",
-            "http://printer.local./", etc.
+            URI for service, e.g., "ipp://printer.local./ipp/print", "http://printer.local./", etc.
 
        IPPFIND_TXT_KEY
             Values of TXT record KEY (uppercase).
 
 EXAMPLES
-       To show the status of all registered IPP  printers  on  your  network,
-       run:
+       To show the status of all registered IPP printers on your network, run:
 
            ippfind --ls
 
-       Similarly, to send a PostScript test page to every PostScript printer,
-       run:
+       Similarly, to send a PostScript test page to every PostScript printer, run:
 
            ippfind --txt-pdl application/postscript --exec ipptool
              -f onepage-letter.ps '{}' print-job.test \;
@@ -252,4 +224,4 @@ SEE ALSO
 COPYRIGHT
        Copyright © 2013-2015 by Apple Inc.
 
-11 June 2014                         CUPS                          ippfind(1)
+11 June 2014                                                                                     CUPS                                                                                       ippfind(1)

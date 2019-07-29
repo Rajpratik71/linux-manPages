@@ -1,4 +1,4 @@
-SETVTRGB(1)                General Commands Manual                SETVTRGB(1)
+SETVTRGB(1)                                                                             General Commands Manual                                                                            SETVTRGB(1)
 
 NAME
        setvtrgb - customize the console color map
@@ -9,21 +9,16 @@ SYNOPSIS
        setvtrgb FILE|-
 
 DESCRIPTION
-       setvtrgb sets the console color map in all virtual terminals according
-       to custom values specified in a file  or  standard  input.   With  the
-       `vga'  parameter,  it  can  also be used to restore the settings built
-       into the kernel.
+       setvtrgb  sets  the  console color map in all virtual terminals according to custom values specified in a file or standard input.  With the `vga' parameter, it can also be used to restore the
+       settings built into the kernel.
 
-       When invoked with a filename or `-', setvtrgb expects  input  as  fol‐
-       lows:
+       When invoked with a filename or `-', setvtrgb expects input as follows:
 
          color0_r,color1_r,...,color15_r
          color0_g,color1_g,...,color15_g
          color0_b,color1_b,...,color15_b
 
-       where  colorN_{r,g,b}  is the red/green/blue portion of the respective
-       color in decimal notation in the 0..255 range.  To pre-seed a file  in
-       the correct format, you can use
+       where colorN_{r,g,b} is the red/green/blue portion of the respective color in decimal notation in the 0..255 range.  To pre-seed a file in the correct format, you can use
 
          cat /sys/module/vt/parameters/default_{red,grn,blu}
 
@@ -43,12 +38,9 @@ DESCRIPTION
          +---------------------------+
 
 AUTHOR
-       setvtrgb    is    Copyright    ©    2011    Alexey    Gladkov   <glad‐
-       kov.alexey@gmail.com>,  with  portions  by  Dustin   Kirkland   <kirk‐
-       land@canonical.com>  and  Seth Forshee <seth.forshee@canonical.com> at
-       Canonical Ltd.
+       setvtrgb is Copyright © 2011 Alexey Gladkov <gladkov.alexey@gmail.com>, with portions by Dustin Kirkland <kirkland@canonical.com> and Seth Forshee  <seth.forshee@canonical.com>  at  Canonical
+       Ltd.
 
-       This manual page was written by Michael Schutte <michi@debian.org> for
-       the Debian GNU/Linux system (but may be used by others).
+       This manual page was written by Michael Schutte <michi@debian.org> for the Debian GNU/Linux system (but may be used by others).
 
-                                  July 2011                       SETVTRGB(1)
+                                                                                               July 2011                                                                                   SETVTRGB(1)

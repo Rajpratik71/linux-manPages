@@ -1,4 +1,4 @@
-SLEEP(1)                        User Commands                        SLEEP(1)
+SLEEP(1)                                                                                     User Commands                                                                                    SLEEP(1)
 
 NAME
        sleep - delay for a specified amount of time
@@ -8,11 +8,8 @@ SYNOPSIS
        sleep OPTION
 
 DESCRIPTION
-       Pause  for  NUMBER  seconds.   SUFFIX  may  be  's'  for  seconds (the
-       default), 'm' for minutes, 'h' for hours or 'd' for days.  Unlike most
-       implementations  that require NUMBER be an integer, here NUMBER may be
-       an arbitrary floating point number.   Given  two  or  more  arguments,
-       pause for the amount of time specified by the sum of their values.
+       Pause  for  NUMBER  seconds.  SUFFIX may be 's' for seconds (the default), 'm' for minutes, 'h' for hours or 'd' for days.  Unlike most implementations that require NUMBER be an integer, here
+       NUMBER may be an arbitrary floating point number.  Given two or more arguments, pause for the amount of time specified by the sum of their values.
 
        --help display this help and exit
 
@@ -27,10 +24,8 @@ REPORTING BUGS
        Report sleep translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        sleep(3)
@@ -38,4 +33,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/sleep>
        or available locally via: info '(coreutils) sleep invocation'
 
-GNU coreutils 8.28               January 2018                        SLEEP(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                     SLEEP(1)

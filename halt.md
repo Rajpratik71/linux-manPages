@@ -1,4 +1,4 @@
-HALT(8)                              halt                             HALT(8)
+HALT(8)                                                                                          halt                                                                                          HALT(8)
 
 NAME
        halt, poweroff, reboot - Halt, power-off or reboot the machine
@@ -11,8 +11,7 @@ SYNOPSIS
        reboot [OPTIONS...]
 
 DESCRIPTION
-       halt, poweroff, reboot may be used to halt, power-off or reboot the
-       machine.
+       halt, poweroff, reboot may be used to halt, power-off or reboot the machine.
 
 OPTIONS
        The following options are understood:
@@ -21,34 +20,26 @@ OPTIONS
            Print a short help text and exit.
 
        --halt
-           Halt the machine, regardless of which one of the three commands is
-           invoked.
+           Halt the machine, regardless of which one of the three commands is invoked.
 
        -p, --poweroff
-           Power-off the machine, regardless of which one of the three
-           commands is invoked.
+           Power-off the machine, regardless of which one of the three commands is invoked.
 
        --reboot
-           Reboot the machine, regardless of which one of the three commands
-           is invoked.
+           Reboot the machine, regardless of which one of the three commands is invoked.
 
        -f, --force
-           Force immediate halt, power-off, or reboot. When specified once,
-           this results in an immediate but clean shutdown by the system
-           manager. When specified twice, this results in an immediate
-           shutdown without contacting the system manager. See the
-           description of --force in systemctl(1) for more details.
+           Force immediate halt, power-off, or reboot. When specified once, this results in an immediate but clean shutdown by the system manager. When specified twice, this results in an immediate
+           shutdown without contacting the system manager. See the description of --force in systemctl(1) for more details.
 
        -w, --wtmp-only
-           Only write wtmp shutdown entry, do not actually halt, power-off,
-           reboot.
+           Only write wtmp shutdown entry, do not actually halt, power-off, reboot.
 
        -d, --no-wtmp
            Do not write wtmp shutdown entry.
 
        -n, --no-sync
-           Don't sync hard disks/storage media before halt, power-off,
-           reboot.
+           Don't sync hard disks/storage media before halt, power-off, reboot.
 
        --no-wall
            Do not send wall message before halt, power-off, reboot.
@@ -57,11 +48,10 @@ EXIT STATUS
        On success, 0 is returned, a non-zero failure code otherwise.
 
 NOTES
-       These commands are implemented in a way that preserves compatiblity
-       with the original SysV commands.  systemctl(1) verbs halt, poweroff,
-       reboot provide the same functionality with some additional features.
+       These commands are implemented in a way that preserves compatiblity with the original SysV commands.  systemctl(1) verbs halt, poweroff, reboot provide the same functionality with some
+       additional features.
 
 SEE ALSO
        systemd(1), systemctl(1), shutdown(8), wall(1)
 
-systemd 237                                                           HALT(8)
+systemd 237                                                                                                                                                                                    HALT(8)

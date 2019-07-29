@@ -1,8 +1,7 @@
-foo2qpdl(1)                General Commands Manual                foo2qpdl(1)
+foo2qpdl(1)                                                                             General Commands Manual                                                                            foo2qpdl(1)
 
 NAME
-       foo2qpdl  -  Convert  Ghostscript pbmraw or bitcmyk format into a QPDL
-       printer stream
+       foo2qpdl - Convert Ghostscript pbmraw or bitcmyk format into a QPDL printer stream
 
 SYNOPSIS
        foo2qpdl [options] <pbmraw-file >qpdl-file
@@ -12,15 +11,12 @@ SYNOPSIS
        foo2qpdl [options] <pksmraw-file >qpdl-file
 
 DESCRIPTION
-       foo2qpdl converts Ghostscript pbmraw, bitcmyk, or pksmraw output  for‐
-       mats  to  monochrome  or  color  QPDL streams, for driving the Samsung
-       CLP-300,  CLX-2160,  CLP-600,  CLX-3160,  CLP-610  CLP-620,   CLP-360,
-       CLP-365, and the Xerox Phaser 6110 QPDL printers.
+       foo2qpdl  converts  Ghostscript  pbmraw, bitcmyk, or pksmraw output formats to monochrome or color QPDL streams, for driving the Samsung CLP-300, CLX-2160, CLP-600, CLX-3160, CLP-610 CLP-620,
+       CLP-360, CLP-365, and the Xerox Phaser 6110 QPDL printers.
 
 COMMAND LINE OPTIONS
    Normal Options
-       These  are  the  options  used to select the parameters of a print job
-       that are usually controlled on a per job basis.
+       These are the options used to select the parameters of a print job that are usually controlled on a per job basis.
 
        -c     Force color mode if autodetect doesn't work.
 
@@ -87,37 +83,29 @@ COMMAND LINE OPTIONS
               Username string to send to printer.
 
    Printer Tweaking Options
-       These are the options used to customize the operation of foo2qpdl  for
-       a particular printer.
+       These are the options used to customize the operation of foo2qpdl for a particular printer.
 
        -a b,c,s,cr,mg,yb
-              Color  Adjust:  brightness, contrast, saturation, cyan-red bal‐
-              ance, magenta-green balance, and yellow-blue balance from 0  to
-              100.   The  default is 50,50,50,50,50,50.  This only works when
+              Color Adjust: brightness, contrast, saturation, cyan-red balance, magenta-green balance, and yellow-blue balance from 0 to 100.  The default is 50,50,50,50,50,50.  This only works when
               the -z3 (e.g. CLP-365) model is set!
 
        -u xoffxyoff
-              Set the offset of the start of the printable  region  from  the
-              upper left corner, in pixels [0x0].
+              Set the offset of the start of the printable region from the upper left corner, in pixels [0x0].
 
        -l xoffxyoff
-              Set  the  offset  of  the  end of the printable region from the
-              lower right corner, in pixels [0x0].
+              Set the offset of the end of the printable region from the lower right corner, in pixels [0x0].
 
        -L mask
-              Send logical clipping amounts implied  by  -u/-l  in  the  QPDL
-              stream [3].
+              Send logical clipping amounts implied by -u/-l in the QPDL stream [3].
 
               0   don't send any logical clipping amounts
               1   only send Y clipping amount
               2   only send X clipping amount
               3   send both X and Y clipping amounts
 
-       -A     AllIsBlack:  convert  C=1,M=1,Y=1  to  just  K=1.   Works  with
-              bitcmyk input only.
+       -A     AllIsBlack: convert C=1,M=1,Y=1 to just K=1.  Works with bitcmyk input only.
 
-       -B     BlackClears: K=1 forces C,M,Y to 0.  Works with  bitcmyk  input
-              only.
+       -B     BlackClears: K=1 forces C,M,Y to 0.  Works with bitcmyk input only.
 
        -z model
               Printer model. Model 0 is the default.
@@ -132,9 +120,7 @@ COMMAND LINE OPTIONS
        These options are used for debugging foo2qpdl.
 
        -S plane
-              Output  just  a single color plane from a color print and print
-              it on the black plane.  The default  is  to  output  all  color
-              planes.
+              Output just a single color plane from a color print and print it on the black plane.  The default is to output all color planes.
 
               1   Cyan
               2   Magenta

@@ -1,16 +1,13 @@
-PF2AFM(1)                        Ghostscript                        PF2AFM(1)
+PF2AFM(1)                                                                                     Ghostscript                                                                                    PF2AFM(1)
 
 NAME
-       pf2afm  -  Make  an  AFM file from Postscript (PFB/PFA/PFM) font files
-       using ghostscript
+       pf2afm - Make an AFM file from Postscript (PFB/PFA/PFM) font files using ghostscript
 
 SYNOPSIS
        pf2afm  fontfilename
 
 DESCRIPTION
-       This script invokes gs(1) to make an AFM  file  from  PFB  /  PFA  and
-       (optionally)  PFM  files.  Output goes to fontfilename.afm, which must
-       not already exist.
+       This script invokes gs(1) to make an AFM file from PFB / PFA and (optionally) PFM files.  Output goes to fontfilename.afm, which must not already exist.
 
 SEE ALSO
        gs(1)
@@ -20,7 +17,6 @@ VERSION
        This document was last revised for Ghostscript version 9.26.
 
 AUTHOR
-       Artifex Software, Inc. are the  primary  maintainers  of  Ghostscript.
-       This manpage by George Ferguson.
+       Artifex Software, Inc. are the primary maintainers of Ghostscript.  This manpage by George Ferguson.
 
-9.26                           20 November 2018                     PF2AFM(1)
+9.26                                                                                       20 November 2018                                                                                  PF2AFM(1)

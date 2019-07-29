@@ -1,4 +1,4 @@
-bioradtopgm(1)             General Commands Manual             bioradtopgm(1)
+bioradtopgm(1)                                                                          General Commands Manual                                                                         bioradtopgm(1)
 
 NAME
        bioradtopgm - convert a Biorad confocal file into a portable graymap
@@ -7,18 +7,12 @@ SYNOPSIS
        bioradtopgm [-image#] [imagedata]
 
 DESCRIPTION
-       Reads a Biorad confocal file as input.  Produces a portable graymap as
-       output.  If the resulting image is upside down, run it through pnmflip
-       -tb .
+       Reads a Biorad confocal file as input.  Produces a portable graymap as output.  If the resulting image is upside down, run it through pnmflip -tb .
 
 OPTIONS
        -image#
-              A Biorad image file may contain more than one image.  With this
-              flag, you can specify which image to extract  (only  one  at  a
-              time).   The  first  image  in the file has number zero.  If no
-              image number is supplied, only information about the image size
-              and  the number of images in the input is printed out.  No out‐
-              put is produced.
+              A  Biorad image file may contain more than one image.  With this flag, you can specify which image to extract (only one at a time).  The first image in the file has number zero.  If no
+              image number is supplied, only information about the image size and the number of images in the input is printed out.  No output is produced.
 
 SEE ALSO
        pgm(5), pnmflip(1)
@@ -26,4 +20,4 @@ SEE ALSO
 AUTHORS
        Copyright (C) 1993 by Oliver Trepte
 
-                                 28 June 1993                  bioradtopgm(1)
+                                                                                             28 June 1993                                                                               bioradtopgm(1)

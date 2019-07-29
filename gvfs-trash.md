@@ -1,4 +1,4 @@
-GVFS-TRASH(1)                   User Commands                   GVFS-TRASH(1)
+GVFS-TRASH(1)                                                                                User Commands                                                                               GVFS-TRASH(1)
 
 NAME
        gvfs-trash
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                            GVFS-TRASH(1)
+gvfs                                                                                                                                                                                     GVFS-TRASH(1)

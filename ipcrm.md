@@ -1,4 +1,4 @@
-IPCRM(1)                        User Commands                        IPCRM(1)
+IPCRM(1)                                                                                     User Commands                                                                                    IPCRM(1)
 
 NAME
        ipcrm - remove certain IPC resources
@@ -9,47 +9,30 @@ SYNOPSIS
        ipcrm {shm|msg|sem} id...
 
 DESCRIPTION
-       ipcrm  removes  System V inter-process communication (IPC) objects and
-       associated data structures from the system.  In order to  delete  such
-       objects, you must be superuser, or the creator or owner of the object.
+       ipcrm  removes  System  V  inter-process communication (IPC) objects and associated data structures from the system.  In order to delete such objects, you must be superuser, or the creator or
+       owner of the object.
 
-       System  V  IPC  objects  are  of  three  types: shared memory, message
-       queues, and semaphores.  Deletion of  a  message  queue  or  semaphore
-       object  is immediate (regardless of whether any process still holds an
-       IPC identifier for the  object).   A  shared  memory  object  is  only
-       removed   after   all   currently  attached  processes  have  detached
-       (shmdt(2)) the object from their virtual address space.
+       System V IPC objects are of three types: shared memory, message queues, and semaphores.  Deletion of a message queue or semaphore object is immediate (regardless of whether any process  still
+       holds an IPC identifier for the object).  A shared memory object is only removed after all currently attached processes have detached (shmdt(2)) the object from their virtual address space.
 
-       Two syntax styles are supported.   The  old  Linux  historical  syntax
-       specifies  a  three-letter keyword indicating which class of object is
-       to be deleted, followed by one or more IPC identifiers for objects  of
-       this type.
+       Two  syntax  styles are supported.  The old Linux historical syntax specifies a three-letter keyword indicating which class of object is to be deleted, followed by one or more IPC identifiers
+       for objects of this type.
 
-       The  SUS-compliant  syntax  allows  the  specification of zero or more
-       objects of all three types in a  single  command  line,  with  objects
-       specified  either  by key or by identifier (see below).  Both keys and
-       identifiers may be specified in decimal, hexadecimal  (specified  with
-       an initial '0x' or '0X'), or octal (specified with an initial '0').
+       The SUS-compliant syntax allows the specification of zero or more objects of all three types in a single command line, with objects specified either by key or by identifier (see below).  Both
+       keys and identifiers may be specified in decimal, hexadecimal (specified with an initial '0x' or '0X'), or octal (specified with an initial '0').
 
-       The  details of the removes are described in shmctl(2), msgctl(2), and
-       semctl(2).  The identifiers and keys can be found by using ipcs(1).
+       The details of the removes are described in shmctl(2), msgctl(2), and semctl(2).  The identifiers and keys can be found by using ipcs(1).
 
 OPTIONS
        -a, --all [shm] [msg] [sem]
-              Remove all resources.  When an option argument is provided, the
-              removal  is  performed  only  for the specified resource types.
-              Warning!  Do not use -a if you  are  unsure  how  the  software
-              using  the resources might react to missing objects.  Some pro‐
-              grams create these resources at startup and may  not  have  any
-              code to deal with an unexpected disappearance.
+              Remove  all resources.  When an option argument is provided, the removal is performed only for the specified resource types.  Warning!  Do not use -a if you are unsure how the software
+              using the resources might react to missing objects.  Some programs create these resources at startup and may not have any code to deal with an unexpected disappearance.
 
        -M, --shmem-key shmkey
-              Remove  the shared memory segment created with shmkey after the
-              last detach is performed.
+              Remove the shared memory segment created with shmkey after the last detach is performed.
 
        -m, --shmem-id shmid
-              Remove the shared memory segment identified by shmid after  the
-              last detach is performed.
+              Remove the shared memory segment identified by shmid after the last detach is performed.
 
        -Q, --queue-key msgkey
               Remove the message queue created with msgkey.
@@ -70,20 +53,13 @@ OPTIONS
               Display help text and exit.
 
 NOTES
-       In  its  first  Linux implementation, ipcrm used the deprecated syntax
-       shown in the second line of the SYNOPSIS.   Functionality  present  in
-       other  *nix  implementations of ipcrm has since been added, namely the
-       ability to delete resources by  key  (not  just  identifier),  and  to
-       respect  the same command-line syntax.  For backward compatibility the
-       previous syntax is still supported.
+       In its first Linux implementation, ipcrm used the deprecated syntax shown in the second line of the SYNOPSIS.  Functionality present in other *nix implementations  of  ipcrm  has  since  been
+       added, namely the ability to delete resources by key (not just identifier), and to respect the same command-line syntax.  For backward compatibility the previous syntax is still supported.
 
 SEE ALSO
-       ipcmk(1),  ipcs(1),  msgctl(2),   msgget(2),   semctl(2),   semget(2),
-       shmctl(2), shmdt(2), shmget(2), ftok(3)
+       ipcmk(1), ipcs(1), msgctl(2), msgget(2), semctl(2), semget(2), shmctl(2), shmdt(2), shmget(2), ftok(3)
 
 AVAILABILITY
-       The  ipcrm  command is part of the util-linux package and is available
-       from  Linux  Kernel  Archive   ⟨https://www.kernel.org/pub/linux/utils
-       /util-linux/⟩.
+       The ipcrm command is part of the util-linux package and is available from Linux Kernel Archive ⟨https://www.kernel.org/pub/linux/utils/util-linux/⟩.
 
-util-linux                        July 2014                          IPCRM(1)
+util-linux                                                                                     July 2014                                                                                      IPCRM(1)

@@ -1,4 +1,4 @@
-ppmtoyuv(1)                General Commands Manual                ppmtoyuv(1)
+ppmtoyuv(1)                                                                             General Commands Manual                                                                            ppmtoyuv(1)
 
 NAME
        ppmtoyuv - convert a portable pixmap into an Abekas YUV file
@@ -7,18 +7,16 @@ SYNOPSIS
        ppmtoyuv [ppmfile]
 
 DESCRIPTION
-       Reads a portable pixmap as input.  Produces an Abekas YUV file as out‐
-       put.
+       Reads a portable pixmap as input.  Produces an Abekas YUV file as output.
 
 SEE ALSO
        yuvtoppm(1), ppm(5)
 
 AUTHOR
-       Marc Boucher <marc@PostImage.COM>, based on  Example  Conversion  Pro‐
-       gram, A60/A64 Digital Video Interface Manual, page 69.
+       Marc Boucher <marc@PostImage.COM>, based on Example Conversion Program, A60/A64 Digital Video Interface Manual, page 69.
 
        Copyright (C) 1991 by DHD PostImage Inc.
 
        Copyright (C) 1987 by Abekas Video Systems Inc.
 
-                                 25 March 91                      ppmtoyuv(1)
+                                                                                              25 March 91                                                                                  ppmtoyuv(1)

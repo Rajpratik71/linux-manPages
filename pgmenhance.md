@@ -1,4 +1,4 @@
-pgmenhance(1)              General Commands Manual              pgmenhance(1)
+pgmenhance(1)                                                                           General Commands Manual                                                                          pgmenhance(1)
 
 NAME
        pgmenhance - edge-enhance a portable graymap
@@ -7,18 +7,13 @@ SYNOPSIS
        pgmenhance [-N] [pgmfile]
 
 DESCRIPTION
-       Reads  a  portable graymap as input.  Enhances the edges, and writes a
-       portable graymap as output.
+       Reads a portable graymap as input.  Enhances the edges, and writes a portable graymap as output.
 
-       The edge enhancing technique is taken from Philip R. Thompson's  "xim"
-       program, which in turn took it from section 6 of "Digital Halftones by
-       Dot Diffusion", D. E. Knuth, ACM Transaction on Graphics Vol.  6,  No.
-       4,  October  1987,  which in turn got it from two 1976 papers by J. F.
-       Jarvis et. al.
+       The  edge  enhancing  technique is taken from Philip R. Thompson's "xim" program, which in turn took it from section 6 of "Digital Halftones by Dot Diffusion", D. E. Knuth, ACM Transaction on
+       Graphics Vol. 6, No. 4, October 1987, which in turn got it from two 1976 papers by J. F. Jarvis et. al.
 
 OPTIONS
-       The optional -N flag should be a digit from 1 to 9.  1 is  the  lowest
-       level of enhancement, 9 is the highest, The default is 9.
+       The optional -N flag should be a digit from 1 to 9.  1 is the lowest level of enhancement, 9 is the highest, The default is 9.
 
 SEE ALSO
        pgmedge(1), pgm(5), pbm(5)
@@ -26,4 +21,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                               13 January 1989                  pgmenhance(1)
+                                                                                            13 January 1989                                                                              pgmenhance(1)

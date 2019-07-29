@@ -1,4 +1,4 @@
-IBUS-DAEMON(1)                  User Commands                  IBUS-DAEMON(1)
+IBUS-DAEMON(1)                                                                               User Commands                                                                              IBUS-DAEMON(1)
 
 NAME
        ibus-daemon - daemon program for ibus
@@ -7,13 +7,10 @@ SYNOPSIS
        ibus-daemon [OPTION]...
 
 DESCRIPTION
-       IBus  is  an  Intelligent  Input  Bus. It is a new input framework for
-       Linux OS. It provides full featured and  user  friendly  input  method
-       user  interface.   It also may help developers to develop input method
-       easily.
+       IBus  is  an  Intelligent Input Bus. It is a new input framework for Linux OS. It provides full featured and user friendly input method user interface.  It also may help developers to develop
+       input method easily.
 
-       ibus-daemon is a daemon program for ibus and it is  also  a  start  up
-       program for users to activate ibus daemon, engines and panel.
+       ibus-daemon is a daemon program for ibus and it is also a start up program for users to activate ibus daemon, engines and panel.
 
    Help Options:
        -h, --help
@@ -45,8 +42,7 @@ DESCRIPTION
               if there is an old ibus-daemon is running, it will be replaced.
 
        -t, --cache=mode [default is auto]
-              force  to  re-scan  components,  and  re-create registry cache.
-              auto, refresh, none is available.
+              force to re-scan components, and re-create registry cache.  auto, refresh, none is available.
 
        -o, --timeout=timeout [default is 2000]
               dbus reply timeout in milliseconds.
@@ -55,17 +51,15 @@ DESCRIPTION
               timeout of poll changes of engines in seconds. 0 to disable it.
 
        -m, --mem-profile
-              enable memory profile, send SIGUSR2 to  print  out  the  memory
-              profile.
+              enable memory profile, send SIGUSR2 to print out the memory profile.
 
        -v, --verbose
               verbose.
 
 BUGS
-       If     you     find     a     bug,     please     report     it     at
-       https://github.com/ibus/ibus/issues
+       If you find a bug, please report it at https://github.com/ibus/ibus/issues
 
 SEE ALSO
        ibus(1)
 
-1.5.17                            April 2010                   IBUS-DAEMON(1)
+1.5.17                                                                                        April 2010                                                                                IBUS-DAEMON(1)

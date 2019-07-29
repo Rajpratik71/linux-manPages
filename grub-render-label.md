@@ -1,4 +1,4 @@
-GRUB-RENDER-LABEL(1)            User Commands            GRUB-RENDER-LABEL(1)
+GRUB-RENDER-LABEL(1)                                                                         User Commands                                                                        GRUB-RENDER-LABEL(1)
 
 NAME
        grub-render-label - generate a .disk_label for Apple Macs.
@@ -39,19 +39,16 @@ DESCRIPTION
        -V, --version
               print program version
 
-       Mandatory  or optional arguments to long options are also mandatory or
-       optional for any corresponding short options.
+       Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
 
 REPORTING BUGS
        Report bugs to <bug-grub@gnu.org>.
 
 SEE ALSO
-       The full documentation for grub-render-label is maintained as  a  Tex‐
-       info  manual.  If the info and grub-render-label programs are properly
-       installed at your site, the command
+       The full documentation for grub-render-label is maintained as a Texinfo manual.  If the info and grub-render-label programs are properly installed at your site, the command
 
               info grub-render-label
 
        should give you access to the complete manual.
 
-grub-render-label (GRUB) 2.02-2uFebruary22019            GRUB-RENDER-LABEL(1)
+grub-render-label (GRUB) 2.02-2ubuntu8.12                                                    February 2019                                                                        GRUB-RENDER-LABEL(1)

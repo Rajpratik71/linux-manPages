@@ -1,4 +1,4 @@
-PY3COMPILE(1)                                                   PY3COMPILE(1)
+PY3COMPILE(1)                                                                                                                                                                            PY3COMPILE(1)
 
 NAME
        py3compile - byte compile Python 3 source files
@@ -9,8 +9,7 @@ SYNOPSIS
           pycompile -p PACKAGE
 
 DESCRIPTION
-       Wrapper   around   Python  standard  library's  py_compile  module  to
-       byte-compile Python 3 files.
+       Wrapper around Python standard library's py_compile module to byte-compile Python 3 files.
 
 OPTIONS
        --version
@@ -20,8 +19,7 @@ OPTIONS
               show this help message and exit
 
        -f, --force
-              force  rebuild  of  byte-code  files  even  if  timestamps  are
-              up-to-date
+              force rebuild of byte-code files even if timestamps are up-to-date
 
        -O     byte-compile to .pyo files
 
@@ -35,11 +33,8 @@ OPTIONS
               specify Debian package name whose files should be bytecompiled
 
        -V VRANGE
-              force  private modules to be bytecompiled with Python 3 version
-              from given range, regardless of the default Python 3 version in
-              the system. If there are no other options, bytecompile all pub‐
-              lic modules for installed Python 3 versions  that  match  given
-              range.  VERSION_RANGE examples:
+              force  private  modules  to be bytecompiled with Python 3 version from given range, regardless of the default Python 3 version in the system. If there are no other options, bytecompile
+              all public modules for installed Python 3 versions that match given range.  VERSION_RANGE examples:
 
                  · 3.1    version 3.1 only,
 
@@ -50,10 +45,9 @@ OPTIONS
                  · -4.0   all supported 3.X versions
 
        -X REGEXPR, --exclude=REGEXPR
-              exclude items that match given REGEXPR. You may use this option
-              multiple times to build up a list of things to exclude
+              exclude items that match given REGEXPR. You may use this option multiple times to build up a list of things to exclude
 
 AUTHOR
        Piotr Ożarowski, 2012-2013
 
-                                                                PY3COMPILE(1)
+                                                                                                                                                                                         PY3COMPILE(1)

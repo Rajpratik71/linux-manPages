@@ -1,4 +1,4 @@
-GStreamer(1)               General Commands Manual               GStreamer(1)
+GStreamer(1)                                                                            General Commands Manual                                                                           GStreamer(1)
 
 NAME
        gst-typefind-1.0 - print Media type of file
@@ -7,9 +7,7 @@ SYNOPSIS
        gst-typefind-1.0 <file>
 
 DESCRIPTION
-       gst-typefind-1.0  uses  the GStreamer type finding system to determine
-       the relevant GStreamer plugin to parse or decode file, and the  corre‐
-       sponding media type.
+       gst-typefind-1.0 uses the GStreamer type finding system to determine the relevant GStreamer plugin to parse or decode file, and the corresponding media type.
 
 OPTIONS
        gst-typefind-1.0 accepts the following options:
@@ -26,8 +24,7 @@ OPTIONS
                GStreamer info and debugging flags to set (list with --help)
 
        --gst-plugin-spew
-               GStreamer  info  flags  to set Enable printout of errors while
-               loading GStreamer plugins
+               GStreamer info flags to set Enable printout of errors while loading GStreamer plugins
 
        --gst-plugin-path=PATH
                Add directories separated with ':' to the plugin search path
@@ -38,4 +35,4 @@ SEE ALSO
 AUTHOR
        The GStreamer team at http://gstreamer.freedesktop.org/
 
-                                   May 2003                      GStreamer(1)
+                                                                                               May 2003                                                                                   GStreamer(1)

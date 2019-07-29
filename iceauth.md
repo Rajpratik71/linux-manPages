@@ -1,4 +1,4 @@
-ICEAUTH(1)                 General Commands Manual                 ICEAUTH(1)
+ICEAUTH(1)                                                                              General Commands Manual                                                                             ICEAUTH(1)
 
 NAME
        iceauth - ICE authority file utility
@@ -7,12 +7,9 @@ SYNOPSIS
        iceauth [ -f authfile ] [ -vqib ] [ command arg ... ]
 
 DESCRIPTION
-       The  iceauth  program  is  used  to edit and display the authorization
-       information used in connecting with ICE.  This program is usually used
-       to extract authorization records from one machine and merge them in on
-       another (as is the case when using remote logins or granting access to
-       other  users).   Commands  (described  below)  may be entered interac‐
-       tively, on the iceauth command line, or in scripts.
+       The  iceauth program is used to edit and display the authorization information used in connecting with ICE.  This program is usually used to extract authorization records from one machine and
+       merge them in on another (as is the case when using remote logins or granting access to other users).  Commands (described below) may be entered interactively, on the iceauth command line, or
+       in scripts.
 
 OPTIONS
        -f authfile  Name of the authority file to use. Will default to
@@ -31,8 +28,7 @@ OPTIONS
        -V           Print version and exit
 
 USAGE
-       When iceauth is run it will allow the following set of commands to  be
-       entered interactively or in scripts.
+       When iceauth is run it will allow the following set of commands to be entered interactively or in scripts.
 
        ?
 
@@ -40,8 +36,7 @@ USAGE
 
        help
 
-       Print  help  information. You may supply a command name to help to get
-       specific information about it.
+       Print help information. You may supply a command name to help to get specific information about it.
 
        info
 
@@ -49,8 +44,7 @@ USAGE
 
        list
 
-       List (print) entries in the authority file. You may  specify  optional
-       modifiers as below to specify which entries are listed.
+       List (print) entries in the authority file. You may specify optional modifiers as below to specify which entries are listed.
 
        list [ protocol_name ] [ protocol_data ] [ netid ] [ authname ]
 
@@ -68,19 +62,14 @@ USAGE
 
        extract
 
-       Extract  entries from the authority file in to a destination file. You
-       must supply the path to the destination to this command as in the fol‐
-       lowing  format.  Optional specifiers allow you to narrow which entries
-       are extracted.
+       Extract entries from the authority file in to a destination file. You must supply the path to the destination to this command as in the following format. Optional specifiers allow you to nar‐
+       row which entries are extracted.
 
-       extract filename [ protocol_name ] [ protocol_data ] [ netid ] [ auth‐
-       name ]
+       extract filename [ protocol_name ] [ protocol_data ] [ netid ] [ authname ]
 
        merge
 
-       Merge  entries  from  other files in to the authority file selected by
-       the program. You may supply any number of file paths to  this  command
-       as follows:
+       Merge entries from other files in to the authority file selected by the program. You may supply any number of file paths to this command as follows:
 
        merge filename1 [ filename2 ] [ filename3 ] ...
 
@@ -101,4 +90,4 @@ USAGE
 AUTHOR
        Ralph Mor, X Consortium
 
-X Version 11                    iceauth 1.0.7                      ICEAUTH(1)
+X Version 11                                                                                 iceauth 1.0.7                                                                                  ICEAUTH(1)

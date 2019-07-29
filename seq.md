@@ -1,4 +1,4 @@
-SEQ(1)                          User Commands                          SEQ(1)
+SEQ(1)                                                                                       User Commands                                                                                      SEQ(1)
 
 NAME
        seq - print a sequence of numbers
@@ -11,8 +11,7 @@ SYNOPSIS
 DESCRIPTION
        Print numbers from FIRST to LAST, in steps of INCREMENT.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -f, --format=FORMAT
               use printf style floating-point FORMAT
@@ -28,17 +27,10 @@ DESCRIPTION
        --version
               output version information and exit
 
-       If FIRST or INCREMENT is omitted, it defaults to 1.  That is, an omit‐
-       ted INCREMENT defaults to 1 even when LAST is smaller than FIRST.  The
-       sequence of numbers ends when the sum of the current number and INCRE‐
-       MENT  would  become greater than LAST.  FIRST, INCREMENT, and LAST are
-       interpreted as floating point values.  INCREMENT is  usually  positive
-       if  FIRST  is  smaller than LAST, and INCREMENT is usually negative if
-       FIRST is greater than LAST.  INCREMENT must not be 0; none  of  FIRST,
-       INCREMENT  and  LAST may be NaN.  FORMAT must be suitable for printing
-       one argument of type 'double'; it defaults to %.PRECf if FIRST, INCRE‐
-       MENT, and LAST are all fixed point decimal numbers with maximum preci‐
-       sion PREC, and to %g otherwise.
+       If  FIRST  or INCREMENT is omitted, it defaults to 1.  That is, an omitted INCREMENT defaults to 1 even when LAST is smaller than FIRST.  The sequence of numbers ends when the sum of the cur‐
+       rent number and INCREMENT would become greater than LAST.  FIRST, INCREMENT, and LAST are interpreted as floating point values.  INCREMENT is usually positive if FIRST is smaller  than  LAST,
+       and  INCREMENT is usually negative if FIRST is greater than LAST.  INCREMENT must not be 0; none of FIRST, INCREMENT and LAST may be NaN.  FORMAT must be suitable for printing one argument of
+       type 'double'; it defaults to %.PRECf if FIRST, INCREMENT, and LAST are all fixed point decimal numbers with maximum precision PREC, and to %g otherwise.
 
 AUTHOR
        Written by Ulrich Drepper.
@@ -48,13 +40,11 @@ REPORTING BUGS
        Report seq translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/seq>
        or available locally via: info '(coreutils) seq invocation'
 
-GNU coreutils 8.28               January 2018                          SEQ(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                       SEQ(1)

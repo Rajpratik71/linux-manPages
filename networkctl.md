@@ -1,4 +1,4 @@
-NETWORKCTL(1)                     networkctl                    NETWORKCTL(1)
+NETWORKCTL(1)                                                                                 networkctl                                                                                 NETWORKCTL(1)
 
 NAME
        networkctl - Query the status of network links
@@ -7,10 +7,8 @@ SYNOPSIS
        networkctl [OPTIONS...] COMMAND [LINK...]
 
 DESCRIPTION
-       networkctl may be used to introspect the state of the network links as
-       seen by systemd-networkd. Please refer to systemd-networkd.service(8)
-       for an introduction to the basic concepts, functionality, and
-       configuration syntax.
+       networkctl may be used to introspect the state of the network links as seen by systemd-networkd. Please refer to systemd-networkd.service(8) for an introduction to the basic concepts,
+       functionality, and configuration syntax.
 
 OPTIONS
        The following options are understood:
@@ -25,8 +23,7 @@ OPTIONS
            Print a short version string and exit.
 
        --no-legend
-           Do not print the legend, i.e. column headers and the footer with
-           hints.
+           Do not print the legend, i.e. column headers and the footer with hints.
 
        --no-pager
            Do not pipe output into a pager.
@@ -35,9 +32,7 @@ COMMANDS
        The following commands are understood:
 
        list [LINK...]
-           Show a list of existing links and their status. If no further
-           arguments are specified shows all links, otherwise just the
-           specified links. Produces output similar to:
+           Show a list of existing links and their status. If no further arguments are specified shows all links, otherwise just the specified links. Produces output similar to:
 
                IDX LINK         TYPE     OPERATIONAL SETUP
                  1 lo           loopback carrier     unmanaged
@@ -48,12 +43,9 @@ COMMANDS
                4 links listed.
 
        status [LINK...]
-           Show information about the specified links: type, state, kernel
-           module driver, hardware and IP address, configured DNS servers,
-           etc.
+           Show information about the specified links: type, state, kernel module driver, hardware and IP address, configured DNS servers, etc.
 
-           When no links are specified, an overall network status is shown.
-           Also see the option --all.
+           When no links are specified, an overall network status is shown. Also see the option --all.
 
            Produces output similar to:
 
@@ -67,12 +59,8 @@ COMMANDS
                              8.8.4.4
 
        lldp [LINK...]
-           Show discovered LLDP (Link Layer Discovery Protocol) neighbors. If
-           one or more link names are specified only neighbors on those
-           interfaces are shown. Otherwise shows discovered neighbors on all
-           interfaces. Note that for this feature to work, LLDP= must be
-           turned on on the specific interface, see systemd.network(5) for
-           details.
+           Show discovered LLDP (Link Layer Discovery Protocol) neighbors. If one or more link names are specified only neighbors on those interfaces are shown. Otherwise shows discovered neighbors
+           on all interfaces. Note that for this feature to work, LLDP= must be turned on on the specific interface, see systemd.network(5) for details.
 
            Produces output similar to:
 
@@ -87,9 +75,7 @@ COMMANDS
                1 neighbors listed.
 
        label
-           Show numerical address labels that can be used for address
-           selection. This is the same information that ip-addrlabel(8)
-           shows. See RFC 3484[1] for a discussion of address labels.
+           Show numerical address labels that can be used for address selection. This is the same information that ip-addrlabel(8) shows. See RFC 3484[1] for a discussion of address labels.
 
            Produces output similar to:
 
@@ -109,11 +95,10 @@ EXIT STATUS
        On success, 0 is returned, a non-zero failure code otherwise.
 
 SEE ALSO
-       systemd-networkd.service(8), systemd.network(5), systemd.netdev(5),
-       ip(8)
+       systemd-networkd.service(8), systemd.network(5), systemd.netdev(5), ip(8)
 
 NOTES
         1. RFC 3484
            https://tools.ietf.org/html/rfc3484
 
-systemd 237                                                     NETWORKCTL(1)
+systemd 237                                                                                                                                                                              NETWORKCTL(1)

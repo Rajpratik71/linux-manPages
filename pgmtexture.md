@@ -1,4 +1,4 @@
-pgmtexture(1)              General Commands Manual              pgmtexture(1)
+pgmtexture(1)                                                                           General Commands Manual                                                                          pgmtexture(1)
 
 NAME
        pgmtexture - calculate textural features on a portable graymap
@@ -7,9 +7,7 @@ SYNOPSIS
        pgmtexture [-d d] [pgmfile]
 
 DESCRIPTION
-       Reads a portable graymap as input.  Calculates textural features based
-       on spatial dependence matrices at 0, 45, 90, and  135  degrees  for  a
-       distance d (default = 1).  Textural features include:
+       Reads a portable graymap as input.  Calculates textural features based on spatial dependence matrices at 0, 45, 90, and 135 degrees for a distance d (default = 1).  Textural features include:
 
               (1) Angular Second Moment,
               (2) Contrast,
@@ -26,25 +24,19 @@ DESCRIPTION
               (14) Maximal Correlation Coefficient.
 
        Algorithm taken from:
-       Haralick, R.M., K. Shanmugam, and I. Dinstein. 1973. Textural features
-       for image classification.  IEEE  Transactions  on  Systems,  Man,  and
-       Cybertinetics, SMC-3(6):610-621.
+       Haralick, R.M., K. Shanmugam, and I. Dinstein. 1973. Textural features for image classification.  IEEE Transactions on Systems, Man, and Cybertinetics, SMC-3(6):610-621.
 
 BUGS
-       The program can run incredibly slow for large images (larger than 64 x
-       64) and command line options are limited.  The method for finding (14)
-       the maximal correlation coefficient, which requires finding the second
-       largest eigenvalue of a matrix Q, does not always converge.
+       The  program  can  run  incredibly  slow  for  large images (larger than 64 x 64) and command line options are limited.  The method for finding (14) the maximal correlation coefficient, which
+       requires finding the second largest eigenvalue of a matrix Q, does not always converge.
 
 REFERENCES
-       IEEE   Transactions    on    Systems,    Man,    and    Cybertinetics,
-       SMC-3(6):610-621.
+       IEEE Transactions on Systems, Man, and Cybertinetics, SMC-3(6):610-621.
 
 SEE ALSO
        pgm(5), pnmcut(1)
 
 AUTHOR
-       Copyright  (C) 1991 by Texas Agricultural Experiment Station, employer
-       for hire of James Darrell McCauley.
+       Copyright (C) 1991 by Texas Agricultural Experiment Station, employer for hire of James Darrell McCauley.
 
-                                 22 Aug 1991                    pgmtexture(1)
+                                                                                              22 Aug 1991                                                                                pgmtexture(1)

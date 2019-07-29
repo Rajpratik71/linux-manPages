@@ -1,4 +1,4 @@
-foo2zjs-pstops(1)          General Commands Manual          foo2zjs-pstops(1)
+foo2zjs-pstops(1)                                                                       General Commands Manual                                                                      foo2zjs-pstops(1)
 
 NAME
        foo2zjs-pstops - Add PS code for foo2*-wrapper
@@ -29,9 +29,7 @@ FILES
        /usr/bin/foo2zjs-pstops
 
 SEE ALSO
-       foo2hp2600-wrapper(1),     foo2lava-wrapper(1),    foo2oak-wrapper(1),
-       foo2qpdl-wrapper(1), foo2slx-wrapper(1), foo2xqx-wrapper(1),  foo2zjs-
-       wrapper(1)
+       foo2hp2600-wrapper(1), foo2lava-wrapper(1), foo2oak-wrapper(1), foo2qpdl-wrapper(1), foo2slx-wrapper(1), foo2xqx-wrapper(1), foo2zjs-wrapper(1)
 
 AUTHOR
        Rick Richardson <rick.richardson@comcast.net>

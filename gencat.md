@@ -1,4 +1,4 @@
-GENCAT(1)                           Debian                          GENCAT(1)
+GENCAT(1)                                                                                       Debian                                                                                       GENCAT(1)
 
 NAME
        gencat - Generate message catalog
@@ -7,11 +7,8 @@ SYNOPSIS
        gencat [OPTION...] -o OUTPUT-FILE [INPUT-FILE]...
 
 DESCRIPTION
-       The gencat program is specified in the X/Open standard and the GNU
-       implementation follows this specification and so processes all
-       correctly formed input files. Additionally some extension are
-       implemented which help to work in a more reasonable way with the
-       catgets(3) functions.
+       The gencat program is specified in the X/Open standard and the GNU implementation follows this specification and so processes all correctly formed input files. Additionally some extension are
+       implemented which help to work in a more reasonable way with the catgets(3) functions.
 
        -H, --header NAME
               Create C header file NAME containing symbol definitions
@@ -26,4 +23,4 @@ AUTHOR
 
        This man page was written by Jeff Bailey <jbailey@debian.org>.
 
-3rd Berkeley Distribution       November 2003                       GENCAT(1)
+3rd Berkeley Distribution                                                                    November 2003                                                                                   GENCAT(1)

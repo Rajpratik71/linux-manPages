@@ -1,4 +1,4 @@
-GVFS-MKDIR(1)                   User Commands                   GVFS-MKDIR(1)
+GVFS-MKDIR(1)                                                                                User Commands                                                                               GVFS-MKDIR(1)
 
 NAME
        gvfs-mkdir
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                            GVFS-MKDIR(1)
+gvfs                                                                                                                                                                                     GVFS-MKDIR(1)

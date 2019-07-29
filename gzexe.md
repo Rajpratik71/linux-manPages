@@ -1,4 +1,4 @@
-GZEXE(1)                   General Commands Manual                   GZEXE(1)
+GZEXE(1)                                                                                General Commands Manual                                                                               GZEXE(1)
 
 NAME
        gzexe - compress executable files in place
@@ -7,15 +7,11 @@ SYNOPSIS
        gzexe name ...
 
 DESCRIPTION
-       The gzexe utility allows you to compress executables in place and have
-       them automatically uncompress and execute when  you  run  them  (at  a
-       penalty   in   performance).   For  example  if  you  execute  ``gzexe
-       /usr/bin/gdb'' it will create the following two files:
+       The  gzexe  utility allows you to compress executables in place and have them automatically uncompress and execute when you run them (at a penalty in performance).  For example if you execute
+       ``gzexe /usr/bin/gdb'' it will create the following two files:
            -rwxr-xr-x  1 root root 1026675 Jun  7 13:53 /usr/bin/gdb
            -rwxr-xr-x  1 root root 2304524 May 30 13:02 /usr/bin/gdb~
-       /usr/bin/gdb~ is the original file and /usr/bin/gdb is the self-uncom‐
-       pressing  executable  file.  You can remove /usr/bin/gdb~ once you are
-       sure that /usr/bin/gdb works properly.
+       /usr/bin/gdb~ is the original file and /usr/bin/gdb is the self-uncompressing executable file.  You can remove /usr/bin/gdb~ once you are sure that /usr/bin/gdb works properly.
 
        This utility is most useful on systems with very small disks.
 
@@ -26,14 +22,10 @@ SEE ALSO
        gzip(1), znew(1), zmore(1), zcmp(1), zforce(1)
 
 CAVEATS
-       The compressed executable is a shell script.   This  may  create  some
-       security  holes.   In  particular, the compressed executable relies on
-       the PATH environment variable to find gzip and some standard utilities
-       (basename, chmod, ln, mkdir, mktemp, rm, sleep, and tail).
+       The compressed executable is a shell script.  This may create some security holes.  In particular, the compressed executable relies on the PATH environment variable  to  find  gzip  and  some
+       standard utilities (basename, chmod, ln, mkdir, mktemp, rm, sleep, and tail).
 
 BUGS
-       gzexe  attempts  to  retain  the  original file attributes on the com‐
-       pressed executable, but you may have to  fix  them  manually  in  some
-       cases, using chmod or chown.
+       gzexe attempts to retain the original file attributes on the compressed executable, but you may have to fix them manually in some cases, using chmod or chown.
 
-                                                                     GZEXE(1)
+                                                                                                                                                                                              GZEXE(1)

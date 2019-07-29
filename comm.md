@@ -1,4 +1,4 @@
-COMM(1)                         User Commands                         COMM(1)
+COMM(1)                                                                                      User Commands                                                                                     COMM(1)
 
 NAME
        comm - compare two sorted files line by line
@@ -11,9 +11,7 @@ DESCRIPTION
 
        When FILE1 or FILE2 (not both) is -, read standard input.
 
-       With  no  options,  produce  three-column output.  Column one contains
-       lines unique to FILE1, column two contains lines unique to FILE2,  and
-       column three contains lines common to both files.
+       With no options, produce three-column output.  Column one contains lines unique to FILE1, column two contains lines unique to FILE2, and column three contains lines common to both files.
 
        -1     suppress column 1 (lines unique to FILE1)
 
@@ -22,8 +20,7 @@ DESCRIPTION
        -3     suppress column 3 (lines that appear in both files)
 
        --check-order
-              check  that  the  input  is correctly sorted, even if all input
-              lines are pairable
+              check that the input is correctly sorted, even if all input lines are pairable
 
        --nocheck-order
               do not check that the input is correctly sorted
@@ -59,10 +56,8 @@ REPORTING BUGS
        Report comm translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        join(1), uniq(1)
@@ -70,4 +65,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/comm>
        or available locally via: info '(coreutils) comm invocation'
 
-GNU coreutils 8.28               January 2018                         COMM(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                      COMM(1)

@@ -1,4 +1,4 @@
-BLUEMOON(1)                     User Commands                     BLUEMOON(1)
+BLUEMOON(1)                                                                                  User Commands                                                                                 BLUEMOON(1)
 
 NAME
        bluemoon - Bluemoon configuration utility
@@ -35,12 +35,10 @@ OPTIONS
               Show help options
 
 SEE ALSO
-       The full documentation for bluemoon is maintained as a Texinfo manual.
-       If the info and bluemoon programs are properly installed at your site,
-       the command
+       The full documentation for bluemoon is maintained as a Texinfo manual.  If the info and bluemoon programs are properly installed at your site, the command
 
               info bluemoon
 
        should give you access to the complete manual.
 
-bluemoon                         August 2015                      BLUEMOON(1)
+bluemoon                                                                                      August 2015                                                                                  BLUEMOON(1)

@@ -1,4 +1,4 @@
-KBXUTIL(1)                      User Commands                      KBXUTIL(1)
+KBXUTIL(1)                                                                                   User Commands                                                                                  KBXUTIL(1)
 
 NAME
        kbxutil - List, export, import Keybox data
@@ -46,13 +46,10 @@ BUGS
        Please report bugs to <https://dev.gnupg.org>.
 
 COPYRIGHT
-       Copyright  ©  2016 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+       Copyright © 2016 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
-       This manpage was written by Daniel Kahn Gillmor for the Debian distri‐
-       bution (but may be used by others).
+       This manpage was written by Daniel Kahn Gillmor for the Debian distribution (but may be used by others).
 
-kbxutil (GnuPG) 2.1.11            March 2016                       KBXUTIL(1)
+kbxutil (GnuPG) 2.1.11                                                                        March 2016                                                                                    KBXUTIL(1)

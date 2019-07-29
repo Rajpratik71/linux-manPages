@@ -1,4 +1,4 @@
-rhythmbox(1)               General Commands Manual               rhythmbox(1)
+rhythmbox(1)                                                                            General Commands Manual                                                                           rhythmbox(1)
 
 NAME
        rhythmbox - music player and library for tagged files using GStreamer
@@ -7,16 +7,10 @@ SYNOPSIS
        rhythmbox [option...]
 
 DESCRIPTION
-       rhythmbox  is  a very easy to use music playing and management program
-       which supports a wide range of audio formats (including mp3 and  ogg).
-       Originally  inspired  by Apple's iTunes, the current version also sup‐
-       ports Internet Radio and Last.fm integration, iPod syncing and generic
-       portable  audio  player support. Audio CD playback, ripping and encod‐
-       ing, music sharing, and Podcasts.
+       rhythmbox  is  a very easy to use music playing and management program which supports a wide range of audio formats (including mp3 and ogg). Originally inspired by Apple's iTunes, the current
+       version also supports Internet Radio and Last.fm integration, iPod syncing and generic portable audio player support. Audio CD playback, ripping and encoding, music sharing, and Podcasts.
 
-       For performance reasons, the remote control abilities have been  moved
-       from  the rhythmbox binary to a separate program. See rhythmbox-client
-       and the corresponding man page for documentation.
+       For performance reasons, the remote control abilities have been moved from the rhythmbox binary to a separate program. See rhythmbox-client and the corresponding man page for documentation.
 
 OPTIONS
        -d, --debug
@@ -59,12 +53,11 @@ OPTIONS
               Show session management options
 
 AUTHOR
-       This manual page was written by Sven Arvidsson <sa@whiz.se>,  for  the
-       Debian system (but may be used by others).
+       This manual page was written by Sven Arvidsson <sa@whiz.se>, for the Debian system (but may be used by others).
 
 SEE ALSO
        rhythmbox-client(1).
 
        The online documentation available through the program's Help menu.
 
-GNOME                             2006-12-24                     rhythmbox(1)
+GNOME                                                                                         2006-12-24                                                                                  rhythmbox(1)

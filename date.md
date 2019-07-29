@@ -1,4 +1,4 @@
-DATE(1)                         User Commands                         DATE(1)
+DATE(1)                                                                                      User Commands                                                                                     DATE(1)
 
 NAME
        date - print or set the system date and time
@@ -10,33 +10,26 @@ SYNOPSIS
 DESCRIPTION
        Display the current time in the given FORMAT, or set the system date.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -d, --date=STRING
               display time described by STRING, not 'now'
 
        --debug
-              annotate the parsed date, and warn about questionable usage  to
-              stderr
+              annotate the parsed date, and warn about questionable usage to stderr
 
        -f, --file=DATEFILE
               like --date; once for each line of DATEFILE
 
        -I[FMT], --iso-8601[=FMT]
-              output  date/time in ISO 8601 format.  FMT='date' for date only
-              (the default), 'hours', 'minutes', 'seconds', or 'ns' for  date
-              and    time    to    the    indicated    precision.    Example:
+              output  date/time  in  ISO  8601  format.   FMT='date'  for  date  only  (the  default),  'hours', 'minutes', 'seconds', or 'ns' for date and time to the indicated precision.  Example:
               2006-08-14T02:34:56-06:00
 
        -R, --rfc-email
-              output date and time in RFC 5322 format.  Example: Mon, 14  Aug
-              2006 02:34:56 -0600
+              output date and time in RFC 5322 format.  Example: Mon, 14 Aug 2006 02:34:56 -0600
 
        --rfc-3339=FMT
-              output date/time in RFC 3339 format.  FMT='date', 'seconds', or
-              'ns' for date and time to the  indicated  precision.   Example:
-              2006-08-14 02:34:56-06:00
+              output date/time in RFC 3339 format.  FMT='date', 'seconds', or 'ns' for date and time to the indicated precision.  Example: 2006-08-14 02:34:56-06:00
 
        -r, --reference=FILE
               display the last modification time of FILE
@@ -142,13 +135,11 @@ DESCRIPTION
 
        %::z   +hh:mm:ss numeric time zone (e.g., -04:00:00)
 
-       %:::z  numeric  time  zone  with  : to necessary precision (e.g., -04,
-              +05:30)
+       %:::z  numeric time zone with : to necessary precision (e.g., -04, +05:30)
 
        %Z     alphabetic time zone abbreviation (e.g., EDT)
 
-       By default, date pads  numeric  fields  with  zeroes.   The  following
-       optional flags may follow '%':
+       By default, date pads numeric fields with zeroes.  The following optional flags may follow '%':
 
        -      (hyphen) do not pad the field
 
@@ -160,10 +151,8 @@ DESCRIPTION
 
        #      use opposite case if possible
 
-       After  any  flags  comes an optional field width, as a decimal number;
-       then an optional modifier, which is  either  E  to  use  the  locale's
-       alternate  representations  if  available,  or  O  to use the locale's
-       alternate numeric symbols if available.
+       After any flags comes an optional field width, as a decimal number; then an optional modifier, which is either E to use the locale's alternate representations if available, or O  to  use  the
+       locale's alternate numeric symbols if available.
 
 EXAMPLES
        Convert seconds since the epoch (1970-01-01 UTC) to a date
@@ -179,13 +168,9 @@ EXAMPLES
               $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'
 
 DATE STRING
-       The --date=STRING is a mostly free format human readable  date  string
-       such  as "Sun, 29 Feb 2004 16:21:42 -0800" or "2004-02-29 16:21:42" or
-       even "next Thursday".  A date string may contain items indicating cal‐
-       endar  date, time of day, time zone, day of week, relative time, rela‐
-       tive date, and numbers.  An empty string indicates  the  beginning  of
-       the  day.  The date string format is more complex than is easily docu‐
-       mented here but is fully described in the info documentation.
+       The  --date=STRING  is  a  mostly free format human readable date string such as "Sun, 29 Feb 2004 16:21:42 -0800" or "2004-02-29 16:21:42" or even "next Thursday".  A date string may contain
+       items indicating calendar date, time of day, time zone, day of week, relative time, relative date, and numbers.  An empty string indicates the beginning of the day.  The date string format is
+       more complex than is easily documented here but is fully described in the info documentation.
 
 AUTHOR
        Written by David MacKenzie.
@@ -195,13 +180,11 @@ REPORTING BUGS
        Report date translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/date>
        or available locally via: info '(coreutils) date invocation'
 
-GNU coreutils 8.28               January 2018                         DATE(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                      DATE(1)

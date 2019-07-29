@@ -1,4 +1,4 @@
-B2SUM(1)                        User Commands                        B2SUM(1)
+B2SUM(1)                                                                                     User Commands                                                                                    B2SUM(1)
 
 NAME
        b2sum - compute and check BLAKE2 message digest
@@ -18,8 +18,7 @@ DESCRIPTION
               read BLAKE2 sums from the FILEs and check them
 
        -l, --length
-              digest  length  in  bits;  must  not exceed the maximum for the
-              blake2 algorithm and must be a multiple of 8
+              digest length in bits; must not exceed the maximum for the blake2 algorithm and must be a multiple of 8
 
        --tag  create a BSD-style checksum
 
@@ -47,11 +46,8 @@ DESCRIPTION
        --version
               output version information and exit
 
-       The sums are computed as described in RFC 7693.   When  checking,  the
-       input  should be a former output of this program.  The default mode is
-       to print a line with checksum, a space, a character  indicating  input
-       mode  ('*' for binary, ' ' for text or where binary is insignificant),
-       and name for each FILE.
+       The  sums  are computed as described in RFC 7693.  When checking, the input should be a former output of this program.  The default mode is to print a line with checksum, a space, a character
+       indicating input mode ('*' for binary, ' ' for text or where binary is insignificant), and name for each FILE.
 
 AUTHOR
        Written by Padraig Brady and Samuel Neves.
@@ -61,13 +57,11 @@ REPORTING BUGS
        Report b2sum translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/b2sum>
        or available locally via: info '(coreutils) b2sum invocation'
 
-GNU coreutils 8.28               January 2018                        B2SUM(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                     B2SUM(1)

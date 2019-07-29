@@ -1,4 +1,4 @@
-PASTE(1)                        User Commands                        PASTE(1)
+PASTE(1)                                                                                     User Commands                                                                                    PASTE(1)
 
 NAME
        paste - merge lines of files
@@ -7,13 +7,11 @@ SYNOPSIS
        paste [OPTION]... [FILE]...
 
 DESCRIPTION
-       Write  lines  consisting  of the sequentially corresponding lines from
-       each FILE, separated by TABs, to standard output.
+       Write lines consisting of the sequentially corresponding lines from each FILE, separated by TABs, to standard output.
 
        With no FILE, or when FILE is -, read standard input.
 
-       Mandatory arguments to long options are mandatory  for  short  options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -d, --delimiters=LIST
               reuse characters from LIST instead of TABs
@@ -37,13 +35,11 @@ REPORTING BUGS
        Report paste translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/paste>
        or available locally via: info '(coreutils) paste invocation'
 
-GNU coreutils 8.28               January 2018                        PASTE(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                     PASTE(1)

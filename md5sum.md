@@ -1,4 +1,4 @@
-MD5SUM(1)                       User Commands                       MD5SUM(1)
+MD5SUM(1)                                                                                    User Commands                                                                                   MD5SUM(1)
 
 NAME
        md5sum - compute and check MD5 message digest
@@ -43,34 +43,26 @@ DESCRIPTION
        --version
               output version information and exit
 
-       The  sums  are  computed as described in RFC 1321.  When checking, the
-       input should be a former output of this program.  The default mode  is
-       to  print  a line with checksum, a space, a character indicating input
-       mode ('*' for binary, ' ' for text or where binary is  insignificant),
-       and name for each FILE.
+       The  sums  are computed as described in RFC 1321.  When checking, the input should be a former output of this program.  The default mode is to print a line with checksum, a space, a character
+       indicating input mode ('*' for binary, ' ' for text or where binary is insignificant), and name for each FILE.
 
 BUGS
-       Do  not use the MD5 algorithm for security related purposes.  Instead,
-       use an SHA-2 algorithm,  implemented  in  the  programs  sha224sum(1),
-       sha256sum(1),  sha384sum(1),  sha512sum(1),  or  the BLAKE2 algorithm,
-       implemented in b2sum(1)
+       Do not use the MD5 algorithm for security related purposes.  Instead, use an SHA-2 algorithm, implemented in the programs sha224sum(1), sha256sum(1), sha384sum(1), sha512sum(1), or the BLAKE2
+       algorithm, implemented in b2sum(1)
 
 AUTHOR
        Written by Ulrich Drepper, Scott Miller, and David Madore.
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-       Report   md5sum   translation    bugs    to    <http://translationpro‐
-       ject.org/team/>
+       Report md5sum translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/md5sum>
        or available locally via: info '(coreutils) md5sum invocation'
 
-GNU coreutils 8.28               January 2018                       MD5SUM(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                    MD5SUM(1)

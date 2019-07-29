@@ -1,4 +1,4 @@
-pbmtoicon(1)               General Commands Manual               pbmtoicon(1)
+pbmtoicon(1)                                                                            General Commands Manual                                                                           pbmtoicon(1)
 
 NAME
        pbmtoicon - convert a portable bitmap into a Sun icon
@@ -15,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988 by Jef Poskanzer.
 
-                                31 August 1988                   pbmtoicon(1)
+                                                                                            31 August 1988                                                                                pbmtoicon(1)

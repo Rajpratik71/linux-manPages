@@ -1,4 +1,4 @@
-DEBCONF-SET-SELECTIONS(1)          Debconf          DEBCONF-SET-SELECTIONS(1)
+DEBCONF-SET-SELECTIONS(1)                                                                       Debconf                                                                      DEBCONF-SET-SELECTIONS(1)
 
 NAME
        debconf-set-selections - insert new values into the debconf database
@@ -8,38 +8,24 @@ SYNOPSIS
         debconf-get-selections | ssh newhost debconf-set-selections
 
 DESCRIPTION
-       debconf-set-selections can be used to pre-seed the debconf database
-       with answers, or to change answers in the database. Each question will
-       be marked as seen to prevent debconf from asking the question
-       interactively.
+       debconf-set-selections can be used to pre-seed the debconf database with answers, or to change answers in the database. Each question will be marked as seen to prevent debconf from asking the
+       question interactively.
 
        Reads from a file if a filename is given, otherwise from stdin.
 
 WARNING
-       Only use this command to seed debconf values for packages that will be
-       or are installed. Otherwise you can end up with values in the database
-       for uninstalled packages that will not go away, or with worse problems
-       involving shared values. It is recommended that this only be used to
-       seed the database if the originating machine has an identical install.
+       Only use this command to seed debconf values for packages that will be or are installed. Otherwise you can end up with values in the database for uninstalled packages that will not go away,
+       or with worse problems involving shared values. It is recommended that this only be used to seed the database if the originating machine has an identical install.
 
 DATA FORMAT
-       The data is a series of lines. Lines beginning with a # character are
-       comments. Blank lines are ignored. All other lines set the value of
-       one question, and should contain four values, each separated by one
-       character of whitespace. The first value is the name of the package
-       that owns the question. The second is the name of the question, the
-       third value is the type of this question, and the fourth value
-       (through the end of the line) is the value to use for the answer of
-       the question.
+       The data is a series of lines. Lines beginning with a # character are comments. Blank lines are ignored. All other lines set the value of one question, and should contain four values, each
+       separated by one character of whitespace. The first value is the name of the package that owns the question. The second is the name of the question, the third value is the type of this
+       question, and the fourth value (through the end of the line) is the value to use for the answer of the question.
 
-       Alternatively, the third value can be "seen"; then the preseed line
-       only controls whether the question is marked as seen in debconf's
-       database. Note that preseeding a question's value defaults to marking
-       that question as seen, so to override the default value without
-       marking a question seen, you need two lines.
+       Alternatively, the third value can be "seen"; then the preseed line only controls whether the question is marked as seen in debconf's database. Note that preseeding a question's value
+       defaults to marking that question as seen, so to override the default value without marking a question seen, you need two lines.
 
-       Lines can be continued to the next line by ending them with a "\"
-       character.
+       Lines can be continued to the next line by ending them with a "\" character.
 
 EXAMPLES
         # Force debconf priority to critical.
@@ -62,4 +48,4 @@ SEE ALSO
 AUTHOR
        Petter Reinholdtsen <pere@hungry.com>
 
-                                  2018-02-28        DEBCONF-SET-SELECTIONS(1)
+                                                                                              2018-02-28                                                                     DEBCONF-SET-SELECTIONS(1)

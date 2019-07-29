@@ -1,4 +1,4 @@
-SYSCTL(8)                   System Administration                   SYSCTL(8)
+SYSCTL(8)                                                                                System Administration                                                                               SYSCTL(8)
 
 NAME
        sysctl - configure kernel parameters at runtime
@@ -8,33 +8,25 @@ SYNOPSIS
        sysctl -p [file or regexp] [...]
 
 DESCRIPTION
-       sysctl is used to modify kernel parameters at runtime.  The parameters
-       available are those listed under /proc/sys/.  Procfs is  required  for
-       sysctl  support  in  Linux.  You can use sysctl to both read and write
-       sysctl data.
+       sysctl  is  used  to  modify kernel parameters at runtime.  The parameters available are those listed under /proc/sys/.  Procfs is required for sysctl support in Linux.  You can use sysctl to
+       both read and write sysctl data.
 
 PARAMETERS
        variable
-              The name of a key to read from.  An example  is  kernel.ostype.
-              The '/' separator is also accepted in place of a '.'.
+              The name of a key to read from.  An example is kernel.ostype.  The '/' separator is also accepted in place of a '.'.
 
        variable=value
-              To set a key, use the form variable=value where variable is the
-              key and value is the value to set it to.  If the value contains
-              quotes  or  characters  which  are parsed by the shell, you may
-              need to enclose the value in double quotes.  This requires  the
-              -w parameter to use.
+              To set a key, use the form variable=value where variable is the key and value is the value to set it to.  If the value contains quotes or characters which are parsed by the shell,  you
+              may need to enclose the value in double quotes.  This requires the -w parameter to use.
 
        -n, --values
-              Use this option to disable printing of the key name when print‐
-              ing values.
+              Use this option to disable printing of the key name when printing values.
 
        -e, --ignore
               Use this option to ignore errors about unknown keys.
 
        -N, --names
-              Use this option to only print the names.  It may be useful with
-              shells that have programmable completion.
+              Use this option to only print the names.  It may be useful with shells that have programmable completion.
 
        -q, --quiet
               Use this option to not display the values set to stdout.
@@ -43,12 +35,8 @@ PARAMETERS
               Use this option when you want to change a sysctl setting.
 
        -p[FILE], --load[=FILE]
-              Load   in   sysctl   settings   from   the  file  specified  or
-              /etc/sysctl.conf if none given.  Specifying - as filename means
-              reading  data from standard input.  Using this option will mean
-              arguments to sysctl are files, which are read in the order they
-              are  specified.   The file argument may be specified as regular
-              expression.
+              Load  in sysctl settings from the file specified or /etc/sysctl.conf if none given.  Specifying - as filename means reading data from standard input.  Using this option will mean argu‐
+              ments to sysctl are files, which are read in the order they are specified.  The file argument may be specified as regular expression.
 
        -a, --all
               Display all values currently available.
@@ -69,8 +57,7 @@ PARAMETERS
               /etc/sysctl.conf
 
        -r, --pattern pattern
-              Only apply settings  that  match  pattern.   The  pattern  uses
-              extended regular expression syntax.
+              Only apply settings that match pattern.  The pattern uses extended regular expression syntax.
 
        -A     Alias of -a
 
@@ -101,10 +88,8 @@ EXAMPLES
        /sbin/sysctl --system --pattern '^net.ipv6'
 
 DEPRECATED PARAMETERS
-       The  base_reachable_time  and retrans_time are deprecated.  The sysctl
-       command does not allow changing values of these parameters.  Users who
-       insist to use deprecated kernel interfaces should push values to /proc
-       file system by other means.  For example:
+       The base_reachable_time and retrans_time are deprecated.  The sysctl command does not allow changing values of these parameters.  Users who insist to use deprecated kernel  interfaces  should
+       push values to /proc file system by other means.  For example:
 
        echo 256 > /proc/sys/net/ipv6/neigh/eth0/base_reachable_time
 
@@ -121,4 +106,4 @@ AUTHOR
 REPORTING BUGS
        Please send bug reports to ⟨procps@freelists.org⟩
 
-procps-ng                          Jan 2012                         SYSCTL(8)
+procps-ng                                                                                      Jan 2012                                                                                      SYSCTL(8)

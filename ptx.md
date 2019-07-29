@@ -1,4 +1,4 @@
-PTX(1)                          User Commands                          PTX(1)
+PTX(1)                                                                                       User Commands                                                                                      PTX(1)
 
 NAME
        ptx - produce a permuted index of file contents
@@ -8,13 +8,11 @@ SYNOPSIS
        ptx -G [OPTION]... [INPUT [OUTPUT]]
 
 DESCRIPTION
-       Output  a permuted index, including context, of the words in the input
-       files.
+       Output a permuted index, including context, of the words in the input files.
 
        With no FILE, or when FILE is -, read standard input.
 
-       Mandatory arguments to long options are mandatory  for  short  options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -A, --auto-reference
               output automatically generated references
@@ -79,13 +77,11 @@ REPORTING BUGS
        Report ptx translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/ptx>
        or available locally via: info '(coreutils) ptx invocation'
 
-GNU coreutils 8.28               January 2018                          PTX(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                       PTX(1)

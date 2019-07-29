@@ -1,4 +1,4 @@
-SBSIGLIST(1)                    User Commands                    SBSIGLIST(1)
+SBSIGLIST(1)                                                                                 User Commands                                                                                SBSIGLIST(1)
 
 NAME
        sbsiglist - Create EFI_SIGNATURE_LIST signature databases
@@ -18,4 +18,4 @@ DESCRIPTION
        --output <file>
               write signed data to <file> (default <sig-file>.siglist)
 
-sbsiglist 0.6                   February 2018                    SBSIGLIST(1)
+sbsiglist 0.6                                                                                February 2018                                                                                SBSIGLIST(1)

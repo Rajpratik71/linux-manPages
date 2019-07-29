@@ -1,4 +1,4 @@
-ZDIFF(1)                   General Commands Manual                   ZDIFF(1)
+ZDIFF(1)                                                                                General Commands Manual                                                                               ZDIFF(1)
 
 NAME
        zcmp, zdiff - compare compressed files
@@ -8,20 +8,14 @@ SYNOPSIS
        zdiff [ diff_options ] file1 [ file2 ]
 
 DESCRIPTION
-       Zcmp and zdiff are used to invoke the cmp or the diff program on files
-       compressed via gzip.  All options specified are passed directly to cmp
-       or  diff.   If  only  file1 is specified, it is compared to the uncom‐
-       pressed contents of file1.gz.  If two files are specified, their  con‐
-       tents  (uncompressed  if necessary) are fed to cmp or diff.  The input
-       files are not modified.  The exit status from  cmp  or  diff  is  pre‐
-       served.
+       Zcmp  and zdiff are used to invoke the cmp or the diff program on files compressed via gzip.  All options specified are passed directly to cmp or diff.  If only file1 is specified, it is com‐
+       pared to the uncompressed contents of file1.gz.  If two files are specified, their contents (uncompressed if necessary) are fed to cmp or diff.  The input files are not  modified.   The  exit
+       status from cmp or diff is preserved.
 
 SEE ALSO
-       cmp(1),  diff(1),  zmore(1),  zgrep(1),  znew(1),  zforce(1), gzip(1),
-       gzexe(1)
+       cmp(1), diff(1), zmore(1), zgrep(1), znew(1), zforce(1), gzip(1), gzexe(1)
 
 BUGS
-       Messages from the cmp or diff programs may refer to file names such as
-       "-" instead of to the file names specified.
+       Messages from the cmp or diff programs may refer to file names such as "-" instead of to the file names specified.
 
-                                                                     ZDIFF(1)
+                                                                                                                                                                                              ZDIFF(1)

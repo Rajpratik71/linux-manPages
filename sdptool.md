@@ -1,4 +1,4 @@
-sdptool(1)                 General Commands Manual                 sdptool(1)
+sdptool(1)                                                                              General Commands Manual                                                                             sdptool(1)
 
 NAME
        sdptool — control and interrogate SDP servers
@@ -7,28 +7,21 @@ SYNOPSIS
        sdptool [options]  {command}  [command parameters ...]
 
 DESCRIPTION
-       sdptool provides the interface for performing SDP queries on Bluetooth
-       devices, and administering a local SDP database.
+       sdptool provides the interface for performing SDP queries on Bluetooth devices, and administering a local SDP database.
 
 COMMANDS
-       The following commands are available.  In all cases  bdaddr  specifies
-       the device to search or browse.  If local is used for bdaddr, then the
-       local SDP database is searched.
+       The following commands are available.  In all cases bdaddr specifies the device to search or browse.  If local is used for bdaddr, then the local SDP database is searched.
 
-       Services are identified and manipulated with  a  4-byte  record_handle
-       (NOT  the  service name).  To find a service's record_handle, look for
-       the "Service RecHandle" line in the search or browse results
+       Services  are  identified and manipulated with a 4-byte record_handle (NOT the service name).  To find a service's record_handle, look for the "Service RecHandle" line in the search or browse
+       results
 
        search [--bdaddr bdaddr] [--tree] [--raw] [--xml] service_name
                  Search for services..
 
-                 Known service names are DID, SP, DUN, LAN, FAX, OPUSH,  FTP,
-                 HS,  HF,  HFAG,  SAP,  NAP, GN, PANU, HCRP, HID, CIP, A2SRC,
-                 A2SNK, AVRCT, AVRTG, UDIUE, UDITE and SYNCML.
+                 Known service names are DID, SP, DUN, LAN, FAX, OPUSH, FTP, HS, HF, HFAG, SAP, NAP, GN, PANU, HCRP, HID, CIP, A2SRC, A2SNK, AVRCT, AVRTG, UDIUE, UDITE and SYNCML.
 
        browse [--tree] [--raw] [--xml] [bdaddr]
-                 Browse all available services on the device specified  by  a
-                 Bluetooth address as a parameter.
+                 Browse all available services on the device specified by a Bluetooth address as a parameter.
 
        records [--tree] [--raw] [--xml] bdaddr
                  Retrieve all possible service records.
@@ -36,20 +29,16 @@ COMMANDS
        add [ --handle=N --channel=N ]
                  Add a service to the local SDP database.
 
-                 You  can specify a handle for this record using the --handle
-                 option.
+                 You can specify a handle for this record using the --handle option.
 
-                 You can specify a channel to add the service  on  using  the
-                 --channel option.
+                 You can specify a channel to add the service on using the --channel option.
 
-                 NOTE:  Local  adapters configuration will not be updated and
-                 this command should be used only for SDP testing.
+                 NOTE: Local adapters configuration will not be updated and this command should be used only for SDP testing.
 
        del record_handle
                  Remove a service from the local SDP database.
 
-                 NOTE: Local adapters configuration will not be  updated  and
-                 this command should be used only for SDP testing.
+                 NOTE: Local adapters configuration will not be updated and this command should be used only for SDP testing.
 
        get [--tree] [--raw] [--xml] [--bdaddr bdaddr] record_handle
                  Retrieve a service from the local SDP database.
@@ -76,7 +65,6 @@ BUGS
        Documentation needs improving.
 
 AUTHOR
-       Maxim Krasnyansky <maxk@qualcomm.com>. Man page written by Edd Dumbill
-       <ejad@debian.org>.
+       Maxim Krasnyansky <maxk@qualcomm.com>. Man page written by Edd Dumbill <ejad@debian.org>.
 
-                                                                   sdptool(1)
+                                                                                                                                                                                            sdptool(1)

@@ -1,4 +1,4 @@
-MKFIFO(1)                       User Commands                       MKFIFO(1)
+MKFIFO(1)                                                                                    User Commands                                                                                   MKFIFO(1)
 
 NAME
        mkfifo - make FIFOs (named pipes)
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        Create named pipes (FIFOs) with the given NAMEs.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -m, --mode=MODE
               set file permission bits to MODE, not a=rw - umask
@@ -18,8 +17,7 @@ DESCRIPTION
        -Z     set the SELinux security context to default type
 
        --context[=CTX]
-              like -Z, or if CTX is specified then set the SELinux  or  SMACK
-              security context to CTX
+              like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX
 
        --help display this help and exit
 
@@ -31,14 +29,11 @@ AUTHOR
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-       Report    mkfifo    translation    bugs   to   <http://translationpro‐
-       ject.org/team/>
+       Report mkfifo translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        mkfifo(3)
@@ -46,4 +41,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/mkfifo>
        or available locally via: info '(coreutils) mkfifo invocation'
 
-GNU coreutils 8.28               January 2018                       MKFIFO(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                    MKFIFO(1)

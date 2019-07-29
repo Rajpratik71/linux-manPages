@@ -1,4 +1,4 @@
-STTY(1)                         User Commands                         STTY(1)
+STTY(1)                                                                                      User Commands                                                                                     STTY(1)
 
 NAME
        stty - change and print terminal line settings
@@ -11,8 +11,7 @@ SYNOPSIS
 DESCRIPTION
        Print or change terminal characteristics.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -a, --all
               print all current settings in human-readable form
@@ -28,8 +27,7 @@ DESCRIPTION
        --version
               output version information and exit
 
-       Optional - before SETTING indicates negation.  An  *  marks  non-POSIX
-       settings.  The underlying system defines which settings are available.
+       Optional - before SETTING indicates negation.  An * marks non-POSIX settings.  The underlying system defines which settings are available.
 
    Special characters:
        * discard CHAR
@@ -299,8 +297,7 @@ DESCRIPTION
        -cbreak
               same as icanon
 
-       cooked same  as brkint ignpar istrip icrnl ixon opost isig icanon, eof
-              and eol characters to their default values
+       cooked same as brkint ignpar istrip icrnl ixon opost isig icanon, eof and eol characters to their default values
 
        -cooked
               same as raw
@@ -341,23 +338,15 @@ DESCRIPTION
 
        -pass8 same as parenb istrip cs7
 
-       raw    same as -ignbrk -brkint -ignpar -parmrk -inpck  -istrip  -inlcr
-              -igncr  -icrnl  -ixon -ixoff -icanon -opost -isig -iuclc -ixany
-              -imaxbel -xcase min 1 time 0
+       raw    same as -ignbrk -brkint -ignpar -parmrk -inpck -istrip -inlcr -igncr -icrnl -ixon -ixoff -icanon -opost -isig -iuclc -ixany -imaxbel -xcase min 1 time 0
 
        -raw   same as cooked
 
-       sane   same as cread -ignbrk brkint -inlcr -igncr icrnl icanon  iexten
-              echo  echoe  echok  -echonl -noflsh -ixoff -iutf8 -iuclc -ixany
-              imaxbel -xcase -olcuc -ocrnl opost -ofill onlcr -onocr  -onlret
-              nl0  cr0  tab0 bs0 vt0 ff0 isig -tostop -ofdel -echoprt echoctl
-              echoke  -extproc  -flusho,  all  special  characters  to  their
-              default values
+       sane   same as cread -ignbrk brkint -inlcr -igncr icrnl icanon iexten echo echoe echok -echonl -noflsh -ixoff -iutf8 -iuclc -ixany imaxbel -xcase -olcuc -ocrnl opost -ofill onlcr -onocr -onl‐
+              ret nl0 cr0 tab0 bs0 vt0 ff0 isig -tostop -ofdel -echoprt echoctl echoke -extproc -flusho, all special characters to their default values
 
-       Handle  the  tty line connected to standard input.  Without arguments,
-       prints baud rate, line discipline, and deviations from stty sane.   In
-       settings,  CHAR  is  taken literally, or coded as in ^c, 0x37, 0177 or
-       127; special values ^- or undef used to disable special characters.
+       Handle the tty line connected to standard input.  Without arguments, prints baud rate, line discipline, and deviations from stty sane.  In settings, CHAR is taken literally, or  coded  as  in
+       ^c, 0x37, 0177 or 127; special values ^- or undef used to disable special characters.
 
 AUTHOR
        Written by David MacKenzie.
@@ -367,13 +356,11 @@ REPORTING BUGS
        Report stty translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/stty>
        or available locally via: info '(coreutils) stty invocation'
 
-GNU coreutils 8.28               January 2018                         STTY(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                      STTY(1)

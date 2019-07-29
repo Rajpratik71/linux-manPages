@@ -1,4 +1,4 @@
-GStreamer(1)                                                     GStreamer(1)
+GStreamer(1)                                                                                                                                                                              GStreamer(1)
 
 NAME
        gst-discoverer-1.0 - Display file metadata and stream information
@@ -7,10 +7,8 @@ SYNOPSIS
        gst-discoverer-1.0 FILE|DIRECTORY|URI [FILE2|DIRECTORY2|URI2]
 
 DESCRIPTION
-       gst-discoverer-1.0  is a tool that can be used to print basic metadata
-       and stream information about a media file. It can be run on individual
-       files  or  whole  directories. It will recurse into sub-directories in
-       that case.
+       gst-discoverer-1.0  is  a tool that can be used to print basic metadata and stream information about a media file. It can be run on individual files or whole directories. It will recurse into
+       sub-directories in that case.
 
 OPTIONS
        gst-discoverer-1.0 accepts the following options:
@@ -35,4 +33,4 @@ OPTIONS
 AUTHOR
        The GStreamer team at http://gstreamer.freedesktop.org/
 
-                                 August 2012                     GStreamer(1)
+                                                                                              August 2012                                                                                 GStreamer(1)

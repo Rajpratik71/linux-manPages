@@ -1,4 +1,4 @@
-FSFREEZE(8)                 System Administration                 FSFREEZE(8)
+FSFREEZE(8)                                                                              System Administration                                                                             FSFREEZE(8)
 
 NAME
        fsfreeze - suspend access to a filesystem (Ext3/4, ReiserFS, JFS, XFS)
@@ -9,43 +9,26 @@ SYNOPSIS
 DESCRIPTION
        fsfreeze suspends or resumes access to a filesystem.
 
-       fsfreeze  halts  any new access to the filesystem and creates a stable
-       image on disk.  fsfreeze is intended to be  used  with  hardware  RAID
-       devices that support the creation of snapshots.
+       fsfreeze halts any new access to the filesystem and creates a stable image on disk.  fsfreeze is intended to be used with hardware RAID devices that support the creation of snapshots.
 
-       fsfreeze  is unnecessary for device-mapper devices.  The device-mapper
-       (and LVM) automatically freezes a filesystem  on  the  device  when  a
-       snapshot  creation  is requested.  For more details see the dmsetup(8)
-       man page.
+       fsfreeze  is  unnecessary for device-mapper devices.  The device-mapper (and LVM) automatically freezes a filesystem on the device when a snapshot creation is requested.  For more details see
+       the dmsetup(8) man page.
 
-       The mountpoint argument is the pathname of  the  directory  where  the
-       filesystem  is  mounted.   The filesystem must be mounted to be frozen
-       (see mount(8)).
+       The mountpoint argument is the pathname of the directory where the filesystem is mounted.  The filesystem must be mounted to be frozen (see mount(8)).
 
-       Note that access-time updates are also suspended if the filesystem  is
-       mounted with the traditional atime behavior (mount option strictatime,
-       for more details see mount(8)).
+       Note that access-time updates are also suspended if the filesystem is mounted with the traditional atime behavior (mount option strictatime, for more details see mount(8)).
 
 OPTIONS
        -f, --freeze
-              This option requests the specified a filesystem  to  be  frozen
-              from  new  modifications.   When  this is selected, all ongoing
-              transactions in the filesystem are  allowed  to  complete,  new
-              write  system  calls  are  halted, other calls which modify the
-              filesystem are halted, and all dirty data,  metadata,  and  log
-              information  are  written  to  disk.  Any process attempting to
-              write to the frozen  filesystem  will  block  waiting  for  the
-              filesystem to be unfrozen.
+              This option requests the specified a filesystem to be frozen from new modifications.  When this is selected, all ongoing transactions in the filesystem are  allowed  to  complete,  new
+              write  system  calls  are  halted, other calls which modify the filesystem are halted, and all dirty data, metadata, and log information are written to disk.  Any process attempting to
+              write to the frozen filesystem will block waiting for the filesystem to be unfrozen.
 
-              Note  that even after freezing, the on-disk filesystem can con‐
-              tain information on files that are  still  in  the  process  of
-              unlinking.  These files will not be unlinked until the filesys‐
+              Note that even after freezing, the on-disk filesystem can contain information on files that are still in the process of unlinking.  These files will not be unlinked until the  filesys‐
               tem is unfrozen or a clean mount of the snapshot is complete.
 
        -u, --unfreeze
-              This option is used to un-freeze the filesystem and allow oper‐
-              ations  to  continue.   Any  filesystem modifications that were
-              blocked by the freeze are unblocked and allowed to complete.
+              This option is used to un-freeze the filesystem and allow operations to continue.  Any filesystem modifications that were blocked by the freeze are unblocked and allowed to complete.
 
        -V, --version
               Display version information and exit.
@@ -54,12 +37,8 @@ OPTIONS
               Display help text and exit.
 
 FILESYSTEM SUPPORT
-       This command will work only if filesystem  supports  has  support  for
-       freezing.   List  of  these  filesystems  include  (2016-12-18) btrfs,
-       ext2/3/4, f2fs, jfs, nilfs2, reiserfs, and xfs.  Previous list may  be
-       incomplete,  as more filesystems get support.  If in doubt easiest way
-       to know if a filesystem has support is create a small  loopback  mount
-       and test freezing it.
+       This  command  will work only if filesystem supports has support for freezing.  List of these filesystems include (2016-12-18) btrfs, ext2/3/4, f2fs, jfs, nilfs2, reiserfs, and xfs.  Previous
+       list may be incomplete, as more filesystems get support.  If in doubt easiest way to know if a filesystem has support is create a small loopback mount and test freezing it.
 
 AUTHOR
        Written by Hajime Taira.
@@ -71,7 +50,6 @@ SEE ALSO
        mount(8)
 
 AVAILABILITY
-       The  fsfreeze  command is part of the util-linux package and is avail‐
-       able from https://www.kernel.org/pub/linux/utils/util-linux/.
+       The fsfreeze command is part of the util-linux package and is available from https://www.kernel.org/pub/linux/utils/util-linux/.
 
-util-linux                        July 2014                       FSFREEZE(8)
+util-linux                                                                                     July 2014                                                                                   FSFREEZE(8)

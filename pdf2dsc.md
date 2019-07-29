@@ -1,4 +1,4 @@
-PDF2DSC(1)                    Ghostscript Tools                    PDF2DSC(1)
+PDF2DSC(1)                                                                                 Ghostscript Tools                                                                                PDF2DSC(1)
 
 NAME
        pdf2dsc - generate a PostScript page list of a PDF document
@@ -7,28 +7,18 @@ SYNOPSIS
        pdf2dsc input.pdf [ output.dsc ]
 
 DESCRIPTION
-       pdf2dsc  uses  gs(1)  to  read an Adobe Portable Document Format (PDF)
-       document "input.pdf" and create a PostScript(tm) document "output.dsc"
-       that  conforms  to  Adobe's  Document  Structuring  Conventions  (DSC)
-       requirements.
+       pdf2dsc uses gs(1) to read an Adobe Portable Document Format (PDF) document "input.pdf" and create a PostScript(tm) document "output.dsc" that conforms to Adobe's Document Structuring Conven‐
+       tions (DSC) requirements.
 
-       This new document simply tells Ghostscript to read the PDF file and to
-       display  pages  one  at  a  time.   The generated document can then be
-       viewed with any PostScript viewer based on  Ghostscript,  like  ghost‐
-       view(1)  on  Unix or GSview on Windows, with which the user can browse
-       through the pages of the PDF document in any order.
+       This new document simply tells Ghostscript to read the PDF file and to display pages one at a time.  The generated document can then be viewed with any PostScript viewer based on Ghostscript,
+       like ghostview(1) on Unix or GSview on Windows, with which the user can browse through the pages of the PDF document in any order.
 
-       If no output file is named on the command line, the name of the output
-       file is that of the input file with any extension removed, followed by
-       the extension ".dsc".
+       If no output file is named on the command line, the name of the output file is that of the input file with any extension removed, followed by the extension ".dsc".
 
 CAVEATS
-       The DSC document uses Ghostscript-specific procedures.   In  addition,
-       the  original PDF document must be accessible when the DSC document is
-       processed.
+       The DSC document uses Ghostscript-specific procedures.  In addition, the original PDF document must be accessible when the DSC document is processed.
 
-       You need the file "pdf2dsc.ps" (originally by Russell  Lang)  supplied
-       with Ghostscript since release 3.53.
+       You need the file "pdf2dsc.ps" (originally by Russell Lang) supplied with Ghostscript since release 3.53.
 
 SEE ALSO
        gs(1), ghostview(1)
@@ -37,7 +27,6 @@ VERSION
        This document was last revised for Ghostscript version 9.26.
 
 AUTHOR
-       Yves  Arrouye <yves.arrouye@usa.net> and Russell Lang gsview at ghost‐
-       gum.com.au
+       Yves Arrouye <yves.arrouye@usa.net> and Russell Lang gsview at ghostgum.com.au
 
-9.26                           20 November 2018                    PDF2DSC(1)
+9.26                                                                                       20 November 2018                                                                                 PDF2DSC(1)

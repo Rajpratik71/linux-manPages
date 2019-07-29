@@ -1,4 +1,4 @@
-GStreamer(1)                                                     GStreamer(1)
+GStreamer(1)                                                                                                                                                                              GStreamer(1)
 
 NAME
        gst-play-1.0 - Simple command line playback testing tool
@@ -7,10 +7,8 @@ SYNOPSIS
        gst-play-1.0 FILE|DIRECTORY|URI [FILE2|DIRECTORY2|URI2]
 
 DESCRIPTION
-       gst-play-1.0  is  a  command  line tool that can be used to test basic
-       playback using the playbin element. You can pass it individual  files,
-       URIs  or  whole  directories  (in which case it will recurse into sub-
-       directories as well).
+       gst-play-1.0  is  a  command  line  tool  that can be used to test basic playback using the playbin element. You can pass it individual files, URIs or whole directories (in which case it will
+       recurse into sub-directories as well).
 
 OPTIONS
        gst-play-1.0 accepts the following options:
@@ -21,23 +19,19 @@ OPTIONS
                Print version and exit
 
        --audiosink=SOMESINK
-               Use the SOMESINK element as  audio  sink  instead  of  autoau‐
-               diosink
+               Use the SOMESINK element as audio sink instead of autoaudiosink
 
        --videosink=SOMESINK
-               Use   the   SOMESINK   element   as   video  sink  instead  of
-               autovideosink
+               Use the SOMESINK element as video sink instead of autovideosink
 
        --volume=VOLUME
-               Set initial playback volume to VOLUME,  where  0.0=silent  and
-               1.0=unchanged
+               Set initial playback volume to VOLUME, where 0.0=silent and 1.0=unchanged
 
        --shuffle
                Shuffle playlist (play files in random order)
 
        --no-interactive
-               Disable  control through keyboard interaction in terminal (see
-               below)
+               Disable control through keyboard interaction in terminal (see below)
 
        --gapless
                Enable gapless playback
@@ -77,4 +71,4 @@ SEE ALSO
 AUTHOR
        The GStreamer team at http://gstreamer.freedesktop.org/
 
-                                  April 2014                     GStreamer(1)
+                                                                                              April 2014                                                                                  GStreamer(1)

@@ -1,4 +1,4 @@
-ED(1)                           User Commands                           ED(1)
+ED(1)                                                                                        User Commands                                                                                       ED(1)
 
 NAME
        Ed - line-oriented text editor
@@ -34,13 +34,10 @@ OPTIONS
        -v, --verbose
               be verbose
 
-       Start  edit  by  reading  in 'file' if given.  If 'file' begins with a
-       '!', read output of shell command.
+       Start edit by reading in 'file' if given.  If 'file' begins with a '!', read output of shell command.
 
-       Exit status: 0 for a normal exit, 1 for environmental  problems  (file
-       not found, invalid flags, I/O errors, etc), 2 to indicate a corrupt or
-       invalid input file, 3 for an  internal  consistency  error  (eg,  bug)
-       which caused ed to panic.
+       Exit  status:  0 for a normal exit, 1 for environmental problems (file not found, invalid flags, I/O errors, etc), 2 to indicate a corrupt or invalid input file, 3 for an internal consistency
+       error (eg, bug) which caused ed to panic.
 
 REPORTING BUGS
        Report bugs to bug-ed@gnu.org
@@ -49,18 +46,14 @@ REPORTING BUGS
 
 COPYRIGHT
        Copyright © 1994 Andrew L. Moore.
-       Copyright  ©  2014 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2014 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
-       The  full  documentation for Ed is maintained as a Texinfo manual.  If
-       the info and Ed programs are properly installed at your site, the com‐
-       mand
+       The full documentation for Ed is maintained as a Texinfo manual.  If the info and Ed programs are properly installed at your site, the command
 
               info Ed
 
        should give you access to the complete manual.
 
-Ed 1.10                          January 2014                           ED(1)
+Ed 1.10                                                                                      January 2014                                                                                        ED(1)

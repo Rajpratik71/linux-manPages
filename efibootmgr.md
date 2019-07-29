@@ -1,28 +1,20 @@
-EFIBOOTMGR(8)                                                   EFIBOOTMGR(8)
+EFIBOOTMGR(8)                                                                                                                                                                            EFIBOOTMGR(8)
 
 NAME
        efibootmgr - manipulate the EFI Boot Manager
 
 SYNOPSIS
-       efibootmgr  [  -a  ] [ -A ] [ -b XXXX ] [ -r | -y ] [ -B ] [ -c ] [ -d
-       DISK ] [ -D ] [ -e 1|3|-1 ] [ -E NUM ] [ -g ] [ -i NAME ] [ -l NAME  ]
-       [  -L  LABEL  ]  [  -m  t|f  ]  [  -M  X  ]  [  -n  XXXX ] [ -N ] [ -o
-       XXXX,YYYY,ZZZZ ... ] [ -O ] [ -p PART ] [ -q ] [ -t seconds ] [ -T ] [
-       -u ] [ -v ] [ -V ] [ -w ] [ -@ file ]
+       efibootmgr [ -a ] [ -A ] [ -b XXXX ] [ -r | -y ] [ -B ] [ -c ] [ -d DISK ] [ -D ] [ -e 1|3|-1 ] [ -E NUM ] [ -g ] [ -i NAME ] [ -l NAME ] [ -L LABEL ] [ -m t|f ] [ -M X ] [ -n XXXX ] [ -N ] [
+       -o XXXX,YYYY,ZZZZ ... ] [ -O ] [ -p PART ] [ -q ] [ -t seconds ] [ -T ] [ -u ] [ -v ] [ -V ] [ -w ] [ -@ file ]
 
 DESCRIPTION
-       efibootmgr  is a userspace application used to modify the Intel Exten‐
-       sible Firmware Interface (EFI) Boot  Manager.   This  application  can
-       create  and  destroy  boot  entries, change the boot order, change the
-       next running boot option, and more.
+       efibootmgr is a userspace application used to modify the Intel Extensible Firmware Interface (EFI) Boot Manager.  This application can create and destroy boot entries, change the boot  order,
+       change the next running boot option, and more.
 
-       Details on the EFI Boot Manager are available from the EFI  Specifica‐
-       tion, v1.02 or later, available from:
+       Details on the EFI Boot Manager are available from the EFI Specification, v1.02 or later, available from:
         <URL:http://developer.intel.com>
 
-              Note: efibootmgr requires that the kernel support access to EFI
-              non-volatile  variables   through   /sys/firmware/efi/vars   or
-              /sys/firmware/efi/efivars/.
+              Note: efibootmgr requires that the kernel support access to EFI non-volatile variables through /sys/firmware/efi/vars or /sys/firmware/efi/efivars/.
 
 OPTIONS
        The following is a list of options accepted by efibootmgr:
@@ -70,8 +62,7 @@ OPTIONS
               Set t if you want to mirror memory below 4GB
 
        -M | --mirror-above-4G X
-              X  percentage  memory to mirror above 4GB. Floating-point value
-              with up to 2 decimal places is accepted.
+              X percentage memory to mirror above 4GB. Floating-point value with up to 2 decimal places is accepted.
 
        -n | --bootnext XXXX
               Set BootNext to XXXX (hex)
@@ -80,9 +71,7 @@ OPTIONS
               Delete BootNext
 
        -o | --bootorder XXXX,YYYY,ZZZZ
-              Explicitly set BootOrder (hex).  Any value from 0  to  FFFF  is
-              accepted  so  long  as  it  corresponds to an existing Boot####
-              variable, and zero padding is not required.
+              Explicitly set BootOrder (hex).  Any value from 0 to FFFF is accepted so long as it corresponds to an existing Boot#### variable, and zero padding is not required.
 
        -O | --delete-bootorder
               Delete BootOrder
@@ -118,9 +107,7 @@ OPTIONS
               Operate on SysPrep#### variables instead of Boot#### variables.
 
        -@ | --append-binary-args
-              append extra variable args  from  file  (use  -  to  read  from
-              stdin).   Data in file is appended as command line arguments to
-              the boot loader command, with no modification to the  data,  so
+              append  extra  variable  args from file (use - to read from stdin).  Data in file is appended as command line arguments to the boot loader command, with no modification to the data, so
               you can pass any binary or text data necessary.
 
 EXAMPLES
@@ -140,71 +127,51 @@ EXAMPLES
 
        This shows:
 
-              · BootCurrent - the boot entry used to start the currently run‐
-                ning system
+              · BootCurrent - the boot entry used to start the currently running system
 
-              · BootOrder - the boot order as would appear in the  boot  man‐
-                ager.   The boot manager tries to boot the first active entry
-                in this list.  If unsuccessful, it tries the next entry,  and
-                so on.
+              · BootOrder - the boot order as would appear in the boot manager.  The boot manager tries to boot the first active entry in this list.  If unsuccessful, it tries the next entry, and so
+                on.
 
-              · BootNext  -  the  boot  entry which is scheduled to be run on
-                next boot.  This supercedes BootOrder for one boot only,  and
-                is  deleted by the boot manager after first use.  This allows
-                you  to  change  the  next  boot  behavior  without  changing
-                BootOrder.
+              · BootNext  -  the  boot entry which is scheduled to be run on next boot.  This supercedes BootOrder for one boot only, and is deleted by the boot manager after first use.  This allows
+                you to change the next boot behavior without changing BootOrder.
 
-              · Timeout  -  the time in seconds between when the boot manager
-                appears on the screen until when it automatically chooses the
-                startup value from BootNext or BootOrder.
+              · Timeout - the time in seconds between when the boot manager appears on the screen until when it automatically chooses the startup value from BootNext or BootOrder.
 
-              · Five  boot entries (0000 - 0004), along with the active/inac‐
-                tive flag (* means active) and  the  name  displayed  on  the
-                screen.
+              · Five boot entries (0000 - 0004), along with the active/inactive flag (* means active) and the name displayed on the screen.
 
        2.
 
    CREATING A NEW BOOT OPTION
-       An OS installer would call efibootmgr -c.  This assumes that /boot/efi
-       is your EFI System Partition, and is mounted at /dev/sda1.  This  cre‐
-       ates  a new boot option, called "Linux", and puts it at the top of the
-       boot order list.  Options may be passed to modify the  default  behav‐
-       ior.  The default OS Loader is elilo.efi.
+       An OS installer would call efibootmgr -c.  This assumes that /boot/efi is your EFI System Partition, and is mounted at /dev/sda1.  This creates a new boot option, called "Linux", and puts  it
+       at the top of the boot order list.  Options may be passed to modify the default behavior.  The default OS Loader is elilo.efi.
 
        3.
 
    CHANGING THE BOOT ORDER
-       Assuming  the  configuration in Example #1, efibootmgr -o 3,4 could be
-       called to specify PXE boot first, then Linux boot.
+       Assuming the configuration in Example #1, efibootmgr -o 3,4 could be called to specify PXE boot first, then Linux boot.
 
        4.
 
    CHANGING THE BOOT ORDER FOR THE NEXT BOOT ONLY
-       Assuming the configuration in Example #1, efibootmgr  -n  4  could  be
-       called to specify that the Linux entry be taken on next boot.
+       Assuming the configuration in Example #1, efibootmgr -n 4 could be called to specify that the Linux entry be taken on next boot.
 
        5.
 
    DELETING A BOOT OPTION
-       Assuming  the configuration in Example #1, efibootmgr -b 4 -B could be
-       called to delete entry 4 and remove it from the BootOrder.
+       Assuming the configuration in Example #1, efibootmgr -b 4 -B could be called to delete entry 4 and remove it from the BootOrder.
 
        6.
 
    CREATING NETWORK BOOT ENTRIES
-       A system administrator wants to create a boot option to network  boot.
-       You  create the boot entry with: efibootmgr -c -i eth0 -L netboot [ -l
-       '\filename.efi' ]
+       A system administrator wants to create a boot option to network boot.  You create the boot entry with: efibootmgr -c -i eth0 -L netboot [ -l '\filename.efi' ]
 
 BUGS
-       Please direct any  bugs,  features,  patches,  etc.  to  Peter  Jones:
-       https://github.com/rhinstaller/efibootmgr .
+       Please direct any bugs, features, patches, etc. to Peter Jones: https://github.com/rhinstaller/efibootmgr .
 
 AUTHOR
-       This man page was generated by dann frazier <dannf@debian.org> for the
-       Debian GNU/Linux operating system, but may be used by others.
+       This man page was generated by dann frazier <dannf@debian.org> for the Debian GNU/Linux operating system, but may be used by others.
 
 SEE ALSO
        elilo(1)
 
-                               11 January 2012                  EFIBOOTMGR(8)
+                                                                                            11 January 2012                                                                              EFIBOOTMGR(8)

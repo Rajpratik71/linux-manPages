@@ -1,4 +1,4 @@
-pgmbentley(1)              General Commands Manual              pgmbentley(1)
+pgmbentley(1)                                                                           General Commands Manual                                                                          pgmbentley(1)
 
 NAME
        pgmbentley - Bentleyize a portable graymap
@@ -7,11 +7,9 @@ SYNOPSIS
        pgmbentley [pgmfile]
 
 DESCRIPTION
-       Reads  a  portable graymap as input.  Performs The Bentley Effect, and
-       writes a portable graymap as output.
+       Reads a portable graymap as input.  Performs The Bentley Effect, and writes a portable graymap as output.
 
-       The Bentley Effect is described in "Beyond Photography"  by  Holzmann,
-       chapter 4, photo 4.  It's a vertical smearing based on brightness.
+       The Bentley Effect is described in "Beyond Photography" by Holzmann, chapter 4, photo 4.  It's a vertical smearing based on brightness.
 
 SEE ALSO
        pgmoil(1), ppmrelief(1), pgm(5)
@@ -19,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1990 by Wilson Bent (whb@hoh-2.att.com)
 
-                               11 January 1991                  pgmbentley(1)
+                                                                                            11 January 1991                                                                              pgmbentley(1)

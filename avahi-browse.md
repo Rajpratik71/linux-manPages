@@ -1,4 +1,4 @@
-avahi-browse(1)            General Commands Manual            avahi-browse(1)
+avahi-browse(1)                                                                         General Commands Manual                                                                        avahi-browse(1)
 
 NAME
        avahi-browse - Browse for mDNS/DNS-SD services using the Avahi daemon
@@ -15,27 +15,20 @@ SYNOPSIS
        avahi-browse-domains [options]
 
 DESCRIPTION
-       Browse for mDNS/DNS-SD network services and browsing domains using the
-       Avahi daemon.
+       Browse for mDNS/DNS-SD network services and browsing domains using the Avahi daemon.
 
 OPTIONS
-       Specify a DNS-SD service type (e.g. _http._tcp) to browse for  on  the
-       command  line,  or -a to browse for all available service types. Items
-       that appear on the network are prefixed with "+", items that disappear
-       are  prefixed with "-". If --resolve is passed items that are resolved
-       are prefixed with "=".
+       Specify  a  DNS-SD  service  type (e.g. _http._tcp) to browse for on the command line, or -a to browse for all available service types. Items that appear on the network are prefixed with "+",
+       items that disappear are prefixed with "-". If --resolve is passed items that are resolved are prefixed with "=".
 
        -a | --all
-              Browse for all service types registered on the  LAN,  not  just
-              the one specified on the command line.
+              Browse for all service types registered on the LAN, not just the one specified on the command line.
 
        -D | --browse-domains
-              Browse for browsing domains instead for services. avahi-browse-
-              domains is equivalent to avahi-browse --browse-domains
+              Browse for browsing domains instead for services. avahi-browse-domains is equivalent to avahi-browse --browse-domains
 
        -d | --domain= DOMAIN
-              Browse in the specified domain. If  omitted  avahi-browse  will
-              browse in the default browsing domain (usually .local)
+              Browse in the specified domain. If omitted avahi-browse will browse in the default browsing domain (usually .local)
 
        -v | --verbose
               Enable verbose mode.
@@ -53,13 +46,10 @@ OPTIONS
               Automatically resolve services found.
 
        -f | --no-fail
-              Don't  fail  if  the daemon is not found running. Instead, wait
-              until it appears. If it disconnects, try to reconnect.
+              Don't fail if the daemon is not found running. Instead, wait until it appears. If it disconnects, try to reconnect.
 
        -p | --parsable
-              Make output easily parsable for usage in  scripts.  If  enabled
-              fields  are  separated  by  semicolons  (;),  service names are
-              escaped. It is recommended to combine this with --no-db-lookup.
+              Make output easily parsable for usage in scripts. If enabled fields are separated by semicolons (;), service names are escaped. It is recommended to combine this with --no-db-lookup.
 
        -k | --no-db-lookup
               Don't lookup services types in service type database.
@@ -74,8 +64,7 @@ OPTIONS
               Show version information.
 
 AUTHORS
-       The Avahi Developers <avahi (at) lists (dot) freedesktop  (dot)  org>;
-       Avahi is available from http://avahi.org/
+       The Avahi Developers <avahi (at) lists (dot) freedesktop (dot) org>; Avahi is available from http://avahi.org/
 
 SEE ALSO
        avahi-publish(1), avahi-resolve(1), avahi-daemon(8)
@@ -83,4 +72,4 @@ SEE ALSO
 COMMENTS
        This man page was written using xml2man(1) by Oliver Kurth.
 
-Manuals                              User                     avahi-browse(1)
+Manuals                                                                                          User                                                                                  avahi-browse(1)

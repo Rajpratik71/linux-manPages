@@ -1,4 +1,4 @@
-EFIBOOTDUMP(8)                                                 EFIBOOTDUMP(8)
+EFIBOOTDUMP(8)                                                                                                                                                                          EFIBOOTDUMP(8)
 
 NAME
        efibootdump - dump a boot entries from a variable or a file
@@ -9,10 +9,8 @@ SYNOPSIS
             [[-g {guid}] <name0> [... [<nameN>]]]
 
 DESCRIPTION
-       efibootdump is a userspace application used to display individual UEFI
-       boot options, from a file or a UEFI variable.  This allows e.g.  saved
-       files  from efivarfs to be displayed, as well as variables on the run‐
-       ning machine.
+       efibootdump  is  a  userspace application used to display individual UEFI boot options, from a file or a UEFI variable.  This allows e.g. saved files from efivarfs to be displayed, as well as
+       variables on the running machine.
 
 OPTIONS
        The following is a list of options accepted by efibootmgr:
@@ -24,14 +22,12 @@ OPTIONS
               Read a single boot variable from the specified file.
 
        <nameN>
-              Display the specified variable on the  local  machine.   If  no
-              GUID is specified, EFI Global Variable is the default.
+              Display the specified variable on the local machine.  If no GUID is specified, EFI Global Variable is the default.
 
 BUGS
-       Please  direct  any  bugs,  features, patches, etc. to the Red Hat in‐
-       staller team at https://github.com/rhinstaller/efibootmgr .
+       Please direct any bugs, features, patches, etc. to the Red Hat installer team at https://github.com/rhinstaller/efibootmgr .
 
 SEE ALSO
        efibootmgr(8)
 
-                               24 February 2016                EFIBOOTDUMP(8)
+                                                                                           24 February 2016                                                                             EFIBOOTDUMP(8)

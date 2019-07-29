@@ -1,4 +1,4 @@
-EOG(1)                     General Commands Manual                     EOG(1)
+EOG(1)                                                                                  General Commands Manual                                                                                 EOG(1)
 
 NAME
        eog - a GNOME image viewer
@@ -56,10 +56,8 @@ USAGE
                                     session manager
 
 AUTHOR
-       This  manual  page  was  written for the Debian GNU/Linux distribution
-       because the original program does not have a manual page.
+       This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page.
 
-       This manual page was written by Dan Nguyen <dnn@debian.org>,  for  the
-       Debian GNU/Linux system (but may be used by others).
+       This manual page was written by Dan Nguyen <dnn@debian.org>, for the Debian GNU/Linux system (but may be used by others).
 
-                                April 22, 2000                         EOG(1)
+                                                                                            April 22, 2000                                                                                      EOG(1)

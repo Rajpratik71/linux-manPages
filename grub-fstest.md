@@ -1,4 +1,4 @@
-GRUB-FSTEST(1)                  User Commands                  GRUB-FSTEST(1)
+GRUB-FSTEST(1)                                                                               User Commands                                                                              GRUB-FSTEST(1)
 
 NAME
        grub-fstest - debug tool for GRUB filesystem drivers
@@ -71,18 +71,15 @@ DESCRIPTION
        -V, --version
               print program version
 
-       Mandatory  or optional arguments to long options are also mandatory or
-       optional for any corresponding short options.
+       Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
 
 SEE ALSO
        grub-probe(8)
 
-       The full documentation for grub-fstest is maintained as a Texinfo man‐
-       ual.   If  the info and grub-fstest programs are properly installed at
-       your site, the command
+       The full documentation for grub-fstest is maintained as a Texinfo manual.  If the info and grub-fstest programs are properly installed at your site, the command
 
               info grub-fstest
 
        should give you access to the complete manual.
 
-grub-fstest (GRUB) 2.02-2ubuntu8February 2019                  GRUB-FSTEST(1)
+grub-fstest (GRUB) 2.02-2ubuntu8.12                                                          February 2019                                                                              GRUB-FSTEST(1)

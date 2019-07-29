@@ -1,4 +1,4 @@
-PY3CLEAN(1)                                                       PY3CLEAN(1)
+PY3CLEAN(1)                                                                                                                                                                                PY3CLEAN(1)
 
 NAME
        py3clean - removes .pyc and .pyo files
@@ -28,4 +28,4 @@ OPTIONS
 AUTHOR
        Piotr Ożarowski, 2012-2013
 
-                                                                  PY3CLEAN(1)
+                                                                                                                                                                                           PY3CLEAN(1)

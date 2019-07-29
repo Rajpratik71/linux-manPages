@@ -1,4 +1,4 @@
-ppmtorgb3(1)               General Commands Manual               ppmtorgb3(1)
+ppmtorgb3(1)                                                                            General Commands Manual                                                                           ppmtorgb3(1)
 
 NAME
        ppmtorgb3 - separate a portable pixmap into three portable graymaps
@@ -7,14 +7,10 @@ SYNOPSIS
        ppmtorgb3 [ppmfile]
 
 DESCRIPTION
-       Reads  a  portable pixmap as input.  Writes three portable graymaps as
-       output, one each for red, green, and blue.
+       Reads a portable pixmap as input.  Writes three portable graymaps as output, one each for red, green, and blue.
 
-       The output filenames are constructed by  taking  the  input  filename,
-       stripping off any extension, and appending ".red", ".grn", and ".blu".
-       For  example,  separating  lenna.ppm  would   result   in   lenna.red,
-       lenna.grn,  and  lenna.blu.   If the input comes from stdin, the names
-       are noname.red, noname.grn, and noname.blu.
+       The  output  filenames  are constructed by taking the input filename, stripping off any extension, and appending ".red", ".grn", and ".blu".  For example, separating lenna.ppm would result in
+       lenna.red, lenna.grn, and lenna.blu.  If the input comes from stdin, the names are noname.red, noname.grn, and noname.blu.
 
 SEE ALSO
        rgb3toppm(1), ppmtopgm(1), pgmtoppm(1), ppm(5), pgm(5)
@@ -22,4 +18,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Jef Poskanzer.
 
-                               10 January 1991                   ppmtorgb3(1)
+                                                                                            10 January 1991                                                                               ppmtorgb3(1)

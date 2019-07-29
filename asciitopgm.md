@@ -1,4 +1,4 @@
-asciitopgm(1)              General Commands Manual              asciitopgm(1)
+asciitopgm(1)                                                                           General Commands Manual                                                                          asciitopgm(1)
 
 NAME
        asciitopgm - convert ASCII graphics into a portable graymap
@@ -7,28 +7,19 @@ SYNOPSIS
        asciitopgm [-d divisor] height width [asciifile]
 
 DESCRIPTION
-       Reads  ASCII  data  as  input.  Produces a portable graymap with pixel
-       values which are an approximation of the  "brightness"  of  the  ASCII
-       characters, assuming black-on-white printing.  In other words, a capi‐
-       tal M is very dark, a period is ver  light,  and  a  space  is  white.
-       Input  lines  which  are fewer than width characters are automatically
-       padded with spaces.
+       Reads  ASCII  data as input.  Produces a portable graymap with pixel values which are an approximation of the "brightness" of the ASCII characters, assuming black-on-white printing.  In other
+       words, a capital M is very dark, a period is ver light, and a space is white.  Input lines which are fewer than width characters are automatically padded with spaces.
 
-       The divisor argument is a floating-point number by  which  the  output
-       pixels  are  divided;  the  default value is 1.0.  This can be used to
-       adjust the brightness of the graymap: for example, if the image is too
-       dim, reduce the divisor.
+       The divisor argument is a floating-point number by which the output pixels are divided; the default value is 1.0.  This can be used to adjust the brightness of the graymap:  for  example,  if
+       the image is too dim, reduce the divisor.
 
-       In  keeping  with  (I believe) Fortran line-printer conventions, input
-       lines beginning with a + (plus) character are assumed to  "overstrike"
-       the previous line, allowing a larger range of gray values.
+       In  keeping  with  (I believe) Fortran line-printer conventions, input lines beginning with a + (plus) character are assumed to "overstrike" the previous line, allowing a larger range of gray
+       values.
 
-       This tool contradicts the message in the pbmtoascii manual: "Note that
-       there is no asciitopbm tool - this transformation is one-way."
+       This tool contradicts the message in the pbmtoascii manual: "Note that there is no asciitopbm tool - this transformation is one-way."
 
 BUGS
-       The table of ASCII-to-grey values is subject to  interpretation,  and,
-       of course, depends on the typeface intended for the input.
+       The table of ASCII-to-grey values is subject to interpretation, and, of course, depends on the typeface intended for the input.
 
 SEE ALSO
        pbmtoascii(1), pgm(5)
@@ -36,4 +27,4 @@ SEE ALSO
 AUTHOR
        Wilson H. Bent. Jr. (whb@usc.edu)
 
-                               26 December 1994                 asciitopgm(1)
+                                                                                           26 December 1994                                                                              asciitopgm(1)

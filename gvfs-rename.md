@@ -1,4 +1,4 @@
-GVFS-RENAME(1)                  User Commands                  GVFS-RENAME(1)
+GVFS-RENAME(1)                                                                               User Commands                                                                              GVFS-RENAME(1)
 
 NAME
        gvfs-rename
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                           GVFS-RENAME(1)
+gvfs                                                                                                                                                                                    GVFS-RENAME(1)

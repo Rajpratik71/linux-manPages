@@ -1,4 +1,4 @@
-GIO(1)                          User Commands                          GIO(1)
+GIO(1)                                                                                       User Commands                                                                                      GIO(1)
 
 NAME
        gio - GIO commandline tool
@@ -41,32 +41,25 @@ SYNOPSIS
        gio tree [OPTION...] [LOCATION...]
 
 DESCRIPTION
-       gio is a utility that makes many of the GIO features available from
-       the commandline. In doing so, it provides commands that are similar to
-       traditional utilities, but let you use GIO locations instead of local
-       files: for example you can use something like
-       smb://server/resource/file.txt as location.
+       gio is a utility that makes many of the GIO features available from the commandline. In doing so, it provides commands that are similar to traditional utilities, but let you use GIO locations
+       instead of local files: for example you can use something like smb://server/resource/file.txt as location.
 
 COMMANDS
        help [COMMAND]
-           Displays a short synopsis of the available commands or provides
-           detailed help on a specific command.
+           Displays a short synopsis of the available commands or provides detailed help on a specific command.
 
        version
            Prints the GLib version to which gio belongs.
 
        cat LOCATION...
-           Concatenates the given files and prints them to the standard
-           output.
+           Concatenates the given files and prints them to the standard output.
 
            The cat command works just like the traditional cat utility.
 
-           Note: just pipe through cat if you need its formatting options
-           like -n, -T or other.
+           Note: just pipe through cat if you need its formatting options like -n, -T or other.
 
        copy [OPTION...] SOURCE... DESTINATION
-           Copies one or more files from SOURCE to DESTINATION. If more than
-           one source is specified, the destination must be a directory.
+           Copies one or more files from SOURCE to DESTINATION. If more than one source is specified, the destination must be a directory.
 
            The copy command is similar to the traditional cp utility.
 
@@ -99,16 +92,13 @@ COMMANDS
                    List writable attributes.
 
                -f, --filesystem
-                   Show information about the filesystem that the given
-                   locations reside on.
+                   Show information about the filesystem that the given locations reside on.
 
                -a --attributes=ATTRIBUTES
                    The attributes to get.
 
-                   Attributes can be specified with their GIO name, e.g.
-                   standard::icon, or just by namespace, e.g. unix, or by
-                   '*', which matches all attributes. Several attributes or
-                   groups of attributes can be specified, separated by comma.
+                   Attributes can be specified with their GIO name, e.g. standard::icon, or just by namespace, e.g. unix, or by '*', which matches all attributes. Several attributes or groups of
+                   attributes can be specified, separated by comma.
 
                    By default, all attributes are listed.
 
@@ -116,8 +106,7 @@ COMMANDS
                    Don't follow symbolic links.
 
        list [OPTION...] [LOCATION...]
-           Lists the contents of the given locations. If no location is
-           given, the contents of the current directory are shown.
+           Lists the contents of the given locations. If no location is given, the contents of the current directory are shown.
 
            The list command is similar to the traditional ls utility.
 
@@ -125,10 +114,8 @@ COMMANDS
                -a --attributes=ATTRIBUTES
                    The attributes to get.
 
-                   Attributes can be specified with their GIO name, e.g.
-                   standard::icon, or just by namespace, e.g. unix, or by
-                   '*', which matches all attributes. Several attributes or
-                   groups of attributes can be specified, separated by comma.
+                   Attributes can be specified with their GIO name, e.g. standard::icon, or just by namespace, e.g. unix, or by '*', which matches all attributes. Several attributes or groups of
+                   attributes can be specified, separated by comma.
 
                    By default, all attributes are listed.
 
@@ -145,12 +132,9 @@ COMMANDS
                    Print full URIs.
 
        mime MIMETYPE [HANDLER]
-           If no handler is given, the mime command lists the registered and
-           recommended applications for the mimetype. If a handler is given,
-           it is set as the default handler for the mimetype.
+           If no handler is given, the mime command lists the registered and recommended applications for the mimetype. If a handler is given, it is set as the default handler for the mimetype.
 
-           Handlers must be specified by their desktop file name, including
-           the extension. Example: org.gnome.gedit.desktop.
+           Handlers must be specified by their desktop file name, including the extension. Example: org.gnome.gedit.desktop.
 
        mkdir [OPTION...] LOCATION...
            Creates directories.
@@ -162,28 +146,19 @@ COMMANDS
                    Create parent directories when necessary.
 
        monitor [OPTION...] [LOCATION...]
-           Monitors files or directories for changes, such as creation
-           deletion, content and attribute changes, and mount and unmount
-           operations affecting the monitored locations.
+           Monitors files or directories for changes, such as creation deletion, content and attribute changes, and mount and unmount operations affecting the monitored locations.
 
-           The monitor command uses the GIO file monitoring APIs to do its
-           job. GIO has different implementations for different platforms.
-           The most common implementation on Linux uses inotify.
+           The monitor command uses the GIO file monitoring APIs to do its job. GIO has different implementations for different platforms. The most common implementation on Linux uses inotify.
 
            Options
                -d, --dir=LOCATION
-                   Monitor the given location as a directory. Normally, the
-                   file type is used to determine whether to monitor a file
-                   or directory.
+                   Monitor the given location as a directory. Normally, the file type is used to determine whether to monitor a file or directory.
 
                -f, --file=LOCATION
-                   Monitor the given location as a file. Normally, the file
-                   type is used to determine whether to monitor a file or
-                   directory.
+                   Monitor the given location as a file. Normally, the file type is used to determine whether to monitor a file or directory.
 
                -D, --direct=LOCATION
-                   Monitor the file directly. This allows to capture changes
-                   made via hardlinks.
+                   Monitor the file directly. This allows to capture changes made via hardlinks.
 
                -s, --silent=LOCATION
                    Monitor the file directly, but don't report changes.
@@ -195,18 +170,12 @@ COMMANDS
                    Watch for mount events.
 
        mount [OPTION...] [LOCATION...]
-           Provides commandline access to various aspects of GIOs mounting
-           functionality.
+           Provides commandline access to various aspects of GIOs mounting functionality.
 
-           Mounting refers to the traditional concept of arranging multiple
-           file systems and devices in a single tree, rooted at /. Classical
-           mounting happens in the kernel and is controlle by the mount
-           utility. GIO expands this concept by introducing mount daemons
-           that can make file systems available to GIO applications without
-           kernel involvement.
+           Mounting refers to the traditional concept of arranging multiple file systems and devices in a single tree, rooted at /. Classical mounting happens in the kernel and is controlle by the
+           mount utility. GIO expands this concept by introducing mount daemons that can make file systems available to GIO applications without kernel involvement.
 
-           GIO mounts can require authentication, and the mount command may
-           ask for user IDs, passwords, and so on, when required.
+           GIO mounts can require authentication, and the mount command may ask for user IDs, passwords, and so on, when required.
 
            Options
                -m, --mountable
@@ -225,8 +194,7 @@ COMMANDS
                    Unmount all mounts with the given scheme.
 
                -f, --force
-                   Ignore outstanding file operations when unmounting or
-                   ejecting.
+                   Ignore outstanding file operations when unmounting or ejecting.
 
                -a, --anonymous
                    Use an anonymous user when authenticating.
@@ -241,21 +209,16 @@ COMMANDS
                    Show extra information.
 
        move [OPTION...] SOURCE... DESTINATION
-           Moves one or more files from SOURCE to DESTINATION. If more than
-           one source is specified, the destination must be a directory.
+           Moves one or more files from SOURCE to DESTINATION. If more than one source is specified, the destination must be a directory.
 
            The move command is similar to the traditional mv utility.
 
        open LOCATION...
-           Opens files with the default application that is registered to
-           handle files of this type.
+           Opens files with the default application that is registered to handle files of this type.
 
-           GIO obtains this information from the shared-mime-info database,
-           with per-user overrides stored in
-           $XDG_DATA_HOME/applications/mimeapps.list.
+           GIO obtains this information from the shared-mime-info database, with per-user overrides stored in $XDG_DATA_HOME/applications/mimeapps.list.
 
-           The mime command can be used to change the default handler for a
-           mimetype.
+           The mime command can be used to change the default handler for a mimetype.
 
        rename LOCATION NAME
            Renames a file.
@@ -265,11 +228,9 @@ COMMANDS
        remove [OPTION...] LOCATION...
            Deletes each given file.
 
-           This command removes files irreversibly. If you want a reversible
-           way to remove files, see the trash command.
+           This command removes files irreversibly. If you want a reversible way to remove files, see the trash command.
 
-           Note that not all URI schemes that are supported by GIO may allow
-           deletion of files.
+           Note that not all URI schemes that are supported by GIO may allow deletion of files.
 
            The remove command is similar to the traditional rm utility.
 
@@ -278,12 +239,9 @@ COMMANDS
                    Ignore non-existent and non-deletable files.
 
        save [OPTION...] DESTINATION
-           Reads from standard input and saves the data to the given
-           location.
+           Reads from standard input and saves the data to the given location.
 
-           This is similar to just redirecting output to a file using
-           traditional shell syntax, but the save command allows saving to
-           location that GIO can write to.
+           This is similar to just redirecting output to a file using traditional shell syntax, but the save command allows saving to location that GIO can write to.
 
            Options
                -b, --backup
@@ -299,8 +257,7 @@ COMMANDS
                    When creating, restrict access to the current user.
 
                -u, --unlink
-                   When replacing, replace as if the destination did not
-                   exist.
+                   When replacing, replace as if the destination did not exist.
 
                -v, --print-etag
                    Print the new etag in the end.
@@ -311,19 +268,14 @@ COMMANDS
        set LOCATION ATTRIBUTE VALUE...
            Allows to set a file attribute on a file.
 
-           File attributes can be specified with their GIO name, e.g
-           standard::icon. Note that not all GIO file attributes are
-           writable. Use the --query-writable option of the info command to
-           list writable file attributes.
+           File attributes can be specified with their GIO name, e.g standard::icon. Note that not all GIO file attributes are writable. Use the --query-writable option of the info command to list
+           writable file attributes.
 
-           If the TYPE is unset, VALUE does not have to be specified. If the
-           type is stringv, multiple values can be given.
+           If the TYPE is unset, VALUE does not have to be specified. If the type is stringv, multiple values can be given.
 
            Options
                -t, --type=TYPE
-                   Specifies the type of the attribute. Supported types are
-                   string, stringv, bytestring, boolean, uint32, int32,
-                   uint64, int64 and unset.
+                   Specifies the type of the attribute. Supported types are string, stringv, bytestring, boolean, uint32, int32, uint64, int64 and unset.
 
                    If the type is not specified, string is assumed.
 
@@ -331,19 +283,13 @@ COMMANDS
                    Don't follow symbolic links.
 
        trash [OPTION...] [LOCATION...]
-           Sends files or directories to the "Trashcan". This can be a
-           different folder depending on where the file is located, and not
-           all file systems support this concept. In the common case that the
-           file lives inside a users home directory, the trash folder is
-           $XDG_DATA_HOME/Trash.
+           Sends files or directories to the "Trashcan". This can be a different folder depending on where the file is located, and not all file systems support this concept. In the common case that
+           the file lives inside a users home directory, the trash folder is $XDG_DATA_HOME/Trash.
 
-           Note that moving files to the trash does not free up space on the
-           file system until the "Trashcan" is emptied. If you are interested
-           in deleting a file irreversibly, see the remove command.
+           Note that moving files to the trash does not free up space on the file system until the "Trashcan" is emptied. If you are interested in deleting a file irreversibly, see the remove
+           command.
 
-           Inspecting and emptying the "Trashcan" is normally supported by
-           graphical file managers such as nautilus, but you can also see the
-           trash with the command: gio list trash://.
+           Inspecting and emptying the "Trashcan" is normally supported by graphical file managers such as nautilus, but you can also see the trash with the command: gio list trash://.
 
            Options
                -f, --force
@@ -353,9 +299,7 @@ COMMANDS
                    Empty the trash.
 
        tree [OPTION...] [LOCATION...]
-           Lists the contents of the given locations recursively, in a
-           tree-like format. If no location is given, it defaults to the
-           current directory.
+           Lists the contents of the given locations recursively, in a tree-like format. If no location is given, it defaults to the current directory.
 
            The tree command is similar to the traditional tree utility.
 
@@ -372,4 +316,4 @@ EXIT STATUS
 SEE ALSO
        cat(1), cp(1), ls(1), mkdir(1), mv(1), rm(1), tree(1).
 
-GIO                                                                    GIO(1)
+GIO                                                                                                                                                                                             GIO(1)

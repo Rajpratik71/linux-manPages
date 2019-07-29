@@ -1,4 +1,4 @@
-DD(1)                           User Commands                           DD(1)
+DD(1)                                                                                        User Commands                                                                                       DD(1)
 
 NAME
        dd - convert and copy a file
@@ -11,8 +11,7 @@ DESCRIPTION
        Copy a file, converting and formatting according to the operands.
 
        bs=BYTES
-              read  and  write  up  to  BYTES bytes at a time (default: 512);
-              overrides ibs and obs
+              read and write up to BYTES bytes at a time (default: 512); overrides ibs and obs
 
        cbs=BYTES
               convert BYTES bytes at a time
@@ -46,15 +45,11 @@ DESCRIPTION
        skip=N skip N ibs-sized blocks at start of input
 
        status=LEVEL
-              The LEVEL of information to print to stderr; 'none'  suppresses
-              everything  but  error  messages, 'noxfer' suppresses the final
-              transfer statistics, 'progress' shows periodic transfer statis‐
-              tics
+              The LEVEL of information to print to stderr; 'none' suppresses everything but error messages, 'noxfer' suppresses the final transfer statistics, 'progress' shows periodic transfer sta‐
+              tistics
 
-       N  and BYTES may be followed by the following multiplicative suffixes:
-       c =1, w =2, b =512, kB =1000, K =1024, MB =1000*1000, M =1024*1024, xM
-       =M,  GB  =1000*1000*1000, G =1024*1024*1024, and so on for T, P, E, Z,
-       Y.
+       N and BYTES may be followed by the following multiplicative suffixes: c =1, w =2, b =512, kB =1000, K =1024, MB =1000*1000, M =1024*1024, xM =M, GB =1000*1000*1000, G =1024*1024*1024, and  so
+       on for T, P, E, Z, Y.
 
        Each CONV symbol may be:
 
@@ -77,8 +72,7 @@ DESCRIPTION
 
        swab   swap every pair of input bytes
 
-       sync   pad every input block with NULs to  ibs-size;  when  used  with
-              block or unblock, pad with spaces rather than NULs
+       sync   pad every input block with NULs to ibs-size; when used with block or unblock, pad with spaces rather than NULs
 
        excl   fail if the output file already exists
 
@@ -98,8 +92,7 @@ DESCRIPTION
 
        Each FLAG symbol may be:
 
-       append append  mode  (makes  sense  only for output; conv=notrunc sug‐
-              gested)
+       append append mode (makes sense only for output; conv=notrunc suggested)
 
        direct use direct I/O for data
 
@@ -136,8 +129,7 @@ DESCRIPTION
        seek_bytes
               treat 'seek=N' as a byte count (oflag only)
 
-       Sending a USR1 signal to a running 'dd' process  makes  it  print  I/O
-       statistics to standard error and then resume copying.
+       Sending a USR1 signal to a running 'dd' process makes it print I/O statistics to standard error and then resume copying.
 
        Options are:
 
@@ -154,13 +146,11 @@ REPORTING BUGS
        Report dd translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/dd>
        or available locally via: info '(coreutils) dd invocation'
 
-GNU coreutils 8.28               January 2018                           DD(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                        DD(1)

@@ -1,8 +1,7 @@
-foo2zjs(1)                 General Commands Manual                 foo2zjs(1)
+foo2zjs(1)                                                                              General Commands Manual                                                                             foo2zjs(1)
 
 NAME
-       foo2zjs  -  Convert  Ghostscript  pbmraw  or bitcmyk format into a ZJS
-       printer stream
+       foo2zjs - Convert Ghostscript pbmraw or bitcmyk format into a ZJS printer stream
 
 SYNOPSIS
        foo2zjs [options] <pbmraw-file >zjs-file
@@ -12,15 +11,12 @@ SYNOPSIS
        foo2zjs [options] <pksmraw-file >zjs-file
 
 DESCRIPTION
-       foo2zjs converts Ghostscript pbmraw, bitcmyk, or pksmraw  output  for‐
-       mats  to  monochrome or color ZJS streams, for driving the Minolta/QMS
-       2300 DL network  color  laser  printer  and  other  Zenographics-based
-       printers.
+       foo2zjs  converts  Ghostscript  pbmraw,  bitcmyk, or pksmraw output formats to monochrome or color ZJS streams, for driving the Minolta/QMS 2300 DL network color laser printer and other Zeno‐
+       graphics-based printers.
 
 COMMAND LINE OPTIONS
    Normal Options
-       These  are  the  options  used to select the parameters of a print job
-       that are usually controlled on a per job basis.
+       These are the options used to select the parameters of a print job that are usually controlled on a per job basis.
 
        -c     Force color mode if autodetect doesn't work.
 
@@ -116,42 +112,31 @@ COMMAND LINE OPTIONS
               Username string to send to printer.
 
    Printer Tweaking Options
-       These are the options used to customize the operation of foo2zjs for a
-       particular printer.
+       These are the options used to customize the operation of foo2zjs for a particular printer.
 
        -u xoffxyoff
-              Set  the  offset  of the start of the printable region from the
-              upper left corner, in pixels [0x0].
+              Set the offset of the start of the printable region from the upper left corner, in pixels [0x0].
 
        -l xoffxyoff
-              Set the offset of the end of  the  printable  region  from  the
-              lower right corner, in pixels [0x0].
+              Set the offset of the end of the printable region from the lower right corner, in pixels [0x0].
 
        -L mask
-              Send  logical clipping amounts implied by -u/-l in the ZjStream
-              [3].
+              Send logical clipping amounts implied by -u/-l in the ZjStream [3].
 
               0   don't send any logical clipping amounts
               1   only send Y clipping amount
               2   only send X clipping amount
               3   send both X and Y clipping amounts
 
-       -P     Do not send START_PLANE codes on  monochrome  output.   May  be
-              needed  by  some  black and white only printers, such as the HP
-              LaserJet 1000.
+       -P     Do not send START_PLANE codes on monochrome output.  May be needed by some black and white only printers, such as the HP LaserJet 1000.
 
-       -A     AllIsBlack:  convert  C=1,M=1,Y=1  to  just  K=1.   Works  with
-              bitcmyk input only.
+       -A     AllIsBlack: convert C=1,M=1,Y=1 to just K=1.  Works with bitcmyk input only.
 
-       -B     BlackClears:  K=1  forces C,M,Y to 0.  Works with bitcmyk input
-              only.
+       -B     BlackClears: K=1 forces C,M,Y to 0.  Works with bitcmyk input only.
 
        -X padlen
-              Add extra zero padding to the end of BID segments.  The default
-              is  16  bytes.   Padding 16 bytes of zeroes is needed for older
-              ZjStream printers, such as the Minolta 2200DL and  HP  LaserJet
-              1000,  and  seems  harmless  to newer ones, such as the Minolta
-              2300DL.  So the default should be good for all cases.
+              Add extra zero padding to the end of BID segments.  The default is 16 bytes.  Padding 16 bytes of zeroes is needed for older ZjStream printers, such as the Minolta 2200DL and HP Laser‐
+              Jet 1000, and seems harmless to newer ones, such as the Minolta 2300DL.  So the default should be good for all cases.
 
        -z model
               Model. Default is 0.
@@ -165,9 +150,7 @@ COMMAND LINE OPTIONS
        These options are used for debugging foo2zjs.
 
        -S plane
-              Output just a single color plane from a color print  and  print
-              it  on  the  black  plane.   The default is to output all color
-              planes.
+              Output just a single color plane from a color print and print it on the black plane.  The default is to output all color planes.
 
               1   Cyan
               2   Magenta

@@ -1,4 +1,4 @@
-pnminvert(1)               General Commands Manual               pnminvert(1)
+pnminvert(1)                                                                            General Commands Manual                                                                           pnminvert(1)
 
 NAME
        pnminvert - invert a portable anymap
@@ -7,8 +7,7 @@ SYNOPSIS
        pnminvert [pnmfile]
 
 DESCRIPTION
-       Reads a portable anymap as input.  Inverts it black for white and pro‐
-       duces a portable anymap as output.
+       Reads a portable anymap as input.  Inverts it black for white and produces a portable anymap as output.
 
 SEE ALSO
        pnm(5)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                                08 August 1989                   pnminvert(1)
+                                                                                            08 August 1989                                                                                pnminvert(1)

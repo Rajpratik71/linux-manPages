@@ -1,4 +1,4 @@
-ARCH(1)                         User Commands                         ARCH(1)
+ARCH(1)                                                                                      User Commands                                                                                     ARCH(1)
 
 NAME
        arch - print machine hardware name (same as uname -m)
@@ -22,10 +22,8 @@ REPORTING BUGS
        Report arch translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        uname(1), uname(2)
@@ -33,4 +31,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/arch>
        or available locally via: info '(coreutils) arch invocation'
 
-GNU coreutils 8.28               January 2018                         ARCH(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                      ARCH(1)

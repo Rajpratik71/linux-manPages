@@ -1,4 +1,4 @@
-gipddecode(1)              General Commands Manual              gipddecode(1)
+gipddecode(1)                                                                           General Commands Manual                                                                          gipddecode(1)
 
 NAME
        gipddecode - Decode a GIPD stream into human readable form.
@@ -7,12 +7,9 @@ SYNOPSIS
        gipddecode [options] <gipd-file
 
 DESCRIPTION
-       gipddecode  decodes  a Granite Image Printer Driver (GIPD) stream into
-       human readable form.  Granite Systems was acquired by  Monotype  Imag‐
-       ing.
+       gipddecode decodes a Granite Image Printer Driver (GIPD) stream into human readable form.  Granite Systems was acquired by Monotype Imaging.
 
-       A GIPD stream is the printer language used by the Lexmark X500 and the
-       Dell 1125 MFP printers.
+       A GIPD stream is the printer language used by the Lexmark X500 and the Dell 1125 MFP printers.
 
 COMMAND LINE OPTIONS
        These are the options that can appear on the command line.

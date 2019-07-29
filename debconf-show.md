@@ -1,4 +1,4 @@
-DEBCONF-SHOW(1)                    Debconf                    DEBCONF-SHOW(1)
+DEBCONF-SHOW(1)                                                                                 Debconf                                                                                DEBCONF-SHOW(1)
 
 NAME
        debconf-show - query the debconf database
@@ -11,22 +11,17 @@ SYNOPSIS
 DESCRIPTION
        debconf-show lets you query the debconf database in different ways.
 
-       The most common use is "debconf-show packagename", which displays all
-       items in the debconf database owned by a given package, and their
-       current values.  Questions that have been asked already are prefixed
-       with an '*'.
+       The most common use is "debconf-show packagename", which displays all items in the debconf database owned by a given package, and their current values.  Questions that have been asked already
+       are prefixed with an '*'.
 
-       This can be useful as a debugging aid, and especially handy in bug
-       reports involving a package's use of debconf.
+       This can be useful as a debugging aid, and especially handy in bug reports involving a package's use of debconf.
 
 OPTIONS
        --db=dbname
-           Specify the database to query. By default, debconf-show queries
-           the main database.
+           Specify the database to query. By default, debconf-show queries the main database.
 
        --listowners
-           Lists all owners of questions in the database. Generally an owner
-           is equivalent to a debian package name.
+           Lists all owners of questions in the database. Generally an owner is equivalent to a debian package name.
 
        --listdbs
            Lists all available databases.
@@ -34,4 +29,4 @@ OPTIONS
 AUTHOR
        Joey Hess <joeyh@debian.org> and Sylvain Ferriol
 
-                                  2018-02-28                  DEBCONF-SHOW(1)
+                                                                                              2018-02-28                                                                               DEBCONF-SHOW(1)

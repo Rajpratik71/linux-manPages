@@ -1,4 +1,4 @@
-PARTPROBE(8)                  GNU Parted Manual                  PARTPROBE(8)
+PARTPROBE(8)                                                                               GNU Parted Manual                                                                              PARTPROBE(8)
 
 NAME
        partprobe - inform the OS of partition table changes
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        This manual page documents briefly the partprobe command.
 
-       partprobe  is  a  program  that informs the operating system kernel of
-       partition table changes.
+       partprobe is a program that informs the operating system kernel of partition table changes.
 
 OPTIONS
        This program uses short UNIX style options.
@@ -34,7 +33,6 @@ SEE ALSO
        parted(8).
 
 AUTHOR
-       This manual page was written by  Timshel  Knoll  <timshel@debian.org>,
-       for the Debian GNU/Linux system (but may be used by others).
+       This manual page was written by Timshel Knoll <timshel@debian.org>, for the Debian GNU/Linux system (but may be used by others).
 
-parted                          March 18, 2002                   PARTPROBE(8)
+parted                                                                                      March 18, 2002                                                                                PARTPROBE(8)

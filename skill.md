@@ -1,4 +1,4 @@
-SKILL(1)                        User Commands                        SKILL(1)
+SKILL(1)                                                                                     User Commands                                                                                    SKILL(1)
 
 NAME
        skill, snice - send a signal or report process status
@@ -8,18 +8,12 @@ SYNOPSIS
        snice [new priority] [options] expression
 
 DESCRIPTION
-       These tools are obsolete and unportable.  The command syntax is poorly
-       defined.  Consider  using  the  killall,  pkill,  and  pgrep  commands
-       instead.
+       These tools are obsolete and unportable.  The command syntax is poorly defined.  Consider using the killall, pkill, and pgrep commands instead.
 
-       The  default signal for skill is TERM.  Use -l or -L to list available
-       signals.  Particularly useful signals include HUP,  INT,  KILL,  STOP,
-       CONT,  and  0.   Alternate  signals may be specified in three ways: -9
-       -SIGKILL -KILL.
+       The  default  signal for skill is TERM.  Use -l or -L to list available signals.  Particularly useful signals include HUP, INT, KILL, STOP, CONT, and 0.  Alternate signals may be specified in
+       three ways: -9 -SIGKILL -KILL.
 
-       The default priority for snice is +4.  Priority numbers range from +20
-       (slowest)  to -20 (fastest).  Negative priority numbers are restricted
-       to administrative users.
+       The default priority for snice is +4.  Priority numbers range from +20 (slowest) to -20 (fastest).  Negative priority numbers are restricted to administrative users.
 
 OPTIONS
        -f, --fast
@@ -35,8 +29,7 @@ OPTIONS
               List all signal names in a nice table.
 
        -n, --no-action
-              No action; perform a simulation of events that would occur  but
-              do not actually change the system.
+              No action; perform a simulation of events that would occur but do not actually change the system.
 
        -v, --verbose
               Verbose; explain what is being done.
@@ -51,8 +44,7 @@ OPTIONS
               Display version information.
 
 PROCESS SELECTION OPTIONS
-       Selection  criteria can be: terminal, user, pid, command.  The options
-       below may be used to ensure correct interpretation.
+       Selection criteria can be: terminal, user, pid, command.  The options below may be used to ensure correct interpretation.
 
        -t, --tty tty
               The next expression is a terminal (tty or pty).
@@ -70,8 +62,7 @@ PROCESS SELECTION OPTIONS
               Match the processes that belong to the same namespace as pid.
 
        --nslist ns,...
-              list which namespaces will be considered for the  --ns  option.
-              Available namespaces: ipc, mnt, net, pid, user, uts.
+              list which namespaces will be considered for the --ns option.  Available namespaces: ipc, mnt, net, pid, user, uts.
 
 SIGNALS
        The behavior of signals is explained in signal(7) manual page.
@@ -93,10 +84,9 @@ STANDARDS
        No standards apply.
 
 AUTHOR
-       Albert  Cahalan ⟨albert@users.sf.net⟩ wrote skill and snice in 1999 as
-       a replacement for a non-free version.
+       Albert Cahalan ⟨albert@users.sf.net⟩ wrote skill and snice in 1999 as a replacement for a non-free version.
 
 REPORTING BUGS
        Please send bug reports to ⟨procps@freelists.org⟩
 
-procps-ng                        October 2011                        SKILL(1)
+procps-ng                                                                                    October 2011                                                                                     SKILL(1)

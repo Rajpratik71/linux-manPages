@@ -1,4 +1,4 @@
-pbmtog3(1)                 General Commands Manual                 pbmtog3(1)
+pbmtog3(1)                                                                              General Commands Manual                                                                             pbmtog3(1)
 
 NAME
        pbmtog3 - convert a portable bitmap into a Group 3 fax file
@@ -7,8 +7,7 @@ SYNOPSIS
        pbmtog3 [pbmfile]
 
 DESCRIPTION
-       Reads  a  portable  bitmap  as output.  Produces a Group 3 fax file as
-       input.
+       Reads a portable bitmap as output.  Produces a Group 3 fax file as input.
 
 REFERENCES
        The standard for Group 3 fax is defined in CCITT Recommendation T.4.
@@ -22,4 +21,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Paul Haeberli <paul@manray.sgi.com>.
 
-                               02 October 1989                     pbmtog3(1)
+                                                                                            02 October 1989                                                                                 pbmtog3(1)

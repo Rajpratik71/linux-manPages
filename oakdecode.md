@@ -1,4 +1,4 @@
-oakdecode(1)               General Commands Manual               oakdecode(1)
+oakdecode(1)                                                                            General Commands Manual                                                                           oakdecode(1)
 
 NAME
        oakdecode - Decode an OAKT printer stream into human readable form.
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        oakdecode decodes an OAKT printer stream into human readable form.
 
-       An  OAKT  printer  stream is the printer language used by the HP Color
-       LaserJet 1500 and other printers.
+       An OAKT printer stream is the printer language used by the HP Color LaserJet 1500 and other printers.
 
 COMMAND LINE OPTIONS
        These are the options that can appear on the command line.

@@ -1,4 +1,4 @@
-pnmmargin(1)               General Commands Manual               pnmmargin(1)
+pnmmargin(1)                                                                            General Commands Manual                                                                           pnmmargin(1)
 
 NAME
        pnmmargin - add a border to a portable anymap
@@ -7,12 +7,10 @@ SYNOPSIS
        pnmmargin [-white|-black|-color colorspec] size [pnmfile]
 
 DESCRIPTION
-       Reads a portable anymap as input.  Adds a border of the specified num‐
-       ber of pixels, and produces a portable anymap as output.
+       Reads a portable anymap as input.  Adds a border of the specified number of pixels, and produces a portable anymap as output.
 
 OPTIONS
-       You can specify the border color with the -white, -black,  and  -color
-       flags.  If no color is specified, the program makes a guess.
+       You can specify the border color with the -white, -black, and -color flags.  If no color is specified, the program makes a guess.
 
 SEE ALSO
        pnm(5)
@@ -23,4 +21,4 @@ BUGS
 AUTHOR
        Copyright (C) 1991 by Jef Poskanzer.
 
-                                9 January 1991                   pnmmargin(1)
+                                                                                            9 January 1991                                                                                pnmmargin(1)

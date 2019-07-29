@@ -1,4 +1,4 @@
-pbmtoplot(1)               General Commands Manual               pbmtoplot(1)
+pbmtoplot(1)                                                                            General Commands Manual                                                                           pbmtoplot(1)
 
 NAME
        pbmtoplot - convert a portable bitmap into a Unix plot(5) file
@@ -17,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1990 by Arthur David Olson.
 
-                               1 September 1990                  pbmtoplot(1)
+                                                                                           1 September 1990                                                                               pbmtoplot(1)

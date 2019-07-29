@@ -1,4 +1,4 @@
-display(1)                 General Commands Manual                 display(1)
+display(1)                                                                              General Commands Manual                                                                             display(1)
 
 NAME
        display - displays an image or image sequence on any X server.
@@ -7,18 +7,14 @@ SYNOPSIS
        display [options] input-file
 
 OVERVIEW
-       The  display program is a member of the ImageMagick(1) suite of tools.
-       Use it to display an image or image sequence on any X server.
+       The display program is a member of the ImageMagick(1) suite of tools.  Use it to display an image or image sequence on any X server.
 
-       For more information about the display command, point your browser  to
-       file:///usr/share/doc/imagemagick-6-common/html/www/display.html   (on
-       debian system  you  may  install  the  imagemagick-6-doc  package)  or
-       http://www.imagemagick.org/script/display.php.
+       For  more information about the display command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/display.html (on debian system you may install the imagemagick-6-doc
+       package) or http://www.imagemagick.org/script/display.php.
 
 DESCRIPTION
        Image Settings:
-         -alpha  option         on,  activate,  off, deactivate, set, opaque,
-       copy
+         -alpha option        on, activate, off, deactivate, set, opaque, copy
                               transparent, extract, background, or shape
          -antialias           remove pixel-aliasing
          -authenticate value  decrypt image with this password
@@ -27,8 +23,7 @@ DESCRIPTION
          -colormap type       Shared or Private
          -colorspace type     alternate image colorspace
          -comment string      annotate image with comment
-         -compress type       type of  pixel  compression  when  writing  the
-       image
+         -compress type       type of pixel compression when writing the image
          -decipher filename   convert cipher pixels to plain pixels
          -deskew threshold    straighten an image
          -define format:option
@@ -43,12 +38,10 @@ DESCRIPTION
          -equalize            perform histogram equalization to an image
          -filter type         use this filter when resizing an image
          -format "string"     output formatted image characteristics
-         -fuzz  distance        colors  within  this  distance are considered
-       equal
+         -fuzz distance       colors within this distance are considered equal
          -geometry geometry   preferred size and location of the Image window
          -gravity type        horizontal and vertical backdrop placement
-         -identify            identify the format and characteristics of  the
-       image
+         -identify            identify the format and characteristics of the image
          -immutable           displayed image cannot be modified
          -interlace type      type of image interlacing scheme
          -interpolate method  pixel color interpolation method
@@ -66,8 +59,7 @@ DESCRIPTION
          -regard-warnings     pay attention to warning messages
          -remote command      execute a command in an remote display process
          -repage geometry     size and location of an image canvas (operator)
-         -respect-parentheses  settings  remain  in  effect until parenthesis
-       boundary
+         -respect-parentheses settings remain in effect until parenthesis boundary
          -sampling-factor geometry
                               horizontal and vertical sampling factor
          -scenes range        image scene range
@@ -75,13 +67,11 @@ DESCRIPTION
          -set property value  set an image property
          -size geometry       width and height of image
          -support factor      resize support: > 1.0 is blurry, < 1.0 is sharp
-         -texture filename    name of texture to tile onto  the  image  back‐
-       ground
+         -texture filename    name of texture to tile onto the image background
          -transparent-color color
                               transparent color
          -treedepth value     color tree depth
-         -update  seconds       detect when image file is modified and redis‐
-       play
+         -update seconds      detect when image file is modified and redisplay
          -verbose             print detailed information about the image
          -visual type         display image using this visual type
          -virtual-pixel method
@@ -97,8 +87,7 @@ DESCRIPTION
          -clip-path id        clip along a named path from the 8BIM profile
          -colors value        preferred number of colors in the image
          -contrast            enhance or reduce the image contrast
-         -crop geometry       preferred size  and  location  of  the  cropped
-       image
+         -crop geometry       preferred size and location of the cropped image
          -despeckle           reduce the speckles within an image
          -edge factor         apply a filter to detect edges in the image
          -enhance             apply a digital filter to enhance a noisy image
@@ -109,10 +98,8 @@ DESCRIPTION
          -gamma value         level of gamma correction
          -monochrome          transform image to black and white
          -negate              replace each pixel with its complementary color
-         -normalize            transform image to span the full range of col‐
-       ors
-         -raise value         lighten/darken image  edges  to  create  a  3-D
-       effect
+         -normalize           transform image to span the full range of colors
+         -raise value         lighten/darken image edges to create a 3-D effect
          -resample geometry   change the resolution of an image
          -resize geometry     resize the image
          -roll geometry       roll an image vertically or horizontally
@@ -136,16 +123,11 @@ DESCRIPTION
          -list type           print a list of supported option arguments
          -version             print version information
 
-       In  addition  to  those listed above, you can specify these standard X
-       resources as command line options:  -background,  -bordercolor,  -bor‐
-       derwidth,  -font,  -foreground,  -iconGeometry,  -iconic, -mattecolor,
-       -name, -shared-memory, -usePixmap, or -title.
+       In addition to those listed above, you can specify these standard X resources as command line options:  -background, -bordercolor, -borderwidth, -font,  -foreground,  -iconGeometry,  -iconic,
+       -mattecolor, -name, -shared-memory, -usePixmap, or -title.
 
-       By default, the image format of `file' is determined by its magic num‐
-       ber.   To specify a particular image format, precede the filename with
-       an image format name and a colon (i.e. ps:image) or specify the  image
-       type  as  the  filename suffix (i.e. image.ps).  Specify 'file' as '-'
-       for standard input or output.
+       By  default, the image format of `file' is determined by its magic number.  To specify a particular image format, precede the filename with an image format name and a colon (i.e. ps:image) or
+       specify the image type as the filename suffix (i.e. image.ps).  Specify 'file' as '-' for standard input or output.
 
        Buttons:
          1    press to map or unmap the Command widget
@@ -153,9 +135,7 @@ DESCRIPTION
          3    press to load an image from a visual image directory
 
 NOTE
-       The display program defaults to the X screen resolution.   To  display
-       vector  formats  at  their intended size, override the default resolu‐
-       tion:
+       The display program defaults to the X screen resolution.  To display vector formats at their intended size, override the default resolution:
 
          display -density 72 drawing.svg
 
@@ -163,10 +143,7 @@ SEE ALSO
        ImageMagick(1)
 
 COPYRIGHT
-       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional  copyrights
-       and      licenses      apply      to      this      software,      see
-       file:///usr/share/doc/imagemagick-6-common/html/www/license.html   (on
-       debian  system  you  may  install  the  imagemagick-6-doc  package) or
-       http://www.imagemagick.org/script/license.php
+       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional copyrights and licenses apply to this software, see file:///usr/share/doc/imagemagick-6-common/html/www/license.html (on debian sys‐
+       tem you may install the imagemagick-6-doc package) or http://www.imagemagick.org/script/license.php
 
-ImageMagick               Date: 2009/01/10 01:00:00                display(1)
+ImageMagick                                                                            Date: 2009/01/10 01:00:00                                                                            display(1)

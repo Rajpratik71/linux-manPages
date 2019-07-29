@@ -1,4 +1,4 @@
-ppm3d(1)                   General Commands Manual                   ppm3d(1)
+ppm3d(1)                                                                                General Commands Manual                                                                               ppm3d(1)
 
 NAME
        ppm3d - convert two portable pixmap into a red/blue 3d glasses pixmap
@@ -7,13 +7,11 @@ SYNOPSIS
        ppm3d leftppmfile rightppmfile [horizontal_offset]
 
 DESCRIPTION
-       Reads  two  portable  pixmaps as input.  Produces a portable pixmap as
-       output, with the images overlapping by horizontal_offset
+       Reads two portable pixmaps as input.  Produces a portable pixmap as output, with the images overlapping by horizontal_offset
 
        pixels in blue/red format.
 
-       horizontal_offset defaults to 30 pixels.  Pixmaps  MUST  be  the  same
-       size.
+       horizontal_offset defaults to 30 pixels.  Pixmaps MUST be the same size.
 
 SEE ALSO
        ppm(5)
@@ -21,4 +19,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1993 by David K. Drum.
 
-                               2 November 1993                       ppm3d(1)
+                                                                                            2 November 1993                                                                                   ppm3d(1)

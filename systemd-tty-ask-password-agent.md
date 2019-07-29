@@ -1,21 +1,16 @@
-SYSTEMD-TTY-ASK-PASSWORDsystemd-tty-ask-passSYSTEMD-TTY-ASK-PASSWORD-AGENT(1)
+SYSTEMD-TTY-ASK-PASSWORD-AGENT(1)                                                   systemd-tty-ask-password-agent                                                   SYSTEMD-TTY-ASK-PASSWORD-AGENT(1)
 
 NAME
-       systemd-tty-ask-password-agent - List or process pending systemd
-       password requests
+       systemd-tty-ask-password-agent - List or process pending systemd password requests
 
 SYNOPSIS
        systemd-tty-ask-password-agent [OPTIONS...] [VARIABLE=VALUE...]
 
 DESCRIPTION
-       systemd-tty-ask-password-agent is a password agent that handles
-       password requests of the system, for example for hard disk encryption
-       passwords or SSL certificate passwords that need to be queried at
-       boot-time or during runtime.
+       systemd-tty-ask-password-agent is a password agent that handles password requests of the system, for example for hard disk encryption passwords or SSL certificate passwords that need to be
+       queried at boot-time or during runtime.
 
-       systemd-tty-ask-password-agent implements the Password Agents
-       Specification[1], and is one of many possible response agents which
-       answer to queries formulated with systemd-ask-password(1).
+       systemd-tty-ask-password-agent implements the Password Agents Specification[1], and is one of many possible response agents which answer to queries formulated with systemd-ask-password(1).
 
 OPTIONS
        The following options are understood:
@@ -24,23 +19,19 @@ OPTIONS
            Lists all currently pending system password requests.
 
        --query
-           Process all currently pending system password requests by querying
-           the user on the calling TTY.
+           Process all currently pending system password requests by querying the user on the calling TTY.
 
        --watch
            Continuously process password requests.
 
        --wall
-           Forward password requests to wall(1) instead of querying the user
-           on the calling TTY.
+           Forward password requests to wall(1) instead of querying the user on the calling TTY.
 
        --plymouth
-           Ask question with plymouth(8) instead of querying the user on the
-           calling TTY.
+           Ask question with plymouth(8) instead of querying the user on the calling TTY.
 
        --console
-           Ask question on /dev/console instead of querying the user on the
-           calling TTY.
+           Ask question on /dev/console instead of querying the user on the calling TTY.
 
        -h, --help
            Print a short help text and exit.
@@ -52,11 +43,10 @@ EXIT STATUS
        On success, 0 is returned, a non-zero failure code otherwise.
 
 SEE ALSO
-       systemd(1), systemctl(1), systemd-ask-password-console.service(8),
-       wall(1), plymouth(8)
+       systemd(1), systemctl(1), systemd-ask-password-console.service(8), wall(1), plymouth(8)
 
 NOTES
         1. Password Agents Specification
            https://www.freedesktop.org/wiki/Software/systemd/PasswordAgents
 
-systemd 237                                 SYSTEMD-TTY-ASK-PASSWORD-AGENT(1)
+systemd 237                                                                                                                                                          SYSTEMD-TTY-ASK-PASSWORD-AGENT(1)

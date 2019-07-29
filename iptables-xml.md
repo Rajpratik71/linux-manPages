@@ -1,4 +1,4 @@
-IPTABLES-XML(1)                 iptables 1.6.1                IPTABLES-XML(1)
+IPTABLES-XML(1)                                                                             iptables 1.6.1                                                                             IPTABLES-XML(1)
 
 NAME
        iptables-xml — Convert iptables-save format to XML
@@ -7,35 +7,24 @@ SYNOPSIS
        iptables-xml [-c] [-v]
 
 DESCRIPTION
-       iptables-xml  is  used  to convert the output of iptables-save into an
-       easily manipulatable XML format to STDOUT.  Use  I/O-redirection  pro‐
-       vided by your shell to write to a file.
+       iptables-xml is used to convert the output of iptables-save into an easily manipulatable XML format to STDOUT.  Use I/O-redirection provided by your shell to write to a file.
 
        -c, --combine
-              combine  consecutive  rules with the same matches but different
-              targets. iptables does not currently support more than one tar‐
-              get per match, so this simulates that by collecting the targets
-              from consecutive iptables rules into one action tag,  but  only
-              when  the  rule matches are identical. Terminating actions like
-              RETURN, DROP, ACCEPT and QUEUE are not combined with subsequent
-              targets.
+              combine consecutive rules with the same matches but different targets. iptables does not currently support more than one target per match, so this simulates that by collecting the tar‐
+              gets from consecutive iptables rules into one action tag, but only when the rule matches are identical. Terminating actions like RETURN, DROP, ACCEPT and QUEUE are  not  combined  with
+              subsequent targets.
 
        -v, --verbose
-              Output xml comments containing the iptables line from which the
-              XML is derived
+              Output xml comments containing the iptables line from which the XML is derived
 
-       iptables-xml does a mechanistic conversion to a  very  expressive  xml
-       format;  the only semantic considerations are for -g and -j targets in
-       order to discriminate between <call> <goto> and <nane-of-target> as it
-       helps xml processing scripts if they can tell the difference between a
-       target like SNAT and another chain.
+       iptables-xml  does  a  mechanistic  conversion  to  a very expressive xml format; the only semantic considerations are for -g and -j targets in order to discriminate between <call> <goto> and
+       <nane-of-target> as it helps xml processing scripts if they can tell the difference between a target like SNAT and another chain.
 
        Some sample output is:
 
        <iptables-rules>
          <table name="mangle">
-           <chain  name="PREROUTING"   policy="ACCEPT"   packet-count="63436"
-       byte-count="7137573">
+           <chain name="PREROUTING" policy="ACCEPT" packet-count="63436" byte-count="7137573">
              <rule>
               <conditions>
                <match>
@@ -55,9 +44,7 @@ DESCRIPTION
            </chain>
          </table> </iptables-rules>
 
-       Conversion from XML to iptables-save format may be done using the ipt‐
-       ables.xslt script and xsltproc, or a custom program using  libxsltproc
-       or similar; in this fashion:
+       Conversion from XML to iptables-save format may be done using the iptables.xslt script and xsltproc, or a custom program using libxsltproc or similar; in this fashion:
 
        xsltproc iptables.xslt my-iptables.xml | iptables-restore
 
@@ -70,4 +57,4 @@ AUTHOR
 SEE ALSO
        iptables-save(8), iptables-restore(8), iptables(8)
 
-iptables 1.6.1                                                IPTABLES-XML(1)
+iptables 1.6.1                                                                                                                                                                         IPTABLES-XML(1)

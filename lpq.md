@@ -1,20 +1,15 @@
-lpq(1)                            Apple Inc.                           lpq(1)
+lpq(1)                                                                                        Apple Inc.                                                                                        lpq(1)
 
 NAME
        lpq - show printer queue status
 
 SYNOPSIS
-       lpq  [  -E  ]  [  -U  username  ]  [  -h server[:port] ] [ -P destina‐
-       tion[/instance] ] [ -a ] [ -l ] [ +interval ]
+       lpq [ -E ] [ -U username ] [ -h server[:port] ] [ -P destination[/instance] ] [ -a ] [ -l ] [ +interval ]
 
 DESCRIPTION
-       lpq shows the current print queue status on the named  printer.   Jobs
-       queued on the default destination will be shown if no printer or class
-       is specified on the command-line.
+       lpq shows the current print queue status on the named printer.  Jobs queued on the default destination will be shown if no printer or class is specified on the command-line.
 
-       The +interval option allows you to continuously report the jobs in the
-       queue  until  the queue is empty; the list of jobs is shown once every
-       interval seconds.
+       The +interval option allows you to continuously report the jobs in the queue until the queue is empty; the list of jobs is shown once every interval seconds.
 
 OPTIONS
        lpq supports the following options:
@@ -35,10 +30,9 @@ OPTIONS
        -l   Requests a more verbose (long) reporting format.
 
 SEE ALSO
-       cancel(1),  lp(1),  lpr(1),  lprm(1),  lpstat(1),  CUPS  Online   Help
-       (http://localhost:631/help)
+       cancel(1), lp(1), lpr(1), lprm(1), lpstat(1), CUPS Online Help (http://localhost:631/help)
 
 COPYRIGHT
        Copyright © 2007-2017 by Apple Inc.
 
-12 June 2014                         CUPS                              lpq(1)
+12 June 2014                                                                                     CUPS                                                                                           lpq(1)

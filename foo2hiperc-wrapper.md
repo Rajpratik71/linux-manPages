@@ -1,4 +1,4 @@
-foo2hiperc-wrapper(1)      General Commands Manual      foo2hiperc-wrapper(1)
+foo2hiperc-wrapper(1)                                                                   General Commands Manual                                                                  foo2hiperc-wrapper(1)
 
 NAME
        foo2hiperc-wrapper - Convert Postscript into a HIPERC printer stream
@@ -7,20 +7,14 @@ SYNOPSIS
        foo2hiperc-wrapper [options] [ps-file]
 
 DESCRIPTION
-       foo2hiperc-wrapper  is  a  Foomatic compatible printer wrapper for the
-       foo2hiperc printer driver.  This script reads a Postscript ps-file  or
-       standard  input  and  converts it to the Oki HIPERC printer format for
-       driving the Oki C310dn, C3100, C3200, C3300n, C3400n, C5100n,  C5500n,
-       C5600n and the C5800n HIPERC printers.
+       foo2hiperc-wrapper  is  a  Foomatic  compatible  printer wrapper for the foo2hiperc printer driver.  This script reads a Postscript ps-file or standard input and converts it to the Oki HIPERC
+       printer format for driving the Oki C310dn, C3100, C3200, C3300n, C3400n, C5100n, C5500n, C5600n and the C5800n HIPERC printers.
 
-       This script can be used in a standalone fashion, but is intended to be
-       called from a printer spooler system which uses the  Foomatic  printer
-       database.
+       This script can be used in a standalone fashion, but is intended to be called from a printer spooler system which uses the Foomatic printer database.
 
 COMMAND LINE OPTIONS
    Normal Options
-       These  are  the  options  used to select the parameters of a print job
-       that are usually controlled on a per job basis.
+       These are the options used to select the parameters of a print job that are usually controlled on a per job basis.
 
        -c     Print in color (else monochrome).
 
@@ -65,7 +59,7 @@ COMMAND LINE OPTIONS
 
        -s source
               Source (Input Slot) code to send to printer [0].
-              │                │
+
               │0   auto select │
               │1   tray1       │ 2   tray2
               │3   multi       │ 4   manual
@@ -83,26 +77,18 @@ COMMAND LINE OPTIONS
               Seascape    -os   (rotated 90 degrees clockwise)
 
    Printer Tweaking Options
-       These are the options used to customize the  operation  of  foo2hiperc
-       for a particular printer.
+       These are the options used to customize the operation of foo2hiperc for a particular printer.
 
        -u xoffxyoff
-              Set  the  offset  of the start of the printable region from the
-              upper left corner, in pixels [varies with paper size].
+              Set the offset of the start of the printable region from the upper left corner, in pixels [varies with paper size].
 
        -l xoffxyoff
-              Set the offset of the end of  the  printable  region  from  the
-              lower right corner, in pixels [varies with paper size].
+              Set the offset of the end of the printable region from the lower right corner, in pixels [varies with paper size].
 
        -L mask
-              Send  the  logical  clipping  values  from  -u/-l in the HIPERC
-              stream.  foo2hiperc-wrapper always runs  Ghostscript  with  the
-              ideal  page  dimensions, so that the scale of the image is cor‐
-              rect, regardless whether or not  the  printer  has  unprintable
-              regions.   This  option  is  used  to  move the position of the
-              clipped image back to  where  it  belongs  on  the  page.   The
-              default  is  to send the amount which was clipped by -u and -l,
-              and should be good in most cases.
+              Send the logical clipping values from -u/-l in the HIPERC stream.  foo2hiperc-wrapper always runs Ghostscript with the ideal page dimensions, so that the scale of the image is correct,
+              regardless  whether  or not the printer has unprintable regions.  This option is used to move the position of the clipped image back to where it belongs on the page.  The default is to
+              send the amount which was clipped by -u and -l, and should be good in most cases.
 
               0   don't send any logical clipping amounts
               1   only send Y clipping amount
@@ -110,50 +96,37 @@ COMMAND LINE OPTIONS
               3   send both X and Y clipping amounts
 
        -z model
-              Model  is  0   for   non-A3   sized   printers,   and   1   for
-              A3/Tabloid/Ledger   sized  printers  (i.e.  C810,  etc.).   The
-              default is 0.
+              Model is 0 for non-A3 sized printers, and 1 for A3/Tabloid/Ledger sized printers (i.e. C810, etc.).  The default is 0.
 
        -Z compressed
               Use uncompressed (0) or compressed (1) JBIG data.
 
    Color Tweaking Options
-       These are the options used to control the  quality  of  color  output.
-       Color correction is currently a WORK IN PROGRESS.
+       These are the options used to control the quality of color output.  Color correction is currently a WORK IN PROGRESS.
 
        -g gsopts
-              Additional   options   to   pass   to   Ghostscript,   such  as
-              -g“-dDITHERPPI=nnn”, etc.  This option  may  appear  more  than
-              once.
+              Additional options to pass to Ghostscript, such as -g“-dDITHERPPI=nnn”, etc.  This option may appear more than once.
 
        -G profile.icm
-              Convert  profile.icm to a Postscript color rendering dictionary
-              (CRD) using foo2zjs-icc2ps and adjust  the  printer  colors  by
-              using  the  Postscript  setcolorrendering  operator.   (WORK IN
+              Convert profile.icm to a Postscript color rendering dictionary (CRD) using foo2zjs-icc2ps and adjust the printer colors by using the Postscript setcolorrendering  operator.   (WORK  IN
               PROGRESS).
 
        -G gamma-file.ps
-              Prepend gamma-file.ps to the Postscript input to perform  color
-              correction using the setcolortransfer Postscript operator.  For
-              example, the file might contain:
-              {0.333 exp} {0.333 exp} {0.333 exp} {0.333 exp}  setcolortrans‐
-              fer
+              Prepend gamma-file.ps to the Postscript input to perform color correction using the setcolortransfer Postscript operator.  For example, the file might contain:
+              {0.333 exp} {0.333 exp} {0.333 exp} {0.333 exp} setcolortransfer
 
        -I intent
-              Select  profile intent from the ICM file.  0=Perceptual, 1=Col‐
-              orimetric, 2=Saturation, 3=Absolute.   Default  is  0  (percep‐
-              tual).
+              Select profile intent from the ICM file.  0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute.  Default is 0 (perceptual).
 
    Debugging Options
        These options are used for debugging foo2hiperc and its wrapper.
 
        -S plane
-              Output  just  a single color plane from a color print and print
-              it on the black plane.  The default  is  to  output  all  color
-              planes.
+              Output just a single color plane from a color print and print it on the black plane.  The default is to output all color planes.
 
               1   Cyan
               2   Magenta
+
               3   Yellow
               4   Black
 
@@ -161,8 +134,7 @@ COMMAND LINE OPTIONS
               Set Debug level [0].
 
 EXAMPLES
-       Create  a monochrome HIPERC stream from a Postscript document, examine
-       it, and then print it using nc(1) or netcat(1):
+       Create a monochrome HIPERC stream from a Postscript document, examine it, and then print it using nc(1) or netcat(1):
 
               foo2hiperc-wrapper testpage.ps > testpage.hc
               hipercdecode < testpage.hc

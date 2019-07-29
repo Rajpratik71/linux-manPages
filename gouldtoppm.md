@@ -1,4 +1,4 @@
-gouldtoppm(1)              General Commands Manual              gouldtoppm(1)
+gouldtoppm(1)                                                                           General Commands Manual                                                                          gouldtoppm(1)
 
 NAME
        gouldtoppm - convert Gould scanner file into a portable pixmap
@@ -7,8 +7,7 @@ SYNOPSIS
        gouldtoppm [gouldfile]
 
 DESCRIPTION
-       Reads  a file produced by the Gould scanner as input.  Produces a por‐
-       table pixmap as output.
+       Reads a file produced by the Gould scanner as input.  Produces a portable pixmap as output.
 
 SEE ALSO
        ppm(5)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright(C) 1990 by Stephen Paul Lesniewski
 
-                                 20 May 1990                    gouldtoppm(1)
+                                                                                              20 May 1990                                                                                gouldtoppm(1)

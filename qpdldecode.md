@@ -1,4 +1,4 @@
-qpdldecode(1)              General Commands Manual              qpdldecode(1)
+qpdldecode(1)                                                                           General Commands Manual                                                                          qpdldecode(1)
 
 NAME
        qpdldecode - Decode a QPDL stream into human readable form.
@@ -7,11 +7,9 @@ SYNOPSIS
        qpdldecode [options] <qpdl-file
 
 DESCRIPTION
-       qpdldecode  decodes  a QPDL stream into human readable form.  Only the
-       JBIG compression format (0x13) is handled.
+       qpdldecode decodes a QPDL stream into human readable form.  Only the JBIG compression format (0x13) is handled.
 
-       An QPDL stream is the printer language used by  the  Samsung  CLP-300,
-       CLP-600, CLX-3160 and the Xerox Phaser 6110 printers.
+       An QPDL stream is the printer language used by the Samsung CLP-300, CLP-600, CLX-3160 and the Xerox Phaser 6110 printers.
 
 COMMAND LINE OPTIONS
        These are the options that can appear on the command line.

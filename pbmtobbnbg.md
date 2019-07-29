@@ -1,4 +1,4 @@
-pbmtobbnbg(1)              General Commands Manual              pbmtobbnbg(1)
+pbmtobbnbg(1)                                                                           General Commands Manual                                                                          pbmtobbnbg(1)
 
 NAME
        pbmtobbnbg - convert a portable bitmap into BitGraph graphics
@@ -7,13 +7,10 @@ SYNOPSIS
        pbmtobbnbg [rasterop] [x y] < pbmfile
 
 DESCRIPTION
-       Reads a portable bitmap as input.  Produces BBN BitGraph terminal Dis‐
-       play Pixel Data (DPD) sequence as output.
+       Reads a portable bitmap as input.  Produces BBN BitGraph terminal Display Pixel Data (DPD) sequence as output.
 
-       The rasterop can be specified on the command line.  If this  is  omit‐
-       ted,  3  (replace)  will be used.  A position in (x,y) coordinates can
-       also be specified.  If both are given, the rasterop comes first.   The
-       portable bitmap is always taken from the standard input.
+       The  rasterop  can  be  specified  on the command line.  If this is omitted, 3 (replace) will be used.  A position in (x,y) coordinates can also be specified.  If both are given, the rasterop
+       comes first.  The portable bitmap is always taken from the standard input.
 
        Note that there is no bgtopbm tool.
 
@@ -25,4 +22,4 @@ SEE ALSO
 AUTHOR
        Copyright 1989 by Mike Parker.
 
-                                 16 May 1989                    pbmtobbnbg(1)
+                                                                                              16 May 1989                                                                                pbmtobbnbg(1)

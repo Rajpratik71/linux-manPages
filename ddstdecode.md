@@ -1,4 +1,4 @@
-ddstdecode(1)              General Commands Manual              ddstdecode(1)
+ddstdecode(1)                                                                           General Commands Manual                                                                          ddstdecode(1)
 
 NAME
        ddstdecode - Decode a Ricoh DDST stream into human readable form.
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        ddstdecode decodes a Ricoh DDST stream into human readable form.
 
-       A  Ricoh DDST stream is the printer language used by some Ricoh print‐
-       ers. From what I can tell, it is pbmtojbg(1) wrapped with some PJL.
+       A Ricoh DDST stream is the printer language used by some Ricoh printers. From what I can tell, it is pbmtojbg(1) wrapped with some PJL.
 
 COMMAND LINE OPTIONS
        These are the options that can appear on the command line.

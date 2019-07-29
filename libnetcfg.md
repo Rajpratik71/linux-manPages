@@ -1,12 +1,10 @@
-LIBNETCFG(1)           Perl Programmers Reference Guide          LIBNETCFG(1)
+LIBNETCFG(1)                                                                       Perl Programmers Reference Guide                                                                       LIBNETCFG(1)
 
 NAME
        libnetcfg - configure libnet
 
 DESCRIPTION
-       The libnetcfg utility can be used to configure the libnet.  Starting
-       from perl 5.8 libnet is part of the standard Perl distribution, but
-       the libnetcfg can be used for any libnet installation.
+       The libnetcfg utility can be used to configure the libnet.  Starting from perl 5.8 libnet is part of the standard Perl distribution, but the libnetcfg can be used for any libnet installation.
 
 USAGE
        Without arguments libnetcfg displays the current configuration.
@@ -32,17 +30,12 @@ USAGE
 
        The "-h" option will show a usage message.
 
-       To change the configuration you will need to use either the "-c" or
-       the "-d" options.
+       To change the configuration you will need to use either the "-c" or the "-d" options.
 
-       The default name of the old configuration file is by default
-       "libnet.cfg", unless otherwise specified using the -i option, "-i
-       oldfile", and it is searched first from the current directory, and
-       then from your module path.
+       The default name of the old configuration file is by default "libnet.cfg", unless otherwise specified using the -i option, "-i oldfile", and it is searched first from the current directory,
+       and then from your module path.
 
-       The default name of the new configuration file is "libnet.cfg", and by
-       default it is written to the current directory, unless otherwise
-       specified using the -o option, "-o newfile".
+       The default name of the new configuration file is "libnet.cfg", and by default it is written to the current directory, unless otherwise specified using the -o option, "-o newfile".
 
 SEE ALSO
        Net::Config, libnetFAQ
@@ -50,7 +43,6 @@ SEE ALSO
 AUTHORS
        Graham Barr, the original Configure script of libnet.
 
-       Jarkko Hietaniemi, conversion into libnetcfg for inclusion into Perl
-       5.8.
+       Jarkko Hietaniemi, conversion into libnetcfg for inclusion into Perl 5.8.
 
-perl v5.26.1                      2018-11-19                     LIBNETCFG(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                  LIBNETCFG(1)

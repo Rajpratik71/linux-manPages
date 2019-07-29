@@ -1,47 +1,34 @@
-pamdice(1)                 General Commands Manual                 pamdice(1)
+pamdice(1)                                                                              General Commands Manual                                                                             pamdice(1)
 
 NAME
-       pamdice  -  slice  a Netpbm image into many horizontally and/or verti‐
-       cally
+       pamdice - slice a Netpbm image into many horizontally and/or vertically
 
 SYNOPSIS
-       pamslice -outstem=filenamestem [-width=width] [-height=height]  [-ver‐
-       bose] [filename]
+       pamslice -outstem=filenamestem [-width=width] [-height=height] [-verbose] [filename]
 
-       You  can  use the minimum unique abbreviation of the options.  You can
-       use two hyphens instead of one.  You can separate an option name  from
-       its value with white space instead of an equals sign.
+       You  can  use  the  minimum  unique abbreviation of the options.  You can use two hyphens instead of one.  You can separate an option name from its value with white space instead of an equals
+       sign.
 
 DESCRIPTION
-       Reads  a PAM, PBM, PGM, or PPM image as input.  Splits it horizontally
-       and/or vertically into equal size pieces and writes them into separate
-       files as the same kind of image.
+       Reads a PAM, PBM, PGM, or PPM image as input.  Splits it horizontally and/or vertically into equal size pieces and writes them into separate files as the same kind of image.
 
        See the -outstem option for information on naming of the output files.
 
-       The  -width  and  -height  options  determine  the  size of the output
-       pieces.
+       The -width and -height options determine the size of the output pieces.
 
        pnmcat can rejoin the images.
 
 OPTIONS
        -outstem=filenamestem
-              This option determines the names of  the  output  files.   Each
-              output  file  is named filenamestem_y_x.type where filenamestem
-              is the value of the -outstem option, x and y are the horizontal
-              and vertical locations, respectively, in the input image of the
-              output image, zero being the leftmost  and  top,  and  type  is
-              .pbm, .pgm, .ppm, or .pam, depending on the type of image.
+              This option determines the names of the output files.  Each output file is named filenamestem_y_x.type where filenamestem is the value of the -outstem option, x and y are the  horizon‐
+              tal  and  vertical  locations,  respectively,  in  the input image of the output image, zero being the leftmost and top, and type is .pbm, .pgm, .ppm, or .pam, depending on the type of
+              image.
 
        -width=width
-              gives  the width in pixels of the output images.  The rightmost
-              pieces are smaller than this if the input image is not a multi‐
-              ple of width pixels wide.
+              gives the width in pixels of the output images.  The rightmost pieces are smaller than this if the input image is not a multiple of width pixels wide.
 
        -height=height
-              gives  the  height  in pixels of the output images.  The bottom
-              pieces are smaller than this if the input image is not a multi‐
-              ple of height pixels high.
+              gives the height in pixels of the output images.  The bottom pieces are smaller than this if the input image is not a multiple of height pixels high.
 
        -verbose
               Print information about the processing to Standard Error.
@@ -52,4 +39,4 @@ SEE ALSO
 AUTHOR
        put by Bryan Henderson in the public domain in 2001
 
-                               31 January 2001                     pamdice(1)
+                                                                                            31 January 2001                                                                                 pamdice(1)

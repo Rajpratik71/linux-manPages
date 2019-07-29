@@ -1,4 +1,4 @@
-PRINTF(1)                       User Commands                       PRINTF(1)
+PRINTF(1)                                                                                    User Commands                                                                                   PRINTF(1)
 
 NAME
        printf - format and print data
@@ -43,42 +43,32 @@ DESCRIPTION
 
        \xHH   byte with hexadecimal value HH (1 to 2 digits)
 
-       \uHHHH Unicode  (ISO/IEC  10646) character with hex value HHHH (4 dig‐
-              its)
+       \uHHHH Unicode (ISO/IEC 10646) character with hex value HHHH (4 digits)
 
        \UHHHHHHHH
               Unicode character with hex value HHHHHHHH (8 digits)
 
        %%     a single %
 
-       %b     ARGUMENT as a string with '\' escapes interpreted, except  that
-              octal escapes are of the form \0 or \0NNN
+       %b     ARGUMENT as a string with '\' escapes interpreted, except that octal escapes are of the form \0 or \0NNN
 
-       %q     ARGUMENT  is  printed  in  a format that can be reused as shell
-              input, escaping  non-printable  characters  with  the  proposed
-              POSIX $'' syntax.
+       %q     ARGUMENT is printed in a format that can be reused as shell input, escaping non-printable characters with the proposed POSIX $'' syntax.
 
-       and all C format specifications ending with one of diouxXfeEgGcs, with
-       ARGUMENTs converted to proper type first.  Variable  widths  are  han‐
-       dled.
+       and all C format specifications ending with one of diouxXfeEgGcs, with ARGUMENTs converted to proper type first.  Variable widths are handled.
 
-       NOTE:  your  shell  may  have its own version of printf, which usually
-       supersedes the version described here.  Please refer to  your  shell's
-       documentation for details about the options it supports.
+       NOTE:  your  shell  may  have its own version of printf, which usually supersedes the version described here.  Please refer to your shell's documentation for details about the options it sup‐
+       ports.
 
 AUTHOR
        Written by David MacKenzie.
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-       Report    printf    translation    bugs   to   <http://translationpro‐
-       ject.org/team/>
+       Report printf translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        printf(3)
@@ -86,4 +76,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/printf>
        or available locally via: info '(coreutils) printf invocation'
 
-GNU coreutils 8.28               January 2018                       PRINTF(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                    PRINTF(1)

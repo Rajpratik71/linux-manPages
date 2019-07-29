@@ -1,4 +1,4 @@
-macptopbm(1)               General Commands Manual               macptopbm(1)
+macptopbm(1)                                                                            General Commands Manual                                                                           macptopbm(1)
 
 NAME
        macptopbm - convert a MacPaint file into a portable bitmap
@@ -11,14 +11,9 @@ DESCRIPTION
 
 OPTIONS
        -extraskip
-              This  flag  is  to  get  around  a problem with some methods of
-              transferring files from the Mac world to the Unix world.   Most
-              of  these  methods leave the Mac files alone, but a few of them
-              add the "finderinfo" data onto the  front  of  the  Unix  file.
-              This  means  an  extra  128 bytes to skip over when reading the
-              file.  The symptom to watch for is that the resulting PBM  file
-              looks  shifted  to  one  side.  If you get this, try -extraskip
-              128, and if that still doesn't look right try another value.
+              This  flag  is to get around a problem with some methods of transferring files from the Mac world to the Unix world.  Most of these methods leave the Mac files alone, but a few of them
+              add the "finderinfo" data onto the front of the Unix file.  This means an extra 128 bytes to skip over when reading the file.  The symptom to watch for is that the resulting  PBM  file
+              looks shifted to one side.  If you get this, try -extraskip 128, and if that still doesn't look right try another value.
 
        All flags can be abbreviated to their shortest unique prefix.
 
@@ -26,7 +21,6 @@ SEE ALSO
        picttoppm(1), pbmtomacp(1), pbm(5)
 
 AUTHOR
-       Copyright (C) 1988 by Jef Poskanzer.   The  MacPaint-reading  code  is
-       copyright (c) 1987 by Patrick J. Naughton (naughton@wind.sun.com).
+       Copyright (C) 1988 by Jef Poskanzer.  The MacPaint-reading code is copyright (c) 1987 by Patrick J. Naughton (naughton@wind.sun.com).
 
-                                29 March 1989                    macptopbm(1)
+                                                                                             29 March 1989                                                                                macptopbm(1)

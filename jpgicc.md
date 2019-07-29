@@ -1,4 +1,4 @@
-JPGICC(1)                  General Commands Manual                  JPGICC(1)
+JPGICC(1)                                                                               General Commands Manual                                                                              JPGICC(1)
 
 NAME
        jpgicc - little cms ICC profile applier for JPEG.
@@ -7,25 +7,20 @@ SYNOPSIS
        jpgicc [options] input.jpg output.jpg
 
 DESCRIPTION
-       lcms  is  a  standalone CMM engine, which deals with the color manage‐
-       ment.  It implements a fast transformation between ICC profiles.  jpg‐
-       icc is a little cms ICC profile applier for JPEG.
+       lcms is a standalone CMM engine, which deals with the color management.  It implements a fast transformation between ICC profiles.  jpgicc is a little cms ICC profile applier for JPEG.
 
 OPTIONS
        -b     Black point compensation.
 
-       -c NUM Precalculates  transform  (0=Off,  1=Normal, 2=Hi-res, 3=LoRes)
-              [defaults to 1].
+       -c NUM Precalculates transform (0=Off, 1=Normal, 2=Hi-res, 3=LoRes) [defaults to 1].
 
-       -d NUM Observer  adaptation  state  (abs.col.  only),  (0..1.0,  float
-              value) [defaults to 0.0].
+       -d NUM Observer adaptation state (abs.col. only), (0..1.0, float value) [defaults to 0.0].
 
        -e     Embed destination profile.
 
        -g     Marks out-of-gamut colors on softproof.
 
-       -h NUM Show  summary  of  options  and  examples  (0=help, 1=Examples,
-              2=Built-in profiles, 3=Contact information)
+       -h NUM Show summary of options and examples (0=help, 1=Examples, 2=Built-in profiles, 3=Contact information)
 
        -i profile
               Input profile (defaults to sRGB).
@@ -63,8 +58,7 @@ OPTIONS
        -v     Verbose.
 
        -! NUM,NUM,NUM
-              Out-of-gamut   marker   channel   values   (r,g,b)   [defaults:
-              128,128,128].
+              Out-of-gamut marker channel values (r,g,b) [defaults: 128,128,128].
 
 BUILT-IN PROFILES
             *Lab2  -- D50-based v2 CIEL*a*b
@@ -97,14 +91,12 @@ EXAMPLES
             jpgicc in.jpg out.jpg
 
 NOTES
-       For  suggestions,  comments,  bug  reports etc. send mail to info@lit‐
-       tlecms.com.
+       For suggestions, comments, bug reports etc. send mail to info@littlecms.com.
 
 SEE ALSO
        linkicc(1), psicc(1), tificc(1), transicc(1)
 
 AUTHOR
-       This manual page was written by Shiju p. Nair <shiju.p@gmail.com>, for
-       the Debian project.
+       This manual page was written by Shiju p. Nair <shiju.p@gmail.com>, for the Debian project.
 
-                              September 30, 2004                    JPGICC(1)
+                                                                                          September 30, 2004                                                                                 JPGICC(1)

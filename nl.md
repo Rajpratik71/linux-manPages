@@ -1,4 +1,4 @@
-NL(1)                           User Commands                           NL(1)
+NL(1)                                                                                        User Commands                                                                                       NL(1)
 
 NAME
        nl - number lines of files
@@ -11,8 +11,7 @@ DESCRIPTION
 
        With no FILE, or when FILE is -, read standard input.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -b, --body-numbering=STYLE
               use STYLE for numbering body lines
@@ -52,9 +51,8 @@ DESCRIPTION
        --version
               output version information and exit
 
-       By default, selects -v1 -i1 -l1 -sTAB -w6 -nrn -hn -bt  -fn.   CC  are
-       two  delimiter characters used to construct logical page delimiters, a
-       missing second character implies :.  Type \\ for \.  STYLE is one of:
+       By  default,  selects -v1 -i1 -l1 -sTAB -w6 -nrn -hn -bt -fn.  CC are two delimiter characters used to construct logical page delimiters, a missing second character implies :.  Type \\ for \.
+       STYLE is one of:
 
        a      number all lines
 
@@ -62,8 +60,7 @@ DESCRIPTION
 
        n      number no lines
 
-       pBRE   number only lines that contain a match for  the  basic  regular
-              expression, BRE
+       pBRE   number only lines that contain a match for the basic regular expression, BRE
 
        FORMAT is one of:
 
@@ -81,13 +78,11 @@ REPORTING BUGS
        Report nl translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/nl>
        or available locally via: info '(coreutils) nl invocation'
 
-GNU coreutils 8.28               January 2018                           NL(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                        NL(1)

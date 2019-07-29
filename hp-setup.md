@@ -1,12 +1,10 @@
-hp-setup(1)                      User Manuals                     hp-setup(1)
+hp-setup(1)                                                                                  User Manuals                                                                                  hp-setup(1)
 
 NAME
        hp-setup - Printer/Fax Setup Utility
 
 DESCRIPTION
-       Installs  HPLIP printers and faxes in the CUPS spooler. Tries to auto‐
-       matically determine the correct PPD file to use. Allows  the  printing
-       of a testpage. Performs basic fax parameter setup.
+       Installs HPLIP printers and faxes in the CUPS spooler. Tries to automatically determine the correct PPD file to use. Allows the printing of a testpage. Performs basic fax parameter setup.
 
 SYNOPSIS
        hp-setup [MODE] [OPTIONS] [SERIAL NO.|USB bus:device|IP|DEVNODE]
@@ -35,8 +33,7 @@ OPTIONS
               -f<fax> or --fax=<fax> (-i mode only)
 
        Type of queue(s) to install:
-              -t<typelist>  or  --type=<typelist>.  <typelist>:  print*, fax*
-              (*default) (-i mode only)
+              -t<typelist> or --type=<typelist>. <typelist>: print*, fax* (*default) (-i mode only)
 
        To specify the device URI to install:
               -d<device> or --device=<device> (--qt4 mode only)
@@ -45,12 +42,10 @@ OPTIONS
               -r or --rm or --remove
 
        Set the language:
-              --loc=<lang> or --lang=<lang>. Use --loc=? or --lang=? to see a
-              list of available language codes.
+              --loc=<lang> or --lang=<lang>. Use --loc=? or --lang=? to see a list of available language codes.
 
        Set the logging level:
-              -l<level>  or  --logging=<level>  <level>:  none, info*, error,
-              warn, debug (*default)
+              -l<level> or --logging=<level> <level>: none, info*, error, warn, debug (*default)
 
        Run in debug mode:
               -g (same as option: -ldebug)
@@ -60,9 +55,7 @@ OPTIONS
 
 SERIAL NO.|USB ID|IP|DEVNODE
        USB bus:device (usb only):
-              "xxx:yyy" where 'xxx' is the USB  bus  and  'yyy'  is  the  USB
-              device.  (Note: The ':' and all leading zeros must be present.)
-              Use the 'lsusb' command to obtain this information.
+              "xxx:yyy" where 'xxx' is the USB bus and 'yyy' is the USB device. (Note: The ':' and all leading zeros must be present.)  Use the 'lsusb' command to obtain this information.
 
        IPs (network only):
               IPv4 address "a.b.c.d" or "hostname"
@@ -111,8 +104,7 @@ EXAMPLES
               $ hp-setup -i -b par
 
 NOTES
-       1. If no serial number, USB ID, IP, or device node is  specified,  the
-       USB and parallel busses will be probed for devices.
+       1. If no serial number, USB ID, IP, or device node is specified, the USB and parallel busses will be probed for devices.
 
        2. Using 'lsusb' to obtain USB IDs: (example)
 
@@ -122,8 +114,7 @@ NOTES
 
           $ hp-setup --auto 003:011
 
-           (Note: You may have to run 'lsusb' from /sbin or another location.
-       Use '$ locate lsusb' to determine this.)
+          (Note: You may have to run 'lsusb' from /sbin or another location. Use '$ locate lsusb' to determine this.)
 
        3. Parameters -a, -f, -p, or -t are not valid in GUI (-u) mode.
 
@@ -131,20 +122,14 @@ SEE ALSO
        hp-makeuri hp-probe
 
 AUTHOR
-       HPLIP (HP Linux Imaging and Printing) is an HP developed solution  for
-       printing, scanning, and faxing with HP inkjet and laser based printers
-       in Linux.
+       HPLIP (HP Linux Imaging and Printing) is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
 
 REPORTING BUGS
-       The HPLIP Launchpad.net site https://launchpad.net/hplip is  available
-       to  get help, report bugs, make suggestions, discuss the HPLIP project
-       or otherwise contact the HPLIP Team.
+       The HPLIP Launchpad.net site https://launchpad.net/hplip is available to get help, report bugs, make suggestions, discuss the HPLIP project or otherwise contact the HPLIP Team.
 
 COPYRIGHT
        Copyright (c) 2001-15 HP Development Company, L.P.
 
-       This software comes with ABSOLUTELY NO WARRANTY.  This is  free  soft‐
-       ware,  and  you are welcome to distribute it under certain conditions.
-       See COPYING file for more details.
+       This software comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are welcome to distribute it under certain conditions. See COPYING file for more details.
 
-Linux                                9.0                          hp-setup(1)
+Linux                                                                                             9.0                                                                                      hp-setup(1)

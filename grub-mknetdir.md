@@ -1,4 +1,4 @@
-GRUB-MKNETDIR(1)                User Commands                GRUB-MKNETDIR(1)
+GRUB-MKNETDIR(1)                                                                             User Commands                                                                            GRUB-MKNETDIR(1)
 
 NAME
        grub-mknetdir - prepare a GRUB netboot directory.
@@ -11,8 +11,7 @@ DESCRIPTION
               compress GRUB files [optional]
 
        -d, --directory=DIR
-              use  images and modules under DIR [default=/usr/lib/grub/<plat‐
-              form>]
+              use images and modules under DIR [default=/usr/lib/grub/<platform>]
 
        --fonts=FONTS
               install FONTS [default=unicode]
@@ -56,11 +55,9 @@ DESCRIPTION
        -V, --version
               print program version
 
-       Mandatory or optional arguments to long options are also mandatory  or
-       optional for any corresponding short options.
+       Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
 
-       Prepares  GRUB  network  boot  images at net_directory/subdir assuming
-       net_directory being TFTP root.
+       Prepares GRUB network boot images at net_directory/subdir assuming net_directory being TFTP root.
 
 REPORTING BUGS
        Report bugs to <bug-grub@gnu.org>.
@@ -68,12 +65,10 @@ REPORTING BUGS
 SEE ALSO
        grub-mkimage(1)
 
-       The full documentation for grub-mknetdir is maintained  as  a  Texinfo
-       manual.  If the info and grub-mknetdir programs are properly installed
-       at your site, the command
+       The full documentation for grub-mknetdir is maintained as a Texinfo manual.  If the info and grub-mknetdir programs are properly installed at your site, the command
 
               info grub-mknetdir
 
        should give you access to the complete manual.
 
-grub-mknetdir (GRUB) 2.02-2ubuntFebruary 2019                GRUB-MKNETDIR(1)
+grub-mknetdir (GRUB) 2.02-2ubuntu8.12                                                        February 2019                                                                            GRUB-MKNETDIR(1)

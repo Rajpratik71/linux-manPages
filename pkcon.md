@@ -1,4 +1,4 @@
-PKCON(1)                        User Commands                        PKCON(1)
+PKCON(1)                                                                                     User Commands                                                                                    PKCON(1)
 
 NAME
        pkcon - PackageKit console client
@@ -12,8 +12,7 @@ DESCRIPTION
        pkcon is the command line client for PackageKit.
 
 COMMANDS
-       pkcon knows about the following commands. Depending on the backend in
-       use, not all of them may be available.
+       pkcon knows about the following commands. Depending on the backend in use, not all of them may be available.
 
        backend-details
            Print information about the PackageKit backend in use.
@@ -31,13 +30,10 @@ COMMANDS
            List known transactions.
 
        get-time ROLE
-           Print the time that has passed since the last transaction with the
-           given role.
+           Print the time that has passed since the last transaction with the given role.
 
        search [name|details|group|file] DATA
-           Search for a package matching the given data. The search is
-           performed in the package information that is indicated by the
-           first argument: name, details, group or files.
+           Search for a package matching the given data. The search is performed in the package information that is indicated by the first argument: name, details, group or files.
 
        install PACKAGES
            Install the given packages from repositories.
@@ -46,26 +42,22 @@ COMMANDS
            Install the given packages from the local filesystem.
 
        download DIRECTORY PACKAGES
-           Download the given packages from repositories, and store them in
-           the given directory.
+           Download the given packages from repositories, and store them in the given directory.
 
        install-sig TYPE KEY_ID PACKAGE
-           Install a package signature. Only GPG signatures are supported at
-           this time.
+           Install a package signature. Only GPG signatures are supported at this time.
 
        remove PACKAGE
            Remove the given package.
 
        update [PACKAGES]
-           Update the system by installing available updates. If a list of
-           packages is specified, only install updates for these packages.
+           Update the system by installing available updates. If a list of packages is specified, only install updates for these packages.
 
        refresh [force]
            Refresh the cached information about available updates.
 
        resolve PACKAGE
-           Resolve the given package name and print information about
-           installed or available packages and updates.
+           Resolve the given package name and print information about installed or available packages and updates.
 
        upgrade-system DISTRIBUTION [minimal|default|complete]
            Upgrade the system to the given distribution.
@@ -83,8 +75,7 @@ COMMANDS
            List packages that require the given package.
 
        get-details PACKAGE
-           Print details about the available or installed package with the
-           given name.
+           Print details about the available or installed package with the given name.
 
        get-details-local FILE
            Print details about the local package.
@@ -114,8 +105,7 @@ COMMANDS
            Set the given parameter to the given value for the repository.
 
        repo-remove REPOSITORY PARAMETER
-           Removes the repository and optionally any packages installed from
-           it.
+           Removes the repository and optionally any packages installed from it.
 
        what-provides STRING
            List packages that provide the given string.
@@ -130,8 +120,7 @@ COMMANDS
            Attempt to repair the system package database.
 
        offline-get-prepared
-           Print information about the prepared offline update. If no offline
-           update is prepared, exit with an exit code of 1.
+           Print information about the prepared offline update. If no offline update is prepared, exit with an exit code of 1.
 
        offline-trigger
            Trigger an offline update.
@@ -161,19 +150,16 @@ OPTIONS
            Prepare the transaction by downloading packages only.
 
        -n, --background
-           Run the command using idle network bandwidth and also using less
-           power.
+           Run the command using idle network bandwidth and also using less power.
 
        -p, --plain
-           Print to screen a machine-readable output, rather than using
-           animated widgets.
+           Print to screen a machine-readable output, rather than using animated widgets.
 
        -v, --verbose
            Show debugging information.
 
        -c, --cache-age AGE
-           Set the maximum acceptable age for cached metadata, in seconds.
-           Use -1 for 'never'.
+           Set the maximum acceptable age for cached metadata, in seconds. Use -1 for 'never'.
 
        --allow-untrusted
            Allow untrusted packages to be installed.
@@ -204,8 +190,7 @@ RETURN VALUES
            The initial setup failed, e.g. setting the network proxy.
 
        7
-           The transaction failed, see the detailed error for more
-           information.
+           The transaction failed, see the detailed error for more information.
 
 SEE ALSO
        pkmon (1).
@@ -222,4 +207,4 @@ AUTHOR
 COPYRIGHT
        Copyright © 2007 - 2013 Richard Hughes
 
-PackageKit                      July 29, 2013                        PKCON(1)
+PackageKit                                                                                   July 29, 2013                                                                                    PKCON(1)

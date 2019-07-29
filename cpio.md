@@ -1,33 +1,19 @@
-CPIO(1)                            GNU CPIO                           CPIO(1)
+CPIO(1)                                                                                        GNU CPIO                                                                                        CPIO(1)
 
 NAME
        cpio - copy files to and from archives
 
 SYNOPSIS
-       cpio {-o|--create} [-0acvABLV] [-C BYTES] [-H FORMAT] [-M MESSAGE] [-O
-       [[USER@]HOST:]ARCHIVE]           [-F            [[USER@]HOST:]ARCHIVE]
-       [--file=[[USER@]HOST:]ARCHIVE]  [--format=FORMAT]  [--message=MESSAGE]
-       [--null]   [--reset-access-time]   [--verbose]   [--dot]    [--append]
-       [--block-size=blocks]   [--dereference]   [--io-size=BYTES]  [--quiet]
-       [--force-local] [--rsh-command=COMMAND] < name-list [> archive]
+       cpio  {-o|--create}  [-0acvABLV] [-C BYTES] [-H FORMAT] [-M MESSAGE] [-O [[USER@]HOST:]ARCHIVE] [-F [[USER@]HOST:]ARCHIVE] [--file=[[USER@]HOST:]ARCHIVE] [--format=FORMAT] [--message=MESSAGE]
+       [--null] [--reset-access-time] [--verbose] [--dot] [--append] [--block-size=blocks] [--dereference] [--io-size=BYTES] [--quiet] [--force-local] [--rsh-command=COMMAND] < name-list [> archive]
 
-       cpio {-i|--extract} [-bcdfmnrtsuvBSV] [-C BYTES] [-E FILE] [-H FORMAT]
-       [-M  MESSAGE]  [-R  [USER][:.][GROUP]]  [-I [[USER@]HOST:]ARCHIVE] [-F
-       [[USER@]HOST:]ARCHIVE] [--file=[[USER@]HOST:]ARCHIVE] [--make-directo‐
-       ries]          [--nonmatching]          [--preserve-modification-time]
-       [--numeric-uid-gid]  [--rename]   [--list]   [--swap-bytes]   [--swap]
-       [--dot]     [--unconditional]     [--verbose]    [--block-size=BLOCKS]
-       [--swap-halfwords]  [--io-size=BYTES]  [--pattern-file=FILE]   [--for‐
-       mat=FORMAT]  [--owner=[USER][:.][GROUP]] [--no-preserve-owner] [--mes‐
-       sage=MESSAGE]  [--force-local]  [--no-absolute-filenames]   [--sparse]
-       [--only-verify-crc]  [--to-stdout]  [--quiet]  [--rsh-command=COMMAND]
-       [--extract-over-symlinks] [pattern...] [< archive]
+       cpio {-i|--extract} [-bcdfmnrtsuvBSV] [-C BYTES] [-E FILE] [-H FORMAT] [-M MESSAGE] [-R [USER][:.][GROUP]] [-I [[USER@]HOST:]ARCHIVE] [-F [[USER@]HOST:]ARCHIVE] [--file=[[USER@]HOST:]ARCHIVE]
+       [--make-directories] [--nonmatching] [--preserve-modification-time] [--numeric-uid-gid] [--rename] [--list] [--swap-bytes] [--swap] [--dot] [--unconditional] [--verbose] [--block-size=BLOCKS]
+       [--swap-halfwords] [--io-size=BYTES] [--pattern-file=FILE] [--format=FORMAT] [--owner=[USER][:.][GROUP]] [--no-preserve-owner]  [--message=MESSAGE]  [--force-local]  [--no-absolute-filenames]
+       [--sparse] [--only-verify-crc] [--to-stdout] [--quiet] [--rsh-command=COMMAND] [--extract-over-symlinks] [pattern...] [< archive]
 
-       cpio {-p|--pass-through} [-0adlmuvLV] [-R [USER][:.][GROUP]]  [--null]
-       [--reset-access-time]  [--make-directories] [--link] [--quiet] [--pre‐
-       serve-modification-time]   [--unconditional]    [--verbose]    [--dot]
-       [--dereference]    [--owner=[USER][:.][GROUP]]   [--no-preserve-owner]
-       [--sparse] destination-directory < name-list
+       cpio  {-p|--pass-through}  [-0adlmuvLV]  [-R [USER][:.][GROUP]] [--null] [--reset-access-time] [--make-directories] [--link] [--quiet] [--preserve-modification-time] [--unconditional] [--ver‐
+       bose] [--dot] [--dereference] [--owner=[USER][:.][GROUP]] [--no-preserve-owner] [--sparse] destination-directory < name-list
 
        cpio {-?|--help|--usage|--version}
 
@@ -44,28 +30,20 @@ SEE ALSO
        cpio(5)
 
 DESCRIPTION
-       GNU cpio copies files between archives and directories.   It  supports
-       the  following  archive  formats:  old binary cpio, old portable cpio,
-       SVR4 cpio with and without checksum, HP cpio, and various tar formats.
+       GNU cpio copies files between archives and directories.  It supports the following archive formats: old binary cpio, old portable cpio, SVR4 cpio with and without checksum, HP cpio, and vari‐
+       ous tar formats.
 
        The operation mode is requested by one of the following options:
 
        -o, --create
-              Copy-out.  Read a list of file names from  the  standard  input
-              and  create  on  the  standard output (unless overridden by the
-              --file option) an archive containing these files.
+              Copy-out.  Read a list of file names from the standard input and create on the standard output (unless overridden by the --file option) an archive containing these files.
 
        -i, --extract
-              Copy-in.  Read the archive from standard  input  (or  from  the
-              file  supplied  with  the --file option) and extract files from
-              it, or (if the -t option is given) list  its  contents  to  the
-              standard output.  If one or more patterns are supplied, read or
-              list only files matching these patterns.  The -t  option  alone
-              implies -i.
+              Copy-in.   Read  the  archive  from standard input (or from the file supplied with the --file option) and extract files from it, or (if the -t option is given) list its contents to the
+              standard output.  If one or more patterns are supplied, read or list only files matching these patterns.  The -t option alone implies -i.
 
        -p, --pass-through
-              Pass-through.   Read  a  list  of  file names from the standard
-              input and copy them to the specified directory.
+              Pass-through.  Read a list of file names from the standard input and copy them to the specified directory.
 
        -?, --help
               Give a short help summary and exit.
@@ -92,8 +70,7 @@ OPTIONS
 
        -B     Set the I/O block size to 5120 bytes.
 
-       -c     Use the old portable (ASCII) archive format.  This is the  same
-              as -H odc.
+       -c     Use the old portable (ASCII) archive format.  This is the same as -H odc.
 
        -C, --io-size=NUMBER
               Set the I/O block size to the given NUMBER of bytes.
@@ -105,42 +82,31 @@ OPTIONS
               Archive file is local, even if its name contains colons.
 
        -H, --format=FORMAT
-              Use  given  archive  FORMAT.   Valid formats are (the number in
-              parentheses gives maximum size for individual archive member):
+              Use given archive FORMAT.  Valid formats are (the number in parentheses gives maximum size for individual archive member):
 
               bin    The obsolete binary format.  (2147483647 bytes)
 
               odc    The old (POSIX.1) portable format. (8589934591 bytes)
 
-              newc   The new (SVR4) portable format, which supports file sys‐
-                     tems having more than 65536 i-nodes. (4294967295 bytes)
+              newc   The new (SVR4) portable format, which supports file systems having more than 65536 i-nodes. (4294967295 bytes)
 
               crc    The new (SVR4) portable format with a checksum added.
 
               tar    The old tar format. (8589934591 bytes)
 
-              ustar  The  POSIX.1  tar  format.   Also recognizes GNU tar ar‐
-                     chives, which are similar but not identical. (8589934591
-                     bytes)
+              ustar  The POSIX.1 tar format.  Also recognizes GNU tar archives, which are similar but not identical. (8589934591 bytes)
 
-              hpbin  The  obsolete  binary  format used by HPUX's cpio (which
-                     stores device files differently).
+              hpbin  The obsolete binary format used by HPUX's cpio (which stores device files differently).
 
-              hpodc  The portable format used by HPUX's  cpio  (which  stores
-                     device files differently).
+              hpodc  The portable format used by HPUX's cpio (which stores device files differently).
 
        -R, --owner=[USER][:.][GROUP]
-              In  copy-in  and copy-pass mode, set the ownership of all files
-              created to the specified USER and/or GROUP.  In copy-out  mode,
-              store the supplied owner information in the archive.
+              In copy-in and copy-pass mode, set the ownership of all files created to the specified USER and/or GROUP.  In copy-out mode, store the supplied owner information in the archive.
 
-              USER and GROUP are first looked up in the system user and group
-              databases.  If not found, cpio checks if they consist of  deci‐
-              mal digits only and, if so, treats them as numeric UID and GID,
-              correspondingly.
+              USER and GROUP are first looked up in the system user and group databases.  If not found, cpio checks if they consist of decimal digits only and, if so, treats them as numeric UID  and
+              GID, correspondingly.
 
-              To avoid the lookup and ensure that arguments  are  treated  as
-              numeric values, prefix them with a plus sign, e.g.: -R +0:+0.
+              To avoid the lookup and ensure that arguments are treated as numeric values, prefix them with a plus sign, e.g.: -R +0:+0.
 
        --quiet
               Do not print the number of blocks copied at the end of the run.
@@ -155,34 +121,27 @@ OPTIONS
               Print a "." for each file processed.
 
        -W, --warning=FLAG
-              Controlsи warning display.  The FLAG is one of none, to disable
-              all warnings, all to enable them, truncate, to enable  warnings
-              about field truncation, and no-truncate, to disable them.
+              Controlsи warning display.  The FLAG is one of none, to disable all warnings, all to enable them, truncate, to enable warnings about field truncation, and no-truncate, to disable them.
 
               Multiple -W options accumulate.
 
    Operation modifiers valid in copy-in and copy-out modes
        -F, --file=[[USER@]HOST:]ARCHIVE-FILE
-              Use  this  ARCHIVE-FILE  instead  of standard input (in copy-in
-              mode) or standard output (in copy-out mode).  Optional USER and
-              HOST  specify  the  user and host names in case of a remote ar‐
+              Use this ARCHIVE-FILE instead of standard input (in copy-in mode) or standard output (in copy-out mode).  Optional USER and HOST specify the user and host names in case of a remote ar‐
               chive.
 
        -M, --message=STRING
-              Print STRING when the end of a volume of the  backup  media  is
-              reached.
+              Print STRING when the end of a volume of the backup media is reached.
 
    Operation modifiers valid only in copy-in mode
        -b, --swap
-              Swap  both  halfwords  of  words  and bytes of halfwords in the
-              data.  Equivalent to -sS.
+              Swap both halfwords of words and bytes of halfwords in the data.  Equivalent to -sS.
 
        -f, --nonmatching
               Only copy files that do not match any of the given patterns.
 
        -n, --numeric-uid-gid
-              In the verbose table of contents listing, show numeric UID  and
-              GID.
+              In the verbose table of contents listing, show numeric UID and GID.
 
        -r, --rename
               Interactively rename files.
@@ -197,33 +156,25 @@ OPTIONS
               Extract files to standard output.
 
        -E, --pattern-file=FILE
-              Read  additional  patterns  specifying  filenames to extract or
-              list from FILE.
+              Read additional patterns specifying filenames to extract or list from FILE.
 
        --only-verify-crc
-              When reading a CRC format archive, only  verify  the  CRC's  of
-              each  file  in  the  archive,  without  actually extracting the
-              files.
+              When reading a CRC format archive, only verify the CRC's of each file in the archive, without actually extracting the files.
 
    Operation modifiers valid only in copy-out mode
        -A, --append
               Append to an existing archive.
 
        --device-independent, --reproducible
-              Create  reproducible   archives.    This   is   equivalent   to
-              --ignore-devno --renumber-inodes.
+              Create reproducible archives.  This is equivalent to --ignore-devno --renumber-inodes.
 
        --ignore-devno
-              Store  0  in  the  device  number field of each archive member,
-              instead of the actual device number.
+              Store 0 in the device number field of each archive member, instead of the actual device number.
 
        -O [[USER@]HOST:]ARCHIVE-NAME
-              Use ARCHIVE-NAME instead of standard output. Optional USER  and
-              HOST  specify  the  user and host names in case of a remote ar‐
-              chive.
+              Use ARCHIVE-NAME instead of standard output. Optional USER and HOST specify the user and host names in case of a remote archive.
 
-              The output archive name can  be  specified  wither  using  this
-              option, or using -F (--file), but not both.
+              The output archive name can be specified wither using this option, or using -F (--file), but not both.
 
        --renumber-inodes
               Renumber inodes when storing them in the archive.
@@ -241,23 +192,18 @@ OPTIONS
 
    Operation modifiers valid in copy-out and copy-pass modes
        -0, --null
-              Filenames  in the list are delimited by null characters instead
-              of newlines.
+              Filenames in the list are delimited by null characters instead of newlines.
 
        -a, --reset-access-time
               Reset the access times of files after reading them.
 
        -I [[USER@]HOST:]ARCHIVE-NAME
-              Use ARCHIVE-NAME instead of standard input. Optional  USER  and
-              HOST  specify  the  user and host names in case of a remote ar‐
-              chive.
+              Use ARCHIVE-NAME instead of standard input. Optional USER and HOST specify the user and host names in case of a remote archive.
 
-              The input archive name  can  be  specified  wither  using  this
-              option, or using -F (--file), but not both.
+              The input archive name can be specified wither using this option, or using -F (--file), but not both.
 
        -L, --dereference
-              Dereference  symbolic  links (copy the files that they point to
-              instead of copying the links).
+              Dereference symbolic links (copy the files that they point to instead of copying the links).
 
    Operation modifiers valid in copy-in and copy-pass modes
        -d, --make-directories
@@ -276,8 +222,7 @@ OPTIONS
               Replace all files unconditionally.
 
 RETURN VALUE
-       GNU cpio exits with code 0 if it was able to successfully complete the
-       requested operation.  On errors, it exits with code 2.
+       GNU cpio exits with code 0 if it was able to successfully complete the requested operation.  On errors, it exits with code 2.
 
 SEE ALSO
        tar(1), rmt(8), mt(1).
@@ -287,9 +232,7 @@ BUG REPORTS
 
 COPYRIGHT
        Copyright © 2014 Free Software Foundation, Inc.
-       License GPLv3+: GNU GPL version 3 or later
-       <http://gnu.org/licenses/gpl.html>
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
-CPIO                           December 1, 2014                       CPIO(1)
+CPIO                                                                                       December 1, 2014                                                                                    CPIO(1)

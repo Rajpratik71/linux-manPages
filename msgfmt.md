@@ -1,4 +1,4 @@
-MSGFMT(1)                            GNU                            MSGFMT(1)
+MSGFMT(1)                                                                                         GNU                                                                                        MSGFMT(1)
 
 NAME
        msgfmt - compile message catalog to binary format
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        Generate binary message catalog from textual translation description.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.  Similarly for optional arguments.
+       Mandatory arguments to long options are mandatory for short options too.  Similarly for optional arguments.
 
    Input file location:
        filename.po ...
@@ -65,9 +64,7 @@ DESCRIPTION
        -d DIRECTORY
               base directory of classes directory hierarchy
 
-       The class name is determined by  appending  the  locale  name  to  the
-       resource  name, separated with an underscore.  The -d option is manda‐
-       tory.  The class is written under the specified directory.
+       The class name is determined by appending the locale name to the resource name, separated with an underscore.  The -d option is mandatory.  The class is written under the specified directory.
 
    Output file location in C# mode:
        -r, --resource=RESOURCE
@@ -79,9 +76,7 @@ DESCRIPTION
        -d DIRECTORY
               base directory for locale dependent .dll files
 
-       The -l and -d options are mandatory.  The .dll file is  written  in  a
-       subdirectory  of  the  specified  directory  whose name depends on the
-       locale.
+       The -l and -d options are mandatory.  The .dll file is written in a subdirectory of the specified directory whose name depends on the locale.
 
    Output file location in Tcl mode:
        -l, --locale=LOCALE
@@ -90,8 +85,7 @@ DESCRIPTION
        -d DIRECTORY
               base directory of .msg message catalogs
 
-       The -l and -d options are mandatory.  The .msg file is written in  the
-       specified directory.
+       The -l and -d options are mandatory.  The .msg file is written in the specified directory.
 
    Desktop Entry mode options:
        -l, --locale=LOCALE
@@ -112,9 +106,7 @@ DESCRIPTION
        -k, --keyword
               do not to use default keywords
 
-       The -l, -o, and --template options are mandatory.  If -D is specified,
-       input files are read from the directory instead of  the  command  line
-       arguments.
+       The -l, -o, and --template options are mandatory.  If -D is specified, input files are read from the directory instead of the command line arguments.
 
    XML mode options:
        -l, --locale=LOCALE
@@ -132,9 +124,7 @@ DESCRIPTION
        -d DIRECTORY
               base directory of .po files
 
-       The -l, -o, and --template options are mandatory.  If -D is specified,
-       input files are read from the directory instead of  the  command  line
-       arguments.
+       The -l, -o, and --template options are mandatory.  If -D is specified, input files are read from the directory instead of the command line arguments.
 
    Input file syntax:
        -P, --properties-input
@@ -145,8 +135,7 @@ DESCRIPTION
 
    Input file interpretation:
        -c, --check
-              perform    all    the   checks   implied   by   --check-format,
-              --check-header, --check-domain
+              perform all the checks implied by --check-format, --check-header, --check-domain
 
        --check-format
               check language dependent format strings
@@ -155,8 +144,7 @@ DESCRIPTION
               verify presence and contents of the header entry
 
        --check-domain
-              check for conflicts between domain directives  and  the  --out‐
-              put-file option
+              check for conflicts between domain directives and the --output-file option
 
        -C, --check-compatibility
               check that GNU msgfmt behaves like X/Open msgfmt
@@ -172,8 +160,7 @@ DESCRIPTION
               align strings to NUMBER bytes (default: 1)
 
        --endianness=BYTEORDER
-              write  out  32-bit numbers in the given byte order (big or lit‐
-              tle, default depends on platform)
+              write out 32-bit numbers in the given byte order (big or little, default depends on platform)
 
        --no-hash
               binary file will not include the hash table
@@ -198,19 +185,14 @@ REPORTING BUGS
        Report bugs to <bug-gnu-gettext@gnu.org>.
 
 COPYRIGHT
-       Copyright  ©  1995-1998,  2000-2016  Free  Software  Foundation,  Inc.
-       License     GPLv3+:     GNU     GPL     version     3     or     later
-       <http://gnu.org/licenses/gpl.html>
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 1995-1998, 2000-2016 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
-       The  full  documentation for msgfmt is maintained as a Texinfo manual.
-       If the info and msgfmt programs are properly installed at  your  site,
-       the command
+       The full documentation for msgfmt is maintained as a Texinfo manual.  If the info and msgfmt programs are properly installed at your site, the command
 
               info msgfmt
 
        should give you access to the complete manual.
 
-GNU gettext-tools 0.19.8.1        June 2016                         MSGFMT(1)
+GNU gettext-tools 0.19.8.1                                                                     June 2016                                                                                     MSGFMT(1)

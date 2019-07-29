@@ -1,4 +1,4 @@
-pbmtoxbm(1)                General Commands Manual                pbmtoxbm(1)
+pbmtoxbm(1)                                                                             General Commands Manual                                                                            pbmtoxbm(1)
 
 NAME
        pbmtoxbm - convert a portable bitmap into an X11 bitmap
@@ -15,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988 by Jef Poskanzer.
 
-                                31 August 1988                    pbmtoxbm(1)
+                                                                                            31 August 1988                                                                                 pbmtoxbm(1)

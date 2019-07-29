@@ -1,37 +1,26 @@
-APT-EXTRACTTEMPLATE(1)               APT               APT-EXTRACTTEMPLATE(1)
+APT-EXTRACTTEMPLATE(1)                                                                            APT                                                                           APT-EXTRACTTEMPLATE(1)
 
 NAME
-       apt-extracttemplates - Utility to extract debconf config and templates
-       from Debian packages
+       apt-extracttemplates - Utility to extract debconf config and templates from Debian packages
 
 SYNOPSIS
-       apt-extracttemplates [-t=temporary_directory] filename...
-                            {-v | --version} {-h | --help}
+       apt-extracttemplates [-t=temporary_directory] filename... {-v | --version} {-h | --help}
 
 DESCRIPTION
-       apt-extracttemplates will take one or more Debian package files as
-       input and write out (to a temporary directory) all associated config
-       scripts and template files. For each passed in package that contains
-       config scripts and templates, one line of output will be generated in
-       the format:
+       apt-extracttemplates will take one or more Debian package files as input and write out (to a temporary directory) all associated config scripts and template files. For each passed in package
+       that contains config scripts and templates, one line of output will be generated in the format:
 
        package version template-file config-script
 
-       template-file and config-script are written to the temporary directory
-       specified by the -t or --tempdir (APT::ExtractTemplates::TempDir)
-       directory, with filenames of the form package.template.XXXXXX and
-       package.config.XXXXXX
+       template-file and config-script are written to the temporary directory specified by the -t or --tempdir (APT::ExtractTemplates::TempDir) directory, with filenames of the form
+       package.template.XXXXXX and package.config.XXXXXX
 
 OPTIONS
-       All command line options may be set using the configuration file, the
-       descriptions indicate the configuration option to set. For boolean
-       options you can override the config file by using something like
-       -f-,--no-f, -f=no or several other variations.
+       All command line options may be set using the configuration file, the descriptions indicate the configuration option to set. For boolean options you can override the config file by using
+       something like -f-,--no-f, -f=no or several other variations.
 
        -t, --tempdir
-           Temporary directory in which to write extracted debconf template
-           files and config scripts. Configuration Item:
-           APT::ExtractTemplates::TempDir
+           Temporary directory in which to write extracted debconf template files and config scripts. Configuration Item: APT::ExtractTemplates::TempDir
 
        -h, --help
            Show a short usage summary.
@@ -40,28 +29,20 @@ OPTIONS
            Show the program version.
 
        -c, --config-file
-           Configuration File; Specify a configuration file to use. The
-           program will read the default configuration file and then this
-           configuration file. If configuration settings need to be set
-           before the default configuration files are parsed specify a file
-           with the APT_CONFIG environment variable. See apt.conf(5) for
-           syntax information.
+           Configuration File; Specify a configuration file to use. The program will read the default configuration file and then this configuration file. If configuration settings need to be set
+           before the default configuration files are parsed specify a file with the APT_CONFIG environment variable. See apt.conf(5) for syntax information.
 
        -o, --option
-           Set a Configuration Option; This will set an arbitrary
-           configuration option. The syntax is -o Foo::Bar=bar.  -o and
-           --option can be used multiple times to set different options.
+           Set a Configuration Option; This will set an arbitrary configuration option. The syntax is -o Foo::Bar=bar.  -o and --option can be used multiple times to set different options.
 
 SEE ALSO
        apt.conf(5)
 
 DIAGNOSTICS
-       apt-extracttemplates returns zero on normal operation, decimal 100 on
-       error.
+       apt-extracttemplates returns zero on normal operation, decimal 100 on error.
 
 BUGS
-       APT bug page[1]. If you wish to report a bug in APT, please see
-       /usr/share/doc/debian/bug-reporting.txt or the reportbug(1) command.
+       APT bug page[1]. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the reportbug(1) command.
 
 AUTHORS
        Jason Gunthorpe
@@ -72,4 +53,4 @@ NOTES
         1. APT bug page
            http://bugs.debian.org/src:apt
 
-APT 1.6.8                       27 March 2014          APT-EXTRACTTEMPLATE(1)
+APT 1.6.8                                                                                    27 March 2014                                                                      APT-EXTRACTTEMPLATE(1)

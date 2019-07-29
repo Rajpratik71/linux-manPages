@@ -1,4 +1,4 @@
-OD(1)                           User Commands                           OD(1)
+OD(1)                                                                                        User Commands                                                                                       OD(1)
 
 NAME
        od - dump files in octal and other formats
@@ -9,25 +9,18 @@ SYNOPSIS
        od --traditional [OPTION]... [FILE] [[+]OFFSET[.][b] [+][LABEL][.][b]]
 
 DESCRIPTION
-       Write  an  unambiguous representation, octal bytes by default, of FILE
-       to standard output.  With more than  one  FILE  argument,  concatenate
-       them in the listed order to form the input.
+       Write an unambiguous representation, octal bytes by default, of FILE to standard output.  With more than one FILE argument, concatenate them in the listed order to form the input.
 
        With no FILE, or when FILE is -, read standard input.
 
-       If  first  and  second  call  formats both apply, the second format is
-       assumed if the last operand begins with + or (if there are 2 operands)
-       a   digit.    An  OFFSET  operand  means  -j  OFFSET.   LABEL  is  the
-       pseudo-address at first byte printed, incremented when  dump  is  pro‐
-       gressing.  For OFFSET and LABEL, a 0x or 0X prefix indicates hexadeci‐
-       mal; suffixes may be . for octal and b for multiply by 512.
+       If first and second call formats both apply, the second format is assumed if the last operand begins with + or (if there are 2 operands) a digit.  An OFFSET operand means -j OFFSET.  LABEL is
+       the pseudo-address at first byte printed, incremented when dump is progressing.  For OFFSET and LABEL, a 0x or 0X prefix indicates hexadecimal; suffixes may be . for octal and b for  multiply
+       by 512.
 
-       Mandatory arguments to long options are mandatory  for  short  options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -A, --address-radix=RADIX
-              output  format  for  file  offsets; RADIX is one of [doxn], for
-              Decimal, Octal, Hex or None
+              output format for file offsets; RADIX is one of [doxn], for Decimal, Octal, Hex or None
 
        --endian={big|little}
               swap input bytes according the specified order
@@ -39,8 +32,7 @@ DESCRIPTION
               limit dump to BYTES input bytes
 
        -S BYTES, --strings[=BYTES]
-              output strings of at least BYTES graphic chars;  3  is  implied
-              when BYTES is not specified
+              output strings of at least BYTES graphic chars; 3 is implied when BYTES is not specified
 
        -t, --format=TYPE
               select output format or formats
@@ -49,8 +41,7 @@ DESCRIPTION
               do not use * to mark line suppression
 
        -w[BYTES], --width[=BYTES]
-              output BYTES bytes per output line; 32 is implied when BYTES is
-              not specified
+              output BYTES bytes per output line; 32 is implied when BYTES is not specified
 
        --traditional
               accept arguments in third form above
@@ -101,13 +92,10 @@ DESCRIPTION
        x[SIZE]
               hexadecimal, SIZE bytes per integer
 
-       SIZE is a number.  For  TYPE  in  [doux],  SIZE  may  also  be  C  for
-       sizeof(char),  S  for  sizeof(short),  I  for  sizeof(int)  or  L  for
-       sizeof(long).  If TYPE is f, SIZE may also be F for  sizeof(float),  D
-       for sizeof(double) or L for sizeof(long double).
+       SIZE  is a number.  For TYPE in [doux], SIZE may also be C for sizeof(char), S for sizeof(short), I for sizeof(int) or L for sizeof(long).  If TYPE is f, SIZE may also be F for sizeof(float),
+       D for sizeof(double) or L for sizeof(long double).
 
-       Adding a z suffix to any type displays printable characters at the end
-       of each output line.
+       Adding a z suffix to any type displays printable characters at the end of each output line.
 
    BYTES is hex with 0x or 0X prefix, and may have a multiplier suffix:
        b      512
@@ -137,13 +125,11 @@ REPORTING BUGS
        Report od translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/od>
        or available locally via: info '(coreutils) od invocation'
 
-GNU coreutils 8.28               January 2018                           OD(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                        OD(1)

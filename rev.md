@@ -1,4 +1,4 @@
-REV(1)                          User Commands                          REV(1)
+REV(1)                                                                                       User Commands                                                                                      REV(1)
 
 NAME
        rev - reverse lines characterwise
@@ -7,9 +7,7 @@ SYNOPSIS
        rev [option] [file...]
 
 DESCRIPTION
-       The rev utility copies the specified files to standard output, revers‐
-       ing the order of characters in every line.  If no files are specified,
-       standard input is read.
+       The rev utility copies the specified files to standard output, reversing the order of characters in every line.  If no files are specified, standard input is read.
 
 OPTIONS
        -V, --version
@@ -22,8 +20,6 @@ SEE ALSO
        tac(1)
 
 AVAILABILITY
-       The  rev  command  is  part of the util-linux package and is available
-       from  Linux  Kernel  Archive   ⟨https://www.kernel.org/pub/linux/utils
-       /util-linux/⟩.
+       The rev command is part of the util-linux package and is available from Linux Kernel Archive ⟨https://www.kernel.org/pub/linux/utils/util-linux/⟩.
 
-util-linux                      September 2011                         REV(1)
+util-linux                                                                                  September 2011                                                                                      REV(1)

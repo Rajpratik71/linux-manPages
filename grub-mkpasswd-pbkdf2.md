@@ -1,4 +1,4 @@
-GRUB-MKPASSWD-PBKDF2(1)         User Commands         GRUB-MKPASSWD-PBKDF2(1)
+GRUB-MKPASSWD-PBKDF2(1)                                                                      User Commands                                                                     GRUB-MKPASSWD-PBKDF2(1)
 
 NAME
        grub-mkpasswd-pbkdf2 - generate hashed password for GRUB
@@ -27,8 +27,7 @@ DESCRIPTION
        -V, --version
               print program version
 
-       Mandatory  or optional arguments to long options are also mandatory or
-       optional for any corresponding short options.
+       Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
 
 REPORTING BUGS
        Report bugs to <bug-grub@gnu.org>.
@@ -36,12 +35,10 @@ REPORTING BUGS
 SEE ALSO
        grub-mkconfig(8)
 
-       The full documentation for grub-mkpasswd-pbkdf2  is  maintained  as  a
-       Texinfo  manual.   If  the  info and grub-mkpasswd-pbkdf2 programs are
-       properly installed at your site, the command
+       The full documentation for grub-mkpasswd-pbkdf2 is maintained as a Texinfo manual.  If the info and grub-mkpasswd-pbkdf2 programs are properly installed at your site, the command
 
               info grub-mkpasswd-pbkdf2
 
        should give you access to the complete manual.
 
-grub-mkpasswd-pbkdf2 (GRUB) 2.02February82019         GRUB-MKPASSWD-PBKDF2(1)
+grub-mkpasswd-pbkdf2 (GRUB) 2.02-2ubuntu8.12                                                 February 2019                                                                     GRUB-MKPASSWD-PBKDF2(1)

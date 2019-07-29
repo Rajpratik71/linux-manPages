@@ -1,4 +1,4 @@
-pbmtoptx(1)                General Commands Manual                pbmtoptx(1)
+pbmtoptx(1)                                                                             General Commands Manual                                                                            pbmtoptx(1)
 
 NAME
        pbmtoptx - convert a portable bitmap into Printronix printer graphics
@@ -7,8 +7,7 @@ SYNOPSIS
        pbmtoptx [pbmfile]
 
 DESCRIPTION
-       Reads  a  portable  bitmap  as  input.   Produces a file of Printronix
-       printer graphics as output.
+       Reads a portable bitmap as input.  Produces a file of Printronix printer graphics as output.
 
        Note that there is no ptxtopbm tool - this transformation is one way.
 
@@ -18,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988 by Jef Poskanzer.
 
-                                31 August 1988                    pbmtoptx(1)
+                                                                                            31 August 1988                                                                                 pbmtoptx(1)

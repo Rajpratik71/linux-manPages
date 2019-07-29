@@ -1,4 +1,4 @@
-ppmtopuzz(1)               General Commands Manual               ppmtopuzz(1)
+ppmtopuzz(1)                                                                            General Commands Manual                                                                           ppmtopuzz(1)
 
 NAME
        ppmtopuzz - convert a portable pixmap into an X11 "puzzle" file
@@ -7,10 +7,8 @@ SYNOPSIS
        ppmtopuzz [ppmfile]
 
 DESCRIPTION
-       Reads  a  portable  pixmap as input.  Produces an X11 "puzzle" file as
-       output.  A "puzzle" file is for use with the puzzle  program  included
-       with the X11 distribution - puzzle's -picture flag lets you specify an
-       image file.
+       Reads  a  portable  pixmap  as input.  Produces an X11 "puzzle" file as output.  A "puzzle" file is for use with the puzzle program included with the X11 distribution - puzzle's -picture flag
+       lets you specify an image file.
 
 SEE ALSO
        ppm(5), puzzle(1)
@@ -18,4 +16,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Jef Poskanzer.
 
-                                22 August 1990                   ppmtopuzz(1)
+                                                                                            22 August 1990                                                                                ppmtopuzz(1)

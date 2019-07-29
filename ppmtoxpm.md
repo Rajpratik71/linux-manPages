@@ -1,20 +1,17 @@
-ppmtoxpm(1)                General Commands Manual                ppmtoxpm(1)
+ppmtoxpm(1)                                                                             General Commands Manual                                                                            ppmtoxpm(1)
 
 NAME
        ppmtoxpm - convert a portable pixmap into an X11 pixmap
 
 SYNOPSIS
-       ppmtoxpm   [-name=xpmname]   [-rgb=rgb-textfile]  [-alphamask=pgmfile]
-       [ppmfile]
+       ppmtoxpm [-name=xpmname] [-rgb=rgb-textfile] [-alphamask=pgmfile] [ppmfile]
 
        Minimum unique abbrevations are acceptable.
 
 DESCRIPTION
-       Reads a portable pixmap as input.  Produces X11 pixmap (version 3)  as
-       output which can be loaded directly by the XPM library.
+       Reads a portable pixmap as input.  Produces X11 pixmap (version 3) as output which can be loaded directly by the XPM library.
 
-       For example, to convert the file "dot" (found in /usr/include/X11/bit‐
-       maps), from xbm to xpm one could specify
+       For example, to convert the file "dot" (found in /usr/include/X11/bitmaps), from xbm to xpm one could specify
 
               xbmtopbm dot | ppmtoxpm -name dot
 
@@ -24,46 +21,28 @@ DESCRIPTION
 
 OPTIONS
        -name=xpmname
-              The -name option allows you to specify the prefix string  which
-              is printed in the resulting XPM output.  If not specified, will
-              default to the filename (without extension)  of  the  <ppmfile>
-              argument.   If  you do not specify -name or ppmfile, (i.e. your
-              input is from Standad Input), the prefix string defaults to the
-              string noname.
+              The  -name option allows you to specify the prefix string which is printed in the resulting XPM output.  If not specified, will default to the filename (without extension) of the <ppm‐
+              file> argument.  If you do not specify -name or ppmfile, (i.e. your input is from Standad Input), the prefix string defaults to the string noname.
 
        rgb=rgb-textfile
-              The  -rgb option allows you to specify an X11 rgb text file for
-              the lookup of color name mnemonics.  This rgb text file is typ‐
-              ically  the  /usr/lib/X11/rgb.txt  of the MIT X11 distribution,
-              but any file using the same format may be used.  When specified
-              and a RGB value from the ppm input matches a RGB value from the
-              <rgb-textfile>, then the corresponding color name  mnemonic  is
-              printed in the XPM's colormap.  If you don't specify -rgb or if
-              the RGB values don't match, then ppmtoxpm  produces  the  color
-              specifications  in the #RGB, #RRGGBB, #RRRGGGBBB, or #RRRRGGGG‐
-              BBBB hexadecimal format.
+              The -rgb option allows you to specify an X11 rgb text file for the lookup of color name mnemonics.  This rgb text file is typically the /usr/lib/X11/rgb.txt of the  MIT  X11  distribu‐
+              tion,  but any file using the same format may be used.  When specified and a RGB value from the ppm input matches a RGB value from the <rgb-textfile>, then the corresponding color name
+              mnemonic is printed in the XPM's colormap.  If you don't specify -rgb or if the RGB values don't match, then ppmtoxpm produces the color specifications in the #RGB,  #RRGGBB,  #RRRGGG‐
+              BBB, or #RRRRGGGGBBBB hexadecimal format.
 
        -alphamask=pgmfile
-              This option names a PGM file to use as an alpha  (transparency)
-              mask.   The  file  must contain an image the same dimensions as
-              the input image.  ppmtoxpm marks as transparent any pixel whose
-              position in the alpha mask image is at most half white.
+              This  option  names  a PGM file to use as an alpha (transparency) mask.  The file must contain an image the same dimensions as the input image.  ppmtoxpm marks as transparent any pixel
+              whose position in the alpha mask image is at most half white.
 
-              If  you  don't specify -alphamask, ppmtoxpm makes all pixels in
-              the output opaque.
+              If you don't specify -alphamask, ppmtoxpm makes all pixels in the output opaque.
 
-              ppmcolormask is one way to generate an alpha  mask  file.   You
-              might  also  generate it by extracting transparency information
-              from an XPM file with the -alphaout option to xpmtoppm.   There
-              are  similar  options  on  other Netpbm converters that convert
-              from formats that include transparency information too.
+              ppmcolormask is one way to generate an alpha mask file.  You might also generate it by extracting transparency information from an XPM file  with  the  -alphaout  option  to  xpmtoppm.
+              There are similar options on other Netpbm converters that convert from formats that include transparency information too.
 
 LIMITATIONS
-       An option to match the closest (rather than exact) color name mnemonic
-       from the rgb text would be a desirable enhancement.
+       An option to match the closest (rather than exact) color name mnemonic from the rgb text would be a desirable enhancement.
 
-       Truncation  of the least significant bits of a RGB value may result in
-       nonexact matches when performing color name mnemonic lookups.
+       Truncation of the least significant bits of a RGB value may result in nonexact matches when performing color name mnemonic lookups.
 
 SEE ALSO
        ppmcolormask(1), xpmtoppm(1), ppm(5)
@@ -72,16 +51,10 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1990 by Mark W. Snitily.
 
-       Permission to use, copy, modify, and distribute this software and  its
-       documentation  for any purpose and without fee is hereby granted, pro‐
-       vided that the above copyright notice appear in all  copies  and  that
-       both  that  copyright notice and this permission notice appear in sup‐
-       porting documentation.  This software  is  provided  "as  is"  without
-       express or implied warranty.
+       Permission  to  use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all
+       copies and that both that copyright notice and this permission notice appear in supporting documentation.  This software is provided "as is" without express or implied warranty.
 
-       This  tool  was developed for Schlumberger Technologies, ATE Division,
-       and with their permission is being made available to the  public  with
-       the above copyright notice and permission notice.
+       This tool was developed for Schlumberger Technologies, ATE Division, and with their permission is being made available to the public with the above copyright notice and permission notice.
 
        Upgraded to XPM2 by
           Paul Breslaw, Mecasoft SA, Zurich, Switzerland (paul@mecazh.uu.ch)
@@ -91,4 +64,4 @@ AUTHOR
           Arnaud Le Hors (lehors@mirsa.inria.fr)
           Tue Apr 9 1991
 
-                                Tue Apr 9 1991                    ppmtoxpm(1)
+                                                                                            Tue Apr 9 1991                                                                                 ppmtoxpm(1)

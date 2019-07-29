@@ -1,4 +1,4 @@
-pbmtoatk(1)                General Commands Manual                pbmtoatk(1)
+pbmtoatk(1)                                                                             General Commands Manual                                                                            pbmtoatk(1)
 
 NAME
        pbmtoatk - convert portable bitmap to Andrew Toolkit raster object
@@ -7,8 +7,7 @@ SYNOPSIS
        pbmtoatk [pbmfile]
 
 DESCRIPTION
-       Reads  a  portable  bitmap as input.  Produces a Andrew Toolkit raster
-       object as output.
+       Reads a portable bitmap as input.  Produces a Andrew Toolkit raster object as output.
 
 SEE ALSO
        atktopbm(1), pbm(5)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Bill Janssen.
 
-                              26 September 1991                   pbmtoatk(1)
+                                                                                           26 September 1991                                                                               pbmtoatk(1)

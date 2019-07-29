@@ -1,4 +1,4 @@
-LAPTOP-DETECT(1)                User Commands                LAPTOP-DETECT(1)
+LAPTOP-DETECT(1)                                                                             User Commands                                                                            LAPTOP-DETECT(1)
 
 NAME
        laptop-detect - attempt to detect a laptop
@@ -7,8 +7,7 @@ SYNOPSIS
        laptop-detect [-h|--help|-v|--verbose|-V|--version|-D|--debug]
 
 DESCRIPTION
-       Laptop-detect  attempts to determine whether it is being run on a lap‐
-       top or a desktop and appraises its caller of this.
+       Laptop-detect attempts to determine whether it is being run on a laptop or a desktop and appraises its caller of this.
 
 OPTIONS
        -h --help
@@ -39,4 +38,4 @@ FILES
 SEE ALSO
        dmidecode(8)
 
-laptop-detect 0.14                March 2017                 LAPTOP-DETECT(1)
+laptop-detect 0.14                                                                            March 2017                                                                              LAPTOP-DETECT(1)

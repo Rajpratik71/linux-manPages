@@ -1,4 +1,4 @@
-UNAME(1)                        User Commands                        UNAME(1)
+UNAME(1)                                                                                     User Commands                                                                                    UNAME(1)
 
 NAME
        uname - print system information
@@ -10,8 +10,7 @@ DESCRIPTION
        Print certain system information.  With no OPTION, same as -s.
 
        -a, --all
-              print  all  information, in the following order, except omit -p
-              and -i if unknown:
+              print all information, in the following order, except omit -p and -i if unknown:
 
        -s, --kernel-name
               print the kernel name
@@ -50,10 +49,8 @@ REPORTING BUGS
        Report uname translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        arch(1), uname(2)
@@ -61,4 +58,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/uname>
        or available locally via: info '(coreutils) uname invocation'
 
-GNU coreutils 8.28               January 2018                        UNAME(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                     UNAME(1)

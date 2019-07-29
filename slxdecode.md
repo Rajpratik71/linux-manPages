@@ -1,4 +1,4 @@
-slxdecode(1)               General Commands Manual               slxdecode(1)
+slxdecode(1)                                                                            General Commands Manual                                                                           slxdecode(1)
 
 NAME
        slxdecode - Decode a SLX stream into human readable form.
@@ -9,11 +9,9 @@ SYNOPSIS
 DESCRIPTION
        slxdecode decodes a SLX stream into human readable form.
 
-       A  SLX  stream  is the printer language used by some Lexmark printers,
-       such as the C500.
+       A SLX stream is the printer language used by some Lexmark printers, such as the C500.
 
-       More information on the Software Imaging K.K. SLX stream can be  found
-       at:
+       More information on the Software Imaging K.K. SLX stream can be found at:
 
               http://softwareimaging.com/products-services/sorcerer/index.asp
 

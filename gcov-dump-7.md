@@ -1,4 +1,4 @@
-GCOV-DUMP(1)                         GNU                         GCOV-DUMP(1)
+GCOV-DUMP(1)                                                                                      GNU                                                                                     GCOV-DUMP(1)
 
 NAME
        gcov-dump - offline gcda and gcno profile dump tool
@@ -11,14 +11,12 @@ SYNOPSIS
             [-w|--working-sets] gcovfiles
 
 DESCRIPTION
-       gcov-dump is a tool you can use in conjunction with GCC to dump
-       content of gcda and gcno profile files offline.
+       gcov-dump is a tool you can use in conjunction with GCC to dump content of gcda and gcno profile files offline.
 
 OPTIONS
        -h
        --help
-           Display help about using gcov-dump (on the standard output), and
-           exit without doing any further processing.
+           Display help about using gcov-dump (on the standard output), and exit without doing any further processing.
 
        -l
        --long
@@ -30,8 +28,7 @@ OPTIONS
 
        -v
        --version
-           Display the gcov-dump version number (on the standard output), and
-           exit without doing any further processing.
+           Display the gcov-dump version number (on the standard output), and exit without doing any further processing.
 
        -w
        --working-sets
@@ -40,13 +37,9 @@ OPTIONS
 COPYRIGHT
        Copyright (c) 2017 Free Software Foundation, Inc.
 
-       Permission is granted to copy, distribute and/or modify this document
-       under the terms of the GNU Free Documentation License, Version 1.3 or
-       any later version published by the Free Software Foundation; with the
-       Invariant Sections being "GNU General Public License" and "Funding
-       Free Software", the Front-Cover texts being (a) (see below), and with
-       the Back-Cover Texts being (b) (see below).  A copy of the license is
-       included in the gfdl(7) man page.
+       Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software
+       Foundation; with the Invariant Sections being "GNU General Public License" and "Funding Free Software", the Front-Cover texts being (a) (see below), and with the Back-Cover Texts being (b)
+       (see below).  A copy of the license is included in the gfdl(7) man page.
 
        (a) The FSF's Front-Cover Text is:
 
@@ -58,4 +51,4 @@ COPYRIGHT
             software.  Copies published by the Free Software Foundation raise
             funds for GNU development.
 
-gcc-7.4.0                         2018-12-06                     GCOV-DUMP(1)
+gcc-7.4.0                                                                                     2018-12-06                                                                                  GCOV-DUMP(1)

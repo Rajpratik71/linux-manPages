@@ -1,4 +1,4 @@
-PYCLEAN(1)                                                         PYCLEAN(1)
+PYCLEAN(1)                                                                                                                                                                                  PYCLEAN(1)
 
 NAME
        pyclean - removes .pyc and .pyo files
@@ -20,10 +20,9 @@ OPTIONS
               be quiet
 
        -p PACKAGE, --package=PACKAGE
-              specify   Debian   package   name   to  clean  (combining  with
-              DIR_OR_FILE will additionally limit list of files)
+              specify Debian package name to clean (combining with DIR_OR_FILE will additionally limit list of files)
 
 AUTHOR
        Piotr Ożarowski, 2012-201
 
-                                                                   PYCLEAN(1)
+                                                                                                                                                                                            PYCLEAN(1)

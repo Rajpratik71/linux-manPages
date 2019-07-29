@@ -1,15 +1,13 @@
-pbmtocmuwm(1)              General Commands Manual              pbmtocmuwm(1)
+pbmtocmuwm(1)                                                                           General Commands Manual                                                                          pbmtocmuwm(1)
 
 NAME
-       pbmtocmuwm  - convert a portable bitmap into a CMU window manager bit‐
-       map
+       pbmtocmuwm - convert a portable bitmap into a CMU window manager bitmap
 
 SYNOPSIS
        pbmtocmuwm [pbmfile]
 
 DESCRIPTION
-       Reads a portable bitmap as input.  Produces a CMU window manager  bit‐
-       map as output.
+       Reads a portable bitmap as input.  Produces a CMU window manager bitmap as output.
 
 SEE ALSO
        cmuwmtopbm(1), pbm(5)
@@ -17,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                                15 April 1989                   pbmtocmuwm(1)
+                                                                                             15 April 1989                                                                               pbmtocmuwm(1)

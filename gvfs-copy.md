@@ -1,4 +1,4 @@
-GVFS-COPY(1)                    User Commands                    GVFS-COPY(1)
+GVFS-COPY(1)                                                                                 User Commands                                                                                GVFS-COPY(1)
 
 NAME
        gvfs-copy
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                             GVFS-COPY(1)
+gvfs                                                                                                                                                                                      GVFS-COPY(1)

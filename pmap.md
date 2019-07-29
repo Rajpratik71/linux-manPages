@@ -1,4 +1,4 @@
-PMAP(1)                         User Commands                         PMAP(1)
+PMAP(1)                                                                                      User Commands                                                                                     PMAP(1)
 
 NAME
        pmap - report memory map of a process
@@ -20,12 +20,9 @@ OPTIONS
               Do not display some header or footer lines.
 
        -A, --range low,high
-              Limit results to the given range to low and high address range.
-              Notice that the low and high arguments are single string  sepa‐
-              rated with comma.
+              Limit results to the given range to low and high address range.  Notice that the low and high arguments are single string separated with comma.
 
-       -X     Show  even  more  details  than  the -x option. WARNING: format
-              changes according to /proc/PID/smaps
+       -X     Show even more details than the -x option. WARNING: format changes according to /proc/PID/smaps
 
        -XX    Show everything the kernel provides
 
@@ -64,4 +61,4 @@ STANDARDS
 REPORTING BUGS
        Please send bug reports to ⟨procps@freelists.org⟩
 
-procps-ng                       September 2012                        PMAP(1)
+procps-ng                                                                                   September 2012                                                                                     PMAP(1)

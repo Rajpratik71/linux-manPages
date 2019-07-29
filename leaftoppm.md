@@ -1,4 +1,4 @@
-leaftoppm(1)               General Commands Manual               leaftoppm(1)
+leaftoppm(1)                                                                            General Commands Manual                                                                           leaftoppm(1)
 
 NAME
        leaftoppm - convert Interleaf image format to a portable anymap
@@ -7,11 +7,9 @@ SYNOPSIS
        leaftoppm [leaffile]
 
 DESCRIPTION
-       Reads  a  portable pixmap (PPM file) as input.  Generates an Interleaf
-       image file as output.
+       Reads a portable pixmap (PPM file) as input.  Generates an Interleaf image file as output.
 
-       Interleaf is a now-defunct (actually purchased ca.  2000  by  BroadVi‐
-       sion) technical publishing software company.
+       Interleaf is a now-defunct (actually purchased ca. 2000 by BroadVision) technical publishing software company.
 
 SEE ALSO
        ppm(5)
@@ -19,4 +17,4 @@ SEE ALSO
 AUTHOR
        The program is copyright (C) 1994 by Bill O'Donnell.
 
-                                 01 June 2000                    leaftoppm(1)
+                                                                                             01 June 2000                                                                                 leaftoppm(1)

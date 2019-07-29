@@ -1,4 +1,4 @@
-HELPZTAGS(1)                    User Commands                    HELPZTAGS(1)
+HELPZTAGS(1)                                                                                 User Commands                                                                                HELPZTAGS(1)
 
 NAME
        helpztags - generate the help tags file for directory
@@ -7,22 +7,17 @@ SYNOPSIS
        helpztags DIRS...
 
 DESCRIPTION
-       helpztags scans given directories for *.txt and *.txt.gz files.  Each
-       file is scanned for tags used in vim help files. For each directory
-       proper tags file is generated.
+       helpztags scans given directories for *.txt and *.txt.gz files.  Each file is scanned for tags used in vim help files. For each directory proper tags file is generated.
 
-       There should be at least one directory given. In other case program
-       exits with error.
+       There should be at least one directory given. In other case program exits with error.
 
 AUTHORS
-       Written by Jakub Turski and Artur R. Czechowski based on idea
-       contained in vim sources for its :helptags command.
+       Written by Jakub Turski and Artur R. Czechowski based on idea contained in vim sources for its :helptags command.
 
 REPORTING BUGS
-       Please use a Debian reportbug command or procedure described at
-       http://bugs.debian.org/.
+       Please use a Debian reportbug command or procedure described at http://bugs.debian.org/.
 
 SEE ALSO
        Read :help helptags in vim for detailed information about helptags.
 
-vim 8.0                          August 2010                     HELPZTAGS(1)
+vim 8.0                                                                                       August 2010                                                                                 HELPZTAGS(1)

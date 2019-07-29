@@ -1,4 +1,4 @@
-pamfile(1)                 General Commands Manual                 pamfile(1)
+pamfile(1)                                                                              General Commands Manual                                                                             pamfile(1)
 
 NAME
        pamfile - describe a Netpbm (PAM or PNM) file
@@ -7,16 +7,12 @@ SYNOPSIS
        pamfile [-allimages] [file ...]
 
 DESCRIPTION
-       Reads  one  or  more Netpbm files as input.  Writes out short descrip‐
-       tions of the image type, size, etc.  This is mostly for use  in  shell
-       scripts, so the format is not particularly pretty.
+       Reads one or more Netpbm files as input.  Writes out short descriptions of the image type, size, etc.  This is mostly for use in shell scripts, so the format is not particularly pretty.
 
 OPTIONS
        -allimages
-              Describe  every image in each input file.  Without this option,
-              pamfile describes only the first  image  in  each  input  file.
-              Note  that before July 2000, a file could not contain more than
-              one image and many programs ignore all but the first.
+              Describe  every  image  in  each input file.  Without this option, pamfile describes only the first image in each input file.  Note that before July 2000, a file could not contain more
+              than one image and many programs ignore all but the first.
 
 SEE ALSO
        pam(5), file(1)
@@ -24,4 +20,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Jef Poskanzer.
 
-                                06 August 2000                     pamfile(1)
+                                                                                            06 August 2000                                                                                  pamfile(1)

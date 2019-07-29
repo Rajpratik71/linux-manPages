@@ -1,4 +1,4 @@
-GRUB-SYSLINUX2CFG(1)            User Commands            GRUB-SYSLINUX2CFG(1)
+GRUB-SYSLINUX2CFG(1)                                                                         User Commands                                                                        GRUB-SYSLINUX2CFG(1)
 
 NAME
        grub-syslinux2cfg - transform syslinux config into grub.cfg
@@ -10,8 +10,7 @@ DESCRIPTION
        Transform syslinux config into GRUB one.
 
        -c, --cwd=DIR
-              current  directory  of syslinux [default is parent directory of
-              input file].
+              current directory of syslinux [default is parent directory of input file].
 
        -i, --isolinux
               assume input is an isolinux configuration file.
@@ -32,8 +31,7 @@ DESCRIPTION
               root directory as it will be seen on runtime [default=/].
 
        -T, --target-cwd=DIR
-              current directory of syslinux as it will  be  seen  on  runtime
-              [default is parent directory of input file].
+              current directory of syslinux as it will be seen on runtime  [default is parent directory of input file].
 
        -v, --verbose
               print verbose messages.
@@ -47,8 +45,7 @@ DESCRIPTION
        -V, --version
               print program version
 
-       Mandatory  or optional arguments to long options are also mandatory or
-       optional for any corresponding short options.
+       Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
 
 REPORTING BUGS
        Report bugs to <bug-grub@gnu.org>.
@@ -56,12 +53,10 @@ REPORTING BUGS
 SEE ALSO
        grub-menulst2cfg(8)
 
-       The full documentation for grub-syslinux2cfg is maintained as  a  Tex‐
-       info  manual.  If the info and grub-syslinux2cfg programs are properly
-       installed at your site, the command
+       The full documentation for grub-syslinux2cfg is maintained as a Texinfo manual.  If the info and grub-syslinux2cfg programs are properly installed at your site, the command
 
               info grub-syslinux2cfg
 
        should give you access to the complete manual.
 
-grub-syslinux2cfg (GRUB) 2.02-2uFebruary22019            GRUB-SYSLINUX2CFG(1)
+grub-syslinux2cfg (GRUB) 2.02-2ubuntu8.12                                                    February 2019                                                                        GRUB-SYSLINUX2CFG(1)

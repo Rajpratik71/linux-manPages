@@ -1,8 +1,7 @@
-PTARDIFF(1)            Perl Programmers Reference Guide           PTARDIFF(1)
+PTARDIFF(1)                                                                        Perl Programmers Reference Guide                                                                        PTARDIFF(1)
 
 NAME
-       ptardiff - program that diffs an extracted archive against an
-       unextracted one
+       ptardiff - program that diffs an extracted archive against an unextracted one
 
 DESCRIPTION
            ptardiff is a small program that diffs an extracted archive
@@ -30,4 +29,4 @@ OPTIONS
 SEE ALSO
        tar(1), Archive::Tar.
 
-perl v5.26.1                      2018-11-19                      PTARDIFF(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                   PTARDIFF(1)

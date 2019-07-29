@@ -1,4 +1,4 @@
-GVFS-MIME(1)                    User Commands                    GVFS-MIME(1)
+GVFS-MIME(1)                                                                                 User Commands                                                                                GVFS-MIME(1)
 
 NAME
        gvfs-mime
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                             GVFS-MIME(1)
+gvfs                                                                                                                                                                                      GVFS-MIME(1)

@@ -1,4 +1,4 @@
-PLYMOUTHD(8)                System Administration                PLYMOUTHD(8)
+PLYMOUTHD(8)                                                                             System Administration                                                                            PLYMOUTHD(8)
 
 NAME
        plymouthd - The plymouth daemon
@@ -7,12 +7,9 @@ SYNOPSIS
        plymouthd [OPTION...]
 
 DESCRIPTION
-       The plymouthd daemon is usually run out of the initrd. It does the
-       heavy lifting of the plymouth system, logging the session and showing
-       the splash screen.
+       The plymouthd daemon is usually run out of the initrd. It does the heavy lifting of the plymouth system, logging the session and showing the splash screen.
 
-       The plymouth is used to send commands to plymouthd that control its
-       behaviour.
+       The plymouth is used to send commands to plymouthd that control its behaviour.
 
 OPTIONS
        The following options are understood:
@@ -45,7 +42,6 @@ OPTIONS
            TTY to ues instead of default.
 
 SEE ALSO
-       grub(8), plymouth(8), plymouth(1),
-       http://www.freedesktop.org/wiki/Software/Plymouth
+       grub(8), plymouth(8), plymouth(1), http://www.freedesktop.org/wiki/Software/Plymouth
 
-plymouth                                                         PLYMOUTHD(8)
+plymouth                                                                                                                                                                                  PLYMOUTHD(8)

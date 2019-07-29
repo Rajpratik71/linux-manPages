@@ -1,4 +1,4 @@
-MSGGREP(1)                           GNU                           MSGGREP(1)
+MSGGREP(1)                                                                                        GNU                                                                                       MSGGREP(1)
 
 NAME
        msggrep - pattern matching on message catalog
@@ -7,11 +7,9 @@ SYNOPSIS
        msggrep [OPTION] [INPUTFILE]
 
 DESCRIPTION
-       Extracts all messages of a translation catalog that match a given pat‐
-       tern or belong to some given source files.
+       Extracts all messages of a translation catalog that match a given pattern or belong to some given source files.
 
-       Mandatory arguments to long options are mandatory  for  short  options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
    Input file location:
        INPUTFILE
@@ -26,34 +24,22 @@ DESCRIPTION
        -o, --output-file=FILE
               write output to specified file
 
-       The results are written to standard output if no output file is speci‐
-       fied or if it is -.
+       The results are written to standard output if no output file is specified or if it is -.
 
    Message selection:
-              [-N SOURCEFILE]... [-M DOMAINNAME]...  [-J MSGCTXT-PATTERN] [-K
-              MSGID-PATTERN]  [-T  MSGSTR-PATTERN]  [-C  COMMENT-PATTERN] [-X
-              EXTRACTED-COMMENT-PATTERN]
+              [-N SOURCEFILE]... [-M DOMAINNAME]...  [-J MSGCTXT-PATTERN] [-K MSGID-PATTERN] [-T MSGSTR-PATTERN] [-C COMMENT-PATTERN] [-X EXTRACTED-COMMENT-PATTERN]
 
-       A message is selected if it comes from one  of  the  specified  source
-       files,  or  if it comes from one of the specified domains, or if -J is
-       given and its context (msgctxt) matches MSGCTXT-PATTERN, or if  -K  is
-       given and its key (msgid or msgid_plural) matches MSGID-PATTERN, or if
-       -T is given and its translation (msgstr) matches MSGSTR-PATTERN, or if
-       -C  is  given and the translator's comment matches COMMENT-PATTERN, or
-       if -X is given and the extracted  comment  matches  EXTRACTED-COMMENT-
-       PATTERN.
+       A  message  is  selected if it comes from one of the specified source files, or if it comes from one of the specified domains, or if -J is given and its context (msgctxt) matches MSGCTXT-PAT‐
+       TERN, or if -K is given and its key (msgid or msgid_plural) matches MSGID-PATTERN, or if -T is given and its translation (msgstr) matches MSGSTR-PATTERN, or if -C is given  and  the  transla‐
+       tor's comment matches COMMENT-PATTERN, or if -X is given and the extracted comment matches EXTRACTED-COMMENT-PATTERN.
 
-       When  more  than  one  selection  criterion  is  specified, the set of
-       selected messages is the union of the selected messages of each crite‐
-       rion.
+       When more than one selection criterion is specified, the set of selected messages is the union of the selected messages of each criterion.
 
-       MSGCTXT-PATTERN  or MSGID-PATTERN or MSGSTR-PATTERN or COMMENT-PATTERN
-       or EXTRACTED-COMMENT-PATTERN syntax:
+       MSGCTXT-PATTERN or MSGID-PATTERN or MSGSTR-PATTERN or COMMENT-PATTERN or EXTRACTED-COMMENT-PATTERN syntax:
 
               [-E | -F] [-e PATTERN | -f FILE]...
 
-       PATTERNs are basic regular expressions by default, or extended regular
-       expressions if -E is given, or fixed strings if -F is given.
+       PATTERNs are basic regular expressions by default, or extended regular expressions if -E is given, or fixed strings if -F is given.
 
        -N, --location=SOURCEFILE
               select messages extracted from SOURCEFILE
@@ -92,8 +78,7 @@ DESCRIPTION
               ignore case distinctions
 
        -v, --invert-match
-              output only the messages that do not match any selection crite‐
-              rion
+              output only the messages that do not match any selection criterion
 
    Input file syntax:
        -P, --properties-input
@@ -107,8 +92,7 @@ DESCRIPTION
               use colors and other text attributes always
 
        --color=WHEN
-              use colors and other text attributes  if  WHEN.   WHEN  may  be
-              'always', 'never', 'auto', or 'html'.
+              use colors and other text attributes if WHEN.  WHEN may be 'always', 'never', 'auto', or 'html'.
 
        --style=STYLEFILE
               specify CSS style rule file for --color
@@ -144,8 +128,7 @@ DESCRIPTION
               set output page width
 
        --no-wrap
-              do  not  break  long message lines, longer than the output page
-              width, into several lines
+              do not break long message lines, longer than the output page width, into several lines
 
        --sort-output
               generate sorted output
@@ -167,18 +150,14 @@ REPORTING BUGS
        Report bugs to <bug-gnu-gettext@gnu.org>.
 
 COPYRIGHT
-       Copyright © 2001-2016 Free Software Foundation, Inc.  License  GPLv3+:
-       GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2001-2016 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
-       The full documentation for msggrep is maintained as a Texinfo  manual.
-       If  the info and msggrep programs are properly installed at your site,
-       the command
+       The full documentation for msggrep is maintained as a Texinfo manual.  If the info and msggrep programs are properly installed at your site, the command
 
               info msggrep
 
        should give you access to the complete manual.
 
-GNU gettext-tools 0.19.8.1        June 2016                        MSGGREP(1)
+GNU gettext-tools 0.19.8.1                                                                     June 2016                                                                                    MSGGREP(1)

@@ -1,4 +1,4 @@
-GVFS-RM(1)                      User Commands                      GVFS-RM(1)
+GVFS-RM(1)                                                                                   User Commands                                                                                  GVFS-RM(1)
 
 NAME
        gvfs-rm
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                               GVFS-RM(1)
+gvfs                                                                                                                                                                                        GVFS-RM(1)

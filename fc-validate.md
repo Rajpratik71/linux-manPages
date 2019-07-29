@@ -1,4 +1,4 @@
-FC-VALIDATE(1)                                                 FC-VALIDATE(1)
+FC-VALIDATE(1)                                                                                                                                                                          FC-VALIDATE(1)
 
 NAME
        fc-validate - validate font files
@@ -6,24 +6,18 @@ NAME
 SYNOPSIS
        fc-validate [ -Vhv ]
 
-        [   [ -i index ]  [ --index index ]  ]  [  [ -l lang ]  [ --lang lang
-       ]  ]  [ --verbose ]  [ --version ]  [ --help ]  font-file...
+        [  [ -i index ]  [ --index index ]  ]  [  [ -l lang ]  [ --lang lang ]  ]  [ --verbose ]  [ --version ]  [ --help ]  font-file...
 
 DESCRIPTION
-       fc-validate validates font-file(s) if each fonts  satisfies  the  lan‐
-       guage  coverage  according to the orthography files in fontconfig.  If
-       --index is given, only one face of each file is  validated,  otherwise
-       all faces are validated.
+       fc-validate  validates  font-file(s)  if each fonts satisfies the language coverage according to the orthography files in fontconfig.  If --index is given, only one face of each file is vali‐
+       dated, otherwise all faces are validated.
 
 OPTIONS
-       This  program  follows  the  usual  GNU command line syntax, with long
-       options starting with two  dashes  (`-').  A  summary  of  options  is
-       included below.
+       This program follows the usual GNU command line syntax, with long options starting with two dashes (`-'). A summary of options is included below.
 
        -i     Only query face indexed index of each file.
 
-       -l     Set  lang as a language instead of current locale. this is used
-              for -m.
+       -l     Set lang as a language instead of current locale. this is used for -m.
 
        -v     Show more detailed information.
 
@@ -35,10 +29,9 @@ OPTIONS
               Query font-file for font faces.
 
 RETURN CODES
-       fc-validate returns error code 0 for successful parsing, or 1  if  any
-       errors occured or if at least one font face could not be opened.
+       fc-validate returns error code 0 for successful parsing, or 1 if any errors occured or if at least one font face could not be opened.
 
 AUTHOR
        This manual page was updated by Akira TAGOH <akira@tagoh.org>.
 
-                                 Sep 10, 2012                  FC-VALIDATE(1)
+                                                                                             Sep 10, 2012                                                                               FC-VALIDATE(1)

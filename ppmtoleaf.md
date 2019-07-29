@@ -1,4 +1,4 @@
-ppmtoleaf(1)               General Commands Manual               ppmtoleaf(1)
+ppmtoleaf(1)                                                                            General Commands Manual                                                                           ppmtoleaf(1)
 
 NAME
        ppmtoleaf - convert portable pixmap to Interleaf image format
@@ -7,11 +7,9 @@ SYNOPSIS
        ppmtoleaf [ppmfile]
 
 DESCRIPTION
-       Reads  an  Interleaf image file as input.  Generates a portable pixmap
-       (PPM file) as output.
+       Reads an Interleaf image file as input.  Generates a portable pixmap (PPM file) as output.
 
-       Interleaf is a now-defunct (actually purchased ca.  2000  by  BroadVi‐
-       sion) technical publishing software company.
+       Interleaf is a now-defunct (actually purchased ca. 2000 by BroadVision) technical publishing software company.
 
 SEE ALSO
        ppm(5), ppmquant(1)
@@ -19,4 +17,4 @@ SEE ALSO
 AUTHOR
        The program is copyright (C) 1994 by Bill O'Donnell.
 
-                                 01 June 2000                    ppmtoleaf(1)
+                                                                                             01 June 2000                                                                                 ppmtoleaf(1)

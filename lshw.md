@@ -1,4 +1,4 @@
-LSHW(1)                                                               LSHW(1)
+LSHW(1)                                                                                                                                                                                        LSHW(1)
 
 NAME
        lshw - list hardware
@@ -10,21 +10,14 @@ SYNOPSIS
 
        lshw [ -X ]
 
-       lshw [  [ -html ]  [ -short ]  [ -xml ]  [ -json ]  [ -businfo ]  ]  [
-       -dump filename ]  [ -class class... ]  [ -disable test... ]  [ -enable
-       test... ]  [ -sanitize ]  [ -numeric ]  [ -quiet ]
+       lshw  [  [ -html ]  [ -short ]  [ -xml ]  [ -json ]  [ -businfo ]  ]  [ -dump filename ]  [ -class class... ]  [ -disable test... ]  [ -enable test... ]  [ -sanitize ]  [ -numeric ]  [ -quiet
+       ]
 
 DESCRIPTION
-       lshw  is  a small tool to extract detailed information on the hardware
-       configuration of the machine. It can report  exact  memory  configura‐
-       tion,  firmware  version,  mainboard  configuration,  CPU  version and
-       speed, cache configuration, bus speed,  etc.  on  DMI-capable  x86  or
-       IA-64  systems  and  on some PowerPC machines (PowerMac G4 is known to
-       work).
+       lshw is a small tool to extract detailed information on the hardware configuration of the machine. It can report exact memory configuration, firmware  version,  mainboard  configuration,  CPU
+       version and speed, cache configuration, bus speed, etc. on DMI-capable x86 or IA-64 systems and on some PowerPC machines (PowerMac G4 is known to work).
 
-       It currently supports DMI (x86 and IA-64  only),  OpenFirmware  device
-       tree (PowerPC only), PCI/AGP, CPUID (x86), IDE/ATA/ATAPI, PCMCIA (only
-       tested on x86), SCSI and USB.
+       It currently supports DMI (x86 and IA-64 only), OpenFirmware device tree (PowerPC only), PCI/AGP, CPUID (x86), IDE/ATA/ATAPI, PCMCIA (only tested on x86), SCSI and USB.
 
        -version
               Displays the version of lshw and exits.
@@ -37,22 +30,18 @@ DESCRIPTION
 
        -xml   Outputs the device tree as an XML tree.
 
-       -json  Outputs the device tree as a  JSON  object  (JavaScript  Object
-              Notation).
+       -json  Outputs the device tree as a JSON object (JavaScript Object Notation).
 
-       -short Outputs  the device tree showing hardware paths, very much like
-              the output of HP-UX's ioscan.
+       -short Outputs the device tree showing hardware paths, very much like the output of HP-UX's ioscan.
 
        -businfo
-              Outputs the device  list  showing  bus  information,  detailing
-              SCSI, USB, IDE and PCI addresses.
+              Outputs the device list showing bus information, detailing SCSI, USB, IDE and PCI addresses.
 
        -dump filename
               Dump collected information into a file (SQLite database).
 
        -class class
-              Only show the given class of hardware. class can be found using
-              lshw -short or lshw -businfo.
+              Only show the given class of hardware. class can be found using lshw -short or lshw -businfo.
 
        -C class
               Alias for -class class.
@@ -60,20 +49,14 @@ DESCRIPTION
        -enable test
 
        -disable test
-              Enables or disables a test. test can  be  dmi  (for  DMI/SMBIOS
-              extensions),  device-tree  (for  OpenFirmware device tree), spd
-              (for memory Serial Presence Detect),  memory  (for  memory-size
-              guessing  heuristics),  cpuinfo (for kernel-reported CPU detec‐
-              tion), cpuid (for CPU detection),  pci  (for  PCI/AGP  access),
-              isapnp  (for  ISA  PnP extensions), pcmcia (for PCMCIA/PCCARD),
-              ide (for IDE/ATAPI), usb (for USB devices),scsi (for  SCSI)  or
-              network (for network interfaces detection).
+              Enables  or  disables  a test. test can be dmi (for DMI/SMBIOS extensions), device-tree (for OpenFirmware device tree), spd (for memory Serial Presence Detect), memory (for memory-size
+              guessing heuristics), cpuinfo (for kernel-reported CPU detection), cpuid (for CPU detection), pci (for PCI/AGP access), isapnp (for ISA PnP extensions), pcmcia (for PCMCIA/PCCARD), ide
+              (for IDE/ATAPI), usb (for USB devices),scsi (for SCSI) or network (for network interfaces detection).
 
        -quiet Don't display status.
 
        -sanitize
-              Remove   potentially  sensitive  information  from  output  (IP
-              addresses, serial numbers, etc.).
+              Remove potentially sensitive information from output (IP addresses, serial numbers, etc.).
 
        -numeric
               Also display numeric IDs (for PCI and USB devices).
@@ -81,15 +64,12 @@ DESCRIPTION
 BUGS
        lshw currently does not detect Firewire(IEEE1394) devices.
 
-       Not all architectures supported by GNU/Linux are fully supported (e.g.
-       CPU detection).
+       Not all architectures supported by GNU/Linux are fully supported (e.g.  CPU detection).
 
-       "Virtual"  SCSI  interfaces  used  for SCSI emulation over IDE are not
-       reported correctly yet.
+       "Virtual" SCSI interfaces used for SCSI emulation over IDE are not reported correctly yet.
 
 NOTES
-       lshw must be run as super user or it will only report partial informa‐
-       tion.
+       lshw must be run as super user or it will only report partial information.
 
 FILES
        /usr/local/share/pci.ids
@@ -99,16 +79,13 @@ FILES
        /etc/pci.ids
 
        /usr/share/hwdata/pci.ids
-              A  list  of  all  known PCI ID's (vendors, devices, classes and
-              subclasses).
+              A list of all known PCI ID's (vendors, devices, classes and subclasses).
 
        /proc/bus/pci/*
-              Used to access the configuration of installed  PCI  busses  and
-              devices.
+              Used to access the configuration of installed PCI busses and devices.
 
        /proc/ide/*
-              Used  to  access  the configuration of installed IDE busses and
-              devices.
+              Used to access the configuration of installed IDE busses and devices.
 
        /proc/scsi/*, /dev/sg*
               Used to access the configuration of installed SCSI devices.
@@ -120,11 +97,9 @@ FILES
               Used on PowerPC platforms to access OpenFirmware configuration.
 
        /proc/bus/usb/*
-              Used to access the configuration of installed  USB  busses  and
-              devices.
+              Used to access the configuration of installed USB busses and devices.
 
-       /sys/* Used  on  2.6  kernels  to access hardware/driver configuration
-              information.
+       /sys/* Used on 2.6 kernels to access hardware/driver configuration information.
 
 EXAMPLES
        lshw -short
@@ -143,8 +118,7 @@ SEE ALSO
        /proc/*, linuxinfo(1), lspci(8), lsusb(8)
 
 COPYING
-       lshw is distributed under the GNU GENERAL PUBLIC LICENSE (GPL) version
-       2.
+       lshw is distributed under the GNU GENERAL PUBLIC LICENSE (GPL) version 2.
 
 AUTHOR
        lshw is maintained by Lyonel Vincent <lyonel@ezix.org>.
@@ -153,4 +127,4 @@ OTHER INFO
        The webpage for lshw is at
         <URL:http://lshw.org/>
 
-$Rev: 2179 $                     30 May 2010                          LSHW(1)
+$Rev: 2179 $                                                                                  30 May 2010                                                                                      LSHW(1)

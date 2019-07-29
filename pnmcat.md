@@ -1,32 +1,24 @@
-pnmcat(1)                  General Commands Manual                  pnmcat(1)
+pnmcat(1)                                                                               General Commands Manual                                                                              pnmcat(1)
 
 NAME
        pnmcat - concatenate portable anymaps
 
 SYNOPSIS
-       pnmcat [-white|-black] -leftright|-lr [-jtop|-jbottom] pnmfile pnmfile
-       ...
-       pnmcat [-white|-black] -topbottom|-tb [-jleft|-jright] pnmfile pnmfile
-       ...
+       pnmcat [-white|-black] -leftright|-lr [-jtop|-jbottom] pnmfile pnmfile ...
+       pnmcat [-white|-black] -topbottom|-tb [-jleft|-jright] pnmfile pnmfile ...
 
 DESCRIPTION
-       Reads  portable  anymaps  as  input.  Concatenates them either left to
-       right or top to bottom, and produces a portable anymap as output.
+       Reads portable anymaps as input.  Concatenates them either left to right or top to bottom, and produces a portable anymap as output.
 
        pamdice splits an image up into smaller ones.
 
        pnmtile concatenates a single input image to itself repeatedly.
 
 OPTIONS
-       If the anymaps are not all the same height (left-right) or width (top-
-       bottom),  the  smaller ones have to be justified with the largest.  By
-       default, they get centered, but you can specify one side or the  other
-       with  one  of  the  -j*  flags.  So, -topbottom -jleft would stack the
-       anymaps on top of each other, flush with the left edge.
+       If  the anymaps are not all the same height (left-right) or width (top-bottom), the smaller ones have to be justified with the largest.  By default, they get centered, but you can specify one
+       side or the other with one of the -j* flags.  So, -topbottom -jleft would stack the anymaps on top of each other, flush with the left edge.
 
-       The -white and -black flags specify what color to use to fill  in  the
-       extra  space  when doing this justification.  If neither is specified,
-       the program makes a guess.
+       The -white and -black flags specify what color to use to fill in the extra space when doing this justification.  If neither is specified, the program makes a guess.
 
        All flags can be abbreviated to their shortest unique prefix.
 
@@ -36,4 +28,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                                12 March 1989                       pnmcat(1)
+                                                                                             12 March 1989                                                                                   pnmcat(1)

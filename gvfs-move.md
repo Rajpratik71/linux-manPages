@@ -1,4 +1,4 @@
-GVFS-MOVE(1)                    User Commands                    GVFS-MOVE(1)
+GVFS-MOVE(1)                                                                                 User Commands                                                                                GVFS-MOVE(1)
 
 NAME
        gvfs-move
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                             GVFS-MOVE(1)
+gvfs                                                                                                                                                                                      GVFS-MOVE(1)

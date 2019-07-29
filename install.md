@@ -1,4 +1,4 @@
-INSTALL(1)                      User Commands                      INSTALL(1)
+INSTALL(1)                                                                                   User Commands                                                                                  INSTALL(1)
 
 NAME
        install - copy files and set attributes
@@ -10,18 +10,13 @@ SYNOPSIS
        install [OPTION]... -d DIRECTORY...
 
 DESCRIPTION
-       This  install program copies files (often just compiled) into destina‐
-       tion locations you choose.  If you want  to  download  and  install  a
-       ready-to-use  package  on  a  GNU/Linux  system, you should instead be
-       using a package manager like yum(1) or apt-get(1).
+       This  install  program  copies files (often just compiled) into destination locations you choose.  If you want to download and install a ready-to-use package on a GNU/Linux system, you should
+       instead be using a package manager like yum(1) or apt-get(1).
 
-       In the first three forms, copy SOURCE to DEST or multiple SOURCE(s) to
-       the   existing   DIRECTORY,   while   setting   permission  modes  and
-       owner/group.  In the 4th form, create  all  components  of  the  given
-       DIRECTORY(ies).
+       In the first three forms, copy SOURCE to DEST or multiple SOURCE(s) to the existing DIRECTORY, while setting permission modes and owner/group.  In the 4th form, create all components  of  the
+       given DIRECTORY(ies).
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        --backup[=CONTROL]
               make a backup of each existing destination file
@@ -31,15 +26,12 @@ DESCRIPTION
        -c     (ignored)
 
        -C, --compare
-              compare each pair of source and destination files, and in  some
-              cases, do not modify the destination at all
+              compare each pair of source and destination files, and in some cases, do not modify the destination at all
 
        -d, --directory
-              treat  all  arguments as directory names; create all components
-              of the specified directories
+              treat all arguments as directory names; create all components of the specified directories
 
-       -D     create all leading components of DEST except the last,  or  all
-              components of --target-directory, then copy SOURCE to DEST
+       -D     create all leading components of DEST except the last, or all components of --target-directory, then copy SOURCE to DEST
 
        -g, --group=GROUP
               set group ownership, instead of process' current group
@@ -51,8 +43,7 @@ DESCRIPTION
               set ownership (super-user only)
 
        -p, --preserve-timestamps
-              apply  access/modification times of SOURCE files to correspond‐
-              ing destination files
+              apply access/modification times of SOURCE files to corresponding destination files
 
        -s, --strip
               strip symbol tables
@@ -75,22 +66,18 @@ DESCRIPTION
        --preserve-context
               preserve SELinux security context
 
-       -Z     set SELinux security context of destination file and each  cre‐
-              ated directory to default type
+       -Z     set SELinux security context of destination file and each created directory to default type
 
        --context[=CTX]
-              like  -Z,  or if CTX is specified then set the SELinux or SMACK
-              security context to CTX
+              like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX
 
        --help display this help and exit
 
        --version
               output version information and exit
 
-       The  backup  suffix  is  '~',  unless  set  with  --suffix   or   SIM‐
-       PLE_BACKUP_SUFFIX.  The version control method may be selected via the
-       --backup option or through the VERSION_CONTROL  environment  variable.
-       Here are the values:
+       The  backup  suffix  is  '~',  unless set with --suffix or SIMPLE_BACKUP_SUFFIX.  The version control method may be selected via the --backup option or through the VERSION_CONTROL environment
+       variable.  Here are the values:
 
        none, off
               never make backups (even if --backup is given)
@@ -109,17 +96,14 @@ AUTHOR
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-       Report    install    translation   bugs   to   <http://translationpro‐
-       ject.org/team/>
+       Report install translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/install>
        or available locally via: info '(coreutils) install invocation'
 
-GNU coreutils 8.28               January 2018                      INSTALL(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                   INSTALL(1)

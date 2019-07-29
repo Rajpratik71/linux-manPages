@@ -1,4 +1,4 @@
-lavadecode(1)              General Commands Manual              lavadecode(1)
+lavadecode(1)                                                                           General Commands Manual                                                                          lavadecode(1)
 
 NAME
        lavadecode - Decode a LAVAFLOW stream into human readable form.
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        lavadecode decodes a LAVAFLOW stream into human readable form.
 
-       A  LAVAFLOW stream is the printer language used by some Konica Minolta
-       printers, such as the KM magicolor 2530 DL.
+       A LAVAFLOW stream is the printer language used by some Konica Minolta printers, such as the KM magicolor 2530 DL.
 
 COMMAND LINE OPTIONS
        These are the options that can appear on the command line.

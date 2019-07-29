@@ -1,18 +1,13 @@
-PYTHON-CONFIG(1)           General Commands Manual           PYTHON-CONFIG(1)
+PYTHON-CONFIG(1)                                                                        General Commands Manual                                                                       PYTHON-CONFIG(1)
 
 NAME
-       python-config  -  output  build options for python C/C++ extensions or
-       embedding
+       python-config - output build options for python C/C++ extensions or embedding
 
 SYNOPSIS
-       python-config [ --prefix ] [ --exec-prefix ] [ --includes ] [ --libs ]
-       [  --cflags  ]  [  --ldflags ] [ --extension-suffix ] [ --abiflags ] [
-       --help ]
+       python-config [ --prefix ] [ --exec-prefix ] [ --includes ] [ --libs ] [ --cflags ] [ --ldflags ] [ --extension-suffix ] [ --abiflags ] [ --help ]
 
 DESCRIPTION
-       python-config helps compiling and linking programs,  which  embed  the
-       Python  interpreter,  or  extension modules that can be loaded dynami‐
-       cally (at run time) into the interpreter.
+       python-config helps compiling and linking programs, which embed the Python interpreter, or extension modules that can be loaded dynamically (at run time) into the interpreter.
 
 OPTIONS
        --abiflags
@@ -25,18 +20,15 @@ OPTIONS
               print the flags that should be passed to the linker.
 
        --includes
-              similar to --cflags but only with -I options  (path  to  python
-              header files).
+              similar to --cflags but only with -I options (path to python header files).
 
        --libs similar to --ldflags but only with -l options (used libraries).
 
        --prefix
-              prints  the  prefix  (base directory) under which python can be
-              found.
+              prints the prefix (base directory) under which python can be found.
 
        --exec-prefix
-              print the prefix used for executable program directories  (such
-              as bin, sbin, etc).
+              print the prefix used for executable program directories (such as bin, sbin, etc).
 
        --extension-suffix
               print the extension suffix used for binary extensions.
@@ -56,8 +48,7 @@ EXAMPLES
 
        To build a dynamically loadable python module, use
 
-              gcc $(python-config --cflags --ldflags) -shared -fPIC progr.cpp
-              -o progr.so
+              gcc $(python-config --cflags --ldflags) -shared -fPIC progr.cpp -o progr.so
 
 SEE ALSO
        python (1)
@@ -65,7 +56,6 @@ SEE ALSO
        /usr/share/doc/python/faq/extending.html
 
 AUTHORS
-       This manual page was written by Johann Felix Soden <johfel@gmx.de> for
-       the Debian project (and may be used by others).
+       This manual page was written by Johann Felix Soden <johfel@gmx.de> for the Debian project (and may be used by others).
 
-                              November 27, 2011              PYTHON-CONFIG(1)
+                                                                                           November 27, 2011                                                                          PYTHON-CONFIG(1)

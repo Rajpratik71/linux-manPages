@@ -1,17 +1,14 @@
-ppmtoilbm(1)               General Commands Manual               ppmtoilbm(1)
+ppmtoilbm(1)                                                                            General Commands Manual                                                                           ppmtoilbm(1)
 
 NAME
        ppmtoilbm - convert a portable pixmap into an ILBM file
 
 SYNOPSIS
-       ppmtoilbm   [-maxplanes|-mp   N]   [-fixplanes|-fp   N]  [-ham6|-ham8]
-       [-dcbits|-dcplanesrgb]       [-normal|-hamif|-hamforce|-24if|-24force|
-       -dcif|-dcforce|-cmaponly]      [-ecs|-aga]     [-compress|-nocompress]
+       ppmtoilbm  [-maxplanes|-mp  N]  [-fixplanes|-fp N] [-ham6|-ham8] [-dcbits|-dcplanesrgb] [-normal|-hamif|-hamforce|-24if|-24force| -dcif|-dcforce|-cmaponly] [-ecs|-aga] [-compress|-nocompress]
        [-cmethod type] [-mapppmfile] [-savemem] [ppmfile]
 
 DESCRIPTION
-       Reads a portable pixmap as input.  Produces an ILBM  file  as  output.
-       Supported ILBM types are:
+       Reads a portable pixmap as input.  Produces an ILBM file as output.  Supported ILBM types are:
 
        Normal ILBMs with 1-16 planes.
 
@@ -25,40 +22,30 @@ DESCRIPTION
               1-16 planes for each color component.
 
        Chunks written:
-              BMHD,  CMAP, CAMG (only for HAM), BODY (not for colormap files)
-              unofficial DCOL chunk for direct color ILBM
+              BMHD, CMAP, CAMG (only for HAM), BODY (not for colormap files) unofficial DCOL chunk for direct color ILBM
 
 OPTIONS
-       Options marked with (*) can be prefixed with a "no", e.g.  "-nohamif".
-       All options can be abbreviated to their shortest unique prefix.
+       Options marked with (*) can be prefixed with a "no", e.g. "-nohamif". All options can be abbreviated to their shortest unique prefix.
 
        -maxplanes | -mp n
-              (default 5, minimum 1, maximum 16) Maximum planes to write in a
-              normal ILBM.  If the pixmap does not fit into <n> planes,  ppm‐
-              toilbm  writes a HAM file (if -hamif is used), a 24bit file (if
-              -24if is used) or a direct color file (if  -dcif  is  used)  or
-              aborts with an error.
+              (default 5, minimum 1, maximum 16) Maximum planes to write in a normal ILBM.  If the pixmap does not fit into <n> planes, ppmtoilbm writes a HAM file (if -hamif is used), a 24bit  file
+              (if -24if is used) or a direct color file (if -dcif is used) or aborts with an error.
 
        -fixplanes | -fp n
-              (min  1,  max  16)  If  a  normal ILBM is written, it will have
-              exactly <n> planes.
+              (min 1, max 16) If a normal ILBM is written, it will have exactly <n> planes.
 
        -hambits | -hamplanes n
-              (default 6, min 3, max 16) Select number of planes for HAM pic‐
-              ture.   The  current Amiga hardware supports 6 and 8 planes, so
-              for now you should only use this values.
+              (default 6, min 3, max 16) Select number of planes for HAM picture.  The current Amiga hardware supports 6 and 8 planes, so for now you should only use this values.
 
        -normal (default)
-              Turns off -hamif/-24if/-dcif,  -hamforce/-24force/-dcforce  and
-              -cmaponly.  Also sets compression type to byterun1.
+              Turns off -hamif/-24if/-dcif, -hamforce/-24force/-dcforce and -cmaponly.  Also sets compression type to byterun1.
 
        -hamif (*)
 
        -24if (*)
 
        -dcif (*)
-              Write  a HAM/24bit/direct color file if the pixmap does not fit
-              into <maxplanes> planes.
+              Write a HAM/24bit/direct color file if the pixmap does not fit into <maxplanes> planes.
 
        -hamforce (*)
 
@@ -68,8 +55,7 @@ OPTIONS
               Write a HAM/24bit/direct color file.
 
        -dcbits | -dcplanes r g b
-              (default 5, min 1, max 16).  Select number  of  bits  for  red,
-              green & blue in a direct color ILBM.
+              (default 5, min 1, max 16).  Select number of bits for red, green & blue in a direct color ILBM.
 
        -ecs (default)
               Shortcut for: -hamplanes 6 -maxplanes 5
@@ -87,32 +73,22 @@ OPTIONS
        -compress (*) (default)
 
        -cmethod none|byterun1
-              Compress  the  BODY  chunk.   The default compression method is
-              byterun1.  Compression requires building the ILBM image in mem‐
-              ory;  turning  compression  off  allows  stream-writing  of the
-              image, but the resulting  file  will  usually  be  30%  to  50%
-              larger.   Another alternative is the -savemem option, this will
-              keep memory requirements for compression at a minimum,  but  is
+              Compress  the  BODY  chunk.   The  default compression method is byterun1.  Compression requires building the ILBM image in memory; turning compression off allows stream-writing of the
+              image, but the resulting file will usually be 30% to 50% larger.  Another alternative is the -savemem option, this will keep memory requirements for compression at a  minimum,  but  is
               very slow.
 
        -map ppmfile
-              Write  a  normal ILBM using the colors in <ppmfile> as the col‐
-              ormap. The colormap file also determines the number of  planes,
-              a -maxplanes or -fixplanes option is ignored.
+              Write a normal ILBM using the colors in <ppmfile> as the colormap. The colormap file also determines the number of planes, a -maxplanes or -fixplanes option is ignored.
 
        -cmaponly
-              Write  a  colormap  file:  only  BMHD  and CMAP chunks, no BODY
-              chunk, nPlanes = 0.
+              Write a colormap file: only BMHD and CMAP chunks, no BODY chunk, nPlanes = 0.
 
        -savemem
               See the -compress option.
 
 BUGS
-       HAM pictures will always get a grayscale colormap; a real color selec‐
-       tion  algorithm  might  give  better results.  On the other hand, this
-       allows row-by-row operation on HAM images, and all HAM images  of  the
-       same  depth  (no.  of planes) share a common colormap, which is useful
-       for building HAM animations.
+       HAM  pictures will always get a grayscale colormap; a real color selection algorithm might give better results.  On the other hand, this allows row-by-row operation on HAM images, and all HAM
+       images of the same depth (no. of planes) share a common colormap, which is useful for building HAM animations.
 
 REFERENCES
        Amiga ROM Kernel Reference Manual - Devices (3rd Ed.)
@@ -123,7 +99,6 @@ SEE ALSO
 
 AUTHORS
        Copyright (C) 1989 by Jef Poskanzer.
-       Modified October 1993 by Ingo Wilken  (Ingo.Wilken@informatik.uni-old‐
-       enburg.de)
+       Modified October 1993 by Ingo Wilken (Ingo.Wilken@informatik.uni-oldenburg.de)
 
-                               31 October 1993                   ppmtoilbm(1)
+                                                                                            31 October 1993                                                                               ppmtoilbm(1)

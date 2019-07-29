@@ -1,4 +1,4 @@
-KEYRING(1)                 General Commands Manual                 KEYRING(1)
+KEYRING(1)                                                                              General Commands Manual                                                                             KEYRING(1)
 
 NAME
        keyring - Python-Keyring command-line utility
@@ -20,8 +20,7 @@ OPTIONS
               List the available keyring backends and exit.
 
 DESCRIPTION
-       keyring  provides a way to store, lookup and delete passwords in vari‐
-       ous backends supported by Python-Keyring.
+       keyring provides a way to store, lookup and delete passwords in various backends supported by Python-Keyring.
 
        Usage example:
 
@@ -30,4 +29,4 @@ DESCRIPTION
        $ keyring get system username
        password
 
-                                                                   KEYRING(1)
+                                                                                                                                                                                            KEYRING(1)

@@ -1,28 +1,18 @@
-GDBUS(1)                        User Commands                        GDBUS(1)
+GDBUS(1)                                                                                     User Commands                                                                                    GDBUS(1)
 
 NAME
        gdbus - Tool for working with D-Bus objects
 
 SYNOPSIS
-       gdbus introspect [--system | --session | --address address]
-             --dest bus_name --object-path /path/to/object [--xml]
-             [--recurse] [--only-properties]
+       gdbus introspect [--system | --session | --address address] --dest bus_name --object-path /path/to/object [--xml] [--recurse] [--only-properties]
 
-       gdbus monitor [--system | --session | --address address]
-             --dest bus_name [--object-path /path/to/object]
+       gdbus monitor [--system | --session | --address address] --dest bus_name [--object-path /path/to/object]
 
-       gdbus call [--system | --session | --address address] --dest bus_name
-             --object-path /path/to/object
-             --method org.project.InterfaceName.MethodName
-             [--timeout seconds] ARG1 ARG2...
+       gdbus call [--system | --session | --address address] --dest bus_name --object-path /path/to/object --method org.project.InterfaceName.MethodName [--timeout seconds] ARG1 ARG2...
 
-       gdbus emit [--system | --session | --address address]
-             --object-path /path/to/object
-             --signal org.project.InterfaceName.SignalName
-             [--dest unique_bus_name] ARG1 ARG2...
+       gdbus emit [--system | --session | --address address] --object-path /path/to/object --signal org.project.InterfaceName.SignalName [--dest unique_bus_name] ARG1 ARG2...
 
-       gdbus wait [--system | --session | --address address]
-             --activate bus_name [--timeout seconds] bus_name
+       gdbus wait [--system | --session | --address address] --activate bus_name [--timeout seconds] bus_name
 
        gdbus help
 
@@ -31,40 +21,29 @@ DESCRIPTION
 
 COMMANDS
        introspect
-           Prints out interfaces and property values for a remote object. For
-           this to work, the owner of the object needs to implement the
-           org.freedesktop.DBus.Introspectable interface. If the --xml option
-           is used, the returned introspection XML is printed, otherwise a
-           parsed pretty representation is printed. The --recurse option can
-           be used to introspect children (and their children and so on) and
-           the --only-properties option can be used to only print the
-           interfaces with properties.
+           Prints out interfaces and property values for a remote object. For this to work, the owner of the object needs to implement the org.freedesktop.DBus.Introspectable interface. If the --xml
+           option is used, the returned introspection XML is printed, otherwise a parsed pretty representation is printed. The --recurse option can be used to introspect children (and their children
+           and so on) and the --only-properties option can be used to only print the interfaces with properties.
 
        monitor
            Monitors one or all objects owned by the owner of bus_name.
 
        call
-           Invokes a method on a remote object. Each argument to pass to the
-           method must be specified as a serialized GVariant except that
-           strings do not need explicit quotes. The return values are printed
-           out as serialized GVariant values.
+           Invokes a method on a remote object. Each argument to pass to the method must be specified as a serialized GVariant except that strings do not need explicit quotes. The return values are
+           printed out as serialized GVariant values.
 
        emit
-           Emits a signal. Each argument to include in the signal must be
-           specified as a serialized GVariant except that strings do not need
-           explicit quotes.
+           Emits a signal. Each argument to include in the signal must be specified as a serialized GVariant except that strings do not need explicit quotes.
 
        wait
-           Waits until bus_name is owned by some process on the bus. If the
-           --activate is specified, that bus name will be auto-started first.
-           It may be the same as the bus name being waited for, or different.
+           Waits until bus_name is owned by some process on the bus. If the --activate is specified, that bus name will be auto-started first. It may be the same as the bus name being waited for, or
+           different.
 
        help
            Prints help and exit.
 
 BASH COMPLETION
-       gdbus ships with a bash completion script to complete commands,
-       destinations, bus names, object paths and interface/method names.
+       gdbus ships with a bash completion script to complete commands, destinations, bus names, object paths and interface/method names.
 
 EXAMPLES
          This shows how to introspect an object - note that the value of each
@@ -119,8 +98,7 @@ EXAMPLES
              };
            };
 
-       The --recurse and --only-properties options can be useful when wanting
-       to inspect all objects owned by a particular process:
+       The --recurse and --only-properties options can be useful when wanting to inspect all objects owned by a particular process:
 
            $ gdbus introspect --system --dest org.freedesktop.UPower --object-path / --recurse  --only-properties
            node / {
@@ -152,8 +130,7 @@ EXAMPLES
              };
            };
 
-       In a similar fashion, the introspect command can be used to learn
-       details about the Notify method:
+       In a similar fashion, the introspect command can be used to learn details about the Notify method:
 
            [...]
              interface org.freedesktop.Notifications {
@@ -176,8 +153,7 @@ EXAMPLES
              };
            [...]
 
-       With this information, it's easy to use the call command to display a
-       notification
+       With this information, it's easy to use the call command to display a notification
 
            $ gdbus call --session \
                         --dest org.freedesktop.Notifications \
@@ -221,33 +197,26 @@ EXAMPLES
 
            $ gdbus emit --session --object-path /bar --signal org.bar.Bar someString --dest :1.42
 
-       Waiting for a well-known name to be owned on the bus; this will not
-       auto-start the service:
+       Waiting for a well-known name to be owned on the bus; this will not auto-start the service:
 
            $ gdbus wait --session org.bar.SomeName
 
-       Auto-starting then waiting for a well-known name to be owned on the
-       bus:
+       Auto-starting then waiting for a well-known name to be owned on the bus:
 
            $ gdbus wait --session --activate org.bar.SomeName
 
-       Auto-starting a different service, then waiting for a well-known name
-       to be owned on the bus. This is useful in situations where SomeName is
-       not directly activatable:
+       Auto-starting a different service, then waiting for a well-known name to be owned on the bus. This is useful in situations where SomeName is not directly activatable:
 
            $ gdbus wait --session --activate org.bar.PrerequisiteName org.bar.SomeName
 
-       Waiting for a well-known name and giving up after 30 seconds. By
-       default, the timeout is disabled; or set --timeout to 0 to disable it:
+       Waiting for a well-known name and giving up after 30 seconds. By default, the timeout is disabled; or set --timeout to 0 to disable it:
 
            $ gdbus wait --session --timeout 30 org.bar.SomeName
 
 BUGS
-       Please send bug reports to either the distribution bug tracker or the
-       upstream bug tracker at
-       https://bugzilla.gnome.org/enter_bug.cgi?product=glib.
+       Please send bug reports to either the distribution bug tracker or the upstream bug tracker at https://bugzilla.gnome.org/enter_bug.cgi?product=glib.
 
 SEE ALSO
        dbus-send(1)
 
-GIO                                                                  GDBUS(1)
+GIO                                                                                                                                                                                           GDBUS(1)

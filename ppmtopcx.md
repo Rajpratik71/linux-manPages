@@ -1,4 +1,4 @@
-ppmtopcx(1)                General Commands Manual                ppmtopcx(1)
+ppmtopcx(1)                                                                             General Commands Manual                                                                            ppmtopcx(1)
 
 NAME
        ppmtopcx - convert a portable pixmap into a PCX file
@@ -7,8 +7,7 @@ SYNOPSIS
        ppmtopcx [-24bit] [-packed] [-xpos=cols] [-ypos=rows] [ppmfile]
 
 DESCRIPTION
-       Reads  a PPM image as input.  Produces a PCX file as output.  The type
-       of the PCX file depends on the number of colors in the pixmap:
+       Reads a PPM image as input.  Produces a PCX file as output.  The type of the PCX file depends on the number of colors in the pixmap:
 
        16 colors or less:
               1 bit/pixel, 1-4 planes.
@@ -20,24 +19,17 @@ DESCRIPTION
               24bit truecolor file (8 bits/pixel, 3 planes).
 
 OPTIONS
-       -24bit Produce a 24bit truecolor file, even if the pixmap has 256 col‐
-              ors or less.
+       -24bit Produce a 24bit truecolor file, even if the pixmap has 256 colors or less.
 
        -packed
-              Use  "packed pixel" format for files with 16 colors or less: 1,
-              2, or 4 bits/pixel, 1 plane.
+              Use "packed pixel" format for files with 16 colors or less: 1, 2, or 4 bits/pixel, 1 plane.
 
        -xpos=cols
 
        -ypos=rows
-              These options set the position of the image in some field (e.g.
-              on  a screen) in columns to the right of the left edge and rows
-              below the top edge.  The PCX  format  contains  image  position
-              information.   Don't  confuse this with the position of an area
-              of interest within the image.  For example, using pnmpad to add
-              a  10  pixel  left  border to an image and then converting that
-              image to PCX with xpos = 0 is not the same  as  converting  the
-              original image to PCX and setting xpos = 10.
+              These  options set the position of the image in some field (e.g. on a screen) in columns to the right of the left edge and rows below the top edge.  The PCX format contains image posi‐
+              tion information.  Don't confuse this with the position of an area of interest within the image.  For example, using pnmpad to add a 10 pixel left border to an image and then  convert‐
+              ing that image to PCX with xpos = 0 is not the same as converting the original image to PCX and setting xpos = 10.
 
               The values may be from -32767 to 32768.
 
@@ -47,8 +39,7 @@ SEE ALSO
        pcxtoppm(1), ppm(5)
 
 AUTHORS
-       Copyright  (C)  1994 by Ingo Wilken (Ingo.Wilken@informatik.uni-olden‐
-       burg.de)
+       Copyright (C) 1994 by Ingo Wilken (Ingo.Wilken@informatik.uni-oldenburg.de)
        Based on previous work by Michael Davidson.
 
-                               12 December 1994                   ppmtopcx(1)
+                                                                                           12 December 1994                                                                                ppmtopcx(1)

@@ -1,31 +1,21 @@
-MTR(8)                      System Administration                      MTR(8)
+MTR(8)                                                                                   System Administration                                                                                  MTR(8)
 
 NAME
        mtr - a network diagnostic tool
 
 SYNOPSIS
-       mtr  [-4|-6]  [-F FILENAME] [--report] [--report-wide] [--xml] [--gtk]
-       [--curses] [--displaymode MODE]  [--raw]  [--csv]  [--json]  [--split]
-       [--no-dns]    [--show-ips]    [-o FIELDS]   [-y IPINFO]   [--aslookup]
-       [-i INTERVAL] [-c COUNT] [-s PACKETSIZE] [-B BITPATTERN]  [-G GRACEPE‐
-       RIOD]   [-Q TOS]  [--mpls]  [-a ADDRESS]  [-f FIRST-TTL]  [-m MAX-TTL]
-       [-U MAX-UNKNOWN] [--udp]  [--tcp]  [--sctp]  [-P PORT]  [-L LOCALPORT]
-       [-Z TIMEOUT] [-M MARK] HOSTNAME
+       mtr  [-4|-6]  [-F FILENAME]  [--report]  [--report-wide]  [--xml]  [--gtk]  [--curses]  [--displaymode MODE] [--raw] [--csv] [--json] [--split] [--no-dns] [--show-ips] [-o FIELDS] [-y IPINFO]
+       [--aslookup] [-i INTERVAL] [-c COUNT] [-s PACKETSIZE] [-B BITPATTERN] [-G GRACEPERIOD] [-Q TOS] [--mpls] [-a ADDRESS] [-f FIRST-TTL] [-m MAX-TTL]  [-U MAX-UNKNOWN]  [--udp]  [--tcp]  [--sctp]
+       [-P PORT] [-L LOCALPORT] [-Z TIMEOUT] [-M MARK] HOSTNAME
 
 DESCRIPTION
-       mtr  combines the functionality of the traceroute and ping programs in
-       a single network diagnostic tool.
+       mtr combines the functionality of the traceroute and ping programs in a single network diagnostic tool.
 
-       As mtr starts, it investigates the network connection between the host
-       mtr  runs  on and HOSTNAME by sending packets with purposely low TTLs.
-       It continues to send packets with low TTL, noting the response time of
-       the  intervening  routers.  This allows mtr to print the response per‐
-       centage and response times of the internet route to HOSTNAME.  A  sud‐
-       den increase in packet loss or response time is often an indication of
-       a bad (or simply overloaded) link.
+       As  mtr starts, it investigates the network connection between the host mtr runs on and HOSTNAME by sending packets with purposely low TTLs.  It continues to send packets with low TTL, noting
+       the response time of the intervening routers.  This allows mtr to print the response percentage and response times of the internet route to HOSTNAME.  A sudden  increase  in  packet  loss  or
+       response time is often an indication of a bad (or simply overloaded) link.
 
-       The results are usually reported as round-trip-response times in  mil‐
-       liseconds and the percentage of packetloss.
+       The results are usually reported as round-trip-response times in milliseconds and the percentage of packetloss.
 
 OPTIONS
        -h, --help
@@ -42,50 +32,33 @@ OPTIONS
               Reads the list of hostnames from the specified file.
 
        -r, --report
-              This  option puts mtr into report mode.  When in this mode, mtr
-              will run for the number of cycles specified by the  -c  option,
-              and then print statistics and exit.
+              This option puts mtr into report mode.  When in this mode, mtr will run for the number of cycles specified by the -c option, and then print statistics and exit.
 
-              This  mode  is  useful  for generating statistics about network
-              quality.  Note that each running instance of  mtr  generates  a
-              significant  amount  of  network traffic.  Using mtr to measure
-              the quality of your network may  result  in  decreased  network
-              performance.
+              This  mode  is  useful for generating statistics about network quality.  Note that each running instance of mtr generates a significant amount of network traffic.  Using mtr to measure
+              the quality of your network may result in decreased network performance.
 
        -w, --report-wide
-              This option puts mtr into wide report mode.  When in this mode,
-              mtr will not cut hostnames in the report.
+              This option puts mtr into wide report mode.  When in this mode, mtr will not cut hostnames in the report.
 
        -x, --xml
-              Use this option to tell mtr to use the xml output format.  This
-              format  is  better  suited for automated processing of the mea‐
-              surement results.
+              Use this option to tell mtr to use the xml output format.  This format is better suited for automated processing of the measurement results.
 
        -t, --curses
-              Use this option to force mtr to use the curses  based  terminal
-              interface (if available).  In case the list of hops exceeds the
-              height of your terminal, you can use the + and - keys to scroll
-              up and down half a page.
+              Use this option to force mtr to use the curses based terminal interface (if available).  In case the list of hops exceeds the height of your terminal, you can use the + and -  keys  to
+              scroll up and down half a page.
 
-              Ctrl-L  clears spurious error messages that may overwrite other
-              parts of the display.
+              Ctrl-L clears spurious error messages that may overwrite other parts of the display.
 
        --displaymode MODE
-              Use this option to select the initial display mode: 0 (default)
-              selects  statistics,  1  selects the stripchart without latency
-              information, and 2 selects the stripchart with latency informa‐
-              tion.
+              Use  this  option  to  select  the initial display mode: 0 (default) selects statistics, 1 selects the stripchart without latency information, and 2 selects the stripchart with latency
+              information.
 
        -g, --gtk
-              Use  this  option to force mtr to use the GTK+ based X11 window
-              interface (if available).  GTK+ must have been available on the
-              system  when  mtr was built for this to work.  See the GTK+ web
-              page at ⟨http://www.gtk.org/⟩ for more information about GTK+.
+              Use this option to force mtr to use the GTK+ based X11 window interface (if available).  GTK+ must have been available on the system when mtr was built for this to work.  See the  GTK+
+              web page at ⟨http://www.gtk.org/⟩ for more information about GTK+.
 
        -l, --raw
-              Use the raw output format.  This format is  better  suited  for
-              archival  of the measurement results.  It could be parsed to be
-              presented into any of the other display methods.
+              Use the raw output format.  This format is better suited for archival of the measurement results.  It could be parsed to be presented into any of the other display methods.
 
               Example of the raw output format:
               h 0 10.1.1.1
@@ -104,8 +77,7 @@ OPTIONS
               d 7 www.isnic.is
 
        -C, --csv
-              Use the Comma-Separated-Value (CSV) output format.  (Note:  The
-              separator is actually a semi-colon ';'.)
+              Use the Comma-Separated-Value (CSV) output format.  (Note: The separator is actually a semi-colon ';'.)
 
               Example of the CSV output format:
               MTR.0.86+git:16e39fc0;1435562787;OK;nic.is;1;r-76520-PROD.greenqloud.internal;288
@@ -117,65 +89,55 @@ OPTIONS
               MTR.0.86+git:16e39fc0;1435562787;OK;nic.is;7;www.isnic.is;1036
 
        -j, --json
-              Use  this  option  to  tell  mtr to use the JSON output format.
-              This format is better suited for automated  processing  of  the
-              measurement results.
+              Use this option to tell mtr to use the JSON output format.  This format is better suited for automated processing of the measurement results.
 
        -p, --split
-              Use  this  option to set mtr to spit out a format that is suit‐
-              able for a split-user interface.
+              Use this option to set mtr to spit out a format that is suitable for a split-user interface.
 
        -n, --no-dns
-              Use this option to force mtr to display numeric IP numbers  and
-              not try to resolve the host names.
+              Use this option to force mtr to display numeric IP numbers and not try to resolve the host names.
 
        -b, --show-ips
-              Use  this option to tell mtr to display both the host names and
-              numeric IP numbers.  In split mode this adds an extra field  to
-              the  output.  In report mode, there is usually too little space
-              to add the IPs, and they  will  be  truncated.   Use  the  wide
-              report (-w) mode to see the IPs in report mode.
+              Use  this  option to tell mtr to display both the host names and numeric IP numbers.  In split mode this adds an extra field to the output.  In report mode, there is usually too little
+              space to add the IPs, and they will be truncated.  Use the wide report (-w) mode to see the IPs in report mode.
 
        -o FIELDS, --order FIELDS
-              Use this option to specify which fields to display and in which
-              order.  You may use one or more space  characters  to  separate
-              fields.
+              Use this option to specify which fields to display and in which order.  You may use one or more space characters to separate fields.
               Available fields:
 
-                                 ┌──┬─────────────────────┐
-                                 │L │ Loss ratio          │
-                                 ├──┼─────────────────────┤
-                                 │D │ Dropped packets     │
-                                 ├──┼─────────────────────┤
-                                 │R │ Received packets    │
-                                 ├──┼─────────────────────┤
-                                 │S │ Sent Packets        │
-                                 ├──┼─────────────────────┤
-                                 │N │ Newest RTT(ms)      │
-                                 ├──┼─────────────────────┤
-                                 │B │ Min/Best RTT(ms)    │
-                                 ├──┼─────────────────────┤
-                                 │A │ Average RTT(ms)     │
-                                 ├──┼─────────────────────┤
-                                 │W │ Max/Worst RTT(ms)   │
-                                 ├──┼─────────────────────┤
-                                 │V │ Standard Deviation  │
-                                 ├──┼─────────────────────┤
-                                 │G │ Geometric Mean      │
-                                 ├──┼─────────────────────┤
-                                 │J │ Current Jitter      │
-                                 ├──┼─────────────────────┤
-                                 │M │ Jitter Mean/Avg.    │
-                                 ├──┼─────────────────────┤
-                                 │X │ Worst Jitter        │
-                                 ├──┼─────────────────────┤
-                                 │I │ Interarrival Jitter │
-                                 └──┴─────────────────────┘
+                                                                                             ┌──┬─────────────────────┐
+                                                                                             │L │ Loss ratio          │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │D │ Dropped packets     │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │R │ Received packets    │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │S │ Sent Packets        │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │N │ Newest RTT(ms)      │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │B │ Min/Best RTT(ms)    │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │A │ Average RTT(ms)     │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │W │ Max/Worst RTT(ms)   │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │V │ Standard Deviation  │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │G │ Geometric Mean      │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │J │ Current Jitter      │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │M │ Jitter Mean/Avg.    │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │X │ Worst Jitter        │
+                                                                                             ├──┼─────────────────────┤
+                                                                                             │I │ Interarrival Jitter │
+                                                                                             └──┴─────────────────────┘
               Example: -o "LSD NBAW  X"
 
        -y n, --ipinfo n
-              Displays  information  about  each  IP hop.  Valid values for n
-              are:
+              Displays information about each IP hop.  Valid values for n are:
 
               0   Display AS number (equivalent to -z)
               1   Display IP prefix
@@ -183,12 +145,10 @@ OPTIONS
               3   Display RIR (ripencc, arin, ...)
               4   Display the allocation date of the IP prefix
 
-              It is possible to cycle between these fields at runtime  (using
-              the y key).
+              It is possible to cycle between these fields at runtime (using the y key).
 
        -z, --aslookup
-              Displays  the Autonomous System (AS) number alongside each hop.
-              Equivalent to --ipinfo 0.
+              Displays the Autonomous System (AS) number alongside each hop.  Equivalent to --ipinfo 0.
 
               Example (columns to the right not shown for clarity):
               1. AS???   r-76520-PROD.greenqloud.internal
@@ -200,54 +160,38 @@ OPTIONS
               7. AS1850  www.isnic.is
 
        -i SECONDS, --interval SECONDS
-              Use this option to  specify  the  positive  number  of  seconds
-              between ICMP ECHO requests.  The default value for this parame‐
-              ter is one second.  The root user  may  choose  values  between
-              zero and one.
+              Use this option to specify the positive number of seconds between ICMP ECHO requests.  The default value for this parameter is one second.  The root user may choose values between zero
+              and one.
 
        -c COUNT, --report-cycles COUNT
-              Use  this  option  to set the number of pings sent to determine
-              both the machines on the network and the reliability  of  those
-              machines.  Each cycle lasts one second.
+              Use this option to set the number of pings sent to determine both the machines on the network and the reliability of those machines.  Each cycle lasts one second.
 
        -s PACKETSIZE, --psize PACKETSIZE
-              This  option  sets  the packet size used for probing.  It is in
-              bytes, inclusive IP and ICMP headers.
+              This option sets the packet size used for probing.  It is in bytes, inclusive IP and ICMP headers.
 
-              If set to a negative number, every iteration will use a differ‐
-              ent, random packet size up to that number.
+              If set to a negative number, every iteration will use a different, random packet size up to that number.
 
        -B NUM, --bitpattern NUM
-              Specifies  bit  pattern  to  use  in payload.  Should be within
-              range 0 - 255.  If NUM is greater than 255, a random pattern is
-              used.
+              Specifies bit pattern to use in payload.  Should be within range 0 - 255.  If NUM is greater than 255, a random pattern is used.
 
        -G SECONDS, --gracetime SECONDS
-              Use  this  option  to specify the positive number of seconds to
-              wait for responses after the final request. The  default  value
-              is five seconds.
+              Use this option to specify the positive number of seconds to wait for responses after the final request. The default value is five seconds.
 
        -Q NUM, --tos NUM
-              Specifies value for type of service field in IP header.  Should
-              be within range 0 - 255.
+              Specifies value for type of service field in IP header.  Should be within range 0 - 255.
 
        -e, --mpls
-              Use this option to tell mtr to display  information  from  ICMP
-              extensions for MPLS (RFC 4950) that are encoded in the response
-              packets.
+              Use this option to tell mtr to display information from ICMP extensions for MPLS (RFC 4950) that are encoded in the response packets.
 
        -a ADDRESS, --address ADDRESS
-              Use this option to bind the outgoing socket to ADDRESS, so that
-              all  packets will be sent with ADDRESS as source address.  NOTE
-              that this option doesn't apply to DNS requests (which could  be
-              and could not be what you want).
+              Use  this  option  to  bind the outgoing socket to ADDRESS, so that all packets will be sent with ADDRESS as source address.  NOTE that this option doesn't apply to DNS requests (which
+              could be and could not be what you want).
 
        -f NUM, --first-ttl NUM
               Specifies with what TTL to start.  Defaults to 1.
 
        -m NUM, --max-ttl NUM
-              Specifies  the  maximum number of hops (max time-to-live value)
-              traceroute will probe.  Default is 30.
+              Specifies the maximum number of hops (max time-to-live value) traceroute will probe.  Default is 30.
 
        -U NUM, --max-unknown NUM
               Specifies the maximum unknown host. Default is 5.
@@ -256,12 +200,10 @@ OPTIONS
               Use UDP datagrams instead of ICMP ECHO.
 
        -T, --tcp
-              Use TCP SYN  packets  instead  of  ICMP  ECHO.   PACKETSIZE  is
-              ignored, since SYN packets can not contain data.
+              Use TCP SYN packets instead of ICMP ECHO.  PACKETSIZE is ignored, since SYN packets can not contain data.
 
        -S, --sctp
-              Use  Stream  Control  Transmission  Protocol packets instead of
-              ICMP ECHO.
+              Use Stream Control Transmission Protocol packets instead of ICMP ECHO.
 
        -P PORT, --port PORT
               The target port number for TCP/SCTP/UDP traces.
@@ -270,56 +212,42 @@ OPTIONS
               The source port number for UDP traces.
 
        -Z SECONDS, --timeout SECONDS
-              The number of seconds to keep probe sockets open before  giving
-              up  on the connection.  Using large values for this, especially
-              combined with a short interval, will  use  up  a  lot  of  file
+              The number of seconds to keep probe sockets open before giving up on the connection.  Using large values for this, especially combined with a short interval, will use up a lot of  file
               descriptors.
 
        -M MARK, --mark MARK
-              Set  the  mark for each packet sent through this socket similar
-              to the netfilter MARK target  but  socket-based.   MARK  is  32
-              unsigned  integer.   See socket(7) for full description of this
+              Set  the  mark for each packet sent through this socket similar to the netfilter MARK target but socket-based.  MARK is 32 unsigned integer.  See socket(7) for full description of this
               socket option.
 
 ENVIRONMENT
        mtr recognizes a few environment variables.
 
        MTR_OPTIONS
-              This environment variable allows to specify options, as if they
-              were  passed  on the command line.  It is parsed before reading
-              the actual command line options, so that options  specified  in
-              MTR_OPTIONS are overridden by command-line options.
+              This environment variable allows to specify options, as if they were passed on the command line.  It is parsed before reading the actual command line options, so that options specified
+              in MTR_OPTIONS are overridden by command-line options.
 
               Example:
 
               MTR_OPTIONS="-4 -c 1" mtr -6 localhost
 
-              would  send one probe (because of -c 1) towards ::1 (because of
-              -6, which overrides the -4 passed in MTR_OPTIONS).
+              would send one probe (because of -c 1) towards ::1 (because of -6, which overrides the -4 passed in MTR_OPTIONS).
 
        MTR_PACKET
-              A path to the mtr-packet executable, to be used for sending and
-              receiving  network  probes.   If  MTR_PACKET is unset, the PATH
-              will be used to search for an mtr-packet executable.
+              A path to the mtr-packet executable, to be used for sending and receiving network probes.  If MTR_PACKET is unset, the PATH will be used to search for an mtr-packet executable.
 
        DISPLAY
               Specifies an X11 server for the GTK+ frontend.
 
 BUGS
-       Some modern routers give a lower priority to ICMP ECHO packets than to
-       other network traffic.  Consequently, the reliability of these routers
-       reported by mtr will be significantly lower than the actual  reliabil‐
-       ity of these routers.
+       Some  modern routers give a lower priority to ICMP ECHO packets than to other network traffic.  Consequently, the reliability of these routers reported by mtr will be significantly lower than
+       the actual reliability of these routers.
 
 CONTACT INFORMATION
-       For the latest version, see the mtr web page at ⟨http://www.bitwizard.
-       nl/mtr/⟩
+       For the latest version, see the mtr web page at ⟨http://www.bitwizard.nl/mtr/⟩
 
-       For patches, bug reports, or feature requests, please open an issue on
-       GitHub at: ⟨https://github.com/traviscross/mtr⟩.
+       For patches, bug reports, or feature requests, please open an issue on GitHub at: ⟨https://github.com/traviscross/mtr⟩.
 
 SEE ALSO
-       mtr-packet(8),  traceroute(8),  ping(8), socket(7), TCP/IP Illustrated
-       (Stevens, ISBN 0201633469).
+       mtr-packet(8), traceroute(8), ping(8), socket(7), TCP/IP Illustrated (Stevens, ISBN 0201633469).
 
-mtr                             0.87.203-0e5e                          MTR(8)
+mtr                                                                                          0.87.203-0e5e                                                                                      MTR(8)

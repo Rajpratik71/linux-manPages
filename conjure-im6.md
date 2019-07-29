@@ -1,23 +1,17 @@
-conjure(1)                 General Commands Manual                 conjure(1)
+conjure(1)                                                                              General Commands Manual                                                                             conjure(1)
 
 NAME
-       conjure  -  interprets  and  executes  scripts  written  in the Magick
-       Scripting Language (MSL).
+       conjure - interprets and executes scripts written in the Magick Scripting Language (MSL).
 
 SYNOPSIS
        conjure [options] script.msl
 
 OVERVIEW
-       The conjure program is a member of the ImageMagick(1) suite of  tools.
-       Use it to process a Magick Scripting Language (MSL) script. The Magick
-       scripting language (MSL) will primarily benefit  those  that  want  to
-       accomplish  custom  image processing tasks but do not wish to program,
-       or those that do not have access to a Perl interpreter or a compiler.
+       The  conjure  program is a member of the ImageMagick(1) suite of tools.  Use it to process a Magick Scripting Language (MSL) script. The Magick scripting language (MSL) will primarily benefit
+       those that want to accomplish custom image processing tasks but do not wish to program, or those that do not have access to a Perl interpreter or a compiler.
 
-       For more information about the conjure command, point your browser  to
-       file:///usr/share/doc/imagemagick-6-common/html/www/conjure.html   (on
-       debian system  you  may  install  the  imagemagick-6-doc  package)  or
-       http://www.imagemagick.org/script/conjure.php.
+       For more information about the conjure command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/conjure.html (on debian system you may install the  imagemagick-6-doc
+       package) or http://www.imagemagick.org/script/conjure.php.
 
 DESCRIPTION
        Image Settings:
@@ -34,8 +28,7 @@ DESCRIPTION
          -list type           print a list of supported option arguments
          -version             print version information
 
-       In additiion, define any key value pairs required by your script.  For
-       example,
+       In additiion, define any key value pairs required by your script.  For example,
 
            conjure -size 100x100 -color blue -foo bar script.msl
 
@@ -43,10 +36,7 @@ SEE ALSO
        ImageMagick(1)
 
 COPYRIGHT
-       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional  copyrights
-       and      licenses      apply      to      this      software,      see
-       file:///usr/share/doc/imagemagick-6-common/html/www/license.html   (on
-       debian  system  you  may  install  the  imagemagick-6-doc  package) or
-       http://www.imagemagick.org/script/license.php
+       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional copyrights and licenses apply to this software, see file:///usr/share/doc/imagemagick-6-common/html/www/license.html (on debian sys‐
+       tem you may install the imagemagick-6-doc package) or http://www.imagemagick.org/script/license.php
 
-ImageMagick               Date: 2009/01/10 01:00:00                conjure(1)
+ImageMagick                                                                            Date: 2009/01/10 01:00:00                                                                            conjure(1)

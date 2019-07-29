@@ -1,4 +1,4 @@
-GVFS-OPEN(1)                    User Commands                    GVFS-OPEN(1)
+GVFS-OPEN(1)                                                                                 User Commands                                                                                GVFS-OPEN(1)
 
 NAME
        gvfs-open
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                             GVFS-OPEN(1)
+gvfs                                                                                                                                                                                      GVFS-OPEN(1)

@@ -1,4 +1,4 @@
-NUMFMT(1)                       User Commands                       NUMFMT(1)
+NUMFMT(1)                                                                                    User Commands                                                                                   NUMFMT(1)
 
 NAME
        numfmt - Convert numbers from/to human-readable strings
@@ -7,11 +7,9 @@ SYNOPSIS
        numfmt [OPTION]... [NUMBER]...
 
 DESCRIPTION
-       Reformat  NUMBER(s),  or  the  numbers from standard input if none are
-       specified.
+       Reformat NUMBER(s), or the numbers from standard input if none are specified.
 
-       Mandatory arguments to long options are mandatory  for  short  options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        --debug
               print warnings about invalid input
@@ -20,45 +18,35 @@ DESCRIPTION
               use X instead of whitespace for field delimiter
 
        --field=FIELDS
-              replace  the  numbers  in  these  input  fields (default=1) see
-              FIELDS below
+              replace the numbers in these input fields (default=1) see FIELDS below
 
        --format=FORMAT
-              use printf style floating-point FORMAT; see  FORMAT  below  for
-              details
+              use printf style floating-point FORMAT; see FORMAT below for details
 
        --from=UNIT
-              auto-scale  input numbers to UNITs; default is 'none'; see UNIT
-              below
+              auto-scale input numbers to UNITs; default is 'none'; see UNIT below
 
        --from-unit=N
               specify the input unit size (instead of the default 1)
 
        --grouping
-              use locale-defined grouping of digits,  e.g.  1,000,000  (which
-              means it has no effect in the C/POSIX locale)
+              use locale-defined grouping of digits, e.g. 1,000,000 (which means it has no effect in the C/POSIX locale)
 
        --header[=N]
-              print (without converting) the first N header lines; N defaults
-              to 1 if not specified
+              print (without converting) the first N header lines; N defaults to 1 if not specified
 
        --invalid=MODE
-              failure mode for invalid numbers: MODE can be: abort (default),
-              fail, warn, ignore
+              failure mode for invalid numbers: MODE can be: abort (default), fail, warn, ignore
 
        --padding=N
-              pad  the  output  to N characters; positive N will right-align;
-              negative N will left-align; padding is ignored if the output is
-              wider  than  N; the default is to automatically pad if a white‐
-              space is found
+              pad  the  output  to  N  characters; positive N will right-align; negative N will left-align; padding is ignored if the output is wider than N; the default is to automatically pad if a
+              whitespace is found
 
        --round=METHOD
-              use METHOD for rounding when scaling; METHOD can be: up,  down,
-              from-zero (default), towards-zero, nearest
+              use METHOD for rounding when scaling; METHOD can be: up, down, from-zero (default), towards-zero, nearest
 
        --suffix=SUFFIX
-              add  SUFFIX  to  output  numbers, and accept optional SUFFIX in
-              input numbers
+              add SUFFIX to output numbers, and accept optional SUFFIX in input numbers
 
        --to=UNIT
               auto-scale output numbers to UNITs; see UNIT below
@@ -106,19 +94,12 @@ DESCRIPTION
 
        Multiple fields/ranges can be separated with commas
 
-       FORMAT must be suitable for printing one floating-point argument '%f'.
-       Optional  quote  (%'f) will enable --grouping (if supported by current
-       locale).  Optional width value (%10f) will pad output.  Optional  zero
-       (%010f)  width  will  zero  pad  the  number. Optional negative values
-       (%-10f) will left align.  Optional precision (%.1f) will override  the
-       input determined precision.
+       FORMAT must be suitable for printing one floating-point argument '%f'.  Optional quote (%'f) will enable --grouping (if supported by current locale).  Optional width  value  (%10f)  will  pad
+       output. Optional zero (%010f) width will zero pad the number. Optional negative values (%-10f) will left align.  Optional precision (%.1f) will override the input determined precision.
 
-       Exit status is 0 if all input numbers were successfully converted.  By
-       default, numfmt will stop at the first conversion error with exit sta‐
-       tus 2.  With --invalid='fail' a warning is printed for each conversion
-       error and the exit status is 2.  With --invalid='warn' each conversion
-       error is diagnosed, but the exit status is 0.  With --invalid='ignore'
-       conversion errors are not diagnosed and the exit status is 0.
+       Exit  status is 0 if all input numbers were successfully converted.  By default, numfmt will stop at the first conversion error with exit status 2.  With --invalid='fail' a warning is printed
+       for each conversion error and the exit status is 2.  With --invalid='warn' each conversion error is diagnosed, but the exit status is 0.  With --invalid='ignore'  conversion  errors  are  not
+       diagnosed and the exit status is 0.
 
 EXAMPLES
               $ numfmt --to=si 1000
@@ -151,17 +132,14 @@ AUTHOR
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-       Report   numfmt   translation    bugs    to    <http://translationpro‐
-       ject.org/team/>
+       Report numfmt translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/numfmt>
        or available locally via: info '(coreutils) numfmt invocation'
 
-GNU coreutils 8.28               January 2018                       NUMFMT(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                    NUMFMT(1)

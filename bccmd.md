@@ -1,4 +1,4 @@
-BCCMD(1)                 Linux System Administration                 BCCMD(1)
+BCCMD(1)                                                                              Linux System Administration                                                                             BCCMD(1)
 
 NAME
        bccmd - Utility for the CSR BCCMD interface
@@ -9,9 +9,7 @@ SYNOPSIS
        bccmd [-h --help]
 
 DESCRIPTION
-       bccmd  issues BlueCore commands to Cambridge Silicon Radio devices. If
-       run without the <command> argument, a short help  page  will  be  dis‐
-       played.
+       bccmd issues BlueCore commands to Cambridge Silicon Radio devices. If run without the <command> argument, a short help page will be displayed.
 
 OPTIONS
        -t <transport>
@@ -28,9 +26,7 @@ OPTIONS
               3WIRE  3WIRE protocol (not implemented).
 
        -d <dev>
-              Specify  a  particular  device to operate on. If not specified,
-              default is the first available HCI  device  or  /dev/ttyS0  for
-              serial transports.
+              Specify a particular device to operate on. If not specified, default is the first available HCI device or /dev/ttyS0 for serial transports.
 
 COMMANDS
        builddef
@@ -98,19 +94,15 @@ COMMANDS
               Read all PS keys.  -r sends a warm reset afterwards
 
        psload [-r] [-s <stores>] <file>
-              Load  all  PS keys from PSR file.  -r sends a warm reset after‐
-              wards
+              Load all PS keys from PSR file.  -r sends a warm reset afterwards
 
        pscheck [-r] [-s <stores>] <file>
               Check syntax of PSR file.  -r sends a warm reset afterwards
 
 KEYS
-       bdaddr country devclass keymin keymax features commands version remver
-       hciextn mapsco baudrate hostintf anafreq anaftrim usbvid usbpid dfupid
-       bootmode
+       bdaddr country devclass keymin keymax features commands version remver hciextn mapsco baudrate hostintf anafreq anaftrim usbvid usbpid dfupid bootmode
 
 AUTHORS
-       Written by Marcel Holtmann <marcel@holtmann.org>,  man  page  by  Adam
-       Laurie <adam@algroup.co.uk>
+       Written by Marcel Holtmann <marcel@holtmann.org>, man page by Adam Laurie <adam@algroup.co.uk>
 
-BlueZ                            Jun 20 2006                         BCCMD(1)
+BlueZ                                                                                         Jun 20 2006                                                                                     BCCMD(1)

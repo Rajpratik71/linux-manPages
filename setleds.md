@@ -1,4 +1,4 @@
-SETLEDS(1)                 General Commands Manual                 SETLEDS(1)
+SETLEDS(1)                                                                              General Commands Manual                                                                             SETLEDS(1)
 
 NAME
        setleds - set the keyboard leds
@@ -7,31 +7,20 @@ SYNOPSIS
        setleds [-v] [-L] [-D] [-F] [{+|-}num] [{+|-}caps] [{+|-}scroll]
 
 DESCRIPTION
-       Setleds reports and changes the led flag settings of a VT (namely Num‐
-       Lock, CapsLock and ScrollLock).  Without arguments, setleds prints the
-       current  settings.   With  arguments,  it sets or clears the indicated
-       flags (and leaves the others  unchanged).   The  settings  before  and
-       after the change are reported if the -v flag is given.
+       Setleds  reports  and  changes  the  led  flag settings of a VT (namely NumLock, CapsLock and ScrollLock).  Without arguments, setleds prints the current settings.  With arguments, it sets or
+       clears the indicated flags (and leaves the others unchanged).  The settings before and after the change are reported if the -v flag is given.
 
-       The led flag settings are specific for each VT (and the VT correspond‐
-       ing to stdin is used).
+       The led flag settings are specific for each VT (and the VT corresponding to stdin is used).
 
-       By default (or with option -F), setleds will only change the VT  flags
-       (and their setting may be reflected by the keyboard leds).
+       By default (or with option -F), setleds will only change the VT flags (and their setting may be reflected by the keyboard leds).
 
-       With  option  -D,  setleds  will  change  both  the VT flags and their
-       default settings (so  that  a  subsequent  reset  will  not  undo  the
-       change).  This might be useful for people who always want to have num‐
-       lock set.
+       With option -D, setleds will change both the VT flags and their default settings (so that a subsequent reset will not undo the change).  This might be useful for people  who  always  want  to
+       have numlock set.
 
-       With option -L, setleds will not touch the VT flags, but  only  change
-       the leds.  From this moment on, the leds will no longer reflect the VT
-       flags (but display whatever is put into them).  The command setleds -L
-       (without  further  arguments)  will restore the situation in which the
-       leds reflect the VT flags.
+       With option -L, setleds will not touch the VT flags, but only change the leds.  From this moment on, the leds will no longer reflect the VT flags (but display whatever is put into them).  The
+       command setleds -L (without further arguments) will restore the situation in which the leds reflect the VT flags.
 
-       One might use setleds in /etc/rc to define  the  initial  and  default
-       state of NumLock, e.g. by
+       One might use setleds in /etc/rc to define the initial and default state of NumLock, e.g. by
             INITTY=/dev/tty[1-8]
             for tty in $INITTY; do
                  setleds -D +num < $tty
@@ -39,24 +28,18 @@ DESCRIPTION
 
 OPTIONS
        -num +num
-              Clear  or set NumLock.  (At present, the NumLock setting influ‐
-              ences the interpretation of keypad keys.  Pressing the  NumLock
-              key complements the NumLock setting.)
+              Clear or set NumLock.  (At present, the NumLock setting influences the interpretation of keypad keys.  Pressing the NumLock key complements the NumLock setting.)
 
        -caps +caps
-              Clear  or set CapsLock.  (At present, the CapsLock setting com‐
-              plements the Shift key when applied to letters.   Pressing  the
-              CapsLock key complements the CapsLock setting.)
+              Clear or set CapsLock.  (At present, the CapsLock setting complements the Shift key when applied to letters.  Pressing the CapsLock key complements the CapsLock setting.)
 
        -scroll +scroll
-              Clear  or set ScrollLock.  (At present, pressing the ScrollLock
-              key (or ^S/^Q) stops/starts console output.)
+              Clear or set ScrollLock.  (At present, pressing the ScrollLock key (or ^S/^Q) stops/starts console output.)
 
 BUGS
-       In keyboard application mode the NumLock key does  not  influence  the
-       NumLock flag setting.
+       In keyboard application mode the NumLock key does not influence the NumLock flag setting.
 
 SEE ALSO
        loadkeys(1)
 
-                                 24 Sep 1994                       SETLEDS(1)
+                                                                                              24 Sep 1994                                                                                   SETLEDS(1)

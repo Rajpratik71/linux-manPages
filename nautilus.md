@@ -1,4 +1,4 @@
-Nautilus(1)                General Commands Manual                Nautilus(1)
+Nautilus(1)                                                                             General Commands Manual                                                                            Nautilus(1)
 
 NAME
        nautilus - a file manager for GNOME
@@ -17,8 +17,7 @@ OPTIONS
               Show the version of the program.
 
        -g, --geometry=GEOMETRY
-              Create the initial window with the given geometry. Deprecated -
-              the geometry is saved and loaded using GSettings.
+              Create the initial window with the given geometry. Deprecated - the geometry is saved and loaded using GSettings.
 
        -w, --new-window
               Always open a new window for browsing specified URIs.
@@ -27,8 +26,7 @@ OPTIONS
               Only create windows for explicitly specified URIs.
 
        --no-desktop
-              Never manage the desktop  (ignore  the  GSettings  preference).
-              Deprecated - the desktop is managed in a separate binary.
+              Never manage the desktop (ignore the GSettings preference). Deprecated - the desktop is managed in a separate binary.
 
        -q, --quit
               Quit Nautilus.
@@ -42,14 +40,11 @@ OPTIONS
        Other standard GNOME options not listed here are also supported.
 
 SEE ALSO
-       The documentation may be accessed by pressing F1 in the application or
-       via the application menu.
+       The documentation may be accessed by pressing F1 in the application or via the application menu.
 
-       For      further      information,       visit       the       website
-       https://wiki.gnome.org/Apps/Nautilus
+       For further information, visit the website https://wiki.gnome.org/Apps/Nautilus
 
 BUGS
-       All  bugs  in the application may be reported at the GNOME Bugzilla at
-       https://bugzilla.gnome.org/buglist.cgi?product=nautilus
+       All bugs in the application may be reported at the GNOME Bugzilla at https://bugzilla.gnome.org/buglist.cgi?product=nautilus
 
-                              23 September 2016                   Nautilus(1)
+                                                                                           23 September 2016                                                                               Nautilus(1)

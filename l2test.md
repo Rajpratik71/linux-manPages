@@ -1,4 +1,4 @@
-L2TEST(1)                  General Commands Manual                  L2TEST(1)
+L2TEST(1)                                                                               General Commands Manual                                                                              L2TEST(1)
 
 NAME
        l2test - L2CAP testing
@@ -49,8 +49,6 @@ USAGE
          [-T] enable timestamps
 
 AUTHOR
-       This   manual   page   was   written   by   Nobuhiro   Iwamatsu  <iwa‐
-       matsu@debian.org>, for the Debian GNU/Linux system (but may be used by
-       others).
+       This manual page was written by Nobuhiro Iwamatsu <iwamatsu@debian.org>, for the Debian GNU/Linux system (but may be used by others).
 
-                                 January 2012                       L2TEST(1)
+                                                                                             January 2012                                                                                    L2TEST(1)

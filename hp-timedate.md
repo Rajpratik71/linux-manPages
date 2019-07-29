@@ -1,11 +1,10 @@
-hp-timedate(1)                   User Manuals                  hp-timedate(1)
+hp-timedate(1)                                                                               User Manuals                                                                               hp-timedate(1)
 
 NAME
        hp-timedate - Time/Date Utility
 
 DESCRIPTION
-       Set  the  time and date on an HP Officejet all-in-one device using the
-       PC time and date.
+       Set the time and date on an HP Officejet all-in-one device using the PC time and date.
 
 SYNOPSIS
        hp-timedate [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]
@@ -23,8 +22,7 @@ MODE
 
 OPTIONS
        Set the logging level:
-              -l<level> or --logging=<level>  <level>:  none,  info*,  error,
-              warn, debug (*default)
+              -l<level> or --logging=<level> <level>: none, info*, error, warn, debug (*default)
 
        Run in debug mode:
               -g (same as option: -ldebug)
@@ -33,20 +31,14 @@ OPTIONS
               -h or --help
 
 AUTHOR
-       HPLIP  (HP Linux Imaging and Printing) is an HP developed solution for
-       printing, scanning, and faxing with HP inkjet and laser based printers
-       in Linux.
+       HPLIP (HP Linux Imaging and Printing) is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
 
 REPORTING BUGS
-       The  HPLIP Launchpad.net site https://launchpad.net/hplip is available
-       to get help, report bugs, make suggestions, discuss the HPLIP  project
-       or otherwise contact the HPLIP Team.
+       The HPLIP Launchpad.net site https://launchpad.net/hplip is available to get help, report bugs, make suggestions, discuss the HPLIP project or otherwise contact the HPLIP Team.
 
 COPYRIGHT
        Copyright (c) 2001-15 HP Development Company, L.P.
 
-       This  software  comes with ABSOLUTELY NO WARRANTY.  This is free soft‐
-       ware, and you are welcome to distribute it under  certain  conditions.
-       See COPYING file for more details.
+       This software comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are welcome to distribute it under certain conditions. See COPYING file for more details.
 
-Linux                                2.0                       hp-timedate(1)
+Linux                                                                                             2.0                                                                                   hp-timedate(1)

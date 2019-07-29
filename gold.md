@@ -1,4 +1,4 @@
-GOLD(1)                         User Commands                         GOLD(1)
+GOLD(1)                                                                                      User Commands                                                                                     GOLD(1)
 
 NAME
        gold - The GNU ELF linker
@@ -29,15 +29,13 @@ OPTIONS
               Allow unresolved references in shared libraries
 
        --no-allow-shlib-undefined
-              Do   not   allow  unresolved  references  in  shared  libraries
-              (default)
+              Do not allow unresolved references in shared libraries (default)
 
        --apply-dynamic-relocs
               Apply link-time values for dynamic relocations (default)
 
        --no-apply-dynamic-relocs
-              (aarch64 only) Do not apply link-time values for dynamic  relo‐
-              cations
+              (aarch64 only) Do not apply link-time values for dynamic relocations
 
        --as-needed
               Use DT_NEEDED only for shared libraries that are used
@@ -60,8 +58,7 @@ OPTIONS
               Chunk size for '--build-id=tree'
 
        --build-id-min-file-size-for-treehash SIZE
-              Minimum  output file size for '--build-id=tree' to work differ‐
-              ently than '--build-id=sha1'
+              Minimum output file size for '--build-id=tree' to work differently than '--build-id=sha1'
 
        -Bdynamic                   -l searches for shared libraries (default)
 
@@ -95,8 +92,7 @@ OPTIONS
        --copy-dt-needed-entries
               Not supported
 
-       --no-copy-dt-needed-entries Do not copy  DT_NEEDED  tags  from  shared
-              libraries (default)
+       --no-copy-dt-needed-entries Do not copy DT_NEEDED tags from shared libraries (default)
 
        --cref
               Output cross reference table
@@ -136,8 +132,7 @@ OPTIONS
               Look for violations of the C++ One Definition Rule
 
        --no-detect-odr-violations
-              Do  not  look  for  violations  of  the C++ One Definition Rule
-              (default)
+              Do not look for violations of the C++ One Definition Rule (default)
 
        --dynamic-list-data
               Add data symbols to dynamic symbols
@@ -171,8 +166,7 @@ OPTIONS
               Disable use of DT_RUNPATH
 
        --no-enum-size-warning
-              (ARM only) Do not warn about  objects  with  incompatible  enum
-              sizes
+              (ARM only) Do not warn about objects with incompatible enum sizes
 
        --exclude-libs lib,lib ...
               Exclude libraries from automatic export
@@ -190,8 +184,7 @@ OPTIONS
 
        -EL    Link little-endian objects.
 
-       -f  SHLIB, --auxiliary SHLIB Auxiliary filter for shared object symbol
-              table
+       -f SHLIB, --auxiliary SHLIB Auxiliary filter for shared object symbol table
 
        -F SHLIB, --filter SHLIB
               Filter for shared object symbol table
@@ -273,15 +266,13 @@ OPTIONS
        -i     Alias for -r
 
        --icf [none,all,safe]
-              Identical Code Folding. '--icf=safe'  Folds  ctors,  dtors  and
-              functions whose pointers are definitely not taken
+              Identical Code Folding. '--icf=safe' Folds ctors, dtors and functions whose pointers are definitely not taken
 
        --icf-iterations COUNT
               Number of iterations of ICF (default 2)
 
        --incremental
-              Do  an  incremental link if possible; otherwise, do a full link
-              and prepare output for incremental linking
+              Do an incremental link if possible; otherwise, do a full link and prepare output for incremental linking
 
        --no-incremental
               Do a full link (default)
@@ -307,8 +298,7 @@ OPTIONS
        --incremental-startup-unchanged
               Assume startup files unchanged (files preceding this option)
 
-       --incremental-patch PERCENT Amount of  extra  space  to  allocate  for
-              patches (default 10)
+       --incremental-patch PERCENT Amount of extra space to allocate for patches (default 10)
 
        -init SYMBOL
               Call SYMBOL at load-time
@@ -383,8 +373,7 @@ OPTIONS
               Page align data, make text readonly (default)
 
        --no-keep-memory
-              Use  less  memory and more disk I/O (included only for compati‐
-              bility with GNU ld)
+              Use less memory and more disk I/O (included only for compatibility with GNU ld)
 
        --no-undefined
               Report undefined symbols (even with --shared)
@@ -454,8 +443,7 @@ OPTIONS
               Pass an option to the plugin
 
        --posix-fallocate
-              Use  posix_fallocate  to  reserve  space  in  the  output  file
-              (default)
+              Use posix_fallocate to reserve space in the output file (default)
 
        --no-posix-fallocate
               Use fallocate or ftruncate to reserve space
@@ -528,8 +516,7 @@ OPTIONS
               Emit only debug line number information
 
        --strip-debug-gdb
-              Strip  debug  symbols that are unused by gdb (at least versions
-              <= 7.4)
+              Strip debug symbols that are unused by gdb (at least versions <= 7.4)
 
        --strip-lto-sections
               Strip LTO intermediate code sections (default)
@@ -547,20 +534,16 @@ OPTIONS
               Sort common symbols by alignment
 
        --sort-section [none,name]
-              Sort  sections  by  name.   '--no-text-reorder'  will  override
-              '--sort-section=name' for .text
+              Sort sections by name.  '--no-text-reorder' will override '--sort-section=name' for .text
 
        --spare-dynamic-tags COUNT
               Dynamic tag slots to reserve (default 5)
 
        --stub-group-size SIZE
-              (ARM, PowerPC only) The maximum distance from instructions in a
-              group of sections to their stubs. Negative  values  mean  stubs
-              are always after the group. 1 means use default size
+              (ARM, PowerPC only) The maximum distance from instructions in a group of sections to their stubs. Negative values mean stubs are always after the group. 1 means use default size
 
        --stub-group-multi
-              (PowerPC  only) Allow a group of stubs to serve multiple output
-              sections (default)
+              (PowerPC only) Allow a group of stubs to serve multiple output sections (default)
 
        --no-stub-group-multi
               (PowerPC only) Each output section has its own stubs
@@ -663,8 +646,7 @@ OPTIONS
        -u SYMBOL, --undefined SYMBOL
               Create undefined reference to SYMBOL
 
-       --unresolved-symbols
-       ignore-all,report-all,ignore-in-object-files,ignore-in-shared-libs
+       --unresolved-symbols ignore-all,report-all,ignore-in-object-files,ignore-in-shared-libs
               How to handle unresolved symbols
 
        --verbose
@@ -719,8 +701,7 @@ OPTIONS
               Dummy z option
 
        --no-wchar-size-warning
-              (ARM  only) Do not warn about objects with incompatible wchar_t
-              sizes
+              (ARM only) Do not warn about objects with incompatible wchar_t sizes
 
        --weak-unresolved-symbols
               Convert unresolved symbols to weak references
@@ -824,12 +805,10 @@ OPTIONS
        -z now Mark object for immediate function binding
 
        -z origin
-              Mark DSO to indicate that needs immediate $ORIGIN processing at
-              runtime
+              Mark DSO to indicate that needs immediate $ORIGIN processing at runtime
 
        -z relro
-              Where   possible  mark  variables  read-only  after  relocation
-              (default)
+              Where possible mark variables read-only after relocation (default)
 
        -z norelro
               Don't mark variables read-only after relocation
@@ -850,23 +829,16 @@ OPTIONS
               Move .text.unlikely sections to a separate segment.
 
        -z notext-unlikely-segment
-              Do not move .text.unlikely  sections  to  a  separate  segment.
-              (default)
+              Do not move .text.unlikely sections to a separate segment. (default)
 
-       debian/tmp/usr/bin/ld.gold:  supported targets: elf32-iamcu elf32-i386
-       elf32-i386-freebsd elf32-i386-nacl  elf32-x86-64  elf32-x86-64-freebsd
-       elf32-x86-64-nacl  elf64-x86-64 elf64-x86-64-freebsd elf64-x86-64-nacl
-       debian/tmp/usr/bin/ld.gold: supported emulations:  elf_iamcu  elf_i386
-       elf_i386_nacl      elf32_x86_64      elf32_x86_64_nacl      elf_x86_64
-       elf_x86_64_nacl
+       debian/tmp/usr/bin/ld.gold:  supported targets: elf32-iamcu elf32-i386 elf32-i386-freebsd elf32-i386-nacl elf32-x86-64 elf32-x86-64-freebsd elf32-x86-64-nacl elf64-x86-64 elf64-x86-64-freebsd
+       elf64-x86-64-nacl debian/tmp/usr/bin/ld.gold: supported emulations: elf_iamcu elf_i386 elf_i386_nacl elf32_x86_64 elf32_x86_64_nacl elf_x86_64 elf_x86_64_nacl
 
 REPORTING BUGS
        Report bugs to <http://www.sourceware.org/bugzilla/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  This program is  free
-       software;  you  may redistribute it under the terms of the GNU General
-       Public License version 3 or (at your option) a  later  version.   This
-       program has absolutely no warranty.
+       Copyright © 2017 Free Software Foundation, Inc.  This program is free software; you may redistribute it under the terms of the GNU General Public License version 3 or (at your option) a later
+       version.  This program has absolutely no warranty.
 
-gold (GNU Binutils for Ubuntu 2.30March52018                          GOLD(1)
+gold (GNU Binutils for Ubuntu 2.30) 1.15                                                      March 2018                                                                                       GOLD(1)

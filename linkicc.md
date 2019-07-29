@@ -1,4 +1,4 @@
-LINKICC(1)                 General Commands Manual                 LINKICC(1)
+LINKICC(1)                                                                              General Commands Manual                                                                             LINKICC(1)
 
 NAME
        linkicc - little cms device link generator.
@@ -7,12 +7,9 @@ SYNOPSIS
        linkicc [options] <profiles>
 
 DESCRIPTION
-       lcms  is  a  standalone CMM engine, which deals with the color manage‐
-       ment.  It implements a fast transformation between ICC profiles.  lin‐
-       kicc is little cms device link generator.
+       lcms is a standalone CMM engine, which deals with the color management.  It implements a fast transformation between ICC profiles.  linkicc is little cms device link generator.
 
-       Links  two  or  more  profiles into a single devicelink profile.  Col‐
-       orspaces must be paired except Lab/XYZ, that can be interchanged.
+       Links two or more profiles into a single devicelink profile.  Colorspaces must be paired except Lab/XYZ, that can be interchanged.
 
 OPTIONS
        -8     Creates 8-bit devicelink.
@@ -38,8 +35,7 @@ OPTIONS
               Output devicelink profile. [defaults to 'devicelink.icm']
 
        -t <0,1,2,3>
-              Intent  (0=Perceptual,  1=Colorimetric,  2=Saturation,  3=Abso‐
-              lute).
+              Intent (0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute).
 
        -x     Creatively, guess deviceclass of resulting profile.
 
@@ -73,14 +69,12 @@ EXAMPLES
             linkicc -x -o cmyklimited.icc -k 250 cmyk.icc *Lab
 
 NOTES
-       For  suggestions,  comments,  bug  reports etc. send mail to info@lit‐
-       tlecms.com.
+       For suggestions, comments, bug reports etc. send mail to info@littlecms.com.
 
 SEE ALSO
        jpgicc(1), tificc(1), psicc(1), transicc(1),
 
 AUTHOR
-       This manual page was written by Shiju p. Nair <shiju.p@gmail.com>, for
-       the Debian project.
+       This manual page was written by Shiju p. Nair <shiju.p@gmail.com>, for the Debian project.
 
-                              September 30, 2004                   LINKICC(1)
+                                                                                          September 30, 2004                                                                                LINKICC(1)

@@ -1,4 +1,4 @@
-RCTEST(1)                                                           RCTEST(1)
+RCTEST(1)                                                                                                                                                                                    RCTEST(1)
 
 NAME
        rctest - RFCOMM testing
@@ -66,8 +66,6 @@ OPTIONS
        -T     enable timestamps
 
 AUTHORS
-       Written by Marcel Holtmann <marcel@holtmann.org> and Maxim Krasnyansky
-       <maxk@qualcomm.com>,   man   page   by   Filippo    Giunchedi    <fil‐
-       ippo@debian.org>
+       Written by Marcel Holtmann <marcel@holtmann.org> and Maxim Krasnyansky <maxk@qualcomm.com>, man page by Filippo Giunchedi <filippo@debian.org>
 
-BlueZ                             Jul 6 2009                        RCTEST(1)
+BlueZ                                                                                         Jul 6 2009                                                                                     RCTEST(1)

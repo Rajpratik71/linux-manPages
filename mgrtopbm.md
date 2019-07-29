@@ -1,4 +1,4 @@
-mgrtopbm(1)                General Commands Manual                mgrtopbm(1)
+mgrtopbm(1)                                                                             General Commands Manual                                                                            mgrtopbm(1)
 
 NAME
        mgrtopbm - convert a MGR bitmap into a portable bitmap
@@ -15,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                               24 January 1989                    mgrtopbm(1)
+                                                                                            24 January 1989                                                                                mgrtopbm(1)

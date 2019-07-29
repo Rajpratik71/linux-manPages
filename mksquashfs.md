@@ -1,4 +1,4 @@
-MKSQUASHFS(1)       create and append squashfs filesystems      MKSQUASHFS(1)
+MKSQUASHFS(1)                                                                   create and append squashfs filesystems                                                                   MKSQUASHFS(1)
 
 NAME
        mksquashfs - tool to create and append to squashfs filesystems
@@ -7,22 +7,16 @@ SYNOPSIS
        mksquashfs SOURCE [SOURCE2 ...] DESTINATION [OPTIONS]
 
 DESCRIPTION
-       Squashfs  is  a  highly  compressed read-only filesystem for Linux. It
-       uses zlib compression to compress both files, inodes and  directories.
-       Inodes in the system are very small and all blocks are packed to mini‐
-       mize data overhead. Block sizes greater than 4K are supported up to  a
-       maximum of 64K.
+       Squashfs is a highly compressed read-only filesystem for Linux. It uses zlib compression to compress both files, inodes and directories. Inodes in the system are very small and all blocks are
+       packed to minimize data overhead. Block sizes greater than 4K are supported up to a maximum of 64K.
 
-       Squashfs  is  intended  for  general  read-only  filesystem  use,  for
-       archival use (i.e. in cases where a .tar.gz file may be used), and  in
-       constrained  block device/memory systems (e.g. embedded systems) where
-       low overhead is needed.
+       Squashfs is intended for general read-only filesystem use, for archival use (i.e. in cases where a .tar.gz file may be used), and in constrained block  device/memory  systems  (e.g.  embedded
+       systems) where low overhead is needed.
 
 OPTIONS
    Filesystem build options
        -comp COMPRESSION
-           select  COMPRESSION  compression.  Compressors   available:   gzip
-           (default), lzo, xz.
+           select COMPRESSION compression. Compressors available: gzip (default), lzo, xz.
 
        -b BLOCK_SIZE
            set data block to BLOCK_SIZE. Default 131072 bytes.
@@ -73,8 +67,7 @@ OPTIONS
            do not pad filesystem to a multiple of 4K.
 
        -keep-as-directory
-           if one source directory is specified, create a root directory con‐
-           taining that directory, rather than the contents of the directory.
+           if one source directory is specified, create a root directory containing that directory, rather than the contents of the directory.
 
    Filesystem filter options
        -p PSEUDO_DEFINITION
@@ -84,16 +77,13 @@ OPTIONS
            Add list of pseudo file definitions.
 
        -sort SORT_FILE
-           sort files according to priorities in SORT_FILE. One file  or  dir
-           with priority per line. Priority -32768 to 32767, default priority
-           0.
+           sort files according to priorities in SORT_FILE. One file or dir with priority per line. Priority -32768 to 32767, default priority 0.
 
        -ef EXCLUDE_FILE
            list of exclude dirs/files. One per line.
 
        -wildcards
-           Allow extended shell wildcards (globbing) to be  used  in  exclude
-           dirs/files
+           Allow extended shell wildcards (globbing) to be used in exclude dirs/files
 
        -regex
            Allow POSIX regular expressions to be used in exclude dirs/files.
@@ -103,9 +93,7 @@ OPTIONS
            do not append to existing filesystem.
 
        -root-becomes NAME
-           when  appending  source  files/directories, make the original root
-           become a subdirectory in the new root  called  NAME,  rather  than
-           adding the new source items to the original root.
+           when appending source files/directories, make the original root become a subdirectory in the new root called NAME, rather than adding the new source items to the original root.
 
    Mksquashfs runtime options:
        -version
@@ -124,8 +112,7 @@ OPTIONS
            don't display the progress bar.
 
        -processors NUMBER
-           Use  NUMBER  processors.  By default will use number of processors
-           available.
+           Use NUMBER processors. By default will use number of processors available.
 
        -read-queue SIZE
            Set input queue to SIZE Mbytes. Default 64 Mbytes.
@@ -160,29 +147,21 @@ OPTIONS
        xz
 
        -Xbcj filter1,filter2,...,filterN
-           Compress using filter1,filter2,...,filterN in turn (in addition to
-           no  filter),  and  choose the best compression. Available filters:
-           x86, arm, armthumb, powerpc, sparc, ia64.
+           Compress using filter1,filter2,...,filterN in turn (in addition to no filter), and choose the best compression. Available filters: x86, arm, armthumb, powerpc, sparc, ia64.
 
        -Xdict-size DICT_SIZE
-           Use DICT_SIZE as the XZ dictionary size. The dictionary  size  can
-           be  specified as a percentage of the block size, or as an absolute
-           value. The dictionary size must be less than or equal to the block
-           size  and 8192 bytes or larger. It must also be storable in the xz
-           header as either 2^n or as  2^n+2^(n+1).  Example  dict-sizes  are
-           75%, 50%, 37.5%, 25%, or 32K, 16K, 8K etc.
+           Use DICT_SIZE as the XZ dictionary size. The dictionary size can be specified as a percentage of the block size, or as an absolute value. The dictionary size must be less than or equal to
+           the block size and 8192 bytes or larger. It must also be storable in the xz header as either 2^n or as 2^n+2^(n+1). Example dict-sizes are 75%, 50%, 37.5%, 25%, or 32K, 16K, 8K etc.
 
 SEE ALSO
        unsquashfs(1)
 
 HOMEPAGE
-       More  information  about mksquashfs and the squashfs filesystem can be
-       found at <http://squashfs.sourceforge.net/>.
+       More information about mksquashfs and the squashfs filesystem can be found at <http://squashfs.sourceforge.net/>.
 
 AUTHOR
        squashfs was written by Phillip Lougher <phillip@squashfs.org.uk>.
 
-       This manual page  was  written  by  Daniel  Baumann  <mail@daniel-bau‐
-       mann.ch>.
+       This manual page was written by Daniel Baumann <mail@daniel-baumann.ch>.
 
-4.2                               2012-06-30                    MKSQUASHFS(1)
+4.2                                                                                           2012-06-30                                                                                 MKSQUASHFS(1)

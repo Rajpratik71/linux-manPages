@@ -1,4 +1,4 @@
-hipstopgm(1)               General Commands Manual               hipstopgm(1)
+hipstopgm(1)                                                                            General Commands Manual                                                                           hipstopgm(1)
 
 NAME
        hipstopgm - convert a HIPS file into a portable graymap
@@ -9,11 +9,9 @@ SYNOPSIS
 DESCRIPTION
        Reads a HIPS file as input.  Produces a portable graymap as output.
 
-       If  the  HIPS file contains more than one frame in sequence, hipstopgm
-       will concatenate all the frames vertically.
+       If the HIPS file contains more than one frame in sequence, hipstopgm will concatenate all the frames vertically.
 
-       HIPS is a format developed at the Human Information Processing Labora‐
-       tory, NYU.
+       HIPS is a format developed at the Human Information Processing Laboratory, NYU.
 
 SEE ALSO
        pgm(5)
@@ -21,4 +19,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                                 24 August 89                    hipstopgm(1)
+                                                                                             24 August 89                                                                                 hipstopgm(1)

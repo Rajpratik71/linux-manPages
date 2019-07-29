@@ -1,4 +1,4 @@
-psidtopgm(1)               General Commands Manual               psidtopgm(1)
+psidtopgm(1)                                                                            General Commands Manual                                                                           psidtopgm(1)
 
 NAME
        psidtopgm - convert PostScript "image" data into a portable graymap
@@ -7,23 +7,16 @@ SYNOPSIS
        psidtopgm width height bits/sample [imagedata]
 
 DESCRIPTION
-       Reads  the  "image"  data from a PostScript file as input.  Produces a
-       portable graymap as output.
+       Reads the "image" data from a PostScript file as input.  Produces a portable graymap as output.
 
-       This program is obsoleted by pstopnm.  What follows was written before
-       pstopnm existed.
+       This program is obsoleted by pstopnm.  What follows was written before pstopnm existed.
 
-       This is a very simple and limited program, and is here only because so
-       many people have asked for it.  To use it you have to manually extract
-       the  readhexstring  data  portion  from your PostScript file, and then
-       give the width, height, and bits/sample on the command  line.   Before
-       you  attempt  this,  you  should  at least read the description of the
-       "image" operator in the PostScript Language Reference Manual.
+       This  is  a  very simple and limited program, and is here only because so many people have asked for it.  To use it you have to manually extract the readhexstring data portion from your Post‐
+       Script file, and then give the width, height, and bits/sample on the command line.  Before you attempt this, you should at least read the description of the "image" operator in the PostScript
+       Language Reference Manual.
 
-       It would probably not be too hard to write a  script  that  uses  this
-       filter  to read a specific variety of PostScript image, but the varia‐
-       tion is too great  to  make  a  general-purpose  reader.   Unless,  of
-       course, you want to write a full-fledged PostScript interpreter...
+       It  would  probably  not  be  too hard to write a script that uses this filter to read a specific variety of PostScript image, but the variation is too great to make a general-purpose reader.
+       Unless, of course, you want to write a full-fledged PostScript interpreter...
 
 SEE ALSO
        pnmtops(1), pgm(5)
@@ -31,4 +24,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                                 02 August 89                    psidtopgm(1)
+                                                                                             02 August 89                                                                                 psidtopgm(1)

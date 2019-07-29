@@ -1,4 +1,4 @@
-PL2PM(1)               Perl Programmers Reference Guide              PL2PM(1)
+PL2PM(1)                                                                           Perl Programmers Reference Guide                                                                           PL2PM(1)
 
 NAME
        pl2pm - Rough tool to translate Perl4 .pl files to Perl5 .pm modules.
@@ -7,11 +7,8 @@ SYNOPSIS
        pl2pm files
 
 DESCRIPTION
-       pl2pm is a tool to aid in the conversion of Perl4-style .pl library
-       files to Perl5-style library modules.  Usually, your old .pl file will
-       still work fine and you should only use this tool if you plan to
-       update your library to use some of the newer Perl 5 features, such as
-       AutoLoading.
+       pl2pm is a tool to aid in the conversion of Perl4-style .pl library files to Perl5-style library modules.  Usually, your old .pl file will still work fine and you should only use this tool if
+       you plan to update your library to use some of the newer Perl 5 features, such as AutoLoading.
 
 LIMITATIONS
        It's just a first step, but it's usually a good first step.
@@ -19,4 +16,4 @@ LIMITATIONS
 AUTHOR
        Larry Wall <larry@wall.org>
 
-perl v5.26.1                      2018-11-19                         PL2PM(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                      PL2PM(1)

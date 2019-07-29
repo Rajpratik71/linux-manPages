@@ -1,4 +1,4 @@
-PLYMOUTH(1)                     User Commands                     PLYMOUTH(1)
+PLYMOUTH(1)                                                                                  User Commands                                                                                 PLYMOUTH(1)
 
 NAME
        plymouth - Send commands to plymouthd
@@ -9,14 +9,11 @@ SYNOPSIS
        plymouth COMMAND [OPTION...]
 
 DESCRIPTION
-       The plymouth sends commands to a running plymouthd. This is used
-       during the boot process to control the display of the graphical boot
-       splash.
+       The plymouth sends commands to a running plymouthd. This is used during the boot process to control the display of the graphical boot splash.
 
 OPTIONS
-       The following options are understood. These options are supported for
-       compatibility with the old rhgb-client interface, and have been
-       replaced by the commands that are described in the next section.
+       The following options are understood. These options are supported for compatibility with the old rhgb-client interface, and have been replaced by the commands that are described in the next
+       section.
 
        --help
            Show summary of options.
@@ -181,7 +178,6 @@ COMMANDS
                Don't explicitly hide boot splash on exit
 
 SEE ALSO
-       grub(8), plymouth(8), plymouthd(8),
-       http://www.freedesktop.org/wiki/Software/Plymouth
+       grub(8), plymouth(8), plymouthd(8), http://www.freedesktop.org/wiki/Software/Plymouth
 
-plymouth                                                          PLYMOUTH(1)
+plymouth                                                                                                                                                                                   PLYMOUTH(1)

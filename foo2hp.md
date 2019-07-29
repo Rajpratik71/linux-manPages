@@ -1,8 +1,7 @@
-foo2hp(1)                  General Commands Manual                  foo2hp(1)
+foo2hp(1)                                                                               General Commands Manual                                                                              foo2hp(1)
 
 NAME
-       foo2hp  -  Convert  Ghostscript  pbmraw  or  bitcmyk format into a ZJS
-       printer stream
+       foo2hp - Convert Ghostscript pbmraw or bitcmyk format into a ZJS printer stream
 
 SYNOPSIS
        foo2hp [options] <pbmraw-file >zjs-file
@@ -12,14 +11,12 @@ SYNOPSIS
        foo2hp [options] <cups-file >zjs-file
 
 DESCRIPTION
-       foo2hp converts Ghostscript pbmraw, bitcmyk, or cups output formats to
-       monochrome or color ZJS streams, for driving the Hewlett-Packard 2600n
-       color laser printer and other Zenographics-based printers.
+       foo2hp  converts Ghostscript pbmraw, bitcmyk, or cups output formats to monochrome or color ZJS streams, for driving the Hewlett-Packard 2600n color laser printer and other Zenographics-based
+       printers.
 
 COMMAND LINE OPTIONS
    Normal Options
-       These are the options used to select the parameters  of  a  print  job
-       that are usually controlled on a per job basis.
+       These are the options used to select the parameters of a print job that are usually controlled on a per job basis.
 
        -b bits
               Bits per plane if autodetect doesn't work (1 or 2) [1].
@@ -58,7 +55,6 @@ COMMAND LINE OPTIONS
               glossy            269
               heavyglossy       270
               cover             277
-
               photo             278
 
        -p paper
@@ -93,20 +89,16 @@ COMMAND LINE OPTIONS
               Username string to send to printer.
 
    Printer Tweaking Options
-       These  are the options used to customize the operation of foo2hp for a
-       particular printer.
+       These are the options used to customize the operation of foo2hp for a particular printer.
 
        -u xoffxyoff
-              Set the offset of the start of the printable  region  from  the
-              upper left corner, in pixels [0x0].
+              Set the offset of the start of the printable region from the upper left corner, in pixels [0x0].
 
        -l xoffxyoff
-              Set  the  offset  of  the  end of the printable region from the
-              lower right corner, in pixels [0x0].
+              Set the offset of the end of the printable region from the lower right corner, in pixels [0x0].
 
        -L mask
-              Send logical clipping amounts implied by -u/-l in the  ZjStream
-              [3].
+              Send logical clipping amounts implied by -u/-l in the ZjStream [3].
 
               0   don't send any logical clipping amounts
               1   only send Y clipping amount
@@ -116,31 +108,25 @@ COMMAND LINE OPTIONS
        -O c,m,y,k
               Alignment of CMYK in rows. The default is 0,0,0,0.
 
-       -P     Do  not  send  START_PLANE  codes on monochrome output.  May be
-              needed by some black and white only printers, such  as  the  HP
-              LaserJet 1000.
+       -P     Do not send START_PLANE codes on monochrome output.  May be needed by some black and white only printers, such as the HP LaserJet 1000.
 
-       -A     AllIsBlack:  convert  C=1,M=1,Y=1  to  just  K=1.   Works  with
-              bitcmyk input only.
+       -A     AllIsBlack: convert C=1,M=1,Y=1 to just K=1.  Works with bitcmyk input only.
 
-       -B     BlackClears: K=1 forces C,M,Y to 0.  Works with  bitcmyk  input
-              only.
+       -B     BlackClears: K=1 forces C,M,Y to 0.  Works with bitcmyk input only.
 
        -X padlen
-              Add extra zero padding to the end of BID segments.  The default
-              is 16 bytes.
+              Add extra zero padding to the end of BID segments.  The default is 16 bytes.
 
    Debugging Options
        These options are used for debugging foo2hp.
 
        -S plane
-              Output just a single color plane from a color print  and  print
-              it  on  the  black  plane.   The default is to output all color
-              planes.
+              Output just a single color plane from a color print and print it on the black plane.  The default is to output all color planes.
 
               1   Cyan
               2   Magenta
               3   Yellow
+
               4   Black
 
        -D level

@@ -1,4 +1,4 @@
-FC-QUERY(1)                                                       FC-QUERY(1)
+FC-QUERY(1)                                                                                                                                                                                FC-QUERY(1)
 
 NAME
        fc-query - query font files
@@ -6,20 +6,14 @@ NAME
 SYNOPSIS
        fc-query [ -Vh ]
 
-        [  [ -b ]  [ --ignore-blanks ]  ]  [  [ -i index ]  [ --index index ]
-       ]  [  [ -f format ]  [ --format format ]  ]  [ --version ]  [ --help ]
-       font-file...
+        [  [ -b ]  [ --ignore-blanks ]  ]  [  [ -i index ]  [ --index index ]  ]  [  [ -f format ]  [ --format format ]  ]  [ --version ]  [ --help ]  font-file...
 
 DESCRIPTION
-       fc-query  queries  font-file(s)  using the normal fontconfig rules and
-       prints out font pattern for each face found.   If  --index  is  given,
-       only  one  face  of  each  file  is  queried,  otherwise all faces are
-       queried.
+       fc-query  queries  font-file(s)  using  the normal fontconfig rules and prints out font pattern for each face found.  If --index is given, only one face of each file is queried, otherwise all
+       faces are queried.
 
 OPTIONS
-       This program follows the usual GNU  command  line  syntax,  with  long
-       options  starting  with  two  dashes  (`-').  A  summary of options is
-       included below.
+       This program follows the usual GNU command line syntax, with long options starting with two dashes (`-'). A summary of options is included below.
 
        -b     Ignore blanks to compute languages
 
@@ -35,17 +29,14 @@ OPTIONS
               Query font-file for font faces.
 
 RETURN CODES
-       fc-query returns error code 0 for successful  parsing,  or  1  if  any
-       errors occured or if at least one font face could not be opened.
+       fc-query returns error code 0 for successful parsing, or 1 if any errors occured or if at least one font face could not be opened.
 
 SEE ALSO
-       fc-scan(1) FcFreeTypeQuery(3) FcPatternFormat(3) fc-cat(1) fc-cache(1)
-       fc-list(1) fc-match(1) fc-pattern(1)
+       fc-scan(1) FcFreeTypeQuery(3) FcPatternFormat(3) fc-cat(1) fc-cache(1) fc-list(1) fc-match(1) fc-pattern(1)
 
-       The fontconfig user's guide, in HTML  format:  /usr/share/doc/fontcon‐
-       fig/fontconfig-user.html.
+       The fontconfig user's guide, in HTML format: /usr/share/doc/fontconfig/fontconfig-user.html.
 
 AUTHOR
        This manual page was updated by Behdad Esfahbod <behdad@behdad.org>.
 
-                                 Aug 13, 2008                     FC-QUERY(1)
+                                                                                             Aug 13, 2008                                                                                  FC-QUERY(1)

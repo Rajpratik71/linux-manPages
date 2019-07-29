@@ -1,23 +1,16 @@
-ipptool(1)                        Apple Inc.                       ipptool(1)
+ipptool(1)                                                                                    Apple Inc.                                                                                    ipptool(1)
 
 NAME
        ipptool - perform internet printing protocol requests
 
 SYNOPSIS
-       ipptool [ --help ] [ --stop-after-include-error ] [ --version ] [ -4 ]
-       [ -6 ] [ -C ] [ -E ] [ -I ] [ -L ] [ -P filename.plist ] [ -S ]  [  -T
-       seconds ] [ -V version ] [ -X ] [ -c ] [ -d name=value ] [ -f filename
-       ] [ -h ] [ -i seconds ] [ -n repeat-count ] [ -q ]  [  -t  ]  [  -v  ]
-       printer-uri testfile [ ...  testfile ]
+       ipptool  [  --help  ]  [  --stop-after-include-error  ]  [  --version ] [ -4 ] [ -6 ] [ -C ] [ -E ] [ -I ] [ -L ] [ -P filename.plist ] [ -S ] [ -T seconds ] [ -V version ] [ -X ] [ -c ] [ -d
+       name=value ] [ -f filename ] [ -h ] [ -i seconds ] [ -n repeat-count ] [ -q ] [ -t ] [ -v ] printer-uri testfile [ ...  testfile ]
 
 DESCRIPTION
-       ipptool  sends  IPP  requests  to  the specified printer-uri and tests
-       and/or displays the results.  Each named testfile defines one or  more
-       requests, including the expected response status, attributes, and val‐
-       ues.  Output is either a plain  text,  formatted  text,  CSV,  or  XML
-       report  on the standard output, with a non-zero exit status indicating
-       that one or more tests have failed.  The testfile format is  described
-       in ipptoolfile(5).
+       ipptool sends IPP requests to the specified printer-uri and tests and/or displays the results.  Each named testfile defines one or more  requests,  including  the  expected  response  status,
+       attributes,  and  values.  Output is either a plain text, formatted text, CSV, or XML report on the standard output, with a non-zero exit status indicating that one or more tests have failed.
+       The testfile format is described in ipptoolfile(5).
 
 OPTIONS
        The following options are recognized by ipptool:
@@ -26,41 +19,28 @@ OPTIONS
             Shows program help.
 
        --stop-after-include-error
-            Tells  ipptool  to  stop  if an error occurs in an included file.
-            Normally ipptool will continue with subsequent  tests  after  the
-            INCLUDE directive.
+            Tells ipptool to stop if an error occurs in an included file. Normally ipptool will continue with subsequent tests after the INCLUDE directive.
 
        --version
             Shows the version of ipptool being used.
 
-       -4   Specifies  that  ipptool  must  connect  to the printer or server
-            using IPv4.
+       -4   Specifies that ipptool must connect to the printer or server using IPv4.
 
-       -6   Specifies that ipptool must connect  to  the  printer  or  server
-            using IPv6.
+       -6   Specifies that ipptool must connect to the printer or server using IPv6.
 
-       -C   Specifies that requests should be sent using the HTTP/1.1 "Trans‐
-            fer-Encoding: chunked" header, which is required for  conformance
-            by  all  versions of IPP.  The default is to use "Transfer-Encod‐
-            ing:  chunked"  for  requests  with  attached  files  and   "Con‐
-            tent-Length:" for requests without attached files.
+       -C   Specifies that requests should be sent using the HTTP/1.1 "Transfer-Encoding: chunked" header, which is required for conformance by all versions of IPP.  The default is  to  use  "Trans‐
+            fer-Encoding: chunked" for requests with attached files and "Content-Length:" for requests without attached files.
 
-       -E   Forces  TLS  encryption  when  connecting to the server using the
-            HTTP "Upgrade" header.
+       -E   Forces TLS encryption when connecting to the server using the HTTP "Upgrade" header.
 
        -I   Specifies that ipptool will continue past errors.
 
-       -L   Specifies that requests should be sent using the  HTTP/1.0  "Con‐
-            tent-Length:"  header,  which  is required for conformance by all
-            versions of IPP.  The default is to use "Transfer-Encoding: chun‐
-            ked"  for  requests with attached files and "Content-Length:" for
-            requests without attached files.
+       -L   Specifies  that  requests should be sent using the HTTP/1.0 "Content-Length:" header, which is required for conformance by all versions of IPP.  The default is to use "Transfer-Encoding:
+            chunked" for requests with attached files and "Content-Length:" for requests without attached files.
 
        -P filename.plist
-            Specifies that the test results should be written  to  the  named
-            XML  (Apple  plist)  file  in addition to the regular test report
-            (-t).  This option is incompatible with the -i (interval) and  -n
-            (repeat-count) options.
+            Specifies that the test results should be written to the named XML (Apple plist) file in addition to the regular test report (-t).  This option is incompatible with the -i (interval) and
+            -n (repeat-count) options.
 
        -S   Forces (dedicated) TLS encryption when connecting to the server.
 
@@ -68,15 +48,11 @@ OPTIONS
             Specifies a timeout for IPP requests in seconds.
 
        -V version
-            Specifies  the default IPP version to use: 1.0, 1.1, 2.0, 2.1, or
-            2.2. If not specified, version 1.1 is used.
+            Specifies the default IPP version to use: 1.0, 1.1, 2.0, 2.1, or 2.2. If not specified, version 1.1 is used.
 
-       -X   Specifies that XML (Apple plist) output is desired instead of the
-            plain  text  report.   This  option  is  incompatible with the -i
-            (interval) and -n (repeat-count) options.
+       -X   Specifies that XML (Apple plist) output is desired instead of the plain text report.  This option is incompatible with the -i (interval) and -n (repeat-count) options.
 
-       -c   Specifies that CSV (comma-separated  values)  output  is  desired
-            instead of the plain text output.
+       -c   Specifies that CSV (comma-separated values) output is desired instead of the plain text output.
 
        -d name=value
             Defines the named variable.
@@ -87,28 +63,21 @@ OPTIONS
        -h   Validate HTTP response headers.
 
        -i seconds
-            Specifies  that  the  (last)  testfile  should be repeated at the
-            specified interval.  This option is incompatible with the -X (XML
-            plist output) option.
+            Specifies that the (last) testfile should be repeated at the specified interval.  This option is incompatible with the -X (XML plist output) option.
 
        -l   Specifies that plain text output is desired.
 
        -n repeat-count
-            Specifies  that the (last) testfile should be repeated the speci‐
-            fied number of times.  This option is incompatible  with  the  -X
-            (XML plist output) option.
+            Specifies that the (last) testfile should be repeated the specified number of times.  This option is incompatible with the -X (XML plist output) option.
 
        -q   Be quiet and produce no output.
 
-       -t   Specifies  that CUPS test report output is desired instead of the
-            plain text output.
+       -t   Specifies that CUPS test report output is desired instead of the plain text output.
 
-       -v   Specifies that all request and response attributes should be out‐
-            put in CUPS test mode (-t).  This is the default for XML output.
+       -v   Specifies that all request and response attributes should be output in CUPS test mode (-t).  This is the default for XML output.
 
 EXIT STATUS
-       The  ipptool program returns 0 if all tests were successful and 1 oth‐
-       erwise.
+       The ipptool program returns 0 if all tests were successful and 1 otherwise.
 
 FILES
        The following standard files are available:
@@ -144,27 +113,23 @@ FILES
        validate-job.test
 
 CONFORMING TO
-       The ipptool program is unique to CUPS and  conforms  to  the  Internet
-       Printing Protocol up to version 2.2.
+       The ipptool program is unique to CUPS and conforms to the Internet Printing Protocol up to version 2.2.
 
 EXAMPLES
        Get a list of completed jobs for "myprinter":
 
            ipptool ipp://localhost/printers/myprinter get-completed-jobs.test
 
-       Send   email  notifications  to  "user@example.com"  when  "myprinter"
-       changes:
+       Send email notifications to "user@example.com" when "myprinter" changes:
 
            ipptool -d recipient=mailto:user@example.com \
                ipp://localhost/printers/myprinter create-printer-subscription.test
 
 SEE ALSO
-       ipptoolfile(5),   IANA   IPP   Registry   (http://www.iana.org/assign‐
-       ments/ipp-registrations),  PWG  Internet  Printing  Protocol Workgroup
-       (http://www.pwg.org/ipp)                   RFC                    8011
+       ipptoolfile(5),    IANA    IPP    Registry    (http://www.iana.org/assignments/ipp-registrations),    PWG    Internet   Printing   Protocol   Workgroup   (http://www.pwg.org/ipp)   RFC   8011
        (http://tools.ietf.org/html/rfc8011),
 
 COPYRIGHT
        Copyright © 2007-2017 by Apple Inc.
 
-4 August 2017                        CUPS                          ipptool(1)
+4 August 2017                                                                                    CUPS                                                                                       ipptool(1)

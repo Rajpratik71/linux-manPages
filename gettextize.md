@@ -1,4 +1,4 @@
-GETTEXTIZE(1)                        GNU                        GETTEXTIZE(1)
+GETTEXTIZE(1)                                                                                     GNU                                                                                    GETTEXTIZE(1)
 
 NAME
        gettextize - install or upgrade gettext infrastructure
@@ -39,19 +39,14 @@ REPORTING BUGS
        Report bugs to <bug-gnu-gettext@gnu.org>.
 
 COPYRIGHT
-       Copyright  ©  1995-1998,  2000-2013  Free  Software  Foundation,  Inc.
-       License     GPLv3+:     GNU     GPL     version     3     or     later
-       <http://gnu.org/licenses/gpl.html>
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 1995-1998, 2000-2013 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
-       The full documentation for gettextize is maintained as a Texinfo  man‐
-       ual.   If  the  info and gettextize programs are properly installed at
-       your site, the command
+       The full documentation for gettextize is maintained as a Texinfo manual.  If the info and gettextize programs are properly installed at your site, the command
 
               info gettextize
 
        should give you access to the complete manual.
 
-GNU gettext-tools 0.19.8.1        June 2016                     GETTEXTIZE(1)
+GNU gettext-tools 0.19.8.1                                                                     June 2016                                                                                 GETTEXTIZE(1)

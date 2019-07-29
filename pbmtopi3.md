@@ -1,4 +1,4 @@
-pbmtopi3(1)                General Commands Manual                pbmtopi3(1)
+pbmtopi3(1)                                                                             General Commands Manual                                                                            pbmtopi3(1)
 
 NAME
        pbmtopi3 - convert a portable bitmap into an Atari Degas .pi3 file
@@ -7,8 +7,7 @@ SYNOPSIS
        pbmtopi3 [pbmfile]
 
 DESCRIPTION
-       Reads  a  portable bitmap as input.  Produces an Atari Degas .pi3 file
-       as output.
+       Reads a portable bitmap as input.  Produces an Atari Degas .pi3 file as output.
 
 SEE ALSO
        pi3topbm(1), pbm(5), ppmtopi1(1), pi1toppm(1)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988 by David Beckemeyer (bdt!david) and Jef Poskanzer.
 
-                                11 March 1990                     pbmtopi3(1)
+                                                                                             11 March 1990                                                                                 pbmtopi3(1)

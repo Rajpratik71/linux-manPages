@@ -1,33 +1,26 @@
-compare(1)                 General Commands Manual                 compare(1)
+compare(1)                                                                              General Commands Manual                                                                             compare(1)
 
 NAME
-       compare  - mathematically and visually annotate the difference between
-       an image and its reconstruction.
+       compare - mathematically and visually annotate the difference between an image and its reconstruction.
 
 SYNOPSIS
        compare input-file input-file [options] output-file
 
 OVERVIEW
-       The compare program is a member of the ImageMagick(1) suite of  tools.
-       Use  it to mathematically and visually annotate the difference between
-       an image and its reconstruction.
+       The compare program is a member of the ImageMagick(1) suite of tools.  Use it to mathematically and visually annotate the difference between an image and its reconstruction.
 
-       For more information about the compare command, point your browser  to
-       file:///usr/share/doc/imagemagick-6-common/html/www/compare.html   (on
-       debian system  you  may  install  the  imagemagick-6-doc  package)  or
-       http://www.imagemagick.org/script/compare.php.
+       For  more information about the compare command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/compare.html (on debian system you may install the imagemagick-6-doc
+       package) or http://www.imagemagick.org/script/compare.php.
 
 DESCRIPTION
        Image Settings:
-         -alpha  option         on,  activate,  off, deactivate, set, opaque,
-       copy
+         -alpha option        on, activate, off, deactivate, set, opaque, copy
                               transparent, extract, background, or shape
          -authenticate value  decrypt image with this password
          -channel type        apply option to select image channels
          -colorspace type     alternate image colorspace
          -compose operator    set image composite operator
-         -compress type       type of  pixel  compression  when  writing  the
-       image
+         -compress type       type of pixel compression when writing the image
          -decipher filename   convert cipher pixels to plain pixels
          -define format:option
                               define one or more image format options
@@ -38,10 +31,8 @@ DESCRIPTION
          -encipher filename   convert plain pixels to cipher pixels
          -extract geometry    extract area from image
          -format "string"     output formatted image characteristics
-         -fuzz  distance        colors  within  this  distance are considered
-       equal
-         -identify            identify the format and characteristics of  the
-       image
+         -fuzz distance       colors within this distance are considered equal
+         -identify            identify the format and characteristics of the image
          -interlace type      type of image interlacing scheme
          -highlight-color color
                               emphasize pixel differences with this color
@@ -49,8 +40,7 @@ DESCRIPTION
          -lowlight-color color
                               de-emphasize pixel differences with this color
          -mask filename       associate a mask with the image
-         -metric  type          measure  differences between images with this
-       metric
+         -metric type         measure differences between images with this metric
          -monitor             monitor progress
          -passphrase filename get the passphrase from this file
          -profile filename    add, delete, or apply an image profile
@@ -58,8 +48,7 @@ DESCRIPTION
          -quiet               suppress all warning messages
          -quantize colorspace reduce colors in this colorspace
          -regard-warnings     pay attention to warning messages
-         -respect-parentheses settings remain  in  effect  until  parenthesis
-       boundary
+         -respect-parentheses settings remain in effect until parenthesis boundary
          -sampling-factor geometry
                               horizontal and vertical sampling factor
          -seed value          seed a new sequence of pseudo-random numbers
@@ -84,23 +73,16 @@ DESCRIPTION
          -list type           print a list of supported option arguments
          -version             print version information
 
-       By default, the image format of `file' is determined by its magic num‐
-       ber.  To specify a particular image format, precede the filename  with
-       an  image format name and a colon (i.e. ps:image) or specify the image
-       type as the filename suffix (i.e. image.ps).  Specify  'file'  as  '-'
-       for standard input or output.
+       By default, the image format of `file' is determined by its magic number.  To specify a particular image format, precede the filename with an image format name and a colon (i.e. ps:image)  or
+       specify the image type as the filename suffix (i.e. image.ps).  Specify 'file' as '-' for standard input or output.
 
-       The  compare  program returns 2 on error otherwise 0 if the images are
-       similar or 1 if they are dissimilar.
+       The compare program returns 2 on error otherwise 0 if the images are similar or 1 if they are dissimilar.
 
 SEE ALSO
        ImageMagick(1)
 
 COPYRIGHT
-       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional  copyrights
-       and      licenses      apply      to      this      software,      see
-       file:///usr/share/doc/imagemagick-6-common/html/www/license.html   (on
-       debian  system  you  may  install  the  imagemagick-6-doc  package) or
-       http://www.imagemagick.org/script/license.php
+       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional copyrights and licenses apply to this software, see file:///usr/share/doc/imagemagick-6-common/html/www/license.html (on debian sys‐
+       tem you may install the imagemagick-6-doc package) or http://www.imagemagick.org/script/license.php
 
-ImageMagick               Date: 2009/01/10 01:00:00                compare(1)
+ImageMagick                                                                            Date: 2009/01/10 01:00:00                                                                            compare(1)

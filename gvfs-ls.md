@@ -1,4 +1,4 @@
-GVFS-LS(1)                      User Commands                      GVFS-LS(1)
+GVFS-LS(1)                                                                                   User Commands                                                                                  GVFS-LS(1)
 
 NAME
        gvfs-ls
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                               GVFS-LS(1)
+gvfs                                                                                                                                                                                        GVFS-LS(1)

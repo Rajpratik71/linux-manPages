@@ -1,4 +1,4 @@
-CORELIST(1)            Perl Programmers Reference Guide           CORELIST(1)
+CORELIST(1)                                                                        Perl Programmers Reference Guide                                                                        CORELIST(1)
 
 NAME
        corelist - a commandline frontend to Module::CoreList
@@ -16,9 +16,7 @@ SYNOPSIS
           corelist --upstream <ModuleName>
 
 OPTIONS
-       -a  lists all versions of the given module (or the matching modules,
-           in case you used a module regexp) in the perls Module::CoreList
-           knows about.
+       -a  lists all versions of the given module (or the matching modules, in case you used a module regexp) in the perls Module::CoreList knows about.
 
                corelist -a Unicode
 
@@ -69,14 +67,11 @@ OPTIONS
                  v5.14.1    6.0.0
                  v5.15.0    6.0.0
 
-       -d  finds the first perl version where a module has been released by
-           date, and not by version number (as is the default).
+       -d  finds the first perl version where a module has been released by date, and not by version number (as is the default).
 
        --diff
-           Given two versions of perl, this prints a human-readable table of
-           all module changes between the two.  The output format may change
-           in the future, and is meant for humans, not programs.  For
-           programs, use the Module::CoreList API.
+           Given two versions of perl, this prints a human-readable table of all module changes between the two.  The output format may change in the future, and is meant for humans, not programs.
+           For programs, use the Module::CoreList API.
 
        -? or -help
            help! help! help! to see more help, try --man.
@@ -86,29 +81,22 @@ OPTIONS
 
        -v  lists all of the perl release versions we got the CoreList for.
 
-           If you pass a version argument (value of $], like 5.00503 or
-           5.008008), you get a list of all the modules and their respective
-           versions.  (If you have the "version" module, you can also use
-           new-style version numbers, like 5.8.8.)
+           If you pass a version argument (value of $], like 5.00503 or 5.008008), you get a list of all the modules and their respective versions.  (If you have the "version" module, you can also
+           use new-style version numbers, like 5.8.8.)
 
-           In module filtering context, it can be used as Perl version
-           filter.
+           In module filtering context, it can be used as Perl version filter.
 
        -r  lists all of the perl releases and when they were released
 
-           If you pass a perl version you get the release date for that
-           version only.
+           If you pass a perl version you get the release date for that version only.
 
        --feature, -f
            lists the first version bundle of each named feature given
 
        --upstream, -u
-           Shows if the given module is primarily maintained in perl core or
-           on CPAN and bug tracker URL.
+           Shows if the given module is primarily maintained in perl core or on CPAN and bug tracker URL.
 
-       As a special case, if you specify the module name "Unicode", you'll
-       get the version number of the Unicode Character Database bundled with
-       the requested perl versions.
+       As a special case, if you specify the module name "Unicode", you'll get the version number of the Unicode Character Database bundled with the requested perl versions.
 
 EXAMPLES
            $ corelist File::Spec
@@ -170,7 +158,6 @@ COPYRIGHT
 
        Currently maintained by the perl 5 porters <perl5-porters@perl.org>.
 
-       This program is distributed under the same terms as perl itself.  See
-       http://perl.org/ or http://cpan.org/ for more info on that.
+       This program is distributed under the same terms as perl itself.  See http://perl.org/ or http://cpan.org/ for more info on that.
 
-perl v5.26.1                      2018-11-19                      CORELIST(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                   CORELIST(1)

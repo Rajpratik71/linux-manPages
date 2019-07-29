@@ -1,4 +1,4 @@
-RNANO(1)                   General Commands Manual                   RNANO(1)
+RNANO(1)                                                                                General Commands Manual                                                                               RNANO(1)
 
 NAME
        rnano - a restricted nano
@@ -7,9 +7,7 @@ SYNOPSIS
        rnano [options] [[+line[,column]] file]...
 
 DESCRIPTION
-       rnano  runs  the  nano editor in restricted mode.  This allows editing
-       only the specified file or files, and doesn't allow the user access to
-       the filesystem nor to a command shell.
+       rnano runs the nano editor in restricted mode.  This allows editing only the specified file or files, and doesn't allow the user access to the filesystem nor to a command shell.
 
        In restricted mode, nano will:
 
@@ -41,8 +39,6 @@ SEE ALSO
        nano(1)
 
 AUTHOR
-       Chris  Allegretta  and  others  (see  the files AUTHORS and THANKS for
-       details).  This manual page was originally written by Thijs  Kinkhorst
-       for the Debian system (but may be used by others).
+       Chris Allegretta and others (see the files AUTHORS and THANKS for details).  This manual page was originally written by Thijs Kinkhorst for the Debian system (but may be used by others).
 
-January 2018                    version 2.9.3                        RNANO(1)
+January 2018                                                                                 version 2.9.3                                                                                    RNANO(1)

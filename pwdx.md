@@ -1,4 +1,4 @@
-PWDX(1)                         User Commands                         PWDX(1)
+PWDX(1)                                                                                      User Commands                                                                                     PWDX(1)
 
 NAME
        pwdx - report current working directory of a process
@@ -25,4 +25,4 @@ AUTHOR
 REPORTING BUGS
        Please send bug reports to ⟨procps@freelists.org⟩
 
-procps-ng                         June 2011                           PWDX(1)
+procps-ng                                                                                      June 2011                                                                                       PWDX(1)

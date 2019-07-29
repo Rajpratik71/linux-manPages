@@ -1,4 +1,4 @@
-PREZIP(1)              Aspell Abbreviated User's Manual             PREZIP(1)
+PREZIP(1)                                                                          Aspell Abbreviated User's Manual                                                                          PREZIP(1)
 
 NAME
        prezip, preunzip, precat -  prefix delta compressor for Aspell
@@ -7,17 +7,12 @@ SYNOPSIS
        precat [-dzhLV] [-cfksSq] [file ...]
 
 DESCRIPTION
-       prezip  is  a  a prefix delta compressor.  It is not a general purpose
-       compressor and should only be used on sorted word lists or other simi‐
-       lar text files.  It will likely increase the size of binary data.
+       prezip  is  a a prefix delta compressor.  It is not a general purpose compressor and should only be used on sorted word lists or other similar text files.  It will likely increase the size of
+       binary data.
 
-       If  invoked  as prezip, the default action is to compress.  If invoked
-       as preunzip, the default action is to decompress.  If invoked as  pre‐
-       cat, the default action is to decompress to stdout.
+       If invoked as prezip, the default action is to compress.  If invoked as preunzip, the default action is to decompress.  If invoked as precat, the default action is to decompress to stdout.
 
-       If  no  file  names  are given then prezip will compress or decompress
-       from the standard input to the standard output.  Short  flags  can  be
-       combined so that "-c -s" is the same as "-cs".
+       If no file names are given then prezip will compress or decompress from the standard input to the standard output.  Short flags can be combined so that "-c -s" is the same as "-cs".
 
 OPTIONS
        -h --help
@@ -54,7 +49,6 @@ OPTIONS
               suppress all warnings
 
 AUTHOR
-       This  manual  page was written by Brian Nelson <pyro@debian.org> based
-       on the output of help2man.  Aspell is Copyright © 2002 Kevin Atkinson.
+       This manual page was written by Brian Nelson <pyro@debian.org> based on the output of help2man.  Aspell is Copyright © 2002 Kevin Atkinson.
 
-GNU                               March 2010                        PREZIP(1)
+GNU                                                                                           March 2010                                                                                     PREZIP(1)

@@ -1,4 +1,4 @@
-ISCHROOT(1)                General Commands Manual                ISCHROOT(1)
+ISCHROOT(1)                                                                             General Commands Manual                                                                            ISCHROOT(1)
 
 NAME
        ischroot - detect if running in a chroot
@@ -7,15 +7,13 @@ SYNOPSIS
        ischroot [--default-false] [--default-true] [--help] [--version]
 
 DESCRIPTION
-       ischroot detects if it is currently running in a chroot. The exit sta‐
-       tus is:
+       ischroot detects if it is currently running in a chroot. The exit status is:
 
        0      if currently running in a chroot
 
        1      if currently not running in a chroot
 
-       2      if the detection is not possible (On GNU/Linux this happens  if
-              the script is not run as root).
+       2      if the detection is not possible (On GNU/Linux this happens if the script is not run as root).
 
 OPTIONS
        -f, --default-false
@@ -27,11 +25,9 @@ OPTIONS
        --help Print a usage message on standard output and exit successfully.
 
        --version
-              Print  version information on standard output and exit success‐
-              fully.
+              Print version information on standard output and exit successfully.
 
 BUGS
-       On GNU/Linux, chroot detection is not possible  when  not  root.  This
-       works correctly on GNU/Hurd and GNU/kFreeBSD.
+       On GNU/Linux, chroot detection is not possible when not root. This works correctly on GNU/Hurd and GNU/kFreeBSD.
 
-Debian                           30 May 2011                      ISCHROOT(1)
+Debian                                                                                        30 May 2011                                                                                  ISCHROOT(1)

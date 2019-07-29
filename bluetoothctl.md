@@ -1,4 +1,4 @@
-BLUETOOTHCTL(1)            General Commands Manual            BLUETOOTHCTL(1)
+BLUETOOTHCTL(1)                                                                         General Commands Manual                                                                        BLUETOOTHCTL(1)
 
 NAME
        bluetoothctl - bluetooth control tool
@@ -20,8 +20,6 @@ USAGE
          -a, --agent=CAPABILITY Register agent handler
 
 AUTHOR
-       This   manual   page   was   written   by   Nobuhiro   Iwamatsu  <iwa‐
-       matsu@debian.org>, for the Debian GNU/Linux system (but may be used by
-       others).
+       This manual page was written by Nobuhiro Iwamatsu <iwamatsu@debian.org>, for the Debian GNU/Linux system (but may be used by others).
 
-                                   May 2013                   BLUETOOTHCTL(1)
+                                                                                               May 2013                                                                                BLUETOOTHCTL(1)

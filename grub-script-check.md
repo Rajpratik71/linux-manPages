@@ -1,4 +1,4 @@
-GRUB-SCRIPT-CHECK(1)            User Commands            GRUB-SCRIPT-CHECK(1)
+GRUB-SCRIPT-CHECK(1)                                                                         User Commands                                                                        GRUB-SCRIPT-CHECK(1)
 
 NAME
        grub-script-check - check grub.cfg for syntax errors
@@ -27,12 +27,10 @@ REPORTING BUGS
 SEE ALSO
        grub-mkconfig(8)
 
-       The  full  documentation for grub-script-check is maintained as a Tex‐
-       info manual.  If the info and grub-script-check programs are  properly
-       installed at your site, the command
+       The full documentation for grub-script-check is maintained as a Texinfo manual.  If the info and grub-script-check programs are properly installed at your site, the command
 
               info grub-script-check
 
        should give you access to the complete manual.
 
-grub-script-check (GRUB) 2.02-2uFebruary22019            GRUB-SCRIPT-CHECK(1)
+grub-script-check (GRUB) 2.02-2ubuntu8.12                                                    February 2019                                                                        GRUB-SCRIPT-CHECK(1)

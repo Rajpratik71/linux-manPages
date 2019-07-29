@@ -1,18 +1,15 @@
-inputattach(1)             General Commands Manual             inputattach(1)
+inputattach(1)                                                                          General Commands Manual                                                                         inputattach(1)
 
 NAME
        inputattach - attach a serial line to an input-layer device
 
 SYNOPSIS
-       inputattach  [--daemon]  [--always]  [--noinit]  [--baud baud>] <mode>
-       <device>
+       inputattach [--daemon] [--always] [--noinit] [--baud baud>] <mode> <device>
 
 DESCRIPTION
-       inputattach attaches a serial line to an input-layer device via a line
-       discipline.
+       inputattach attaches a serial line to an input-layer device via a line discipline.
 
-       Exactly  one  of  the available modes must be specified on the command
-       line.
+       Exactly one of the available modes must be specified on the command line.
 
 OPTIONS
        --daemon
@@ -24,8 +21,7 @@ OPTIONS
        --noinit
               Skip device initialization.
 
-       --baud Specify the baud rate to use. (This is only  necessary  if  the
-              default rate is incorrect.)
+       --baud Specify the baud rate to use. (This is only necessary if the default rate is incorrect.)
 
    Modes
        -dump, --dump
@@ -158,9 +154,7 @@ OPTIONS
               DEC VSXXX-AA / VSXXX-GA mouse and VSXXX-A tablet.
 
        -w8001, --w8001
-              Wacom  W8001  pen  and/or touch devices. The default baud rate,
-              38400bps, allows for touch-only or pen and touch  devices;  for
-              pen-only devices, "--baud 19200" must be specified.
+              Wacom W8001 pen and/or touch devices. The default baud rate, 38400bps, allows for touch-only or pen and touch devices; for pen-only devices, "--baud 19200" must be specified.
 
        -wacom_iv, --wacom_iv
               Wacom protocol IV tablet.
@@ -172,11 +166,8 @@ OPTIONS
               Zhen Hua 5-byte protocol.
 
 AUTHORS
-       inputattach  was  written by Vojtech Pavlik and Arndt Schoenewald, and
-       improved by many others; see the linuxconsole tools documentation  for
-       details.
+       inputattach was written by Vojtech Pavlik and Arndt Schoenewald, and improved by many others; see the linuxconsole tools documentation for details.
 
-       This  manual page was written by Stephen Kitt <steve@sk2.org>, for the
-       Debian GNU/Linux system (but may be used by others).
+       This manual page was written by Stephen Kitt <steve@sk2.org>, for the Debian GNU/Linux system (but may be used by others).
 
-inputattach                    January 9, 2016                 inputattach(1)
+inputattach                                                                                 January 9, 2016                                                                             inputattach(1)

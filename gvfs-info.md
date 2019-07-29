@@ -1,4 +1,4 @@
-GVFS-INFO(1)                    User Commands                    GVFS-INFO(1)
+GVFS-INFO(1)                                                                                 User Commands                                                                                GVFS-INFO(1)
 
 NAME
        gvfs-info
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                             GVFS-INFO(1)
+gvfs                                                                                                                                                                                      GVFS-INFO(1)

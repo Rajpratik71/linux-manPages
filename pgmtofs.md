@@ -1,4 +1,4 @@
-pgmtofs(1)                 General Commands Manual                 pgmtofs(1)
+pgmtofs(1)                                                                              General Commands Manual                                                                             pgmtofs(1)
 
 NAME
        pgmtofs - convert portable graymap to Usenix FaceSaver(tm) format
@@ -7,11 +7,9 @@ SYNOPSIS
        pgmtofs [pgmfile]
 
 DESCRIPTION
-       Reads a portable graymap as input.  Produces Usenix FaceSaver(tm) for‐
-       mat as output.
+       Reads a portable graymap as input.  Produces Usenix FaceSaver(tm) format as output.
 
-       FaceSaver is a registered trademark of  Metron  Computerware  Ltd.  of
-       Oakland, CA.
+       FaceSaver is a registered trademark of Metron Computerware Ltd. of Oakland, CA.
 
 SEE ALSO
        fstopgm(1), pgm(5)
@@ -19,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Jef Poskanzer.
 
-                                 18 May 1990                       pgmtofs(1)
+                                                                                              18 May 1990                                                                                   pgmtofs(1)

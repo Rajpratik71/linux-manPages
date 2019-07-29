@@ -1,4 +1,4 @@
-hipercdecode(1)            General Commands Manual            hipercdecode(1)
+hipercdecode(1)                                                                         General Commands Manual                                                                        hipercdecode(1)
 
 NAME
        hipercdecode - Decode a HIPERC stream into human readable form.
@@ -7,12 +7,9 @@ SYNOPSIS
        hipercdecode [options] <hiperc-file
 
 DESCRIPTION
-       hipercdecode decodes a HIPERC stream into human readable form.  Uncom‐
-       pressed and JBIG formats are handled.
+       hipercdecode decodes a HIPERC stream into human readable form.  Uncompressed and JBIG formats are handled.
 
-       An HIPERC stream is the printer language used by the Oki Data  C310dn,
-       C3100,  C3200n, C3250n, C3300n, C3400n, C5100n, C5250n, C5500n, C5600,
-       and the C5800n printers.
+       An HIPERC stream is the printer language used by the Oki Data C310dn, C3100, C3200n, C3250n, C3300n, C3400n, C5100n, C5250n, C5500n, C5600, and the C5800n printers.
 
 COMMAND LINE OPTIONS
        These are the options that can appear on the command line.

@@ -1,4 +1,4 @@
-READLINK(1)                     User Commands                     READLINK(1)
+READLINK(1)                                                                                  User Commands                                                                                 READLINK(1)
 
 NAME
        readlink - print resolved symbolic links or canonical file names
@@ -7,24 +7,18 @@ SYNOPSIS
        readlink [OPTION]... FILE...
 
 DESCRIPTION
-       Note  realpath(1) is the preferred command to use for canonicalization
-       functionality.
+       Note realpath(1) is the preferred command to use for canonicalization functionality.
 
        Print value of a symbolic link or canonical file name
 
        -f, --canonicalize
-              canonicalize by following every symlink in every  component  of
-              the  given  name  recursively;  all but the last component must
-              exist
+              canonicalize by following every symlink in every component of the given name recursively; all but the last component must exist
 
        -e, --canonicalize-existing
-              canonicalize by following every symlink in every  component  of
-              the given name recursively, all components must exist
+              canonicalize by following every symlink in every component of the given name recursively, all components must exist
 
        -m, --canonicalize-missing
-              canonicalize  by  following every symlink in every component of
-              the given name recursively, without requirements on  components
-              existence
+              canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence
 
        -n, --no-newline
               do not output the trailing delimiter
@@ -50,20 +44,16 @@ AUTHOR
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-       Report    readlink   translation   bugs   to   <http://translationpro‐
-       ject.org/team/>
+       Report readlink translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        readlink(2), realpath(1), realpath(3)
 
-       Full  documentation  at:  <http://www.gnu.org/software/coreutils/read‐
-       link>
+       Full documentation at: <http://www.gnu.org/software/coreutils/readlink>
        or available locally via: info '(coreutils) readlink invocation'
 
-GNU coreutils 8.28               January 2018                     READLINK(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                  READLINK(1)

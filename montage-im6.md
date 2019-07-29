@@ -1,30 +1,23 @@
-montage(1)                 General Commands Manual                 montage(1)
+montage(1)                                                                              General Commands Manual                                                                             montage(1)
 
 NAME
-       montage  -  create  a  composite  image  by combining several separate
-       images. The images are tiled on the composite image optionally adorned
-       with a border, frame, image name, and more.
+       montage - create a composite image by combining several separate images. The images are tiled on the composite image optionally adorned with a border, frame, image name, and more.
 
 SYNOPSIS
        montage input-file[s] [options] output-file
 
 OVERVIEW
-       The  montage program is a member of the ImageMagick(1) suite of tools.
-       Use it to create a  composite  image  by  combining  several  separate
-       images. The images are tiled on the composite image optionally adorned
-       with a border, frame, image name, and more.
+       The  montage  program  is  a member of the ImageMagick(1) suite of tools.  Use it to create a composite image by combining several separate images. The images are tiled on the composite image
+       optionally adorned with a border, frame, image name, and more.
 
-       For more information about the montage command, point your browser  to
-       file:///usr/share/doc/imagemagick-6-common/html/www/montage.html   (on
-       debian system  you  may  install  the  imagemagick-6-doc  package)  or
-       http://www.imagemagick.org/script/montage.php.
+       For more information about the montage command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/montage.html (on debian system you may install the  imagemagick-6-doc
+       package) or http://www.imagemagick.org/script/montage.php.
 
 DESCRIPTION
        Image Settings:
          -adjoin              join images into a single multi-image file
          -affine matrix       affine transform matrix
-         -alpha  option         on,  activate,  off, deactivate, set, opaque,
-       copy
+         -alpha option        on, activate, off, deactivate, set, opaque, copy
                               transparent, extract, background, or shape
          -authenticate value  decrypt image with this password
          -blue-primary point  chromaticity blue primary point
@@ -35,8 +28,7 @@ DESCRIPTION
          -colorspace type     alternate image colorsapce
          -comment string      annotate image with comment
          -compose operator    composite operator
-         -compress type       type of  pixel  compression  when  writing  the
-       image
+         -compress type       type of pixel compression when writing the image
          -define format:option
                               define one or more image format options
          -density geometry    horizontal and vertical density of the image
@@ -56,8 +48,7 @@ DESCRIPTION
          -geometry geometry   preferred tile and border sizes
          -gravity direction   which direction to gravitate towards
          -green-primary point chromaticity green primary point
-         -identify             identify the format and characteristics of the
-       image
+         -identify            identify the format and characteristics of the image
          -interlace type      type of image interlacing scheme
          -interpolate method  pixel color interpolation method
          -kerning value       set the space between two letters
@@ -76,8 +67,7 @@ DESCRIPTION
          -quiet               suppress all warning messages
          -red-primary point   chromaticity red primary point
          -regard-warnings     pay attention to warning messages
-         -respect-parentheses settings remain  in  effect  until  parenthesis
-       boundary
+         -respect-parentheses settings remain in effect until parenthesis boundary
          -sampling-factor geometry
                               horizontal and vertical sampling factor
          -scenes range        image scene range
@@ -89,8 +79,7 @@ DESCRIPTION
          -support factor      resize support: > 1.0 is blurry, < 1.0 is sharp
          -synchronize         synchronize image to storage device
          -taint               declare the image as modified
-         -texture  filename     name  of texture to tile onto the image back‐
-       ground
+         -texture filename    name of texture to tile onto the image background
          -thumbnail geometry  create a thumbnail of the image
          -tile geometry       number of tiles per row and column
          -title string        decorate the montage image with a title
@@ -106,15 +95,13 @@ DESCRIPTION
 
        Image Operators:
          -adaptive-sharpen geometry
-                              adaptively sharpen pixels; increase effect near
-       edges
+                              adaptively sharpen pixels; increase effect near edges
          -annotate geometry text
                               annotate the image with text
          -auto-orient         automagically orient image
          -blur geometry      reduce image noise and reduce detail levels
          -border geometry     surround image with a border of color
-         -crop  geometry        preferred  size  and  location of the cropped
-       image
+         -crop geometry       preferred size and location of the cropped image
          -extent geometry     set the image size
          -flatten             flatten a sequence of images
          -flip                flip image in the vertical direction
@@ -153,24 +140,16 @@ DESCRIPTION
          -list type           print a list of supported option arguments
          -version             print version information
 
-       In addition to those listed above, you can specify  these  standard  X
-       resources  as  command line options:  -background, -bordercolor, -bor‐
-       derwidth, -font, -mattecolor, or -title.
+       In addition to those listed above, you can specify these standard X resources as command line options:  -background, -bordercolor, -borderwidth, -font, -mattecolor, or -title.
 
-       By default, the image format of `file' is determined by its magic num‐
-       ber.   To specify a particular image format, precede the filename with
-       an image format name and a colon (i.e. ps:image) or specify the  image
-       type  as  the  filename suffix (i.e. image.ps).  Specify 'file' as '-'
-       for standard input or output.
+       By  default, the image format of `file' is determined by its magic number.  To specify a particular image format, precede the filename with an image format name and a colon (i.e. ps:image) or
+       specify the image type as the filename suffix (i.e. image.ps).  Specify 'file' as '-' for standard input or output.
 
 SEE ALSO
        ImageMagick(1)
 
 COPYRIGHT
-       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional  copyrights
-       and      licenses      apply      to      this      software,      see
-       file:///usr/share/doc/imagemagick-6-common/html/www/license.html   (on
-       debian  system  you  may  install  the  imagemagick-6-doc  package) or
-       http://www.imagemagick.org/script/license.php
+       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional copyrights and licenses apply to this software, see file:///usr/share/doc/imagemagick-6-common/html/www/license.html (on debian sys‐
+       tem you may install the imagemagick-6-doc package) or http://www.imagemagick.org/script/license.php
 
-ImageMagick               Date: 2009/01/10 01:00:00                montage(1)
+ImageMagick                                                                            Date: 2009/01/10 01:00:00                                                                            montage(1)

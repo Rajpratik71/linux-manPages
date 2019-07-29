@@ -1,4 +1,4 @@
-SG(1)                           User Commands                           SG(1)
+SG(1)                                                                                        User Commands                                                                                       SG(1)
 
 NAME
        sg - execute command as different group ID
@@ -7,17 +7,12 @@ SYNOPSIS
        sg [-] [group [-c ] command]
 
 DESCRIPTION
-       The sg command works similar to newgrp but accepts a command. The
-       command will be executed with the /bin/sh shell. With most shells you
-       may run sg from, you need to enclose multi-word commands in quotes.
-       Another difference between newgrp and sg is that some shells treat
-       newgrp specially, replacing themselves with a new instance of a shell
-       that newgrp creates. This doesn't happen with sg, so upon exit from a
-       sg command you are returned to your previous group ID.
+       The sg command works similar to newgrp but accepts a command. The command will be executed with the /bin/sh shell. With most shells you may run sg from, you need to enclose multi-word
+       commands in quotes. Another difference between newgrp and sg is that some shells treat newgrp specially, replacing themselves with a new instance of a shell that newgrp creates. This doesn't
+       happen with sg, so upon exit from a sg command you are returned to your previous group ID.
 
 CONFIGURATION
-       The following configuration variables in /etc/login.defs change the
-       behavior of this tool:
+       The following configuration variables in /etc/login.defs change the behavior of this tool:
 
        SYSLOG_SG_ENAB (boolean)
            Enable "syslog" logging of sg activity.
@@ -38,4 +33,4 @@ FILES
 SEE ALSO
        id(1), login(1), newgrp(1), su(1), gpasswd(1), group(5), gshadow(5).
 
-shadow-utils 4.5                  01/25/2018                            SG(1)
+shadow-utils 4.5                                                                              01/25/2018                                                                                         SG(1)

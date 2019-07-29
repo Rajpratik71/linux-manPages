@@ -1,26 +1,21 @@
-composite(1)               General Commands Manual               composite(1)
+composite(1)                                                                            General Commands Manual                                                                           composite(1)
 
 NAME
        composite -  overlaps one image over another.
 
 SYNOPSIS
-       composite  [ options ... ] change-file base-file [ mask-file ] output-
-       image
+       composite [ options ... ] change-file base-file [ mask-file ] output-image
 
 OVERVIEW
-       The composite program is a  member  of  the  ImageMagick(1)  suite  of
-       tools.  Use it to overlap one image over another.
+       The composite program is a member of the ImageMagick(1) suite of tools.  Use it to overlap one image over another.
 
-       For  more  information about the composite command, point your browser
-       to  file:///usr/share/doc/imagemagick-6-common/html/www/composite.html
-       (on  debian  system  you may install the imagemagick-6-doc package) or
-       http://www.imagemagick.org/script/composite.php.
+       For  more  information  about  the  composite command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/composite.html (on debian system you may install the imagemag‐
+       ick-6-doc package) or http://www.imagemagick.org/script/composite.php.
 
 DESCRIPTION
        Image Settings:
          -affine matrix       affine transform matrix
-         -alpha option        on, activate,  off,  deactivate,  set,  opaque,
-       copy
+         -alpha option        on, activate, off, deactivate, set, opaque, copy
                               transparent, extract, background, or shape
          -authenticate value  decrypt image with this password
          -blue-primary point  chromaticity blue primary point
@@ -28,8 +23,7 @@ DESCRIPTION
          -colorspace type     alternate image colorspace
          -comment string      annotate image with comment
          -compose operator    composite operator
-         -compress  type        type  of  pixel  compression when writing the
-       image
+         -compress type       type of pixel compression when writing the image
          -decipher filename   convert cipher pixels to plain pixels
          -define format:option
                               define one or more image format options
@@ -58,8 +52,7 @@ DESCRIPTION
          -quiet               suppress all warning messages
          -red-primary point   chromaticity red primary point
          -regard-warnings     pay attention to warning messages
-         -respect-parentheses settings remain  in  effect  until  parenthesis
-       boundary
+         -respect-parentheses settings remain in effect until parenthesis boundary
          -sampling-factor geometry
                               horizontal and vertical sampling factor
          -scene value         image scene number
@@ -71,8 +64,7 @@ DESCRIPTION
          -transparent-color color
                               transparent color
          -treedepth value     color tree depth
-         -tile                 repeat  composite  operation  across  and down
-       image
+         -tile                repeat composite operation across and down image
          -units type          the units of image resolution
          -verbose             print detailed information about the image
          -virtual-pixel method
@@ -84,15 +76,12 @@ DESCRIPTION
          -border geometry     surround image with a border of color
          -bordercolor color   border color
          -colors value        preferred number of colors in the image
-         -displace geometry   shift image pixels defined  by  a  displacement
-       map
+         -displace geometry   shift image pixels defined by a displacement map
          -dissolve value      dissolve the two images a given percent
-         -distort geometry    shift lookup according to a absolute distortion
-       map
+         -distort geometry    shift lookup according to a absolute distortion map
          -extract geometry    extract area from image
          -geometry geometry   location of the composite image
-         -identify            identify the format and characteristics of  the
-       image
+         -identify            identify the format and characteristics of the image
          -monochrome          transform image to black and white
          -negate              replace each pixel with its complementary color
          -profile filename    add ICM or IPTC information profile to image
@@ -109,8 +98,7 @@ DESCRIPTION
          -transform           affine transform image
          -type type           image type
          -unsharp geometry    sharpen the image
-         -watermark  geometry   percent brightness and saturation of a water‐
-       mark
+         -watermark geometry  percent brightness and saturation of a watermark
          -write filename      write images to this file
 
        Image Stack Operators:
@@ -123,20 +111,14 @@ DESCRIPTION
          -list type           print a list of supported option arguments
          -version             print version information
 
-       By default, the image format of `file' is determined by its magic num‐
-       ber.   To specify a particular image format, precede the filename with
-       an image format name and a colon (i.e. ps:image) or specify the  image
-       type  as  the  filename suffix (i.e. image.ps).  Specify 'file' as '-'
-       for standard input or output.
+       By default, the image format of `file' is determined by its magic number.  To specify a particular image format, precede the filename with an image format name and a colon (i.e. ps:image)  or
+       specify the image type as the filename suffix (i.e. image.ps).  Specify 'file' as '-' for standard input or output.
 
 SEE ALSO
        ImageMagick(1)
 
 COPYRIGHT
-       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional  copyrights
-       and      licenses      apply      to      this      software,      see
-       file:///usr/share/doc/imagemagick-6-common/html/www/license.html   (on
-       debian  system  you  may  install  the  imagemagick-6-doc  package) or
-       http://www.imagemagick.org/script/license.php
+       Copyright (C) 1999-2016 ImageMagick Studio LLC. Additional copyrights and licenses apply to this software, see file:///usr/share/doc/imagemagick-6-common/html/www/license.html (on debian sys‐
+       tem you may install the imagemagick-6-doc package) or http://www.imagemagick.org/script/license.php
 
-ImageMagick               Date: 2009/01/10 01:00:00              composite(1)
+ImageMagick                                                                            Date: 2009/01/10 01:00:00                                                                          composite(1)

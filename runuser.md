@@ -1,4 +1,4 @@
-RUNUSER(1)                      User Commands                      RUNUSER(1)
+RUNUSER(1)                                                                                   User Commands                                                                                  RUNUSER(1)
 
 NAME
        runuser - run a command with substitute user and group ID
@@ -9,79 +9,57 @@ SYNOPSIS
        runuser [options] [-] [user [argument...]]
 
 DESCRIPTION
-       runuser  allows  to  run commands with a substitute user and group ID.
-       If the option -u is not given, it falls back to  su-compatible  seman‐
-       tics  and  a  shell  is executed.  The difference between the commands
-       runuser and su is that runuser does not ask for a password (because it
-       may  be  executed  by  the root user only) and it uses a different PAM
-       configuration.  The command runuser does not have to be installed with
-       set-user-ID permissions.
+       runuser  allows  to run commands with a substitute user and group ID.  If the option -u is not given, it falls back to su-compatible semantics and a shell is executed.  The difference between
+       the commands runuser and su is that runuser does not ask for a password (because it may be executed by the root user only) and it uses a different PAM configuration.  The command runuser does
+       not have to be installed with set-user-ID permissions.
 
-       If the PAM session is not required then recommended solution is to use
-       setpriv(1) command.
+       If the PAM session is not required then recommended solution is to use setpriv(1) command.
 
-       When called without arguments, runuser defaults to running an interac‐
-       tive shell as root.
+       When called without arguments, runuser defaults to running an interactive shell as root.
 
-       For backward compatibility, runuser defaults to not change the current
-       directory and to only set the environment  variables  HOME  and  SHELL
-       (plus  USER and LOGNAME if the target user is not root).  This version
-       of runuser uses PAM for session management.
+       For  backward  compatibility,  runuser  defaults  to not change the current directory and to only set the environment variables HOME and SHELL (plus USER and LOGNAME if the target user is not
+       root).  This version of runuser uses PAM for session management.
 
 OPTIONS
        -c, --command=command
               Pass command to the shell with the -c option.
 
        -f, --fast
-              Pass -f to the shell, which may or may not be useful  depending
-              on the shell.
+              Pass -f to the shell, which may or may not be useful depending on the shell.
 
        -g, --group=group
-              The  primary  group to be used.  This option is allowed for the
-              root user only.
+              The primary group to be used.  This option is allowed for the root user only.
 
        -G, --supp-group=group
-              Specify a supplemental group.  This option is available to  the
-              root  user  only.   The  first specified supplementary group is
-              also used as a primary group if the option --group is  unspeci‐
-              fied.
+              Specify a supplemental group.  This option is available to the root user only.  The first specified supplementary group is also used as a primary group if the option --group is unspec‐
+              ified.
 
        -, -l, --login
-              Start the shell as a login shell with an environment similar to
-              a real login:
+              Start the shell as a login shell with an environment similar to a real login:
 
                  o      clears all the environment variables except for TERM
 
-                 o      initializes the environment  variables  HOME,  SHELL,
-                        USER, LOGNAME, PATH
+                 o      initializes the environment variables HOME, SHELL, USER, LOGNAME, PATH
 
                  o      changes to the target user's home directory
 
-                 o      sets argv[0] of the shell to '-' in order to make the
-                        shell a login shell
+                 o      sets argv[0] of the shell to '-' in order to make the shell a login shell
 
        -m, -p, --preserve-environment
-              Preserve the entire environment, i.e. it  does  not  set  HOME,
-              SHELL,  USER  nor LOGNAME.  The option is ignored if the option
-              --login is specified.
+              Preserve the entire environment, i.e. it does not set HOME, SHELL, USER nor LOGNAME.  The option is ignored if the option --login is specified.
 
        -s, --shell=shell
-              Run the specified shell instead of the default.  The  shell  to
-              run is selected according to the following rules, in order:
+              Run the specified shell instead of the default.  The shell to run is selected according to the following rules, in order:
 
                  o      the shell specified with --shell
 
-                 o      the shell specified in the environment variable SHELL
-                        if the --preserve-environment option is used
+                 o      the shell specified in the environment variable SHELL if the --preserve-environment option is used
 
-                 o      the shell listed in the passwd entry  of  the  target
-                        user
+                 o      the shell listed in the passwd entry of the target user
 
                  o      /bin/sh
 
-              If  the  target user has a restricted shell (i.e. not listed in
-              /etc/shells) the --shell option and the SHELL environment vari‐
-              ables are ignored unless the calling user is root.
+              If the target user has a restricted shell (i.e. not listed in /etc/shells) the --shell option and the SHELL environment variables are ignored unless the calling user is root.
 
        --session-command=command
               Same as -c , but do not create a new session.  (Discouraged.)
@@ -93,27 +71,20 @@ OPTIONS
               Display help text and exit.
 
 CONFIG FILES
-       runuser  reads the /etc/default/runuser and /etc/login.defs configura‐
-       tion files.   The  following  configuration  items  are  relevant  for
-       runuser:
+       runuser reads the /etc/default/runuser and /etc/login.defs configuration files.  The following configuration items are relevant for runuser:
 
        ENV_PATH (string)
-           Defines  the  PATH  environment  variable for a regular user.  The
-           default value is /usr/local/bin:/bin:/usr/bin.
+           Defines the PATH environment variable for a regular user.  The default value is /usr/local/bin:/bin:/usr/bin.
 
        ENV_ROOTPATH (string)
        ENV_SUPATH (string)
-           Defines the PATH environment variable for root. The default  value
-           is /usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin.
+           Defines the PATH environment variable for root. The default value is /usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin.
 
        ALWAYS_SET_PATH (boolean)
-           If  set  to  yes  and  --login and --preserve-environment were not
-           specified runuser initializes PATH.
+           If set to yes and --login and --preserve-environment were not specified runuser initializes PATH.
 
 EXIT STATUS
-       runuser normally returns the exit status of the command  it  executed.
-       If  the  command was killed by a signal, runuser returns the number of
-       the signal plus 128.
+       runuser normally returns the exit status of the command it executed.  If the command was killed by a signal, runuser returns the number of the signal plus 128.
 
        Exit status generated by runuser itself:
 
@@ -136,13 +107,9 @@ SEE ALSO
        setpriv(1), su(1), login.defs(5), shells(5), pam(8)
 
 HISTORY
-       This  runuser command was derived from coreutils' su, which was  based
-       on  an  implementation by David MacKenzie, and the Fedora runuser com‐
-       mand by Dan Walsh.
+       This  runuser command was derived from coreutils' su, which was based on an implementation by David MacKenzie, and the Fedora runuser command by Dan Walsh.
 
 AVAILABILITY
-       The runuser command is part of the util-linux package and is available
-       from   Linux  Kernel  Archive  ⟨https://www.kernel.org/pub/linux/utils
-       /util-linux/⟩.
+       The runuser command is part of the util-linux package and is available from Linux Kernel Archive ⟨https://www.kernel.org/pub/linux/utils/util-linux/⟩.
 
-util-linux                        July 2014                        RUNUSER(1)
+util-linux                                                                                     July 2014                                                                                    RUNUSER(1)

@@ -1,4 +1,4 @@
-pnmtosir(1)                General Commands Manual                pnmtosir(1)
+pnmtosir(1)                                                                             General Commands Manual                                                                            pnmtosir(1)
 
 NAME
        pnmtosir - convert a portable anymap into a Solitaire format
@@ -7,11 +7,9 @@ SYNOPSIS
        pnmtosir [pnmfile]
 
 DESCRIPTION
-       Reads a portable anymap as input.  Produces a Solitaire Image Recorder
-       format.
+       Reads a portable anymap as input.  Produces a Solitaire Image Recorder format.
 
-       pnmtosir produces an MGI TYPE 17 file for pbm and pgm files.  For ppm,
-       it writes a MGI TYPE 11 file.
+       pnmtosir produces an MGI TYPE 17 file for pbm and pgm files.  For ppm, it writes a MGI TYPE 11 file.
 
 SEE ALSO
        sirtopnm(1), pnm(5)
@@ -20,4 +18,4 @@ BUGS
 AUTHOR
        Copyright (C) 1991 by Marvin Landis.
 
-                                20 March 1991                     pnmtosir(1)
+                                                                                             20 March 1991                                                                                 pnmtosir(1)

@@ -1,4 +1,4 @@
-EXPR(1)                         User Commands                         EXPR(1)
+EXPR(1)                                                                                      User Commands                                                                                     EXPR(1)
 
 NAME
        expr - evaluate expressions
@@ -13,8 +13,7 @@ DESCRIPTION
        --version
               output version information and exit
 
-       Print  the value of EXPRESSION to standard output.  A blank line below
-       separates increasing precedence groups.  EXPRESSION may be:
+       Print the value of EXPRESSION to standard output.  A blank line below separates increasing precedence groups.  EXPRESSION may be:
 
        ARG1 | ARG2
               ARG1 if it is neither null nor 0, otherwise ARG2
@@ -78,15 +77,10 @@ DESCRIPTION
        ( EXPRESSION )
               value of EXPRESSION
 
-       Beware that many operators need to be escaped or  quoted  for  shells.
-       Comparisons are arithmetic if both ARGs are numbers, else lexicograph‐
-       ical.  Pattern matches return the string matched between \( and \)  or
-       null;  if \( and \) are not used, they return the number of characters
-       matched or 0.
+       Beware  that  many  operators  need  to be escaped or quoted for shells.  Comparisons are arithmetic if both ARGs are numbers, else lexicographical.  Pattern matches return the string matched
+       between \( and \) or null; if \( and \) are not used, they return the number of characters matched or 0.
 
-       Exit status is 0 if EXPRESSION is neither null nor 0, 1 if  EXPRESSION
-       is  null  or  0, 2 if EXPRESSION is syntactically invalid, and 3 if an
-       error occurred.
+       Exit status is 0 if EXPRESSION is neither null nor 0, 1 if EXPRESSION is null or 0, 2 if EXPRESSION is syntactically invalid, and 3 if an error occurred.
 
 AUTHOR
        Written by Mike Parker, James Youngman, and Paul Eggert.
@@ -96,13 +90,11 @@ REPORTING BUGS
        Report expr translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/expr>
        or available locally via: info '(coreutils) expr invocation'
 
-GNU coreutils 8.28               January 2018                         EXPR(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                      EXPR(1)

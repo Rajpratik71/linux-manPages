@@ -1,4 +1,4 @@
-MKTEMP(1)                       User Commands                       MKTEMP(1)
+MKTEMP(1)                                                                                    User Commands                                                                                   MKTEMP(1)
 
 NAME
        mktemp - create a temporary file or directory
@@ -7,11 +7,8 @@ SYNOPSIS
        mktemp [OPTION]... [TEMPLATE]
 
 DESCRIPTION
-       Create  a  temporary  file  or  directory, safely, and print its name.
-       TEMPLATE must contain at least 3 consecutive 'X's in  last  component.
-       If  TEMPLATE  is  not  specified,  use tmp.XXXXXXXXXX, and --tmpdir is
-       implied.  Files are created u+rw, and directories u+rwx,  minus  umask
-       restrictions.
+       Create  a temporary file or directory, safely, and print its name.  TEMPLATE must contain at least 3 consecutive 'X's in last component.  If TEMPLATE is not specified, use tmp.XXXXXXXXXX, and
+       --tmpdir is implied.  Files are created u+rw, and directories u+rwx, minus umask restrictions.
 
        -d, --directory
               create a directory, not a file
@@ -23,18 +20,13 @@ DESCRIPTION
               suppress diagnostics about file/dir-creation failure
 
        --suffix=SUFF
-              append  SUFF  to TEMPLATE; SUFF must not contain a slash.  This
-              option is implied if TEMPLATE does not end in X
+              append SUFF to TEMPLATE; SUFF must not contain a slash.  This option is implied if TEMPLATE does not end in X
 
        -p DIR, --tmpdir[=DIR]
-              interpret TEMPLATE relative to DIR; if DIR  is  not  specified,
-              use $TMPDIR if set, else /tmp.  With this option, TEMPLATE must
-              not be an absolute name; unlike with -t, TEMPLATE  may  contain
-              slashes, but mktemp creates only the final component
+              interpret TEMPLATE relative to DIR; if DIR is not specified, use $TMPDIR if set, else /tmp.  With this option, TEMPLATE must not be an absolute name; unlike with -t, TEMPLATE may  con‐
+              tain slashes, but mktemp creates only the final component
 
-       -t     interpret TEMPLATE as a single file name component, relative to
-              a directory: $TMPDIR, if set; else the directory specified  via
-              -p; else /tmp [deprecated]
+       -t     interpret TEMPLATE as a single file name component, relative to a directory: $TMPDIR, if set; else the directory specified via -p; else /tmp [deprecated]
 
        --help display this help and exit
 
@@ -46,14 +38,11 @@ AUTHOR
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-       Report    mktemp    translation    bugs   to   <http://translationpro‐
-       ject.org/team/>
+       Report mktemp translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        mkstemp(3), mkdtemp(3), mktemp(3)
@@ -61,4 +50,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/mktemp>
        or available locally via: info '(coreutils) mktemp invocation'
 
-GNU coreutils 8.28               January 2018                       MKTEMP(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                    MKTEMP(1)

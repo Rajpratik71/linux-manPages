@@ -1,4 +1,4 @@
-PRINTERBANNER(1)         BSD General Commands Manual         PRINTERBANNER(1)
+PRINTERBANNER(1)                                                                      BSD General Commands Manual                                                                     PRINTERBANNER(1)
 
 NAME
      printerbanner — print large banner on printer
@@ -7,12 +7,9 @@ SYNOPSIS
      printerbanner [-d] [-t] [-w width] message ...
 
 DESCRIPTION
-     Banner prints a large, high quality banner on the standard output.  If
-     the message is omitted, it prompts for and reads one line of its stan‐
-     dard input.
+     Banner prints a large, high quality banner on the standard output.  If the message is omitted, it prompts for and reads one line of its standard input.
 
-     The output should be printed on paper of the appropriate width, with no
-     breaks between the pages.
+     The output should be printed on paper of the appropriate width, with no breaks between the pages.
 
      The following options are available:
 
@@ -21,23 +18,19 @@ DESCRIPTION
      -t      Enable trace.
 
      -w width
-             Change the output from a width of 132 to width, suitable for a
-             narrow terminal.
+             Change the output from a width of 132 to width, suitable for a narrow terminal.
 
 AUTHORS
      Mark Horton
 
 BUGS
-     Several ASCII characters are not defined, notably <, >, [, ], \, ^, _,
-     {, }, |, and ~. The same holds for all non ASCII characters.  Also, the
-     characters ", ', and & are funny looking (but in a useful way.)
+     Several ASCII characters are not defined, notably <, >, [, ], \, ^, _, {, }, |, and ~. The same holds for all non ASCII characters.  Also, the characters ", ', and & are funny looking (but in a
+     useful way.)
 
-     The -w option is implemented by skipping some rows and columns.  The
-     smaller it gets, the grainier the output.  Sometimes it runs letters
-     together.
+     The -w option is implemented by skipping some rows and columns.  The smaller it gets, the grainier the output.  Sometimes it runs letters together.
 
      Messages are limited to 1024 characters in length.
 
      This program is called just banner on FreeBSD.
 
-BSD                            January 26, 2005                           BSD
+BSD                                                                                        January 26, 2005                                                                                        BSD

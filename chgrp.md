@@ -1,4 +1,4 @@
-CHGRP(1)                        User Commands                        CHGRP(1)
+CHGRP(1)                                                                                     User Commands                                                                                    CHGRP(1)
 
 NAME
        chgrp - change group ownership
@@ -8,8 +8,7 @@ SYNOPSIS
        chgrp [OPTION]... --reference=RFILE FILE...
 
 DESCRIPTION
-       Change  the group of each FILE to GROUP.  With --reference, change the
-       group of each FILE to that of RFILE.
+       Change the group of each FILE to GROUP.  With --reference, change the group of each FILE to that of RFILE.
 
        -c, --changes
               like verbose but report only when a change is made
@@ -21,12 +20,10 @@ DESCRIPTION
               output a diagnostic for every file processed
 
        --dereference
-              affect  the  referent  of  each  symbolic  link  (this  is  the
-              default), rather than the symbolic link itself
+              affect the referent of each symbolic link (this is the default), rather than the symbolic link itself
 
        -h, --no-dereference
-              affect  symbolic  links  instead of any referenced file (useful
-              only on systems that can change the ownership of a symlink)
+              affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)
 
        --no-preserve-root
               do not treat '/' specially (the default)
@@ -40,12 +37,9 @@ DESCRIPTION
        -R, --recursive
               operate on files and directories recursively
 
-       The following options modify how a hierarchy is traversed when the  -R
-       option  is  also  specified.   If more than one is specified, only the
-       final one takes effect.
+       The following options modify how a hierarchy is traversed when the -R option is also specified.  If more than one is specified, only the final one takes effect.
 
-       -H     if a command line argument is a symbolic link to  a  directory,
-              traverse it
+       -H     if a command line argument is a symbolic link to a directory, traverse it
 
        -L     traverse every symbolic link to a directory encountered
 
@@ -71,10 +65,8 @@ REPORTING BUGS
        Report chgrp translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        chown(1), chown(2)
@@ -82,4 +74,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/chgrp>
        or available locally via: info '(coreutils) chgrp invocation'
 
-GNU coreutils 8.28               January 2018                        CHGRP(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                     CHGRP(1)

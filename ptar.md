@@ -1,11 +1,10 @@
-PTAR(1)                Perl Programmers Reference Guide               PTAR(1)
+PTAR(1)                                                                            Perl Programmers Reference Guide                                                                            PTAR(1)
 
 NAME
        ptar - a tar-like program written in perl
 
 DESCRIPTION
-       ptar is a small, tar look-alike program that uses the perl module
-       Archive::Tar to extract, create and list tar archives.
+       ptar is a small, tar look-alike program that uses the perl module Archive::Tar to extract, create and list tar archives.
 
 SYNOPSIS
            ptar -c [-v] [-z] [-C] [-f ARCHIVE_FILE | -] FILE FILE ...
@@ -28,4 +27,4 @@ OPTIONS
 SEE ALSO
        tar(1), Archive::Tar.
 
-perl v5.26.1                      2018-11-19                          PTAR(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                       PTAR(1)

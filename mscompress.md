@@ -1,4 +1,4 @@
-MSCOMPRESS(1)              General Commands Manual              MSCOMPRESS(1)
+MSCOMPRESS(1)                                                                           General Commands Manual                                                                          MSCOMPRESS(1)
 
 NAME
        mscompress - compress data using LZ77 algorithm
@@ -9,11 +9,8 @@ SYNOPSIS
        mscompress [ name ...  ]
 
 DESCRIPTION
-       Mscompress reduces the size of the named files using Lempel-Ziv coding (LZ77).
-       Each input file  is compressed to file eding with underscore and original file
-       remains  untouched.  Output  files  then  can  be decompressed using Microsoft
-       EXPAND.EXE utility or msexpand(1). In other  words,  mscompress(1)  is  binary
-       compatible with Microsoft's COMPRESS.EXE
+       Mscompress reduces the size of the named files using Lempel-Ziv coding (LZ77).  Each input file  is compressed to file eding with underscore and original file remains untouched. Output files then can
+       be decompressed using Microsoft EXPAND.EXE utility or msexpand(1). In other words, mscompress(1) is binary compatible with Microsoft's COMPRESS.EXE
 
 BUGS
        Mscompress cannot compress standard input as gzip(1) or compress(1) do.
@@ -25,4 +22,4 @@ AUTHORS
 DOWNLOAD
        mscompress package is available at ftp.penguin.cz/pub/users/mhi/.
 
-                                                                MSCOMPRESS(1)
+                                                                                                                                                                                         MSCOMPRESS(1)

@@ -1,4 +1,4 @@
-SBATTACH(1)                     User Commands                     SBATTACH(1)
+SBATTACH(1)                                                                                  User Commands                                                                                 SBATTACH(1)
 
 NAME
        sbattach - UEFI secure boot detached signature tool
@@ -21,4 +21,4 @@ OPTIONS
        --remove
               remove the boot image's signature table from the original file
 
-sbattach 0.6                    February 2018                     SBATTACH(1)
+sbattach 0.6                                                                                 February 2018                                                                                 SBATTACH(1)

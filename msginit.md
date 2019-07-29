@@ -1,4 +1,4 @@
-MSGINIT(1)                           GNU                           MSGINIT(1)
+MSGINIT(1)                                                                                        GNU                                                                                       MSGINIT(1)
 
 NAME
        msginit - initialize a message catalog
@@ -7,26 +7,21 @@ SYNOPSIS
        msginit [OPTION]
 
 DESCRIPTION
-       Creates  a  new PO file, initializing the meta information with values
-       from the user's environment.
+       Creates a new PO file, initializing the meta information with values from the user's environment.
 
-       Mandatory arguments to long options are mandatory  for  short  options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
    Input file location:
        -i, --input=INPUTFILE
               input POT file
 
-       If  no  input file is given, the current directory is searched for the
-       POT file.  If it is -, standard input is read.
+       If no input file is given, the current directory is searched for the POT file.  If it is -, standard input is read.
 
    Output file location:
        -o, --output-file=FILE
               write output to specified PO file
 
-       If no output file is given, it depends on the --locale option  or  the
-       user's  locale  setting.  If it is -, the results are written to stan‐
-       dard output.
+       If no output file is given, it depends on the --locale option or the user's locale setting.  If it is -, the results are written to standard output.
 
    Input file syntax:
        -P, --properties-input
@@ -46,8 +41,7 @@ DESCRIPTION
               use colors and other text attributes always
 
        --color=WHEN
-              use colors and other text attributes  if  WHEN.   WHEN  may  be
-              'always', 'never', 'auto', or 'html'.
+              use colors and other text attributes if WHEN.  WHEN may be 'always', 'never', 'auto', or 'html'.
 
        --style=STYLEFILE
               specify CSS style rule file for --color
@@ -62,8 +56,7 @@ DESCRIPTION
               set output page width
 
        --no-wrap
-              do  not  break  long message lines, longer than the output page
-              width, into several lines
+              do not break long message lines, longer than the output page width, into several lines
 
    Informative output:
        -h, --help
@@ -79,18 +72,14 @@ REPORTING BUGS
        Report bugs to <bug-gnu-gettext@gnu.org>.
 
 COPYRIGHT
-       Copyright © 2001-2016 Free Software Foundation, Inc.  License  GPLv3+:
-       GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2001-2016 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
-       The full documentation for msginit is maintained as a Texinfo  manual.
-       If  the info and msginit programs are properly installed at your site,
-       the command
+       The full documentation for msginit is maintained as a Texinfo manual.  If the info and msginit programs are properly installed at your site, the command
 
               info msginit
 
        should give you access to the complete manual.
 
-GNU gettext-tools 0.19.8.1        June 2016                        MSGINIT(1)
+GNU gettext-tools 0.19.8.1                                                                     June 2016                                                                                    MSGINIT(1)

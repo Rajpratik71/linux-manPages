@@ -1,4 +1,4 @@
-BMON(1)                    General Commands Manual                    BMON(1)
+BMON(1)                                                                                 General Commands Manual                                                                                BMON(1)
 
 NAME
        btmon - Bluetooth monitor
@@ -23,8 +23,6 @@ USAGE
          -h, --help             Show help options
 
 AUTHOR
-       This   manual   page   was   written   by   Nobuhiro   Iwamatsu  <iwa‐
-       matsu@debian.org>, for the Debian GNU/Linux system (but may be used by
-       others).
+       This manual page was written by Nobuhiro Iwamatsu <iwamatsu@debian.org>, for the Debian GNU/Linux system (but may be used by others).
 
-                                   May 2013                           BMON(1)
+                                                                                               May 2013                                                                                        BMON(1)

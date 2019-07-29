@@ -1,4 +1,4 @@
-sirtopnm(1)                General Commands Manual                sirtopnm(1)
+sirtopnm(1)                                                                             General Commands Manual                                                                            sirtopnm(1)
 
 NAME
        sirtopnm - convert a Solitaire file into a portable anymap
@@ -7,11 +7,8 @@ SYNOPSIS
        sirtopnm [sirfile]
 
 DESCRIPTION
-       Reads  a  Solitaire Image Recorder file as input.  Produces a portable
-       anymap as output.  The type of the output file depends  on  the  input
-       file  - if it's an MGI TYPE 17 file, a pgm file is written. If it's an
-       MGI TYPE 11 file, a ppm file is written.  The program tells you  which
-       type it is writing.
+       Reads  a  Solitaire  Image  Recorder  file as input.  Produces a portable anymap as output.  The type of the output file depends on the input file - if it's an MGI TYPE 17 file, a pgm file is
+       written. If it's an MGI TYPE 11 file, a ppm file is written.  The program tells you which type it is writing.
 
 BUGS
 SEE ALSO
@@ -20,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Marvin Landis.
 
-                                20 March 1991                     sirtopnm(1)
+                                                                                             20 March 1991                                                                                 sirtopnm(1)

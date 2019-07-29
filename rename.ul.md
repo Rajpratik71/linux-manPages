@@ -1,4 +1,4 @@
-RENAME(1)                       User Commands                       RENAME(1)
+RENAME(1)                                                                                    User Commands                                                                                   RENAME(1)
 
 NAME
        rename - rename files
@@ -7,8 +7,7 @@ SYNOPSIS
        rename [options] expression replacement file...
 
 DESCRIPTION
-       rename  will  rename the specified files by replacing the first occur‐
-       rence of expression in their name by replacement.
+       rename will rename the specified files by replacing the first occurrence of expression in their name by replacement.
 
 OPTIONS
        -s, --symlink
@@ -39,20 +38,15 @@ EXAMPLES
 
               rename .htm .html *.htm
 
-       will fix the extension of your html files.  Provide  an  empty  string
-       for shortening:
+       will fix the extension of your html files.  Provide an empty string for shortening:
 
               rename '_with_long_name' '' file_with_long_name.*
 
        will remove the substring in the filenames.
 
 WARNING
-       The  renaming  has  no  safeguards except the --no-act option.  If the
-       user has permission to rewrite file names, the  command  will  perform
-       the  action  without  any  questions.   For example, the result can be
-       quite drastic when the command is run as root in the  /lib  directory.
-       Always make a backup before running the command, unless you truly know
-       what you are doing.
+       The  renaming  has  no  safeguards  except the --no-act option.  If the user has permission to rewrite file names, the command will perform the action without any questions.  For example, the
+       result can be quite drastic when the command is run as root in the /lib directory.  Always make a backup before running the command, unless you truly know what you are doing.
 
 EXIT STATUS
               0      all requested rename operations were successful
@@ -65,7 +59,6 @@ SEE ALSO
        mv(1)
 
 AVAILABILITY
-       The rename command is part of the util-linux package and is  available
-       from https://www.kernel.org/pub/linux/utils/util-linux/.
+       The rename command is part of the util-linux package and is available from https://www.kernel.org/pub/linux/utils/util-linux/.
 
-util-linux                        June 2011                         RENAME(1)
+util-linux                                                                                     June 2011                                                                                     RENAME(1)

@@ -1,4 +1,4 @@
-JSON_PP(1)             Perl Programmers Reference Guide            JSON_PP(1)
+JSON_PP(1)                                                                         Perl Programmers Reference Guide                                                                         JSON_PP(1)
 
 NAME
        json_pp - JSON::PP command utility
@@ -7,11 +7,9 @@ SYNOPSIS
            json_pp [-v] [-f from_format] [-t to_format] [-json_opt options_to_json]
 
 DESCRIPTION
-       json_pp converts between some input and output formats (one of them is
-       JSON).  This program was copied from json_xs and modified.
+       json_pp converts between some input and output formats (one of them is JSON).  This program was copied from json_xs and modified.
 
-       The default input format is json and the default output format is json
-       with pretty option.
+       The default input format is json and the default output format is json with pretty option.
 
 OPTIONS
    -f
@@ -87,7 +85,6 @@ AUTHOR
 COPYRIGHT AND LICENSE
        Copyright 2010 by Makamaka Hannyaharamitu
 
-       This library is free software; you can redistribute it and/or modify
-       it under the same terms as Perl itself.
+       This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
-perl v5.26.1                      2018-11-19                       JSON_PP(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                    JSON_PP(1)

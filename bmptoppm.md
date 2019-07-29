@@ -1,4 +1,4 @@
-bmptopnm(1)                General Commands Manual                bmptopnm(1)
+bmptopnm(1)                                                                             General Commands Manual                                                                            bmptopnm(1)
 
 NAME
        bmptopnm - convert a BMP file into a portable anymap
@@ -7,19 +7,12 @@ SYNOPSIS
        bmptopnm [bmpfile]
 
 DESCRIPTION
-       Reads  a Microsoft Windows or OS/2 BMP file as input.  Produces a PBM,
-       PGM, or PNM image as output.  If the input is colormapped and contains
-       only  black and white, the output is PBM.  If the input is colormapped
-       and contains only black white and gray, the output is PGM.  Otherwise,
-       the output is PPM.
+       Reads  a  Microsoft Windows or OS/2 BMP file as input.  Produces a PBM, PGM, or PNM image as output.  If the input is colormapped and contains only black and white, the output is PBM.  If the
+       input is colormapped and contains only black white and gray, the output is PGM.  Otherwise, the output is PPM.
 
-       This  program  cannot  convert  BMP  files with compressed (run length
-       encoded) image data.  It recognizes  the  compression  and  issues  an
-       error message.
+       This program cannot convert BMP files with compressed (run length encoded) image data.  It recognizes the compression and issues an error message.
 
-       This  program  cannot  convert  BMP files with 16 bits per pixel (only
-       because the author did not have a complete  specification  for  them).
-       It recognizes the format and issues an error message.
+       This program cannot convert BMP files with 16 bits per pixel (only because the author did not have a complete specification for them).  It recognizes the format and issues an error message.
 
 SEE ALSO
        ppmtobmp(1), ppmtowinicon(1), ppm(5)
@@ -27,4 +20,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1992 by David W. Sanderson.
 
-                               17 February 2002                   bmptopnm(1)
+                                                                                           17 February 2002                                                                                bmptopnm(1)

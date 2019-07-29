@@ -1,4 +1,4 @@
-SYSTEMD-HWDB(8)                  systemd-hwdb                 SYSTEMD-HWDB(8)
+SYSTEMD-HWDB(8)                                                                              systemd-hwdb                                                                              SYSTEMD-HWDB(8)
 
 NAME
        systemd-hwdb - hardware database management tool
@@ -9,8 +9,7 @@ SYNOPSIS
        systemd-hwdb [options] query modalias
 
 DESCRIPTION
-       systemd-hwdb expects a command and command specific arguments. It
-       manages the binary hardware database.
+       systemd-hwdb expects a command and command specific arguments. It manages the binary hardware database.
 
 OPTIONS
        --usr
@@ -31,4 +30,4 @@ OPTIONS
 SEE ALSO
        hwdb(7)
 
-systemd 237                                                   SYSTEMD-HWDB(8)
+systemd 237                                                                                                                                                                            SYSTEMD-HWDB(8)

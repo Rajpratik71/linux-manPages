@@ -1,22 +1,18 @@
-cancel(1)                         Apple Inc.                        cancel(1)
+cancel(1)                                                                                     Apple Inc.                                                                                     cancel(1)
 
 NAME
        cancel - cancel jobs
 
 SYNOPSIS
-       cancel [ -E ] [ -U username ] [ -a ] [ -h hostname[:port] ] [ -u user‐
-       name ] [ -x ] [ id ] [ destination ] [ destination-id ]
+       cancel [ -E ] [ -U username ] [ -a ] [ -h hostname[:port] ] [ -u username ] [ -x ] [ id ] [ destination ] [ destination-id ]
 
 DESCRIPTION
-       The cancel command cancels print jobs.  If no  destination  or  id  is
-       specified,  the  currently  printing job on the default destination is
-       canceled.
+       The cancel command cancels print jobs.  If no destination or id is specified, the currently printing job on the default destination is canceled.
 
 OPTIONS
        The following options are recognized by cancel:
 
-       -a   Cancel all jobs on the named destination, or all jobs on all des‐
-            tinations if none is provided.
+       -a   Cancel all jobs on the named destination, or all jobs on all destinations if none is provided.
 
        -E   Forces encryption when connecting to the server.
 
@@ -32,9 +28,7 @@ OPTIONS
        -x   Deletes job data files in addition to canceling.
 
 CONFORMING TO
-       Unlike the System V printing system, CUPS allows printer names to con‐
-       tain any printable character except SPACE, TAB,  "/",  or  "#".  Also,
-       printer and class names are not case-sensitive.
+       Unlike the System V printing system, CUPS allows printer names to contain any printable character except SPACE, TAB, "/", or "#". Also, printer and class names are not case-sensitive.
 
 EXAMPLES
        Cancel the current print job:
@@ -50,15 +44,12 @@ EXAMPLES
            cancel -a
 
 NOTES
-       Administrators  wishing  to  prevent unauthorized cancellation of jobs
-       via the -u option should require authentication for Cancel-Jobs opera‐
-       tions in cupsd.conf(5).
+       Administrators wishing to prevent unauthorized cancellation of jobs via the -u option should require authentication for Cancel-Jobs operations in cupsd.conf(5).
 
 SEE ALSO
-       cupsd.conf(5),   lp(1),   lpmove(8),   lpstat(1),   CUPS  Online  Help
-       (http://localhost:631/help)
+       cupsd.conf(5), lp(1), lpmove(8), lpstat(1), CUPS Online Help (http://localhost:631/help)
 
 COPYRIGHT
        Copyright © 2007-2017 by Apple Inc.
 
-15 April 2014                        CUPS                           cancel(1)
+15 April 2014                                                                                    CUPS                                                                                        cancel(1)

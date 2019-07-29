@@ -1,21 +1,17 @@
-ppmtowinicon(1)            General Commands Manual            ppmtowinicon(1)
+ppmtowinicon(1)                                                                         General Commands Manual                                                                        ppmtowinicon(1)
 
 NAME
-       ppmtowinicon  - convert 1 or more portable pixmaps into a Windows .ico
-       file
+       ppmtowinicon - convert 1 or more portable pixmaps into a Windows .ico file
 
 SYNOPSIS
        ppmtowinicon [-andpgms] [-output output.ico] [ppmfiles...]
 
 DESCRIPTION
-       Reads one or more portable pixmaps as  input.   Produces  a  Microsoft
-       Windows .ico file as output.
+       Reads one or more portable pixmaps as input.  Produces a Microsoft Windows .ico file as output.
 
-       A Windows icon contains 1 or more images, at different resolutions and
-       color depths.
+       A Windows icon contains 1 or more images, at different resolutions and color depths.
 
-       Microsoft recommends including at least the following formats in  each
-       icon (size and bits-per-pixel):
+       Microsoft recommends including at least the following formats in each icon (size and bits-per-pixel):
 
        16 x 16 - 4 bpp
 
@@ -27,25 +23,14 @@ DESCRIPTION
 
 OPTIONS
        -andpgms
-              If  this  option is given, every second file is read as an "and
-              mask" to be used by windows for transparency data for the  pre‐
-              vious  image.  (These  are set to fully opaque by default). The
-              and mask is a PGM image, where any pixel with maxval  intensity
-              means opaque and any other pixel means not opaque. Note that as
-              with all Netpbm programs, you may use a PBM file  here  and  it
-              will be used as if it were the equivalent PGM.
+              If  this option is given, every second file is read as an "and mask" to be used by windows for transparency data for the previous image. (These are set to fully opaque by default). The
+              and mask is a PGM image, where any pixel with maxval intensity means opaque and any other pixel means not opaque. Note that as with all Netpbm programs, you may use a PBM file here and
+              it will be used as if it were the equivalent PGM.
 
-              The  and  mask is like an alpha mask, except for what it signi‐
-              fies in the "not opaque" areas. In the usual  case,  the  fore‐
-              ground  image  is  black  in  those areas, and in that case the
-              areas are fully transparent -- the background shows through the
-              icon.  But  in  general,  a not opaque pixel signifies that the
-              background and foreground should  be  merged  as  follows:  The
-              intensities  of  the  color  components  in the forgeground and
-              background are represented as binary numbers, then  correspond‐
-              ing bits of the background and foreground intensities are exlu‐
-              sive-or'ed together. So  there  is  a  sort  of  reverse  video
-              effect.
+              The  and mask is like an alpha mask, except for what it signifies in the "not opaque" areas. In the usual case, the foreground image is black in those areas, and in that case the areas
+              are fully transparent -- the background shows through the icon. But in general, a not opaque pixel signifies that the background and foreground should be merged as follows: The  inten‐
+              sities  of  the color components in the forgeground and background are represented as binary numbers, then corresponding bits of the background and foreground intensities are exlusive-
+              or'ed together. So there is a sort of reverse video effect.
 
        -output output.ico
               File to write.  By default, the icon is written to stdout.
@@ -56,4 +41,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 2000 by Lee Benfield.
 
-                                 22 May 2000                  ppmtowinicon(1)
+                                                                                              22 May 2000                                                                              ppmtowinicon(1)

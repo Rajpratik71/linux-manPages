@@ -1,4 +1,4 @@
-pgmhist(1)                 General Commands Manual                 pgmhist(1)
+pgmhist(1)                                                                              General Commands Manual                                                                             pgmhist(1)
 
 NAME
        pgmhist - print a histogram of the values in a portable graymap
@@ -7,8 +7,7 @@ SYNOPSIS
        pgmhist [pgmfile]
 
 DESCRIPTION
-       Reads  a  portable  graymap  as input.  Prints a histogram of the gray
-       values.
+       Reads a portable graymap as input.  Prints a histogram of the gray values.
 
 SEE ALSO
        pgmnorm(1), pgm(5), ppmhist(1)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                               28 February 1989                    pgmhist(1)
+                                                                                           28 February 1989                                                                                 pgmhist(1)

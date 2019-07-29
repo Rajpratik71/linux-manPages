@@ -1,4 +1,4 @@
-ENV(1)                          User Commands                          ENV(1)
+ENV(1)                                                                                       User Commands                                                                                      ENV(1)
 
 NAME
        env - run a program in a modified environment
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        Set each NAME to VALUE in the environment and run COMMAND.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -i, --ignore-environment
               start with an empty environment
@@ -39,13 +38,11 @@ REPORTING BUGS
        Report env translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/env>
        or available locally via: info '(coreutils) env invocation'
 
-GNU coreutils 8.28               January 2018                          ENV(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                       ENV(1)

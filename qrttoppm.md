@@ -1,8 +1,7 @@
-qrttoppm(1)                General Commands Manual                qrttoppm(1)
+qrttoppm(1)                                                                             General Commands Manual                                                                            qrttoppm(1)
 
 NAME
-       qrttoppm  -  convert  output  from  the QRT ray tracer into a portable
-       pixmap
+       qrttoppm - convert output from the QRT ray tracer into a portable pixmap
 
 SYNOPSIS
        qrttoppm [qrtfile]
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                                25 August 1989                    qrttoppm(1)
+                                                                                            25 August 1989                                                                                 qrttoppm(1)

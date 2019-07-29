@@ -1,4 +1,4 @@
-DIFF(1)                         User Commands                         DIFF(1)
+DIFF(1)                                                                                      User Commands                                                                                     DIFF(1)
 
 NAME
        diff - compare files line by line
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        Compare FILES line by line.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        --normal
               output a normal diff (the default)
@@ -141,8 +140,7 @@ DESCRIPTION
        --LTYPE-line-format=LFMT
               format LTYPE input lines with LFMT
 
-              These format options provide fine-grained control over the out‐
-              put
+              These format options provide fine-grained control over the output
 
               of diff, generalizing -D/--ifdef.
 
@@ -205,26 +203,21 @@ DESCRIPTION
               assume large files and many scattered small changes
 
        --color[=WHEN]
-              colorize  the  output; WHEN can be 'never', 'always', or 'auto'
-              (the default)
+              colorize the output; WHEN can be 'never', 'always', or 'auto' (the default)
 
        --palette=PALETTE
-              the colors  to  use  when  --color  is  active;  PALETTE  is  a
-              colon-separated list of terminfo capabilities
+              the colors to use when --color is active; PALETTE is a colon-separated list of terminfo capabilities
 
        --help display this help and exit
 
        -v, --version
               output version information and exit
 
-       FILES  are  'FILE1  FILE2' or 'DIR1 DIR2' or 'DIR FILE' or 'FILE DIR'.
-       If --from-file or --to-file is given, there  are  no  restrictions  on
-       FILE(s).   If a FILE is '-', read standard input.  Exit status is 0 if
-       inputs are the same, 1 if different, 2 if trouble.
+       FILES  are 'FILE1 FILE2' or 'DIR1 DIR2' or 'DIR FILE' or 'FILE DIR'.  If --from-file or --to-file is given, there are no restrictions on FILE(s).  If a FILE is '-', read standard input.  Exit
+       status is 0 if inputs are the same, 1 if different, 2 if trouble.
 
 AUTHOR
-       Written by Paul Eggert, Mike Haertel, David Hayes,  Richard  Stallman,
-       and Len Tower.
+       Written by Paul Eggert, Mike Haertel, David Hayes, Richard Stallman, and Len Tower.
 
 REPORTING BUGS
        Report bugs to: bug-diffutils@gnu.org
@@ -232,20 +225,16 @@ REPORTING BUGS
        General help using GNU software: <http://www.gnu.org/gethelp/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        wdiff(1), cmp(1), diff3(1), sdiff(1), patch(1)
 
-       The full documentation for diff is maintained as a Texinfo manual.  If
-       the info and diff programs are properly installed at  your  site,  the
-       command
+       The full documentation for diff is maintained as a Texinfo manual.  If the info and diff programs are properly installed at your site, the command
 
               info diff
 
        should give you access to the complete manual.
 
-diffutils 3.6                      May 2017                           DIFF(1)
+diffutils 3.6                                                                                  May 2017                                                                                        DIFF(1)

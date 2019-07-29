@@ -1,4 +1,4 @@
-GVFS-CAT(1)                     User Commands                     GVFS-CAT(1)
+GVFS-CAT(1)                                                                                  User Commands                                                                                 GVFS-CAT(1)
 
 NAME
        gvfs-cat
@@ -13,4 +13,4 @@ NOTES
         1. GIO commandline tool
            https://developer.gnome.org/gio/stable/gio.html
 
-gvfs                                                              GVFS-CAT(1)
+gvfs                                                                                                                                                                                       GVFS-CAT(1)

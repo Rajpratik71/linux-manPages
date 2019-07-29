@@ -1,4 +1,4 @@
-infotocap(1)               General Commands Manual               infotocap(1)
+infotocap(1)                                                                            General Commands Manual                                                                           infotocap(1)
 
 NAME
        infotocap - convert a terminfo description into a termcap description
@@ -7,20 +7,14 @@ SYNOPSIS
        infotocap [-vn width]  [-V] [-1] [-w width] file . . .
 
 DESCRIPTION
-       infotocap  looks  in  each  given text file for terminfo descriptions.
-       For each terminfo description found, an equivalent termcap description
-       is  written  to standard output.  Terminfo use capabilities are trans‐
-       lated directly to termcap tc capabilities.
+       infotocap  looks  in each given text file for terminfo descriptions.  For each terminfo description found, an equivalent termcap description is written to standard output.  Terminfo use capa‐
+       bilities are translated directly to termcap tc capabilities.
 
-       -v   print out tracing information on standard error  as  the  program
-            runs.
+       -v   print out tracing information on standard error as the program runs.
 
-       -V   print out the version of the program in use on standard error and
-            exit.
+       -V   print out the version of the program in use on standard error and exit.
 
-       -1   cause the fields to print out one  to  a  line.   Otherwise,  the
-            fields will be printed several to a line to a maximum width of 60
-            characters.
+       -1   cause the fields to print out one to a line.  Otherwise, the fields will be printed several to a line to a maximum width of 60 characters.
 
        -w   change the output to width characters.
 
@@ -28,8 +22,7 @@ FILES
        /etc/terminfo       Compiled terminal description database.
 
 NOTES
-       This utility is actually a link to tic, running in -C mode.   You  can
-       use other tic options such as -f and  -x.
+       This utility is actually a link to tic, running in -C mode.  You can use other tic options such as -f and  -x.
 
 SEE ALSO
        ncurses(3NCURSES), tic(1), infocmp(1), terminfo(5)
@@ -40,4 +33,4 @@ AUTHOR
        Eric S. Raymond <esr@snark.thyrsus.com> and
        Thomas E. Dickey <dickey@invisible-island.net>
 
-                                                                 infotocap(1)
+                                                                                                                                                                                          infotocap(1)

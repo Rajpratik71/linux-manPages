@@ -1,4 +1,4 @@
-DEBCONF(1)                         Debconf                         DEBCONF(1)
+DEBCONF(1)                                                                                      Debconf                                                                                     DEBCONF(1)
 
 NAME
        debconf - run a debconf-using program
@@ -7,27 +7,18 @@ SYNOPSIS
         debconf [options] command [args]
 
 DESCRIPTION
-       Debconf is a configuration system for Debian packages. For a debconf
-       overview and documentation for sysadmins, see debconf(7) (in the
-       debconf-doc package).
+       Debconf is a configuration system for Debian packages. For a debconf overview and documentation for sysadmins, see debconf(7) (in the debconf-doc package).
 
-       The debconf program runs a program under debconf's control, setting it
-       up to talk with debconf on stdio. The program's output is expected to
-       be debconf protocol commands, and it is expected to read result codes
-       on stdin. See debconf-devel(7) for details about the debconf protocol.
+       The debconf program runs a program under debconf's control, setting it up to talk with debconf on stdio. The program's output is expected to be debconf protocol commands, and it is expected
+       to read result codes on stdin. See debconf-devel(7) for details about the debconf protocol.
 
-       The command to be run under debconf must be specified in a way that
-       will let your PATH find it.
+       The command to be run under debconf must be specified in a way that will let your PATH find it.
 
-       This command is not the usual way that debconf is used. It's more
-       typical for debconf to be used via dpkg-preconfigure(8) or
-       dpkg-reconfigure(8).
+       This command is not the usual way that debconf is used. It's more typical for debconf to be used via dpkg-preconfigure(8) or dpkg-reconfigure(8).
 
 OPTIONS
        -opackage, --owner=package
-           Tell debconf what package the command it is running is a part of.
-           This is necessary to get ownership of registered questions right,
-           and to support unregister and purge commands properly.
+           Tell debconf what package the command it is running is a part of. This is necessary to get ownership of registered questions right, and to support unregister and purge commands properly.
 
        -ftype, --frontend=type
            Select the frontend to use.
@@ -53,4 +44,4 @@ SEE ALSO
 AUTHOR
        Joey Hess <joeyh@debian.org>
 
-                                  2018-02-28                       DEBCONF(1)
+                                                                                              2018-02-28                                                                                    DEBCONF(1)

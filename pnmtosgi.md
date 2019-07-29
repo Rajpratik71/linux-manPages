@@ -1,4 +1,4 @@
-pnmtosgi(1)                General Commands Manual                pnmtosgi(1)
+pnmtosgi(1)                                                                             General Commands Manual                                                                            pnmtosgi(1)
 
 NAME
        pnmtosgi - convert a portable anymap to a SGI image file
@@ -7,9 +7,7 @@ SYNOPSIS
        pnmtosgi [-verbatim|-rle] [-imagename Name] [pnmfile]
 
 DESCRIPTION
-       Reads  a  portable anymap as input. Produces an SGI image file as out‐
-       put.  The SGI image will be 2-dimensional (1 channel) for PBM and  PGM
-       input, and 3-dimensional (3 channels) for PPM.
+       Reads a portable anymap as input. Produces an SGI image file as output.  The SGI image will be 2-dimensional (1 channel) for PBM and PGM input, and 3-dimensional (3 channels) for PPM.
 
 OPTIONS
        -verbatim
@@ -19,22 +17,18 @@ OPTIONS
               Write a compressed (run length encoded) file.
 
        -imagename name
-              Write the string "name" into the imagename field of the header.
-              The name string is limited to 79 characters.   If  no  name  is
-              given, pnmtosgi writes "no name" into this field.
+              Write the string "name" into the imagename field of the header.  The name string is limited to 79 characters.  If no name is given, pnmtosgi writes "no name" into this field.
 
 BUGS
        Probably.
 
 REFERENCES
-       SGI  Image  File  Format  documentation (draft v0.95) by Paul Haeberli
-       (paul@sgi.com).  Available via ftp at sgi.com:graphics/SGIIMAGESPEC.
+       SGI Image File Format documentation (draft v0.95) by Paul Haeberli (paul@sgi.com).  Available via ftp at sgi.com:graphics/SGIIMAGESPEC.
 
 SEE ALSO
        pnm(5), sgitopnm(1)
 
 AUTHOR
-       Copyright (C) 1994 by Ingo  Wilken  (Ingo.Wilken@informatik.uni-olden‐
-       burg.de)
+       Copyright (C) 1994 by Ingo Wilken (Ingo.Wilken@informatik.uni-oldenburg.de)
 
-                                29 Januar 1994                    pnmtosgi(1)
+                                                                                            29 Januar 1994                                                                                 pnmtosgi(1)

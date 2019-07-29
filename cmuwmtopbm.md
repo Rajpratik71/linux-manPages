@@ -1,15 +1,13 @@
-cmuwmtopbm(1)              General Commands Manual              cmuwmtopbm(1)
+cmuwmtopbm(1)                                                                           General Commands Manual                                                                          cmuwmtopbm(1)
 
 NAME
-       cmuwmtopbm  - convert a CMU window manager bitmap into a portable bit‐
-       map
+       cmuwmtopbm - convert a CMU window manager bitmap into a portable bitmap
 
 SYNOPSIS
        cmuwmtopbm [cmuwmfile]
 
 DESCRIPTION
-       Reads a CMU window manager bitmap as input.  Produces a portable  bit‐
-       map as output.
+       Reads a CMU window manager bitmap as input.  Produces a portable bitmap as output.
 
 SEE ALSO
        pbmtocmuwm(1), pbm(5)
@@ -17,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                                15 April 1989                   cmuwmtopbm(1)
+                                                                                             15 April 1989                                                                               cmuwmtopbm(1)

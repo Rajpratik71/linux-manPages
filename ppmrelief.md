@@ -1,4 +1,4 @@
-ppmrelief(1)               General Commands Manual               ppmrelief(1)
+ppmrelief(1)                                                                            General Commands Manual                                                                           ppmrelief(1)
 
 NAME
        ppmrelief - run a Laplacian relief filter on a portable pixmap
@@ -7,11 +7,9 @@ SYNOPSIS
        ppmrelief [ppmfile]
 
 DESCRIPTION
-       Reads a portable pixmap as input.  Does a Laplacian relief filter, and
-       writes a portable pixmap as output.
+       Reads a portable pixmap as input.  Does a Laplacian relief filter, and writes a portable pixmap as output.
 
-       The Laplacian relief filter is described in  "Beyond  Photography"  by
-       Holzmann, equation 3.19.  It's a sort of edge-detection.
+       The Laplacian relief filter is described in "Beyond Photography" by Holzmann, equation 3.19.  It's a sort of edge-detection.
 
 SEE ALSO
        pgmbentley(1), pgmoil(1), ppm(5)
@@ -19,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1990 by Wilson Bent (whb@hoh-2.att.com)
 
-                               11 January 1991                   ppmrelief(1)
+                                                                                            11 January 1991                                                                               ppmrelief(1)

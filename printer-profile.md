@@ -1,4 +1,4 @@
-printer-profile(1)         General Commands Manual         printer-profile(1)
+printer-profile(1)                                                                      General Commands Manual                                                                     printer-profile(1)
 
 NAME
        printer-profile - Profile using X-Rite ColorMunki and Argyll CMS
@@ -7,12 +7,9 @@ SYNOPSIS
        printer-profile [options] manuf model [rgb|cmyk] [patches] [ink-limit]
 
 DESCRIPTION
-       printer-profile prints a test chart, uses the ColorMunki instrument to
-       scan it in, then computes an ICM profile using the Argyll  Color  Man‐
-       agement System.
+       printer-profile prints a test chart, uses the ColorMunki instrument to scan it in, then computes an ICM profile using the Argyll Color Management System.
 
-       Manuf   is   "sam".   Model  is  "clp-300",  "clp-315",  "clp-325"  or
-       "clp-365".
+       Manuf is "sam".  Model is "clp-300", "clp-315", "clp-325" or "clp-365".
        Manuf is "hp".  Model is "2600" or "cp1215".
        Manuf is "km".  Model is "2300" or "2530".
        Manuf is "dell". Model is "1355".
@@ -34,8 +31,7 @@ EXAMPLES
        $ printer-profile sam 315 rgb 196
 
 BUGS
-       gs 8.64 and before has problems with 32-bit machines and color profile
-       data.  Don't use!
+       gs 8.64 and before has problems with 32-bit machines and color profile data.  Don't use!
 
        You need Argyll_V1.5.1 or later.
 

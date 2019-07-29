@@ -1,4 +1,4 @@
-DEBCONF-COMMUNICATE(1)             Debconf             DEBCONF-COMMUNICATE(1)
+DEBCONF-COMMUNICATE(1)                                                                          Debconf                                                                         DEBCONF-COMMUNICATE(1)
 
 NAME
        debconf-communicate - communicate with debconf
@@ -7,18 +7,13 @@ SYNOPSIS
         echo commands | debconf-communicate [options] [package]
 
 DESCRIPTION
-       debconf-communicate allows you to communicate with debconf on the fly,
-       from the command line. The package argument is the name of the package
-       which you are pretending to be as you communicate with debconf, and it
-       may be omitted if you are lazy. It reads commands in the form used by
-       the debconf protocol from stdin. For documentation on the available
-       commands and their usage, see the debconf specification.
+       debconf-communicate allows you to communicate with debconf on the fly, from the command line. The package argument is the name of the package which you are pretending to be as you communicate
+       with debconf, and it may be omitted if you are lazy. It reads commands in the form used by the debconf protocol from stdin. For documentation on the available commands and their usage, see
+       the debconf specification.
 
-       The commands are executed in sequence. The textual return code of each
-       is printed out to standard output.
+       The commands are executed in sequence. The textual return code of each is printed out to standard output.
 
-       The return value of this program is the numeric return code of the
-       last executed command.
+       The return value of this program is the numeric return code of the last executed command.
 
 EXAMPLE
         echo get debconf/frontend | debconf-communicate
@@ -26,8 +21,7 @@ EXAMPLE
        Print out the value of the debconf/frontend question.
 
 WARNING
-       This program should never be used from a maintainer script of a
-       package that uses debconf! It may however, be useful in debugging.
+       This program should never be used from a maintainer script of a package that uses debconf! It may however, be useful in debugging.
 
 SEE ALSO
        debconf-loadtemplate(1)
@@ -35,4 +29,4 @@ SEE ALSO
 AUTHOR
        Joey Hess <joeyh@debian.org>
 
-                                  2018-02-28           DEBCONF-COMMUNICATE(1)
+                                                                                              2018-02-28                                                                        DEBCONF-COMMUNICATE(1)

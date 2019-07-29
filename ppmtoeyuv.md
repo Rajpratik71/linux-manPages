@@ -1,4 +1,4 @@
-ppmtoeyuv(1)               General Commands Manual               ppmtoeyuv(1)
+ppmtoeyuv(1)                                                                            General Commands Manual                                                                           ppmtoeyuv(1)
 
 NAME
        ppmtoeyuv - convert a portable pixmap into a Berkeley YUV file
@@ -7,16 +7,13 @@ SYNOPSIS
        ppmtoeyuv [ppmfile]
 
 DESCRIPTION
-       Reads  a  portable  pixmap  as input.  Produces a Berkeley Encoder YUV
-       (not the same as Abekas YUV) file on the Standard Output file.
+       Reads a portable pixmap as input.  Produces a Berkeley Encoder YUV (not the same as Abekas YUV) file on the Standard Output file.
 
-       With no argument, takes input from Standard Input.  Otherwise, ppmfile
-       is the file specification of the input file.
+       With no argument, takes input from Standard Input.  Otherwise, ppmfile is the file specification of the input file.
 
-       ppmtoeyuv  handles  multi-image PPM input streams, outputting consecu‐
-       tive eyuv images.  There must be at least one image, though.
+       ppmtoeyuv handles multi-image PPM input streams, outputting consecutive eyuv images.  There must be at least one image, though.
 
 SEE ALSO
        eyuvtoppm(1), ppmtoyuv(1), ppm(5)
 
-                                April 3, 2000                    ppmtoeyuv(1)
+                                                                                             April 3, 2000                                                                                ppmtoeyuv(1)

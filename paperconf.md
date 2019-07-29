@@ -1,22 +1,16 @@
-PAPERCONF(1)               General Commands Manual               PAPERCONF(1)
+PAPERCONF(1)                                                                            General Commands Manual                                                                           PAPERCONF(1)
 
 NAME
        paperconf - print paper configuration information
 
 SYNOPSIS
-       paperconf [ [ -p ] paper | -d | -a ] [ -z ] [ -n | -N ] [ -s | -w | -h
-       ] [ -c | -m | -i ]
+       paperconf [ [ -p ] paper | -d | -a ] [ -z ] [ -n | -N ] [ -s | -w | -h ] [ -c | -m | -i ]
 
 DESCRIPTION
-       paperconf prints information about a  given  paper.   The  information
-       that  can be obtained is the name of the paper, its size and its width
-       or height.  When called without arguments, paperconf prints  the  name
-       of  the  system- or user-specified paper, obtained by looking in order
-       at the PAPERSIZE environment variable, at the  contents  of  the  file
-       specified  by  the  PAPERCONF environment variable, at the contents of
-       /etc/papersize or by using letter as a fall-back value if none of  the
-       other  alternatives  are  successful.  By default, width and height of
-       the paper are printed in PostScript points.
+       paperconf  prints  information about a given paper.  The information that can be obtained is the name of the paper, its size and its width or height.  When called without arguments, paperconf
+       prints the name of the system- or user-specified paper, obtained by looking in order at the PAPERSIZE environment variable, at the contents of the file specified by the PAPERCONF  environment
+       variable, at the contents of /etc/papersize or by using letter as a fall-back value if none of the other alternatives are successful.  By default, width and height of the paper are printed in
+       PostScript points.
 
 OPTIONS
        -p paper
@@ -26,8 +20,7 @@ OPTIONS
 
        -a     Consider all known paper names.
 
-       -z     If the paper name is unknown, print it but issue a  message  on
-              the standard error and exit with a non-zero code.
+       -z     If the paper name is unknown, print it but issue a message on the standard error and exit with a non-zero code.
 
        -n     Print the name of the paper.
 
@@ -46,16 +39,12 @@ OPTIONS
        -i     Use inches as unit for paper size.
 
 ENVIRONMENT
-       PAPERSIZE           Paper size to use regardless of what the papersize
-                           file contains.
+       PAPERSIZE           Paper size to use regardless of what the papersize file contains.
 
-       PAPERCONF           Full path to a file containing the paper  size  to
-                           use.
+       PAPERCONF           Full path to a file containing the paper size to use.
 
 FILES
-       /etc/papersize      Contains the name of the system-wide default paper
-                           size to be used if  the  PAPERSIZE  and  PAPERCONF
-                           variables are not set.
+       /etc/papersize      Contains the name of the system-wide default paper size to be used if the PAPERSIZE and PAPERCONF variables are not set.
 
 AUTHOR
        Yves Arrouye <arrouye@debian.org>
@@ -63,4 +52,4 @@ AUTHOR
 SEE ALSO
        papersize(5)
 
-                                24 April 2001                    PAPERCONF(1)
+                                                                                             24 April 2001                                                                                PAPERCONF(1)

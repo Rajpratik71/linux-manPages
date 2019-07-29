@@ -1,4 +1,4 @@
-SDIFF(1)                        User Commands                        SDIFF(1)
+SDIFF(1)                                                                                     User Commands                                                                                    SDIFF(1)
 
 NAME
        sdiff - side-by-side merge of file differences
@@ -9,8 +9,7 @@ SYNOPSIS
 DESCRIPTION
        Side-by-side merge of differences between FILE1 and FILE2.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -o, --output=FILE
               operate interactively, sending output to FILE
@@ -71,8 +70,7 @@ DESCRIPTION
        -v, --version
               output version information and exit
 
-       If a FILE is '-', read standard input.  Exit status is 0 if inputs are
-       the same, 1 if different, 2 if trouble.
+       If a FILE is '-', read standard input.  Exit status is 0 if inputs are the same, 1 if different, 2 if trouble.
 
 AUTHOR
        Written by Thomas Lord.
@@ -83,20 +81,16 @@ REPORTING BUGS
        General help using GNU software: <http://www.gnu.org/gethelp/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        cmp(1), diff(1), diff3(1)
 
-       The  full  documentation  for sdiff is maintained as a Texinfo manual.
-       If the info and sdiff programs are properly installed  at  your  site,
-       the command
+       The full documentation for sdiff is maintained as a Texinfo manual.  If the info and sdiff programs are properly installed at your site, the command
 
               info sdiff
 
        should give you access to the complete manual.
 
-diffutils 3.6                      May 2017                          SDIFF(1)
+diffutils 3.6                                                                                  May 2017                                                                                       SDIFF(1)

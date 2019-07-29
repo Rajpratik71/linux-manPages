@@ -1,4 +1,4 @@
-DIFF3(1)                        User Commands                        DIFF3(1)
+DIFF3(1)                                                                                     User Commands                                                                                    DIFF3(1)
 
 NAME
        diff3 - compare three files line by line
@@ -9,15 +9,13 @@ SYNOPSIS
 DESCRIPTION
        Compare three files line by line.
 
-       Mandatory  arguments  to  long options are mandatory for short options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -A, --show-all
               output all changes, bracketing conflicts
 
        -e, --ed
-              output ed script incorporating changes from OLDFILE to YOURFILE
-              into MYFILE
+              output ed script incorporating changes from OLDFILE to YOURFILE into MYFILE
 
        -E, --show-overlap
               like -e, but bracket conflicts
@@ -33,8 +31,7 @@ DESCRIPTION
        -i     append 'w' and 'q' commands to ed scripts
 
        -m, --merge
-              output  actual merged file, according to -A if no other options
-              are given
+              output actual merged file, according to -A if no other options are given
 
        -a, --text
               treat all files as text
@@ -49,26 +46,20 @@ DESCRIPTION
               use PROGRAM to compare files
 
        -L, --label=LABEL
-              use LABEL instead of file name (can be  repeated  up  to  three
-              times)
+              use LABEL instead of file name (can be repeated up to three times)
 
        --help display this help and exit
 
        -v, --version
               output version information and exit
 
-       The  default output format is a somewhat human-readable representation
-       of the changes.
+       The default output format is a somewhat human-readable representation of the changes.
 
-       The -e, -E, -x, -X (and corresponding long) options cause an ed script
-       to be output instead of the default.
+       The -e, -E, -x, -X (and corresponding long) options cause an ed script to be output instead of the default.
 
-       Finally,  the  -m (--merge) option causes diff3 to do the merge inter‐
-       nally and output the actual merged file.  For unusual input,  this  is
-       more robust than using ed.
+       Finally, the -m (--merge) option causes diff3 to do the merge internally and output the actual merged file.  For unusual input, this is more robust than using ed.
 
-       If  a  FILE is '-', read standard input.  Exit status is 0 if success‐
-       ful, 1 if conflicts, 2 if trouble.
+       If a FILE is '-', read standard input.  Exit status is 0 if successful, 1 if conflicts, 2 if trouble.
 
 AUTHOR
        Written by Randy Smith.
@@ -79,20 +70,16 @@ REPORTING BUGS
        General help using GNU software: <http://www.gnu.org/gethelp/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        cmp(1), diff(1), sdiff(1)
 
-       The full documentation for diff3 is maintained as  a  Texinfo  manual.
-       If  the  info  and diff3 programs are properly installed at your site,
-       the command
+       The full documentation for diff3 is maintained as a Texinfo manual.  If the info and diff3 programs are properly installed at your site, the command
 
               info diff3
 
        should give you access to the complete manual.
 
-diffutils 3.6                      May 2017                          DIFF3(1)
+diffutils 3.6                                                                                  May 2017                                                                                       DIFF3(1)

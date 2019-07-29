@@ -1,4 +1,4 @@
-DWP(1)                          User Commands                          DWP(1)
+DWP(1)                                                                                       User Commands                                                                                      DWP(1)
 
 NAME
        dwp - The DWARF packaging utility
@@ -29,9 +29,7 @@ REPORTING BUGS
        Report bugs to <http://www.sourceware.org/bugzilla/>
 
 COPYRIGHT
-       Copyright  © 2017 Free Software Foundation, Inc.  This program is free
-       software; you may redistribute it under the terms of the  GNU  General
-       Public  License version 3 or (at your option) any later version.  This
-       program has absolutely no warranty.
+       Copyright  ©  2017  Free  Software Foundation, Inc.  This program is free software; you may redistribute it under the terms of the GNU General Public License version 3 or (at your option) any
+       later version.  This program has absolutely no warranty.
 
-dwp (GNU Binutils for Ubuntu) 2.30March 2018                           DWP(1)
+dwp (GNU Binutils for Ubuntu) 2.30                                                            March 2018                                                                                        DWP(1)

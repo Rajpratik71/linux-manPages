@@ -1,4 +1,4 @@
-pnmtile(1)                 General Commands Manual                 pnmtile(1)
+pnmtile(1)                                                                              General Commands Manual                                                                             pnmtile(1)
 
 NAME
        pnmtile - replicate a portable anymap into a specified size
@@ -7,8 +7,7 @@ SYNOPSIS
        pnmtile width height [pnmfile]
 
 DESCRIPTION
-       Reads a portable anymap as input.  Replicates it until it is the spec‐
-       ified size, and produces a portable anymap as output.
+       Reads a portable anymap as input.  Replicates it until it is the specified size, and produces a portable anymap as output.
 
 SEE ALSO
        pnm(5)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                                 13 May 1989                       pnmtile(1)
+                                                                                              13 May 1989                                                                                   pnmtile(1)

@@ -1,4 +1,4 @@
-pbmmake(1)                 General Commands Manual                 pbmmake(1)
+pbmmake(1)                                                                              General Commands Manual                                                                             pbmmake(1)
 
 NAME
        pbmmake - create a blank bitmap of a specified size
@@ -7,13 +7,10 @@ SYNOPSIS
        pbmmake [-white|-black|-gray ] width height
 
 DESCRIPTION
-       Produces  a  portable  bitmap  of the specified width and height.  The
-       color defaults to white.
+       Produces a portable bitmap of the specified width and height.  The color defaults to white.
 
 OPTIONS
-       In addition to the usual -white and -black,  this  program  implements
-       -gray.   This  gives a simple 50% gray pattern with 1's and 0's alter‐
-       nating.
+       In addition to the usual -white and -black, this program implements -gray.  This gives a simple 50% gray pattern with 1's and 0's alternating.
 
        All flags can be abbreviated to their shortest unique prefix.
 
@@ -23,4 +20,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1989 by Jef Poskanzer.
 
-                               22 February 1989                    pbmmake(1)
+                                                                                           22 February 1989                                                                                 pbmmake(1)

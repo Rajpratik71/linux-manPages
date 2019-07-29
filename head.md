@@ -1,4 +1,4 @@
-HEAD(1)                         User Commands                         HEAD(1)
+HEAD(1)                                                                                      User Commands                                                                                     HEAD(1)
 
 NAME
        head - output the first part of files
@@ -7,21 +7,17 @@ SYNOPSIS
        head [OPTION]... [FILE]...
 
 DESCRIPTION
-       Print  the  first 10 lines of each FILE to standard output.  With more
-       than one FILE, precede each with a header giving the file name.
+       Print the first 10 lines of each FILE to standard output.  With more than one FILE, precede each with a header giving the file name.
 
        With no FILE, or when FILE is -, read standard input.
 
-       Mandatory arguments to long options are mandatory  for  short  options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -c, --bytes=[-]NUM
-              print  the  first NUM bytes of each file; with the leading '-',
-              print all but the last NUM bytes of each file
+              print the first NUM bytes of each file; with the leading '-', print all but the last NUM bytes of each file
 
        -n, --lines=[-]NUM
-              print the first NUM lines instead of the  first  10;  with  the
-              leading '-', print all but the last NUM lines of each file
+              print the first NUM lines instead of the first 10; with the leading '-', print all but the last NUM lines of each file
 
        -q, --quiet, --silent
               never print headers giving file names
@@ -37,9 +33,7 @@ DESCRIPTION
        --version
               output version information and exit
 
-       NUM  may  have  a  multiplier  suffix:  b  512,  kB  1000,  K 1024, MB
-       1000*1000, M 1024*1024, GB 1000*1000*1000, G 1024*1024*1024, and so on
-       for T, P, E, Z, Y.
+       NUM may have a multiplier suffix: b 512, kB 1000, K 1024, MB 1000*1000, M 1024*1024, GB 1000*1000*1000, G 1024*1024*1024, and so on for T, P, E, Z, Y.
 
 AUTHOR
        Written by David MacKenzie and Jim Meyering.
@@ -49,10 +43,8 @@ REPORTING BUGS
        Report head translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        tail(1)
@@ -60,4 +52,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/head>
        or available locally via: info '(coreutils) head invocation'
 
-GNU coreutils 8.28               January 2018                         HEAD(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                      HEAD(1)

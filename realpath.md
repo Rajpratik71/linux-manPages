@@ -1,4 +1,4 @@
-REALPATH(1)                     User Commands                     REALPATH(1)
+REALPATH(1)                                                                                  User Commands                                                                                 REALPATH(1)
 
 NAME
        realpath - print the resolved path
@@ -7,8 +7,7 @@ SYNOPSIS
        realpath [OPTION]... FILE...
 
 DESCRIPTION
-       Print the resolved absolute file name; all but the last component must
-       exist
+       Print the resolved absolute file name; all but the last component must exist
 
        -e, --canonicalize-existing
               all components of the path must exist
@@ -47,20 +46,16 @@ AUTHOR
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-       Report   realpath   translation   bugs   to    <http://translationpro‐
-       ject.org/team/>
+       Report realpath translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        readlink(1), readlink(2), realpath(3)
 
-       Full  documentation  at:  <http://www.gnu.org/software/coreutils/real‐
-       path>
+       Full documentation at: <http://www.gnu.org/software/coreutils/realpath>
        or available locally via: info '(coreutils) realpath invocation'
 
-GNU coreutils 8.28               January 2018                     REALPATH(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                  REALPATH(1)

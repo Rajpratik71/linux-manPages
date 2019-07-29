@@ -1,4 +1,4 @@
-pbmtoepson(1)              General Commands Manual              pbmtoepson(1)
+pbmtoepson(1)                                                                           General Commands Manual                                                                          pbmtoepson(1)
 
 NAME
        pbmtoepson - convert a portable bitmap into Epson printer graphics
@@ -7,17 +7,14 @@ SYNOPSIS
        pbmtoepson [pbmfile]
 
 DESCRIPTION
-       Reads  a  portable  bitmap as input.  Produces a file of Epson printer
-       graphics as output.
+       Reads a portable bitmap as input.  Produces a file of Epson printer graphics as output.
 
-       Note that there is no epsontopbm tool -  this  transformation  is  one
-       way.
+       Note that there is no epsontopbm tool - this transformation is one way.
 
 SEE ALSO
        pbm(5)
 
 AUTHOR
-       Copyright  (C)  1991  by John Tiller (tiller@galois.msfc.nasa.gov) and
-       Jef Poskanzer.
+       Copyright (C) 1991 by John Tiller (tiller@galois.msfc.nasa.gov) and Jef Poskanzer.
 
-                                4 January 1991                  pbmtoepson(1)
+                                                                                            4 January 1991                                                                               pbmtoepson(1)

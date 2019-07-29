@@ -1,4 +1,4 @@
-pbmtoybm(1)                General Commands Manual                pbmtoybm(1)
+pbmtoybm(1)                                                                             General Commands Manual                                                                            pbmtoybm(1)
 
 NAME
        pbmtoybm - convert a portable bitmap into a Bennet Yee "face" file
@@ -7,8 +7,7 @@ SYNOPSIS
        pbmtoybm [pbmfile]
 
 DESCRIPTION
-       Reads  a  portable bitmap as input.  Produces as output a file accept‐
-       able to the face and xbm programs by Bennet Yee (bsy+@cs.cmu.edu).
+       Reads a portable bitmap as input.  Produces as output a file acceptable to the face and xbm programs by Bennet Yee (bsy+@cs.cmu.edu).
 
 SEE ALSO
        ybmtopbm(1), pbm(5), face(1), face(5), xbm(1)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Jamie Zawinski and Jef Poskanzer.
 
-                                06 March 1990                     pbmtoybm(1)
+                                                                                             06 March 1990                                                                                 pbmtoybm(1)

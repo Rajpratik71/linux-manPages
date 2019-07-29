@@ -1,4 +1,4 @@
-LN(1)                           User Commands                           LN(1)
+LN(1)                                                                                        User Commands                                                                                       LN(1)
 
 NAME
        ln - make links between files
@@ -10,17 +10,11 @@ SYNOPSIS
        ln [OPTION]... -t DIRECTORY TARGET...  (4th form)
 
 DESCRIPTION
-       In  the 1st form, create a link to TARGET with the name LINK_NAME.  In
-       the 2nd form, create a link to TARGET in the  current  directory.   In
-       the 3rd and 4th forms, create links to each TARGET in DIRECTORY.  Cre‐
-       ate hard  links  by  default,  symbolic  links  with  --symbolic.   By
-       default, each destination (name of new link) should not already exist.
-       When creating hard links, each TARGET must exist.  Symbolic links  can
-       hold arbitrary text; if later resolved, a relative link is interpreted
-       in relation to its parent directory.
+       In the 1st form, create a link to TARGET with the name LINK_NAME.  In the 2nd form, create a link to TARGET in the current directory.  In the 3rd and 4th forms, create links to each TARGET in
+       DIRECTORY.  Create hard links by default, symbolic links with --symbolic.  By default, each destination (name of new link) should not already exist.  When creating  hard  links,  each  TARGET
+       must exist.  Symbolic links can hold arbitrary text; if later resolved, a relative link is interpreted in relation to its parent directory.
 
-       Mandatory arguments to long options are mandatory  for  short  options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        --backup[=CONTROL]
               make a backup of each existing destination file
@@ -28,9 +22,7 @@ DESCRIPTION
        -b     like --backup but does not accept an argument
 
        -d, -F, --directory
-              allow  the superuser to attempt to hard link directories (note:
-              will probably fail due to system  restrictions,  even  for  the
-              superuser)
+              allow the superuser to attempt to hard link directories (note: will probably fail due to system restrictions, even for the superuser)
 
        -f, --force
               remove existing destination files
@@ -42,8 +34,7 @@ DESCRIPTION
               dereference TARGETs that are symbolic links
 
        -n, --no-dereference
-              treat  LINK_NAME as a normal file if it is a symbolic link to a
-              directory
+              treat LINK_NAME as a normal file if it is a symbolic link to a directory
 
        -P, --physical
               make hard links directly to symbolic links
@@ -71,10 +62,8 @@ DESCRIPTION
        --version
               output version information and exit
 
-       The  backup  suffix  is  '~',  unless  set  with  --suffix   or   SIM‐
-       PLE_BACKUP_SUFFIX.  The version control method may be selected via the
-       --backup option or through the VERSION_CONTROL  environment  variable.
-       Here are the values:
+       The  backup  suffix  is  '~',  unless set with --suffix or SIMPLE_BACKUP_SUFFIX.  The version control method may be selected via the --backup option or through the VERSION_CONTROL environment
+       variable.  Here are the values:
 
        none, off
               never make backups (even if --backup is given)
@@ -88,8 +77,7 @@ DESCRIPTION
        simple, never
               always make simple backups
 
-       Using -s ignores -L and -P.  Otherwise, the last option specified con‐
-       trols behavior when a TARGET is a symbolic link, defaulting to -P.
+       Using -s ignores -L and -P.  Otherwise, the last option specified controls behavior when a TARGET is a symbolic link, defaulting to -P.
 
 AUTHOR
        Written by Mike Parker and David MacKenzie.
@@ -99,10 +87,8 @@ REPORTING BUGS
        Report ln translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        link(2), symlink(2)
@@ -110,4 +96,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/ln>
        or available locally via: info '(coreutils) ln invocation'
 
-GNU coreutils 8.28               January 2018                           LN(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                        LN(1)

@@ -1,4 +1,4 @@
-SHASUM(1)              Perl Programmers Reference Guide             SHASUM(1)
+SHASUM(1)                                                                          Perl Programmers Reference Guide                                                                          SHASUM(1)
 
 NAME
        shasum - Print or Check SHA Checksums
@@ -41,28 +41,21 @@ SYNOPSIS
         Report shasum bugs to mshelor@cpan.org
 
 DESCRIPTION
-       Running shasum is often the quickest way to compute SHA message
-       digests.  The user simply feeds data to the script through files or
-       standard input, and then collects the results from standard output.
+       Running shasum is often the quickest way to compute SHA message digests.  The user simply feeds data to the script through files or standard input, and then collects the results from standard
+       output.
 
-       The following command shows how to compute digests for typical inputs
-       such as the NIST test vector "abc":
+       The following command shows how to compute digests for typical inputs such as the NIST test vector "abc":
 
                perl -e "print qq(abc)" | shasum
 
-       Or, if you want to use SHA-256 instead of the default SHA-1, simply
-       say:
+       Or, if you want to use SHA-256 instead of the default SHA-1, simply say:
 
                perl -e "print qq(abc)" | shasum -a 256
 
-       Since shasum mimics the behavior of the combined GNU sha1sum,
-       sha224sum, sha256sum, sha384sum, and sha512sum programs, you can
-       install this script as a convenient drop-in replacement.
+       Since shasum mimics the behavior of the combined GNU sha1sum, sha224sum, sha256sum, sha384sum, and sha512sum programs, you can install this script as a convenient drop-in replacement.
 
-       Unlike the GNU programs, shasum encompasses the full SHA standard by
-       allowing partial-byte inputs.  This is accomplished through the BITS
-       option (-0).  The following example computes the SHA-224 digest of the
-       7-bit message 0001100:
+       Unlike the GNU programs, shasum encompasses the full SHA standard by allowing partial-byte inputs.  This is accomplished through the BITS option (-0).  The following example computes the
+       SHA-224 digest of the 7-bit message 0001100:
 
                perl -e "print qq(0001100)" | shasum -0 -a 224
 
@@ -70,7 +63,6 @@ AUTHOR
        Copyright (c) 2003-2016 Mark Shelor <mshelor@cpan.org>.
 
 SEE ALSO
-       shasum is implemented using the Perl module Digest::SHA or
-       Digest::SHA::PurePerl.
+       shasum is implemented using the Perl module Digest::SHA or Digest::SHA::PurePerl.
 
-perl v5.26.1                      2018-11-19                        SHASUM(1)
+perl v5.26.1                                                                                  2018-11-19                                                                                     SHASUM(1)

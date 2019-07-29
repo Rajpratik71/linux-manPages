@@ -1,4 +1,4 @@
-DIRNAME(1)                      User Commands                      DIRNAME(1)
+DIRNAME(1)                                                                                   User Commands                                                                                  DIRNAME(1)
 
 NAME
        dirname - strip last component from file name
@@ -7,9 +7,7 @@ SYNOPSIS
        dirname [OPTION] NAME...
 
 DESCRIPTION
-       Output  each  NAME  with  its  last  non-slash  component and trailing
-       slashes removed; if NAME contains no /'s, output '.' (meaning the cur‐
-       rent directory).
+       Output each NAME with its last non-slash component and trailing slashes removed; if NAME contains no /'s, output '.' (meaning the current directory).
 
        -z, --zero
               end each output line with NUL, not newline
@@ -34,14 +32,11 @@ AUTHOR
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-       Report    dirname    translation   bugs   to   <http://translationpro‐
-       ject.org/team/>
+       Report dirname translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright © 2017 Free Software Foundation, Inc.  License  GPLv3+:  GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This  is  free  software:  you are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        basename(1), readlink(1)
@@ -49,4 +44,4 @@ SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/dirname>
        or available locally via: info '(coreutils) dirname invocation'
 
-GNU coreutils 8.28               January 2018                      DIRNAME(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                   DIRNAME(1)

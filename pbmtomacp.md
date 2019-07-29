@@ -1,4 +1,4 @@
-pbmtomacp(1)               General Commands Manual               pbmtomacp(1)
+pbmtomacp(1)                                                                            General Commands Manual                                                                           pbmtomacp(1)
 
 NAME
        pbmtomacp - convert a portable bitmap into a MacPaint file
@@ -7,19 +7,14 @@ SYNOPSIS
        pbmtomacp [-l left] [-r right] [-b bottom] [-t top] [pbmfile]
 
 DESCRIPTION
-       Reads a portable bitmap as input.  If no input-file is given, standard
-       input is assumed.  Produces a MacPaint file as output.
+       Reads a portable bitmap as input.  If no input-file is given, standard input is assumed.  Produces a MacPaint file as output.
 
-       The generated file is only the data fork of a picture.  You will  need
-       a program such as mcvert to generate a Macbinary or a BinHex file that
-       contains the necessary information to identify the file as a PNTG file
-       to MacOS.
+       The generated file is only the data fork of a picture.  You will need a program such as mcvert to generate a Macbinary or a BinHex file that contains the necessary information to identify the
+       file as a PNTG file to MacOS.
 
 OPTIONS
-       Left,  right,  bottom & top let you define a square into the pbm file,
-       that must be converted.  Default is the whole file.  If  the  file  is
-       too  large  for a MacPaint-file, the bitmap is cut to fit from ( left,
-       top ).
+       Left, right, bottom & top let you define a square into the pbm file, that must be converted.  Default is the whole file.  If the file is too large for a MacPaint-file, the bitmap  is  cut  to
+       fit from ( left, top ).
 
 BUGS
        The source code contains comments in a language other than English.
@@ -28,7 +23,6 @@ SEE ALSO
        ppmtopict(1), macptopbm(1), pbm(5), mcvert(1)
 
 AUTHOR
-       Copyright     (C)     1988     by     Douwe     van     der     Schaaf
-       (...!mcvax!uvapsy!vdschaaf).
+       Copyright (C) 1988 by Douwe van der Schaaf (...!mcvax!uvapsy!vdschaaf).
 
-                                31 August 1988                   pbmtomacp(1)
+                                                                                            31 August 1988                                                                                pbmtomacp(1)

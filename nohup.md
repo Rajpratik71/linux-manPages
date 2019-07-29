@@ -1,4 +1,4 @@
-NOHUP(1)                        User Commands                        NOHUP(1)
+NOHUP(1)                                                                                     User Commands                                                                                    NOHUP(1)
 
 NAME
        nohup - run a command immune to hangups, with output to a non-tty
@@ -15,15 +15,10 @@ DESCRIPTION
        --version
               output version information and exit
 
-       If  standard input is a terminal, redirect it from an unreadable file.
-       If standard output is a terminal, append output to 'nohup.out' if pos‐
-       sible,  '$HOME/nohup.out' otherwise.  If standard error is a terminal,
-       redirect it to standard output.  To save output to  FILE,  use  'nohup
-       COMMAND > FILE'.
+       If  standard  input  is a terminal, redirect it from an unreadable file.  If standard output is a terminal, append output to 'nohup.out' if possible, '$HOME/nohup.out' otherwise.  If standard
+       error is a terminal, redirect it to standard output.  To save output to FILE, use 'nohup COMMAND > FILE'.
 
-       NOTE:  your  shell  may  have  its own version of nohup, which usually
-       supersedes the version described here.  Please refer to  your  shell's
-       documentation for details about the options it supports.
+       NOTE: your shell may have its own version of nohup, which usually supersedes the version described here.  Please refer to your shell's documentation for details about the options it supports.
 
 AUTHOR
        Written by Jim Meyering.
@@ -33,13 +28,11 @@ REPORTING BUGS
        Report nohup translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/nohup>
        or available locally via: info '(coreutils) nohup invocation'
 
-GNU coreutils 8.28               January 2018                        NOHUP(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                     NOHUP(1)

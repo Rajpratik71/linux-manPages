@@ -1,4 +1,4 @@
-pcxtoppm(1)                General Commands Manual                pcxtoppm(1)
+pcxtoppm(1)                                                                             General Commands Manual                                                                            pcxtoppm(1)
 
 NAME
        pcxtoppm - convert a PCX file into a portable pixmap
@@ -7,14 +7,11 @@ SYNOPSIS
        pcxtoppm [-stdpalette] [-verbose] [pcxfile]
 
 DESCRIPTION
-       Reads  a  PCX  file  as  input.  Produces a portable pixmap as output.
-       Supported PCX types are:
+       Reads a PCX file as input.  Produces a portable pixmap as output.  Supported PCX types are:
 
        Colormapped files with 2-16 colors.
-              "Packed pixel" format (1, 2 or 4 bits/pixel, 1 plane)  or  bit‐
-              plane format (1 bit/pixel, 1-4 planes).  The program checks the
-              colormap and uses an internal one if the provided  colormap  is
-              completely black.
+              "Packed  pixel"  format (1, 2 or 4 bits/pixel, 1 plane) or bitplane format (1 bit/pixel, 1-4 planes).  The program checks the colormap and uses an internal one if the provided colormap
+              is completely black.
 
        Colormapped files with 256 colors
               8 bits/pixel, 1 plane, colormap at the end of the file.
@@ -27,8 +24,7 @@ DESCRIPTION
 
 OPTIONS
        -stdpalette
-              Enforce the use of the internal colormap for files with 16 col‐
-              ors or less.
+              Enforce the use of the internal colormap for files with 16 colors or less.
 
 SEE ALSO
        ppmtopcx(1), ppm(5)
@@ -37,4 +33,4 @@ AUTHORS
        Copyright (C) 1990 by Michael Davidson.
        Modified 1994 by Ingo Wilken (Ingo.Wilken@informatik.uni-oldenburg.de)
 
-                                 9 April 1990                     pcxtoppm(1)
+                                                                                             9 April 1990                                                                                  pcxtoppm(1)

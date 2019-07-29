@@ -1,4 +1,4 @@
-NAMEI(1)                        User Commands                        NAMEI(1)
+NAMEI(1)                                                                                     User Commands                                                                                    NAMEI(1)
 
 NAME
        namei - follow a pathname until a terminal point is found
@@ -7,17 +7,12 @@ SYNOPSIS
        namei [options] pathname...
 
 DESCRIPTION
-       namei  interprets  its arguments as pathnames to any type of Unix file
-       (symlinks, files, directories, and so forth).  namei then follows each
-       pathname  until  an  endpoint  is found (a file, a directory, a device
-       node, etc).  If it finds a symbolic  link,  it  shows  the  link,  and
-       starts following it, indenting the output to show the context.
+       namei  interprets  its  arguments  as  pathnames to any type of Unix file (symlinks, files, directories, and so forth).  namei then follows each pathname until an endpoint is found (a file, a
+       directory, a device node, etc).  If it finds a symbolic link, it shows the link, and starts following it, indenting the output to show the context.
 
-       This program is useful for finding "too many levels of symbolic links"
-       problems.
+       This program is useful for finding "too many levels of symbolic links" problems.
 
-       For each line of output, namei uses the following characters to  iden‐
-       tify the file type found:
+       For each line of output, namei uses the following characters to identify the file type found:
 
           f: = the pathname currently being resolved
            d = directory
@@ -29,16 +24,14 @@ DESCRIPTION
            - = regular file
            ? = an error of some kind
 
-       namei  prints  an  informative message when the maximum number of sym‐
-       bolic links this system can have has been exceeded.
+       namei prints an informative message when the maximum number of symbolic links this system can have has been exceeded.
 
 OPTIONS
        -l, --long
               Use the long listing format (same as -m -o -v).
 
        -m, --modes
-              Show the mode bits of each file type in the style of ls(1), for
-              example 'rwxr-xr-x'.
+              Show the mode bits of each file type in the style of ls(1), for example 'rwxr-xr-x'.
 
        -n, --nosymlinks
               Don't follow symlinks.
@@ -59,8 +52,7 @@ OPTIONS
               Display help text and exit.
 
 AUTHOR
-       The   original   namei   program   was   written  by  Roger  Southwick
-       <rogers@amadeus.wr.tek.com>.
+       The original namei program was written by Roger Southwick <rogers@amadeus.wr.tek.com>.
 
        The program was rewritten by Karel Zak <kzak@redhat.com>.
 
@@ -71,7 +63,6 @@ SEE ALSO
        ls(1), stat(1), symlink(7)
 
 AVAILABILITY
-       The namei command is part of the util-linux package and  is  available
-       from https://www.kernel.org/pub/linux/utils/util-linux/.
+       The namei command is part of the util-linux package and is available from https://www.kernel.org/pub/linux/utils/util-linux/.
 
-util-linux                        June 2011                          NAMEI(1)
+util-linux                                                                                     June 2011                                                                                      NAMEI(1)

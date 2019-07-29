@@ -1,4 +1,4 @@
-pbmlife(1)                 General Commands Manual                 pbmlife(1)
+pbmlife(1)                                                                              General Commands Manual                                                                             pbmlife(1)
 
 NAME
        pbmlife - apply Conway's rules of Life to a portable bitmap
@@ -7,11 +7,9 @@ SYNOPSIS
        pbmlife [pbmfile]
 
 DESCRIPTION
-       Reads a portable bitmap as input.  Applies the rules of Life to it for
-       one generation, and produces a portable bitmap as output.
+       Reads a portable bitmap as input.  Applies the rules of Life to it for one generation, and produces a portable bitmap as output.
 
-       A white pixel in the image is interpreted as a  live  beastie,  and  a
-       black pixel as an empty space.
+       A white pixel in the image is interpreted as a live beastie, and a black pixel as an empty space.
 
 SEE ALSO
        pbm(5)
@@ -19,4 +17,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1988, 1991 by Jef Poskanzer.
 
-                               21 February 1991                    pbmlife(1)
+                                                                                           21 February 1991                                                                                 pbmlife(1)

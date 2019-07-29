@@ -1,4 +1,4 @@
-ppmtopi1(1)                General Commands Manual                ppmtopi1(1)
+ppmtopi1(1)                                                                             General Commands Manual                                                                            ppmtopi1(1)
 
 NAME
        ppmtopi1 - convert a portable pixmap into an Atari Degas .pi1 file
@@ -7,8 +7,7 @@ SYNOPSIS
        ppmtopi1 [ppmfile]
 
 DESCRIPTION
-       Reads  a  portable pixmap as input.  Produces an Atari Degas .pi1 file
-       as output.
+       Reads a portable pixmap as input.  Produces an Atari Degas .pi1 file as output.
 
 SEE ALSO
        pi1toppm(1), ppm(5), pbmtopi3(1), pi3topbm(1)
@@ -16,4 +15,4 @@ SEE ALSO
 AUTHOR
        Copyright (C) 1991 by Steve Belczyk (seb3@gte.com) and Jef Poskanzer.
 
-                                 19 July 1990                     ppmtopi1(1)
+                                                                                             19 July 1990                                                                                  ppmtopi1(1)

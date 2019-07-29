@@ -1,4 +1,4 @@
-BUSYBOX(1)                         busybox                         BUSYBOX(1)
+BUSYBOX(1)                                                                                      busybox                                                                                     BUSYBOX(1)
 
 NAME
        BusyBox - The Swiss Army Knife of Embedded Linux
@@ -9,72 +9,47 @@ SYNTAX
         <applet> [arguments...]          # if symlinked
 
 DESCRIPTION
-       BusyBox combines tiny versions of many common UNIX utilities into a
-       single small executable. It provides minimalist replacements for most
-       of the utilities you usually find in GNU coreutils, util-linux, etc.
-       The utilities in BusyBox generally have fewer options than their full-
-       featured GNU cousins; however, the options that are included provide
-       the expected functionality and behave very much like their GNU
-       counterparts.
+       BusyBox combines tiny versions of many common UNIX utilities into a single small executable. It provides minimalist replacements for most of the utilities you usually find in GNU coreutils,
+       util-linux, etc. The utilities in BusyBox generally have fewer options than their full-featured GNU cousins; however, the options that are included provide the expected functionality and
+       behave very much like their GNU counterparts.
 
-       BusyBox has been written with size-optimization and limited resources
-       in mind.  It is also extremely modular so you can easily include or
-       exclude commands (or features) at compile time. This makes it easy to
-       customize your embedded systems. To create a working system, just add
-       /dev, /etc, and a Linux kernel.  BusyBox provides a fairly complete
-       POSIX environment for any small or embedded system.
+       BusyBox has been written with size-optimization and limited resources in mind.  It is also extremely modular so you can easily include or exclude commands (or features) at compile time. This
+       makes it easy to customize your embedded systems. To create a working system, just add /dev, /etc, and a Linux kernel.  BusyBox provides a fairly complete POSIX environment for any small or
+       embedded system.
 
-       BusyBox is extremely configurable.  This allows you to include only
-       the components you need, thereby reducing binary size. Run 'make
-       config' or 'make menuconfig' to select the functionality that you wish
-       to enable.  Then run 'make' to compile BusyBox using your
-       configuration.
+       BusyBox is extremely configurable.  This allows you to include only the components you need, thereby reducing binary size. Run 'make config' or 'make menuconfig' to select the functionality
+       that you wish to enable.  Then run 'make' to compile BusyBox using your configuration.
 
-       After the compile has finished, you should use 'make install' to
-       install BusyBox. This will install the 'bin/busybox' binary, in the
-       target directory specified by CONFIG_PREFIX. CONFIG_PREFIX can be set
-       when configuring BusyBox, or you can specify an alternative location
-       at install time (i.e., with a command line like 'make
-       CONFIG_PREFIX=/tmp/foo install'). If you enabled any applet
-       installation scheme (either as symlinks or hardlinks), these will also
-       be installed in the location pointed to by CONFIG_PREFIX.
+       After the compile has finished, you should use 'make install' to install BusyBox. This will install the 'bin/busybox' binary, in the target directory specified by CONFIG_PREFIX. CONFIG_PREFIX
+       can be set when configuring BusyBox, or you can specify an alternative location at install time (i.e., with a command line like 'make CONFIG_PREFIX=/tmp/foo install'). If you enabled any
+       applet installation scheme (either as symlinks or hardlinks), these will also be installed in the location pointed to by CONFIG_PREFIX.
 
 USAGE
-       BusyBox is a multi-call binary.  A multi-call binary is an executable
-       program that performs the same job as more than one utility program.
-       That means there is just a single BusyBox binary, but that single
-       binary acts like a large number of utilities.  This allows BusyBox to
-       be smaller since all the built-in utility programs (we call them
-       applets) can share code for many common operations.
+       BusyBox is a multi-call binary.  A multi-call binary is an executable program that performs the same job as more than one utility program.  That means there is just a single BusyBox binary,
+       but that single binary acts like a large number of utilities.  This allows BusyBox to be smaller since all the built-in utility programs (we call them applets) can share code for many common
+       operations.
 
-       You can also invoke BusyBox by issuing a command as an argument on the
-       command line.  For example, entering
+       You can also invoke BusyBox by issuing a command as an argument on the command line.  For example, entering
 
                /bin/busybox ls
 
        will also cause BusyBox to behave as 'ls'.
 
-       Of course, adding '/bin/busybox' into every command would be painful.
-       So most people will invoke BusyBox using links to the BusyBox binary.
+       Of course, adding '/bin/busybox' into every command would be painful.  So most people will invoke BusyBox using links to the BusyBox binary.
 
        For example, entering
 
                ln -s /bin/busybox ls
                ./ls
 
-       will cause BusyBox to behave as 'ls' (if the 'ls' command has been
-       compiled into BusyBox).  Generally speaking, you should never need to
-       make all these links yourself, as the BusyBox build system will do
-       this for you when you run the 'make install' command.
+       will cause BusyBox to behave as 'ls' (if the 'ls' command has been compiled into BusyBox).  Generally speaking, you should never need to make all these links yourself, as the BusyBox build
+       system will do this for you when you run the 'make install' command.
 
-       If you invoke BusyBox with no arguments, it will provide you with a
-       list of the applets that have been compiled into your BusyBox binary.
+       If you invoke BusyBox with no arguments, it will provide you with a list of the applets that have been compiled into your BusyBox binary.
 
 COMMON OPTIONS
-       Most BusyBox applets support the --help argument to provide a terse
-       runtime description of their behavior.  If the
-       CONFIG_FEATURE_VERBOSE_USAGE option has been enabled, more detailed
-       usage information will also be available.
+       Most BusyBox applets support the --help argument to provide a terse runtime description of their behavior.  If the CONFIG_FEATURE_VERBOSE_USAGE option has been enabled, more detailed usage
+       information will also be available.
 
 COMMANDS
        Currently available applets include:
@@ -111,8 +86,7 @@ COMMANDS
 
 COMMAND DESCRIPTIONS
        acpid
-           acpid [-df] [-c CONFDIR] [-l LOGFILE] [-a ACTIONFILE] [-M MAPFILE]
-           [-e PROC_EVENT_FILE] [-p PIDFILE]
+           acpid [-df] [-c CONFDIR] [-l LOGFILE] [-a ACTIONFILE] [-M MAPFILE] [-e PROC_EVENT_FILE] [-p PIDFILE]
 
            Listen to ACPI events and spawn specific helpers on event arrival
 
@@ -149,10 +123,8 @@ COMMAND DESCRIPTIONS
                    -x      Extract
                    -v      Verbose
 
-       arp arp [-vn]     [-H HWTYPE] [-i IF] -a [HOSTNAME] [-v]          [-i
-           IF] -d HOSTNAME [pub] [-v] [-H HWTYPE] [-i IF] -s HOSTNAME HWADDR
-           [temp] [-v] [-H HWTYPE] [-i IF] -s HOSTNAME HWADDR [netmask MASK]
-           pub [-v] [-H HWTYPE] [-i IF] -Ds HOSTNAME IFACE [netmask MASK] pub
+       arp arp [-vn]     [-H HWTYPE] [-i IF] -a [HOSTNAME] [-v]          [-i IF] -d HOSTNAME [pub] [-v] [-H HWTYPE] [-i IF] -s HOSTNAME HWADDR [temp] [-v] [-H HWTYPE] [-i IF] -s HOSTNAME HWADDR
+           [netmask MASK] pub [-v] [-H HWTYPE] [-i IF] -Ds HOSTNAME IFACE [netmask MASK] pub
 
            Manipulate ARP cache
 
@@ -167,8 +139,7 @@ COMMAND DESCRIPTIONS
                    -H HWTYPE       Hardware address type
 
        arping
-           arping [-fqbDUA] [-c CNT] [-w TIMEOUT] [-I IFACE] [-s SRC_IP]
-           DST_IP
+           arping [-fqbDUA] [-c CNT] [-w TIMEOUT] [-I IFACE] [-s SRC_IP] DST_IP
 
            Send ARP requests/replies
 
@@ -184,8 +155,7 @@ COMMAND DESCRIPTIONS
                    -s SRC_IP       Sender IP address
                    DST_IP          Target IP address
 
-       ash ash [-/+OPTIONS] [-/+o OPT]... [-c 'SCRIPT' [ARG0 [ARGS]] / FILE
-           [ARGS]]
+       ash ash [-/+OPTIONS] [-/+o OPT]... [-c 'SCRIPT' [ARG0 [ARGS]] / FILE [ARGS]]
 
            Unix shell interpreter
 
@@ -297,8 +267,7 @@ COMMAND DESCRIPTIONS
        chmod
            chmod [-Rcvf] MODE[,MODE]... FILE...
 
-           Each MODE is one or more of the letters ugoa, one of the symbols
-           +-= and one or more of the letters rwxst
+           Each MODE is one or more of the letters ugoa, one of the symbols +-= and one or more of the letters rwxst
 
                    -R      Recurse
                    -c      List changed files
@@ -367,11 +336,9 @@ COMMAND DESCRIPTIONS
                    -u      Copy only newer files
 
        cpio
-           cpio [-dmvu] [-F FILE] [-R USER[:GRP]] [-H newc] [-tio]
-           [EXTR_FILE]...
+           cpio [-dmvu] [-F FILE] [-R USER[:GRP]] [-H newc] [-tio] [EXTR_FILE]...
 
-           Extract (-i) or list (-t) files from a cpio archive, or take file
-           list from stdin and create an archive (-o)
+           Extract (-i) or list (-t) files from a cpio archive, or take file list from stdin and create an archive (-o)
 
            Main operation mode:
 
@@ -411,10 +378,8 @@ COMMAND DESCRIPTIONS
        cttyhack
            cttyhack [PROG ARGS]
 
-           Give PROG a controlling tty if possible.  Example for /etc/inittab
-           (for busybox init):      ::respawn:/bin/cttyhack /bin/sh Giving
-           controlling tty to shell running with PID 1:      $ exec cttyhack
-           sh Starting interactive shell from boot shell script:
+           Give PROG a controlling tty if possible.  Example for /etc/inittab (for busybox init):      ::respawn:/bin/cttyhack /bin/sh Giving controlling tty to shell running with PID 1:      $ exec
+           cttyhack sh Starting interactive shell from boot shell script:
 
                    setsid cttyhack sh
 
@@ -455,14 +420,10 @@ COMMAND DESCRIPTIONS
 
        dc  dc EXPRESSION...
 
-           Tiny RPN calculator. Operations: +, add, -, sub, *, mul, /, div,
-           %, mod, and, or, not, xor, p - print top of the stack (without
-           popping), f - print entire stack, o - pop the value and set output
-           radix (must be 10, 16, 8 or 2).  Examples: 'dc 2 2 add p' -> 4,
-           'dc 8 8 mul 2 2 + / p' -> 16
+           Tiny RPN calculator. Operations: +, add, -, sub, *, mul, /, div, %, mod, and, or, not, xor, p - print top of the stack (without popping), f - print entire stack, o - pop the value and set
+           output radix (must be 10, 16, 8 or 2).  Examples: 'dc 2 2 add p' -> 4, 'dc 8 8 mul 2 2 + / p' -> 16
 
-       dd  dd [if=FILE] [of=FILE] [ibs=N] [obs=N] [bs=N] [count=N] [skip=N]
-                [seek=N] [conv=notrunc|noerror|sync|fsync] [iflag=skip_bytes]
+       dd  dd [if=FILE] [of=FILE] [ibs=N] [obs=N] [bs=N] [count=N] [skip=N]      [seek=N] [conv=notrunc|noerror|sync|fsync] [iflag=skip_bytes]
 
            Copy a file with converting and formatting
 
@@ -483,8 +444,7 @@ COMMAND DESCRIPTIONS
                    status=noxfer   Suppress rate output
                    status=none     Suppress all output
 
-           N may be suffixed by c (1), w (2), b (512), kB (1000), k (1024),
-           MB, M, GB, G
+           N may be suffixed by c (1), w (2), b (512), kB (1000), k (1024), MB, M, GB, G
 
        deallocvt
            deallocvt [N]
@@ -524,8 +484,7 @@ COMMAND DESCRIPTIONS
        diff
            diff [-abBdiNqrTstw] [-L LABEL] [-S FILE] [-U LINES] FILE1 FILE2
 
-           Compare files line by line and output the differences between
-           them.  This implementation supports unified diffs only.
+           Compare files line by line and output the differences between them.  This implementation supports unified diffs only.
 
                    -a      Treat all files as text
                    -b      Ignore changes in the amount of whitespace
@@ -561,8 +520,7 @@ COMMAND DESCRIPTIONS
        dos2unix
            dos2unix [-ud] [FILE]
 
-           Convert FILE in-place from DOS to Unix format.  When no file is
-           given, use stdin/stdout.
+           Convert FILE in-place from DOS to Unix format.  When no file is given, use stdin/stdout.
 
                    -u      dos2unix
                    -d      unix2dos
@@ -637,8 +595,7 @@ COMMAND DESCRIPTIONS
 
        env env [-iu] [-] [name=value]... [PROG ARGS]
 
-           Print the current environment or run PROG after setting up the
-           specified environment
+           Print the current environment or run PROG after setting up the specified environment
 
                    -, -i   Start with an empty environment
                    -u      Remove variable from the environment
@@ -681,11 +638,8 @@ COMMAND DESCRIPTIONS
                                            operator like '/'
                    (EXPRESSION)            Value of EXPRESSION
 
-           Beware that many operators need to be escaped or quoted for
-           shells.  Comparisons are arithmetic if both ARGs are numbers, else
-           lexicographical. Pattern matches return the string matched between
-           \( and \) or null; if \( and \) are not used, they return the
-           number of characters matched or 0.
+           Beware that many operators need to be escaped or quoted for shells.  Comparisons are arithmetic if both ARGs are numbers, else lexicographical. Pattern matches return the string matched
+           between \( and \) or null; if \( and \) are not used, they return the number of characters matched or 0.
 
        factor
            factor [NUMBER]...
@@ -729,9 +683,7 @@ COMMAND DESCRIPTIONS
        find
            find [-HL] [PATH]... [OPTIONS] [ACTIONS]
 
-           Search for files and perform actions on them.  First failed action
-           stops processing of current file.  Defaults: PATH is current
-           directory, action is '-print'
+           Search for files and perform actions on them.  First failed action stops processing of current file.  Defaults: PATH is current directory, action is '-print'
 
                    -L,-follow      Follow symlinks
                    -H              ...on command line only
@@ -844,12 +796,8 @@ COMMAND DESCRIPTIONS
 
            Example:
 
-           O=`getopt -l bb: -- ab:c:: "$@"` || exit 1 eval set -- "$O" while
-           true; do      case "$1" in      -a)  echo A; shift;;      -b|--bb)
-           echo "B:'$2'"; shift 2;;      -c)  case "$2" in
-                     "")  echo C; shift 2;;           *)   echo "C:'$2'";
-           shift 2;;           esac;;      --)  shift; break;;      *)   echo
-           Error; exit 1;;      esac done
+           O=`getopt -l bb: -- ab:c:: "$@"` || exit 1 eval set -- "$O" while true; do      case "$1" in      -a)  echo A; shift;;      -b|--bb) echo "B:'$2'"; shift 2;;      -c)  case "$2" in
+                     "")  echo C; shift 2;;           *)   echo "C:'$2'"; shift 2;;           esac;;      --)  shift; break;;      *)   echo Error; exit 1;;      esac done
 
        getty
            getty [OPTIONS] BAUD_RATE[,BAUD_RATE]... TTY [TERMTYPE]
@@ -871,8 +819,7 @@ COMMAND DESCRIPTIONS
            BAUD_RATE of 0 leaves it unchanged
 
        grep
-           grep [-HhnlLoqvsriwFEz] [-m N] [-A/B/C N] PATTERN/-e PATTERN.../-f
-           FILE [FILE]...
+           grep [-HhnlLoqvsriwFEz] [-m N] [-A/B/C N] PATTERN/-e PATTERN.../-f FILE [FILE]...
 
            Search for PATTERN in FILEs (or stdin)
 
@@ -939,8 +886,7 @@ COMMAND DESCRIPTIONS
        head
            head [OPTIONS] [FILE]...
 
-           Print first 10 lines of each FILE (or stdin) to stdout.  With more
-           than one FILE, precede each with a filename header.
+           Print first 10 lines of each FILE (or stdin) to stdout.  With more than one FILE, precede each with a filename header.
 
                    -n N[kbm]       Print first N lines
                    -n -N[kbm]      Print all except N last lines
@@ -984,8 +930,7 @@ COMMAND DESCRIPTIONS
                    -F FILE Use FILE's content as hostname
 
        httpd
-           httpd [-ifv[v]] [-c CONFFILE] [-p [IP:]PORT] [-u USER[:GRP]] [-r
-           REALM] [-h HOME] or httpd -d/-e/-m STRING
+           httpd [-ifv[v]] [-c CONFFILE] [-p [IP:]PORT] [-u USER[:GRP]] [-r REALM] [-h HOME] or httpd -d/-e/-m STRING
 
            Listen for incoming HTTP requests
 
@@ -1002,8 +947,7 @@ COMMAND DESCRIPTIONS
                    -d STRING       URL decode STRING
 
        hwclock
-           hwclock [-r|--show] [-s|--hctosys] [-w|--systohc] [-t|--systz]
-           [-l|--localtime] [-u|--utc] [-f|--rtc FILE]
+           hwclock [-r|--show] [-s|--hctosys] [-w|--systohc] [-t|--systz] [-l|--localtime] [-u|--utc] [-f|--rtc FILE]
 
            Query and set hardware clock (RTC)
 
@@ -1070,8 +1014,7 @@ COMMAND DESCRIPTIONS
                    -y      disable interactive mode
 
        i2cset
-           i2cset [-f] [-y] [-m MASK] BUS CHIP-ADDR DATA-ADDR [VALUE] ...
-           [MODE]
+           i2cset [-f] [-y] [-m MASK] BUS CHIP-ADDR DATA-ADDR [VALUE] ... [MODE]
 
            Set I2C registers
 
@@ -1142,8 +1085,7 @@ COMMAND DESCRIPTIONS
        init
            init
 
-           Init is the first process started during boot. It never exits.  It
-           (re)spawns children according to /etc/inittab.
+           Init is the first process started during boot. It never exits.  It (re)spawns children according to /etc/inittab.
 
        insmod
            insmod FILE [SYMBOL=VALUE]...
@@ -1160,13 +1102,9 @@ COMMAND DESCRIPTIONS
 
        ip  ip [OPTIONS] address|route|link|tunnel|neigh|rule [COMMAND]
 
-           OPTIONS := -f[amily] inet|inet6|link | -o[neline] COMMAND := ip
-           addr add|del IFADDR dev IFACE | show|flush [dev IFACE] [to PREFIX]
-           ip route list|flush|add|del|change|append|replace|test ROUTE ip
-           link set IFACE [up|down] [arp on|off] | show [IFACE] ip tunnel
-           add|change|del|show [NAME]      [mode ipip|gre|sit]      [remote
-           ADDR] [local ADDR] [ttl TTL] ip neigh show|flush [to PREFIX] [dev
-           DEV] [nud STATE] ip rule [list] | add|del SELECTOR ACTION
+           OPTIONS := -f[amily] inet|inet6|link | -o[neline] COMMAND := ip addr add|del IFADDR dev IFACE | show|flush [dev IFACE] [to PREFIX] ip route list|flush|add|del|change|append|replace|test
+           ROUTE ip link set IFACE [up|down] [arp on|off] | show [IFACE] ip tunnel add|change|del|show [NAME]      [mode ipip|gre|sit]      [remote ADDR] [local ADDR] [ttl TTL] ip neigh show|flush
+           [to PREFIX] [dev DEV] [nud STATE] ip rule [list] | add|del SELECTOR ACTION
 
        ipcalc
            ipcalc [OPTIONS] ADDRESS[/PREFIX] [NETMASK]
@@ -1283,9 +1221,7 @@ COMMAND DESCRIPTIONS
                    -F      Same as -f, but dump buffer first
 
        losetup
-           losetup [-r] [-o OFS] {-f|LOOPDEV} FILE - associate loop devices
-                losetup -d LOOPDEV - disassociate      losetup -a - show
-           status      losetup -f - show next free loop device
+           losetup [-r] [-o OFS] {-f|LOOPDEV} FILE - associate loop devices      losetup -d LOOPDEV - disassociate      losetup -a - show status      losetup -f - show next free loop device
 
                    -o OFS  Start OFS bytes into FILE
                    -r      Read-only
@@ -1370,20 +1306,14 @@ COMMAND DESCRIPTIONS
 
            mdev -s is to be run during boot to scan /sys and populate /dev.
 
-           Bare mdev is a kernel hotplug helper. To activate it:      echo
-           /sbin/mdev >/proc/sys/kernel/hotplug
+           Bare mdev is a kernel hotplug helper. To activate it:      echo /sbin/mdev >/proc/sys/kernel/hotplug
 
-           It uses /etc/mdev.conf with lines      [-][ENV=regex;]...DEVNAME
-           UID:GID PERM [>|=PATH]|[!] [@|$|*PROG] where DEVNAME is device
-           name regex, @major,minor[-minor2], or environment variable regex.
-           A common use of the latter is to load modules for hotplugged
-           devices:
+           It uses /etc/mdev.conf with lines      [-][ENV=regex;]...DEVNAME UID:GID PERM [>|=PATH]|[!] [@|$|*PROG] where DEVNAME is device name regex, @major,minor[-minor2], or environment variable
+           regex. A common use of the latter is to load modules for hotplugged devices:
 
                    $MODALIAS=.* 0:0 660 @modprobe "$MODALIAS"
 
-           If /dev/mdev.seq file exists, mdev will wait for its value to
-           match $SEQNUM variable. This prevents plug/unplug races.  To
-           activate this feature, create empty /dev/mdev.seq at boot.
+           If /dev/mdev.seq file exists, mdev will wait for its value to match $SEQNUM variable. This prevents plug/unplug races.  To activate this feature, create empty /dev/mdev.seq at boot.
 
            If /dev/mdev.log file exists, debug log will be appended to it.
 
@@ -1415,8 +1345,7 @@ COMMAND DESCRIPTIONS
                    -n LBL  Volume label
 
        mke2fs
-           mke2fs [-Fn] [-b BLK_SIZE] [-i INODE_RATIO] [-I INODE_SIZE] [-m
-           RESERVED_PERCENT] [-L LABEL] BLOCKDEV [KBYTES]
+           mke2fs [-Fn] [-b BLK_SIZE] [-i INODE_RATIO] [-I INODE_SIZE] [-m RESERVED_PERCENT] [-L LABEL] BLOCKDEV [KBYTES]
 
                    -b BLK_SIZE     Block size, bytes
                    -F              Force
@@ -1463,9 +1392,7 @@ COMMAND DESCRIPTIONS
        mktemp
            mktemp [-dt] [-p DIR] [TEMPLATE]
 
-           Create a temporary file with name based on TEMPLATE and print its
-           name.  TEMPLATE must end with XXXXXX (e.g. [/dir/]nameXXXXXX).
-           Without TEMPLATE, -t tmp.XXXXXX is assumed.
+           Create a temporary file with name based on TEMPLATE and print its name.  TEMPLATE must end with XXXXXX (e.g. [/dir/]nameXXXXXX).  Without TEMPLATE, -t tmp.XXXXXX is assumed.
 
                    -d      Make directory, not file
                    -q      Fail silently on errors
@@ -1540,9 +1467,7 @@ COMMAND DESCRIPTIONS
 
            Available Opcodes:
 
-           bsf bsfm bsr bss datacompression drvbuffer eof eom erase fsf fsfm
-           fsr fss load lock mkpart nop offline ras1 ras2 ras3 reset
-           retension rewind rewoffline seek setblk setdensity setpart tell
+           bsf bsfm bsr bss datacompression drvbuffer eof eom erase fsf fsfm fsr fss load lock mkpart nop offline ras1 ras2 ras3 reset retension rewind rewoffline seek setblk setdensity setpart tell
            unload unlock weof wset
 
        mv  mv [-fin] SOURCE DEST or: mv [-fin] SOURCE... DIRECTORY
@@ -1556,8 +1481,7 @@ COMMAND DESCRIPTIONS
        nameif
            nameif [-s] [-c FILE] [IFNAME HWADDR]...
 
-           Rename network interface while it in the down state.  The device
-           with address HWADDR is renamed to IFACE.
+           Rename network interface while it in the down state.  The device with address HWADDR is renamed to IFACE.
 
                    -c FILE Configuration file (default: /etc/mactab)
                    -s      Log to syslog
@@ -1626,11 +1550,9 @@ COMMAND DESCRIPTIONS
        nslookup
            nslookup [HOST] [SERVER]
 
-           Query the nameserver for the IP address of the given HOST
-           optionally using a specified DNS server
+           Query the nameserver for the IP address of the given HOST optionally using a specified DNS server
 
-       od  od [-abcdfhilovxs] [-t TYPE] [-A RADIX] [-N SIZE] [-j SKIP] [-S
-           MINSTR] [-w WIDTH] [FILE]...
+       od  od [-abcdfhilovxs] [-t TYPE] [-A RADIX] [-N SIZE] [-j SKIP] [-S MINSTR] [-w WIDTH] [FILE]...
 
            Print FILEs (or stdin) unambiguously, as octal bytes by default
 
@@ -1713,8 +1635,7 @@ COMMAND DESCRIPTIONS
        pivot_root
            pivot_root NEW_ROOT PUT_OLD
 
-           Move the current root file system to PUT_OLD and make NEW_ROOT the
-           new root file system
+           Move the current root file system to PUT_OLD and make NEW_ROOT the new root file system
 
        poweroff
            poweroff [-d DELAY] [-n] [-f]
@@ -1845,8 +1766,7 @@ COMMAND DESCRIPTIONS
            Output a cpio archive of the rpm file
 
        run-parts
-           run-parts [-a ARG]... [-u UMASK] [--reverse] [--test]
-           [--exit-on-error] DIRECTORY
+           run-parts [-a ARG]... [-u UMASK] [--reverse] [--test] [--exit-on-error] DIRECTORY
 
            Run a bunch of scripts in DIRECTORY
 
@@ -1856,8 +1776,7 @@ COMMAND DESCRIPTIONS
                    --test          Dry run
                    --exit-on-error Exit if a script exits with non-zero
 
-       sed sed [-inrE] [-f FILE]... [-e CMD]... [FILE]...  or: sed [-inrE]
-           CMD [FILE]...
+       sed sed [-inrE] [-f FILE]... [-e CMD]... [FILE]...  or: sed [-inrE] CMD [FILE]...
 
                    -e CMD  Add CMD to sed commands to be executed
                    -f FILE Add FILE contents to sed commands to be executed
@@ -1866,13 +1785,11 @@ COMMAND DESCRIPTIONS
                    -n      Suppress automatic printing of pattern space
                    -r,-E   Use extended regex syntax
 
-           If no -e or -f, the first non-option argument is the sed command
-           string.  Remaining arguments are input files (stdin if none).
+           If no -e or -f, the first non-option argument is the sed command string.  Remaining arguments are input files (stdin if none).
 
        seq seq [-w] [-s SEP] [FIRST [INC]] LAST
 
-           Print numbers from FIRST to LAST, in steps of INC.  FIRST, INC
-           default to 1.
+           Print numbers from FIRST to LAST, in steps of INC.  FIRST, INC default to 1.
 
                    -w      Pad to last with leading zeros
                    -s SEP  String separator
@@ -1880,30 +1797,25 @@ COMMAND DESCRIPTIONS
        setkeycodes
            setkeycodes SCANCODE KEYCODE...
 
-           Set entries into the kernel's scancode-to-keycode map, allowing
-           unusual keyboards to generate usable keycodes.
+           Set entries into the kernel's scancode-to-keycode map, allowing unusual keyboards to generate usable keycodes.
 
-           SCANCODE may be either xx or e0xx (hexadecimal), and KEYCODE is
-           given in decimal.
+           SCANCODE may be either xx or e0xx (hexadecimal), and KEYCODE is given in decimal.
 
        setpriv
            setpriv [OPTIONS] PROG [ARGS]
 
            Run PROG with different privilege settings
 
-           --nnp,--no-new-privs     Ignore setuid/setgid bits and file
-           capabilities
+           --nnp,--no-new-privs     Ignore setuid/setgid bits and file capabilities
 
        setsid
            setsid [-c] PROG ARGS
 
-           Run PROG in a new session. PROG will have no controlling terminal
-           and will not be affected by keyboard signals (^C etc).
+           Run PROG in a new session. PROG will have no controlling terminal and will not be affected by keyboard signals (^C etc).
 
                    -c      Set controlling terminal to stdin
 
-       sh  sh [-/+OPTIONS] [-/+o OPT]... [-c 'SCRIPT' [ARG0 [ARGS]] / FILE
-           [ARGS]]
+       sh  sh [-/+OPTIONS] [-/+o OPT]... [-c 'SCRIPT' [ARG0 [ARGS]] / FILE [ARGS]]
 
            Unix shell interpreter
 
@@ -1958,13 +1870,10 @@ COMMAND DESCRIPTIONS
        sleep
            sleep [N]...
 
-           Pause for a time equal to the total of the args given, where each
-           arg can have an optional suffix of (s)econds, (m)inutes, (h)ours,
-           or (d)ays
+           Pause for a time equal to the total of the args given, where each arg can have an optional suffix of (s)econds, (m)inutes, (h)ours, or (d)ays
 
        sort
-           sort [-nrugMcszbdfiokt] [-o FILE] [-k
-           start[.offset][opts][,end[.offset][opts]] [-t CHAR] [FILE]...
+           sort [-nrugMcszbdfiokt] [-o FILE] [-k start[.offset][opts][,end[.offset][opts]] [-t CHAR] [FILE]...
 
            Sort lines of text
 
@@ -1990,9 +1899,7 @@ COMMAND DESCRIPTIONS
        start-stop-daemon
            start-stop-daemon [OPTIONS] [-S|-K] ... [-- ARGS...]
 
-           Search for matching processes, and then -K: stop all matching
-           processes.  -S: start a process unless a matching process is
-           found.
+           Search for matching processes, and then -K: stop all matching processes.  -S: start a process unless a matching process is found.
 
            Process matching:
 
@@ -2086,8 +1993,7 @@ COMMAND DESCRIPTIONS
        stty
            stty [-a|g] [-F DEVICE] [SETTING]...
 
-           Without arguments, prints baud rate, line discipline, and
-           deviations from stty sane
+           Without arguments, prints baud rate, line discipline, and deviations from stty sane
 
                    -F DEVICE       Open device instead of stdin
                    -a              Print all current settings in human-readable form
@@ -2142,16 +2048,14 @@ COMMAND DESCRIPTIONS
 
            Free initramfs and switch to another root fs:
 
-           chroot to NEW_ROOT, delete all in /, move NEW_ROOT to /, execute
-           NEW_INIT. PID must be 1. NEW_ROOT must be a mountpoint.
+           chroot to NEW_ROOT, delete all in /, move NEW_ROOT to /, execute NEW_INIT. PID must be 1. NEW_ROOT must be a mountpoint.
 
                    -c DEV  Reopen stdio to DEV after switch
 
        sync
            sync [-df] [FILE]...
 
-           Write all buffered blocks (in FILEs) to disk      -d   Avoid
-           syncing metadata      -f   Sync filesystems underlying FILEs
+           Write all buffered blocks (in FILEs) to disk      -d   Avoid syncing metadata      -f   Sync filesystems underlying FILEs
 
        sysctl
            sysctl [OPTIONS] [KEY[=VALUE]]...
@@ -2168,8 +2072,7 @@ COMMAND DESCRIPTIONS
        syslogd
            syslogd [OPTIONS]
 
-           System logging utility (this version of syslogd ignores
-           /etc/syslog.conf)
+           System logging utility (this version of syslogd ignores /etc/syslog.conf)
 
                    -n              Run in foreground
                    -R HOST[:PORT]  Log to HOST:PORT (default PORT:514)
@@ -2186,8 +2089,7 @@ COMMAND DESCRIPTIONS
        tail
            tail [OPTIONS] [FILE]...
 
-           Print last 10 lines of each FILE (or stdin) to stdout.  With more
-           than one FILE, precede each with a filename header.
+           Print last 10 lines of each FILE (or stdin) to stdout.  With more than one FILE, precede each with a filename header.
 
                    -f              Print data as file grows
                    -c [+]N[kbm]    Print last N bytes
@@ -2282,14 +2184,11 @@ COMMAND DESCRIPTIONS
        timeout
            timeout [-t SECS] [-s SIG] PROG ARGS
 
-           Runs PROG. Sends SIG to it if it is not gone in SECS seconds.
-           Defaults: SECS: 10, SIG: TERM.
+           Runs PROG. Sends SIG to it if it is not gone in SECS seconds.  Defaults: SECS: 10, SIG: TERM.
 
        top top [-b] [-nCOUNT] [-dSECONDS]
 
-           Provide a view of process activity in real time.  Read the status
-           of all processes from /proc each SECONDS and display a screenful
-           of them.  Keys:
+           Provide a view of process activity in real time.  Read the status of all processes from /proc each SECONDS and display a screenful of them.  Keys:
 
                    N/M/P/T: sort by pid/mem/cpu/time
                    R: reverse sort
@@ -2315,17 +2214,14 @@ COMMAND DESCRIPTIONS
 
        tr  tr [-cds] STRING1 [STRING2]
 
-           Translate, squeeze, or delete characters from stdin, writing to
-           stdout
+           Translate, squeeze, or delete characters from stdin, writing to stdout
 
                    -c      Take complement of STRING1
                    -d      Delete input characters coded STRING1
                    -s      Squeeze multiple output characters of STRING2 into one character
 
        traceroute
-           traceroute [-46FIlnrv] [-f 1ST_TTL] [-m MAXTTL] [-q PROBES] [-p
-           PORT]      [-t TOS] [-w WAIT_SEC] [-s SRC_IP] [-i IFACE]      [-z
-           PAUSE_MSEC] HOST [BYTES]
+           traceroute [-46FIlnrv] [-f 1ST_TTL] [-m MAXTTL] [-q PROBES] [-p PORT]      [-t TOS] [-w WAIT_SEC] [-s SRC_IP] [-i IFACE]      [-z PAUSE_MSEC] HOST [BYTES]
 
            Trace the route to HOST
 
@@ -2347,8 +2243,7 @@ COMMAND DESCRIPTIONS
                    -g IP   Loose source route gateway (8 max)
 
        traceroute6
-           traceroute6 [-nrv] [-m MAXTTL] [-q PROBES] [-p PORT]      [-t TOS]
-           [-w WAIT_SEC] [-s SRC_IP] [-i IFACE]      HOST [BYTES]
+           traceroute6 [-nrv] [-m MAXTTL] [-q PROBES] [-p PORT]      [-t TOS] [-w WAIT_SEC] [-s SRC_IP] [-i IFACE]      HOST [BYTES]
 
            Trace the route to HOST
 
@@ -2393,9 +2288,7 @@ COMMAND DESCRIPTIONS
            Rename UBI volumes on UBI_DEVICE
 
        udhcpc
-           udhcpc [-fbqRB] [-a[MSEC]] [-t N] [-T SEC] [-A SEC/-n]      [-i
-           IFACE] [-s PROG] [-p PIDFILE]      [-oC] [-r IP] [-V VENDOR] [-F
-           NAME] [-x OPT:VAL]... [-O OPT]...
+           udhcpc [-fbqRB] [-a[MSEC]] [-t N] [-T SEC] [-A SEC/-n]      [-i IFACE] [-s PROG] [-p PIDFILE]      [-oC] [-r IP] [-V VENDOR] [-F NAME] [-x OPT:VAL]... [-O OPT]...
 
                    -i,--interface IFACE    Interface to use (default eth0)
                    -s,--script PROG        Run PROG at DHCP events (default /etc/udhcpc/default.script)
@@ -2440,9 +2333,7 @@ COMMAND DESCRIPTIONS
        uevent
            uevent [PROG [ARGS]]
 
-           uevent runs PROG for every netlink notification.  PROG's
-           environment contains data passed from the kernel.  Typical usage
-           (daemon for dynamic device node creation):      # uevent mdev &
+           uevent runs PROG for every netlink notification.  PROG's environment contains data passed from the kernel.  Typical usage (daemon for dynamic device node creation):      # uevent mdev &
            mdev -s
 
        umount
@@ -2504,8 +2395,7 @@ COMMAND DESCRIPTIONS
        unix2dos
            unix2dos [-ud] [FILE]
 
-           Convert FILE in-place from Unix to DOS format.  When no file is
-           given, use stdin/stdout.
+           Convert FILE in-place from Unix to DOS format.  When no file is given, use stdin/stdout.
 
                    -u      dos2unix
                    -d      unix2dos
@@ -2575,8 +2465,7 @@ COMMAND DESCRIPTIONS
        uudecode
            uudecode [-o OUTFILE] [INFILE]
 
-           Uudecode a file Finds OUTFILE in uuencoded source unless -o is
-           given
+           Uudecode a file Finds OUTFILE in uuencoded source unless -o is given
 
        uuencode
            uuencode [-m] [FILE] STORED_FILENAME
@@ -2639,9 +2528,8 @@ COMMAND DESCRIPTIONS
                    -L      Print longest line length
 
        wget
-           wget [-c|--continue] [--spider] [-q|--quiet] [-O|--output-document
-           FILE]      [--header 'header: value'] [-Y|--proxy on/off] [-P DIR]
-                [-S|--server-response] [-U|--user-agent AGENT] URL...
+           wget [-c|--continue] [--spider] [-q|--quiet] [-O|--output-document FILE]      [--header 'header: value'] [-Y|--proxy on/off] [-P DIR]      [-S|--server-response] [-U|--user-agent AGENT]
+           URL...
 
            Retrieve files via HTTP or FTP
 
@@ -2720,40 +2608,25 @@ COMMAND DESCRIPTIONS
            Decompress to stdout
 
 LIBC NSS
-       GNU Libc (glibc) uses the Name Service Switch (NSS) to configure the
-       behavior of the C library for the local environment, and to configure
-       how it reads system data, such as passwords and group information.
-       This is implemented using an /etc/nsswitch.conf configuration file,
-       and using one or more of the /lib/libnss_* libraries.  BusyBox tries
-       to avoid using any libc calls that make use of NSS.  Some applets
-       however, such as login and su, will use libc functions that require
-       NSS.
+       GNU Libc (glibc) uses the Name Service Switch (NSS) to configure the behavior of the C library for the local environment, and to configure how it reads system data, such as passwords and
+       group information.  This is implemented using an /etc/nsswitch.conf configuration file, and using one or more of the /lib/libnss_* libraries.  BusyBox tries to avoid using any libc calls that
+       make use of NSS.  Some applets however, such as login and su, will use libc functions that require NSS.
 
-       If you enable CONFIG_USE_BB_PWD_GRP, BusyBox will use internal
-       functions to directly access the /etc/passwd, /etc/group, and
-       /etc/shadow files without using NSS.  This may allow you to run your
-       system without the need for installing any of the NSS configuration
-       files and libraries.
+       If you enable CONFIG_USE_BB_PWD_GRP, BusyBox will use internal functions to directly access the /etc/passwd, /etc/group, and /etc/shadow files without using NSS.  This may allow you to run
+       your system without the need for installing any of the NSS configuration files and libraries.
 
-       When used with glibc, the BusyBox 'networking' applets will similarly
-       require that you install at least some of the glibc NSS stuff (in
-       particular, /etc/nsswitch.conf, /lib/libnss_dns*, /lib/libnss_files*,
-       and /lib/libresolv*).
+       When used with glibc, the BusyBox 'networking' applets will similarly require that you install at least some of the glibc NSS stuff (in particular, /etc/nsswitch.conf, /lib/libnss_dns*,
+       /lib/libnss_files*, and /lib/libresolv*).
 
-       Shameless Plug: As an alternative, one could use a C library such as
-       uClibc.  In addition to making your system significantly smaller,
-       uClibc does not require the use of any NSS support files or libraries.
+       Shameless Plug: As an alternative, one could use a C library such as uClibc.  In addition to making your system significantly smaller, uClibc does not require the use of any NSS support files
+       or libraries.
 
 MAINTAINER
        Denis Vlasenko <vda.linux@googlemail.com>
 
 AUTHORS
-       The following people have contributed code to BusyBox whether they
-       know it or not.  If you have written code included in BusyBox, you
-       should probably be listed here so you can obtain your bit of eternal
-       glory.  If you should be listed here, or the description of what you
-       have done needs more detail, or is incorrect, please send in an
-       update.
+       The following people have contributed code to BusyBox whether they know it or not.  If you have written code included in BusyBox, you should probably be listed here so you can obtain your bit
+       of eternal glory.  If you should be listed here, or the description of what you have done needs more detail, or is incorrect, please send in an update.
 
        Emanuele Aina <emanuele.aina@tiscali.it>
            run-parts
@@ -2925,4 +2798,4 @@ AUTHORS
 
            fixed two bugs in msh and hush (exitcode of killed processes)
 
-version 1.27.2                    2017-12-12                       BUSYBOX(1)
+version 1.27.2                                                                                2017-12-12                                                                                    BUSYBOX(1)
