@@ -1,0 +1,85 @@
+CANGEN(1)                                                          User Commands                                                         CANGEN(1)
+
+NAME
+       cangen - manual page for cangen 2018.02.0-1~ubuntu16.04.1~ppa1
+
+SYNOPSIS
+       cangen [options] <CAN interface>
+
+DESCRIPTION
+       cangen - CAN frames generator for testing purposes.
+
+       cangen: generate CAN frames
+
+OPTIONS
+       -g <ms>
+              (gap in milli seconds - default: 200 ms)
+
+       -e     (generate extended frame mode (EFF) CAN frames)
+
+       -f     (generate CAN FD CAN frames)
+
+       -b     (generate CAN FD CAN frames with bitrate switch (BRS))
+
+       -R     (send RTR frame)
+
+       -m     (mix -e -f -b -R frames)
+
+       -I <mode>
+              (CAN ID generation mode - see below)
+
+       -L <mode>
+              (CAN data length code (dlc) generation mode - see below)
+
+       -D <mode>
+              (CAN data (payload) generation mode - see below)
+
+       -p <timeout>
+              (poll on -ENOBUFS to write frames with <timeout> ms)
+
+       -n <count>
+              (terminate after <count> CAN frames - default infinite)
+
+       -i     (ignore -ENOBUFS return values on write() syscalls)
+
+       -x     (disable local loopback of generated CAN frames)
+
+       -v     (increment verbose level for printing sent CAN frames)
+
+   Generation modes:
+       'r'    => random values (default)
+
+       'i'    => increment values
+
+       <hexvalue>
+              => fix value using <hexvalue>
+
+       When  incrementing  the  CAN data the data length code minimum is set to 1.  CAN IDs and data content are given and expected in hexadecimal
+       values.
+
+EXAMPLES
+       cangen vcan0 -g 4 -I 42A -L 1 -D i -v -v
+
+              (fixed CAN ID and length, inc. data)
+
+       cangen vcan0 -e -L i -v -v -v
+
+              (generate EFF frames, incr. length)
+
+       cangen vcan0 -D 11223344DEADBEEF -L 8
+
+              (fixed CAN data payload and length)
+
+       cangen vcan0 -g 0 -i -x
+
+              (full load test ignoring -ENOBUFS)
+
+       cangen vcan0 -g 0 -p 10 -x
+
+              (full load test with polling, 10ms timeout)
+
+       cangen vcan0
+
+              (my favourite default :)
+
+cangen 2018.02.0-1~ubuntu16.04.1~ppa1                              October 2018                                                          CANGEN(1)

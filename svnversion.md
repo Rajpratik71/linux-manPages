@@ -1,0 +1,21 @@
+svnversion(1)                                                 General Commands Manual                                                svnversion(1)
+
+NAME
+       svnversion - Produce a compact version identifier for a working copy.
+
+SYNOPSIS
+       svnversion [options] [wc_path [trail_url]]
+
+OVERVIEW
+       Subversion is a version control system, which allows you to keep old versions of files and directories (usually source code), keep a log of
+       who, when, and why changes occurred, etc., like CVS, RCS or SCCS.  Subversion keeps a single copy of the  master  sources.   This  copy  is
+       called the source ``repository''; it contains all the information to permit extracting previous versions of those files at any time.
+
+       For more information about the Subversion project, visit http://subversion.apache.org.
+
+       Documentation for Subversion and its tools, including detailed usage explanations of the svn, svnadmin, svnserve and svnlook programs, his‐
+       torical background, philosophical approaches and reasonings, etc., can be found at http://svnbook.red-bean.com/.
+
+       Run `svnversion --help' to access the built-in tool documentation.
+
+                                                                                                                                     svnversion(1)

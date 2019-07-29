@@ -1,0 +1,23 @@
+PDF2PS(1)                                                        Ghostscript Tools                                                       PDF2PS(1)
+
+NAME
+       pdf2ps - Ghostscript PDF to PostScript translator
+
+SYNOPSIS
+       pdf2ps [ options ] input.pdf [output.ps]
+
+DESCRIPTION
+       pdf2ps uses gs(1) to convert the Adobe Portable Document Format (PDF) file "input.pdf" to PostScript(tm) in "output.ps".  Normally the out‐
+       put is allowed to use PostScript Level 2 (but not PostScript LanguageLevel 3) constructs; the -dLanguageLevel=1 option restricts the output
+       to Level 1, while -dLanguageLevel=3 allows using LanguageLevel 3 in the output.
+
+FILES
+       Run "gs -h" to find the location of Ghostscript documentation on your system, from which you can get more details.
+
+VERSION
+       This document was last revised for Ghostscript version 9.26.
+
+AUTHOR
+       Artifex Software, Inc. are the primary maintainers of Ghostscript.
+
+9.26                                                             20 November 2018                                                        PDF2PS(1)

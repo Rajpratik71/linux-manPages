@@ -1,0 +1,38 @@
+VGIMPORTCLONE(8)                                              System Manager's Manual                                             VGIMPORTCLONE(8)
+
+NAME
+       vgimportclone — import and rename duplicated volume group (e.g. a hardware snapshot)
+
+SYNOPSIS
+       vgimportclone [-n|--basevgname VolumeGroupName] [-i|--import] PhysicalVolume [PhysicalVolume...]
+
+DESCRIPTION
+       vgimportclone is used to import a duplicated VG (e.g. hardware snapshot).  Duplicate VG(s) and PV(s) are not able to be used until they are
+       made to coexist with the origin VG(s) and PV(s).  vgimportclone renames the VG associated with the specified PV(s) and changes the  associ‐
+       ated VG and PV UUIDs.
+
+OPTIONS
+       See lvm(8) for common options.
+
+       -n, --basevgname VolumeGroupName
+              By  default  the  snapshot  VG  will be renamed to the original name plus a numeric suffix to avoid duplicate naming (e.g. 'test_vg'
+              would be renamed to 'test_vg1').  This option will override the base VG name that is used for all  VG  renames.   If  a  VG  already
+              exists with the specified name a numeric suffix will be added (like the previous example) to make it unique.
+
+       -i, --import
+              Import exported Volume Groups.  Otherwise VGs that have been exported will not be changed (nor will their associated PVs).
+
+ENVIRONMENT VARIABLES
+       LVM_BINARY
+              The LVM2 binary to use. Defaults to "lvm".
+
+Examples
+       The origin VG "vg00" has origin PVs "/dev/sda" and "/dev/sdb" and the respective snapshot PVs are "/dev/sdc" and "/dev/sdd".  To rename the
+       VG associated with "/dev/sdc" and "/dev/sdd" from "vg00" to "vg00_snap" (and to change associated VG and PV UUIDs) do:
+
+       vgimportclone --basevgname vg00_snap /dev/sdc /dev/sdd
+
+SEE ALSO
+       lvm(8), vgrename(8)
+
+Red Hat, Inc.                                           LVM TOOLS 2.02.168(2) (2016-11-30)                                        VGIMPORTCLONE(8)

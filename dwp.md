@@ -1,0 +1,35 @@
+DWP(1)                                                             User Commands                                                            DWP(1)
+
+NAME
+       dwp - The DWARF packaging utility
+
+SYNOPSIS
+       dwp [options] [file...]
+
+DESCRIPTION
+       -h, --help
+              Print this help message
+
+       -e EXE, --exec EXE
+              Get list of dwo files from EXE (defaults output to EXE.dwp)
+
+       -o FILE, --output FILE
+              Set output dwp file name
+
+       -v, --verbose
+              Verbose output
+
+       --verify-only
+              Verify output file against exec file
+
+       -V, --version
+              Print version number
+
+REPORTING BUGS
+       Report bugs to <http://www.sourceware.org/bugzilla/>
+
+COPYRIGHT
+       Copyright  © 2014 Free Software Foundation, Inc.  This program is free software; you may redistribute it under the terms of the GNU General
+       Public License version 3 or (at your option) any later version.  This program has absolutely no warranty.
+
+dwp (GNU Binutils for Ubuntu) 2.25                                  April 2015                                                              DWP(1)

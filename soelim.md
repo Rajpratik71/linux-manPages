@@ -1,0 +1,85 @@
+SOELIM(1)                                                     General Commands Manual                                                    SOELIM(1)
+
+NAME
+       soelim - interpret .so requests in groff input
+
+SYNOPSIS
+       soelim [-Crtv] [-I dir] [files ...]
+
+       It is possible to have whitespace between the -I command line option and its parameter.
+
+DESCRIPTION
+       soelim reads files and replaces lines of the form
+
+              .so file
+
+       by  the contents of file.  It is useful if files included with .so need to be preprocessed.  Normally, soelim should be invoked with the -s
+       option of groff.
+
+       To embed ‘\’ in the file name, write ‘\\’ or ‘\e’.  To embed a space, write ‘\ ’.  Any other escape sequence in file  makes  soelim  ignore
+       the whole line.
+
+       Note that there must be no whitespace between the leading dot and the two characters ‘s’ and ‘o’.  Otherwise, only groff interprets the .so
+       request (and soelim ignores it).
+
+OPTIONS
+       -C     Recognize .so even when followed by a character other than space or newline.
+
+       -Idir  This option may be used to add a directory to the search path for files (both those on the command  line  and  those  named  in  .so
+              requests).  The search path is initialized with the current directory.  This option may be specified more than once; the directories
+              are then searched in the order specified (but before the current directory).  If you want to make  the  current  directory  be  read
+              before other directories, add -I. at the appropriate place.
+
+              No directory search is performed for files with an absolute file name.
+
+       -r     Do not add .lf requests (for general use, with non-groff files).
+
+       -t     Don't emit .lf requests but TeX comment lines (starting with ‘%’) giving the current file and line number.
+
+       -v     Print the version number.
+
+USAGE
+       The normal processing sequence of groff is this:
+
+                 input        sourced
+                 file          file
+                   |             |
+                   v             v
+               preprocessor -> troff -> postprocessor
+                                             |
+                                             v
+                                          output
+                                           file
+
+       That is, files sourced with .so are normally read only by troff (the actual formatter).  soelim is not required for troff to source files.
+
+       If  a  file to be sourced should also be preprocessed, it must already be read before the input file passes through the preprocessor.  This
+       is handled by soelim:
+
+                 input
+                 file
+                   |
+                   v
+                 soelim -> preprocessor -> troff -> postprocessor
+                   ^                                     |
+                   |                                     v
+                sourced                               output
+                 file                                  file
+
+SEE ALSO
+       groff(1)
+
+COPYING
+       Copyright © 1989-2014 Free Software Foundation, Inc.
+
+       Permission is granted to make and distribute verbatim copies of this manual provided the copyright notice and this  permission  notice  are
+       preserved on all copies.
+
+       Permission  is granted to copy and distribute modified versions of this manual under the conditions for verbatim copying, provided that the
+       entire resulting derived work is distributed under the terms of a permission notice identical to this one.
+
+       Permission is granted to copy and distribute translations of this manual into another language, under the  above  conditions  for  modified
+       versions,  except  that  this  permission notice may be included in translations approved by the Free Software Foundation instead of in the
+       original English.
+
+Groff Version 1.22.3                                              28 January 2016                                                        SOELIM(1)
