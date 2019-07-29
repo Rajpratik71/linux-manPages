@@ -1,0 +1,31 @@
+Pbmlife User Manual(0)                                                                                                                                                                 Pbmlife User Manual(0)
+
+
+
+NAME
+       pbmlife - apply Conway's rules of Life to a PBM image
+
+
+SYNOPSIS
+       pbmlife [pbmfile]
+
+
+DESCRIPTION
+       This program is part of Netpbm(1)
+
+       pbmlife reads a PBM image as input, applies the rules of Life to it for one generation, and produces a PBM image as output.
+
+       A white pixel in the image is interpreted as a live beastie, and a black pixel as an empty space.
+
+
+SEE ALSO
+       pbm(5)
+
+
+
+AUTHOR
+       Copyright (C) 1988, 1991 by Jef Poskanzer.
+
+
+
+netpbm documentation                                                                           21 February 1991                                                                        Pbmlife User Manual(0)

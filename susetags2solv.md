@@ -1,0 +1,33 @@
+SUSETAGS2SOLV(1)                                                                                   LIBSOLV                                                                                   SUSETAGS2SOLV(1)
+
+
+
+NAME
+       susetags2solv - convert the susetags repository format into a solv file
+
+SYNOPSIS
+       susetags2solv [OPTIONS]
+
+DESCRIPTION
+       The susetags format is most as repository format on most products created by SUSE. The susetags2solv reads data from standard input, converts the format into a solv file, and writes it to standard
+       output.
+
+       -c CONTENTFILE
+           Also parse the specified content file containing meta information about the repository.
+
+       -q WHAT
+           Data query mode: instead of writing a solv file, select the WHAT element in the input data and write it to standard output. An example for WHAT is defaultvendor to get a default vendor for the
+           repository.
+
+       -M MERGEFILE.solv
+           Merge the content of the specified solv file into the output.
+
+       -X
+           Autoexpand SUSE pattern and product provides into packages.
+
+AUTHOR
+       Michael Schroeder <mls@suse.de>
+
+
+
+libsolv                                                                                           08/26/2015                                                                                 SUSETAGS2SOLV(1)

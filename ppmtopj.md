@@ -1,0 +1,84 @@
+Ppmtopj User Manual(0)                                                                                                                                                                 Ppmtopj User Manual(0)
+
+
+
+NAME
+       ppmtopj - convert a PPM image to an HP PaintJet file
+
+
+SYNOPSIS
+       ppmtopj
+
+       [-gamma val]
+
+       [-xpos val]
+
+       [-ypos val]
+
+       [-back {dark|lite}]
+
+       [-rle]
+
+       [-center]
+
+       [-render { none | snap | bw | dither | diffuse | monodither | monodiffuse | clusterdither | monoclusterdither }]
+
+       [ppmfile]
+
+
+DESCRIPTION
+       This program is part of Netpbm(1)
+
+       ppmtopj reads a PPM image as input and converts it into a format suitable to be printed by an HP PaintJet printer.
+
+       For  best  results,  the  input file should be in 8-color RGB form; i.e. it should have only the 8 binary combinations of full-on and full-off primaries.  You could convert your input to this format
+       like this:
+
+           pamseq 3 1 testimg.ppm >8color.pam
+           pnmremap -map 8color.pam testimg.pam | ppmtopj
+
+       Or you could use
+           ppmdither -red 2 -green 2 -blue 2
+
+
+OPTIONS
+       -rle   Run length encode the image.  (This can result in larger images)
+
+
+       -back  Enhance the foreground by indicating if the background is light or dark compared to the foreground.
+
+
+       -render alg
+              Use an internal rendering algorithm (default dither).
+
+
+       -gamma int
+              Gamma correct the image using the integer int as a gamma (default 0).
+
+
+       -center
+              Center the image to an 8.5 by 11 page
+
+
+       -xpos pos
+              Move by pos pixels in the x direction.
+
+
+       -ypos pos
+              Move by pos pixels in the y direction.
+
+
+
+
+SEE ALSO
+       HP PaintJet XL Color Graphics Printer User's Guide, pnmtopclxl.html(1) , pjtoppm.html(1) , pamdepth(1) , pnmremap(1) , pamseq(1) , ppmdither(1) , pbmtolj.html(1) , ppmtolj(1)  ,  thinkjettopbm(1)  ,
+       ppm(5)
+
+
+
+AUTHOR
+       Copyright (C) 1991 by Christos Zoulas.
+
+
+
+netpbm documentation                                                                             13 July 1991                                                                          Ppmtopj User Manual(0)

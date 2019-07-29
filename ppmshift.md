@@ -1,0 +1,56 @@
+Ppmshift User Manual(0)                                                                                                                                                               Ppmshift User Manual(0)
+
+
+
+NAME
+       ppmshift - shift lines of a PPM image left or right by a random amount
+
+
+SYNOPSIS
+       ppmshift shift [ppmfile]
+
+
+DESCRIPTION
+       This program is part of Netpbm(1)
+
+       ppmshift  reads  a  PPM image as input.  Shifts every row of image data to the left or right by a random amount, within a range of shift pixels.  The random distribution is uniform, centered at zero
+       movement.
+
+       The randomness in the image is limited before Netpbm 10.37 (December 2006) -- if you run the program twice in the same second, you may get identical output.
+
+       This is another one of those effects I intended to use for MPEG tests.  Unfortunately, this program will not help me here - it creates too random patterns to be used for animations.  Still, it might
+       give interesting results on still images.
+
+
+EXAMPLE
+       Check  this  out:  Save your favourite model's picture from something like alt.binaries.pictures.supermodels (ok, or from any other picture source), convert it to ppm, and process it e.g. like this,
+       assuming the picture is 800x600 pixels:
+
+            #take the upper half, and leave it like it is
+            pamcut -top=0 -width=800 -height=300 cs.ppm >upper.ppm
+
+            #take the lower half, flip it upside down, dim it and distort it a little
+            pamcut -top=300 -width=800 -height=300 cs.ppm | \
+                pamflip -topbottom | \
+                ppmdim 0.7 | \
+                ppmshift 10 >lower.ppm
+
+            #and concatenate the two pieces
+            pnmcat -topbottom upper.ppm lower.ppm >newpic.ppm
+
+
+       The resulting picture looks like the image being reflected on a water surface with slight ripples.
+
+
+SEE ALSO
+       ppm(5) , pamcut(1) , pamflip(1) , ppmdim(1) , pnmcat(1)
+
+
+
+
+AUTHOR
+       Copyright (C) 1993 by Frank Neumann
+
+
+
+netpbm documentation                                                                           20 November 2008                                                                       Ppmshift User Manual(0)

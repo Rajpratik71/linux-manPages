@@ -1,0 +1,31 @@
+Xbmtopbm User Manual(0)                                                                                                                                                               Xbmtopbm User Manual(0)
+
+
+
+NAME
+       xbmtopbm - convert an X11 or X10 bitmap to a PBM image
+
+
+SYNOPSIS
+       xbmtopbm
+
+       [bitmapfile]
+
+
+DESCRIPTION
+       This program is part of Netpbm(1)
+
+       xbmtopbm reads an X11 or X10 bitmap as input and produces a PBM image as output.
+
+
+SEE ALSO
+       pbmtoxbm(1) , pbmtox10bm(1) , pbm(5)
+
+
+
+AUTHOR
+       Copyright (C) 1988 by Jef Poskanzer.
+
+
+
+netpbm documentation                                                                            31 August 1988                                                                        Xbmtopbm User Manual(0)

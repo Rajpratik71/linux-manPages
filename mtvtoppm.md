@@ -1,0 +1,31 @@
+Mtvtoppm User Manual(0)                                                                                                                                                               Mtvtoppm User Manual(0)
+
+
+
+NAME
+       mtvtoppm - convert output from an MTV or PRT ray tracer into a PPM
+
+
+SYNOPSIS
+       mtvtoppm [mtvfile]
+
+
+DESCRIPTION
+       This program is part of Netpbm(1)
+
+       mtvtoppm reads an input file from Mark VanDeWettering's MTV ray tracer and produces a PPM image as output.
+
+       The PRT raytracer also produces this format.
+
+
+SEE ALSO
+       ppm(5)
+
+
+
+AUTHOR
+       Copyright (C) 1989 by Jef Poskanzer.
+
+
+
+netpbm documentation                                                                           02 February 1989                                                                       Mtvtoppm User Manual(0)

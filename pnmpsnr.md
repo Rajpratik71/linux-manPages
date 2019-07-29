@@ -1,0 +1,42 @@
+Pnmpsnr User Manual(0)                                                                                                                                                                 Pnmpsnr User Manual(0)
+
+
+
+NAME
+       pnmpsnr - compute the difference between two images (the PSNR)
+
+
+SYNOPSIS
+       pnmpsnr
+
+       [pnmfile1]
+
+       [pnmfile2]
+
+
+DESCRIPTION
+       This program is part of Netpbm(1)
+
+       pnmpsnr  reads  two PBM, PGM, or PPM files, or PAM equivalents, as input and prints the magnitude of difference between the two images as a peak signal-to-noise ratio (PSNR) This metric is typically
+       used in image compression papers to rate the distortion between original and decoded image.
+
+       If the inputs are PBM or PGM, pnmpsnr prints the PSNR of the luminance only.  Otherwise, it prints the separate PSNRs of the luminance, and chrominance (Cb and Cr) components of the colors.
+
+       The PSNR of a given component is the ratio of the maximum mean square difference of component values that could exist between the two images (a measure of the information content in an image) to the
+       actual mean square difference for the two subject images.  It is expressed as a decibel value.
+
+       The  mean  square difference of a component for two images is the mean square difference of the component value, comparing each pixel with the pixel in the same position of the other image.  For the
+       purposes of this computation, components are normalized to the scale [0..1].
+
+       The maximum mean square difference is identically 1.
+
+       So the higher the PSNR, the closer the images are.  A luminance PSNR of 20 means the mean square difference of the luminances of the pixels is 100 times less than the  maximum  possible  difference,
+       i.e. 0.01.
+
+
+SEE ALSO
+       pnm(5)
+
+
+
+netpbm documentation                                                                            04 March 2001                                                                          Pnmpsnr User Manual(0)

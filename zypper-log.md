@@ -1,0 +1,55 @@
+ZYPPER-LOG(8)                                                                                       ZYPPER                                                                                      ZYPPER-LOG(8)
+
+
+
+NAME
+       zypper-log - Zypper logfile reader
+
+SYNOPSIS
+       zypper-log [OPTIONS] [PID]
+
+DESCRIPTION
+       zypper-log can read zypper’s logfiles. It can also handle rotated logfiles, and will open plain, xz, gz and bz2-compressed files.
+
+       By default /var/log/zypper.log will be read and a list of all zypper invocations is shown:
+
+           $ zypper-log
+           Reading /var/log/zypper.log ............... DONE
+
+           TIME              PID    VER      CMD
+           2013-10-15 11:01  2195   1.11.14  /usr/bin/zypper se spell
+           2013-10-15 11:03  2703   1.11.14  /usr/bin/zypper in aspell-en aspell-ispell aspell-de
+           2013-10-15 15:00  22463  1.11.14  /usr/bin/zypper lr -u
+           2013-10-15 15:00  22479  1.11.14  /usr/bin/zypper lr -s
+
+       When you provide a pid, you will get the complete log for the corresponding zypper run.
+
+OPTIONS
+       -d YYYY-MM-DD
+           Only view zypper runs of the specified day.
+
+       -l FILE
+           Only read this logfile.
+
+       -r NUMBER
+           Also read the NUMBER latest rotated logfiles.
+
+       --help
+           Print help and quit.
+
+FILES
+       /var/log/zypper.log
+           zypper default logfile.
+
+       /var/log/YaST2/y2log
+           As YAST uses a similar logfile format, you should be able to scan the YAST logfiles as well, using the -l switch.
+
+AUTHORS
+       Dominik Heidler <dheidler@suse.de>
+
+SEE ALSO
+       zypper(8)
+
+
+
+SUSE Linux                                                                                        06/12/2015                                                                                    ZYPPER-LOG(8)

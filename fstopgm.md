@@ -1,0 +1,51 @@
+Fstopgm User Manual(0)                                                                                                                                                                 Fstopgm User Manual(0)
+
+
+
+NAME
+       fstopgm - convert a Usenix FaceSaver(tm) file into a PGM image
+
+
+
+SYNOPSIS
+       fstopgm [fsfile]
+
+
+DESCRIPTION
+       This program is part of Netpbm(1)
+
+       fstopgm reads a Usenix FaceSaver(tm) file as input and produces a PGM image as output.
+
+       FaceSaver(tm)  files sometimes have rectangular pixels.  While fstopgm won't re-scale them into square pixels for you, it will give you the precise pamscale command that will do the job.  Because of
+       this, reading a FaceSaver(tm) image is a two-step process.  First you do:
+
+         fstopgm > /dev/null
+
+       This will tell you whether you need to use pamscale.
+
+       Then use one of the following pipelines:
+         fstopgm | pnmnorm
+         fstopgm | pamscale -whatever | pnmnorm
+
+       To go to PBM, you want something more like one of these:
+         fstopgm | pamenlarge 3 | pnmnorm | pamditherbw
+         fstopgm | pamenlarge 3 | pamscale <whatever> | pnmnorm | pamditherbw
+
+       You want to enlarge when going to a bitmap because otherwise you lose information; but enlarging by more than 3 does not look good.
+
+       FaceSaver is a registered trademark of Metron Computerware Ltd. of Oakland, CA.
+
+
+
+SEE ALSO
+       pgmtofs(1) , pgm(5) , pnmnorm(1) , pamenlarge(1) , pamscale(1) , pamditherbw(1)
+
+
+
+
+AUTHOR
+       Copyright (C) 1989 by Jef Poskanzer.
+
+
+
+netpbm documentation                                                                             06 April 89                                                                           Fstopgm User Manual(0)

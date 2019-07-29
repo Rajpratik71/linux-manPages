@@ -1,0 +1,36 @@
+WHOAMI(1)                                                                                       User Commands                                                                                       WHOAMI(1)
+
+
+
+NAME
+       whoami - print effective userid
+
+SYNOPSIS
+       whoami [OPTION]...
+
+DESCRIPTION
+       Print the user name associated with the current effective user ID.  Same as id -un.
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+AUTHOR
+       Written by Richard Mlynarik.
+
+REPORTING BUGS
+       GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+       Report whoami translation bugs to <http://translationproject.org/team/>
+
+COPYRIGHT
+       Copyright © 2016 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
+
+SEE ALSO
+       Full documentation at: <http://www.gnu.org/software/coreutils/whoami>
+       or available locally via: info '(coreutils) whoami invocation'
+
+
+
+GNU coreutils 8.25                                                                               January 2016                                                                                       WHOAMI(1)

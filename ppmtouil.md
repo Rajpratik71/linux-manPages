@@ -1,0 +1,14 @@
+ppmtouil(1)                                                                                General Commands Manual                                                                                ppmtouil(1)
+
+
+
+NAME
+       ppmtouil - replaced by pamtouil
+
+DESCRIPTION
+       This program is part of Netpbm(1) In May 2002, ppmtouil was extended and renamed to pamtouil(1)
+
+
+
+
+netpbm documentation                                                                               May 2002                                                                                       ppmtouil(1)

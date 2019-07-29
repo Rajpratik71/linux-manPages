@@ -1,0 +1,31 @@
+Imgtoppm User Manual(0)                                                                                                                                                               Imgtoppm User Manual(0)
+
+
+
+NAME
+       imgtoppm - convert an Img-whatnot file into a PPM image
+
+
+SYNOPSIS
+       imgtoppm [imgfile]
+
+
+DESCRIPTION
+       This program is part of Netpbm(1)
+
+       imgtoppmreads an Img-whatnot file as input and produces a PPM image as output.  The Img-whatnot toolkit is available for FTP on venera.isi.edu, along with numerous images in this format.
+
+
+SEE ALSO
+       ppm(5)
+
+
+
+AUTHOR
+       Based on a simple conversion program posted to comp.graphics by Ed Falk.
+
+       Copyright (C) 1989 by Jef Poskanzer.
+
+
+
+netpbm documentation                                                                          05 September 1989                                                                       Imgtoppm User Manual(0)
