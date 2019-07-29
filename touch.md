@@ -1,4 +1,4 @@
-TOUCH(1)                        User Commands                        TOUCH(1)
+TOUCH(1)                                                                                     User Commands                                                                                    TOUCH(1)
 
 NAME
        touch - change file timestamps
@@ -7,17 +7,13 @@ SYNOPSIS
        touch [OPTION]... FILE...
 
 DESCRIPTION
-       Update  the  access and modification times of each FILE to the current
-       time.
+       Update the access and modification times of each FILE to the current time.
 
-       A FILE argument that does not exist is created empty, unless -c or  -h
-       is supplied.
+       A FILE argument that does not exist is created empty, unless -c or -h is supplied.
 
-       A  FILE  argument string of - is handled specially and causes touch to
-       change the times of the file associated with standard output.
+       A FILE argument string of - is handled specially and causes touch to change the times of the file associated with standard output.
 
-       Mandatory arguments to long options are mandatory  for  short  options
-       too.
+       Mandatory arguments to long options are mandatory for short options too.
 
        -a     change only the access time
 
@@ -30,9 +26,7 @@ DESCRIPTION
        -f     (ignored)
 
        -h, --no-dereference
-              affect  each symbolic link instead of any referenced file (use‐
-              ful only on systems that can change the timestamps  of  a  sym‐
-              link)
+              affect each symbolic link instead of any referenced file (useful only on systems that can change the timestamps of a symlink)
 
        -m     change only the modification time
 
@@ -43,8 +37,7 @@ DESCRIPTION
               use [[CC]YY]MMDDhhmm[.ss] instead of current time
 
        --time=WORD
-              change  the  specified  time:  WORD  is  access, atime, or use:
-              equivalent to -a WORD is modify or mtime: equivalent to -m
+              change the specified time: WORD is access, atime, or use: equivalent to -a WORD is modify or mtime: equivalent to -m
 
        --help display this help and exit
 
@@ -54,30 +47,23 @@ DESCRIPTION
        Note that the -d and -t options accept different time-date formats.
 
 DATE STRING
-       The --date=STRING is a mostly free format human readable  date  string
-       such  as "Sun, 29 Feb 2004 16:21:42 -0800" or "2004-02-29 16:21:42" or
-       even "next Thursday".  A date string may contain items indicating cal‐
-       endar  date, time of day, time zone, day of week, relative time, rela‐
-       tive date, and numbers.  An empty string indicates  the  beginning  of
-       the  day.  The date string format is more complex than is easily docu‐
-       mented here but is fully described in the info documentation.
+       The  --date=STRING  is  a  mostly free format human readable date string such as "Sun, 29 Feb 2004 16:21:42 -0800" or "2004-02-29 16:21:42" or even "next Thursday".  A date string may contain
+       items indicating calendar date, time of day, time zone, day of week, relative time, relative date, and numbers.  An empty string indicates the beginning of the day.  The date string format is
+       more complex than is easily documented here but is fully described in the info documentation.
 
 AUTHOR
-       Written by Paul Rubin, Arnold Robbins, Jim Kingdon,  David  MacKenzie,
-       and Randy Smith.
+       Written by Paul Rubin, Arnold Robbins, Jim Kingdon, David MacKenzie, and Randy Smith.
 
 REPORTING BUGS
        GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
        Report touch translation bugs to <http://translationproject.org/team/>
 
 COPYRIGHT
-       Copyright  ©  2017 Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-       This is free software: you are free to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
+       Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
 
 SEE ALSO
        Full documentation at: <http://www.gnu.org/software/coreutils/touch>
        or available locally via: info '(coreutils) touch invocation'
 
-GNU coreutils 8.28               January 2018                        TOUCH(1)
+GNU coreutils 8.28                                                                           January 2018                                                                                     TOUCH(1)

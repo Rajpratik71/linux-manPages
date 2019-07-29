@@ -1,0 +1,45 @@
+FC-SCAN(1)                                                         FC-SCAN(1)
+
+NAME
+       fc-scan - scan font files or directories
+
+SYNOPSIS
+       fc-scan [ -Vbh ]
+
+        [   [ -b ]  [ --ignore-blanks ]  ]  [  [ -f format ]  [ --format for‐
+       mat ]  ]  [ --version ]  [ --help ]  file...
+
+DESCRIPTION
+       fc-scan scans file(s) recursively and prints out font pattern for each
+       face found.
+
+OPTIONS
+       This  program  follows  the  usual  GNU command line syntax, with long
+       options starting with two  dashes  (`-').  A  summary  of  options  is
+       included below.
+
+       -b     Ignore blanks to compute languages
+
+       -f     Format output according to the format specifier format.
+
+       -V     Show version of the program and exit.
+
+       -h     Show summary of options.
+
+       file   Scan file recursively for font faces.
+
+RETURN CODES
+       fc-scan  returns error code 0 if at least one font was found or 1 oth‐
+       erwise.
+
+SEE ALSO
+       fc-query(1) FcFileScan(3)  FcDirScan(3)  FcPatternFormat(3)  fc-cat(1)
+       fc-cache(1) fc-list(1) fc-match(1) fc-pattern(1)
+
+       The  fontconfig  user's guide, in HTML format: /usr/share/doc/fontcon‐
+       fig/fontconfig-user.html.
+
+AUTHOR
+       This manual page was updated by Behdad Esfahbod <behdad@behdad.org>.
+
+                                 Jan 15, 2009                      FC-SCAN(1)
