@@ -1,0 +1,63 @@
+TEXDIRFLATTEN(1)                                                           User Contributed Perl Documentation                                                           TEXDIRFLATTEN(1)
+
+NAME
+       texdirflatten - Collects all components of a (La)TeX file in a single output directory -- i.e., flattens its hierarchy.
+
+SYNOPSIS
+       texdirflatten [-1|--onetex] [-f|--file input.tex] [-o outputdir]
+                  [--imgexts .ext1,.ext2,...] [--debug] [-V|--version] [-?|--help]
+
+DESCRIPTION
+       This Perl script parses a LaTeX file recursively, scanning all child files, and collects details of any included and other data files, such as graphics and BiBTeX bibliography
+       files. These component files, are then all put into a single directory (thus "flattening" the document's directory tree). This is useful in distributing manuscripts to
+       collaborators or in submitting to journals.
+
+OPTIONS
+       --file, -f input.tex
+           Specifies input (La)TeX file.
+
+       --onetex, -1
+           If specified, produces a single TeX file by expanding all \input and \include commands in place.
+
+       --output, -o outputdir
+           Directory to collect all files. texdirflatten will copy each source file, graphics and bibliography file to this directory. It will be created if it is unexistent. If
+           unspecified, it defaults to "flat/".
+
+       --imgexts .ext1,.ext2[,...]
+           Prepends to the prioritized list of image extensions to search when trying to find the image to copy to output folder. The first file with the extension found will be copied
+           and search stopped. Default order is "", ".eps", ".pdf", ".pstex" (note that it includes files with no extension). If using pdflatex, one may want to add PDF before EPS with
+           "--imgexts .pdf". Don't forget the dot before the extension!
+
+       --debug
+           Enables copious amounts of debugging output - useful if something is going wrong.
+
+       --version, -V
+           Displays the current version number and the usage and exits.
+
+       --help, -?
+           Show this manual page.
+
+EXAMPLES
+       The following example scans "manuscript.tex" in the current directory and gathers it and all its components in the "submit_01/" directory:
+
+        $ texdirflatten -f manuscript.tex -o submit_01
+
+CAVEATS
+       Please take backups before running this command. No warranties whatsoever provided.
+
+       You may need to run "epstopdf" on EPS files if you are using "pdflatex":
+
+        $ for i in *.eps; do epstopdf $i; done
+
+BUGS
+       Bug reports and patches are welcome.
+
+AUTHOR
+       Cengiz Gunay <cengique<AT>users.sf.net>
+
+COPYRIGHT AND LICENSE
+       Copyleft 2003-2017, Cengiz Gunay
+
+       This library is free software; you may redistribute it and/or modify it under the same terms as Perl itself.
+
+texdirflatten-v1.3                                                                      2017-07-03                                                                       TEXDIRFLATTEN(1)

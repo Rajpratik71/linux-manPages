@@ -1,0 +1,83 @@
+CHKDVIFONT(1)                                                                    General Commands Manual                                                                    CHKDVIFONT(1)
+
+NAME
+       chkdvifont - CHecK DVI/tfm/font file and tell informations of FONTs
+
+SYNOPSIS
+       chkdvifont [-s] [-c] [-{f|F}<font_data_file>] [-d] dvi_file_name
+
+       chkdvifont [-s] [-c] [-{f|F}<font_data_file>] [-t] tfm_file_name
+
+       chkdvifont [-s] [-c] [-{f|F}<font_data_file>] [-p] font_file_name
+
+DESCRIPTION
+       Chkdvifont is a utility to check DVI and other  font-related formats (such as TFM, VF, GF and PK) and print information of those fonts.  There are 3 modes;
+
+       Option -d: force DVI mode
+
+       Option -t: force TFM/OFM mode
+
+       Option -p: force other FONT mode
+
+       By default, the mode is guessed from the file extension.
+
+EXAMPLE
+       (1) If you want to know what font is used in sample.dvi,
+
+                $ chkdvifont sample.dvi
+                dvi file name                   = sample.dvi
+                comment                         = TeX output 2007.11.24:0632
+                factor converting to 10^{-5}m   = 25400000/473628672
+                magnification                   = 1000
+                maximum width                   = 26083328 scaled points = 398 points
+                maximum height+depth            = 11099063 scaled points = 169 points
+                maximum stack depth             = 4
+                number of pages                 = 13
+                page size                       = 14.0 cm x  6.0 cm
+                page size magnificated          = 14.0 cm x  6.0 cm
+
+                Font 14
+                    checksum                    = 44D3ED74
+                    design size                 =  1132462 scaled points = 17 points
+                    space size                  =  1630536 scaled points = 24 points
+                    magnification               = +magstep2
+                    font name                   = cmr17
+
+                Font 7
+                    checksum                    = 4BF16079
+                    design size                 =   655360 scaled points = 10 points
+                    space size                  =   655360 scaled points = 10 points
+                    font name                   = cmr10
+
+       (2) If you want to know the brief summary of jis.tfm,
+
+                $ chkdvifont jis.tfm
+                "jis" is a jfm file :  0  ->   5
+                checksum                = 00000000
+                design size             = 10485760 2^{-20} points = 10 points
+
+       (3) If you want to know what font is referred to by jis.vf,
+
+                $ chkdvifont jis.vf
+                "jis.vf" is in VF format
+                checksum                = 00000000
+                design size             = 10485760 2^{-20} points = 10 points
+
+                Mapped Font 1
+                        font dsize      = 10485760 2^{-20} points = 10 points
+                        font at         =  0.962216
+                        font name       = rml
+
+       Listing  the  fonts  used in a DVI file (as shown in the first example) is almost equivalent to dvifontlist in TeX-Guy package <http://www-masu.ist.osaka-u.ac.jp/%7Ekakugawa/TeX-
+       Guy/> and a script dviinfox <https://ctan.org/pkg/dviinfox>.  I don't know any alternatives for obtaining information about TFM, OFM, VF and other font formats.
+
+SEE ALSO
+       pltotf(1), tftopl(1), vptovf(1), vftovp(1)
+
+AUTHOR
+       The program chkdvifont (original name "chkfont") is derived from the DVIOUT package (DVI previewer for Windows) by Toshio OSHIMA ("SHIMA"), Yoshiki OTOBE, and  Kazunori  ASAYAMA.
+       Current version is maintained by Japanese  Development Community <https://texjp.org>.
+       For  more  information, please refer to chkdvifont-ja.txt (in Japanese) on our GitHub repository, <https://github.com/texjporg/tex-jp-build> (under source/texk/dviout-util direc‐
+       tory).
+
+                                                                                                                                                                            CHKDVIFONT(1)

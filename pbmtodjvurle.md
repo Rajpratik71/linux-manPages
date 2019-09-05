@@ -1,0 +1,37 @@
+Pbmtodjvurle User Manual(0)                                                                                                                                                       Pbmtodjvurle User Manual(0)
+
+
+
+NAME
+       pbmtodjvurle - convert a PBM image to DjVu Bitonal RLE format
+
+
+SYNOPSIS
+       pbmtodjvurle
+
+       [pbmfile [rlefile]]
+
+
+DESCRIPTION
+       This program is part of Netpbm(1)
+
+       pbmtodjvurle reads a PBM image as input and produces DjVu Bitonal RLE format as output.
+
+
+SEE ALSO
+       pamtodjvurle(1)
+
+       pbm(5)
+
+
+
+HISTORY
+       pbmtodjvurle was new in Netpbm 10.22 (April 2004).
+
+
+AUTHOR
+       Copyright (C) 2004 Scott Pakin <scott+pbm@pakin.org>.
+
+
+
+netpbm documentation                                                                            10 April 2004                                                                     Pbmtodjvurle User Manual(0)

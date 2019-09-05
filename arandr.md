@@ -1,0 +1,31 @@
+ARANDR(1)                                                                                                                                ARANDR(1)
+
+NAME
+       arandr - visual front end for XRandR 1.2
+
+SYNOPSIS
+       arandr [savedfile]
+
+DESCRIPTION
+       ARandR is a visual front end for XRandR 1.2 (per display options), which provides full control over positioning, saving and loading to/from
+       shell scripts and easy integration with other applications.
+
+       --version
+              show program's version number and exit
+
+       -h, --help
+              show this help message and exit
+
+       --randr-display=D
+              Use D as display for xrandr (but still show the GUI on the display from the environment; e.g. localhost:10.0)
+
+       --force-version
+              Even run with untested XRandR versions
+
+SEE ALSO
+       man 1 xrandr
+
+AUTHOR
+       chrysn <chrysn@fsfe.org>
+
+                                                                    2008-06-03                                                           ARANDR(1)

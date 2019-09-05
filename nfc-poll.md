@@ -1,0 +1,42 @@
+nfc-poll(1)                                                      libnfc's examples                                                     nfc-poll(1)
+
+NAME
+       nfc-poll - poll first available NFC target
+
+SYNOPSIS
+       nfc-poll
+
+DESCRIPTION
+       nfc-poll is a utility for polling any available target (tags but also NFCIP targets) using ISO14443-A, FeliCa, Jewel and ISO14443-B modula‐
+       tions.
+
+       This tool uses hardware polling feature if available (ie. PN532) or switch back to software polling, it will display available  information
+       retrieved from the tag.
+
+OPTIONS
+       -v     Tells  nfc-poll to be verbose and display detailed information about the targets shown.  This includes SAK decoding and fingerprint‐
+              ing is available.
+
+IMPORTANT
+       There are some well-know limits with this example:
+        - Even with NDO_AUTO_14443_4A enabled (default), nfc-poll can miss ATS. That due to the way the PN532 use to poll for ISO14443 type A,  it
+       will  attempt  to find ISO14443-4-only targets, then ISO14443-3. If your ISO14443-4 target is present when PN532 looks for ISO14443-4-only,
+       ATS will be retrieved. But if your target enter the field during ISO14443-3, RATS will not be sent and ATS not retrieved.
+        - nfc-poll can show up only one card while two are in field. That's due, again, to the way the  PN532  poll  for  targets.  It  will  stop
+       polling  when  one  modulation  got  a  result, so if you have, for example, one ISO14443-3 (eg. Mifare Ultralight) and one ISO14443-4 (eg.
+       Mifare DESFire), it will probably return only the ISO14443-4.
+
+BUGS
+       Please report any bugs on the libnfc issue tracker at:
+       http://code.google.com/p/libnfc/issues
+
+LICENCE
+       libnfc is licensed under the GNU Lesser General Public License (LGPL), version 3.
+       libnfc-utils and libnfc-examples are covered by the the BSD 2-Clause license.
+
+AUTHORS
+       Romuald Conty <romuald@libnfc.org>
+
+       This manual page was written by Romuald Conty <romuald@libnfc.org>.  It is licensed under the terms of the GNU GPL (version 2 or later).
+
+libnfc                                                             June 26, 2009                                                       nfc-poll(1)

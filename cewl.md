@@ -1,0 +1,105 @@
+cewl(1)                                                     custom word list generator                                                     cewl(1)
+
+NAME
+       cewl - custom word list generator
+
+SYNOPSIS
+       cewl [OPTION] ... URL
+
+DESCRIPTION
+       CeWL  (Custom  Word List generator) is a ruby app which spiders a given URL, up to a specified depth, and returns a list of words which can
+       then be used for password crackers such as John the Ripper. Optionally, CeWL can follow external links.
+
+       CeWL can also create a list of email addresses found in mailto links. These email addresses  can  be  used  as  usernames  in  brute  force
+       actions.
+
+       CeWL is pronounced "cool".
+
+OPTIONS
+       --help, -h
+              Show the help.
+
+       --count, -c
+              Show the count for each word found.
+
+       --depth N, -d N
+              The depth to spider to. Default: 2.
+
+       --email, -e
+              Include email addresses in the search. This option will create an email list, after the words list, that can be used as usernames in
+              brute force actions.
+
+       --email_file FILE
+              Filename for email output. Must be used with '-e' option. If used, the email list created by '-e' option will be written in  a  file
+              and won't be shown in stdout.
+
+       --keep, -k
+              Keep  the  downloaded files (in /tmp or in directory specified by '--meta-temp-dir' option). These files are acquired when using the
+              '-a' option.
+
+       --meta, -a
+              Consider the metadata found when processing a site. This option will download some files found in the  site  and  will  extract  its
+              metadata. So, the network traffic will be greater. The files will be downloaded in /tmp folder or in directory specified by '--meta-
+              temp-dir' option. The metadata will be shown after the words list and can be used as elements for brute force actions.
+
+       --meta_file FILE
+              Filename for metadata output. Must be used with '-a' option. If used, the metadata list created by '-a' option will be written in  a
+              file and won't be shown in stdout.
+
+       --meta-temp-dir DIRECTORY
+              The directory used by exiftool when parsing files. Default: /tmp.
+
+       --min_word_length N, -m N
+              The minimum word length. This strips out all words under the specified length. Default: 3.
+
+       --no-words, -n
+              Don't output the wordlist.
+
+       --offsite, -o
+              By default, the spider will only visit the site specified. With this option, CeWL will also visit external sites (that are quoted by
+              hyperlinks).
+
+       --ua USER-AGENT, -u USER-AGENT
+              Change the user-agent. The default is 'Ruby'. There are a list of valid user-agents at http://www.user-agents.org.
+
+       --write FILE, -w FILE
+              Write the output to the file rather than to stdout.
+
+       --auth_type TYPE
+              Type of authentication for websites that uses it. The current options are 'digest' and 'basic'.
+
+       --auth_user USERNAME
+              Authentication username for websites.
+
+       --auth_pass PASSWORD
+              Authentication password for websites.
+
+       --proxy_host HOST
+              Proxy name or IP address, when needed.
+
+       --proxy_port PORT
+              Proxy port, when needed. Default: 8080.
+
+       --proxy_username USERNAME
+              Username for proxy, if required.
+
+       --proxy_password PASSWORD
+              Password for proxy, if required.
+
+       --verbose, -v
+              Verbose. Show extra output. Useful for debugs.
+
+       URL    The site to spider.
+
+BUGS
+       Someone has reported that the spider misses some pages which are have querystrings on them. This issue isn't confirmed.
+
+SEE ALSO
+       fab-cewl(1)
+
+AUTHOR
+       The CeWL was written by Robin Wood <robin@digi.ninja>.
+
+       This manual page was written by Joao Eriberto Mota Filho <eriberto@debian.org> for the Debian project (but may be used by others).
+
+CEWL 5.2                                                             Aug 2016                                                              cewl(1)
