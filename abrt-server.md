@@ -1,0 +1,62 @@
+ABRT-SERVER(1)                                                                                   ABRT Manual                                                                                   ABRT-SERVER(1)
+
+
+
+NAME
+       abrt-server - Unix socket for ABRT.
+
+SYNOPSIS
+       abrt-server [-u UID] [-spv[v]...]
+
+DESCRIPTION
+       abrt-server is executed by abrtd daemon to handle socket connections. Every application in system is able to invoke creation of a new problem directory by following the communication protocol
+       (described below in section PROTOCOL).
+
+OPTIONS
+       -u UID
+           Use UID as client uid
+
+       -s
+           Log to system log.
+
+       -p
+           Add program names to log.
+
+       -v
+           Log more detailed debugging information.
+
+PROTOCOL
+       Initializing new dump: connect to UNIX domain socket /var/run/abrt.socket
+
+       Providing data (writting data to the socket):
+
+           -> "POST / HTTP/1.1\r\n"
+           -> "\r\n"
+           -> "type=string\0"
+              string, maximum length 100 bytes
+           -> "reason=string\0"
+              string, maximum length 512 bytes
+           -> "pid=number\0"
+              number, 0 - PID_MAX (/proc/sys/kernel/pid_max)
+           -> "executable=string\0"
+              string, maximum length ~MAX_PATH
+           -> "backtrace=string\0"
+              string, maximum length 1 MB
+           -> (close writing half of the socket)
+           <- "HTTP/1.1 201 \r\n"
+           <- "\r\n"
+
+       Deleting problem directory:
+
+           -> "DELETE <directory_name> HTTP/1.1\r\n"
+           -> "\r\n"
+           -> (close writing half of the socket)
+           <- "HTTP/1.1 200 \r\n"
+           <- "\r\n"
+
+AUTHORS
+       ·   ABRT team
+
+
+
+abrt 2.1.11                                                                                       08/12/2019                                                                                   ABRT-SERVER(1)

@@ -1,0 +1,19 @@
+INSTMODSH(1)                                                                         User Contributed Perl Documentation                                                                         INSTMODSH(1)
+
+
+
+NAME
+       instmodsh - A shell to examine installed modules
+
+SYNOPSIS
+           instmodsh
+
+DESCRIPTION
+       A little interface to ExtUtils::Installed to examine installed modules, validate your packlists and even create a tarball from an installed module.
+
+SEE ALSO
+       ExtUtils::Installed
+
+
+
+perl v5.16.3                                                                                      2013-06-14                                                                                     INSTMODSH(1)

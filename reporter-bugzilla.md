@@ -1,0 +1,189 @@
+REPORTER-BUGZILLA(1)                                                                           LIBREPORT MANUAL                                                                          REPORTER-BUGZILLA(1)
+
+
+
+NAME
+       reporter-bugzilla - Reports problem to Bugzilla.
+
+SYNOPSIS
+       reporter-bugzilla [-vbf] [-g GROUP]... [-c CONFFILE]... [-F FMTFILE] [-A FMTFILE2] -d DIR
+
+       Or:
+
+       reporter-bugzilla [-v] [-c CONFFILE]... [-d DIR] -t[ID] FILE...
+
+       Or:
+
+       reporter-bugzilla [-v] [-c CONFFILE]... [-d DIR] -t[ID] -w
+
+       Or:
+
+       reporter-bugzilla [-v] [-c CONFFILE]... -h DUPHASH
+
+DESCRIPTION
+       The tool reads problem directory DIR. Then it logs in to Bugzilla and tries to find a bug with the same abrt_hash:HEXSTRING in Whiteboard.
+
+       If such bug is not found, then a new bug is created. Elements of DIR are stored in the bug as part of bug description or as attachments, depending on their type and size.
+
+       Otherwise, if such bug is found and it is marked as CLOSED DUPLICATE, the tool follows the chain of duplicates until it finds a non-DUPLICATE bug. The tool adds a new comment to found bug.
+
+       The URL to new or modified bug is printed to stdout and recorded in reported_to element in DIR.
+
+       Option -t uploads FILEs to the already created bug on Bugzilla site. The bug ID is retrieved from directory specified by -d DIR. If problem data in DIR was never reported to Bugzilla, upload will
+       fail.
+
+       Option -tID uploads FILEs to the bug with specified ID on Bugzilla site. -d DIR is ignored.
+
+       Option -w adds bugzilla user to bug’s CC list.
+
+       Option -r sets the last url from reporter_to element which is prefixed with TRACKER_NAME to URL field. This option is applied only when a new bug is to be filed. The default value is ABRT Server"
+
+   Configuration file
+       If not specified, CONFFILE defaults to /etc/libreport/plugins/bugzilla.conf. Configuration file lines should have PARAM = VALUE format. The parameters are:
+
+       Login
+           Login to Bugzilla account.
+
+       Password
+           Password to Bugzilla account.
+
+       BugzillaURL
+           Bugzilla HTTP(S) address. (default: https://bugzilla.redhat.com)
+
+       SSLVerify
+           Use yes/true/on/1 to verify server’s SSL certificate. (default: yes)
+
+       Product
+           Product bug field value. Useful if you needed different product than specified in /etc/os-release
+
+       ProductVersion
+           Version bug field value. Useful if you needed different product version than specified in /etc/os-release
+
+       Parameters can be overridden via $Bugzilla_PARAM environment variables.
+
+   Formatting configuration files
+       Lines starting with # are ignored.
+
+       Lines can be continued on the next line using trailing backslash.
+
+       Format:
+
+       "%summary
+           summary format"
+
+       "section
+           element1[,element2]..." The literal text line to be added to Bugzilla comment. Can be empty. (Empty lines are NOT ignored!)
+
+               Summary format is a line of text, where %element% is replaced by
+               text element's content, and [[...%element%...]] block is used only if
+               %element% exists. [[...]] blocks can nest.
+
+               Sections can be:
+               - %summary: bug summary format string.
+               - %attach: a list of elements to attach.
+               - text, double colon (::) and the list of comma-separated elements.
+
+               Elements can be:
+               - problem directory element names, which get formatted as
+                 <element_name>: <contents>
+                 or
+                 <element_name>:
+                 :<contents>
+                 :<contents>
+                 :<contents>
+               - problem directory element names prefixed by "%bare_",
+                 which is formatted as-is, without "<element_name>:" and colons
+               - %oneline, %multiline, %text wildcards, which select all corresponding
+                 elements for output or attachment
+               - %binary wildcard, valid only for %attach section, instructs to attach
+                 binary elements
+               - problem directory element names prefixed by "-",
+                 which excludes given element from all wildcards
+
+               Nonexistent elements are silently ignored.
+               If none of elements exists, the section will not be created.
+
+   Integration with ABRT events
+       reporter-bugzilla can be used as an ABRT reporter. Example fragment for /etc/libreport/report_event.conf:
+
+           # Report Python crashes
+           EVENT=report_Bugzilla analyzer=Python
+                 reporter-bugzilla -d . -c /etc/libreport/plugins/bugzilla.conf
+
+OPTIONS
+       -d DIR
+           Path to problem directory.
+
+       -c CONFFILE
+           Path to configuration file.
+
+       -b
+           When creating bug, attach binary files too.
+
+       -f
+           Force reporting even if this problem is already reported.
+
+       -F CONF_FORMAT_FILE
+           Formatting file for initial comment. Default: /etc/libreport/plugins/bugzilla_format.conf
+
+       -A CONF_FORMAT_FILE
+           Formatting file for duplicates. Default: /etc/libreport/plugins/bugzilla_format.conf
+
+       -t[ID]
+           Upload FILEs to the already created bug on Bugzilla site.
+
+       -w
+           Add bugzilla user to CC list [of bug with this ID]. Applicable only with -t.
+
+       -h, --duphash DUPHASH
+           Search in Bugzilla by abrt’s DUPHASH and print BUG_ID.
+
+       -g, --group GROUP
+           When creating a new ticket restrict access to this group only.
+
+ENVIRONMENT VARIABLES
+       Environment variables take precedence over values provided in the configuration file.
+
+       Bugzilla_Login
+           Login to Bugzilla account.
+
+       Bugzilla_Password
+           Password to Bugzilla account.
+
+       Bugzilla_BugzillaURL
+           Bugzilla HTTP(S) address. (default: https://bugzilla.redhat.com)
+
+       Bugzilla_SSLVerify
+           Use yes/true/on/1 to verify server’s SSL certificate. (default: yes)
+
+       Bugzilla_Product
+           Product bug field value. Useful if you needed different product than specified in /etc/os-release
+
+       Bugzilla_ProductVersion
+           Version bug field value. Useful if you needed different product version than specified in /etc/os-release
+
+       http_proxy
+           the proxy server to use for HTTP
+
+       HTTPS_PROXY
+           the proxy server to use for HTTPS
+
+FILES
+       /usr/share/libreport/conf.d/plugins/bugzilla.conf
+           Readonly default configuration files.
+
+       /etc/libreport/plugins/bugzilla.conf
+           Configuration file.
+
+       /etc/libreport/plugins/bugzilla_format.conf
+           Configure formating for reporting.
+
+SEE ALSO
+       report_event.conf(5), bugzilla_format.conf(5)
+
+AUTHORS
+       ·   ABRT team
+
+
+
+LIBREPORT 2.1.11.1                                                                                08/12/2019                                                                             REPORTER-BUGZILLA(1)

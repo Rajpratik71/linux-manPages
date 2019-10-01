@@ -1,0 +1,69 @@
+IBV_UC_PINGPONG(1)                                                                              USER COMMANDS                                                                              IBV_UC_PINGPONG(1)
+
+
+
+NAME
+       ibv_uc_pingpong - simple InfiniBand UC transport test
+
+
+SYNOPSIS
+       ibv_uc_pingpong [-p port] [-d device] [-i ib port] [-s size] [-m size] [-r rx depth] [-n iters] [-l sl] [-e] [-g gid index] HOSTNAME
+
+       ibv_uc_pingpong [-p port] [-d device] [-i ib port] [-s size] [-m size] [-r rx depth] [-n iters] [-l sl] [-e] [-g gid index]
+
+
+DESCRIPTION
+       Run a simple ping-pong test over InfiniBand via the reliable connected (RC) transport.
+
+
+OPTIONS
+       -p, --port=PORT
+              use TCP port PORT for initial synchronization (default 18515)
+
+       -d, --ib-dev=DEVICE
+              use IB device DEVICE (default first device found)
+
+       -i, --ib-port=PORT
+              use IB port PORT (default port 1)
+
+       -s, --size=SIZE
+              ping-pong messages of size SIZE (default 4096)
+
+       -m, --mtu=SIZE
+              path MTU SIZE (default 1024)
+
+       -r, --rx-depth=DEPTH
+              post DEPTH receives at a time (default 1000)
+
+       -n, --iters=ITERS
+              perform ITERS message exchanges (default 1000)
+
+       -l, --sl=SL
+              use SL as the service level value of the QP (default 0)
+
+       -e, --events
+              sleep while waiting for work completion events (default is to poll for completions)
+
+       -g, --gid-idx=GIDINDEX
+              local port GIDINDEX
+
+       -c, --chk
+              validate received buffer
+
+
+SEE ALSO
+       ibv_rc_pingpong(1), ibv_ud_pingpong(1), ibv_srq_pingpong(1), ibv_xsrq_pingpong(1)
+
+
+AUTHORS
+       Roland Dreier
+              <rolandd@cisco.com>
+
+
+BUGS
+       The  network synchronization between client and server instances is weak, and does not prevent incompatible options from being used on the two instances.  The method used for retrieving work comple‐
+       tions is not strictly correct, and race conditions may cause failures on some systems.
+
+
+
+libibverbs                                                                                     August 30, 2005                                                                             IBV_UC_PINGPONG(1)
