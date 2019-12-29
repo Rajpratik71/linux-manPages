@@ -1,0 +1,27 @@
+REV(1)                                       User Commands                                      REV(1)
+
+NAME
+       rev - reverse lines characterwise
+
+SYNOPSIS
+       rev [option] [file...]
+
+DESCRIPTION
+       The  rev  utility copies the specified files to standard output, reversing the order of charac‐
+       ters in every line.  If no files are specified, standard input is read.
+
+OPTIONS
+       -V, --version
+              Display version information and exit.
+
+       -h, --help
+              Display help text and exit.
+
+SEE ALSO
+       tac(1)
+
+AVAILABILITY
+       The rev command is part of the util-linux package and is available from  Linux  Kernel  Archive
+       ⟨https://www.kernel.org/pub/linux/utils/util-linux/⟩.
+
+util-linux                                  September 2011                                      REV(1)

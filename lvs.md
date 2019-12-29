@@ -1,0 +1,331 @@
+LVS(8)                                  System Manager's Manual                                 LVS(8)
+
+NAME
+       lvs - Display information about logical volumes
+
+SYNOPSIS
+       lvs
+           [ option_args ]
+           [ position_args ]
+
+DESCRIPTION
+       lvs produces formatted output about LVs.
+
+USAGE
+       lvs
+           [ -H|--history ]
+           [ -a|--all ]
+           [ -o|--options String ]
+           [ -S|--select String ]
+           [ -O|--sort String ]
+           [    --segments ]
+           [    --aligned ]
+           [    --binary ]
+           [    --configreport log|vg|lv|pv|pvseg|seg ]
+           [    --foreign ]
+           [    --ignorelockingfailure ]
+           [    --logonly ]
+           [    --nameprefixes ]
+           [    --noheadings ]
+           [    --nosuffix ]
+           [    --readonly ]
+           [    --reportformat basic|json ]
+           [    --rows ]
+           [    --separator String ]
+           [    --shared ]
+           [    --trustcache ]
+           [    --unbuffered ]
+           [    --units r|R|h|H|b|B|s|S|k|K|m|M|g|G|t|T|p|P|e|E ]
+           [    --unquoted ]
+           [ COMMON_OPTIONS ]
+           [ VG|LV|Tag ... ]
+
+       Common options for lvm:
+           [ -d|--debug ]
+           [ -h|--help ]
+           [ -q|--quiet ]
+           [ -t|--test ]
+           [ -v|--verbose ]
+           [ -y|--yes ]
+           [    --commandprofile String ]
+           [    --config String ]
+           [    --driverloaded y|n ]
+           [    --lockopt String ]
+           [    --longhelp ]
+           [    --nolocking ]
+           [    --profile String ]
+           [    --version ]
+
+OPTIONS
+       --aligned
+              Use with --separator to align the output columns
+
+       -a|--all
+              Show information about internal LVs.  These are components of normal LVs, such as mir‐
+              rors, which are not independently accessible, e.g. not mountable.
+
+       --binary
+              Use binary values "0" or "1" instead of descriptive literal values for columns that have
+              exactly two valid values to report (not counting the "unknown" value which denotes that
+              the value could not be determined).
+
+       --commandprofile String
+              The command profile to use for command configuration.  See lvm.conf(5) for more informa‐
+              tion about profiles.
+
+       --config String
+              Config settings for the command. These override lvm.conf settings.  The String arg uses
+              the same format as lvm.conf, or may use section/field syntax.  See lvm.conf(5) for more
+              information about config.
+
+       --configreport log|vg|lv|pv|pvseg|seg
+              See lvmreport(7).
+
+       -d|--debug ...
+              Set debug level. Repeat from 1 to 6 times to increase the detail of messages sent to the
+              log file and/or syslog (if configured).
+
+       --driverloaded y|n
+              If set to no, the command will not attempt to use device-mapper.  For testing and debug‐
+              ging.
+
+       --foreign
+              Report/display foreign VGs that would otherwise be skipped.  See lvmsystemid(7) for more
+              information about foreign VGs.
+
+       -h|--help
+              Display help text.
+
+       -H|--history
+              Include historical LVs in the output.  (This has no effect unless LVs were removed while
+              lvm.conf metadata/record_lvs_history was enabled.
+
+       --ignorelockingfailure
+              Allows a command to continue with read-only metadata operations after locking failures.
+
+       --lockopt String
+              Used to pass options for special cases to lvmlockd.  See lvmlockd(8) for more informa‐
+              tion.
+
+       --logonly
+              Suppress command report and display only log report.
+
+       --longhelp
+              Display long help text.
+
+       --nameprefixes
+              Add an "LVM2_" prefix plus the field name to the output. Useful with --noheadings to
+              produce a list of field=value pairs that can be used to set environment variables (for
+              example, in udev rules).
+
+       --noheadings
+              Suppress the headings line that is normally the first line of output.  Useful if grep‐
+              ping the output.
+
+       --nolocking
+              Disable locking.
+
+       --nosuffix
+              Suppress the suffix on output sizes. Use with --units (except h and H) if processing the
+              output.
+
+       -o|--options String
+              Comma-separated, ordered list of fields to display in columns.  String arg syntax is:
+              [+|-|#]Field1[,Field2 ...]  The prefix + will append the specified fields to the default
+              fields, - will remove the specified fields from the default fields, and # will compact
+              specified fields (removing them when empty for all rows.)  Use -o help to view the list
+              of all available fields.  Use separate lists of fields to add, remove or compact by re‐
+              peating the -o option: -o+field1,field2 -o-field3,field4 -o#field5.  These lists are
+              evaluated from left to right.  Use field name lv_all to view all LV fields, vg_all all
+              VG fields, pv_all all PV fields, pvseg_all all PV segment fields, seg_all all LV segment
+              fields, and pvseg_all all PV segment columns.  See the lvm.conf report section for more
+              config options.  See lvmreport(7) for more information about reporting.
+
+       --profile String
+              An alias for --commandprofile or --metadataprofile, depending on the command.
+
+       -q|--quiet ...
+              Suppress output and log messages. Overrides --debug and --verbose.  Repeat once to also
+              suppress any prompts with answer 'no'.
+
+       --readonly
+              Run the command in a special read-only mode which will read on-disk metadata without
+              needing to take any locks. This can be used to peek inside metadata used by a virtual
+              machine image while the virtual machine is running. No attempt will be made to communi‐
+              cate with the device-mapper kernel driver, so this option is unable to report whether or
+              not LVs are actually in use.
+
+       --reportformat basic|json
+              Overrides current output format for reports which is defined globally by the report/out‐
+              put_format setting in lvm.conf.  basic is the original format with columns and rows.  If
+              there is more than one report per command, each report is prefixed with the report name
+              for identification. json produces report output in JSON format. See lvmreport(7) for
+              more information.
+
+       --rows
+              Output columns as rows.
+
+       --segments
+              Use default columns that emphasize segment information.
+
+       -S|--select String
+              Select objects for processing and reporting based on specified criteria.  The criteria
+              syntax is described by --select help and lvmreport(7).  For reporting commands, one row
+              is displayed for each object matching the criteria.  See --options help for selectable
+              object fields.  Rows can be displayed with an additional "selected" field (-o selected)
+              showing 1 if the row matches the selection and 0 otherwise.  For non-reporting commands
+              which process LVM entities, the selection is used to choose items to process.
+
+       --separator String
+              String to use to separate each column. Useful if grepping the output.
+
+       --shared
+              Report/display shared VGs that would otherwise be skipped when lvmlockd is not being
+              used on the host.  See lvmlockd(8) for more information about shared VGs.
+
+       -O|--sort String
+              Comma-separated ordered list of columns to sort by. Replaces the default selection. Pre‐
+              cede any column with - for a reverse sort on that column.
+
+       -t|--test
+              Run in test mode. Commands will not update metadata.  This is implemented by disabling
+              all metadata writing but nevertheless returning success to the calling function. This
+              may lead to unusual error messages in multi-stage operations if a tool relies on reading
+              back metadata it believes has changed but hasn't.
+
+       --trustcache
+              Avoids certain device scanning during command processing. Do not use.
+
+       --unbuffered
+              Produce output immediately without sorting or aligning the columns properly.
+
+       --units r|R|h|H|b|B|s|S|k|K|m|M|g|G|t|T|p|P|e|E
+              All sizes are output in these units: human-(r)eadable with '<' rounding indicator,
+              (h)uman-readable, (b)ytes, (s)ectors, (k)ilobytes, (m)egabytes, (g)igabytes, (t)er‐
+              abytes, (p)etabytes, (e)xabytes.  Capitalise to use multiples of 1000 (S.I.) instead of
+              1024.  Custom units can be specified, e.g. --units 3M.
+
+       --unquoted
+              When used with --nameprefixes, output values in the field=value pairs are not quoted.
+
+       -v|--verbose ...
+              Set verbose level. Repeat from 1 to 4 times to increase the detail of messages sent to
+              stdout and stderr.
+
+       --version
+              Display version information.
+
+       -y|--yes
+              Do not prompt for confirmation interactively but always assume the answer yes. Use with
+              extreme caution.  (For automatic no, see -qq.)
+
+VARIABLES
+       VG
+              Volume Group name.  See lvm(8) for valid names.
+
+       LV
+              Logical  Volume  name.   See lvm(8) for valid names.  An LV positional arg generally in‐
+              cludes the VG name and LV name, e.g. VG/LV.
+
+       Tag
+              Tag name.  See lvm(8) for information about tag names and using tags in place of  a  VG,
+              LV or PV.
+
+       String
+              See the option description for information about the string content.
+
+       Size[UNIT]
+              Size  is  an input number that accepts an optional unit.  Input units are always treated
+              as base two values, regardless of capitalization, e.g. 'k' and 'K' both refer  to  1024.
+              The default input unit is specified by letter, followed by |UNIT.  UNIT represents other
+              possible input units: bBsSkKmMgGtTpPeE.  b|B is bytes, s|S is sectors of 512 bytes,  k|K
+              is  kilobytes,  m|M  is megabytes, g|G is gigabytes, t|T is terabytes, p|P is petabytes,
+              e|E is exabytes.  (This should not be confused with the output  control  --units,  where
+              capital letters mean multiple of 1000.)
+
+ENVIRONMENT VARIABLES
+       See  lvm(8)  for information about environment variables used by lvm.  For example, LVM_VG_NAME
+       can generally be substituted for a required VG parameter.
+
+NOTES
+       The lv_attr bits are:
+
+       1  Volume type: (C)ache, (m)irrored, (M)irrored without initial sync, (o)rigin,  (O)rigin  with
+          merging  snapshot,  (r)aid,  (R)aid  without  initial  sync, (s)napshot, merging (S)napshot,
+          (p)vmove, (v)irtual, mirror or raid (i)mage, mirror  or  raid  (I)mage  out-of-sync,  mirror
+          (l)og device, under (c)onversion, thin (V)olume, (t)hin pool, (T)hin pool data, raid or pool
+          m(e)tadata or pool metadata spare.
+
+       2  Permissions: (w)riteable, (r)ead-only, (R)ead-only activation of non-read-only volume
+
+       3  Allocation policy:  (a)nywhere, (c)ontiguous, (i)nherited, c(l)ing, (n)ormal This  is  capi‐
+          talised if the volume is currently locked against allocation changes, for example during pv‐
+          move(8).
+
+       4  fixed (m)inor
+
+       5  State: (a)ctive, (h)istorical, (s)uspended, (I)nvalid snapshot,  invalid  (S)uspended  snap‐
+          shot,  snapshot  (m)erge  failed, suspended snapshot (M)erge failed, mapped (d)evice present
+          without tables, mapped device present with (i)nactive table, thin-pool (c)heck needed,  sus‐
+          pended thin-pool (C)heck needed, (X) unknown
+
+       6  device (o)pen, (X) unknown
+
+       7  Target  type:  (C)ache,  (m)irror,  (r)aid,  (s)napshot, (t)hin, (u)nknown, (v)irtual.  This
+          groups logical volumes related to the same kernel target together.  So, for example,  mirror
+          images, mirror logs as well as mirrors themselves appear as (m) if they use the original de‐
+          vice-mapper mirror kernel driver; whereas the raid equivalents  using  the  md  raid  kernel
+          driver  all appear as (r).  Snapshots using the original device-mapper driver appear as (s);
+          whereas snapshots of thin volumes using the new thin provisioning driver appear as (t).
+
+       8  Newly-allocated data blocks are overwritten with blocks of (z)eroes before use.
+
+       9  Volume Health, where there are currently three groups of attributes identified:
+
+          Common ones for all Logical Volumes: (p)artial, (X) unknown.
+          (p)artial signifies that one or more of the Physical Volumes this  Logical  Volume  uses  is
+          missing from the system. (X) unknown signifies the status is unknown.
+
+          Related to RAID Logical Volumes: (r)efresh needed, (m)ismatches exist, (w)ritemostly.
+          (r)efresh  signifies  that one or more of the Physical Volumes this RAID Logical Volume uses
+          had suffered a write error. The write error could be due to  a  temporary  failure  of  that
+          Physical  Volume or an indication that it is failing.  The device should be refreshed or re‐
+          placed. (m)ismatches signifies that the RAID logical volume has portions of the  array  that
+          are  not  coherent.   Inconsistencies are detected by initiating a "check" on a RAID logical
+          volume.  (The scrubbing operations, "check" and "repair", can be performed on a RAID logical
+          volume via the 'lvchange' command.)  (w)ritemostly signifies the devices in a RAID 1 logical
+          volume that have been marked write-mostly.  Re(s)haping signifies a RAID Logical  Volume  is
+          either  undergoing  a  stripe  addition/removal,  a  stripe  size  or RAID algorithm change.
+          (R)emove after reshape signifies freed striped raid images to be removed.
+
+          Related to Thin pool Logical Volumes: (F)ailed, out of (D)ata space, (M)etadata read only.
+          (F)ailed is set if thin pool encounters serious failures and hence no further I/O is permit‐
+          ted  at  all. The out of (D)ata space is set if thin pool has run out of data space. (M)eta‐
+          data read only signifies that thin pool encounters certain types of failures but it's  still
+          possible to do reads at least, but no metadata changes are allowed.
+
+          Related to Thin Logical Volumes: (F)ailed.
+          (F)ailed  is  set when related thin pool enters Failed state and no further I/O is permitted
+          at all.
+
+       10 s(k)ip activation: this volume is flagged to be skipped during activation.
+
+SEE ALSO
+       lvm(8) lvm.conf(5) lvmconfig(8)
+
+       pvchange(8) pvck(8) pvcreate(8) pvdisplay(8) pvmove(8) pvremove(8) pvresize(8) pvs(8) pvscan(8)
+
+       vgcfgbackup(8) vgcfgrestore(8) vgchange(8) vgck(8) vgcreate(8) vgconvert(8) vgdisplay(8)  vgex‐
+       port(8)  vgextend(8)  vgimport(8)  vgimportclone(8)  vgmerge(8)  vgmknodes(8) vgreduce(8) vgre‐
+       move(8) vgrename(8) vgs(8) vgscan(8) vgsplit(8)
+
+       lvcreate(8) lvchange(8) lvconvert(8) lvdisplay(8)  lvextend(8)  lvreduce(8)  lvremove(8)  lvre‐
+       name(8) lvresize(8) lvs(8) lvscan(8)
+
+       lvm-fullreport(8) lvm-lvpoll(8) lvm2-activation-generator(8) blkdeactivate(8) lvmdump(8)
+
+       dmeventd(8) lvmpolld(8) lvmlockd(8) lvmlockctl(8) cmirrord(8) lvmdbusd(8)
+
+       lvmsystemid(7) lvmreport(7) lvmraid(7) lvmthin(7) lvmcache(7)
+
+Red Hat, Inc.                      LVM TOOLS 2.03.02(2) (2018-12-18)                            LVS(8)

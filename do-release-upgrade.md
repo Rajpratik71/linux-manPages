@@ -1,0 +1,34 @@
+DO-RELEASE-UPGRADE(8)                                                            DO-RELEASE-UPGRADE(8)
+
+NAME
+       do-release-upgrade - upgrade operating system to latest release
+
+SYNOPSIS
+       do-release-upgrade [options]
+
+DESCRIPTION
+       Upgrade  the  operating  system  to the latest release from the command-line.  This is the pre‐
+       ferred command if the machine has no graphic environment or if the machine is  to  be  upgraded
+       over a remote connection.
+
+OPTIONS
+       -h, --help
+              show help message and exit
+
+       -d, --devel-release
+              If using the latest supported release, upgrade to the development release
+
+       -p, --proposed
+              Try upgrading to the latest release using the upgrader from Ubuntu-proposed
+
+       -m MODE, --mode=MODE
+              Run  in  a  special  upgrade mode. Currently "desktop" for regular upgrades of a desktop
+              system and "server" for server systems are supported.
+
+       -f FRONTEND, --frontend=FRONTEND
+              Run the specified frontend
+
+SEE ALSO
+       update-manager(8), apt-get(8)
+
+                                             October 2009                        DO-RELEASE-UPGRADE(8)
