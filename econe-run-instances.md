@@ -1,0 +1,47 @@
+ECONecone-run-instances(1) -- Runs an instance of a particular image (that needsECONE-RUN-INSTANCES(1)
+
+NAME
+       econe-run-instances - Runs an instance of a particular image (that needs to be referenced)
+
+SYNOPSIS
+       econe-run-instances OPTIONS IMAGE-ID
+
+       Runs  an  instance  of a particular image IMAGE-ID: The image identification as returned by the
+       econe-upload command
+
+OPTIONS
+        -v, --verbose             Verbose mode
+        -h, --help                Show this message
+        -V, --version             Show version and copyright information
+        -K, --access-key id       The username of the user
+        -S, --secret-key key      The sha1 hashed password of the user
+        -U, --url url             Set url as the web service url to use
+        -d, --user-data data      Specifies Base64-encoded MIME user data to be
+                                  made available to the instance
+        -n, --instance-count count The number of instances to launch. If OpenNebula
+                                  cannot launch the specified number of instances,
+                                  no instances will launch. If this is specified
+                                  as a range (min-max), OpenNebula will try to
+                                  launch the maximum number, but no fewer than the
+                                  minimum number.Example: -n 5-10
+        -t, --type type           OpenNebula template in which is based this
+                                  instance
+        -k, --keypair keypair     The name of the key pair.
+
+       image_id
+
+ARGUMENT FORMATS
+       •   file Path to a file
+
+       •   range List of id´s in the form 1,8..15
+
+       •   text String
+
+LICENSE
+       OpenNebula 4.12.3 Copyright 2002-2015, OpenNebula Project (OpenNebula.org), C12G Labs
+
+       Licensed under the Apache License, Version 2.0 (the "License"); you may not use this  file  ex‐
+       cept   in   compliance   with   the   License.  You  may  obtain  a  copy  of  the  License  at
+       http://www.apache.org/licenses/LICENSE-2.0
+
+                                              March 2015                        ECONE-RUN-INSTANCES(1)

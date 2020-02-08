@@ -1,0 +1,25 @@
+RMAIL(8)                                System Manager's Manual                               RMAIL(8)
+
+NAME
+       rmail - handle remote mail received via uucp
+
+SYNOPSIS
+       rmail user ...
+
+DESCRIPTION
+       Rmail interprets incoming mail received via uucp(1), collapsing ``From'' lines in the form gen‐
+       erated by mail.local(8) into a single line of the form ``return-path!sender'', and passing  the
+       processed mail on to sendmail(8).
+
+       Rmail is explicitly designed for use with uucp and sendmail.
+
+SEE ALSO
+       uucp(1), mail.local(8), sendmail(8)
+
+HISTORY
+       The rmail program appeared in 4.2BSD.
+
+BUGS
+       Rmail should not reside in /bin.
+
+                                     $Date: 2004/12/28 05:34:15 $                             RMAIL(8)
