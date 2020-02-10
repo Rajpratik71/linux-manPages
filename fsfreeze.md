@@ -1,0 +1,51 @@
+FSFREEZE(8)                                                                               System Administration                                                                               FSFREEZE(8)
+
+NAME
+       fsfreeze - suspend access to a filesystem (Ext3/4, ReiserFS, JFS, XFS)
+
+SYNOPSIS
+       fsfreeze --freeze|--unfreeze mountpoint
+
+DESCRIPTION
+       fsfreeze suspends or resumes access to a filesystem.
+
+       fsfreeze halts any new access to the filesystem and creates a stable image on disk.  fsfreeze is intended to be used with hardware RAID devices that support the creation of snapshots.
+
+       fsfreeze  is unnecessary for device-mapper devices.  The device-mapper (and LVM) automatically freezes a filesystem on the device when a snapshot creation is requested.  For more details see the
+       dmsetup(8) man page.
+
+       The mountpoint argument is the pathname of the directory where the filesystem is mounted.  The filesystem must be mounted to be frozen (see mount(8)).
+
+       Note that access-time updates are also suspended if the filesystem is mounted with the traditional atime behavior (mount option strictatime, for more details see mount(8)).
+
+OPTIONS
+       -f, --freeze
+              This option requests the specified a filesystem to be frozen from new modifications.  When this is selected, all ongoing transactions in the filesystem are allowed to complete, new  write
+              system calls are halted, other calls which modify the filesystem are halted, and all dirty data, metadata, and log information are written to disk.  Any process attempting to write to the
+              frozen filesystem will block waiting for the filesystem to be unfrozen.
+
+              Note that even after freezing, the on-disk filesystem can contain information on files that are still in the process of unlinking.  These files will not be unlinked until  the  filesystem
+              is unfrozen or a clean mount of the snapshot is complete.
+
+       -u, --unfreeze
+              This option is used to un-freeze the filesystem and allow operations to continue.  Any filesystem modifications that were blocked by the freeze are unblocked and allowed to complete.
+
+       -V, --version
+              Display version information and exit.
+
+       -h, --help
+              Display help text and exit.
+
+AUTHOR
+       Written by Hajime Taira.
+
+NOTES
+       This man page is based on xfs_freeze(8).
+
+SEE ALSO
+       mount(8)
+
+AVAILABILITY
+       The fsfreeze command is part of the util-linux package and is available from ftp://ftp.kernel.org/pub/linux/utils/util-linux/.
+
+util-linux                                                                                      July 2014                                                                                     FSFREEZE(8)

@@ -1,0 +1,111 @@
+LSLOGINS(1)                                                                                   User Commands                                                                                   LSLOGINS(1)
+
+NAME
+       lslogins - display information about known users in the system
+
+SYNOPSIS
+       lslogins [options] [-s|-u[=UID]] [-g groups] [-l logins]
+
+DESCRIPTION
+       Examine the wtmp and btmp logs, /etc/shadow (if necessary) and /etc/passwd and output the desired data.
+
+       The default action is to list info about all the users in the system.
+
+OPTIONS
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --acc-expiration
+              Display data about the date of last password change and the account expiration date (see shadow(5) for more info).  (Requires root privileges.)
+
+       --btmp-file path
+              Alternate path for btmp.
+
+       -c, --colon-separate
+              Separate info about each user with a colon instead of a newline.
+
+       -e, --export
+              Output data in the format of NAME=VALUE.
+
+       -f, --failed
+              Display data about the users' last failed login attempts.
+
+       -G, --supp-groups
+              Show information about groups.
+
+       -g, --groups=groups
+              Only show data of users belonging to groups.  More than one group may be specified; the list has to be comma-separated.
+
+       -h, --help
+              Display help information and exit.
+
+       -L, --last
+              Display data containing information about the users' last login sessions.
+
+       -l, --logins=logins
+              Only show data of users with a login specified in logins (user names or user IDS).  More than one login may be specified; the list has to be comma-separated.
+
+       -n, --newline
+              Display each piece of information on a separate line.
+
+       --noheadings
+              Do not print a header line.
+
+       --notruncate
+              Don't truncate output.
+
+       -o, --output list
+              Specify which output columns to print.  Use --help to get a list of all supported columns.
+
+       -p, --pwd
+              Display information related to login by password (see also -afL).
+
+       -r, --raw
+              Raw output (no columnation).
+
+       -s, --system-accs
+              Show system accounts.  These are by default all accounts with a UID below 1000 (non-inclusive), with the exception of either nobody or nfsnobody (UID 65534).  This hardcoded default maybe
+              overwritten by parameters SYS_UID_MIN and SYS_UID_MAX in the file /etc/login.defs.
+
+       --time-format type
+              Display dates in short, full or iso format.  The default is short, this time format is designed to be space efficient and human readable.
+
+       -u, --user-accs
+              Show user accounts.  These are by default all accounts with UID above 1000 (inclusive), with the exception of either nobody or nfsnobody (UID 65534).  This hardcoded default  maybe  over‐
+              written by parameters UID_MIN and UID_MAX in the file /etc/login.defs.
+
+       -V, --version
+              Display version information and exit.
+
+       --wtmp-file path
+              Alternate path for wtmp.
+
+       -Z, --context
+              Display the users' security context.
+
+       -z, --print0
+              Delimit user entries with a nul character, instead of a newline.
+
+NOTES
+       The default UID thresholds are read from /etc/login.defs.
+
+EXIT STATUS
+       0      if OK,
+
+       1      if incorrect arguments specified,
+
+       2      if a serious error occurs (e.g. a corrupt log).
+
+SEE ALSO
+       group(5), passwd(5), shadow(5), utmp(5)
+
+HISTORY
+       The lslogins utility is inspired by the logins utility, which first appeared in FreeBSD 4.10.
+
+AUTHORS
+       Ondrej Oprala ⟨ooprala@redhat.com⟩
+       Karel Zak ⟨kzak@redhat.com⟩
+
+AVAILABILITY
+       The lslogins command is part of the util-linux package and is available from Linux Kernel Archive ⟨ftp://ftp.kernel.org/pub/linux/utils/util-linux/⟩.
+
+util-linux                                                                                      April 2014                                                                                    LSLOGINS(1)

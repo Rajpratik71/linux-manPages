@@ -1,0 +1,118 @@
+UMOUNT(8)                                                                                 System Administration                                                                                 UMOUNT(8)
+
+NAME
+       umount - unmount file systems
+
+SYNOPSIS
+       umount -a [-dflnrv] [-t fstype] [-O option...]
+
+       umount [-dflnrv] {directory|device}...
+
+       umount -h|-V
+
+DESCRIPTION
+       The  umount  command  detaches  the mentioned file system(s) from the file hierarchy.  A file system is specified by giving the directory where it has been mounted.  Giving the special device on
+       which the file system lives may also work, but is obsolete, mainly because it will fail in case this device was mounted on more than one directory.
+
+       Note that a file system cannot be unmounted when it is 'busy' - for example, when there are open files on it, or when some process has its working directory there, or when a swap file on  it  is
+       in use.  The offending process could even be umount itself - it opens libc, and libc in its turn may open for example locale files.  A lazy unmount avoids this problem.
+
+OPTIONS
+       -a, --all
+              All of the filesystems described in /etc/mtab are unmounted, except the proc filesystem.
+
+       -A, --all-targets
+              Unmount  all  mountpoints  in the current namespace for the specified filesystem.  The filesystem can be specified by one of the mountpoints or the device name (or UUID, etc.).  When this
+              option is used together with --recursive, then all nested mounts within the filesystem are recursively unmounted.  This option is only supported on systems where /etc/mtab is a symlink to
+              /proc/mounts.
+
+       -c, --no-canonicalize
+              Do not canonicalize paths.  For more details about this option see the mount(8) man page.  Note that umount does not pass this option to the /sbin/umount.type helpers.
+
+       -d, --detach-loop
+              When the unmounted device was a loop device, also free this loop device.
+
+       --fake Causes  everything  to  be done except for the actual system call or umount helper execution; this 'fakes' unmounting the filesystem.  It can be used to remove entries from /etc/mtab that
+              were unmounted earlier with the -n option.
+
+       -f, --force
+              Force an unmount (in case of an unreachable NFS system).  (Requires kernel 2.1.116 or later.)
+
+       -i, --internal-only
+              Do not call the /sbin/umount.filesystem helper even if it exists.  By default such a helper program is called if it exists.
+
+       -l, --lazy
+              Lazy unmount.  Detach the filesystem from the file hierarchy now, and clean up all references to this filesystem as soon as it is not busy anymore.  (Requires kernel 2.4.11 or later.)
+
+       -n, --no-mtab
+              Unmount without writing in /etc/mtab.
+
+       -O, --test-opts option...
+              Unmount only the filesystems that have the specified option set in /etc/fstab.  More than one option may be specified in a comma-separated list.  Each option can be prefixed  with  no  to
+              indicate that no action should be taken for this option.
+
+       -R, --recursive
+              Recursively  unmount each specified directory.  Recursion for each directory will stop if any unmount operation in the chain fails for any reason.  The relationship between mountpoints is
+              determined by /proc/self/mountinfo entries.  The filesystem must be specified by mountpoint path; a recursive unmount by device name (or UUID) is unsupported.
+
+       -r, --read-only
+              When an unmount fails, try to remount the filesystem read-only.
+
+       -t, --types type...
+              Indicate that the actions should only be taken on filesystems of the specified type.  More than one type may be specified in a comma-separated list.  The list of filesystem types  can  be
+              prefixed with no to indicate that no action should be taken for all of the mentioned types.
+
+       -v, --verbose
+              Verbose mode.
+
+       -V, --version
+              Display version information and exit.
+
+       -h, --help
+              Display help text and exit.
+
+LOOP DEVICE
+       The  umount  command  will free the loop device associated with a mount when it finds the option loop=... in /etc/mtab, or when the -d option was given.  Any still associated loop devices can be
+       freed by using losetup -d; see losetup(8).
+
+EXTERNAL HELPERS
+       The syntax of external unmount helpers is:
+
+              umount.suffix {directory|device} [-flnrv] [-t type.subtype]
+
+       where suffix is the filesystem type (or the value from a uhelper= or helper= marker in the mtab file).  The -t option can be used for filesystems that have subtype support.  For example:
+
+              umount.fuse -t fuse.sshfs
+
+       A uhelper=something marker (unprivileged helper) can appear in the /etc/mtab file when ordinary users need to be able to unmount a mountpoint that is not defined in /etc/fstab (for example for a
+       device that was mounted by udisks(1)).
+
+       A helper=type marker in the mtab file will redirect all unmount requests to the /sbin/umount.type helper independently of UID.
+
+FILES
+       /etc/mtab
+              table of mounted filesystems
+
+       /etc/fstab
+              table of known filesystems
+
+ENVIRONMENT
+       LIBMOUNT_FSTAB=<path>
+              overrides the default location of the fstab file (ignored for suid)
+
+       LIBMOUNT_MTAB=<path>
+              overrides the default location of the mtab file (ignored for suid)
+
+       LIBMOUNT_DEBUG=all
+              enables libmount debug output
+
+SEE ALSO
+       umount(2), mount(8), losetup(8)
+
+HISTORY
+       A umount command appeared in Version 6 AT&T UNIX.
+
+AVAILABILITY
+       The umount command is part of the util-linux package and is available from Linux Kernel Archive ⟨ftp://ftp.kernel.org/pub/linux/utils/util-linux/⟩.
+
+util-linux                                                                                      July 2014                                                                                       UMOUNT(8)

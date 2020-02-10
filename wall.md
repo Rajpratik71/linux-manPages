@@ -1,0 +1,43 @@
+WALL(1)                                                                                       User Commands                                                                                       WALL(1)
+
+NAME
+       wall - write a message to all users
+
+SYNOPSIS
+       wall [-n] [-t timeout] [message | file]
+
+DESCRIPTION
+       wall displays a message, or the contents of a file, or otherwise its standard input, on the terminals of all currently logged in users.  The command will wrap lines that are longer than 79 char‐
+       acters.  Short lines are whitespace padded to have 79 characters.  The command will always put a carriage return and new line at the end of each line.
+
+       Only the superuser can write on the terminals of users who have chosen to deny messages or are using a program which automatically denies messages.
+
+       Reading from a file is refused when the invoker is not superuser and the program is suid or sgid.
+
+OPTIONS
+       -n, --nobanner
+              Suppress the banner.
+
+       -t, --timeout timeout
+              Abandon the write attempt to the terminals after timeout seconds.  This timeout must be a positive integer.  The default value is 300 seconds, which is a legacy from the time when  people
+              ran terminals over modem lines.
+
+       -V, --version
+              Display version information and exit.
+
+       -h, --help
+              Display help text and exit.
+
+NOTES
+       Some sessions, such as wdm, that have in the beginning of utmp(5) ut_type data a ':' character will not get the message from wall.  This is done to avoid write errors.
+
+SEE ALSO
+       mesg(1), talk(1), write(1), shutdown(8)
+
+HISTORY
+       A wall command appeared in Version 7 AT&T UNIX.
+
+AVAILABILITY
+       The wall command is part of the util-linux package and is available from Linux Kernel Archive ⟨ftp://ftp.kernel.org/pub/linux/utils/util-linux/⟩.
+
+util-linux                                                                                     August 2013                                                                                        WALL(1)

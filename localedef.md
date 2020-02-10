@@ -1,0 +1,189 @@
+LOCALEDEF(1)                                                                                Linux User Manual                                                                                LOCALEDEF(1)
+
+NAME
+       localedef - compile locale definition files
+
+SYNOPSIS
+       localedef [options] outputpath
+       localedef --list-archive [options]
+       localedef --delete-from-archive [options] localename ...
+       localedef --add-to-archive [options] compiledpath
+       localedef --version
+       localedef --help
+       localedef --usage
+
+DESCRIPTION
+       The localedef program reads the indicated charmap and input files, compiles them to a binary form quickly usable by the locale functions in the C library (setlocale(3), localeconv(3), etc.), and
+       places the output in outputpath.
+
+       The outputpath argument is interpreted as follows:
+
+       *  If outputpath contains a slash character ('/'), it is interpreted as the name of the directory where the output definitions are to be stored.  In this case, there is a  separate  output  file
+          for each locale category (LC_TIME, LC_NUMERIC, and so on).
+
+       *  If the --no-archive option is used, outputpath is the name of a subdirectory in /usr/lib/locale where per-category compiled files are placed.
+
+       *  Otherwise,  outputpath  is  the name of a locale and the compiled locale data is added to the archive file /usr/lib/locale/locale-archive.  A locale archive is a memory-mapped file which con‐
+          tains all the system-provided locales; it is used by all localized programs when the environment variable LOCPATH is not set.
+
+       In any case, localedef aborts if the directory in which it tries to write locale files has not already been created.
+
+       If no charmapfile is given, the value ANSI_X3.4-1968 (for ASCII) is used by default.  If no inputfile is given, or if it is given as a dash (-), localedef reads from standard input.
+
+OPTIONS
+   Operation-selection options
+       A few options direct localedef to do something other than compile locale definitions.  Only one of these options should be used at a time.
+
+       --delete-from-archive
+              Delete the named locales from the locale archive file.
+
+       --list-archive
+              List the locales contained in the locale archive file.
+
+       --add-to-archive
+              Add the compiledpath directories to the locale archive file.  The directories should have been created by previous runs of localedef, using --no-archive.
+
+   Other options
+       Some of the following options are only sensible for certain operations; generally, it should be self-evident which ones.
+
+       -f charmapfile, --charmap=charmapfile
+              Specify the file that defines the character set that is used by the input file.  If charmapfile contains a slash character ('/'), it is interpreted as the name of the character map.  Oth‐
+              erwise, the file is sought in the current directory and the default directory for character maps.  If the environment variable I18NPATH is set, $I18NPATH/charmaps/ and $I18NPATH/ are also
+              searched after the current directory.  The default directory for character maps is printed by localedef --help.
+
+       -i inputfile, --inputfile=inputfile
+              Specify the locale definition file to compile.  The file is sought in the current directory and the default directory for locale definition files.  If the environment variable I18NPATH is
+              set, $I18NPATH/locales/ and $I18NPATH are also searched after the current directory.  The default directory for locale definition files is printed by localedef --help.
+
+       -u repertoirefile, --repertoire-map=repertoirefile
+              Read mappings from symbolic names to Unicode code points from repertoirefile.  If repertoirefile contains a slash character ('/'), it is interpreted as the pathname of the repertoire map.
+              Otherwise, the file is sought in the current directory and the default directory for repertoire maps.  If the environment variable I18NPATH is set, $I18NPATH/repertoiremaps/ and $I18NPATH
+              are also searched after the current directory.  The default directory for repertoire maps is printed by localedef --help.
+
+       -A aliasfile, --alias-file=aliasfile
+              Use aliasfile to look up aliases for locale names.  There is no default aliases file.
+
+       --prefix=pathname
+              Set  the  prefix  to  be prepended to the full archive pathname.  By default, the prefix is empty.  Setting the prefix to foo, the archive would be placed in foo/usr/lib/locale/locale-ar‐
+              chive.
+
+       -c, --force
+              Write the output files even if warnings were generated about the input file.
+
+       --old-style
+              Create old-style hash tables instead of 3-level access tables.
+
+       -v, --verbose
+              Generate extra warnings about errors that are normally ignored.
+
+       --quiet
+              Suppress all notifications and warnings, and report only fatal errors.
+
+       --posix
+              Conform strictly to POSIX.  Implies --verbose.  This option currently has no other effect.  POSIX conformance is assumed if the environment variable POSIXLY_CORRECT is set.
+
+       --replace
+              Replace a locale in the locale archive file.  Without this option, if the locale is in the archive file already, an error occurs.
+
+       --no-archive
+              Do not use the locale archive file, instead create outputpath as a subdirectory in the same directory as the locale archive file, and create separate output files for locale categories in
+              it.
+
+       -?, --help
+              Print a usage summary and exit.  Also prints the default paths used by localedef.
+
+       --usage
+              Print a short usage summary and exit.
+
+       -V, --version
+              Print the version number, license, and disclaimer of warranty for localedef.
+
+EXIT STATUS
+       One of the following exit values can be returned by localedef:
+
+          0         Command completed successfully.
+
+          1         Warnings or errors occurred, output files were written.
+
+          4         Errors encountered, no output created.
+
+ENVIRONMENT
+       POSIXLY_CORRECT
+              The --posix flag is assumed if this environment variable is set.
+
+       I18NPATH
+              A colon-separated list of search directories for files.
+
+FILES
+       /usr/share/i18n/charmaps
+              Usual default character map path.
+
+       /usr/share/i18n/locales
+              Usual default path for locale definition files.
+
+       /usr/share/i18n/repertoiremaps
+              Usual default repertoire map path.
+
+       /usr/lib/locale/locale-archive
+              Usual default locale archive location.
+
+       /usr/lib/locale
+              Usual default path for compiled individual locale data files.
+
+       outputpath/LC_ADDRESS
+              An output file that contains information about formatting of addresses and geography-related items.
+
+       outputpath/LC_COLLATE
+              An output file that contains information about the rules for comparing strings.
+
+       outputpath/LC_CTYPE
+              An output file that contains information about character classes.
+
+       outputpath/LC_IDENTIFICATION
+              An output file that contains metadata about the locale.
+
+       outputpath/LC_MEASUREMENT
+              An output file that contains information about locale measurements (metric versus US customary).
+
+       outputpath/LC_MESSAGES/SYS_LC_MESSAGES
+              An output file that contains information about the language messages should be printed in, and what an affirmative or negative answer looks like.
+
+       outputpath/LC_MONETARY
+              An output file that contains information about formatting of monetary values.
+
+       outputpath/LC_NAME
+              An output file that contains information about salutations for persons.
+
+       outputpath/LC_NUMERIC
+              An output file that contains information about formatting of nonmonetary numeric values.
+
+       outputpath/LC_PAPER
+              An output file that contains information about settings related to standard paper size.
+
+       outputpath/LC_TELEPHONE
+              An output file that contains information about formats to be used with telephone services.
+
+       outputpath/LC_TIME
+              An output file that contains information about formatting of data and time values.
+
+CONFORMING TO
+       POSIX.1-2008.
+
+EXAMPLE
+       Compile the locale files for Finnish in the UTF-8 character set and add it to the default locale archive with the name fi_FI.UTF-8:
+
+              localedef -f UTF-8 -i fi_FI fi_FI.UTF-8
+
+       The  next example does the same thing, but generates files into the fi_FI.UTF-8 directory which can then be used by programs when the environment variable LOCPATH is set to the current directory
+       (note that the last argument must contain a slash):
+
+              localedef -f UTF-8 -i fi_FI ./fi_FI.UTF-8
+
+SEE ALSO
+       locale(1), charmap(5), locale(5), repertoiremap(5), locale(7)
+
+COLOPHON
+       This page is part of release 4.04 of the Linux man-pages project.  A description of the project, information about reporting bugs,  and  the  latest  version  of  this  page,  can  be  found  at
+       http://www.kernel.org/doc/man-pages/.
+
+Linux                                                                                           2014-12-31                                                                                   LOCALEDEF(1)

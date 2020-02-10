@@ -1,0 +1,16 @@
+PSFGETTABLE(1)                                                                           General Commands Manual                                                                           PSFGETTABLE(1)
+
+NAME
+       psfgettable - extract the embedded Unicode character table from a console font
+
+SYNOPSIS
+       psfgettable fontfile [outfile]
+
+DESCRIPTION
+       psfgettable  extracts the embedded Unicode character table from a .psf format console font into a human readable ASCII file of the format used by psfaddtable(1).  If the font file name is a sin‐
+       gle dash (-), the font is read from standard input.
+
+SEE ALSO
+       setfont(8), psfaddtable(1), psfstriptable(1), psfxtable(1)
+
+                                                                                               25 Oct 1994                                                                                 PSFGETTABLE(1)
