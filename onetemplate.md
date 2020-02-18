@@ -1,0 +1,153 @@
+ONETEMPLATE(1onetemplate(1) -- manages OpenNebula templateONETEMPLATE(1)
+
+NAME
+       onetemplate - manages OpenNebula templates
+
+SYNOPSIS
+       onetemplate command [args] [options]
+
+OPTIONS
+        --name name               Name of the new VM or TEMPLATE. When
+                                  instantiating multiple VMs you can use the "%i"
+                                  wildcard to produce different names such as
+                                  vm-0, vm-1...
+        --cpu cpu                 CPU percentage reserved for the VM (1=100% one
+                                  CPU)
+        --vcpu vcpu               Number of virtualized CPUs
+        --arch arch               Architecture of the VM, e.g.: i386 or x86_64
+        --memory memory           Memory amount given to the VM. By default the
+                                  unit is megabytes. To use gigabytes add a ´g´,
+                                  floats can be used: 8g=8192, 0.5g=512
+        --disk image0,image1      Disks to attach. To use an image owned by other
+                                  user use user[disk]
+        --nic network0,network1   Networks to attach. To use a network owned by
+                                  other user use user[network]
+        --raw string              Raw string to add to the template. Not to be
+                                  confused with the RAW attribute
+        --vnc                     Add VNC server to the VM
+        --vnc-password password   VNC password
+        --vnc-listen ip           VNC IP where to listen for connections. By
+                                  default is 0.0.0.0 (all interfaces).
+        --spice                   Add spice server to the VM
+        --spice-password password spice password
+        --spice-listen ip         spice IP where to listen for connections. By
+                                  default is 0.0.0.0 (all interfaces).
+        --ssh [file]              Add an ssh public key to the context. If the file
+                                  is omited then the user variable SSH_PUBLIC_KEY
+                                  will be used.
+        --net_context             Add network contextualization parameters
+        --context line1,line2,line3 Lines to add to the context section
+        --boot device             Select boot device (hd|fd|cdrom|network)
+        --files_ds file1,file2    Add files to the contextualization CD from
+                                  thefiles datastore
+        --init script1,script2    Script or scripts to start in context
+        --dry                     Just print the template
+        -m, --multiple x          Instance multiple VMs
+        --userdata userdata       Integrate userdata into the EC2 section
+        --hold                    Creates the new VM on hold state instead of
+                                  pending
+        -a, --append              Append new attributes to the current template
+        -l, --list x,y,z          Selects columns to display with list command
+        -d, --delay x             Sets the delay in seconds for top command
+        -f, --filter x,y,z        Filter data. An array is specified with
+                                  column=value pairs.
+        --csv                     Write table in csv format
+        -x, --xml                 Show the resource in xml format
+        -n, --numeric             Do not translate user and group IDs
+        --describe                Describe list columns
+        -v, --verbose             Verbose mode
+        -h, --help                Show this message
+        -V, --version             Show version and copyright information
+        --user name               User name used to connect to OpenNebula
+        --password password       Password to authenticate with OpenNebula
+        --endpoint endpoint       URL of OpenNebula xmlrpc frontend
+
+COMMANDS
+       ·   create  [file]  Creates  a  new  VM  Template  from the given
+           description
+
+           Examples:
+             - using a VM Template description file:
+
+               onetemplate create vm_description.tmpl
+
+             - new VM Template named "arch vm" with a disk and a nic:
+
+               onetemplate create --name "arch vm" --memory 128 --cpu 1 \
+                                  --disk arch --network private_lan
+
+             - using two disks:
+
+               onetempate create --name "test vm" --memory 128 --cpu 1 \
+                                 --disk arch,data
+           valid options: name, cpu, vcpu, arch, memory, disk, nic, raw, vnc, vnc_password, vnc_listen, spice, spice_password, spice_listen, ssh, net_context, context, boot, files_ds, init, dry
+
+       ·   clone templateid name Creates a new Template from an existing
+           one
+
+       ·   delete range|templateid_list Deletes the given Image
+
+       ·   instantiate  templateid [file] Creates a new VM instance from
+           the given Template. This VM can be managed with  the  ´onevm´
+           command.
+
+           The source Template can be modified adding or replacing attributes with
+           the optional file argument, or with the options.
+           valid options: name, multiple, userdata, hold, cpu, vcpu, arch, memory, disk, nic, raw, vnc, vnc_password, vnc_listen, spice, spice_password, spice_listen, ssh, net_context, context, boot, files_ds, init
+
+       ·   chgrp  range|templateid_list  groupid  Changes  the  Template
+           group
+
+       ·   chown range|templateid_list userid [groupid] Changes the Tem‐
+           plate owner and group
+
+       ·   chmod  range|templateid_list  octet Changes the Template per‐
+           missions
+
+       ·   update templateid [file] Update the template contents.  If  a
+           path  is  not  provided the editor will be launched to modify
+           the current content. valid options: append
+
+       ·   rename templateid name Renames the Template
+
+       ·   list [filterflag] Lists Templates in the pool valid  options:
+           list, delay, filter, csv, xml, numeric, describe
+
+       ·   show  templateid  Shows  information  for  the given Template
+           valid options: xml
+
+       ·   top [filterflag] Lists Templates continuously valid  options:
+           list, delay, filter, csv, xml, numeric, describe
+
+ARGUMENT FORMATS
+       ·   file Path to a file
+
+       ·   range List of id´s in the form 1,8..15
+
+       ·   text String
+
+       ·   groupid OpenNebula GROUP name or id
+
+       ·   userid OpenNebula USER name or id
+
+       ·   templateid OpenNebula VMTEMPLATE name or id
+
+       ·   templateid_list Comma-separated list of OpenNebula VMTEMPLATE
+           names or ids
+
+       ·   filterflag a, all all  the  known  VMTEMPLATEs  m,  mine  the
+           VMTEMPLATE  belonging to the user in ONE_AUTH g, group ´mine´
+           plus the VMTEMPLATE belonging to the groups the user is  mem‐
+           ber of uid VMTEMPLATE of the user identified by this uid user
+           VMTEMPLATE of the user identified by the username
+
+LICENSE
+       OpenNebula 4.12.3 Copyright 2002-2015, OpenNebula Project  (Open‐
+       Nebula.org), C12G Labs
+
+       Licensed  under  the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the  License.
+       You     may     obtain    a    copy    of    the    License    at
+       http://www.apache.org/licenses/LICENSE-2.0
+
+                               March 2015                 ONETEMPLATE(1)
