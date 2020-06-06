@@ -1,0 +1,31 @@
+RDMA_CLIENT(1)                                                                                    librdmacm                                                                                    RDMA_CLIENT(1)
+
+
+
+NAME
+       rdma_client - simple RDMA CM connection and ping-pong test.
+
+SYNOPSIS
+       rdma_client [-s server_address] [-p server_port]
+
+DESCRIPTION
+       Uses synchronous librdmam calls to establish an RDMA connection between two nodes.  This example is intended to provide a very simple coding example of how to use RDMA.
+
+OPTIONS
+       -s server_address
+              Specifies the address of the system that the rdma_server is running on.  By default, the client will attempt to connect to the server using 127.0.0.1.
+
+       -p server_port
+              Specifies the port number that the server listens on.  By default the server listens on port 7471.
+
+NOTES
+       Basic usage is to start rdma_server, then connect to the server using the rdma_client program.
+
+       Because this test maps RDMA resources to userspace, users must ensure that they have available system resources and permissions.  See the libibverbs README file for additional details.
+
+SEE ALSO
+       rdma_cm(7), udaddy(1), mckey(1), rping(1), rdma_server(1)
+
+
+
+librdmacm                                                                                         2010-07-19                                                                                   RDMA_CLIENT(1)

@@ -1,0 +1,43 @@
+ABRT-ACTION-GENERA(1)                                                                            ABRT Manual                                                                            ABRT-ACTION-GENERA(1)
+
+
+
+NAME
+       abrt-action-generate-core-backtrace - Generates coredump-level backtrace
+
+SYNOPSIS
+       abrt-action-generate-core-backtrace [-v] [-r] [-d DIR]
+
+DESCRIPTION
+       This tool uses coredump from the file coredump and binary at the path stored in file executable in the problem directory to generate coredump-level backtrace.
+
+       Coredump-level backtrace resembles ordinary backtrace in that it contains information about call frames present on the stack at the time of the crash. However, it only contains information that can
+       be obtained from the coredump without debugging symbols available - mainly relative addresses of the stored instruction pointers. Such backtrace can still be useful for reporting and reproducing the
+       bug and does not require debugging information files to be installed.
+
+       The result is saved in the problem directory in a file named core_backtrace.
+
+   Integration with libreport events
+       abrt-action-generate-core-backtrace can be used as an analyzer for application crashes which dump core.
+
+       Example usage in report_event.conf:
+
+           EVENT=analyze analyzer=CCpp
+                   abrt-action-generate-core-backtrace
+
+OPTIONS
+       -d DIR
+           Path to problem directory.
+
+       -r
+           Do not hash function fingerprints. Useful for debugging.
+
+       -v
+           Be more verbose. Can be given multiple times.
+
+AUTHORS
+       ·   ABRT team
+
+
+
+abrt 2.1.11                                                                                       08/12/2019                                                                            ABRT-ACTION-GENERA(1)
