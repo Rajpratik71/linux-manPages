@@ -1,0 +1,44 @@
+ABRT-DUMP-XORG(1)                                                                                ABRT Manual                                                                                ABRT-DUMP-XORG(1)
+
+
+
+NAME
+       abrt-dump-xorg - Extract Xorg crash from FILE (or standard input)
+
+SYNOPSIS
+       abrt-dump-xorg [-vsoxm] [-d DIR]/[-D] [FILE]
+
+DESCRIPTION
+       This tool creates problem directory from or prints Xorg crash extracted from FILE or standard input.
+
+OPTIONS
+       -v, --verbose
+           Be more verbose. Can be given multiple times.
+
+       -s
+           Log to syslog
+
+       -o
+           Print found crash data on standard output
+
+       -d DIR
+           Create new problem directory in DIR for every crash found
+
+       -D
+           Same as -d DumpLocation, DumpLocation is specified in abrt.conf
+
+       -x
+           Make the problem directory world readable. Usable only with -d/-D
+
+       -m
+           Print search string(s) for abrt-watch-log to stdout and exit
+
+SEE ALSO
+       abrt-watch-log(1), abrt.conf(5)
+
+AUTHORS
+       ·   ABRT team
+
+
+
+abrt 2.1.11                                                                                       08/12/2019                                                                                ABRT-DUMP-XORG(1)

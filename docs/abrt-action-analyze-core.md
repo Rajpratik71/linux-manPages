@@ -1,0 +1,32 @@
+ABRT-ACTION-ANALYZ(1)                                                                            ABRT Manual                                                                            ABRT-ACTION-ANALYZ(1)
+
+
+
+NAME
+       abrt-action-analyze-core - Extracts builds from a core dump
+
+SYNOPSIS
+       abrt-action-analyze-core [-v] [-o OUTFILE] -c COREFILE
+
+DESCRIPTION
+       The tool reads a core dump and extracts build ids of loaded modules and prints the list to the standard output if the OUTFILE file is not configured.
+
+OPTIONS
+       -c COREFILE
+           Path to a core dump.
+
+       -v
+           Be more verbose. Can be given multiple times.
+
+       -o OUTFILE
+           Output file
+
+       -h, --help
+           Prints help text
+
+AUTHORS
+       ·   ABRT team
+
+
+
+abrt 2.1.11                                                                                       08/12/2019                                                                            ABRT-ACTION-ANALYZ(1)

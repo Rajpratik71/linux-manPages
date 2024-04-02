@@ -1,0 +1,99 @@
+FCPING(8)                                                                                      Open-FCoE Tools                                                                                      FCPING(8)
+
+
+
+NAME
+       fcping - Fibre Channel Ping (ELS ECHO) tool
+
+SYNOPSIS
+       fcping [-fqx] [ -i interval ] [ -c count ] [ -s size ] -h source target
+
+       source = interface | MAC | WWPN | FC-ID
+
+       target = -P WWPN | -N WWPN | -F FC-ID
+
+DESCRIPTION
+       The  fcping  command  performs  the  Fibre  Channel  FC-LS-2  ECHO  ELS command and displays the reply. The max payload for fcping is 2108 bytes. When no -c is given, fcping will continue until user
+       interrupts.
+
+OPTIONS
+       -f
+           Flood ping
+
+       -q
+           Quiet! just print summary
+
+       -x
+           Hex dump of responses
+
+       -i interval
+           Wait interval seconds between each ping
+
+       -c count
+           Stop after sending count pings
+
+       -h source
+           Source is interface like ethX, MAC address, WWPN, or FC-ID
+
+       -s size
+           Byte-length of ping request payload (max 2108)
+
+       -F FC-ID
+           Destination port ID
+
+       -P WWPN
+           Destination world-wide port name
+
+       -N WWNN
+           Destination world-wide node name
+
+EXAMPLES
+       Sends ELS ECHO to Port FC-ID 0xbf0027 from interface n0.170 with max 3 pings.
+
+           fcping -c 3 -h n0.170 -F 0xbf0027
+
+           sending echo to 0xBF0027
+           echo    1 accepted                       16.170 ms
+           echo    2 accepted                        7.053 ms
+           echo    3 accepted                        6.803 ms
+           3 frames sent, 3 received 0 errors, 0.000% loss, avg. rt time 10.009 ms
+
+       Sends ELS ECHO to WWNN 0x1000001B213C9DDA from interface n0.170 with max 3 pings and payload size 1500 bytes
+
+           fcping -c 3 -h n0.170 -s 1500 -N 0x1000001B213C9DDA
+
+           sending echo to 0xBF0027
+           echo    1 accepted                        6.597 ms
+           echo    2 accepted                        6.925 ms
+           echo    3 accepted                       12.419 ms
+           3 frames sent, 3 received 0 errors, 0.000% loss, avg. rt time 8.647 ms
+
+       Sends ELS ECHO to WWNN 0x1000001B213C9DDA from interface n0.170 continuously with payload of 32 bytes and hex-dump the reply to the screen
+
+           fcping -x -h n0.170 -s 32 -N 0x1000001B213C9DDA
+
+           sending echo to 0xBF0027
+           echo    1 accepted                        6.937 ms
+           response length 32
+                0 02000000 00000001 00010203 04050607
+               10 08090a0b 0c0d0e0f 10111213 14151617
+
+           echo    2 accepted                        6.923 ms
+           response length 32
+                0 02000000 00000002 00010203 04050607
+               10 08090a0b 0c0d0e0f 10111213 14151617
+
+           echo    3 accepted                       84.929 ms
+           response length 32
+                0 02000000 00000003 00010203 04050607
+               10 08090a0b 0c0d0e0f 10111213 14151617
+
+SEE ALSO
+       fcoeadm(8)
+
+SUPPORT
+       fcping is part of the fcoe-utils package, maintained through the Open-FCoE project. Resources for both developers and users can be found at the Open-FCoE website http://open-fcoe.org/.
+
+
+
+Open-FCoE                                                                                         05/24/2011                                                                                        FCPING(8)

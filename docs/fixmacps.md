@@ -1,0 +1,29 @@
+FIXMACPS(1)                                                                                General Commands Manual                                                                                FIXMACPS(1)
+
+
+
+NAME
+       fixmacps - filter to fix Macintosh documents with saner version of md
+
+SYNOPSIS
+       fixmacps < Macintosh.ps > Fixed.ps
+
+DESCRIPTION
+       Fixmacps is a perl filter which "fixes" PostScript generated from a Macintosh PC that it works correctly with Angus Duggan's psutils package.
+
+FILES
+       /usr/share/psutils/md68_0.ps, /usr/share/psutils/md71_0.ps - sanitised versions of the md prologue.
+
+AUTHOR
+       Copyright (C) Angus J. C. Duggan 1991-1995
+
+SEE ALSO
+       psbook(1),  psselect(1),  pstops(1),  epsffit(1),  psnup(1),  psresize(1),  psmerge(1),  fixscribeps(1),  getafm(1),  fixdlsrps(1),  fixfmps(1),  fixmacps(1), fixpsditps(1), fixpspps(1), fixtpps(1),
+       fixwfwps(1), fixwpps(1), fixwwps(1), extractres(1), includeres(1)
+
+TRADEMARKS
+       PostScript is a trademark of Adobe Systems Incorporated.
+
+
+
+                                                                                       PSUtils Release 1 Patchlevel 17                                                                            FIXMACPS(1)

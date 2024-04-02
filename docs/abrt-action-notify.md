@@ -1,0 +1,57 @@
+ABRT-ACTION-NOTIFY(1)                                                                            ABRT Manual                                                                            ABRT-ACTION-NOTIFY(1)
+
+
+
+NAME
+       abrt-action-notify - Announces a new occurrence of problem via all accessible channels
+
+SYNOPSIS
+       abrt-action-notify [-h] -d PROBLEM_DIR [-v] [-a] [-e AUTOREPORTING_EVENT]
+
+DESCRIPTION
+       The current implementation emits a D-Bus signal on System bus in path /org/freedesktop/problems of org.freedesktop.problems interface for Crash member.
+
+   Integration with ABRT events
+       abrt-action-notify is used to notify new problems and consecutive occurrences of a single problem for all crash types.
+
+           EVENT=notify package!=
+               abrt-action-notify
+
+OPTIONS
+       -v, --verbose
+           Be verbose
+
+       -d, --problem-dir PROBLEM_DIR
+           Problem directory [Default: current directory]
+
+       -h, --help
+           Show help message
+
+       -a, --autoreporting
+           Force to run autoreporting event
+
+       -e, --autoreporting-event AUTOREPORTING_EVENT
+           Overwrite autoreporting event name
+
+ENVIRONMENT
+       ABRT_VERBOSE
+           ABRT verbosity level
+
+FILES
+       /etc/abrt/abrt.conf
+
+       AutoreportingEnabled
+           If enabled, abrt-action-notify runs AutoreportingEvent
+
+       AutoreportingEvent
+           Name of event to be run if autoreporting is enabled
+
+SEE ALSO
+       abrt.conf(5)
+
+AUTHORS
+       ·   ABRT team
+
+
+
+abrt 2.1.11                                                                                       08/12/2019                                                                            ABRT-ACTION-NOTIFY(1)

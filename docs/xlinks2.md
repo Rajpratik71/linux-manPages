@@ -1,0 +1,508 @@
+LINKS2(1)                                                     General Commands Manual                                                    LINKS2(1)
+
+NAME
+       links - lynx-like alternative character mode WWW browser
+
+SYNOPSIS
+       links2 [options] URL
+
+DESCRIPTION
+       links2  is  a text mode WWW browser with ncurses interface, supporting colors, correct table rendering, background downloading, menu driven
+       configuration interface and slim code.
+
+       Frames are supported. You can have different file formats associated with external viewers. mailto: and telnet: are supported via  external
+       clients.
+
+       links2 can handle local (file://) or remote (http:// or ftp://) URLs.
+
+OPTIONS
+       Most options can be set in the user interface or config file, so usually you do not need to care about them.
+
+       -help  Print a help screen
+
+       -version
+              Prints the links version number and exit.
+
+       -lookup <hostname>
+              Does name lookup, like command "host".
+
+       -g     Run  Links2 in graphics mode. If not given, Links2 will run in text mode.  Running in graphics mode means that Links2 will probe all
+              compiled‐in graphics devices and run on the first found. If none found, links2 will not run in graphics mode. This option works only
+              if ‐‐enable‐graphics was given to ./configure.
+
+       -no-g  Run in text mode (overrides previous -g).
+
+       -driver <driver name>
+              Graphics  driver  to  use.  Drivers are: x, svgalib, fb, directfb, pmshell, atheos.  List of drivers will be shown if you give it an
+              unknown driver.  Available drivers depend on your operating system and available libraries.
+
+       -mode <parameter>
+              Pass a parameter to the graphics driver. On SVGAlib, this is widthxheightxdepth, (where depth is 16, 256, 32K, 64K,  16M  or  16M32)
+              and defines the graphics mode, on X the format is WIDTHxHEIGHT and defines the window size.
+
+       -display <x-display>
+              Set Xwindow display.
+
+       -force-html
+              Treat files with unknown type as html rather than text.  (can be toggled with '\' key)
+
+       -source <url>
+              Write unformatted data stream to stdout.
+
+       -dump <url>
+              Write formatted document to stdout.
+
+       -width <number>
+              For dump, document will be formatted to this screen width (but it can still exceed it if lines can't be broken).
+
+       -codepage <codepage>
+              For dump, convert output to specified character set -- for example iso-8859-2, windows-1250.
+
+       -anonymous
+              Restrict  links  so that it can run on an anonymous account.  No local file browsing. No downloads. Executing of viewers is allowed,
+              but user can't add or modify entries in association table.
+
+       -no-connect
+              Runs links2 as a separate instance - instead of connecting to existing instance.
+
+       -download-dir <path>
+              Default download directory.  (default: actual dir)
+
+       -language <language>
+              Set user interface language.
+
+       -max-connections <max>
+              Maximum number of concurrent connections.  (default: 10)
+
+       -max-connections-to-host <max>
+              Maximum number of concurrent connection to a given host.  (default: 2)
+
+       -retries <retry>
+              Number of retries.  (default: 3)
+
+       -receive-timeout <sec>
+              Timeout on receive.  (default: 120)
+
+       -unrestartable-receive-timeout <sec>
+              Timeout on non restartable connections.  (default: 600)
+
+       -bind-address <ip address>
+              Use a specific local IP address.
+
+       -bind-address-ipv6 <ipv6 address>
+              Use a specific local IPv6 address.
+
+       -no-libevent
+              Don't use libevent library.
+
+       -no-openmp
+              Don't use OpenMP.
+
+       -async-dns <0>/<1>
+              Asynchronous DNS resolver on(1)/off(0).
+
+       -download-utime <0>/<1>
+              Set time of downloaded files to last modification time reported by server.
+
+       -format-cache-size <num>
+              Number of formatted document pages cached.  (default: 5)
+
+       -memory-cache-size <bytes>
+              Cache memory in bytes.  (default: 1048576)
+
+       -image-cache-size <bytes>
+              Cache memory in bytes.  (default: 1048576)
+
+       -font-cache-size <bytes>
+              Cache memory in bytes.  (default: 2097152)
+
+       -aggressive-cache <0>/<1>
+              Always cache everything regardless of server's caching recomendations.  Many servers deny caching  even  if  their  content  is  not
+              changing just to get more hits and more money from ads.
+
+       -address-preference <0>/<1>/<2>/<3>/<4>
+              (default 0) 0 - use system default.  1 - prefer IPv4.  2 - prefer IPv6.  3 - use only IPv4.  4 - use only IPv6.
+
+       -http-proxy <host:port>
+              Host and port number of the HTTP proxy, or blank.  (default: blank)
+
+       -ftp-proxy <host:port>
+              Host and port number of the FTP proxy, or blank.  (default: blank)
+
+       -https-proxy <host:port>
+              Host and port number of the HTTPS proxy, or blank.  (default: blank)
+
+       -socks-proxy <user@host:port>
+              Userid, host and port of Socks4a, or blank.  (default: blank)
+
+       -append-text-to-dns-lookups <text>
+              Append text to dns lookups. It is useful for specifying fixed tor exit node.  (default: blank)
+
+       -only-proxies <0>/<1>
+              "1" causes that Links won't initiate any non-proxy connection.  It is useful for anonymization with tor or similar networks.
+
+       -ssl.certificates <0>/<1>/<2>
+              (default 1) 0 - ignore invalid certificate.  1 - warn on invalid certificate.  2 - reject invalid certificate.
+
+       -ssl.client-cert-key <filename>
+              Name of the PEM encoded file with the user private key for client certificate authentication.
+
+       -ssl.client-cert-crt <filename>
+              Name of the PEM encoded file with the user certificate for client certificate authentication.
+
+       -ssl.client-cert-password <text>
+              Password for the user private key.
+
+       -http-bugs.http10 <0>/<1>
+              (default  0) "1" forces using only HTTP/1.0 protocol. (useful for buggy servers that claim to be HTTP/1.1 compliant but are not) "0"
+              enables using both HTTP/1.0 and HTTP/1.1.
+
+       -http-bugs.allow-blacklist <0>/<1>
+              (default 1) "1" defaults to using list of servers that have broken HTTP/1.1 support.  When links2 finds such server, it  will  retry
+              the request with HTTP/1.0.
+
+       -http-bugs.bug-302-redirect <0>/<1>
+              (default  1)  Process  302  redirect in a way that is incompatible with RFC1945 and RFC2068, but the same as Netscape and MSIE. Many
+              pages depend on it.
+
+       -http-bugs.bug-post-no-keepalive <0>/<1>
+              (default 0) No keepalive connection after post requests. For some buggy servers.
+
+       -http-bugs.bug-no-accept-charset <0>/<1>
+              (default 0) Do not send Accept-Charset field of HTTP header. Because it is too long  some  servers  will  deny  the  request.  Other
+              servers will convert content to plain ascii when Accept-Charset is missing.
+
+       -http-bugs.no-compression <0>/<1>
+              (default  0)  "1" causes that links won't advertise HTTP compression support (but it will still accept compressed data). Use it when
+              you communicate with server that has broken compression support.
+
+       -http-bugs.retry-internal-errors <0>/<1>
+              (default 0) Retry on internal server errors (50x).
+
+       -http.fake-firefox <0>/<1>
+              (default 0) Fake that the browser is Firefox in the HTTP header.
+
+       -http.do-not-track <0>/<1>
+              (default 0) Send "do not track" request in the HTTP header.
+
+       -http.referer <0>/<1>/<2>/<3>/<4>
+              (default 0) 0 - do not send referer.  1 - send the requested URL as referer.  2 - send fake referer.  3 - send real  referer.   4  -
+              send real referer only to the same server.
+
+       -http.fake-referer <string>
+              Fake referer value.
+
+       -http.fake-user-agent <string>
+              Fake user agent value.
+
+       -http.extra-header <string>
+              Extra string added to HTTP header.
+
+       -ftp.anonymous-password <string>
+              Password for anonymous ftp access.
+
+       -ftp.use-passive <0>/<1>
+              Use ftp PASV command to bypass firewalls.
+
+       -ftp.use-erpt-epsv <0>/<1>
+              Use EPRT and EPSV commands instead of PORT and PASV.
+
+       -ftp.fast <0>/<1>
+              Send  more  ftp  commands  simultaneously.  Faster  response when browsing ftp directories, but it is incompatible with RFC and some
+              servers don't like it.
+
+       -ftp.set-iptos <0>/<1>
+              Set IP Type-of-service to high throughput on ftp connections.
+
+       -smb.allow-hyperlinks-to-smb <0>/<1>
+              Allow hyperlinks to SMB protocol.  Disabling this improves security, because internet sites cannot exploit possible bugs in the  SMB
+              client.
+
+       -menu-font-size <size>
+              Size of font in menu.
+
+       -menu-background-color 0xRRGGBB
+              Set menu background color in graphics mode. RRGGBB are hex.
+
+       -menu-foreground-color 0xRRGGBB
+              Set menu foreground color in graphics mode. RRGGBB are hex.
+
+       -scroll-bar-area-color 0xRRGGBB
+              Set color of scroll bar area. RRGGBB are hex.
+
+       -scroll-bar-bar-color 0xRRGGBB
+              Set color of scroll bar. RRGGBB are hex.
+
+       -scroll-bar-frame-color 0xRRGGBB
+              Set color of scroll bar frame. RRGGBB are hex.
+
+       -bookmarks-file <file>
+              File to store bookmarks.
+
+       -bookmarks-codepage <codepage>
+              Character set of bookmarks file.
+
+       -save-url-history <0>/<1>
+              Save URL history on exit.
+
+       -display-red-gamma <fp-value>
+              Red gamma of display. (default 2.2)
+
+       -display-green-gamma <fp-value>
+              Green gamma of display. (default 2.2)
+
+       -display-blue-gamma <fp-value>
+              Blue gamma of display. (default 2.2)
+
+       -user-gamma <fp-value>
+              Additional gamma. (default 1)
+
+       -bfu-aspect <fp-value>
+              Display aspect ration.
+
+       -dither-letters <0>/<1>
+              Do letter dithering.
+
+       -dither-images <0>/<1>
+              Do image dithering.
+
+       -display-optimize <0>/<1>/<2>
+              Optimize for CRT (0), LCD RGB (1), LCD BGR (2).
+
+       -gamma-correction <0>/<1>/<2>
+              Type of gamma correction: (default 2) 0 - 8-bit (fast).  1 - 16-bit (slow).  2 - automatically detect according to speed of FPU.
+
+       -overwrite-instead-of-scroll <0>/<1>
+              Overwrite  the  screen instead of scrolling it (valid for svgalib and framebuffer).  Overwriting may or may not be faster, depending
+              on hardware.
+
+       -html-assume-codepage <codepage>
+              Use the given codepage when the webpage did not specify its codepage. (default: ISO 8859-1)
+
+       -html-hard-assume <0>/<1>
+              Use always character set from "-html-assume-codepage" no matter what server sent.
+
+       -html-tables <0>/<1>
+              Render tables. (0) causes tables being rendered like in lynx.
+
+       -html-frames <0>/<1>
+              Render frames. (0) causes frames  rendered like in lynx.
+
+       -html-break-long-lines <0>/<1>
+              Break long lines in <pre> sections.
+
+       -html-images <0>/<1>
+              Display links to unnamed images as [IMG]
+
+       -html-image-names <0>/<1>
+              Display filename of an image instead of [IMG].
+
+       -html-display-images <0>/<1>
+              Display images in graphics mode.
+
+       -html-image-scale <percent>
+              Scale images in graphics mode.
+
+       -html-bare-image-autoscale <0>/<1>
+              Autoscale images displayed in full screen.
+
+       -html-numbered-links <0>/<1>
+              Number links in text mode. Allow quick link selection by typing link number and enter.
+
+       -html-table-order <0>/<1>
+              In text mode, walk through table by rows (0) or columns (1).
+
+       -html-auto-refresh <0>/<1>
+              Process refresh to other page (1), or display link to that page (0).
+
+       -html-target-in-new-window <0>/<1>
+              Allow opening new windows from html.
+
+       -html-margin <number of spaces>
+              Margin in text mode.
+
+       -html-user-font-size <size>
+              Size of font on pages in graphics mode.
+
+       -html-t-text-color <0>-<15>
+              Text color in text mode.
+
+       -html-t-link-color <0>-<15>
+              Link color in text mode.
+
+       -html-t-background-color <0>-<7>
+              Background color in text mode.
+
+       -html-t-ignore-document-color <0>/<1>
+              Ignore colors specified in html document in text mode.
+
+       -html-g-text-color 0xRRGGBB
+              Text color in graphics mode.
+
+       -html-g-link-color 0xRRGGBB
+              Link color in graphics mode.
+
+       -html-g-background-color 0xRRGGBB
+              Background color in graphics mode.
+
+       -html-g-ignore-document-color <0>/<1>
+              Ignore colors specified in html document in graphics mode.
+
+       More options can be seen with links2 -h
+
+NAVIGATION KEYS
+       The keys you may use while navigating are
+
+       ESC    menu/escape
+
+       F9     menu
+
+       F10    file menu
+
+       TAB    next frame
+
+       PGDN   page down
+
+       Space  page down
+
+       PGUP   page up
+
+       b      page up
+
+       CursorDOWN
+              next link/down
+
+       CursorUP
+              prev link/up
+
+       INS    scroll up
+
+       ^P     scroll up
+
+       DEL    scroll down
+
+       ^N     scroll down
+
+       [      scroll left
+
+       ]      scroll right
+
+       HOME   home
+
+       END    end of page
+
+       CursorRIGHT
+              enter link/press button
+
+       ENTER  enter link/press button
+
+       CursorLEFT
+              go back
+
+       d      download link
+
+       /      search in the page
+
+       ?      search back in the page
+
+       n      find next match
+
+       N      find next match backwards
+
+       f      zoom actual frame
+
+       ^R     reload page
+
+       g      go to URL
+
+       G      edit the current URL and goto the result
+
+       ^G     edit the current link and goto the result
+
+       s      bookmark manager
+
+       q      quit, close window if more windows are open
+
+       Q      quit without asking
+
+       =      document information
+
+       \      toggle HTML source/rendered view
+
+EDITING KEYS
+       The following keys can be used while editing a line/jumping to a URL:
+
+       CursorRIGHT
+              move right
+
+       CursorLEFT
+              move left
+
+       HOME   jump at the beginning
+
+       ^A     jump at the beginning
+
+       END    jump at the end
+
+       ^E     jump at the end
+
+       ^X     cut to clipboard (text mode only)
+
+       ^B     copy to clipboard
+
+       ^INS   copy to clipboard
+
+       ^V     paste from clipboard (text mode only)
+
+       ENTER  enter line
+
+       BACKSPACE
+              delete back character
+
+       ^H     delete back character
+
+       DEL    delete character
+
+       ^D     delete character
+
+       ^U     delete from beginning of the line
+
+       ^K     delete to the end of the line
+
+       ^W     auto complete line
+
+FILES
+       ~/.links2/links.cfg
+              Per‐user configfile, automatically created by links2.
+
+PLATFORMS
+       links2 is known to work on Linux, FreeBSD, Solaris, IRIX, HPUX, Digital Unix, AIX, OS/2, BeOS and Win32.
+
+BUGS
+       Can't connect to some FTP servers (Novell, NT). Connection stays in "Request sent" state.
+
+       Frames don't work if there's more frames with same name. Turn them off in such case.
+
+       You can't upload large files; it takes _lots_ of memory.
+
+       You shouldn't press '^Z' when you are in a viewer
+
+       Please report any other bugs you find to Mikulas Patocka <mikulas@artax.karlin.mff.cuni.cz>
+
+LICENSE
+       links2 is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License  as  published  by  the
+       Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+AUTHOR
+       links2  was written by Mikulas Patocka, Karel 'Clock' Kulhavy, Petr 'Brain' Kulhavy, and Martin 'PerM' Pergel.  See file AUTHORS for a list
+       of people contributing to this project.
+
+       The homepage of links2 can be found at http://atrey.karlin.mff.cuni.cz/~clock/twibright/links
+
+       This manual page was written by Peter Gervai <grin@tolna.net>, using excerpts from a (yet?) unknown links2 fan  for  the  Debian  GNU/Linux
+       system (but may be used by others). Updated by Karel Kulhavy.
+
+SEE ALSO
+       lynx(1), w3m(1)
+
+                                                                     Aug, 2006                                                           LINKS2(1)

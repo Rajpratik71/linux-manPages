@@ -1,0 +1,281 @@
+
+GCLOUD(1)                               General Commands Manual                              GCLOUD(1)
+
+NAME
+       gcloud - manage Google Cloud Platform resources and developer workflow
+
+SYNOPSIS
+       gcloud  GROUP  |  COMMAND [--account=ACCOUNT] [--billing-project=BILLING_PROJECT] [--configura‐
+              tion=CONFIGURATION]  [--flags-file=YAML_FILE]  [--flatten=[KEY,...]]   [--format=FORMAT]
+              [--help] [--project=PROJECT_ID] [--quiet, -q] [--verbosity=VERBOSITY; default="warning"]
+              [--version, -v] [-h] [--impersonate-service-account=SERVICE_ACCOUNT_EMAIL]  [--log-http]
+              [--trace-token=TRACE_TOKEN] [--no-user-output-enabled]
+
+DESCRIPTION
+       The  gcloud  CLI  manages authentication, local configuration, developer workflow, and interac‐
+       tions with the Google Cloud Platform APIs.
+
+GLOBAL FLAGS
+         --account=ACCOUNT
+           Google Cloud Platform user account to use for invocation. Overrides  the  default  core/ac‐
+           count property value for this command invocation.
+
+         --billing-project=BILLING_PROJECT
+           The  Google  Cloud  Platform project that will be charged quota for operations performed in
+           gcloud. If you need to operate on one project, but need quota against a different  project,
+           you  can  use  this  flag to specify the billing project. If both billing/quota_project and
+           --billing-project are specified, --billing-project takes precedence. Run  $  gcloud  config
+           set --help to see more information about billing/quota_project.
+
+         --configuration=CONFIGURATION
+           The  configuration  to  use for this command invocation. For more information on how to use
+           configurations, run: gcloud topic configurations. You can also use the CLOUDSDK_ACTIVE_CON‐
+           FIG_NAME environment variable to set the equivalent of this flag for a terminal session.
+
+         --flags-file=YAML_FILE
+           A  YAML  or JSON file that specifies a --flag:value dictionary.  Useful for specifying com‐
+           plex flag values with special characters that work with any command interpreter.  Addition‐
+           ally,  each  --flags-file  arg  is  replaced  by  its constituent flags. See $ gcloud topic
+           flags-file for more information.
+
+         --flatten=[KEY,...]
+           Flatten name[] output resource slices in KEY into separate records for each  item  in  each
+           slice.  Multiple keys and slices may be specified. This also flattens keys for --format and
+           --filter. For example, --flatten=abc.def flattens abc.def[].ghi references to  abc.def.ghi.
+           A  resource  record  containing  abc.def[]  with N elements will expand to N records in the
+           flattened output. This flag interacts with other flags that  are  applied  in  this  order:
+           --flatten, --sort-by, --filter, --limit.
+
+         --format=FORMAT
+           Set the format for printing command output resources. The default is a command-specific hu‐
+           man-friendly output format. The supported formats are: config, csv, default, diff, disable,
+           flattened, get, json, list, multi, none, object, table, text, value, yaml. For more details
+           run $ gcloud topic formats.
+
+         --help
+           Display detailed help.
+
+         --project=PROJECT_ID
+           The Google Cloud Platform project name to use for this invocation.  If  omitted,  then  the
+           current  project  is  assumed;  the  current project can be listed using gcloud config list
+           --format='text(core.project)' and can be set using gcloud config set project PROJECTID.
+
+           --project and its fallback core/project property play two roles in the invocation. It spec‐
+           ifies  the project of the resource to operate on. It also specifies the project for API en‐
+           ablement check, quota, and billing. To specify a different project for quota  and  billing,
+           use --billing-project or billing/quota_project property.
+
+         --quiet, -q
+           Disable  all  interactive  prompts  when running gcloud commands. If input is required, de‐
+           faults will be used, or an error will be raised. Overrides the default core/disable_prompts
+           property  value  for this command invocation. This is equivalent to setting the environment
+           variable CLOUDSDK_CORE_DISABLE_PROMPTS to 1.
+
+         --verbosity=VERBOSITY; default="warning"
+           Override the default verbosity for this command. Overrides the default core/verbosity prop‐
+           erty value for this command invocation. VERBOSITY must be one of: debug, info, warning, er‐
+           ror, critical, none.
+
+         --version, -v
+           Print version information and exit. This flag is only available at the global level.
+
+         -h
+           Print a summary help and exit.
+
+OTHER FLAGS
+         --impersonate-service-account=SERVICE_ACCOUNT_EMAIL
+           For this gcloud invocation, all API requests will be made as the given service account  in‐
+           stead  of the currently selected account. This is done without needing to create, download,
+           and activate a key for the account. In order to perform operations as the service  account,
+           your  currently  selected  account  must  have an IAM role that includes the iam.serviceAc‐
+           counts.getAccessToken permission for the service account.  The  roles/iam.serviceAccountTo‐
+           kenCreator  role has this permission or you may create a custom role. Overrides the default
+           auth/impersonate_service_account property value for this command invocation.
+
+         --log-http
+           Log all HTTP server requests and responses to stderr. Overrides the  default  core/log_http
+           property value for this command invocation.
+
+         --trace-token=TRACE_TOKEN
+           Token  used to route traces of service requests for investigation of issues.  Overrides the
+           default core/trace_token property value for this command invocation.
+
+         --user-output-enabled
+           Print user intended output to the console. Overrides the  default  core/user_output_enabled
+           property value for this command invocation. Use --no-user-output-enabled to disable.
+
+GROUPS
+       GROUP is one of the following:
+
+         access-context-manager
+           Manage Access Context Manager resources.
+
+         active-directory
+           Manage Managed Microsoft AD resources.
+
+         ai-platform
+           Manage AI Platform jobs and models.
+
+         alpha
+           (ALPHA) Alpha versions of gcloud commands.
+
+         app
+           Manage your App Engine deployments.
+
+         asset
+           Manage the Cloud Asset Inventory.
+
+         auth
+           Manage oauth2 credentials for the Google Cloud SDK.
+
+         beta
+           (BETA) Beta versions of gcloud commands.
+
+         bigtable
+           Manage your Cloud Bigtable storage.
+
+         builds
+           Create and manage builds for Google Cloud Build.
+
+         components
+           List, install, update, or remove Google Cloud SDK components.
+
+         composer
+           Create and manage Cloud Composer Environments.
+
+         compute
+           Create and manipulate Google Compute Engine resources.
+
+         config
+           View and edit Cloud SDK properties.
+
+         container
+           Deploy and manage clusters of machines for running containers.
+
+         dataflow
+           Manage Google Cloud Dataflow resources.
+
+         dataproc
+           Create and manage Google Cloud Dataproc clusters and jobs.
+
+         datastore
+           Manage your Cloud Datastore resources.
+
+         debug
+           Commands for interacting with the Cloud Debugger.
+
+         deployment-manager
+           Manage deployments of cloud resources.
+
+         dns
+           Manage your Cloud DNS managed-zones and record-sets.
+
+         domains
+           Manage domains for your Google Cloud projects.
+
+         endpoints
+           Create, enable and manage API services.
+
+         filestore
+           Create and manipulate Cloud Filestore resources.
+
+         firebase
+           Work with Google Firebase.
+
+         firestore
+           Manage your Cloud Firestore resources.
+
+         functions
+           Manage Google Cloud Functions.
+
+         iam
+           Manage IAM service accounts and keys.
+
+         iap
+           Manage IAP policies.
+
+         iot
+           Manage Cloud IoT resources.
+
+         kms
+           Manage cryptographic keys in the cloud.
+
+         logging
+           Manage Stackdriver Logging.
+
+         ml
+           Use Google Cloud machine learning capabilities.
+
+         ml-engine
+           Manage AI Platform jobs and models.
+
+         organizations
+           Create and manage Google Cloud Platform Organizations.
+
+         policy-troubleshoot
+           Troubleshoot Google Cloud Platform policies.
+
+         projects
+           Create and manage project access policies.
+
+         pubsub
+           Manage Cloud Pub/Sub topics, subscriptions, and snapshots.
+
+         recommender
+           Manage Cloud recommendations and recommendation rules.
+
+         redis
+           Manage Cloud Memorystore Redis resources.
+
+         resource-manager
+           Manage Cloud Resources.
+
+         run
+           Manage your Cloud Run applications.
+
+         scheduler
+           Manage Cloud Scheduler jobs and schedules.
+
+         services
+           List, enable and disable APIs and services.
+
+         source
+           Cloud git repository commands.
+
+         spanner
+           Command groups for Cloud Spanner.
+
+         sql
+           Create and manage Google Cloud SQL databases.
+
+         tasks
+           Manage Cloud Tasks queues and tasks.
+
+         topic
+           gcloud supplementary help.
+
+COMMANDS
+       COMMAND is one of the following:
+
+         docker
+           (DEPRECATED) Enable Docker CLI access to Google Container Registry.
+
+         feedback
+           Provide feedback to the Google Cloud SDK team.
+
+         help
+           Search gcloud help text.
+
+         info
+           Display information about the current gcloud environment.
+
+         init
+           Initialize or reinitialize gcloud.
+
+         survey
+           Invoke a customer satisfaction survey for Cloud SDK.
+
+         version
+           Print version information for Cloud SDK components.
+
+                                                                                             GCLOUD(1)

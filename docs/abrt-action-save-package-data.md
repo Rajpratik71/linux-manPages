@@ -1,0 +1,42 @@
+ABRT-ACTION-SAVE-(1)                                                                             ABRT Manual                                                                             ABRT-ACTION-SAVE-(1)
+
+
+
+NAME
+       abrt-action-save-package-data - Query package database and save package and component name.
+
+SYNOPSIS
+       abrt-action-save-package-data [-v] [-c CONFFILE] -d DIR
+
+DESCRIPTION
+       The tool reads problem directory DIR. It analyzes contents of analyzer, executable, cmdline and remote elements, checks database of installed packages, and creates new elements package and
+       component.
+
+       This data is usually necessary if the problem will be reported to a bug tracking database.
+
+   Integration with ABRT events
+       This tool can be used as an ABRT reporter. Example fragment for /etc/libreport/report_event.conf:
+
+           # Determine in which package/component the crash happened (if not yet done):
+           EVENT=post-create component=
+                   abrt-action-save-package-data
+
+OPTIONS
+       -v, --verbose
+           Be verbose
+
+       -c CONFFILE
+           Path to configuration file.
+
+       -d DIR
+           Path to problem directory.
+
+SEE ALSO
+       abrt_event.conf(5), abrt-action-save-package-data.conf(5)
+
+AUTHORS
+       ·   ABRT team
+
+
+
+abrt 2.1.11                                                                                       08/12/2019                                                                             ABRT-ACTION-SAVE-(1)

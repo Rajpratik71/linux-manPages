@@ -1,0 +1,158 @@
+SIEVE(1)                                     User Commands                                    SIEVE(1)
+
+NAME
+       sieve - a mail filtering tool.
+
+SYNOPSIS
+       sieve [OPTION...] SCRIPT
+
+DESCRIPTION
+       GNU sieve -- a mail filtering tool.
+
+       -c, --[no-]compile-only
+              compile script and exit
+
+       -D, --dump
+              compile script, dump disassembled sieve code to terminal and exit
+
+       -d, --debug[=FLAGS]
+              debug flags (defaults to "TPt")
+
+       -E, --[no-]expression
+              treat SCRIPT as Sieve program text
+
+       -e, --email=ADDRESS
+              override user email address
+
+       --environment=NAME=VALUE
+              set sieve environment value
+
+       -f, --mbox-url=MBOX
+              mailbox to sieve (defaults to user's mail spool)
+
+       -k, --[no-]keep-going
+              keep on going if execution fails on a message
+
+       --line-info=BOOL
+              print source location along with action logs (default)
+
+       -n, --[no-]dry-run, --no-actions
+              do not execute any actions, just print what would be done
+
+       --no-program-name
+              do not prefix diagnostic messages with the program name
+
+       -t, --ticket=TICKET
+              ticket file for user authentication
+
+       -v, --[no-]verbose
+              log all actions
+
+              Global debugging settings
+
+       --debug-level=LEVEL
+              set Mailutils debugging level
+
+       --[no-]debug-line-info show source info with debugging messages
+
+       --log-facility=FACILITY
+              output logs to syslog FACILITY
+
+       -M, --mailer=MAILER
+              use specified URL as the default mailer
+
+              Sieve options
+
+       --clear-include-path
+              clear Sieve include path
+
+       --clear-library-path, --clearpath
+              clear Sieve library path
+
+       -I, --includedir=DIR
+              append DIR to the list of directories searched for include files
+
+       -L, --libdir=DIR
+              append DIR to the list of directories searched for library files
+
+       --libdir-prefix=DIR
+              add DIR to the beginning of the list of directories searched for library files
+
+              Configuration handling
+
+       --config-file=FILE
+              load this configuration file; implies --no-config
+
+       --config-lint
+              check configuration file syntax and exit
+
+       --config-verbose
+              verbosely log parsing of the configuration files
+
+       --no-config
+              do not load site and user configuration files
+
+       --no-site-config
+              do not load site-wide configuration file
+
+       --no-user-config
+              do not load user configuration file
+
+       --set=PARAM=VALUE
+              set configuration parameter
+
+              Informational options
+
+       --config-help
+              show configuration file summary
+
+       --show-config-options
+              show compilation options
+
+       -?, --help
+              give this help list
+
+       --usage
+              give a short usage message
+
+       -V, --version
+              print program version
+
+       Mandatory  or  optional arguments to long options are also mandatory or optional for any corre‐
+       sponding short options.
+
+       Sieve-specific debug levels:
+
+       trace1  -  print parse tree before optimization trace2  -  print parse tree after  optimization
+       trace3   -   print  parser  traces  trace4  -  print tests and actions being executed trace9  -
+       print each Sieve instruction being executed
+
+       Compatibility debug flags: g -  main  parser  traces  T  -  mailutils  traces  (same  as  --de‐
+       bug-level=sieve.trace0-trace1)  P  -  network protocols (same as --debug-level=sieve.=prot) t -
+       sieve trace (same as --debug-level=sieve.=trace4) i - sieve instructions trace (same  as  --de‐
+       bug-level=sieve.=trace9)
+
+REPORTING BUGS
+       Report bugs to <bug-mailutils@gnu.org>.
+       GNU Mailutils home page: <http://mailutils.org>
+       General help using GNU software: <http://www.gnu.org/gethelp/>
+
+COPYRIGHT
+       Copyright  ©  2007-2017  Free  Software  Foundation, inc.  License GPLv3+: GNU GPL version 3 or
+       later <http://gnu.org/licenses/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is  NO  WARRANTY,  to
+       the extent permitted by law.
+
+SEE ALSO
+       The  complete  GNU mailutils documentation is maintained as a Texinfo manual. If the mailutils-
+       doc package is installed, the command
+
+              info mailutils
+
+       should give you access to the complete manual.
+       You can also find this manual online in the GNU mailutils webpage:
+       https://www.gnu.org/software/mailutils/manual/index.html.
+       Please note this manpage was automatically generated by the Debian mailutils packagers. Do  not
+       file bugs for its content to the GNU Mailutils upstream authors.
+
+FSF                                          November 2017                                    SIEVE(1)

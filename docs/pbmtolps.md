@@ -1,0 +1,30 @@
+Pbmtolps User Manual(0)                                                                                                                                                               Pbmtolps User Manual(0)
+
+
+
+NAME
+       pbmtolps - convert PBM image to PostScript
+
+
+SYNOPSIS
+       pbmtolps [-dpi n] [pbmfile]
+
+
+DESCRIPTION
+       This program is part of Netpbm(1)
+
+       pbmtolps reads a PBM image as input and outputs PostScript.  The output Postscript uses lines instead of the image operator to generate a (device dependent) picture which will be imaged much faster.
+
+       The Postscript path length is constrained to be less that 1000 points so that no limits are overrun on the Apple Laserwriter and (presumably) no other printers.
+
+
+SEE ALSO
+       pnmtops(1) , pstopnm(1) , pbmtoepsi(1) , psidtopgm(1) , gs, pbm(5) ,
+
+
+AUTHOR
+       George Phillips <phillips@cs.ubc.ca>
+
+
+
+netpbm documentation                                                                             12 Dec 1990                                                                          Pbmtolps User Manual(0)

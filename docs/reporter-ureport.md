@@ -1,0 +1,153 @@
+REPORTER-UREPORT(1)                                                                            LIBREPORT MANUAL                                                                           REPORTER-UREPORT(1)
+
+
+
+NAME
+       reporter-ureport - Reports ABRT problems in format of micro report
+
+SYNOPSIS
+       reporter-ureport [-v] [-c CONFFILE] [-u URL] [-k] [-A -a bthash -B -b bug-id -E -e email -l DATA -L FIELD -T TYPE -r RESULT_TYPE] [-d DIR]
+
+DESCRIPTION
+       The tool reads problem directory DIR, assembles an micro report from the loaded problem data and sends the micro report to uReport server for updating statistics and fast analysis. The results of
+       the analysis are stored in problem data in form of problems elements. reporter-ureport updates reported_to
+
+   Configuration file
+       If not specified, CONFFILE defaults to /etc/libreport/plugins/ureport.conf. Configuration file lines should have PARAM = VALUE format. The parameters are:
+
+       URL
+           Base sever HTTP(S) address.
+
+       SSLVerify
+           Use no/false/off/0 to disable verification of server’s SSL certificate. (default: yes)
+
+       SSLClientAuth
+           If this option is set, client-side SSL certificate is used to authenticate to the server so that it knows which machine it came from. Assigning any value to this option changes the default value
+           of IncludeAuthData to yes.
+
+               Possible values are:
+
+           rhsm
+               Uses the system V3 entitlement certificate that is used for Red Hat subscription management.
+
+           puppet
+               Uses the certificate that is used by the Puppet configuration management tool.
+
+           <cert_path>:<key_path>
+               Manually supply paths to certificate and the corresponding key in PEM format.
+
+       HTTPAuth
+           Use the configured values to as HTTP Basic Authentication credentials. Assigning any value to this option changes the default value of IncludeAuthData to yes.
+
+       Possible values are
+
+           rhts-credentials
+               Uses Login= and Password= values from /etc/libreport/plugins/rhtsupport.conf.
+
+           <user_name>:<password>
+               Manually supply credentials.
+
+       ContactEmail
+           Email address attached to a bthash on the server.
+
+       IncludeAuthData
+           If this option is set to yes, uploaded uReport will contain auth object consisting from key value pairs made from CSV list stored in AuthDataItems option. Keys are file names and values are
+           bites of these files.
+
+               The default value is no, unless you set SSLClientAuth to some value. In that
+               case, the default value is yes.
+
+       AuthDataItems
+           CSV list of files included in the auth uReport object.
+
+       Parameters can be overridden via $uReport_PARAM environment variables.
+
+OPTIONS
+       -c FILE
+           Path to configuration file
+
+       -a, --attach BTHASH
+           bthash of uReport to attach (conflicts with -A)
+
+       -A, --attach-rt
+           Attach to a bthash from reported_to (conflicts with -a)
+
+       -b, --bug-id NUM
+           Attach RHBZ bug (requires -a)
+
+       -B, --bug-id-rt
+           Attach last RHBZ bug from reported_to (requires -a|-A, conflicts with -b)
+
+       -e, --email EMAIL
+           Contact e-mail address (requires -a|-A, conflicts with -E)
+
+       -E, --email-env
+           Contact e-mail address from environment (requires -a|-A, conflicts with -e)
+
+       -d, --problem-dir DIR
+           Path to problem directory.
+
+       -k, --insecure
+           Allow insecure connection to ureport server
+
+       -t, --auth SOURCE
+           Enables client authentication. See SSLClientAuth configuration file option for list of possible values.
+
+       -h, --http-auth CREDENTIALS
+           Enables client authentication via HTTP Authentication. See HTTPAuth configuration file option for list of possible values.
+
+       -v
+           Be more verbose. Can be given multiple times.
+
+       -u, --url URL
+           Specify server URL
+
+       -i AUTH_DATA_ITEMS
+           List of dump dir files included in the auth uReport object.
+
+       -l DATA
+           Attach DATA (requires -T and -a|-A)
+
+       -L REPORT_RESULT_FILED
+           Attach the value of REPORT_RESULT_FILED member of the last report result indentified by REPORT_RESULT_TYPE passed with -r option (requires -r, -T and -a|-A).
+
+       -T ATTACHMENT_TYPE
+           Specifies the attachment type when attaching an arbitrary data to BTHASH (takes effect only with -l or -L)
+
+       -r REPORT_RESULT_TYP
+           Used to single out report results (reported_to file lines) when attaching an arbitrary data to BTHASH (takes effect only with -L)
+
+ENVIRONMENT VARIABLES
+       Environment variables take precedence over values provided in the configuration file.
+
+       uReport_URL
+           Base sever HTTP(S) address.
+
+       uReport_SSLVerify
+           Use yes/true/on/1 to verify server’s SSL certificate. (default: yes)
+
+       uReport_ContactEmail
+           Email address attached to a bthash on the server.
+
+       uReport_IncludeAuthData
+           See IncludeAuthData configuration option for details.
+
+       uReport_AuthDataItems
+           See AuthDataItems configuration option for details.
+
+FILES
+       /usr/share/libreport/conf.d/plugins/ureport.conf
+           Readonly default configuration files.
+
+       /etc/libreport/plugins/ureport.conf
+           Configuration file.
+
+SEE ALSO
+       ureport.conf(5)
+
+AUTHORS
+       ·   ABRT team
+
+
+
+LIBREPORT 2.1.11.1                                                                                08/12/2019                                                                              REPORTER-UREPORT(1)

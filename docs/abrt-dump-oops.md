@@ -1,0 +1,54 @@
+ABRT-DUMP-OOPS(1)                                                                                ABRT Manual                                                                                ABRT-DUMP-OOPS(1)
+
+
+
+NAME
+       abrt-dump-oops - Extract oops from FILE (or standard input)
+
+SYNOPSIS
+       abrt-dump-oops [-vusoxtm] [-d DIR]/[-D] [FILE]
+
+DESCRIPTION
+       This tool creates problem directory from, updates problem directory with or prints oops extracted from FILE or standard input.
+
+FILES
+       /etc/abrt/plugins/oops.conf
+           Configuration file where user can disable detection of non-fatal MCEs
+
+OPTIONS
+       -v, --verbose
+           Be more verbose. Can be given multiple times.
+
+       -s
+           Log to syslog
+
+       -o
+           Print found oopses on standard output
+
+       -d DIR
+           Create new problem directory in DIR for every oops found
+
+       -D
+           Same as -d DumpLocation, DumpLocation is specified in abrt.conf
+
+       -u PROBLEM
+           Save the extracted information in PROBLEM directory
+
+       -x
+           Make the problem directory world readable. Usable only with -d/-D
+
+       -t
+           Throttle problem directory creation to 1 per second
+
+       -m
+           Print search string(s) for abrt-watch-log to stdout and exit
+
+SEE ALSO
+       abrt-watch-log(1), abrt.conf(5)
+
+AUTHORS
+       ·   ABRT team
+
+
+
+abrt 2.1.11                                                                                       08/12/2019                                                                                ABRT-DUMP-OOPS(1)
