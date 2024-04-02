@@ -13,3 +13,5 @@ for i in `ls /usr/local/bin`; do man $i > docs/"$i".md; done
 find . -type f -size 0 | while read file; do rm "$file"; done
 
 git status --porcelain | grep '^??' | cut -c4- | xargs git add
+
+git reset --hard
