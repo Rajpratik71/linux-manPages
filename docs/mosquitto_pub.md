@@ -1,0 +1,346 @@
+MOSQUITTO_PUB(1)                                                     Commands                                                     MOSQUITTO_PUB(1)
+
+NAME
+       mosquitto_pub - an MQTT version 5/3.1.1/3.1 client for publishing simple messages
+
+SYNOPSIS
+       mosquitto_pub {[-h hostname] [-p port-number] [-u username] [-P password] -t message-topic...  | -L URL} [-A bind-address] [-c] [-d]
+                     [-D command identifier value] [-i client-id] [-I client-id-prefix] [-k keepalive-time] [-q message-QoS] [--quiet] [-r]
+                     [--repeat count] [--repeat-delay seconds] [-S] {-f file | -l | -m message | -n | -s}
+                     [--will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain]]
+                     [[{--cafile file | --capath dir} [--cert file] [--key file] [--ciphers ciphers] [--tls-version version] [--tls-alpn protocol] [--tls-engine engine] [--keyform {pem | engine}] [--tls-engine-kpass-sha1 kpass-sha1] [--insecure]]
+                     | [--psk hex-key --psk-identity identity [--ciphers ciphers] [--tls-version version]]] [--proxy socks-url]
+                     [-V protocol-version]
+
+       mosquitto_pub [--help]
+
+DESCRIPTION
+       mosquitto_pub is a simple MQTT version 5/3.1.1 client that will publish a single message on a topic and exit.
+
+ENCRYPTED CONNECTIONS
+       mosquitto_pub supports TLS encrypted connections. It is strongly recommended that you use an encrypted connection for anything more than
+       the most basic setup.
+
+       To enable TLS connections when using x509 certificates, one of either --cafile or --capath must be provided as an option.
+
+       To enable TLS connections when using TLS-PSK, you must use the --psk and the --psk-identity options.
+
+OPTIONS
+       The options below may be given on the command line, but may also be placed in a config file located at $XDG_CONFIG_HOME/mosquitto_pub or
+       $HOME/.config/mosquitto_pub with one pair of -option value per line. The values in the config file will be used as defaults and can be
+       overridden by using the command line. The exceptions to this are the message type options, of which only one can be specified. Note also
+       that currently some options cannot be negated, e.g.  -S. Config file lines that have a # as the first character are treated as comments and
+       not processed any further.
+
+       -A
+           Bind the outgoing connection to a local ip address/hostname. Use this argument if you need to restrict network communication to a
+           particular interface.
+
+       -c, --disable-clean-session
+           Disable the 'clean session' flag. This means that all of the subscriptions for the client will be maintained after it disconnects,
+           along with subsequent QoS 1 and QoS 2 messages that arrive. When the client reconnects, it will receive all of the queued messages.
+
+           If using this option, the client id must be set manually with --id
+
+       --cafile
+           Define the path to a file containing PEM encoded CA certificates that are trusted. Used to enable SSL communication.
+
+           See also --capath
+
+       --capath
+           Define the path to a directory containing PEM encoded CA certificates that are trusted. Used to enable SSL communication.
+
+           For --capath to work correctly, the certificate files must have ".crt" as the file ending and you must run "openssl rehash <path to
+           capath>" each time you add/remove a certificate.
+
+           See also --cafile
+
+       --cert
+           Define the path to a file containing a PEM encoded certificate for this client, if required by the server.
+
+           See also --key.
+
+       --ciphers
+           An openssl compatible list of TLS ciphers to support in the client. See ciphers(1) for more information.
+
+       -d, --debug
+           Enable debug messages.
+
+       -D, --property
+           Use an MQTT v5 property with this publish. If you use this option, the client will be set to be an MQTT v5 client. This option has two
+           forms:
+
+           -D command identifier value
+
+           -D command identifier name value
+
+           command is the MQTT command/packet identifier and can be one of CONNECT, PUBLISH, PUBREL, DISCONNECT, AUTH, or WILL. The properties
+           available for each command are listed in the Properties section.
+
+           identifier is the name of the property to add. This is as described in the specification, but with '-' as a word separator. For
+           example: payload-format-indicator. More details are in the Properties section.
+
+           value is the value of the property to add, with a data type that is property specific.
+
+           name is only used for the user-property property as the first of the two strings in the string pair. In that case, value is the second
+           of the strings in the pair.
+
+       -f, --file
+           Send the contents of a file as the message.
+
+       --help
+           Display usage information.
+
+       -h, --host
+           Specify the host to connect to. Defaults to localhost.
+
+       -i, --id
+           The id to use for this client. If not given, a client id will be generated depending on the MQTT version being used. For v3.1.1/v3.1,
+           the client generates a client id in the format mosq-XXXXXXXXXXXXXXXXXX, where the X are replaced with random alphanumeric characters.
+           For v5.0, the client sends a zero length client id, and the server will generate a client id for the client.
+
+           This option cannot be used at the same time as the --id-prefix argument.
+
+       -I, --id-prefix
+           Provide a prefix that the client id will be built from by appending the process id of the client. This is useful where the broker is
+           using the clientid_prefixes option. Cannot be used at the same time as the --id argument.
+
+       --insecure
+           When using certificate based encryption, this option disables verification of the server hostname in the server certificate. This can
+           be useful when testing initial server configurations but makes it possible for a malicious third party to impersonate your server
+           through DNS spoofing, for example. Use this option in testing only. If you need to resort to using this option in a production
+           environment, your setup is at fault and there is no point using encryption.
+
+       -k, --keepalive
+           The number of seconds between sending PING commands to the broker for the purposes of informing it we are still connected and
+           functioning. Defaults to 60 seconds.
+
+       --key
+           Define the path to a file containing a PEM encoded private key for this client, if required by the server.
+
+           See also --cert.
+
+       --keyform
+           Specifies the type of private key in use when making TLS connections.. This can be "pem" or "engine". This parameter is useful when a
+           TPM module is being used and the private key has been created with it. Defaults to "pem", which means normal private key files are
+           used.
+
+           See also --tls-engine.
+
+       -L, --url
+           Specify specify user, password, hostname, port and topic at once as a URL. The URL must be in the form:
+           mqtt(s)://[username[:password]@]host[:port]/topic
+
+           If the scheme is mqtt:// then the port defaults to 1883. If the scheme is mqtts:// then the port defaults to 8883.
+
+       -l, --stdin-line
+           Send messages read from stdin, splitting separate lines into separate messages.
+
+       -m, --message
+           Send a single message from the command line.
+
+       -n, --null-message
+           Send a null (zero length) message.
+
+       -p, --port
+           Connect to the port specified. If not given, the default of 1883 for plain MQTT or 8883 for MQTT over TLS will be used.
+
+       -P, --pw
+           Provide a password to be used for authenticating with the broker. Using this argument without also specifying a username is invalid
+           when using MQTT v3.1 or v3.1.1. See also the --username option.
+
+       --proxy
+           Specify a SOCKS5 proxy to connect through. "None" and "username" authentication types are supported. The socks-url must be of the form
+           socks5h://[username[:password]@]host[:port]. The protocol prefix socks5h means that hostnames are resolved by the proxy. The symbols
+           %25, %3A and %40 are URL decoded into %, : and @ respectively, if present in the username or password.
+
+           If username is not given, then no authentication is attempted. If the port is not given, then the default of 1080 is used.
+
+           More SOCKS versions may be available in the future, depending on demand, and will use different protocol prefixes as described in
+           curl(1).
+
+       --psk
+           Provide the hexadecimal (no leading 0x) pre-shared-key matching the one used on the broker to use TLS-PSK encryption support.
+           --psk-identity must also be provided to enable TLS-PSK.
+
+       --psk-identity
+           The client identity to use with TLS-PSK support. This may be used instead of a username if the broker is configured to do so.
+
+       -q, --qos
+           Specify the quality of service to use for the message, from 0, 1 and 2. Defaults to 0.
+
+       --quiet
+           If this argument is given, no runtime errors will be printed. This excludes any error messages given in case of invalid user input
+           (e.g. using --port without a port).
+
+       -r, --retain
+           If retain is given, the message will be retained as a "last known good" value on the broker. See mqtt(7) for more information.
+
+       --repeat
+           If the publish mode is-m, -f, or -s (i.e. the modes where only a single message is sent), then --repeat can be used to specify that the
+           message will be published multiple times.
+
+           See also --repeat-delay.
+
+       --repeat-delay
+           If using --repeat, then the default behaviour is to publish repeated messages as soon as the previous message is delivered. Use
+           --repeat-delay to specify the number of seconds to wait after the previous message was delivered before publishing the next. Does not
+           need to be an integer number of seconds.
+
+           Note that there is no guarantee as to the actual interval between messages, this option simply defines the minimum time from delivery
+           of one message to the start of the publish of the next.
+
+       -s, --stdin-file
+           Send a message read from stdin, sending the entire content as a single message.
+
+       -S
+           Use SRV lookups to determine which host to connect to. Performs lookups to _mqtt._tcp.<host> when used in conjunction with -h,
+           otherwise uses _mqtt._tcp.<local dns domain>.
+
+       -t, --topic
+           The MQTT topic on which to publish the message. See mqtt(7) for more information on MQTT topics.
+
+       --tls-alpn
+           Provide a protocol to use when connecting to a broker that has multiple protocols available on a single port, e.g. MQTT and WebSockets.
+
+       --tls-engine
+           A valid openssl engine id. These can be listed with openssl engine command.
+
+           See also --keyform.
+
+       --tls-engine-kpass-sha1
+           SHA1 of the private key password when using an TLS engine. Some TLS engines such as the TPM engine may require the use of a password in
+           order to be accessed. This option allows a hex encoded SHA1 hash of the password to the engine directly, instead of the user being
+           prompted for the password.
+
+           See also --tls-engine.
+
+       --tls-version
+           Choose which TLS protocol version to use when communicating with the broker. Valid options are tlsv1.3, tlsv1.2 and tlsv1.1. The
+           default value is tlsv1.2. Must match the protocol version used by the broker.
+
+       -u, --username
+           Provide a username to be used for authenticating with the broker. See also the --pw argument.
+
+       -V, --protocol-version
+           Specify which version of the MQTT protocol should be used when connecting to the rmeote broker. Can be 5, 311, 31, or the more verbose
+           mqttv5, mqttv311, or mqttv31. Defaults to 311.
+
+       --will-payload
+           Specify a message that will be stored by the broker and sent out if this client disconnects unexpectedly. This must be used in
+           conjunction with --will-topic.
+
+       --will-qos
+           The QoS to use for the Will. Defaults to 0. This must be used in conjunction with --will-topic.
+
+       --will-retain
+           If given, if the client disconnects unexpectedly the message sent out will be treated as a retained message. This must be used in
+           conjunction with --will-topic.
+
+       --will-topic
+           The topic on which to send a Will, in the event that the client disconnects unexpectedly.
+
+WILLS
+       mosquitto_sub can register a message with the broker that will be sent out if it disconnects unexpectedly. See mqtt(7) for more
+       information.
+
+       The minimum requirement for this is to use --will-topic to specify which topic the will should be sent out on. This will result in a
+       non-retained, zero length message with QoS 0.
+
+       Use the --will-retain, --will-payload and --will-qos arguments to modify the other will parameters.
+
+PROPERTIES
+       The -D / --property option allows adding properties to different stages of the mosquitto_pub run. The properties supported for each command
+       are as follows:
+
+   Connect
+       •   authentication-data (binary data - note treated as a string in mosquitto_pub)
+
+       •   authentication-method (UTF-8 string pair)
+
+       •   maximum-packet-size (32-bit unsigned integer)
+
+       •   receive-maximum (16-bit unsigned integer)
+
+       •   request-problem-information (8-bit unsigned integer)
+
+       •   request-response-information (8-bit unsigned integer)
+
+       •   session-expiry-interval (32-bit unsigned integer)
+
+       •   topic-alias-maximum (16-bit unsigned integer)
+
+       •   user-property (UTF-8 string pair)
+
+   Publish
+       •   content-type (UTF-8 string)
+
+       •   correlation-data (binary data - note treated as a string in mosquitto_pub)
+
+       •   message-expiry-interval (32-bit unsigned integer)
+
+       •   payload-format-indicator (8-bit unsigned integer)
+
+       •   response-topic (UTF-8 string)
+
+       •   topic-alias (16-bit unsigned integer)
+
+       •   user-property (UTF-8 string pair)
+
+   Disconnect
+       •   session-expiry-interval (32-bit unsigned integer)
+
+       •   user-property (UTF-8 string pair)
+
+   Will properties
+       •   content-type (UTF-8 string)
+
+       •   correlation-data (binary data - note treated as a string in mosquitto_pub)
+
+       •   message-expiry-interval (32-bit unsigned integer)
+
+       •   payload-format-indicator (8-bit unsigned integer)
+
+       •   response-topic (UTF-8 string)
+
+       •   user-property (UTF-8 string pair)
+
+       •   will-delay-interval (32-bit unsigned integer)
+
+EXAMPLES
+       Publish temperature information to localhost with QoS 1:
+
+       •   mosquitto_pub -t sensors/temperature -m 32 -q 1
+
+       Publish timestamp and temperature information to a remote host on a non-standard port and QoS 0:
+
+       •   mosquitto_pub -h 192.168.1.1 -p 1885 -t sensors/temperature -m "1266193804 32"
+
+       Publish light switch status. Message is set to retained because there may be a long period of time between light switch events:
+
+       •   mosquitto_pub -r -t switches/kitchen_lights/status -m "on"
+
+       Send the contents of a file in two ways:
+
+       •   mosquitto_pub -t my/topic -f ./data
+
+       •   mosquitto_pub -t my/topic -s < ./data
+
+       Send parsed electricity usage data from a Current Cost meter, reading from stdin with one line/reading as one message:
+
+       •   read_cc128.pl | mosquitto_pub -t sensors/cc128 -l
+
+FILES
+       $XDG_CONFIG_HOME/mosquitto_pub, $HOME/.config/mosquitto_pub
+           Configuration file for default options.
+
+BUGS
+       mosquitto bug information can be found at https://github.com/eclipse/mosquitto/issues
+
+SEE ALSO
+       mqtt(7), mosquitto_rr(1), mosquitto_sub(1), mosquitto(8), libmosquitto(3), mosquitto-tls(7)
+
+AUTHOR
+       Roger Light <roger@atchoo.org>
+
+Mosquitto Project                                                   02/27/2020                                                    MOSQUITTO_PUB(1)
