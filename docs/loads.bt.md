@@ -1,0 +1,62 @@
+loads(8)                                                      System Manager's Manual                                                     loads(8)
+
+NAME
+       loads.bt - Prints load averages. Uses bpftrace/eBPF.
+
+SYNOPSIS
+       loads.bt
+
+DESCRIPTION
+       These  are the same load averages printed by "uptime", but to three decimal places instead of two (not that it really matters). This is re‐
+       ally a demonstration of fetching and processing a kernel structure from bpftrace.
+
+       Since this uses BPF, only the root user can use this tool.
+
+REQUIREMENTS
+       CONFIG_BPF and bpftrace.
+
+EXAMPLES
+       Print system load averages every second:
+              # loads.bt
+
+FIELDS
+       HH:MM:SS
+              Each output line includes time of printing in "HH:MM:SS" format.
+
+       load averages:
+              These are exponentially-damped moving sum averages of the system loads.  Load is a measurement of demand on system resources,  which
+              include  CPUs  and  other  resources that are accessed with the kernel in an uninterruptible state (TASK_UNINTERRUPTIBLE), which in‐
+              cludes types of disk I/O and lock accesses.  Linux load averages originally reflected CPU demand only, as it does in other OSes, but
+              this  was  changed  in Linux 0.99.14. This demand measurement reflects not just the utilized resource, but also the queued demand (a
+              saturation measurement). Finally, the three numbers are called the "one-", "five-",  and  "fifteen-minute"  load  averages,  however
+              these  times  are  constants used in the exponentially-damping equation, and the load averages reflect load beyond these times. Were
+              you expecting an accurate description of load averages in the man page of a bpftrace tool?
+
+OVERHEAD
+       Other than bpftrace startup time, negligible.
+
+SOURCE
+       This is from bpftrace.
+
+              https://github.com/iovisor/bpftrace
+
+       Also look in the bpftrace distribution for a companion _examples.txt file containing example usage, output, and commentary for this tool.
+
+REFERENCE
+       For more on load averages, see:
+
+       http://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html
+
+OS
+       Linux
+
+STABILITY
+       Unstable - in development.
+
+AUTHOR
+       Brendan Gregg
+
+SEE ALSO
+       uptime(1)
+
+USER COMMANDS                                                       2018-09-10                                                            loads(8)
