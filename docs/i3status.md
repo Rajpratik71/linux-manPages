@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 I3STATUS(1)                                                          i3 Manual                                                         I3STATUS(1)
 
 NAME

@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 PATGEN(1)                                                                        General Commands Manual                                                                        PATGEN(1)
 
 NAME

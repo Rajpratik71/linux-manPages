@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 TCSH(1)                                                                                    General Commands Manual                                                                                    TCSH(1)
 
 

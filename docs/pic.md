@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 PIC(1)                                                                                  General Commands Manual                                                                                 PIC(1)
 
 NAME

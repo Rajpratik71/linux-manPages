@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 AFM2PL(1)                                                                                 afm2pl                                                                                AFM2PL(1)
 
 NAME

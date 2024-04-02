@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 MKSH(1)                                                     BSD General Commands Manual                                                    MKSH(1)
 
 NAME

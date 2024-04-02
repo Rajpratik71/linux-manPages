@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 S2P(1)                                                                                 Perl Programmers Reference Guide                                                                                S2P(1)
 
 
